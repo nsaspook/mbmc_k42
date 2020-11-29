@@ -1,0 +1,3529 @@
+
+
+Microchip MPLAB XC8 Assembler V2.30 build 20200825195618 
+                                                                                               Wed Sep  9 10:15:50 2020
+
+Microchip MPLAB XC8 C Compiler v2.30 (Free license) build 20200825195618 Og9 
+     1                           	processor	18F1320
+     2                           	fnconf	rparam,??,?,0
+     3                           	pagewidth 120
+     4                           	opt	flic
+     5                           	psect	idataCOMRAM,global,class=CODE,delta=1,noexec
+     6                           	psect	mediumconst,global,reloc=2,class=MEDIUMCONST,delta=1,noexec
+     7                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     8                           	psect	bssCOMRAM,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+     9                           	psect	dataCOMRAM,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+    10                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+    11                           	psect	text0,global,reloc=2,class=CODE,delta=1
+    12                           	psect	text1,global,reloc=2,class=CODE,delta=1
+    13                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    14                           	psect	text3,global,reloc=2,class=CODE,delta=1
+    15                           	psect	text4,global,reloc=2,class=CODE,delta=1
+    16                           	psect	text5,global,reloc=2,class=CODE,delta=1
+    17                           	psect	text6,global,reloc=2,class=CODE,delta=1
+    18                           	psect	text7,global,reloc=2,class=CODE,delta=1
+    19                           	psect	text8,global,reloc=2,class=CODE,delta=1,group=2
+    20                           	psect	text9,global,reloc=2,class=CODE,delta=1
+    21                           	psect	text10,global,reloc=2,class=CODE,delta=1
+    22                           	psect	text11,global,reloc=2,class=CODE,delta=1
+    23                           	psect	text12,global,reloc=2,class=CODE,delta=1
+    24                           	psect	text13,global,reloc=2,class=CODE,delta=1
+    25                           	psect	intcode,global,reloc=2,class=CODE,delta=1
+    26                           	psect	text15,global,reloc=2,class=CODE,delta=1
+    27                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1,noexec
+    28                           	psect	rparam,global,class=COMRAM,space=1,delta=1,noexec
+    29                           	psect	temp,global,ovrld,common,class=COMRAM,space=1,delta=1
+    30                           	psect	idloc,global,abs,ovrld,class=IDLOC,space=5,delta=1,noexec
+    31                           	psect	config,global,abs,ovrld,class=CONFIG,space=4,delta=1,noexec
+    32  0000                     
+    33                           ; Version 2.20
+    34                           ; Generated 12/02/2020 GMT
+    35                           ; 
+    36                           ; Copyright © 2020, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    37                           ; All rights reserved.
+    38                           ; 
+    39                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    40                           ; 
+    41                           ; Redistribution and use in source and binary forms, with or without modification, are
+    42                           ; permitted provided that the following conditions are met:
+    43                           ; 
+    44                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    45                           ;        conditions and the following disclaimer.
+    46                           ; 
+    47                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    48                           ;        of conditions and the following disclaimer in the documentation and/or other
+    49                           ;        materials provided with the distribution.
+    50                           ; 
+    51                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    52                           ;        software without specific prior written permission.
+    53                           ; 
+    54                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    55                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    56                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    57                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    58                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    59                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    60                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    61                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    62                           ; 
+    63                           ; 
+    64                           ; Code-generator required, PIC18F1320 Definitions
+    65                           ; 
+    66                           ; SFR Addresses
+    67  0000                     
+    68                           	psect	idataCOMRAM
+    69  000712                     __pidataCOMRAM:
+    70                           	callstack 0
+    71                           
+    72                           ;initializer for _build_time
+    73  000712  F6                 	db	low STR_2
+    74  000713  1F                 	db	high STR_2
+    75                           
+    76                           ;initializer for _build_date
+    77  000714  EA                 	db	low STR_1
+    78  000715  1F                 	db	high STR_1
+    79                           
+    80                           ;initializer for controller_work@volts
+    81  000716  FF                 	db	255
+    82                           
+    83                           	psect	mediumconst
+    84  001DAC                     __pmediumconst:
+    85                           	callstack 0
+    86  001DAC  00                 	db	0
+    87  001DAD                     _table_crc_lo:
+    88                           	callstack 0
+    89  001DAD  00                 	db	0
+    90  001DAE  C0                 	db	192
+    91  001DAF  C1                 	db	193
+    92  001DB0  01                 	db	1
+    93  001DB1  C3                 	db	195
+    94  001DB2  03                 	db	3
+    95  001DB3  02                 	db	2
+    96  001DB4  C2                 	db	194
+    97  001DB5  C6                 	db	198
+    98  001DB6  06                 	db	6
+    99  001DB7  07                 	db	7
+   100  001DB8  C7                 	db	199
+   101  001DB9  05                 	db	5
+   102  001DBA  C5                 	db	197
+   103  001DBB  C4                 	db	196
+   104  001DBC  04                 	db	4
+   105  001DBD  CC                 	db	204
+   106  001DBE  0C                 	db	12
+   107  001DBF  0D                 	db	13
+   108  001DC0  CD                 	db	205
+   109  001DC1  0F                 	db	15
+   110  001DC2  CF                 	db	207
+   111  001DC3  CE                 	db	206
+   112  001DC4  0E                 	db	14
+   113  001DC5  0A                 	db	10
+   114  001DC6  CA                 	db	202
+   115  001DC7  CB                 	db	203
+   116  001DC8  0B                 	db	11
+   117  001DC9  C9                 	db	201
+   118  001DCA  09                 	db	9
+   119  001DCB  08                 	db	8
+   120  001DCC  C8                 	db	200
+   121  001DCD  D8                 	db	216
+   122  001DCE  18                 	db	24
+   123  001DCF  19                 	db	25
+   124  001DD0  D9                 	db	217
+   125  001DD1  1B                 	db	27
+   126  001DD2  DB                 	db	219
+   127  001DD3  DA                 	db	218
+   128  001DD4  1A                 	db	26
+   129  001DD5  1E                 	db	30
+   130  001DD6  DE                 	db	222
+   131  001DD7  DF                 	db	223
+   132  001DD8  1F                 	db	31
+   133  001DD9  DD                 	db	221
+   134  001DDA  1D                 	db	29
+   135  001DDB  1C                 	db	28
+   136  001DDC  DC                 	db	220
+   137  001DDD  14                 	db	20
+   138  001DDE  D4                 	db	212
+   139  001DDF  D5                 	db	213
+   140  001DE0  15                 	db	21
+   141  001DE1  D7                 	db	215
+   142  001DE2  17                 	db	23
+   143  001DE3  16                 	db	22
+   144  001DE4  D6                 	db	214
+   145  001DE5  D2                 	db	210
+   146  001DE6  12                 	db	18
+   147  001DE7  13                 	db	19
+   148  001DE8  D3                 	db	211
+   149  001DE9  11                 	db	17
+   150  001DEA  D1                 	db	209
+   151  001DEB  D0                 	db	208
+   152  001DEC  10                 	db	16
+   153  001DED  F0                 	db	240
+   154  001DEE  30                 	db	48
+   155  001DEF  31                 	db	49
+   156  001DF0  F1                 	db	241
+   157  001DF1  33                 	db	51
+   158  001DF2  F3                 	db	243
+   159  001DF3  F2                 	db	242
+   160  001DF4  32                 	db	50
+   161  001DF5  36                 	db	54
+   162  001DF6  F6                 	db	246
+   163  001DF7  F7                 	db	247
+   164  001DF8  37                 	db	55
+   165  001DF9  F5                 	db	245
+   166  001DFA  35                 	db	53
+   167  001DFB  34                 	db	52
+   168  001DFC  F4                 	db	244
+   169  001DFD  3C                 	db	60
+   170  001DFE  FC                 	db	252
+   171  001DFF  FD                 	db	253
+   172  001E00  3D                 	db	61
+   173  001E01  FF                 	db	255
+   174  001E02  3F                 	db	63
+   175  001E03  3E                 	db	62
+   176  001E04  FE                 	db	254
+   177  001E05  FA                 	db	250
+   178  001E06  3A                 	db	58
+   179  001E07  3B                 	db	59
+   180  001E08  FB                 	db	251
+   181  001E09  39                 	db	57
+   182  001E0A  F9                 	db	249
+   183  001E0B  F8                 	db	248
+   184  001E0C  38                 	db	56
+   185  001E0D  28                 	db	40
+   186  001E0E  E8                 	db	232
+   187  001E0F  E9                 	db	233
+   188  001E10  29                 	db	41
+   189  001E11  EB                 	db	235
+   190  001E12  2B                 	db	43
+   191  001E13  2A                 	db	42
+   192  001E14  EA                 	db	234
+   193  001E15  EE                 	db	238
+   194  001E16  2E                 	db	46
+   195  001E17  2F                 	db	47
+   196  001E18  EF                 	db	239
+   197  001E19  2D                 	db	45
+   198  001E1A  ED                 	db	237
+   199  001E1B  EC                 	db	236
+   200  001E1C  2C                 	db	44
+   201  001E1D  E4                 	db	228
+   202  001E1E  24                 	db	36
+   203  001E1F  25                 	db	37
+   204  001E20  E5                 	db	229
+   205  001E21  27                 	db	39
+   206  001E22  E7                 	db	231
+   207  001E23  E6                 	db	230
+   208  001E24  26                 	db	38
+   209  001E25  22                 	db	34
+   210  001E26  E2                 	db	226
+   211  001E27  E3                 	db	227
+   212  001E28  23                 	db	35
+   213  001E29  E1                 	db	225
+   214  001E2A  21                 	db	33
+   215  001E2B  20                 	db	32
+   216  001E2C  E0                 	db	224
+   217  001E2D  A0                 	db	160
+   218  001E2E  60                 	db	96
+   219  001E2F  61                 	db	97
+   220  001E30  A1                 	db	161
+   221  001E31  63                 	db	99
+   222  001E32  A3                 	db	163
+   223  001E33  A2                 	db	162
+   224  001E34  62                 	db	98
+   225  001E35  66                 	db	102
+   226  001E36  A6                 	db	166
+   227  001E37  A7                 	db	167
+   228  001E38  67                 	db	103
+   229  001E39  A5                 	db	165
+   230  001E3A  65                 	db	101
+   231  001E3B  64                 	db	100
+   232  001E3C  A4                 	db	164
+   233  001E3D  6C                 	db	108
+   234  001E3E  AC                 	db	172
+   235  001E3F  AD                 	db	173
+   236  001E40  6D                 	db	109
+   237  001E41  AF                 	db	175
+   238  001E42  6F                 	db	111
+   239  001E43  6E                 	db	110
+   240  001E44  AE                 	db	174
+   241  001E45  AA                 	db	170
+   242  001E46  6A                 	db	106
+   243  001E47  6B                 	db	107
+   244  001E48  AB                 	db	171
+   245  001E49  69                 	db	105
+   246  001E4A  A9                 	db	169
+   247  001E4B  A8                 	db	168
+   248  001E4C  68                 	db	104
+   249  001E4D  78                 	db	120
+   250  001E4E  B8                 	db	184
+   251  001E4F  B9                 	db	185
+   252  001E50  79                 	db	121
+   253  001E51  BB                 	db	187
+   254  001E52  7B                 	db	123
+   255  001E53  7A                 	db	122
+   256  001E54  BA                 	db	186
+   257  001E55  BE                 	db	190
+   258  001E56  7E                 	db	126
+   259  001E57  7F                 	db	127
+   260  001E58  BF                 	db	191
+   261  001E59  7D                 	db	125
+   262  001E5A  BD                 	db	189
+   263  001E5B  BC                 	db	188
+   264  001E5C  7C                 	db	124
+   265  001E5D  B4                 	db	180
+   266  001E5E  74                 	db	116
+   267  001E5F  75                 	db	117
+   268  001E60  B5                 	db	181
+   269  001E61  77                 	db	119
+   270  001E62  B7                 	db	183
+   271  001E63  B6                 	db	182
+   272  001E64  76                 	db	118
+   273  001E65  72                 	db	114
+   274  001E66  B2                 	db	178
+   275  001E67  B3                 	db	179
+   276  001E68  73                 	db	115
+   277  001E69  B1                 	db	177
+   278  001E6A  71                 	db	113
+   279  001E6B  70                 	db	112
+   280  001E6C  B0                 	db	176
+   281  001E6D  50                 	db	80
+   282  001E6E  90                 	db	144
+   283  001E6F  91                 	db	145
+   284  001E70  51                 	db	81
+   285  001E71  93                 	db	147
+   286  001E72  53                 	db	83
+   287  001E73  52                 	db	82
+   288  001E74  92                 	db	146
+   289  001E75  96                 	db	150
+   290  001E76  56                 	db	86
+   291  001E77  57                 	db	87
+   292  001E78  97                 	db	151
+   293  001E79  55                 	db	85
+   294  001E7A  95                 	db	149
+   295  001E7B  94                 	db	148
+   296  001E7C  54                 	db	84
+   297  001E7D  9C                 	db	156
+   298  001E7E  5C                 	db	92
+   299  001E7F  5D                 	db	93
+   300  001E80  9D                 	db	157
+   301  001E81  5F                 	db	95
+   302  001E82  9F                 	db	159
+   303  001E83  9E                 	db	158
+   304  001E84  5E                 	db	94
+   305  001E85  5A                 	db	90
+   306  001E86  9A                 	db	154
+   307  001E87  9B                 	db	155
+   308  001E88  5B                 	db	91
+   309  001E89  99                 	db	153
+   310  001E8A  59                 	db	89
+   311  001E8B  58                 	db	88
+   312  001E8C  98                 	db	152
+   313  001E8D  88                 	db	136
+   314  001E8E  48                 	db	72
+   315  001E8F  49                 	db	73
+   316  001E90  89                 	db	137
+   317  001E91  4B                 	db	75
+   318  001E92  8B                 	db	139
+   319  001E93  8A                 	db	138
+   320  001E94  4A                 	db	74
+   321  001E95  4E                 	db	78
+   322  001E96  8E                 	db	142
+   323  001E97  8F                 	db	143
+   324  001E98  4F                 	db	79
+   325  001E99  8D                 	db	141
+   326  001E9A  4D                 	db	77
+   327  001E9B  4C                 	db	76
+   328  001E9C  8C                 	db	140
+   329  001E9D  44                 	db	68
+   330  001E9E  84                 	db	132
+   331  001E9F  85                 	db	133
+   332  001EA0  45                 	db	69
+   333  001EA1  87                 	db	135
+   334  001EA2  47                 	db	71
+   335  001EA3  46                 	db	70
+   336  001EA4  86                 	db	134
+   337  001EA5  82                 	db	130
+   338  001EA6  42                 	db	66
+   339  001EA7  43                 	db	67
+   340  001EA8  83                 	db	131
+   341  001EA9  41                 	db	65
+   342  001EAA  81                 	db	129
+   343  001EAB  80                 	db	128
+   344  001EAC  40                 	db	64
+   345  001EAD                     __end_of_table_crc_lo:
+   346                           	callstack 0
+   347  001EAD                     _table_crc_hi:
+   348                           	callstack 0
+   349  001EAD  00                 	db	0
+   350  001EAE  C1                 	db	193
+   351  001EAF  81                 	db	129
+   352  001EB0  40                 	db	64
+   353  001EB1  01                 	db	1
+   354  001EB2  C0                 	db	192
+   355  001EB3  80                 	db	128
+   356  001EB4  41                 	db	65
+   357  001EB5  01                 	db	1
+   358  001EB6  C0                 	db	192
+   359  001EB7  80                 	db	128
+   360  001EB8  41                 	db	65
+   361  001EB9  00                 	db	0
+   362  001EBA  C1                 	db	193
+   363  001EBB  81                 	db	129
+   364  001EBC  40                 	db	64
+   365  001EBD  01                 	db	1
+   366  001EBE  C0                 	db	192
+   367  001EBF  80                 	db	128
+   368  001EC0  41                 	db	65
+   369  001EC1  00                 	db	0
+   370  001EC2  C1                 	db	193
+   371  001EC3  81                 	db	129
+   372  001EC4  40                 	db	64
+   373  001EC5  00                 	db	0
+   374  001EC6  C1                 	db	193
+   375  001EC7  81                 	db	129
+   376  001EC8  40                 	db	64
+   377  001EC9  01                 	db	1
+   378  001ECA  C0                 	db	192
+   379  001ECB  80                 	db	128
+   380  001ECC  41                 	db	65
+   381  001ECD  01                 	db	1
+   382  001ECE  C0                 	db	192
+   383  001ECF  80                 	db	128
+   384  001ED0  41                 	db	65
+   385  001ED1  00                 	db	0
+   386  001ED2  C1                 	db	193
+   387  001ED3  81                 	db	129
+   388  001ED4  40                 	db	64
+   389  001ED5  00                 	db	0
+   390  001ED6  C1                 	db	193
+   391  001ED7  81                 	db	129
+   392  001ED8  40                 	db	64
+   393  001ED9  01                 	db	1
+   394  001EDA  C0                 	db	192
+   395  001EDB  80                 	db	128
+   396  001EDC  41                 	db	65
+   397  001EDD  00                 	db	0
+   398  001EDE  C1                 	db	193
+   399  001EDF  81                 	db	129
+   400  001EE0  40                 	db	64
+   401  001EE1  01                 	db	1
+   402  001EE2  C0                 	db	192
+   403  001EE3  80                 	db	128
+   404  001EE4  41                 	db	65
+   405  001EE5  01                 	db	1
+   406  001EE6  C0                 	db	192
+   407  001EE7  80                 	db	128
+   408  001EE8  41                 	db	65
+   409  001EE9  00                 	db	0
+   410  001EEA  C1                 	db	193
+   411  001EEB  81                 	db	129
+   412  001EEC  40                 	db	64
+   413  001EED  01                 	db	1
+   414  001EEE  C0                 	db	192
+   415  001EEF  80                 	db	128
+   416  001EF0  41                 	db	65
+   417  001EF1  00                 	db	0
+   418  001EF2  C1                 	db	193
+   419  001EF3  81                 	db	129
+   420  001EF4  40                 	db	64
+   421  001EF5  00                 	db	0
+   422  001EF6  C1                 	db	193
+   423  001EF7  81                 	db	129
+   424  001EF8  40                 	db	64
+   425  001EF9  01                 	db	1
+   426  001EFA  C0                 	db	192
+   427  001EFB  80                 	db	128
+   428  001EFC  41                 	db	65
+   429  001EFD  00                 	db	0
+   430  001EFE  C1                 	db	193
+   431  001EFF  81                 	db	129
+   432  001F00  40                 	db	64
+   433  001F01  01                 	db	1
+   434  001F02  C0                 	db	192
+   435  001F03  80                 	db	128
+   436  001F04  41                 	db	65
+   437  001F05  01                 	db	1
+   438  001F06  C0                 	db	192
+   439  001F07  80                 	db	128
+   440  001F08  41                 	db	65
+   441  001F09  00                 	db	0
+   442  001F0A  C1                 	db	193
+   443  001F0B  81                 	db	129
+   444  001F0C  40                 	db	64
+   445  001F0D  00                 	db	0
+   446  001F0E  C1                 	db	193
+   447  001F0F  81                 	db	129
+   448  001F10  40                 	db	64
+   449  001F11  01                 	db	1
+   450  001F12  C0                 	db	192
+   451  001F13  80                 	db	128
+   452  001F14  41                 	db	65
+   453  001F15  01                 	db	1
+   454  001F16  C0                 	db	192
+   455  001F17  80                 	db	128
+   456  001F18  41                 	db	65
+   457  001F19  00                 	db	0
+   458  001F1A  C1                 	db	193
+   459  001F1B  81                 	db	129
+   460  001F1C  40                 	db	64
+   461  001F1D  01                 	db	1
+   462  001F1E  C0                 	db	192
+   463  001F1F  80                 	db	128
+   464  001F20  41                 	db	65
+   465  001F21  00                 	db	0
+   466  001F22  C1                 	db	193
+   467  001F23  81                 	db	129
+   468  001F24  40                 	db	64
+   469  001F25  00                 	db	0
+   470  001F26  C1                 	db	193
+   471  001F27  81                 	db	129
+   472  001F28  40                 	db	64
+   473  001F29  01                 	db	1
+   474  001F2A  C0                 	db	192
+   475  001F2B  80                 	db	128
+   476  001F2C  41                 	db	65
+   477  001F2D  01                 	db	1
+   478  001F2E  C0                 	db	192
+   479  001F2F  80                 	db	128
+   480  001F30  41                 	db	65
+   481  001F31  00                 	db	0
+   482  001F32  C1                 	db	193
+   483  001F33  81                 	db	129
+   484  001F34  40                 	db	64
+   485  001F35  00                 	db	0
+   486  001F36  C1                 	db	193
+   487  001F37  81                 	db	129
+   488  001F38  40                 	db	64
+   489  001F39  01                 	db	1
+   490  001F3A  C0                 	db	192
+   491  001F3B  80                 	db	128
+   492  001F3C  41                 	db	65
+   493  001F3D  00                 	db	0
+   494  001F3E  C1                 	db	193
+   495  001F3F  81                 	db	129
+   496  001F40  40                 	db	64
+   497  001F41  01                 	db	1
+   498  001F42  C0                 	db	192
+   499  001F43  80                 	db	128
+   500  001F44  41                 	db	65
+   501  001F45  01                 	db	1
+   502  001F46  C0                 	db	192
+   503  001F47  80                 	db	128
+   504  001F48  41                 	db	65
+   505  001F49  00                 	db	0
+   506  001F4A  C1                 	db	193
+   507  001F4B  81                 	db	129
+   508  001F4C  40                 	db	64
+   509  001F4D  00                 	db	0
+   510  001F4E  C1                 	db	193
+   511  001F4F  81                 	db	129
+   512  001F50  40                 	db	64
+   513  001F51  01                 	db	1
+   514  001F52  C0                 	db	192
+   515  001F53  80                 	db	128
+   516  001F54  41                 	db	65
+   517  001F55  01                 	db	1
+   518  001F56  C0                 	db	192
+   519  001F57  80                 	db	128
+   520  001F58  41                 	db	65
+   521  001F59  00                 	db	0
+   522  001F5A  C1                 	db	193
+   523  001F5B  81                 	db	129
+   524  001F5C  40                 	db	64
+   525  001F5D  01                 	db	1
+   526  001F5E  C0                 	db	192
+   527  001F5F  80                 	db	128
+   528  001F60  41                 	db	65
+   529  001F61  00                 	db	0
+   530  001F62  C1                 	db	193
+   531  001F63  81                 	db	129
+   532  001F64  40                 	db	64
+   533  001F65  00                 	db	0
+   534  001F66  C1                 	db	193
+   535  001F67  81                 	db	129
+   536  001F68  40                 	db	64
+   537  001F69  01                 	db	1
+   538  001F6A  C0                 	db	192
+   539  001F6B  80                 	db	128
+   540  001F6C  41                 	db	65
+   541  001F6D  00                 	db	0
+   542  001F6E  C1                 	db	193
+   543  001F6F  81                 	db	129
+   544  001F70  40                 	db	64
+   545  001F71  01                 	db	1
+   546  001F72  C0                 	db	192
+   547  001F73  80                 	db	128
+   548  001F74  41                 	db	65
+   549  001F75  01                 	db	1
+   550  001F76  C0                 	db	192
+   551  001F77  80                 	db	128
+   552  001F78  41                 	db	65
+   553  001F79  00                 	db	0
+   554  001F7A  C1                 	db	193
+   555  001F7B  81                 	db	129
+   556  001F7C  40                 	db	64
+   557  001F7D  01                 	db	1
+   558  001F7E  C0                 	db	192
+   559  001F7F  80                 	db	128
+   560  001F80  41                 	db	65
+   561  001F81  00                 	db	0
+   562  001F82  C1                 	db	193
+   563  001F83  81                 	db	129
+   564  001F84  40                 	db	64
+   565  001F85  00                 	db	0
+   566  001F86  C1                 	db	193
+   567  001F87  81                 	db	129
+   568  001F88  40                 	db	64
+   569  001F89  01                 	db	1
+   570  001F8A  C0                 	db	192
+   571  001F8B  80                 	db	128
+   572  001F8C  41                 	db	65
+   573  001F8D  01                 	db	1
+   574  001F8E  C0                 	db	192
+   575  001F8F  80                 	db	128
+   576  001F90  41                 	db	65
+   577  001F91  00                 	db	0
+   578  001F92  C1                 	db	193
+   579  001F93  81                 	db	129
+   580  001F94  40                 	db	64
+   581  001F95  00                 	db	0
+   582  001F96  C1                 	db	193
+   583  001F97  81                 	db	129
+   584  001F98  40                 	db	64
+   585  001F99  01                 	db	1
+   586  001F9A  C0                 	db	192
+   587  001F9B  80                 	db	128
+   588  001F9C  41                 	db	65
+   589  001F9D  00                 	db	0
+   590  001F9E  C1                 	db	193
+   591  001F9F  81                 	db	129
+   592  001FA0  40                 	db	64
+   593  001FA1  01                 	db	1
+   594  001FA2  C0                 	db	192
+   595  001FA3  80                 	db	128
+   596  001FA4  41                 	db	65
+   597  001FA5  01                 	db	1
+   598  001FA6  C0                 	db	192
+   599  001FA7  80                 	db	128
+   600  001FA8  41                 	db	65
+   601  001FA9  00                 	db	0
+   602  001FAA  C1                 	db	193
+   603  001FAB  81                 	db	129
+   604  001FAC  40                 	db	64
+   605  001FAD                     __end_of_table_crc_hi:
+   606                           	callstack 0
+   607  001FAD  01                 	db	1
+   608  001FAE  03                 	db	3
+   609  001FAF  04                 	db	4
+   610  001FB0  00                 	db	0
+   611  001FB1  00                 	db	0
+   612  001FB2  00                 	db	0
+   613  001FB3  00                 	db	0
+   614  001FB4  39                 	db	57
+   615  001FB5  85                 	db	133
+   616  001FB6                     __end_of_re20a_error:
+   617                           	callstack 0
+   618  001FB6                     _re20a_freset:
+   619                           	callstack 0
+   620  001FB6  01                 	db	1
+   621  001FB7  78                 	db	120
+   622  001FB8  00                 	db	0
+   623  001FB9  00                 	db	0
+   624  001FBA  00                 	db	0
+   625  001FBB  01                 	db	1
+   626  001FBC  60                 	db	96
+   627  001FBD  00                 	db	0
+   628  001FBE                     __end_of_re20a_freset:
+   629                           	callstack 0
+   630  001FBE                     _re20a_clear:
+   631                           	callstack 0
+   632  001FBE  01                 	db	1
+   633  001FBF  79                 	db	121
+   634  001FC0  00                 	db	0
+   635  001FC1  00                 	db	0
+   636  001FC2  00                 	db	0
+   637  001FC3  01                 	db	1
+   638  001FC4  5D                 	db	93
+   639  001FC5  C0                 	db	192
+   640  001FC6                     __end_of_re20a_clear:
+   641                           	callstack 0
+   642  001FC6  01                 	db	1
+   643  001FC7  03                 	db	3
+   644  001FC8  02                 	db	2
+   645  001FC9  00                 	db	0
+   646  001FCA  02                 	db	2
+   647  001FCB  39                 	db	57
+   648  001FCC  85                 	db	133
+   649  001FCD                     __end_of_re20a_mode:
+   650                           	callstack 0
+   651  001FCD                     _modbus_cc_freset:
+   652                           	callstack 0
+   653  001FCD  01                 	db	1
+   654  001FCE  78                 	db	120
+   655  001FCF  00                 	db	0
+   656  001FD0  00                 	db	0
+   657  001FD1  00                 	db	0
+   658  001FD2  01                 	db	1
+   659  001FD3                     __end_of_modbus_cc_freset:
+   660                           	callstack 0
+   661  001FD3                     _modbus_cc_clear:
+   662                           	callstack 0
+   663  001FD3  01                 	db	1
+   664  001FD4  79                 	db	121
+   665  001FD5  00                 	db	0
+   666  001FD6  00                 	db	0
+   667  001FD7  00                 	db	0
+   668  001FD8  01                 	db	1
+   669  001FD9                     __end_of_modbus_cc_clear:
+   670                           	callstack 0
+   671  001FD9                     _build_version:
+   672                           	callstack 0
+   673  001FD9  31                 	db	49
+   674  001FDA  2E                 	db	46
+   675  001FDB  37                 	db	55
+   676  001FDC  00                 	db	0
+   677  001FDD  00                 	db	0
+   678  001FDE                     __end_of_build_version:
+   679                           	callstack 0
+   680  001FDE                     _modbus_cc_error:
+   681                           	callstack 0
+   682  001FDE  01                 	db	1
+   683  001FDF  03                 	db	3
+   684  001FE0  01                 	db	1
+   685  001FE1  21                 	db	33
+   686  001FE2  00                 	db	0
+   687  001FE3  02                 	db	2
+   688  001FE4                     __end_of_modbus_cc_error:
+   689                           	callstack 0
+   690  001FE4                     _modbus_cc_mode:
+   691                           	callstack 0
+   692  001FE4  01                 	db	1
+   693  001FE5  03                 	db	3
+   694  001FE6  01                 	db	1
+   695  001FE7  20                 	db	32
+   696  001FE8  00                 	db	0
+   697  001FE9  01                 	db	1
+   698  001FEA                     __end_of_modbus_cc_mode:
+   699                           	callstack 0
+   700  0000                     _RCREG	set	4014
+   701  0000                     _IPR1bits	set	3999
+   702  0000                     _INTCONbits	set	4082
+   703  0000                     _SPBRG	set	4015
+   704  0000                     _SPBRGH	set	4016
+   705  0000                     _BAUDCTLbits	set	4010
+   706  0000                     _PIR1bits	set	3998
+   707  0000                     _RCSTAbits	set	4011
+   708  0000                     _PIE1bits	set	3997
+   709  0000                     _RCSTA	set	4011
+   710  0000                     _TXSTA	set	4012
+   711  0000                     _PR2	set	4043
+   712  0000                     _T2CONbits	set	4042
+   713  0000                     _TMR1L	set	4046
+   714  0000                     _TMR1H	set	4047
+   715  0000                     _T1CON	set	4045
+   716  0000                     _TMR0L	set	4054
+   717  0000                     _TMR0H	set	4055
+   718  0000                     _T0CON	set	4053
+   719  0000                     _INTCON2bits	set	4081
+   720  0000                     _TRISB	set	3987
+   721  0000                     _TRISA	set	3986
+   722  0000                     _RCONbits	set	4048
+   723  0000                     _ADCON1	set	4033
+   724  0000                     _STKPTRbits	set	4092
+   725  0000                     _RCON	set	4048
+   726  0000                     _LATBbits	set	3978
+   727  0000                     _TXREG	set	4013
+   728  0000                     _TXSTAbits	set	4012
+   729  0000                     _LATAbits	set	3977
+   730  0000                     _CCP1CON	set	4029
+   731  0000                     _CCPR1L	set	4030
+   732  001FEA                     STR_1:
+   733  001FEA  53                 	db	83	;'S'
+   734  001FEB  65                 	db	101	;'e'
+   735  001FEC  70                 	db	112	;'p'
+   736  001FED  20                 	db	32
+   737  001FEE  20                 	db	32
+   738  001FEF  39                 	db	57	;'9'
+   739  001FF0  20                 	db	32
+   740  001FF1  32                 	db	50	;'2'
+   741  001FF2  30                 	db	48	;'0'
+   742  001FF3  32                 	db	50	;'2'
+   743  001FF4  30                 	db	48	;'0'
+   744  001FF5  00                 	db	0
+   745  001FF6                     STR_2:
+   746  001FF6  31                 	db	49	;'1'
+   747  001FF7  30                 	db	48	;'0'
+   748  001FF8  3A                 	db	58	;':'
+   749  001FF9  31                 	db	49	;'1'
+   750  001FFA  35                 	db	53	;'5'
+   751  001FFB  3A                 	db	58	;':'
+   752  001FFC  34                 	db	52	;'4'
+   753  001FFD  38                 	db	56	;'8'
+   754  001FFE  00                 	db	0
+   755  001FFF  00                 	db	0	; dummy byte at the end
+   756  0000                     
+   757                           ; #config settings
+   758                           
+   759                           	psect	cinit
+   760  000614                     __pcinit:
+   761                           	callstack 0
+   762  000614                     start_initialization:
+   763                           	callstack 0
+   764  000614                     __initialization:
+   765                           	callstack 0
+   766                           
+   767                           ; Initialize objects allocated to COMRAM (5 bytes)
+   768                           ; load TBLPTR registers with __pidataCOMRAM
+   769  000614  0E12               	movlw	low __pidataCOMRAM
+   770  000616  6EF6               	movwf	tblptrl,c
+   771  000618  0E07               	movlw	high __pidataCOMRAM
+   772  00061A  6EF7               	movwf	tblptrh,c
+   773  00061C  0E00               	movlw	low (__pidataCOMRAM shr (0+16))
+   774  00061E  6EF8               	movwf	tblptru,c
+   775  000620  EE00  F05B         	lfsr	0,__pdataCOMRAM
+   776  000624  EE10 F005          	lfsr	1,5
+   777  000628                     copy_data0:
+   778  000628  0009               	tblrd		*+
+   779  00062A  CFF5 FFEE          	movff	tablat,postinc0
+   780  00062E  50E5               	movf	postdec1,w,c
+   781  000630  50E1               	movf	fsr1l,w,c
+   782  000632  E1FA               	bnz	copy_data0
+   783                           
+   784                           ; Clear objects allocated to COMRAM (53 bytes)
+   785  000634  EE00  F001         	lfsr	0,__pbssCOMRAM
+   786  000638  0E35               	movlw	53
+   787  00063A                     clear_0:
+   788  00063A  6AEE               	clrf	postinc0,c
+   789  00063C  06E8               	decf	wreg,f,c
+   790  00063E  E1FD               	bnz	clear_0
+   791  000640                     end_of_initialization:
+   792                           	callstack 0
+   793  000640                     __end_of__initialization:
+   794                           	callstack 0
+   795  000640  9060               	bcf	int$flags,0,c	;clear compiler interrupt flag (level 1)
+   796  000642  9260               	bcf	int$flags,1,c	;clear compiler interrupt flag (level 2)
+   797  000644  0E00               	movlw	low (__Lmediumconst shr (0+16))
+   798  000646  6EF8               	movwf	tblptru,c
+   799  000648  0100               	movlb	0
+   800  00064A  EF84  F003         	goto	_main	;jump to C main() function
+   801                           
+   802                           	psect	bssCOMRAM
+   803  000001                     __pbssCOMRAM:
+   804                           	callstack 0
+   805  000001                     _V:
+   806                           	callstack 0
+   807  000001                     	ds	14
+   808  00000F                     get_500hz@tmp:
+   809                           	callstack 0
+   810  00000F                     	ds	4
+   811  000013                     get_2hz@tmp:
+   812                           	callstack 0
+   813  000013                     	ds	4
+   814  000017                     _crc_error:
+   815                           	callstack 0
+   816  000017                     	ds	4
+   817  00001B                     _req_length:
+   818                           	callstack 0
+   819  00001B                     	ds	2
+   820  00001D                     tm_handler@c_error:
+   821                           	callstack 0
+   822  00001D                     	ds	1
+   823  00001E                     controller_work@mcmd:
+   824                           	callstack 0
+   825  00001E                     	ds	1
+   826  00001F                     _modbus_command:
+   827                           	callstack 0
+   828  00001F                     	ds	1
+   829  000020                     _cstate:
+   830                           	callstack 0
+   831  000020                     	ds	1
+   832  000021                     _cc_stream_file:
+   833                           	callstack 0
+   834  000021                     	ds	1
+   835  000022                     _cc_buffer:
+   836                           	callstack 0
+   837  000022                     	ds	20
+   838                           
+   839                           	psect	dataCOMRAM
+   840  00005B                     __pdataCOMRAM:
+   841                           	callstack 0
+   842  00005B                     _build_time:
+   843                           	callstack 0
+   844  00005B                     	ds	2
+   845  00005D                     _build_date:
+   846                           	callstack 0
+   847  00005D                     	ds	2
+   848  00005F                     controller_work@volts:
+   849                           	callstack 0
+   850  00005F                     	ds	1
+   851                           
+   852                           	psect	cstackCOMRAM
+   853  000036                     __pcstackCOMRAM:
+   854                           	callstack 0
+   855  000036                     ??_led_blink:
+   856  000036                     
+   857                           ; 1 bytes @ 0x0
+   858  000036                     	ds	5
+   859  00003B                     ??_tm_handler:
+   860                           
+   861                           ; 1 bytes @ 0x5
+   862  00003B                     	ds	5
+   863  000040                     ?_crc16:
+   864                           	callstack 0
+   865  000040                     ?_get_2hz:
+   866                           	callstack 0
+   867  000040                     ?_get_500hz:
+   868                           	callstack 0
+   869  000040                     set_led_blink@blinks:
+   870                           	callstack 0
+   871  000040                     crc16@buffer:
+   872                           	callstack 0
+   873  000040                     memcpy@d1:
+   874                           	callstack 0
+   875  000040                     SetDCPWM1@dutycycle:
+   876                           	callstack 0
+   877                           
+   878                           ; 2 bytes @ 0xA
+   879  000040                     	ds	1
+   880  000041                     crc16@buffer_length:
+   881                           	callstack 0
+   882  000041                     memcpy@s1:
+   883                           	callstack 0
+   884                           
+   885                           ; 2 bytes @ 0xB
+   886  000041                     	ds	1
+   887  000042                     ??_SetDCPWM1:
+   888                           
+   889                           ; 1 bytes @ 0xC
+   890  000042                     	ds	1
+   891  000043                     ??_crc16:
+   892  000043                     memcpy@n:
+   893                           	callstack 0
+   894                           
+   895                           ; 2 bytes @ 0xD
+   896  000043                     	ds	1
+   897  000044                     get_2hz@mode:
+   898                           	callstack 0
+   899  000044                     get_500hz@mode:
+   900                           	callstack 0
+   901  000044                     SetDCPWM1@DCycle:
+   902                           	callstack 0
+   903                           
+   904                           ; 2 bytes @ 0xE
+   905  000044                     	ds	1
+   906  000045                     crc16@i:
+   907                           	callstack 0
+   908  000045                     memcpy@s:
+   909                           	callstack 0
+   910                           
+   911                           ; 2 bytes @ 0xF
+   912  000045                     	ds	1
+   913  000046                     crc16@crc_hi:
+   914                           	callstack 0
+   915                           
+   916                           ; 1 bytes @ 0x10
+   917  000046                     	ds	1
+   918  000047                     crc16@crc_lo:
+   919                           	callstack 0
+   920  000047                     memcpy@tmp:
+   921                           	callstack 0
+   922                           
+   923                           ; 1 bytes @ 0x11
+   924  000047                     	ds	1
+   925  000048                     ?_modbus_rtu_send_msg_crc:
+   926                           	callstack 0
+   927  000048                     modbus_rtu_send_msg_crc@req:
+   928                           	callstack 0
+   929  000048                     memcpy@d:
+   930                           	callstack 0
+   931                           
+   932                           ; 1 bytes @ 0x12
+   933  000048                     	ds	1
+   934  000049                     modbus_rtu_send_msg_crc@req_length:
+   935                           	callstack 0
+   936                           
+   937                           ; 2 bytes @ 0x13
+   938  000049                     	ds	2
+   939  00004B                     modbus_rtu_send_msg_crc@crc:
+   940                           	callstack 0
+   941                           
+   942                           ; 2 bytes @ 0x15
+   943  00004B                     	ds	2
+   944  00004D                     ?_modbus_rtu_send_msg:
+   945                           	callstack 0
+   946  00004D                     modbus_rtu_send_msg@cc_buffer:
+   947                           	callstack 0
+   948                           
+   949                           ; 1 bytes @ 0x17
+   950  00004D                     	ds	1
+   951  00004E                     modbus_rtu_send_msg@modbus_cc_mode:
+   952                           	callstack 0
+   953                           
+   954                           ; 2 bytes @ 0x18
+   955  00004E                     	ds	2
+   956  000050                     modbus_rtu_send_msg@req_length:
+   957                           	callstack 0
+   958                           
+   959                           ; 2 bytes @ 0x1A
+   960  000050                     	ds	2
+   961  000052                     ??_controller_work:
+   962                           
+   963                           ; 1 bytes @ 0x1C
+   964  000052                     	ds	2
+   965  000054                     controller_work@temp:
+   966                           	callstack 0
+   967                           
+   968                           ; 2 bytes @ 0x1E
+   969  000054                     	ds	2
+   970  000056                     controller_work@c_crc:
+   971                           	callstack 0
+   972                           
+   973                           ; 2 bytes @ 0x20
+   974  000056                     	ds	2
+   975  000058                     controller_work@c_crc_rec:
+   976                           	callstack 0
+   977                           
+   978                           ; 2 bytes @ 0x22
+   979  000058                     	ds	2
+   980  00005A                     controller_work@temp_703:
+   981                           	callstack 0
+   982                           
+   983                           ; 1 bytes @ 0x24
+   984  00005A                     	ds	1
+   985  00005B                     
+   986                           ; 1 bytes @ 0x25
+   987 ;;
+   988 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   989 ;;
+   990 ;; *************** function _main *****************
+   991 ;; Defined at:
+   992 ;;		line 347 in file "../ibsmon.c"
+   993 ;; Parameters:    Size  Location     Type
+   994 ;;		None
+   995 ;; Auto vars:     Size  Location     Type
+   996 ;;		None
+   997 ;; Return value:  Size  Location     Type
+   998 ;;                  1    wreg      void 
+   999 ;; Registers used:
+  1000 ;;		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+  1001 ;; Tracked objects:
+  1002 ;;		On entry : 0/0
+  1003 ;;		On exit  : 0/0
+  1004 ;;		Unchanged: 0/0
+  1005 ;; Data sizes:     COMRAM   BANK0
+  1006 ;;      Params:         0       0
+  1007 ;;      Locals:         0       0
+  1008 ;;      Temps:          0       0
+  1009 ;;      Totals:         0       0
+  1010 ;;Total ram usage:        0 bytes
+  1011 ;; Hardware stack levels required when called:    6
+  1012 ;; This function calls:
+  1013 ;;		_controller_work
+  1014 ;;		_init_ihcmon
+  1015 ;; This function is called by:
+  1016 ;;		Startup code after reset
+  1017 ;; This function uses a non-reentrant model
+  1018 ;;
+  1019                           
+  1020                           	psect	text0
+  1021  000708                     __ptext0:
+  1022                           	callstack 0
+  1023  000708                     _main:
+  1024                           	callstack 25
+  1025                           
+  1026                           ;../ibsmon.c: 349:  init_ihcmon();
+  1027                           
+  1028                           ;incstack = 0
+  1029  000708  ECD3  F001         	call	_init_ihcmon	;wreg free
+  1030  00070C                     l1729:
+  1031                           
+  1032                           ;../ibsmon.c: 352:   controller_work();
+  1033  00070C  EC53  F000         	call	_controller_work	;wreg free
+  1034  000710  D7FD               	goto	l1729
+  1035  000712                     __end_of_main:
+  1036                           	callstack 0
+  1037                           
+  1038 ;; *************** function _init_ihcmon *****************
+  1039 ;; Defined at:
+  1040 ;;		line 265 in file "../ibsmon.c"
+  1041 ;; Parameters:    Size  Location     Type
+  1042 ;;		None
+  1043 ;; Auto vars:     Size  Location     Type
+  1044 ;;  tmp             2    0        unsigned short 
+  1045 ;; Return value:  Size  Location     Type
+  1046 ;;                  1    wreg      void 
+  1047 ;; Registers used:
+  1048 ;;		wreg, status,2, status,0, cstack
+  1049 ;; Tracked objects:
+  1050 ;;		On entry : 0/0
+  1051 ;;		On exit  : 0/0
+  1052 ;;		Unchanged: 0/0
+  1053 ;; Data sizes:     COMRAM   BANK0
+  1054 ;;      Params:         0       0
+  1055 ;;      Locals:         2       0
+  1056 ;;      Temps:          0       0
+  1057 ;;      Totals:         2       0
+  1058 ;;Total ram usage:        2 bytes
+  1059 ;; Hardware stack levels used:    1
+  1060 ;; Hardware stack levels required when called:    3
+  1061 ;; This function calls:
+  1062 ;;		_SetDCPWM1
+  1063 ;;		_init_stream_params
+  1064 ;;		_set_led_blink
+  1065 ;; This function is called by:
+  1066 ;;		_main
+  1067 ;; This function uses a non-reentrant model
+  1068 ;;
+  1069                           
+  1070                           	psect	text1
+  1071  0003A6                     __ptext1:
+  1072                           	callstack 0
+  1073  0003A6                     _init_ihcmon:
+  1074                           	callstack 27
+  1075                           
+  1076                           ;../ibsmon.c: 267:  uint16_t tmp;;../ibsmon.c: 268:  V.boot_code = 0;
+  1077                           
+  1078                           ;incstack = 0
+  1079  0003A6  960B               	bcf	(_V+10)^0,3,c	;volatile
+  1080                           
+  1081                           ;../ibsmon.c: 269:  LATBbits.LATB2 = 0;
+  1082  0003A8  948A               	bcf	138,2,c	;volatile
+  1083                           
+  1084                           ;../ibsmon.c: 270:  if (RCON != 0b0011100)
+  1085  0003AA  0E1C               	movlw	28
+  1086  0003AC  18D0               	xorwf	208,w,c	;volatile
+  1087  0003AE  A4D8               	btfss	status,2,c
+  1088                           
+  1089                           ;../ibsmon.c: 271:   V.boot_code = 1;
+  1090  0003B0  860B               	bsf	(_V+10)^0,3,c	;volatile
+  1091                           
+  1092                           ;../ibsmon.c: 273:  if (STKPTRbits.STKFUL || STKPTRbits.STKUNF) {
+  1093  0003B2  BEFC               	btfsc	252,7,c	;volatile
+  1094  0003B4  D002               	goto	u730
+  1095  0003B6  ACFC               	btfss	252,6,c	;volatile
+  1096  0003B8  D003               	goto	l181
+  1097  0003BA                     u730:
+  1098                           
+  1099                           ;../ibsmon.c: 274:   V.boot_code = 1;
+  1100  0003BA  860B               	bsf	(_V+10)^0,3,c	;volatile
+  1101                           
+  1102                           ;../ibsmon.c: 275:   STKPTRbits.STKFUL = 0;
+  1103  0003BC  9EFC               	bcf	252,7,c	;volatile
+  1104                           
+  1105                           ;../ibsmon.c: 276:   STKPTRbits.STKUNF = 0;
+  1106  0003BE  9CFC               	bcf	252,6,c	;volatile
+  1107  0003C0                     l181:
+  1108                           
+  1109                           ;../ibsmon.c: 279:  if (V.boot_code)
+  1110  0003C0  B60B               	btfsc	(_V+10)^0,3,c	;volatile
+  1111                           
+  1112                           ;../ibsmon.c: 280:   LATBbits.LATB2 = 1;
+  1113  0003C2  848A               	bsf	138,2,c	;volatile
+  1114                           
+  1115                           ;../ibsmon.c: 282:  ADCON1 = 0x7F;
+  1116  0003C4  0E7F               	movlw	127
+  1117  0003C6  6EC1               	movwf	193,c	;volatile
+  1118                           
+  1119                           ;../ibsmon.c: 284:  RCONbits.IPEN = 1;
+  1120  0003C8  8ED0               	bsf	208,7,c	;volatile
+  1121                           
+  1122                           ;../ibsmon.c: 286:  TRISA = 0b00001100;
+  1123  0003CA  0E0C               	movlw	12
+  1124  0003CC  6E92               	movwf	146,c	;volatile
+  1125                           
+  1126                           ;../ibsmon.c: 287:  TRISB = 0b00010010;
+  1127  0003CE  0E12               	movlw	18
+  1128  0003D0  6E93               	movwf	147,c	;volatile
+  1129                           
+  1130                           ;../ibsmon.c: 288:  INTCON2bits.RBPU = 0;
+  1131  0003D2  9EF1               	bcf	241,7,c	;volatile
+  1132                           
+  1133                           ;../ibsmon.c: 290:  LATBbits.LATB0 = 0;
+  1134  0003D4  908A               	bcf	138,0,c	;volatile
+  1135                           
+  1136                           ;../ibsmon.c: 291:  LATAbits.LATA2 = 0;
+  1137  0003D6  9489               	bcf	137,2,c	;volatile
+  1138                           
+  1139                           ;../ibsmon.c: 292:  V.clock_blinks = 0;
+  1140  0003D8  0E00               	movlw	0
+  1141  0003DA  6E09               	movwf	(_V+8)^0,c	;volatile
+  1142                           
+  1143                           ;../ibsmon.c: 293:  set_led_blink(0);
+  1144  0003DC  0E00               	movlw	0
+  1145  0003DE  EC5D  F003         	call	_set_led_blink
+  1146                           
+  1147                           ;../ibsmon.c: 295:  T0CON = 0b10000101;
+  1148  0003E2  0E85               	movlw	133
+  1149  0003E4  6ED5               	movwf	213,c	;volatile
+  1150                           
+  1151                           ;../ibsmon.c: 297:  TMR0H = tmp;
+  1152  0003E6  0E67               	movlw	103
+  1153  0003E8  6ED7               	movwf	215,c	;volatile
+  1154                           
+  1155                           ;../ibsmon.c: 299:  TMR0L = tmp;
+  1156  0003EA  0EE8               	movlw	232
+  1157  0003EC  6ED6               	movwf	214,c	;volatile
+  1158                           
+  1159                           ;../ibsmon.c: 301:  T1CON = 0b10100101;
+  1160  0003EE  0EA5               	movlw	165
+  1161  0003F0  6ECD               	movwf	205,c	;volatile
+  1162                           
+  1163                           ;../ibsmon.c: 303:  TMR1H = tmp;
+  1164  0003F2  0EF6               	movlw	246
+  1165  0003F4  6ECF               	movwf	207,c	;volatile
+  1166                           
+  1167                           ;../ibsmon.c: 305:  TMR1L = tmp;
+  1168  0003F6  0E60               	movlw	96
+  1169  0003F8  6ECE               	movwf	206,c	;volatile
+  1170                           
+  1171                           ;../ibsmon.c: 307:  CCP1CON |= 0b00001100;
+  1172  0003FA  0E0C               	movlw	12
+  1173  0003FC  12BD               	iorwf	189,f,c	;volatile
+  1174                           
+  1175                           ;../ibsmon.c: 308:  T2CONbits.TMR2ON = 0;
+  1176  0003FE  94CA               	bcf	202,2,c	;volatile
+  1177                           
+  1178                           ;../ibsmon.c: 309:  PR2 = 65;
+  1179  000400  0E41               	movlw	65
+  1180  000402  6ECB               	movwf	203,c	;volatile
+  1181                           
+  1182                           ;../ibsmon.c: 310:  T2CONbits.TMR2ON = 1;
+  1183  000404  84CA               	bsf	202,2,c	;volatile
+  1184                           
+  1185                           ;../ibsmon.c: 311:  V.pwm_volts = 255;
+  1186  000406  680E               	setf	(_V+13)^0,c	;volatile
+  1187                           
+  1188                           ;../ibsmon.c: 312:  SetDCPWM1(V.pwm_volts);
+  1189  000408  C00E  F040         	movff	_V+13,SetDCPWM1@dutycycle	;volatile
+  1190  00040C  6A41               	clrf	(SetDCPWM1@dutycycle+1)^0,c
+  1191  00040E  EC27  F003         	call	_SetDCPWM1	;wreg free
+  1192                           
+  1193                           ;../ibsmon.c: 315:  TXSTA = 0;
+  1194  000412  0E00               	movlw	0
+  1195  000414  6EAC               	movwf	172,c	;volatile
+  1196                           
+  1197                           ;../ibsmon.c: 316:  RCSTA = 0;
+  1198  000416  0E00               	movlw	0
+  1199  000418  6EAB               	movwf	171,c	;volatile
+  1200                           
+  1201                           ;../ibsmon.c: 317:  PIE1bits.RCIE = 1;
+  1202  00041A  8A9D               	bsf	157,5,c	;volatile
+  1203                           
+  1204                           ;../ibsmon.c: 318:  PIE1bits.TXIE = 0;
+  1205  00041C  989D               	bcf	157,4,c	;volatile
+  1206                           
+  1207                           ;../ibsmon.c: 319:  TXSTAbits.SYNC = 0;
+  1208  00041E  98AC               	bcf	172,4,c	;volatile
+  1209                           
+  1210                           ;../ibsmon.c: 320:  RCSTAbits.CREN = 1;
+  1211  000420  88AB               	bsf	171,4,c	;volatile
+  1212                           
+  1213                           ;../ibsmon.c: 321:  PIR1bits.TXIF = 0;
+  1214  000422  989E               	bcf	158,4,c	;volatile
+  1215                           
+  1216                           ;../ibsmon.c: 322:  PIR1bits.RCIF = 0;
+  1217  000424  9A9E               	bcf	158,5,c	;volatile
+  1218                           
+  1219                           ;../ibsmon.c: 323:  BAUDCTLbits.BRG16 = 0;
+  1220  000426  96AA               	bcf	170,3,c	;volatile
+  1221                           
+  1222                           ;../ibsmon.c: 324:  TXSTAbits.BRGH = 0;
+  1223  000428  94AC               	bcf	172,2,c	;volatile
+  1224                           
+  1225                           ;../ibsmon.c: 325:  SPBRGH = 0;
+  1226  00042A  0E00               	movlw	0
+  1227  00042C  6EB0               	movwf	176,c	;volatile
+  1228                           
+  1229                           ;../ibsmon.c: 326:  SPBRG = 64;
+  1230  00042E  0E40               	movlw	64
+  1231  000430  6EAF               	movwf	175,c	;volatile
+  1232                           
+  1233                           ;../ibsmon.c: 327:  TXSTAbits.TXEN = 1;
+  1234  000432  8AAC               	bsf	172,5,c	;volatile
+  1235                           
+  1236                           ;../ibsmon.c: 328:  RCSTAbits.SPEN = 1;
+  1237  000434  8EAB               	bsf	171,7,c	;volatile
+  1238                           
+  1239                           ;../ibsmon.c: 330:  INTCONbits.TMR0IE = 1;
+  1240  000436  8AF2               	bsf	242,5,c	;volatile
+  1241                           
+  1242                           ;../ibsmon.c: 331:  INTCON2bits.TMR0IP = 1;
+  1243  000438  84F1               	bsf	241,2,c	;volatile
+  1244                           
+  1245                           ;../ibsmon.c: 332:  PIE1bits.TMR1IE = 1;
+  1246  00043A  809D               	bsf	157,0,c	;volatile
+  1247                           
+  1248                           ;../ibsmon.c: 333:  IPR1bits.TMR1IP = 1;
+  1249  00043C  809F               	bsf	159,0,c	;volatile
+  1250                           
+  1251                           ;../ibsmon.c: 335:  init_stream_params();
+  1252  00043E  EC8C  F003         	call	_init_stream_params	;wreg free
+  1253                           
+  1254                           ;../ibsmon.c: 338:  INTCONbits.GIEH = 1;
+  1255  000442  8EF2               	bsf	242,7,c	;volatile
+  1256  000444  0012               	return		;funcret
+  1257  000446                     __end_of_init_ihcmon:
+  1258                           	callstack 0
+  1259                           
+  1260 ;; *************** function _init_stream_params *****************
+  1261 ;; Defined at:
+  1262 ;;		line 341 in file "../ibsmon.c"
+  1263 ;; Parameters:    Size  Location     Type
+  1264 ;;		None
+  1265 ;; Auto vars:     Size  Location     Type
+  1266 ;;		None
+  1267 ;; Return value:  Size  Location     Type
+  1268 ;;                  1    wreg      unsigned char 
+  1269 ;; Registers used:
+  1270 ;;		None
+  1271 ;; Tracked objects:
+  1272 ;;		On entry : 0/0
+  1273 ;;		On exit  : 0/0
+  1274 ;;		Unchanged: 0/0
+  1275 ;; Data sizes:     COMRAM   BANK0
+  1276 ;;      Params:         0       0
+  1277 ;;      Locals:         0       0
+  1278 ;;      Temps:          0       0
+  1279 ;;      Totals:         0       0
+  1280 ;;Total ram usage:        0 bytes
+  1281 ;; Hardware stack levels used:    1
+  1282 ;; Hardware stack levels required when called:    2
+  1283 ;; This function calls:
+  1284 ;;		Nothing
+  1285 ;; This function is called by:
+  1286 ;;		_init_ihcmon
+  1287 ;; This function uses a non-reentrant model
+  1288 ;;
+  1289                           
+  1290                           	psect	text2
+  1291  000718                     __ptext2:
+  1292                           	callstack 0
+  1293  000718                     _init_stream_params:
+  1294                           	callstack 27
+  1295                           
+  1296                           ;../ibsmon.c: 343:  V.config = 0;
+  1297                           
+  1298                           ;incstack = 0
+  1299  000718  920B               	bcf	(_V+10)^0,1,c	;volatile
+  1300                           
+  1301                           ;../ibsmon.c: 344:  return 0;;	Return value of _init_stream_params is never used
+  1302  00071A  0012               	return		;funcret
+  1303  00071C                     __end_of_init_stream_params:
+  1304                           	callstack 0
+  1305                           
+  1306 ;; *************** function _controller_work *****************
+  1307 ;; Defined at:
+  1308 ;;		line 116 in file "../ibsmon.c"
+  1309 ;; Parameters:    Size  Location     Type
+  1310 ;;		None
+  1311 ;; Auto vars:     Size  Location     Type
+  1312 ;;  temp            1   36[COMRAM] unsigned char 
+  1313 ;;  temp            2   30[COMRAM] unsigned short 
+  1314 ;;  c_crc_rec       2   34[COMRAM] unsigned short 
+  1315 ;;  c_crc           2   32[COMRAM] unsigned short 
+  1316 ;; Return value:  Size  Location     Type
+  1317 ;;                  1    wreg      char 
+  1318 ;; Registers used:
+  1319 ;;		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+  1320 ;; Tracked objects:
+  1321 ;;		On entry : 0/0
+  1322 ;;		On exit  : 0/0
+  1323 ;;		Unchanged: 0/0
+  1324 ;; Data sizes:     COMRAM   BANK0
+  1325 ;;      Params:         0       0
+  1326 ;;      Locals:         7       0
+  1327 ;;      Temps:          2       0
+  1328 ;;      Totals:         9       0
+  1329 ;;Total ram usage:        9 bytes
+  1330 ;; Hardware stack levels used:    1
+  1331 ;; Hardware stack levels required when called:    5
+  1332 ;; This function calls:
+  1333 ;;		_SetDCPWM1
+  1334 ;;		_clear_2hz
+  1335 ;;		_clear_500hz
+  1336 ;;		_crc16
+  1337 ;;		_get_2hz
+  1338 ;;		_get_500hz
+  1339 ;;		_modbus_rtu_send_msg
+  1340 ;;		_set_led_blink
+  1341 ;; This function is called by:
+  1342 ;;		_main
+  1343 ;; This function uses a non-reentrant model
+  1344 ;;
+  1345                           
+  1346                           	psect	text3
+  1347  0000A6                     __ptext3:
+  1348                           	callstack 0
+  1349  0000A6                     _controller_work:
+  1350                           	callstack 25
+  1351                           
+  1352                           ;../ibsmon.c: 118:  static uint8_t mcmd = G_MODE;;../ibsmon.c: 120:  switch (cstate) {
+  1353                           
+  1354                           ;incstack = 0
+  1355  0000A6  D16A               	goto	l1615
+  1356  0000A8                     l1481:
+  1357                           
+  1358                           ;../ibsmon.c: 122:   clear_2hz();
+  1359  0000A8  EC79  F003         	call	_clear_2hz	;wreg free
+  1360                           
+  1361                           ;../ibsmon.c: 123:   cstate = INIT;
+  1362  0000AC  0E01               	movlw	1
+  1363  0000AE  6E20               	movwf	_cstate^0,c
+  1364                           
+  1365                           ;../ibsmon.c: 124:   modbus_command = mcmd++;
+  1366  0000B0  C01E  F01F         	movff	controller_work@mcmd,_modbus_command
+  1367  0000B4  2A1E               	incf	controller_work@mcmd^0,f,c
+  1368                           
+  1369                           ;../ibsmon.c: 125:   if (mcmd > G_LAST)
+  1370  0000B6  0E03               	movlw	3
+  1371  0000B8  641E               	cpfsgt	controller_work@mcmd^0,c
+  1372  0000BA  D025               	goto	l1499
+  1373                           
+  1374                           ;../ibsmon.c: 126:    mcmd = G_MODE;
+  1375  0000BC  0E00               	movlw	0
+  1376  0000BE  6E1E               	movwf	controller_work@mcmd^0,c
+  1377  0000C0  D022               	goto	l1499
+  1378  0000C2                     l1493:
+  1379                           
+  1380                           ;../ibsmon.c: 132:    req_length = modbus_rtu_send_msg((void*) cc_buffer, (const void *)
+      +                           modbus_cc_error, sizeof(modbus_cc_error));
+  1381  0000C2  0E22               	movlw	low _cc_buffer
+  1382  0000C4  6E4D               	movwf	modbus_rtu_send_msg@cc_buffer^0,c
+  1383  0000C6  0EDE               	movlw	low _modbus_cc_error
+  1384  0000C8  6E4E               	movwf	modbus_rtu_send_msg@modbus_cc_mode^0,c
+  1385  0000CA  0E1F               	movlw	high _modbus_cc_error
+  1386  0000CC  6E4F               	movwf	(modbus_rtu_send_msg@modbus_cc_mode+1)^0,c
+  1387  0000CE  0E00               	movlw	0
+  1388  0000D0  6E51               	movwf	(modbus_rtu_send_msg@req_length+1)^0,c
+  1389  0000D2  0E06               	movlw	6
+  1390  0000D4  6E50               	movwf	modbus_rtu_send_msg@req_length^0,c
+  1391  0000D6  EC44  F003         	call	_modbus_rtu_send_msg	;wreg free
+  1392  0000DA  C04D  F01B         	movff	?_modbus_rtu_send_msg,_req_length
+  1393  0000DE  C04E  F01C         	movff	?_modbus_rtu_send_msg+1,_req_length+1
+  1394                           
+  1395                           ;../ibsmon.c: 133:    break;
+  1396  0000E2  0012               	return	
+  1397  0000E4                     l1495:
+  1398                           
+  1399                           ;../ibsmon.c: 136:    req_length = modbus_rtu_send_msg((void*) cc_buffer, (const void *)
+      +                           modbus_cc_mode, sizeof(modbus_cc_mode));
+  1400  0000E4  0E22               	movlw	low _cc_buffer
+  1401  0000E6  6E4D               	movwf	modbus_rtu_send_msg@cc_buffer^0,c
+  1402  0000E8  0EE4               	movlw	low _modbus_cc_mode
+  1403  0000EA  6E4E               	movwf	modbus_rtu_send_msg@modbus_cc_mode^0,c
+  1404  0000EC  0E1F               	movlw	high _modbus_cc_mode
+  1405  0000EE  6E4F               	movwf	(modbus_rtu_send_msg@modbus_cc_mode+1)^0,c
+  1406  0000F0  0E00               	movlw	0
+  1407  0000F2  6E51               	movwf	(modbus_rtu_send_msg@req_length+1)^0,c
+  1408  0000F4  0E06               	movlw	6
+  1409  0000F6  6E50               	movwf	modbus_rtu_send_msg@req_length^0,c
+  1410  0000F8  EC44  F003         	call	_modbus_rtu_send_msg	;wreg free
+  1411  0000FC  C04D  F01B         	movff	?_modbus_rtu_send_msg,_req_length
+  1412  000100  C04E  F01C         	movff	?_modbus_rtu_send_msg+1,_req_length+1
+  1413                           
+  1414                           ;../ibsmon.c: 137:    break;
+  1415  000104  0012               	return	
+  1416  000106                     l1499:
+  1417  000106  501F               	movf	_modbus_command^0,w,c
+  1418  000108  6E52               	movwf	??_controller_work^0,c
+  1419  00010A  6A53               	clrf	(??_controller_work+1)^0,c
+  1420                           
+  1421                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
+      +                          itches
+  1422                           ; Switch size 1, requested type "simple"
+  1423                           ; Number of cases is 1, Range of values is 0 to 0
+  1424                           ; switch strategies available:
+  1425                           ; Name         Instructions Cycles
+  1426                           ; simple_byte            4     3 (average)
+  1427                           ;	Chosen strategy is simple_byte
+  1428  00010C  5053               	movf	(??_controller_work+1)^0,w,c
+  1429  00010E  0A00               	xorlw	0	; case 0
+  1430  000110  A4D8               	btfss	status,2,c
+  1431  000112  D7E8               	goto	l1495
+  1432                           
+  1433                           ; Switch size 1, requested type "simple"
+  1434                           ; Number of cases is 2, Range of values is 0 to 1
+  1435                           ; switch strategies available:
+  1436                           ; Name         Instructions Cycles
+  1437                           ; simple_byte            7     4 (average)
+  1438                           ;	Chosen strategy is simple_byte
+  1439  000114  5052               	movf	??_controller_work^0,w,c
+  1440  000116  0A00               	xorlw	0	; case 0
+  1441  000118  B4D8               	btfsc	status,2,c
+  1442  00011A  D7E4               	goto	l1495
+  1443  00011C  0A01               	xorlw	1	; case 1
+  1444  00011E  B4D8               	btfsc	status,2,c
+  1445  000120  D7D0               	goto	l1493
+  1446  000122  D7E0               	goto	l1495
+  1447  000124                     l1501:
+  1448                           
+  1449                           ;../ibsmon.c: 141:   if (get_2hz(0) > 1) {
+  1450  000124  0E00               	movlw	0
+  1451  000126  ECCB  F002         	call	_get_2hz
+  1452  00012A  5043               	movf	(?_get_2hz+3)^0,w,c
+  1453  00012C  1042               	iorwf	(?_get_2hz+2)^0,w,c
+  1454  00012E  1041               	iorwf	(?_get_2hz+1)^0,w,c
+  1455  000130  E104               	bnz	u530
+  1456  000132  0E02               	movlw	2
+  1457  000134  5C40               	subwf	?_get_2hz^0,w,c
+  1458  000136  A0D8               	btfss	status,0,c
+  1459  000138  0012               	return	
+  1460  00013A                     u530:
+  1461                           
+  1462                           ;../ibsmon.c: 145:    LATAbits.LATA1 = 1;
+  1463  00013A  8289               	bsf	137,1,c	;volatile
+  1464                           
+  1465                           ;../ibsmon.c: 147:    LATAbits.LATA0 = 1;
+  1466  00013C  8089               	bsf	137,0,c	;volatile
+  1467                           
+  1468                           ;../ibsmon.c: 148:    V.send_count = 0;
+  1469  00013E  0E00               	movlw	0
+  1470  000140  6E0C               	movwf	(_V+11)^0,c	;volatile
+  1471                           
+  1472                           ;../ibsmon.c: 149:    V.recv_count = 0;
+  1473  000142  0E00               	movlw	0
+  1474  000144  6E0D               	movwf	(_V+12)^0,c	;volatile
+  1475                           
+  1476                           ;../ibsmon.c: 150:    cstate = SEND;
+  1477  000146  0E02               	movlw	2
+  1478  000148  6E20               	movwf	_cstate^0,c
+  1479                           
+  1480                           ;../ibsmon.c: 151:    clear_500hz();
+  1481  00014A  EC6E  F003         	call	_clear_500hz	;wreg free
+  1482  00014E  0012               	return	
+  1483  000150                     l1509:
+  1484                           
+  1485                           ;../ibsmon.c: 155:   if (get_500hz(0) > 3) {
+  1486  000150  0E00               	movlw	0
+  1487  000152  ECAB  F002         	call	_get_500hz
+  1488  000156  5043               	movf	(?_get_500hz+3)^0,w,c
+  1489  000158  1042               	iorwf	(?_get_500hz+2)^0,w,c
+  1490  00015A  1041               	iorwf	(?_get_500hz+1)^0,w,c
+  1491  00015C  E104               	bnz	u540
+  1492  00015E  0E04               	movlw	4
+  1493  000160  5C40               	subwf	?_get_500hz^0,w,c
+  1494  000162  A0D8               	btfss	status,0,c
+  1495  000164  0012               	return	
+  1496  000166                     u540:
+  1497  000166  A2AC               	btfss	172,1,c	;volatile
+  1498  000168  D7FE               	goto	u540
+  1499                           
+  1500                           ;../ibsmon.c: 158:     TXREG = cc_buffer[V.send_count];
+  1501  00016A  500C               	movf	(_V+11)^0,w,c	;volatile
+  1502  00016C  0F22               	addlw	low _cc_buffer
+  1503  00016E  6ED9               	movwf	fsr2l,c
+  1504  000170  6ADA               	clrf	fsr2h,c
+  1505  000172  50DF               	movf	indf2,w,c
+  1506  000174  6EAD               	movwf	173,c	;volatile
+  1507                           
+  1508                           ;../ibsmon.c: 159:    } while (++V.send_count < req_length);
+  1509  000176  2A0C               	incf	(_V+11)^0,f,c	;volatile
+  1510  000178  500C               	movf	(_V+11)^0,w,c	;volatile
+  1511  00017A  6E52               	movwf	??_controller_work^0,c
+  1512  00017C  6A53               	clrf	(??_controller_work+1)^0,c
+  1513  00017E  501B               	movf	_req_length^0,w,c
+  1514  000180  5C52               	subwf	??_controller_work^0,w,c
+  1515  000182  501C               	movf	(_req_length+1)^0,w,c
+  1516  000184  5853               	subwfb	(??_controller_work+1)^0,w,c
+  1517  000186  A0D8               	btfss	status,0,c
+  1518  000188  D7EE               	goto	u540
+  1519  00018A                     u560:
+  1520  00018A  A2AC               	btfss	172,1,c	;volatile
+  1521  00018C  D7FE               	goto	u560
+  1522                           
+  1523                           ;../ibsmon.c: 161:    cstate = RECV;
+  1524  00018E  0E03               	movlw	3
+  1525  000190  D7DB               	goto	L1
+  1526  000192                     l1519:
+  1527                           
+  1528                           ;../ibsmon.c: 166:   if (get_500hz(0) > 3) {
+  1529  000192  0E00               	movlw	0
+  1530  000194  ECAB  F002         	call	_get_500hz
+  1531  000198  5043               	movf	(?_get_500hz+3)^0,w,c
+  1532  00019A  1042               	iorwf	(?_get_500hz+2)^0,w,c
+  1533  00019C  1041               	iorwf	(?_get_500hz+1)^0,w,c
+  1534  00019E  E104               	bnz	u580
+  1535  0001A0  0E04               	movlw	4
+  1536  0001A2  5C40               	subwf	?_get_500hz^0,w,c
+  1537  0001A4  A0D8               	btfss	status,0,c
+  1538  0001A6  0012               	return	
+  1539  0001A8                     u580:
+  1540                           
+  1541                           ;../ibsmon.c: 167:    uint16_t c_crc, c_crc_rec;;../ibsmon.c: 169:    LATAbits.LATA0 = 0
+      +                          ;
+  1542  0001A8  9089               	bcf	137,0,c	;volatile
+  1543                           
+  1544                           ;../ibsmon.c: 170:    LATAbits.LATA1 = 0;
+  1545  0001AA  9289               	bcf	137,1,c	;volatile
+  1546                           
+  1547                           ;../ibsmon.c: 175:    switch (modbus_command) {
+  1548  0001AC  D0D8               	goto	l1611
+  1549  0001AE                     l1523:
+  1550                           
+  1551                           ;../ibsmon.c: 177:     req_length = sizeof(re20a_error);
+  1552  0001AE  0E00               	movlw	0
+  1553  0001B0  6E1C               	movwf	(_req_length+1)^0,c
+  1554  0001B2  0E09               	movlw	9
+  1555  0001B4  6E1B               	movwf	_req_length^0,c
+  1556                           
+  1557                           ;../ibsmon.c: 178:     if ((V.recv_count >= req_length) && (cc_buffer[0] == 0x01) && (cc
+      +                          _buffer[1] == 0x03)) {
+  1558  0001B6  0E08               	movlw	8
+  1559  0001B8  640D               	cpfsgt	(_V+12)^0,c	;volatile
+  1560  0001BA  D037               	goto	l1545
+  1561  0001BC  0422               	decf	_cc_buffer^0,w,c	;volatile
+  1562  0001BE  A4D8               	btfss	status,2,c
+  1563  0001C0  D034               	goto	l1545
+  1564  0001C2  0E03               	movlw	3
+  1565  0001C4  1823               	xorwf	(_cc_buffer+1)^0,w,c	;volatile
+  1566  0001C6  A4D8               	btfss	status,2,c
+  1567  0001C8  D030               	goto	l1545
+  1568                           
+  1569                           ;../ibsmon.c: 179:      uint16_t temp;;../ibsmon.c: 180:      c_crc = crc16(cc_buffer, r
+      +                          eq_length - 2);
+  1570  0001CA  0E22               	movlw	low _cc_buffer
+  1571  0001CC  6E40               	movwf	crc16@buffer^0,c
+  1572  0001CE  0E00               	movlw	0
+  1573  0001D0  6E42               	movwf	(crc16@buffer_length+1)^0,c
+  1574  0001D2  0E07               	movlw	7
+  1575  0001D4  6E41               	movwf	crc16@buffer_length^0,c
+  1576  0001D6  EC5E  F002         	call	_crc16	;wreg free
+  1577  0001DA  C040  F056         	movff	?_crc16,controller_work@c_crc
+  1578  0001DE  C041  F057         	movff	?_crc16+1,controller_work@c_crc+1
+  1579                           
+  1580                           ;../ibsmon.c: 181:      c_crc_rec = (uint16_t) ((uint16_t) cc_buffer[req_length - 2] << 
+      +                          (uint16_t) 8) | ((uint16_t) cc_buffer[req_length - 1] & 0x00ff);
+  1581  0001E2  5029               	movf	(_cc_buffer+7)^0,w,c	;volatile
+  1582  0001E4  6E52               	movwf	??_controller_work^0,c
+  1583  0001E6  502A               	movf	(_cc_buffer+8)^0,w,c	;volatile
+  1584  0001E8  6E58               	movwf	controller_work@c_crc_rec^0,c
+  1585  0001EA  C052  F059         	movff	??_controller_work,controller_work@c_crc_rec+1
+  1586                           
+  1587                           ;../ibsmon.c: 182:      if (c_crc == c_crc_rec) {
+  1588  0001EE  5058               	movf	controller_work@c_crc_rec^0,w,c
+  1589  0001F0  1856               	xorwf	controller_work@c_crc^0,w,c
+  1590  0001F2  E118               	bnz	l1543
+  1591  0001F4  5059               	movf	(controller_work@c_crc_rec+1)^0,w,c
+  1592  0001F6  1857               	xorwf	(controller_work@c_crc+1)^0,w,c
+  1593  0001F8  A4D8               	btfss	status,2,c
+  1594  0001FA  D014               	goto	l1543
+  1595                           
+  1596                           ;../ibsmon.c: 183:       if ((temp = (cc_buffer[3] << 8) +(cc_buffer[4]&0xff))) {
+  1597  0001FC  5025               	movf	(_cc_buffer+3)^0,w,c	;volatile
+  1598  0001FE  6E53               	movwf	(??_controller_work+1)^0,c
+  1599  000200  6A52               	clrf	??_controller_work^0,c
+  1600  000202  5026               	movf	(_cc_buffer+4)^0,w,c	;volatile
+  1601  000204  2452               	addwf	??_controller_work^0,w,c
+  1602  000206  6E54               	movwf	controller_work@temp^0,c
+  1603  000208  0E00               	movlw	0
+  1604  00020A  2053               	addwfc	(??_controller_work+1)^0,w,c
+  1605  00020C  6E55               	movwf	(controller_work@temp+1)^0,c
+  1606  00020E  5054               	movf	controller_work@temp^0,w,c
+  1607  000210  1055               	iorwf	(controller_work@temp+1)^0,w,c
+  1608  000212  B4D8               	btfsc	status,2,c
+  1609  000214  D006               	goto	l151
+  1610                           
+  1611                           ;../ibsmon.c: 184:        __nop();
+  1612  000216  F000               	nop	
+  1613                           
+  1614                           ;../ibsmon.c: 185:        LATAbits.LATA2 = 1;
+  1615  000218  8489               	bsf	137,2,c	;volatile
+  1616                           
+  1617                           ;../ibsmon.c: 186:        set_led_blink(10);
+  1618  00021A  0E0A               	movlw	10
+  1619  00021C  EC5D  F003         	call	_set_led_blink
+  1620                           
+  1621                           ;../ibsmon.c: 187:       } else {
+  1622  000220  D001               	goto	l1543
+  1623  000222                     l151:
+  1624                           
+  1625                           ;../ibsmon.c: 188:        LATAbits.LATA2 = 0;
+  1626  000222  9489               	bcf	137,2,c	;volatile
+  1627  000224                     l1543:
+  1628                           
+  1629                           ;../ibsmon.c: 191:      cstate = CLEAR;
+  1630  000224  0E00               	movlw	0
+  1631  000226  6E20               	movwf	_cstate^0,c
+  1632                           
+  1633                           ;../ibsmon.c: 192:     } else {
+  1634  000228  0012               	return	
+  1635  00022A                     l1545:
+  1636                           
+  1637                           ;../ibsmon.c: 193:      if (get_500hz(0) > 2000) {
+  1638  00022A  0E00               	movlw	0
+  1639  00022C  ECAB  F002         	call	_get_500hz
+  1640  000230  5043               	movf	(?_get_500hz+3)^0,w,c
+  1641  000232  1042               	iorwf	(?_get_500hz+2)^0,w,c
+  1642  000234  E106               	bnz	u640
+  1643  000236  0ED1               	movlw	209
+  1644  000238  5C40               	subwf	?_get_500hz^0,w,c
+  1645  00023A  0E07               	movlw	7
+  1646  00023C  5841               	subwfb	(?_get_500hz+1)^0,w,c
+  1647  00023E  A0D8               	btfss	status,0,c
+  1648  000240  0012               	return	
+  1649  000242                     u640:
+  1650                           
+  1651                           ;../ibsmon.c: 194:       cstate = CLEAR;
+  1652  000242  0E00               	movlw	0
+  1653  000244  6E20               	movwf	_cstate^0,c
+  1654                           
+  1655                           ;../ibsmon.c: 195:       LATAbits.LATA2 = 0;
+  1656  000246  9489               	bcf	137,2,c	;volatile
+  1657                           
+  1658                           ;../ibsmon.c: 196:       mcmd = G_MODE;
+  1659  000248  0E00               	movlw	0
+  1660  00024A  6E1E               	movwf	controller_work@mcmd^0,c
+  1661  00024C  0012               	return	
+  1662  00024E                     l1551:
+  1663                           
+  1664                           ;../ibsmon.c: 202:     req_length = sizeof(re20a_mode);
+  1665  00024E  0E00               	movlw	0
+  1666  000250  6E1C               	movwf	(_req_length+1)^0,c
+  1667  000252  0E07               	movlw	7
+  1668  000254  6E1B               	movwf	_req_length^0,c
+  1669                           
+  1670                           ;../ibsmon.c: 203:     if ((V.recv_count >= req_length) && (cc_buffer[0] == 0x01) && (cc
+      +                          _buffer[1] == 0x03)) {
+  1671  000256  0E06               	movlw	6
+  1672  000258  640D               	cpfsgt	(_V+12)^0,c	;volatile
+  1673  00025A  D067               	goto	l1601
+  1674  00025C  0422               	decf	_cc_buffer^0,w,c	;volatile
+  1675  00025E  A4D8               	btfss	status,2,c
+  1676  000260  D064               	goto	l1601
+  1677  000262  0E03               	movlw	3
+  1678  000264  1823               	xorwf	(_cc_buffer+1)^0,w,c	;volatile
+  1679  000266  A4D8               	btfss	status,2,c
+  1680  000268  D060               	goto	l1601
+  1681                           
+  1682                           ;../ibsmon.c: 204:      uint8_t temp;;../ibsmon.c: 205:      static uint8_t volts = 255;
+      +                          ;../ibsmon.c: 207:      c_crc = crc16(cc_buffer, req_length - 2);
+  1683  00026A  0E22               	movlw	low _cc_buffer
+  1684  00026C  6E40               	movwf	crc16@buffer^0,c
+  1685  00026E  0E00               	movlw	0
+  1686  000270  6E42               	movwf	(crc16@buffer_length+1)^0,c
+  1687  000272  0E05               	movlw	5
+  1688  000274  6E41               	movwf	crc16@buffer_length^0,c
+  1689  000276  EC5E  F002         	call	_crc16	;wreg free
+  1690  00027A  C040  F056         	movff	?_crc16,controller_work@c_crc
+  1691  00027E  C041  F057         	movff	?_crc16+1,controller_work@c_crc+1
+  1692                           
+  1693                           ;../ibsmon.c: 208:      c_crc_rec = (uint16_t) ((uint16_t) cc_buffer[req_length - 2] << 
+      +                          (uint16_t) 8) | ((uint16_t) cc_buffer[req_length - 1] & 0x00ff);
+  1694  000282  5027               	movf	(_cc_buffer+5)^0,w,c	;volatile
+  1695  000284  6E52               	movwf	??_controller_work^0,c
+  1696  000286  5028               	movf	(_cc_buffer+6)^0,w,c	;volatile
+  1697  000288  6E58               	movwf	controller_work@c_crc_rec^0,c
+  1698  00028A  C052  F059         	movff	??_controller_work,controller_work@c_crc_rec+1
+  1699                           
+  1700                           ;../ibsmon.c: 210:      if (c_crc == c_crc_rec) {
+  1701  00028E  5058               	movf	controller_work@c_crc_rec^0,w,c
+  1702  000290  1856               	xorwf	controller_work@c_crc^0,w,c
+  1703  000292  E13A               	bnz	l1591
+  1704  000294  5059               	movf	(controller_work@c_crc_rec+1)^0,w,c
+  1705  000296  1857               	xorwf	(controller_work@c_crc+1)^0,w,c
+  1706  000298  A4D8               	btfss	status,2,c
+  1707  00029A  D036               	goto	l1591
+  1708                           
+  1709                           ;../ibsmon.c: 211:       if ((temp = cc_buffer[4])) {
+  1710  00029C  C026  F05A         	movff	_cc_buffer+4,controller_work@temp_703	;volatile
+  1711  0002A0  505A               	movf	controller_work@temp_703^0,w,c
+  1712  0002A2  B4D8               	btfsc	status,2,c
+  1713  0002A4  D02B               	goto	l1587
+  1714                           
+  1715                           ;../ibsmon.c: 212:        set_led_blink(temp);
+  1716  0002A6  505A               	movf	controller_work@temp_703^0,w,c
+  1717  0002A8  EC5D  F003         	call	_set_led_blink
+  1718                           
+  1719                           ;../ibsmon.c: 213:        switch (temp) {
+  1720  0002AC  D00C               	goto	l1585
+  1721  0002AE                     l1569:
+  1722                           
+  1723                           ;../ibsmon.c: 215:         volts = 92;
+  1724  0002AE  0E5C               	movlw	92
+  1725  0002B0  D029               	goto	L7
+  1726  0002B2                     l1571:
+  1727                           
+  1728                           ;../ibsmon.c: 218:         volts = 122;
+  1729  0002B2  0E7A               	movlw	122
+  1730  0002B4  D027               	goto	L7
+  1731  0002B6                     l1573:
+  1732                           
+  1733                           ;../ibsmon.c: 221:         volts = 150;
+  1734  0002B6  0E96               	movlw	150
+  1735  0002B8  D025               	goto	L7
+  1736  0002BA                     l1575:
+  1737                           
+  1738                           ;../ibsmon.c: 224:         volts = 177;
+  1739  0002BA  0EB1               	movlw	177
+  1740  0002BC  D023               	goto	L7
+  1741  0002BE                     l1577:
+  1742                           
+  1743                           ;../ibsmon.c: 227:         volts = 205;
+  1744  0002BE  0ECD               	movlw	205
+  1745  0002C0  D021               	goto	L7
+  1746  0002C2                     l1579:
+  1747                           
+  1748                           ;../ibsmon.c: 230:         volts = 230;
+  1749  0002C2  0EE6               	movlw	230
+  1750  0002C4  D01F               	goto	L7
+  1751  0002C6                     l1585:
+  1752  0002C6  505A               	movf	controller_work@temp_703^0,w,c
+  1753  0002C8  6E52               	movwf	??_controller_work^0,c
+  1754  0002CA  6A53               	clrf	(??_controller_work+1)^0,c
+  1755                           
+  1756                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
+      +                          itches
+  1757                           ; Switch size 1, requested type "simple"
+  1758                           ; Number of cases is 1, Range of values is 0 to 0
+  1759                           ; switch strategies available:
+  1760                           ; Name         Instructions Cycles
+  1761                           ; simple_byte            4     3 (average)
+  1762                           ;	Chosen strategy is simple_byte
+  1763  0002CC  5053               	movf	(??_controller_work+1)^0,w,c
+  1764  0002CE  0A00               	xorlw	0	; case 0
+  1765  0002D0  A4D8               	btfss	status,2,c
+  1766  0002D2  D7ED               	goto	l1569
+  1767                           
+  1768                           ; Switch size 1, requested type "simple"
+  1769                           ; Number of cases is 6, Range of values is 1 to 6
+  1770                           ; switch strategies available:
+  1771                           ; Name         Instructions Cycles
+  1772                           ; simple_byte           19    10 (average)
+  1773                           ;	Chosen strategy is simple_byte
+  1774  0002D4  5052               	movf	??_controller_work^0,w,c
+  1775  0002D6  0A01               	xorlw	1	; case 1
+  1776  0002D8  B4D8               	btfsc	status,2,c
+  1777  0002DA  D7E9               	goto	l1569
+  1778  0002DC  0A03               	xorlw	3	; case 2
+  1779  0002DE  B4D8               	btfsc	status,2,c
+  1780  0002E0  D7E8               	goto	l1571
+  1781  0002E2  0A01               	xorlw	1	; case 3
+  1782  0002E4  B4D8               	btfsc	status,2,c
+  1783  0002E6  D7E7               	goto	l1573
+  1784  0002E8  0A07               	xorlw	7	; case 4
+  1785  0002EA  B4D8               	btfsc	status,2,c
+  1786  0002EC  D7E6               	goto	l1575
+  1787  0002EE  0A01               	xorlw	1	; case 5
+  1788  0002F0  B4D8               	btfsc	status,2,c
+  1789  0002F2  D7E5               	goto	l1577
+  1790  0002F4  0A03               	xorlw	3	; case 6
+  1791  0002F6  B4D8               	btfsc	status,2,c
+  1792  0002F8  D7E4               	goto	l1579
+  1793  0002FA  D7D9               	goto	l1569
+  1794  0002FC                     l1587:
+  1795                           
+  1796                           ;../ibsmon.c: 237:        set_led_blink(255);
+  1797  0002FC  0EFF               	movlw	255
+  1798  0002FE  EC5D  F003         	call	_set_led_blink
+  1799                           
+  1800                           ;../ibsmon.c: 238:        volts = 61;
+  1801  000302  0E3D               	movlw	61
+  1802  000304                     L7:
+  1803  000304  6E5F               	movwf	controller_work@volts^0,c
+  1804  000306  D009               	goto	l1595
+  1805  000308                     l1591:
+  1806                           
+  1807                           ;../ibsmon.c: 241:       crc_error++;
+  1808  000308  0E01               	movlw	1
+  1809  00030A  2617               	addwf	_crc_error^0,f,c
+  1810  00030C  0E00               	movlw	0
+  1811  00030E  2218               	addwfc	(_crc_error+1)^0,f,c
+  1812  000310  2219               	addwfc	(_crc_error+2)^0,f,c
+  1813  000312  221A               	addwfc	(_crc_error+3)^0,f,c
+  1814                           
+  1815                           ;../ibsmon.c: 242:       set_led_blink(0);
+  1816  000314  0E00               	movlw	0
+  1817  000316  EC5D  F003         	call	_set_led_blink
+  1818  00031A                     l1595:
+  1819                           
+  1820                           ;../ibsmon.c: 244:      V.pwm_volts = volts;
+  1821  00031A  C05F  F00E         	movff	controller_work@volts,_V+13	;volatile
+  1822                           
+  1823                           ;../ibsmon.c: 245:      SetDCPWM1(V.pwm_volts);
+  1824  00031E  C00E  F040         	movff	_V+13,SetDCPWM1@dutycycle	;volatile
+  1825  000322  6A41               	clrf	(SetDCPWM1@dutycycle+1)^0,c
+  1826  000324  EC27  F003         	call	_SetDCPWM1	;wreg free
+  1827  000328  D77D               	goto	l1543
+  1828  00032A                     l1601:
+  1829                           
+  1830                           ;../ibsmon.c: 248:      if (get_500hz(0) > 2000) {
+  1831  00032A  0E00               	movlw	0
+  1832  00032C  ECAB  F002         	call	_get_500hz
+  1833  000330  5043               	movf	(?_get_500hz+3)^0,w,c
+  1834  000332  1042               	iorwf	(?_get_500hz+2)^0,w,c
+  1835  000334  E106               	bnz	u700
+  1836  000336  0ED1               	movlw	209
+  1837  000338  5C40               	subwf	?_get_500hz^0,w,c
+  1838  00033A  0E07               	movlw	7
+  1839  00033C  5841               	subwfb	(?_get_500hz+1)^0,w,c
+  1840  00033E  A0D8               	btfss	status,0,c
+  1841  000340  0012               	return	
+  1842  000342                     u700:
+  1843                           
+  1844                           ;../ibsmon.c: 249:       set_led_blink(0);
+  1845  000342  0E00               	movlw	0
+  1846  000344  EC5D  F003         	call	_set_led_blink
+  1847                           
+  1848                           ;../ibsmon.c: 250:       cstate = CLEAR;
+  1849  000348  0E00               	movlw	0
+  1850  00034A  6E20               	movwf	_cstate^0,c
+  1851                           
+  1852                           ;../ibsmon.c: 251:       V.pwm_volts = 255;
+  1853  00034C  680E               	setf	(_V+13)^0,c	;volatile
+  1854                           
+  1855                           ;../ibsmon.c: 252:       SetDCPWM1(V.pwm_volts);
+  1856  00034E  C00E  F040         	movff	_V+13,SetDCPWM1@dutycycle	;volatile
+  1857  000352  6A41               	clrf	(SetDCPWM1@dutycycle+1)^0,c
+  1858  000354  EC27  F003         	call	_SetDCPWM1	;wreg free
+  1859                           
+  1860                           ;../ibsmon.c: 253:       mcmd = G_MODE;
+  1861  000358  0E00               	movlw	0
+  1862  00035A  6E1E               	movwf	controller_work@mcmd^0,c
+  1863  00035C  0012               	return	
+  1864  00035E                     l1611:
+  1865  00035E  501F               	movf	_modbus_command^0,w,c
+  1866  000360  6E52               	movwf	??_controller_work^0,c
+  1867  000362  6A53               	clrf	(??_controller_work+1)^0,c
+  1868                           
+  1869                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
+      +                          itches
+  1870                           ; Switch size 1, requested type "simple"
+  1871                           ; Number of cases is 1, Range of values is 0 to 0
+  1872                           ; switch strategies available:
+  1873                           ; Name         Instructions Cycles
+  1874                           ; simple_byte            4     3 (average)
+  1875                           ;	Chosen strategy is simple_byte
+  1876  000364  5053               	movf	(??_controller_work+1)^0,w,c
+  1877  000366  0A00               	xorlw	0	; case 0
+  1878  000368  A4D8               	btfss	status,2,c
+  1879  00036A  D771               	goto	l1551
+  1880                           
+  1881                           ; Switch size 1, requested type "simple"
+  1882                           ; Number of cases is 2, Range of values is 0 to 1
+  1883                           ; switch strategies available:
+  1884                           ; Name         Instructions Cycles
+  1885                           ; simple_byte            7     4 (average)
+  1886                           ;	Chosen strategy is simple_byte
+  1887  00036C  5052               	movf	??_controller_work^0,w,c
+  1888  00036E  0A00               	xorlw	0	; case 0
+  1889  000370  B4D8               	btfsc	status,2,c
+  1890  000372  D76D               	goto	l1551
+  1891  000374  0A01               	xorlw	1	; case 1
+  1892  000376  B4D8               	btfsc	status,2,c
+  1893  000378  D71A               	goto	l1523
+  1894  00037A  D769               	goto	l1551
+  1895  00037C                     l1615:
+  1896  00037C  5020               	movf	_cstate^0,w,c
+  1897  00037E  6E52               	movwf	??_controller_work^0,c
+  1898  000380  6A53               	clrf	(??_controller_work+1)^0,c
+  1899                           
+  1900                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
+      +                          itches
+  1901                           ; Switch size 1, requested type "simple"
+  1902                           ; Number of cases is 1, Range of values is 0 to 0
+  1903                           ; switch strategies available:
+  1904                           ; Name         Instructions Cycles
+  1905                           ; simple_byte            4     3 (average)
+  1906                           ;	Chosen strategy is simple_byte
+  1907  000382  5053               	movf	(??_controller_work+1)^0,w,c
+  1908  000384  0A00               	xorlw	0	; case 0
+  1909  000386  A4D8               	btfss	status,2,c
+  1910  000388  0012               	return	
+  1911                           
+  1912                           ; Switch size 1, requested type "simple"
+  1913                           ; Number of cases is 4, Range of values is 0 to 3
+  1914                           ; switch strategies available:
+  1915                           ; Name         Instructions Cycles
+  1916                           ; simple_byte           13     7 (average)
+  1917                           ;	Chosen strategy is simple_byte
+  1918  00038A  5052               	movf	??_controller_work^0,w,c
+  1919  00038C  0A00               	xorlw	0	; case 0
+  1920  00038E  B4D8               	btfsc	status,2,c
+  1921  000390  D68B               	goto	l1481
+  1922  000392  0A01               	xorlw	1	; case 1
+  1923  000394  B4D8               	btfsc	status,2,c
+  1924  000396  D6C6               	goto	l1501
+  1925  000398  0A03               	xorlw	3	; case 2
+  1926  00039A  B4D8               	btfsc	status,2,c
+  1927  00039C  D6D9               	goto	l1509
+  1928  00039E  0A01               	xorlw	1	; case 3
+  1929  0003A0  A4D8               	btfss	status,2,c
+  1930  0003A2  0012               	return	
+  1931  0003A4  D6F6               	goto	l1519
+  1932  0003A6                     __end_of_controller_work:
+  1933                           	callstack 0
+  1934                           
+  1935 ;; *************** function _set_led_blink *****************
+  1936 ;; Defined at:
+  1937 ;;		line 134 in file "../ihc_vector.c"
+  1938 ;; Parameters:    Size  Location     Type
+  1939 ;;  blinks          1    wreg     unsigned char 
+  1940 ;; Auto vars:     Size  Location     Type
+  1941 ;;  blinks          1   10[COMRAM] unsigned char 
+  1942 ;; Return value:  Size  Location     Type
+  1943 ;;                  1    wreg      void 
+  1944 ;; Registers used:
+  1945 ;;		wreg, status,2, status,0
+  1946 ;; Tracked objects:
+  1947 ;;		On entry : 0/0
+  1948 ;;		On exit  : 0/0
+  1949 ;;		Unchanged: 0/0
+  1950 ;; Data sizes:     COMRAM   BANK0
+  1951 ;;      Params:         0       0
+  1952 ;;      Locals:         1       0
+  1953 ;;      Temps:          0       0
+  1954 ;;      Totals:         1       0
+  1955 ;;Total ram usage:        1 bytes
+  1956 ;; Hardware stack levels used:    1
+  1957 ;; Hardware stack levels required when called:    2
+  1958 ;; This function calls:
+  1959 ;;		Nothing
+  1960 ;; This function is called by:
+  1961 ;;		_controller_work
+  1962 ;;		_init_ihcmon
+  1963 ;; This function uses a non-reentrant model
+  1964 ;;
+  1965                           
+  1966                           	psect	text4
+  1967  0006BA                     __ptext4:
+  1968                           	callstack 0
+  1969  0006BA                     _set_led_blink:
+  1970                           	callstack 27
+  1971                           
+  1972                           ;incstack = 0
+  1973                           ;set_led_blink@blinks stored from wreg
+  1974  0006BA  6E40               	movwf	set_led_blink@blinks^0,c
+  1975                           
+  1976                           ;../ihc_vector.c: 134: void set_led_blink(uint8_t blinks);../ihc_vector.c: 135: {;../ihc
+      +                          _vector.c: 136:  if (V.blink_lock)
+  1977  0006BC  B00B               	btfsc	(_V+10)^0,0,c	;volatile
+  1978  0006BE  0012               	return	
+  1979                           
+  1980                           ;../ihc_vector.c: 139:  if (blinks > 10 && (blinks != 255))
+  1981  0006C0  0E0A               	movlw	10
+  1982  0006C2  6440               	cpfsgt	set_led_blink@blinks^0,c
+  1983  0006C4  D005               	goto	l1055
+  1984  0006C6  2840               	incf	set_led_blink@blinks^0,w,c
+  1985  0006C8  B4D8               	btfsc	status,2,c
+  1986  0006CA  D002               	goto	l1055
+  1987                           
+  1988                           ;../ihc_vector.c: 140:   blinks = 0;
+  1989  0006CC  0E00               	movlw	0
+  1990  0006CE  6E40               	movwf	set_led_blink@blinks^0,c
+  1991  0006D0                     l1055:
+  1992                           
+  1993                           ;../ihc_vector.c: 142:  INTCONbits.GIEH = 0;
+  1994  0006D0  9EF2               	bcf	242,7,c	;volatile
+  1995                           
+  1996                           ;../ihc_vector.c: 143:  V.blink_lock = 1;
+  1997  0006D2  800B               	bsf	(_V+10)^0,0,c	;volatile
+  1998                           
+  1999                           ;../ihc_vector.c: 144:  V.num_blinks = blinks;
+  2000  0006D4  C040  F00A         	movff	set_led_blink@blinks,_V+9	;volatile
+  2001                           
+  2002                           ;../ihc_vector.c: 145:  INTCONbits.GIEH = 1;
+  2003  0006D8  8EF2               	bsf	242,7,c	;volatile
+  2004  0006DA  0012               	return		;funcret
+  2005  0006DC                     __end_of_set_led_blink:
+  2006                           	callstack 0
+  2007                           
+  2008 ;; *************** function _modbus_rtu_send_msg *****************
+  2009 ;; Defined at:
+  2010 ;;		line 85 in file "../crc.c"
+  2011 ;; Parameters:    Size  Location     Type
+  2012 ;;  cc_buffer       1   23[COMRAM] PTR void 
+  2013 ;;		 -> cc_buffer(20), 
+  2014 ;;  modbus_cc_mo    2   24[COMRAM] PTR const void 
+  2015 ;;		 -> modbus_cc_mode(6), modbus_cc_error(6), 
+  2016 ;;  req_length      2   26[COMRAM] unsigned short 
+  2017 ;; Auto vars:     Size  Location     Type
+  2018 ;;		None
+  2019 ;; Return value:  Size  Location     Type
+  2020 ;;                  2   23[COMRAM] unsigned short 
+  2021 ;; Registers used:
+  2022 ;;		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+  2023 ;; Tracked objects:
+  2024 ;;		On entry : 0/0
+  2025 ;;		On exit  : 0/0
+  2026 ;;		Unchanged: 0/0
+  2027 ;; Data sizes:     COMRAM   BANK0
+  2028 ;;      Params:         5       0
+  2029 ;;      Locals:         0       0
+  2030 ;;      Temps:          0       0
+  2031 ;;      Totals:         5       0
+  2032 ;;Total ram usage:        5 bytes
+  2033 ;; Hardware stack levels used:    1
+  2034 ;; Hardware stack levels required when called:    4
+  2035 ;; This function calls:
+  2036 ;;		_memcpy
+  2037 ;;		_modbus_rtu_send_msg_crc
+  2038 ;; This function is called by:
+  2039 ;;		_controller_work
+  2040 ;; This function uses a non-reentrant model
+  2041 ;;
+  2042                           
+  2043                           	psect	text5
+  2044  000688                     __ptext5:
+  2045                           	callstack 0
+  2046  000688                     _modbus_rtu_send_msg:
+  2047                           	callstack 25
+  2048                           
+  2049                           ;../crc.c: 85: uint16_t modbus_rtu_send_msg(void *cc_buffer, const void *modbus_cc_mode,
+      +                           uint16_t req_length);../crc.c: 86: {;../crc.c: 87:  memcpy((void*) cc_buffer, (const vo
+      +                          id *) modbus_cc_mode, req_length);
+  2050                           
+  2051                           ;incstack = 0
+  2052  000688  C04D  F040         	movff	modbus_rtu_send_msg@cc_buffer,memcpy@d1
+  2053  00068C  C04E  F041         	movff	modbus_rtu_send_msg@modbus_cc_mode,memcpy@s1
+  2054  000690  C04F  F042         	movff	modbus_rtu_send_msg@modbus_cc_mode+1,memcpy@s1+1
+  2055  000694  C050  F043         	movff	modbus_rtu_send_msg@req_length,memcpy@n
+  2056  000698  C051  F044         	movff	modbus_rtu_send_msg@req_length+1,memcpy@n+1
+  2057  00069C  ECEB  F002         	call	_memcpy	;wreg free
+  2058                           
+  2059                           ;../crc.c: 91:  return modbus_rtu_send_msg_crc((volatile uint8_t *) cc_buffer, req_lengt
+      +                          h);
+  2060  0006A0  C04D  F048         	movff	modbus_rtu_send_msg@cc_buffer,modbus_rtu_send_msg_crc@req
+  2061  0006A4  C050  F049         	movff	modbus_rtu_send_msg@req_length,modbus_rtu_send_msg_crc@req_length
+  2062  0006A8  C051  F04A         	movff	modbus_rtu_send_msg@req_length+1,modbus_rtu_send_msg_crc@req_length+1
+  2063  0006AC  EC8A  F002         	call	_modbus_rtu_send_msg_crc	;wreg free
+  2064  0006B0  C048  F04D         	movff	?_modbus_rtu_send_msg_crc,?_modbus_rtu_send_msg
+  2065  0006B4  C049  F04E         	movff	?_modbus_rtu_send_msg_crc+1,?_modbus_rtu_send_msg+1
+  2066  0006B8  0012               	return		;funcret
+  2067  0006BA                     __end_of_modbus_rtu_send_msg:
+  2068                           	callstack 0
+  2069                           
+  2070 ;; *************** function _modbus_rtu_send_msg_crc *****************
+  2071 ;; Defined at:
+  2072 ;;		line 71 in file "../crc.c"
+  2073 ;; Parameters:    Size  Location     Type
+  2074 ;;  req             1   18[COMRAM] PTR volatile unsigned ch
+  2075 ;;		 -> cc_buffer(20), 
+  2076 ;;  req_length      2   19[COMRAM] unsigned short 
+  2077 ;; Auto vars:     Size  Location     Type
+  2078 ;;  crc             2   21[COMRAM] unsigned short 
+  2079 ;; Return value:  Size  Location     Type
+  2080 ;;                  2   18[COMRAM] unsigned short 
+  2081 ;; Registers used:
+  2082 ;;		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+  2083 ;; Tracked objects:
+  2084 ;;		On entry : 0/0
+  2085 ;;		On exit  : 0/0
+  2086 ;;		Unchanged: 0/0
+  2087 ;; Data sizes:     COMRAM   BANK0
+  2088 ;;      Params:         3       0
+  2089 ;;      Locals:         2       0
+  2090 ;;      Temps:          0       0
+  2091 ;;      Totals:         5       0
+  2092 ;;Total ram usage:        5 bytes
+  2093 ;; Hardware stack levels used:    1
+  2094 ;; Hardware stack levels required when called:    3
+  2095 ;; This function calls:
+  2096 ;;		_crc16
+  2097 ;; This function is called by:
+  2098 ;;		_modbus_rtu_send_msg
+  2099 ;; This function uses a non-reentrant model
+  2100 ;;
+  2101                           
+  2102                           	psect	text6
+  2103  000514                     __ptext6:
+  2104                           	callstack 0
+  2105  000514                     _modbus_rtu_send_msg_crc:
+  2106                           	callstack 25
+  2107                           
+  2108                           ;../crc.c: 71: static uint16_t modbus_rtu_send_msg_crc(volatile uint8_t *req, uint16_t r
+      +                          eq_length);../crc.c: 72: {;../crc.c: 73:  uint16_t crc;;../crc.c: 75:  crc = crc16(req, 
+      +                          req_length);
+  2109                           
+  2110                           ;incstack = 0
+  2111  000514  C048  F040         	movff	modbus_rtu_send_msg_crc@req,crc16@buffer
+  2112  000518  C049  F041         	movff	modbus_rtu_send_msg_crc@req_length,crc16@buffer_length
+  2113  00051C  C04A  F042         	movff	modbus_rtu_send_msg_crc@req_length+1,crc16@buffer_length+1
+  2114  000520  EC5E  F002         	call	_crc16	;wreg free
+  2115  000524  C040  F04B         	movff	?_crc16,modbus_rtu_send_msg_crc@crc
+  2116  000528  C041  F04C         	movff	?_crc16+1,modbus_rtu_send_msg_crc@crc+1
+  2117                           
+  2118                           ;../crc.c: 76:  req[req_length++] = crc >> (uint16_t) 8;
+  2119  00052C  5048               	movf	modbus_rtu_send_msg_crc@req^0,w,c
+  2120  00052E  2449               	addwf	modbus_rtu_send_msg_crc@req_length^0,w,c
+  2121  000530  6ED9               	movwf	fsr2l,c
+  2122  000532  6ADA               	clrf	fsr2h,c
+  2123  000534  C04C  FFDF         	movff	modbus_rtu_send_msg_crc@crc+1,indf2
+  2124  000538  4A49               	infsnz	modbus_rtu_send_msg_crc@req_length^0,f,c
+  2125  00053A  2A4A               	incf	(modbus_rtu_send_msg_crc@req_length+1)^0,f,c
+  2126                           
+  2127                           ;../crc.c: 77:  req[req_length++] = crc & 0x00FF;
+  2128  00053C  5048               	movf	modbus_rtu_send_msg_crc@req^0,w,c
+  2129  00053E  2449               	addwf	modbus_rtu_send_msg_crc@req_length^0,w,c
+  2130  000540  6ED9               	movwf	fsr2l,c
+  2131  000542  6ADA               	clrf	fsr2h,c
+  2132  000544  C04B  FFDF         	movff	modbus_rtu_send_msg_crc@crc,indf2
+  2133  000548  4A49               	infsnz	modbus_rtu_send_msg_crc@req_length^0,f,c
+  2134  00054A  2A4A               	incf	(modbus_rtu_send_msg_crc@req_length+1)^0,f,c
+  2135                           
+  2136                           ;../crc.c: 79:  return req_length;
+  2137  00054C  C049  F048         	movff	modbus_rtu_send_msg_crc@req_length,?_modbus_rtu_send_msg_crc
+  2138  000550  C04A  F049         	movff	modbus_rtu_send_msg_crc@req_length+1,?_modbus_rtu_send_msg_crc+1
+  2139  000554  0012               	return		;funcret
+  2140  000556                     __end_of_modbus_rtu_send_msg_crc:
+  2141                           	callstack 0
+  2142                           
+  2143 ;; *************** function _crc16 *****************
+  2144 ;; Defined at:
+  2145 ;;		line 94 in file "../crc.c"
+  2146 ;; Parameters:    Size  Location     Type
+  2147 ;;  buffer          1   10[COMRAM] PTR volatile unsigned ch
+  2148 ;;		 -> cc_buffer(20), 
+  2149 ;;  buffer_lengt    2   11[COMRAM] unsigned short 
+  2150 ;; Auto vars:     Size  Location     Type
+  2151 ;;  crc_lo          1   17[COMRAM] unsigned char 
+  2152 ;;  crc_hi          1   16[COMRAM] unsigned char 
+  2153 ;;  i               1   15[COMRAM] unsigned char 
+  2154 ;; Return value:  Size  Location     Type
+  2155 ;;                  2   10[COMRAM] unsigned short 
+  2156 ;; Registers used:
+  2157 ;;		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru
+  2158 ;; Tracked objects:
+  2159 ;;		On entry : 0/0
+  2160 ;;		On exit  : 0/0
+  2161 ;;		Unchanged: 0/0
+  2162 ;; Data sizes:     COMRAM   BANK0
+  2163 ;;      Params:         3       0
+  2164 ;;      Locals:         3       0
+  2165 ;;      Temps:          2       0
+  2166 ;;      Totals:         8       0
+  2167 ;;Total ram usage:        8 bytes
+  2168 ;; Hardware stack levels used:    1
+  2169 ;; Hardware stack levels required when called:    2
+  2170 ;; This function calls:
+  2171 ;;		Nothing
+  2172 ;; This function is called by:
+  2173 ;;		_controller_work
+  2174 ;;		_modbus_rtu_send_msg_crc
+  2175 ;; This function uses a non-reentrant model
+  2176 ;;
+  2177                           
+  2178                           	psect	text7
+  2179  0004BC                     __ptext7:
+  2180                           	callstack 0
+  2181  0004BC                     _crc16:
+  2182                           	callstack 25
+  2183                           
+  2184                           ;../crc.c: 94: uint16_t crc16(volatile uint8_t *buffer, uint16_t buffer_length);../crc.c
+      +                          : 95: {;../crc.c: 96:  uint8_t crc_hi = 0xFF;
+  2185                           
+  2186                           ;incstack = 0
+  2187  0004BC  6846               	setf	crc16@crc_hi^0,c
+  2188                           
+  2189                           ;../crc.c: 97:  uint8_t crc_lo = 0xFF;
+  2190  0004BE  6847               	setf	crc16@crc_lo^0,c
+  2191                           
+  2192                           ;../crc.c: 98:  uint8_t i;;../crc.c: 101:  while (buffer_length--) {
+  2193  0004C0  D01A               	goto	l1431
+  2194  0004C2                     l1423:
+  2195                           
+  2196                           ;../crc.c: 102:   i = crc_hi ^ *buffer++;
+  2197  0004C2  5040               	movf	crc16@buffer^0,w,c
+  2198  0004C4  6ED9               	movwf	fsr2l,c
+  2199  0004C6  6ADA               	clrf	fsr2h,c
+  2200  0004C8  50DF               	movf	indf2,w,c
+  2201  0004CA  1846               	xorwf	crc16@crc_hi^0,w,c
+  2202  0004CC  6E45               	movwf	crc16@i^0,c
+  2203  0004CE  2A40               	incf	crc16@buffer^0,f,c
+  2204                           
+  2205                           ;../crc.c: 103:   crc_hi = crc_lo ^ table_crc_hi[i];
+  2206  0004D0  0EAD               	movlw	low _table_crc_hi
+  2207  0004D2  2445               	addwf	crc16@i^0,w,c
+  2208  0004D4  6EF6               	movwf	tblptrl,c
+  2209  0004D6  6AF7               	clrf	tblptrh,c
+  2210  0004D8  0E1E               	movlw	high _table_crc_hi
+  2211  0004DA  22F7               	addwfc	tblptrh,f,c
+  2212  0004DC                     	if	0	;There are less than 3 active tblptr bytes
+  2213  0004DC                     	endif
+  2214  0004DC  0008               	tblrd		*
+  2215  0004DE  50F5               	movf	tablat,w,c
+  2216  0004E0  1847               	xorwf	crc16@crc_lo^0,w,c
+  2217  0004E2  6E46               	movwf	crc16@crc_hi^0,c
+  2218                           
+  2219                           ;../crc.c: 104:   crc_lo = table_crc_lo[i];
+  2220  0004E4  0EAD               	movlw	low _table_crc_lo
+  2221  0004E6  2445               	addwf	crc16@i^0,w,c
+  2222  0004E8  6EF6               	movwf	tblptrl,c
+  2223  0004EA  6AF7               	clrf	tblptrh,c
+  2224  0004EC  0E1D               	movlw	high _table_crc_lo
+  2225  0004EE  22F7               	addwfc	tblptrh,f,c
+  2226  0004F0                     	if	0	;There are less than 3 active tblptr bytes
+  2227  0004F0                     	endif
+  2228  0004F0  0008               	tblrd		*
+  2229  0004F2  CFF5 F047          	movff	tablat,crc16@crc_lo
+  2230  0004F6                     l1431:
+  2231                           
+  2232                           ;../crc.c: 101:  while (buffer_length--) {
+  2233  0004F6  0641               	decf	crc16@buffer_length^0,f,c
+  2234  0004F8  A0D8               	btfss	status,0,c
+  2235  0004FA  0642               	decf	(crc16@buffer_length+1)^0,f,c
+  2236  0004FC  2841               	incf	crc16@buffer_length^0,w,c
+  2237  0004FE  E1E1               	bnz	l1423
+  2238  000500  2842               	incf	(crc16@buffer_length+1)^0,w,c
+  2239  000502  A4D8               	btfss	status,2,c
+  2240  000504  D7DE               	goto	l1423
+  2241                           
+  2242                           ;../crc.c: 107:  return((uint16_t) crc_hi << (uint16_t) 8 | (uint16_t) crc_lo);
+  2243  000506  5046               	movf	crc16@crc_hi^0,w,c
+  2244  000508  6E43               	movwf	??_crc16^0,c
+  2245  00050A  5047               	movf	crc16@crc_lo^0,w,c
+  2246  00050C  6E40               	movwf	?_crc16^0,c
+  2247  00050E  C043  F041         	movff	??_crc16,?_crc16+1
+  2248  000512  0012               	return		;funcret
+  2249  000514                     __end_of_crc16:
+  2250                           	callstack 0
+  2251                           
+  2252 ;; *************** function _memcpy *****************
+  2253 ;; Defined at:
+  2254 ;;		line 4 in file "/opt/microchip/xc8/v2.30/pic/sources/c99/common/memcpy.c"
+  2255 ;; Parameters:    Size  Location     Type
+  2256 ;;  d1              1   10[COMRAM] PTR void 
+  2257 ;;		 -> cc_buffer(20), 
+  2258 ;;  s1              2   11[COMRAM] PTR const void 
+  2259 ;;		 -> modbus_cc_mode(6), modbus_cc_error(6), 
+  2260 ;;  n               2   13[COMRAM] unsigned int 
+  2261 ;; Auto vars:     Size  Location     Type
+  2262 ;;  s               2   15[COMRAM] PTR const unsigned char 
+  2263 ;;		 -> modbus_cc_mode(6), modbus_cc_error(6), 
+  2264 ;;  d               1   18[COMRAM] PTR unsigned char 
+  2265 ;;		 -> cc_buffer(20), 
+  2266 ;;  tmp             1   17[COMRAM] unsigned char 
+  2267 ;; Return value:  Size  Location     Type
+  2268 ;;                  1    wreg      PTR void 
+  2269 ;; Registers used:
+  2270 ;;		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru
+  2271 ;; Tracked objects:
+  2272 ;;		On entry : 0/0
+  2273 ;;		On exit  : 0/0
+  2274 ;;		Unchanged: 0/0
+  2275 ;; Data sizes:     COMRAM   BANK0
+  2276 ;;      Params:         5       0
+  2277 ;;      Locals:         4       0
+  2278 ;;      Temps:          0       0
+  2279 ;;      Totals:         9       0
+  2280 ;;Total ram usage:        9 bytes
+  2281 ;; Hardware stack levels used:    1
+  2282 ;; Hardware stack levels required when called:    2
+  2283 ;; This function calls:
+  2284 ;;		Nothing
+  2285 ;; This function is called by:
+  2286 ;;		_modbus_rtu_send_msg
+  2287 ;; This function uses a non-reentrant model
+  2288 ;;
+  2289                           
+  2290                           	psect	text8
+  2291  0005D6                     __ptext8:
+  2292                           	callstack 0
+  2293  0005D6                     _memcpy:
+  2294                           	callstack 26
+  2295                           
+  2296                           ;incstack = 0
+  2297  0005D6  C041  F045         	movff	memcpy@s1,memcpy@s
+  2298  0005DA  C042  F046         	movff	memcpy@s1+1,memcpy@s+1
+  2299  0005DE  C040  F048         	movff	memcpy@d1,memcpy@d
+  2300  0005E2  D00F               	goto	l1461
+  2301  0005E4                     l1453:
+  2302  0005E4  C045  FFF6         	movff	memcpy@s,tblptrl
+  2303  0005E8  C046  FFF7         	movff	memcpy@s+1,tblptrh
+  2304  0005EC                     	if	0	;tblptru may be non-zero
+  2305  0005EC                     	endif
+  2306  0005EC                     	if	0	;tblptru may be non-zero
+  2307  0005EC                     	endif
+  2308  0005EC  0008               	tblrd		*
+  2309  0005EE  CFF5 F047          	movff	tablat,memcpy@tmp
+  2310  0005F2  4A45               	infsnz	memcpy@s^0,f,c
+  2311  0005F4  2A46               	incf	(memcpy@s+1)^0,f,c
+  2312  0005F6  5048               	movf	memcpy@d^0,w,c
+  2313  0005F8  6ED9               	movwf	fsr2l,c
+  2314  0005FA  6ADA               	clrf	fsr2h,c
+  2315  0005FC  C047  FFDF         	movff	memcpy@tmp,indf2
+  2316  000600  2A48               	incf	memcpy@d^0,f,c
+  2317  000602                     l1461:
+  2318  000602  0643               	decf	memcpy@n^0,f,c
+  2319  000604  A0D8               	btfss	status,0,c
+  2320  000606  0644               	decf	(memcpy@n+1)^0,f,c
+  2321  000608  2843               	incf	memcpy@n^0,w,c
+  2322  00060A  E1EC               	bnz	l1453
+  2323  00060C  2844               	incf	(memcpy@n+1)^0,w,c
+  2324  00060E  B4D8               	btfsc	status,2,c
+  2325  000610  0012               	return	
+  2326  000612  D7E8               	goto	l1453
+  2327  000614                     __end_of_memcpy:
+  2328                           	callstack 0
+  2329                           
+  2330 ;; *************** function _get_500hz *****************
+  2331 ;; Defined at:
+  2332 ;;		line 86 in file "../ihc_vector.c"
+  2333 ;; Parameters:    Size  Location     Type
+  2334 ;;  mode            1    wreg     unsigned char 
+  2335 ;; Auto vars:     Size  Location     Type
+  2336 ;;  mode            1   14[COMRAM] unsigned char 
+  2337 ;; Return value:  Size  Location     Type
+  2338 ;;                  4   10[COMRAM] unsigned long 
+  2339 ;; Registers used:
+  2340 ;;		wreg, status,2
+  2341 ;; Tracked objects:
+  2342 ;;		On entry : 0/0
+  2343 ;;		On exit  : 0/0
+  2344 ;;		Unchanged: 0/0
+  2345 ;; Data sizes:     COMRAM   BANK0
+  2346 ;;      Params:         4       0
+  2347 ;;      Locals:         1       0
+  2348 ;;      Temps:          0       0
+  2349 ;;      Totals:         5       0
+  2350 ;;Total ram usage:        5 bytes
+  2351 ;; Hardware stack levels used:    1
+  2352 ;; Hardware stack levels required when called:    2
+  2353 ;; This function calls:
+  2354 ;;		Nothing
+  2355 ;; This function is called by:
+  2356 ;;		_controller_work
+  2357 ;; This function uses a non-reentrant model
+  2358 ;;
+  2359                           
+  2360                           	psect	text9
+  2361  000556                     __ptext9:
+  2362                           	callstack 0
+  2363  000556                     _get_500hz:
+  2364                           	callstack 27
+  2365                           
+  2366                           ;incstack = 0
+  2367                           ;get_500hz@mode stored from wreg
+  2368  000556  6E44               	movwf	get_500hz@mode^0,c
+  2369                           
+  2370                           ;../ihc_vector.c: 86: uint32_t get_500hz(uint8_t mode);../ihc_vector.c: 87: {;../ihc_vec
+      +                          tor.c: 88:  static uint32_t tmp = 0;;../ihc_vector.c: 90:  if (mode)
+  2371  000558  5044               	movf	get_500hz@mode^0,w,c
+  2372  00055A  B4D8               	btfsc	status,2,c
+  2373  00055C  D009               	goto	l257
+  2374                           
+  2375                           ;../ihc_vector.c: 91:   return tmp;
+  2376  00055E  C00F  F040         	movff	get_500hz@tmp,?_get_500hz
+  2377  000562  C010  F041         	movff	get_500hz@tmp+1,?_get_500hz+1
+  2378  000566  C011  F042         	movff	get_500hz@tmp+2,?_get_500hz+2
+  2379  00056A  C012  F043         	movff	get_500hz@tmp+3,?_get_500hz+3
+  2380  00056E  0012               	return	
+  2381  000570                     l257:
+  2382                           
+  2383                           ;../ihc_vector.c: 93:  INTCONbits.GIEH = 0;
+  2384  000570  9EF2               	bcf	242,7,c	;volatile
+  2385                           
+  2386                           ;../ihc_vector.c: 94:  tmp = V.clock_500hz;
+  2387  000572  C001  F00F         	movff	_V,get_500hz@tmp	;volatile
+  2388  000576  C002  F010         	movff	_V+1,get_500hz@tmp+1	;volatile
+  2389  00057A  C003  F011         	movff	_V+2,get_500hz@tmp+2	;volatile
+  2390  00057E  C004  F012         	movff	_V+3,get_500hz@tmp+3	;volatile
+  2391                           
+  2392                           ;../ihc_vector.c: 95:  INTCONbits.GIEH = 1;
+  2393  000582  8EF2               	bsf	242,7,c	;volatile
+  2394                           
+  2395                           ;../ihc_vector.c: 96:  return tmp;
+  2396  000584  C00F  F040         	movff	get_500hz@tmp,?_get_500hz
+  2397  000588  C010  F041         	movff	get_500hz@tmp+1,?_get_500hz+1
+  2398  00058C  C011  F042         	movff	get_500hz@tmp+2,?_get_500hz+2
+  2399  000590  C012  F043         	movff	get_500hz@tmp+3,?_get_500hz+3
+  2400  000594  0012               	return		;funcret
+  2401  000596                     __end_of_get_500hz:
+  2402                           	callstack 0
+  2403                           
+  2404 ;; *************** function _get_2hz *****************
+  2405 ;; Defined at:
+  2406 ;;		line 73 in file "../ihc_vector.c"
+  2407 ;; Parameters:    Size  Location     Type
+  2408 ;;  mode            1    wreg     unsigned char 
+  2409 ;; Auto vars:     Size  Location     Type
+  2410 ;;  mode            1   14[COMRAM] unsigned char 
+  2411 ;; Return value:  Size  Location     Type
+  2412 ;;                  4   10[COMRAM] unsigned long 
+  2413 ;; Registers used:
+  2414 ;;		wreg, status,2
+  2415 ;; Tracked objects:
+  2416 ;;		On entry : 0/0
+  2417 ;;		On exit  : 0/0
+  2418 ;;		Unchanged: 0/0
+  2419 ;; Data sizes:     COMRAM   BANK0
+  2420 ;;      Params:         4       0
+  2421 ;;      Locals:         1       0
+  2422 ;;      Temps:          0       0
+  2423 ;;      Totals:         5       0
+  2424 ;;Total ram usage:        5 bytes
+  2425 ;; Hardware stack levels used:    1
+  2426 ;; Hardware stack levels required when called:    2
+  2427 ;; This function calls:
+  2428 ;;		Nothing
+  2429 ;; This function is called by:
+  2430 ;;		_controller_work
+  2431 ;; This function uses a non-reentrant model
+  2432 ;;
+  2433                           
+  2434                           	psect	text10
+  2435  000596                     __ptext10:
+  2436                           	callstack 0
+  2437  000596                     _get_2hz:
+  2438                           	callstack 27
+  2439                           
+  2440                           ;incstack = 0
+  2441                           ;get_2hz@mode stored from wreg
+  2442  000596  6E44               	movwf	get_2hz@mode^0,c
+  2443                           
+  2444                           ;../ihc_vector.c: 73: uint32_t get_2hz(uint8_t mode);../ihc_vector.c: 74: {;../ihc_vecto
+      +                          r.c: 75:  static uint32_t tmp = 0;;../ihc_vector.c: 77:  if (mode)
+  2445  000598  5044               	movf	get_2hz@mode^0,w,c
+  2446  00059A  B4D8               	btfsc	status,2,c
+  2447  00059C  D009               	goto	l251
+  2448                           
+  2449                           ;../ihc_vector.c: 78:   return tmp;
+  2450  00059E  C013  F040         	movff	get_2hz@tmp,?_get_2hz
+  2451  0005A2  C014  F041         	movff	get_2hz@tmp+1,?_get_2hz+1
+  2452  0005A6  C015  F042         	movff	get_2hz@tmp+2,?_get_2hz+2
+  2453  0005AA  C016  F043         	movff	get_2hz@tmp+3,?_get_2hz+3
+  2454  0005AE  0012               	return	
+  2455  0005B0                     l251:
+  2456                           
+  2457                           ;../ihc_vector.c: 80:  INTCONbits.GIEH = 0;
+  2458  0005B0  9EF2               	bcf	242,7,c	;volatile
+  2459                           
+  2460                           ;../ihc_vector.c: 81:  tmp = V.clock_2hz;
+  2461  0005B2  C005  F013         	movff	_V+4,get_2hz@tmp	;volatile
+  2462  0005B6  C006  F014         	movff	_V+5,get_2hz@tmp+1	;volatile
+  2463  0005BA  C007  F015         	movff	_V+6,get_2hz@tmp+2	;volatile
+  2464  0005BE  C008  F016         	movff	_V+7,get_2hz@tmp+3	;volatile
+  2465                           
+  2466                           ;../ihc_vector.c: 82:  INTCONbits.GIEH = 1;
+  2467  0005C2  8EF2               	bsf	242,7,c	;volatile
+  2468                           
+  2469                           ;../ihc_vector.c: 83:  return tmp;
+  2470  0005C4  C013  F040         	movff	get_2hz@tmp,?_get_2hz
+  2471  0005C8  C014  F041         	movff	get_2hz@tmp+1,?_get_2hz+1
+  2472  0005CC  C015  F042         	movff	get_2hz@tmp+2,?_get_2hz+2
+  2473  0005D0  C016  F043         	movff	get_2hz@tmp+3,?_get_2hz+3
+  2474  0005D4  0012               	return		;funcret
+  2475  0005D6                     __end_of_get_2hz:
+  2476                           	callstack 0
+  2477                           
+  2478 ;; *************** function _clear_500hz *****************
+  2479 ;; Defined at:
+  2480 ;;		line 66 in file "../ihc_vector.c"
+  2481 ;; Parameters:    Size  Location     Type
+  2482 ;;		None
+  2483 ;; Auto vars:     Size  Location     Type
+  2484 ;;		None
+  2485 ;; Return value:  Size  Location     Type
+  2486 ;;                  1    wreg      void 
+  2487 ;; Registers used:
+  2488 ;;		wreg, status,2
+  2489 ;; Tracked objects:
+  2490 ;;		On entry : 0/0
+  2491 ;;		On exit  : 0/0
+  2492 ;;		Unchanged: 0/0
+  2493 ;; Data sizes:     COMRAM   BANK0
+  2494 ;;      Params:         0       0
+  2495 ;;      Locals:         0       0
+  2496 ;;      Temps:          0       0
+  2497 ;;      Totals:         0       0
+  2498 ;;Total ram usage:        0 bytes
+  2499 ;; Hardware stack levels used:    1
+  2500 ;; Hardware stack levels required when called:    2
+  2501 ;; This function calls:
+  2502 ;;		Nothing
+  2503 ;; This function is called by:
+  2504 ;;		_controller_work
+  2505 ;; This function uses a non-reentrant model
+  2506 ;;
+  2507                           
+  2508                           	psect	text11
+  2509  0006DC                     __ptext11:
+  2510                           	callstack 0
+  2511  0006DC                     _clear_500hz:
+  2512                           	callstack 27
+  2513                           
+  2514                           ;../ihc_vector.c: 68:  INTCONbits.GIEH = 0;
+  2515                           
+  2516                           ;incstack = 0
+  2517  0006DC  9EF2               	bcf	242,7,c	;volatile
+  2518                           
+  2519                           ;../ihc_vector.c: 69:  V.clock_500hz = 0;
+  2520  0006DE  0E00               	movlw	0
+  2521  0006E0  6E01               	movwf	_V^0,c	;volatile
+  2522  0006E2  0E00               	movlw	0
+  2523  0006E4  6E02               	movwf	(_V+1)^0,c	;volatile
+  2524  0006E6  0E00               	movlw	0
+  2525  0006E8  6E03               	movwf	(_V+2)^0,c	;volatile
+  2526  0006EA  0E00               	movlw	0
+  2527  0006EC  6E04               	movwf	(_V+3)^0,c	;volatile
+  2528                           
+  2529                           ;../ihc_vector.c: 70:  INTCONbits.GIEH = 1;
+  2530  0006EE  8EF2               	bsf	242,7,c	;volatile
+  2531  0006F0  0012               	return		;funcret
+  2532  0006F2                     __end_of_clear_500hz:
+  2533                           	callstack 0
+  2534                           
+  2535 ;; *************** function _clear_2hz *****************
+  2536 ;; Defined at:
+  2537 ;;		line 59 in file "../ihc_vector.c"
+  2538 ;; Parameters:    Size  Location     Type
+  2539 ;;		None
+  2540 ;; Auto vars:     Size  Location     Type
+  2541 ;;		None
+  2542 ;; Return value:  Size  Location     Type
+  2543 ;;                  1    wreg      void 
+  2544 ;; Registers used:
+  2545 ;;		wreg, status,2
+  2546 ;; Tracked objects:
+  2547 ;;		On entry : 0/0
+  2548 ;;		On exit  : 0/0
+  2549 ;;		Unchanged: 0/0
+  2550 ;; Data sizes:     COMRAM   BANK0
+  2551 ;;      Params:         0       0
+  2552 ;;      Locals:         0       0
+  2553 ;;      Temps:          0       0
+  2554 ;;      Totals:         0       0
+  2555 ;;Total ram usage:        0 bytes
+  2556 ;; Hardware stack levels used:    1
+  2557 ;; Hardware stack levels required when called:    2
+  2558 ;; This function calls:
+  2559 ;;		Nothing
+  2560 ;; This function is called by:
+  2561 ;;		_controller_work
+  2562 ;; This function uses a non-reentrant model
+  2563 ;;
+  2564                           
+  2565                           	psect	text12
+  2566  0006F2                     __ptext12:
+  2567                           	callstack 0
+  2568  0006F2                     _clear_2hz:
+  2569                           	callstack 27
+  2570                           
+  2571                           ;../ihc_vector.c: 61:  INTCONbits.GIEH = 0;
+  2572                           
+  2573                           ;incstack = 0
+  2574  0006F2  9EF2               	bcf	242,7,c	;volatile
+  2575                           
+  2576                           ;../ihc_vector.c: 62:  V.clock_2hz = 0;
+  2577  0006F4  0E00               	movlw	0
+  2578  0006F6  6E05               	movwf	(_V+4)^0,c	;volatile
+  2579  0006F8  0E00               	movlw	0
+  2580  0006FA  6E06               	movwf	(_V+5)^0,c	;volatile
+  2581  0006FC  0E00               	movlw	0
+  2582  0006FE  6E07               	movwf	(_V+6)^0,c	;volatile
+  2583  000700  0E00               	movlw	0
+  2584  000702  6E08               	movwf	(_V+7)^0,c	;volatile
+  2585                           
+  2586                           ;../ihc_vector.c: 63:  INTCONbits.GIEH = 1;
+  2587  000704  8EF2               	bsf	242,7,c	;volatile
+  2588  000706  0012               	return		;funcret
+  2589  000708                     __end_of_clear_2hz:
+  2590                           	callstack 0
+  2591                           
+  2592 ;; *************** function _SetDCPWM1 *****************
+  2593 ;; Defined at:
+  2594 ;;		line 102 in file "../ibsmon.c"
+  2595 ;; Parameters:    Size  Location     Type
+  2596 ;;  dutycycle       2   10[COMRAM] unsigned short 
+  2597 ;; Auto vars:     Size  Location     Type
+  2598 ;;  DCycle          2   14[COMRAM] struct PWMDC
+  2599 ;; Return value:  Size  Location     Type
+  2600 ;;                  1    wreg      void 
+  2601 ;; Registers used:
+  2602 ;;		wreg, status,2, status,0
+  2603 ;; Tracked objects:
+  2604 ;;		On entry : 0/0
+  2605 ;;		On exit  : 0/0
+  2606 ;;		Unchanged: 0/0
+  2607 ;; Data sizes:     COMRAM   BANK0
+  2608 ;;      Params:         2       0
+  2609 ;;      Locals:         2       0
+  2610 ;;      Temps:          2       0
+  2611 ;;      Totals:         6       0
+  2612 ;;Total ram usage:        6 bytes
+  2613 ;; Hardware stack levels used:    1
+  2614 ;; Hardware stack levels required when called:    2
+  2615 ;; This function calls:
+  2616 ;;		Nothing
+  2617 ;; This function is called by:
+  2618 ;;		_controller_work
+  2619 ;;		_init_ihcmon
+  2620 ;; This function uses a non-reentrant model
+  2621 ;;
+  2622                           
+  2623                           	psect	text13
+  2624  00064E                     __ptext13:
+  2625                           	callstack 0
+  2626  00064E                     _SetDCPWM1:
+  2627                           	callstack 27
+  2628                           
+  2629                           ;../ibsmon.c: 102: void SetDCPWM1(uint16_t dutycycle);../ibsmon.c: 103: {;../ibsmon.c: 1
+      +                          04:  union PWMDC DCycle;;../ibsmon.c: 107:  DCycle.lpwm = dutycycle << 6;
+  2630                           
+  2631                           ;incstack = 0
+  2632  00064E  C040  F042         	movff	SetDCPWM1@dutycycle,??_SetDCPWM1
+  2633  000652  C041  F043         	movff	SetDCPWM1@dutycycle+1,??_SetDCPWM1+1
+  2634  000656  0E06               	movlw	6
+  2635  000658                     u495:
+  2636  000658  90D8               	bcf	status,0,c
+  2637  00065A  3642               	rlcf	??_SetDCPWM1^0,f,c
+  2638  00065C  3643               	rlcf	(??_SetDCPWM1+1)^0,f,c
+  2639  00065E  2EE8               	decfsz	wreg,f,c
+  2640  000660  D7FB               	goto	u495
+  2641  000662  C042  F044         	movff	??_SetDCPWM1,SetDCPWM1@DCycle
+  2642  000666  C043  F045         	movff	??_SetDCPWM1+1,SetDCPWM1@DCycle+1
+  2643                           
+  2644                           ;../ibsmon.c: 110:  CCPR1L = DCycle.bpwm[1];
+  2645  00066A  C045  FFBE         	movff	SetDCPWM1@DCycle+1,4030	;volatile
+  2646                           
+  2647                           ;../ibsmon.c: 113:  CCP1CON = (CCP1CON & 0xCF) | ((DCycle.bpwm[0] >> 2) & 0x30);
+  2648  00066E  C044  F042         	movff	SetDCPWM1@DCycle,??_SetDCPWM1
+  2649  000672  90D8               	bcf	status,0,c
+  2650  000674  3242               	rrcf	??_SetDCPWM1^0,f,c
+  2651  000676  90D8               	bcf	status,0,c
+  2652  000678  3242               	rrcf	??_SetDCPWM1^0,f,c
+  2653  00067A  0E30               	movlw	48
+  2654  00067C  1642               	andwf	??_SetDCPWM1^0,f,c
+  2655  00067E  50BD               	movf	189,w,c	;volatile
+  2656  000680  0BCF               	andlw	207
+  2657  000682  1042               	iorwf	??_SetDCPWM1^0,w,c
+  2658  000684  6EBD               	movwf	189,c	;volatile
+  2659  000686  0012               	return		;funcret
+  2660  000688                     __end_of_SetDCPWM1:
+  2661                           	callstack 0
+  2662                           
+  2663 ;; *************** function _tm_handler *****************
+  2664 ;; Defined at:
+  2665 ;;		line 5 in file "../ihc_vector.c"
+  2666 ;; Parameters:    Size  Location     Type
+  2667 ;;		None
+  2668 ;; Auto vars:     Size  Location     Type
+  2669 ;;  tmp             2    0        unsigned short 
+  2670 ;; Return value:  Size  Location     Type
+  2671 ;;                  1    wreg      void 
+  2672 ;; Registers used:
+  2673 ;;		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+  2674 ;; Tracked objects:
+  2675 ;;		On entry : 0/0
+  2676 ;;		On exit  : 0/0
+  2677 ;;		Unchanged: 0/0
+  2678 ;; Data sizes:     COMRAM   BANK0
+  2679 ;;      Params:         0       0
+  2680 ;;      Locals:         2       0
+  2681 ;;      Temps:          3       0
+  2682 ;;      Totals:         5       0
+  2683 ;;Total ram usage:        5 bytes
+  2684 ;; Hardware stack levels used:    1
+  2685 ;; Hardware stack levels required when called:    1
+  2686 ;; This function calls:
+  2687 ;;		_led_blink
+  2688 ;; This function is called by:
+  2689 ;;		Interrupt level 2
+  2690 ;; This function uses a non-reentrant model
+  2691 ;;
+  2692                           
+  2693                           	psect	intcode
+  2694  000008                     __pintcode:
+  2695                           	callstack 0
+  2696  000008                     _tm_handler:
+  2697                           	callstack 25
+  2698                           
+  2699                           ;incstack = 0
+  2700  000008  8260               	bsf	btemp,1,c	;set compiler interrupt flag (level 2)
+  2701  00000A  CFD9 F03C          	movff	fsr2l,??_tm_handler+1
+  2702  00000E  CFDA F03D          	movff	fsr2h,??_tm_handler+2
+  2703                           
+  2704                           ;../ihc_vector.c: 7:  static uint8_t c_error = 0;;../ihc_vector.c: 8:  uint16_t tmp;;../
+      +                          ihc_vector.c: 10:  if (PIR1bits.RCIF) {
+  2705  000012  AA9E               	btfss	158,5,c	;volatile
+  2706  000014  D01F               	goto	i2l1371
+  2707                           
+  2708                           ;../ihc_vector.c: 11:   cc_stream_file = RCREG;
+  2709  000016  CFAE F021          	movff	4014,_cc_stream_file	;volatile
+  2710                           
+  2711                           ;../ihc_vector.c: 12:   if (RCSTAbits.OERR || RCSTAbits.FERR) {
+  2712  00001A  B2AB               	btfsc	171,1,c	;volatile
+  2713  00001C  D002               	goto	i2u40_40
+  2714  00001E  A4AB               	btfss	171,2,c	;volatile
+  2715  000020  D00D               	goto	i2l1365
+  2716  000022                     i2u40_40:
+  2717                           
+  2718                           ;../ihc_vector.c: 13:    cc_stream_file = 0x00;
+  2719  000022  0E00               	movlw	0
+  2720  000024  6E21               	movwf	_cc_stream_file^0,c	;volatile
+  2721                           
+  2722                           ;../ihc_vector.c: 14:    RCSTAbits.CREN = 0;
+  2723  000026  98AB               	bcf	171,4,c	;volatile
+  2724                           
+  2725                           ;../ihc_vector.c: 15:    RCSTAbits.CREN = 1;
+  2726  000028  88AB               	bsf	171,4,c	;volatile
+  2727                           
+  2728                           ;../ihc_vector.c: 16:    if (c_error++>3) {
+  2729  00002A  2A1D               	incf	tm_handler@c_error^0,f,c
+  2730  00002C  041D               	decf	tm_handler@c_error^0,w,c
+  2731  00002E  6E3B               	movwf	??_tm_handler^0,c
+  2732  000030  0E03               	movlw	3
+  2733  000032  643B               	cpfsgt	??_tm_handler^0,c
+  2734  000034  D00F               	goto	i2l1371
+  2735                           
+  2736                           ;../ihc_vector.c: 17:     c_error = 0;
+  2737  000036  0E00               	movlw	0
+  2738  000038  6E1D               	movwf	tm_handler@c_error^0,c
+  2739  00003A  D00C               	goto	i2l1371
+  2740  00003C                     i2l1365:
+  2741                           
+  2742                           ;../ihc_vector.c: 23:    cc_buffer[V.recv_count] = cc_stream_file;
+  2743  00003C  500D               	movf	(_V+12)^0,w,c	;volatile
+  2744  00003E  0F22               	addlw	low _cc_buffer
+  2745  000040  6ED9               	movwf	fsr2l,c
+  2746  000042  6ADA               	clrf	fsr2h,c
+  2747  000044  C021  FFDF         	movff	_cc_stream_file,indf2	;volatile
+  2748                           
+  2749                           ;../ihc_vector.c: 24:    if (++V.recv_count >= 20)
+  2750  000048  2A0D               	incf	(_V+12)^0,f,c	;volatile
+  2751  00004A  0E13               	movlw	19
+  2752  00004C  640D               	cpfsgt	(_V+12)^0,c	;volatile
+  2753  00004E  D002               	goto	i2l1371
+  2754                           
+  2755                           ;../ihc_vector.c: 25:     V.recv_count = 0;
+  2756  000050  0E00               	movlw	0
+  2757  000052  6E0D               	movwf	(_V+12)^0,c	;volatile
+  2758  000054                     i2l1371:
+  2759                           
+  2760                           ;../ihc_vector.c: 29:  if (PIR1bits.TMR1IF) {
+  2761  000054  A09E               	btfss	158,0,c	;volatile
+  2762  000056  D00B               	goto	i2l1383
+  2763                           
+  2764                           ;../ihc_vector.c: 30:   PIR1bits.TMR1IF = 0;
+  2765  000058  909E               	bcf	158,0,c	;volatile
+  2766                           
+  2767                           ;../ihc_vector.c: 32:   TMR1H = tmp;
+  2768  00005A  0EF6               	movlw	246
+  2769  00005C  6ECF               	movwf	207,c	;volatile
+  2770                           
+  2771                           ;../ihc_vector.c: 34:   TMR1L = tmp;
+  2772  00005E  0E60               	movlw	96
+  2773  000060  6ECE               	movwf	206,c	;volatile
+  2774                           
+  2775                           ;../ihc_vector.c: 35:   V.clock_500hz++;
+  2776  000062  0E01               	movlw	1
+  2777  000064  2601               	addwf	_V^0,f,c	;volatile
+  2778  000066  0E00               	movlw	0
+  2779  000068  2202               	addwfc	(_V+1)^0,f,c	;volatile
+  2780  00006A  2203               	addwfc	(_V+2)^0,f,c	;volatile
+  2781  00006C  2204               	addwfc	(_V+3)^0,f,c	;volatile
+  2782  00006E                     i2l1383:
+  2783                           
+  2784                           ;../ihc_vector.c: 38:  if (INTCONbits.TMR0IF) {
+  2785  00006E  A4F2               	btfss	242,2,c	;volatile
+  2786  000070  D00E               	goto	i2l1399
+  2787                           
+  2788                           ;../ihc_vector.c: 39:   INTCONbits.TMR0IF = 0;
+  2789  000072  94F2               	bcf	242,2,c	;volatile
+  2790                           
+  2791                           ;../ihc_vector.c: 41:   TMR0H = tmp;
+  2792  000074  0E67               	movlw	103
+  2793  000076  6ED7               	movwf	215,c	;volatile
+  2794                           
+  2795                           ;../ihc_vector.c: 43:   TMR0L = tmp;
+  2796  000078  0EE8               	movlw	232
+  2797  00007A  6ED6               	movwf	214,c	;volatile
+  2798                           
+  2799                           ;../ihc_vector.c: 44:   V.clock_2hz++;
+  2800  00007C  0E01               	movlw	1
+  2801  00007E  2605               	addwf	(_V+4)^0,f,c	;volatile
+  2802  000080  0E00               	movlw	0
+  2803  000082  2206               	addwfc	(_V+5)^0,f,c	;volatile
+  2804  000084  2207               	addwfc	(_V+6)^0,f,c	;volatile
+  2805  000086  2208               	addwfc	(_V+7)^0,f,c	;volatile
+  2806                           
+  2807                           ;../ihc_vector.c: 45:   V.clock_blinks++;
+  2808  000088  2A09               	incf	(_V+8)^0,f,c	;volatile
+  2809                           
+  2810                           ;../ihc_vector.c: 46:   led_blink();
+  2811  00008A  EC23  F002         	call	_led_blink	;wreg free
+  2812  00008E                     i2l1399:
+  2813                           
+  2814                           ;../ihc_vector.c: 49:  if (PIR1bits.TMR2IF) {
+  2815  00008E  B29E               	btfsc	158,1,c	;volatile
+  2816                           
+  2817                           ;../ihc_vector.c: 50:   PIR1bits.TMR2IF = 0;
+  2818  000090  929E               	bcf	158,1,c	;volatile
+  2819                           
+  2820                           ;../ihc_vector.c: 53:  if (PIR1bits.CCP1IF) {
+  2821                           
+  2822                           ;../ihc_vector.c: 51:  }
+  2823  000092  B49E               	btfsc	158,2,c	;volatile
+  2824                           
+  2825                           ;../ihc_vector.c: 54:   PIR1bits.CCP1IF = 0;
+  2826  000094  949E               	bcf	158,2,c	;volatile
+  2827  000096  C03D  FFDA         	movff	??_tm_handler+2,fsr2h
+  2828  00009A  C03C  FFD9         	movff	??_tm_handler+1,fsr2l
+  2829  00009E  9260               	bcf	btemp,1,c	;clear compiler interrupt flag (level 2)
+  2830  0000A0  0011               	retfie		f
+  2831  0000A2                     __end_of_tm_handler:
+  2832                           	callstack 0
+  2833                           
+  2834 ;; *************** function _led_blink *****************
+  2835 ;; Defined at:
+  2836 ;;		line 103 in file "../ihc_vector.c"
+  2837 ;; Parameters:    Size  Location     Type
+  2838 ;;		None
+  2839 ;; Auto vars:     Size  Location     Type
+  2840 ;;		None
+  2841 ;; Return value:  Size  Location     Type
+  2842 ;;                  1    wreg      void 
+  2843 ;; Registers used:
+  2844 ;;		wreg, status,2, status,0
+  2845 ;; Tracked objects:
+  2846 ;;		On entry : 0/0
+  2847 ;;		On exit  : 0/0
+  2848 ;;		Unchanged: 0/0
+  2849 ;; Data sizes:     COMRAM   BANK0
+  2850 ;;      Params:         0       0
+  2851 ;;      Locals:         0       0
+  2852 ;;      Temps:          5       0
+  2853 ;;      Totals:         5       0
+  2854 ;;Total ram usage:        5 bytes
+  2855 ;; Hardware stack levels used:    1
+  2856 ;; This function calls:
+  2857 ;;		Nothing
+  2858 ;; This function is called by:
+  2859 ;;		_tm_handler
+  2860 ;; This function uses a non-reentrant model
+  2861 ;;
+  2862                           
+  2863                           	psect	text15
+  2864  000446                     __ptext15:
+  2865                           	callstack 0
+  2866  000446                     _led_blink:
+  2867                           	callstack 25
+  2868                           
+  2869                           ;../ihc_vector.c: 106:  if (V.num_blinks == 255) {
+  2870                           
+  2871                           ;incstack = 0
+  2872  000446  280A               	incf	(_V+9)^0,w,c	;volatile
+  2873  000448  A4D8               	btfss	status,2,c
+  2874  00044A  D005               	goto	i2l1323
+  2875                           
+  2876                           ;../ihc_vector.c: 107:   LATBbits.LATB0 = 1;
+  2877  00044C  808A               	bsf	138,0,c	;volatile
+  2878  00044E                     i2l1317:
+  2879                           
+  2880                           ;../ihc_vector.c: 108:   V.clock_blinks = 0;
+  2881  00044E  0E00               	movlw	0
+  2882  000450  6E09               	movwf	(_V+8)^0,c	;volatile
+  2883  000452                     i2l1319:
+  2884                           
+  2885                           ;../ihc_vector.c: 109:   V.blink_lock = 0;
+  2886  000452  900B               	bcf	(_V+10)^0,0,c	;volatile
+  2887  000454  0012               	return	
+  2888  000456                     i2l1323:
+  2889                           
+  2890                           ;../ihc_vector.c: 112:  if (!V.num_blinks || V.num_blinks > 10) {
+  2891  000456  500A               	movf	(_V+9)^0,w,c	;volatile
+  2892  000458  B4D8               	btfsc	status,2,c
+  2893  00045A  D003               	goto	i2u34_40
+  2894  00045C  0E0A               	movlw	10
+  2895  00045E  640A               	cpfsgt	(_V+9)^0,c	;volatile
+  2896  000460  D002               	goto	i2l1333
+  2897  000462                     i2u34_40:
+  2898                           
+  2899                           ;../ihc_vector.c: 113:   LATBbits.LATB0 = 0;
+  2900  000462  908A               	bcf	138,0,c	;volatile
+  2901  000464  D7F4               	goto	i2l1317
+  2902  000466                     i2l1333:
+  2903                           
+  2904                           ;../ihc_vector.c: 120:  if (V.clock_blinks > 8) {
+  2905  000466  0E08               	movlw	8
+  2906  000468  6409               	cpfsgt	(_V+8)^0,c	;volatile
+  2907  00046A  0012               	return	
+  2908                           
+  2909                           ;../ihc_vector.c: 121:   if ((8 + (V.num_blinks << 1)) <= V.clock_blinks) {
+  2910  00046C  500A               	movf	(_V+9)^0,w,c	;volatile
+  2911  00046E  6E36               	movwf	??_led_blink^0,c
+  2912  000470  6A37               	clrf	(??_led_blink+1)^0,c
+  2913  000472  90D8               	bcf	status,0,c
+  2914  000474  3636               	rlcf	??_led_blink^0,f,c
+  2915  000476  3637               	rlcf	(??_led_blink+1)^0,f,c
+  2916  000478  0E08               	movlw	8
+  2917  00047A  2636               	addwf	??_led_blink^0,f,c
+  2918  00047C  0E00               	movlw	0
+  2919  00047E  2237               	addwfc	(??_led_blink+1)^0,f,c
+  2920  000480  5009               	movf	(_V+8)^0,w,c	;volatile
+  2921  000482  6E38               	movwf	(??_led_blink+2)^0,c
+  2922  000484  6A39               	clrf	(??_led_blink+3)^0,c
+  2923  000486  5036               	movf	??_led_blink^0,w,c
+  2924  000488  5C38               	subwf	(??_led_blink+2)^0,w,c
+  2925  00048A  5039               	movf	(??_led_blink+3)^0,w,c
+  2926  00048C  0A80               	xorlw	128
+  2927  00048E  6E3A               	movwf	(??_led_blink+4)^0,c
+  2928  000490  5037               	movf	(??_led_blink+1)^0,w,c
+  2929  000492  0A80               	xorlw	128
+  2930  000494  583A               	subwfb	(??_led_blink+4)^0,w,c
+  2931  000496  A0D8               	btfss	status,0,c
+  2932  000498  D004               	goto	i2l1343
+  2933                           
+  2934                           ;../ihc_vector.c: 122:    V.clock_blinks = 0;
+  2935  00049A  0E00               	movlw	0
+  2936  00049C  6E09               	movwf	(_V+8)^0,c	;volatile
+  2937                           
+  2938                           ;../ihc_vector.c: 123:    LATBbits.LATB0 = 0;
+  2939  00049E  908A               	bcf	138,0,c	;volatile
+  2940  0004A0  D7D8               	goto	i2l1319
+  2941  0004A2                     i2l1343:
+  2942                           
+  2943                           ;../ihc_vector.c: 126:    LATBbits.LATB0 = ~LATBbits.LATB0;
+  2944  0004A2  A08A               	btfss	138,0,c	;volatile
+  2945  0004A4  D002               	goto	i2u37_40
+  2946  0004A6  0E01               	movlw	1
+  2947  0004A8  D001               	goto	i2u37_46
+  2948  0004AA                     i2u37_40:
+  2949  0004AA  0E00               	movlw	0
+  2950  0004AC                     i2u37_46:
+  2951  0004AC  0AFF               	xorlw	255
+  2952  0004AE  6E36               	movwf	??_led_blink^0,c
+  2953  0004B0  508A               	movf	138,w,c	;volatile
+  2954  0004B2  1836               	xorwf	??_led_blink^0,w,c
+  2955  0004B4  0BFE               	andlw	-2
+  2956  0004B6  1836               	xorwf	??_led_blink^0,w,c
+  2957  0004B8  6E8A               	movwf	138,c	;volatile
+  2958  0004BA  0012               	return		;funcret
+  2959  0004BC                     __end_of_led_blink:
+  2960                           	callstack 0
+  2961                           
+  2962                           	psect	rparam
+  2963  0000                     
+  2964                           	psect	temp
+  2965  000060                     btemp:
+  2966                           	callstack 0
+  2967  000060                     	ds	1
+  2968  0000                     int$flags	set	btemp
+  2969  0000                     wtemp8	set	btemp+1
+  2970  0000                     ttemp5	set	btemp+1
+  2971  0000                     ttemp6	set	btemp+4
+  2972  0000                     ttemp7	set	btemp+8
+  2973                           
+  2974                           	psect	idloc
+  2975                           
+  2976                           ;Config register IDLOC0 @ 0x200000
+  2977                           ;	unspecified, using default values
+  2978  200000                     	org	2097152
+  2979  200000  FF                 	db	255
+  2980                           
+  2981                           ;Config register IDLOC1 @ 0x200001
+  2982                           ;	unspecified, using default values
+  2983  200001                     	org	2097153
+  2984  200001  FF                 	db	255
+  2985                           
+  2986                           ;Config register IDLOC2 @ 0x200002
+  2987                           ;	unspecified, using default values
+  2988  200002                     	org	2097154
+  2989  200002  FF                 	db	255
+  2990                           
+  2991                           ;Config register IDLOC3 @ 0x200003
+  2992                           ;	unspecified, using default values
+  2993  200003                     	org	2097155
+  2994  200003  FF                 	db	255
+  2995                           
+  2996                           ;Config register IDLOC4 @ 0x200004
+  2997                           ;	unspecified, using default values
+  2998  200004                     	org	2097156
+  2999  200004  FF                 	db	255
+  3000                           
+  3001                           ;Config register IDLOC5 @ 0x200005
+  3002                           ;	unspecified, using default values
+  3003  200005                     	org	2097157
+  3004  200005  FF                 	db	255
+  3005                           
+  3006                           ;Config register IDLOC6 @ 0x200006
+  3007                           ;	unspecified, using default values
+  3008  200006                     	org	2097158
+  3009  200006  FF                 	db	255
+  3010                           
+  3011                           ;Config register IDLOC7 @ 0x200007
+  3012                           ;	unspecified, using default values
+  3013  200007                     	org	2097159
+  3014  200007  FF                 	db	255
+  3015                           
+  3016                           	psect	config
+  3017                           
+  3018                           ; Padding undefined space
+  3019  300000                     	org	3145728
+  3020  300000  FF                 	db	255
+  3021                           
+  3022                           ;Config register CONFIG1H @ 0x300001
+  3023                           ;	Oscillator Selection bits
+  3024                           ;	OSC = HSPLL, HS oscillator, PLL enabled (clock frequency = 4 x FOSC1)
+  3025                           ;	Fail-Safe Clock Monitor Enable bit
+  3026                           ;	FSCM = ON, Fail-Safe Clock Monitor enabled
+  3027                           ;	Internal External Switchover bit
+  3028                           ;	IESO = ON, Internal External Switchover mode enabled
+  3029  300001                     	org	3145729
+  3030  300001  C6                 	db	198
+  3031                           
+  3032                           ;Config register CONFIG2L @ 0x300002
+  3033                           ;	Power-up Timer Enable bit
+  3034                           ;	PWRT = OFF, PWRT disabled
+  3035                           ;	Brown-out Reset Enable bit
+  3036                           ;	BOR = ON, Brown-out Reset enabled
+  3037                           ;	Brown-out Reset Voltage bits
+  3038                           ;	BORV = 0x3, unprogrammed default
+  3039  300002                     	org	3145730
+  3040  300002  0F                 	db	15
+  3041                           
+  3042                           ;Config register CONFIG2H @ 0x300003
+  3043                           ;	Watchdog Timer Enable bit
+  3044                           ;	WDT = OFF, WDT disabled (control is placed on the SWDTEN bit)
+  3045                           ;	Watchdog Timer Postscale Select bits
+  3046                           ;	WDTPS = 32768, 1:32768
+  3047  300003                     	org	3145731
+  3048  300003  1E                 	db	30
+  3049                           
+  3050                           ; Padding undefined space
+  3051  300004                     	org	3145732
+  3052  300004  FF                 	db	255
+  3053                           
+  3054                           ;Config register CONFIG3H @ 0x300005
+  3055                           ;	MCLR Pin Enable bit
+  3056                           ;	MCLRE = ON, MCLR pin enabled, RA5 input pin disabled
+  3057  300005                     	org	3145733
+  3058  300005  80                 	db	128
+  3059                           
+  3060                           ;Config register CONFIG4L @ 0x300006
+  3061                           ;	Stack Full/Underflow Reset Enable bit
+  3062                           ;	STVR = ON, Stack full/underflow will cause Reset
+  3063                           ;	Low-Voltage ICSP Enable bit
+  3064                           ;	LVP = OFF, Low-Voltage ICSP disabled
+  3065                           ;	Background Debugger Enable bit
+  3066                           ;	DEBUG = 0x1, unprogrammed default
+  3067  300006                     	org	3145734
+  3068  300006  81                 	db	129
+  3069                           
+  3070                           ; Padding undefined space
+  3071  300007                     	org	3145735
+  3072  300007  FF                 	db	255
+  3073                           
+  3074                           ;Config register CONFIG5L @ 0x300008
+  3075                           ;	Code Protection bit
+  3076                           ;	CP0 = ON, Block 0 (00200-000FFFh) code-protected
+  3077                           ;	Code Protection bit
+  3078                           ;	CP1 = ON, Block 1 (001000-001FFFh) code-protected
+  3079  300008                     	org	3145736
+  3080  300008  00                 	db	0
+  3081                           
+  3082                           ;Config register CONFIG5H @ 0x300009
+  3083                           ;	Boot Block Code Protection bit
+  3084                           ;	CPB = OFF, Boot Block (000000-0001FFh) not code-protected
+  3085                           ;	Data EEPROM Code Protection bit
+  3086                           ;	CPD = OFF, Data EEPROM not code-protected
+  3087  300009                     	org	3145737
+  3088  300009  C0                 	db	192
+  3089                           
+  3090                           ;Config register CONFIG6L @ 0x30000A
+  3091                           ;	Write Protection bit
+  3092                           ;	WRT0 = OFF, Block 0 (00200-000FFFh) not write-protected
+  3093                           ;	Write Protection bit
+  3094                           ;	WRT1 = OFF, Block 1 (001000-001FFFh) not write-protected
+  3095  30000A                     	org	3145738
+  3096  30000A  03                 	db	3
+  3097                           
+  3098                           ;Config register CONFIG6H @ 0x30000B
+  3099                           ;	Configuration Register Write Protection bit
+  3100                           ;	WRTC = OFF, Configuration registers (300000-3000FFh) not write-protected
+  3101                           ;	Boot Block Write Protection bit
+  3102                           ;	WRTB = OFF, Boot Block (000000-0001FFh) not write-protected
+  3103                           ;	Data EEPROM Write Protection bit
+  3104                           ;	WRTD = OFF, Data EEPROM not write-protected
+  3105  30000B                     	org	3145739
+  3106  30000B  E0                 	db	224
+  3107                           
+  3108                           ;Config register CONFIG7L @ 0x30000C
+  3109                           ;	Table Read Protection bit
+  3110                           ;	EBTR0 = OFF, Block 0 (00200-000FFFh) not protected from table reads executed in other 
+      +                          blocks
+  3111                           ;	Table Read Protection bit
+  3112                           ;	EBTR1 = OFF, Block 1 (001000-001FFFh) not protected from table reads executed in other
+      +                           blocks
+  3113  30000C                     	org	3145740
+  3114  30000C  03                 	db	3
+  3115                           
+  3116                           ;Config register CONFIG7H @ 0x30000D
+  3117                           ;	Boot Block Table Read Protection bit
+  3118                           ;	EBTRB = OFF, Boot Block (000000-0001FFh) not protected from table reads executed in ot
+      +                          her blocks
+  3119  30000D                     	org	3145741
+  3120  30000D  40                 	db	64
+  3121                           tosu	equ	0xFFF
+  3122                           tosh	equ	0xFFE
+  3123                           tosl	equ	0xFFD
+  3124                           stkptr	equ	0xFFC
+  3125                           pclatu	equ	0xFFB
+  3126                           pclath	equ	0xFFA
+  3127                           pcl	equ	0xFF9
+  3128                           tblptru	equ	0xFF8
+  3129                           tblptrh	equ	0xFF7
+  3130                           tblptrl	equ	0xFF6
+  3131                           tablat	equ	0xFF5
+  3132                           prodh	equ	0xFF4
+  3133                           prodl	equ	0xFF3
+  3134                           indf0	equ	0xFEF
+  3135                           postinc0	equ	0xFEE
+  3136                           postdec0	equ	0xFED
+  3137                           preinc0	equ	0xFEC
+  3138                           plusw0	equ	0xFEB
+  3139                           fsr0h	equ	0xFEA
+  3140                           fsr0l	equ	0xFE9
+  3141                           wreg	equ	0xFE8
+  3142                           indf1	equ	0xFE7
+  3143                           postinc1	equ	0xFE6
+  3144                           postdec1	equ	0xFE5
+  3145                           preinc1	equ	0xFE4
+  3146                           plusw1	equ	0xFE3
+  3147                           fsr1h	equ	0xFE2
+  3148                           fsr1l	equ	0xFE1
+  3149                           bsr	equ	0xFE0
+  3150                           indf2	equ	0xFDF
+  3151                           postinc2	equ	0xFDE
+  3152                           postdec2	equ	0xFDD
+  3153                           preinc2	equ	0xFDC
+  3154                           plusw2	equ	0xFDB
+  3155                           fsr2h	equ	0xFDA
+  3156                           fsr2l	equ	0xFD9
+  3157                           status	equ	0xFD8
+
+Data Sizes:
+    Strings     21
+    Constant    573
+    Data        5
+    BSS         53
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM          126     37      95
+    BANK0           128      0       0
+
+Pointer List with Targets:
+
+    memcpy@d1	PTR void  size(1) Largest target is 20
+		 -> cc_buffer(COMRAM[20]), 
+
+    memcpy@d	PTR unsigned char  size(1) Largest target is 20
+		 -> cc_buffer(COMRAM[20]), 
+
+    memcpy@s1	PTR const void  size(2) Largest target is 6
+		 -> modbus_cc_mode(CODE[6]), modbus_cc_error(CODE[6]), 
+
+    memcpy@s	PTR const unsigned char  size(2) Largest target is 6
+		 -> modbus_cc_mode(CODE[6]), modbus_cc_error(CODE[6]), 
+
+    crc16@buffer	PTR volatile unsigned char  size(1) Largest target is 20
+		 -> cc_buffer(COMRAM[20]), 
+
+    sp__memcpy	PTR void  size(1) Largest target is 20
+		 -> cc_buffer(COMRAM[20]), 
+
+    modbus_rtu_send_msg@modbus_cc_mode	PTR const void  size(2) Largest target is 6
+		 -> modbus_cc_mode(CODE[6]), modbus_cc_error(CODE[6]), 
+
+    modbus_rtu_send_msg@cc_buffer	PTR void  size(1) Largest target is 20
+		 -> cc_buffer(COMRAM[20]), 
+
+    modbus_rtu_send_msg_crc@req	PTR volatile unsigned char  size(1) Largest target is 20
+		 -> cc_buffer(COMRAM[20]), 
+
+    build_time	PTR const unsigned char  size(2) Largest target is 9
+		 -> STR_2(CODE[9]), 
+
+    build_date	PTR const unsigned char  size(2) Largest target is 12
+		 -> STR_1(CODE[12]), 
+
+
+Critical Paths under _main in COMRAM
+
+    _main->_controller_work
+    _init_ihcmon->_SetDCPWM1
+    _controller_work->_modbus_rtu_send_msg
+    _modbus_rtu_send_msg->_modbus_rtu_send_msg_crc
+    _modbus_rtu_send_msg_crc->_crc16
+
+Critical Paths under _tm_handler in COMRAM
+
+    _tm_handler->_led_blink
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _tm_handler in BANK0
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0    3523
+                    _controller_work
+                        _init_ihcmon
+ ---------------------------------------------------------------------------------
+ (1) _init_ihcmon                                          2     2      0     433
+                                             16 COMRAM     2     2      0
+                          _SetDCPWM1
+                 _init_stream_params
+                      _set_led_blink
+ ---------------------------------------------------------------------------------
+ (2) _init_stream_params                                   0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _controller_work                                      9     9      0    3090
+                                             28 COMRAM     9     9      0
+                          _SetDCPWM1
+                          _clear_2hz
+                        _clear_500hz
+                              _crc16
+                            _get_2hz
+                          _get_500hz
+                _modbus_rtu_send_msg
+                      _set_led_blink
+ ---------------------------------------------------------------------------------
+ (2) _set_led_blink                                        1     1      0      45
+                                             10 COMRAM     1     1      0
+ ---------------------------------------------------------------------------------
+ (2) _modbus_rtu_send_msg                                  5     0      5    1929
+                                             23 COMRAM     5     0      5
+                             _memcpy
+            _modbus_rtu_send_msg_crc
+ ---------------------------------------------------------------------------------
+ (3) _modbus_rtu_send_msg_crc                              5     2      3     992
+                                             18 COMRAM     5     2      3
+                              _crc16
+ ---------------------------------------------------------------------------------
+ (4) _crc16                                                8     5      3     638
+                                             10 COMRAM     8     5      3
+ ---------------------------------------------------------------------------------
+ (3) _memcpy                                               9     4      5     371
+                                             10 COMRAM     9     4      5
+ ---------------------------------------------------------------------------------
+ (2) _get_500hz                                            5     1      4      22
+                                             10 COMRAM     5     1      4
+ ---------------------------------------------------------------------------------
+ (2) _get_2hz                                              5     1      4      22
+                                             10 COMRAM     5     1      4
+ ---------------------------------------------------------------------------------
+ (2) _clear_500hz                                          0     0      0       0
+ ---------------------------------------------------------------------------------
+ (2) _clear_2hz                                            0     0      0       0
+ ---------------------------------------------------------------------------------
+ (2) _SetDCPWM1                                            6     4      2     296
+                                             10 COMRAM     6     4      2
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 4
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (5) _tm_handler                                           5     5      0      60
+                                              5 COMRAM     5     5      0
+                          _led_blink
+ ---------------------------------------------------------------------------------
+ (6) _led_blink                                            5     5      0       0
+                                              0 COMRAM     5     5      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 6
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _controller_work
+     _SetDCPWM1
+     _clear_2hz
+     _clear_500hz
+     _crc16
+     _get_2hz
+     _get_500hz
+     _modbus_rtu_send_msg
+       _memcpy
+       _modbus_rtu_send_msg_crc
+         _crc16
+     _set_led_blink
+   _init_ihcmon
+     _SetDCPWM1
+     _init_stream_params
+     _set_led_blink
+
+ _tm_handler (ROOT)
+   _led_blink
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+EEDATA             100      0       0       0        0.0%
+BIGRAM              FF      0       0       6        0.0%
+BITBANK0            80      0       0       3        0.0%
+BANK0               80      0       0       4        0.0%
+BITCOMRAM           7E      0       0       0        0.0%
+COMRAM              7E     25      5F       1       75.4%
+BITSFR               0      0       0     200        0.0%
+SFR                  0      0       0     200        0.0%
+STACK                0      0       0       2        0.0%
+NULL                 0      0       0       0        0.0%
+ABS                  0      0      5F       5        0.0%
+DATA                 0      0      5F       7        0.0%
+CODE                 0      0       0       0        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V2.30 build 20200825195618 
+Symbol Table                                                                                   Wed Sep  9 10:15:50 2020
+
+                       _STKPTRbits 000FFC                _modbus_rtu_send_msg 0688  
+                                _V 0001                      _build_version 1FD9  
+                              l151 0222                                l251 05B0  
+                              l181 03C0                                l257 0570  
+                              _PR2 000FCB                                u530 013A  
+                              u700 0342                                u540 0166  
+                              u640 0242                                u560 018A  
+                              u730 03BA                                u580 01A8  
+                              u495 0658                                wreg 000FE8  
+             ?_modbus_rtu_send_msg 004D                               l1055 06D0  
+                             l1501 0124                               l1423 04C2  
+                             l1431 04F6                               l1601 032A  
+                             l1523 01AE                               l1611 035E  
+                             l1453 05E4                               l1461 0602  
+                             l1509 0150                               l1551 024E  
+                             l1543 0224                               l1519 0192  
+                             l1615 037C                               l1545 022A  
+                             l1481 00A8                               l1571 02B2  
+                             l1573 02B6                               l1493 00C2  
+                             l1575 02BA                               l1591 0308  
+                             l1495 00E4                               l1577 02BE  
+                             l1569 02AE                               l1585 02C6  
+                             l1729 070C                               l1579 02C2  
+                             l1595 031A                               l1587 02FC  
+                             l1499 0106                               STR_1 1FEA  
+                             STR_2 1FF6                       _re20a_freset 1FB6  
+                             _RCON 000FD0                               _main 0708  
+                             fsr2h 000FDA                               indf2 000FDF  
+                             fsr1l 000FE1                               fsr2l 000FD9  
+                             btemp 0060                               start 00A2  
+         __size_of_controller_work 0300                       ___param_bank 000000  
+          _modbus_rtu_send_msg_crc 0514                              ?_main 0036  
+                            _T0CON 000FD5                              _T1CON 000FCD  
+                     ?_init_ihcmon 0036                              _RCREG 000FAE  
+                            _RCSTA 000FAB                              _TMR0H 000FD7  
+                            _TMR1H 000FCF                              _TMR0L 000FD6  
+                            _TMR1L 000FCE                              _SPBRG 000FAF  
+                            _TRISA 000F92                              _TRISB 000F93  
+                            _TXREG 000FAD                              _TXSTA 000FAC  
+                  __end_of_get_2hz 05D6              ??_modbus_rtu_send_msg 0052  
+                            _crc16 04BC                              tablat 000FF5  
+             __size_of_clear_500hz 0016                              ttemp5 0061  
+                            ttemp6 0064                              ttemp7 0068  
+                            status 000FD8                              wtemp8 0061  
+modbus_rtu_send_msg@modbus_cc_mode 004E                    __initialization 0614  
+                     __end_of_main 0712                             ??_main 005B  
+                    __activetblptr 000002                             ?_crc16 0040  
+                           _ADCON1 000FC1                             _CCPR1L 000FBE  
+               crc16@buffer_length 0041                             i2l1323 0456  
+                           i2l1333 0466                             i2l1317 044E  
+                           i2l1343 04A2                             i2l1319 0452  
+                           i2l1371 0054                             i2l1365 003C  
+                           i2l1383 006E                             i2l1399 008E  
+                           _SPBRGH 000FB0                 __size_of_SetDCPWM1 003A  
+        ??_modbus_rtu_send_msg_crc 004B                             crc16@i 0045  
+                           _cstate 0020                             _memcpy 05D6  
+                ??_controller_work 0052                             clear_0 063A  
+                        ??_get_2hz 0044                       __pdataCOMRAM 005B  
+                     __mediumconst 1DAC                             tblptrh 000FF7  
+                           tblptrl 000FF6                             tblptru 000FF8  
+            __end_of_set_led_blink 06DC                         __accesstop 0080  
+          __end_of__initialization 0640        __size_of_init_stream_params 0004  
+                    ___rparam_used 000001                         _re20a_mode 1FC6  
+                   __pcstackCOMRAM 0036                      __end_of_crc16 0514  
+               __size_of_get_500hz 0040                 __size_of_clear_2hz 0016  
+         controller_work@c_crc_rec 0058                  __end_of_SetDCPWM1 0688  
+  __end_of_modbus_rtu_send_msg_crc 0556                      get_500hz@mode 0044  
+             __size_of_init_ihcmon 00A0                            ??_crc16 0043  
+               __size_of_led_blink 0076                            _CCP1CON 000FBD  
+                          ?_memcpy 0040                            i2u40_40 0022  
+                          i2u34_40 0462                            i2u37_40 04AA  
+                          i2u37_46 04AC                set_led_blink@blinks 0040  
+                       _build_date 005D                         _build_time 005B  
+                __end_of_get_500hz 0596                  __end_of_clear_2hz 0708  
+       modbus_rtu_send_msg_crc@crc 004B         modbus_rtu_send_msg_crc@req 0048  
+                          __Hparam 0000                            __Lparam 0000  
+              __end_of_re20a_clear 1FC6                  __end_of_led_blink 04BC  
+              __end_of_re20a_error 1FB6                            __pcinit 0614  
+                  __size_of_memcpy 003E                            __ramtop 0100  
+                          _get_2hz 0596        __end_of_modbus_rtu_send_msg 06BA  
+                          __ptext0 0708                            __ptext1 03A6  
+                          __ptext2 0718                            __ptext3 00A6  
+                          __ptext4 06BA                            __ptext5 0688  
+                          __ptext6 0514                            __ptext7 04BC  
+                          __ptext8 05D6                            __ptext9 0556  
+                        _T2CONbits 000FCA                      ??_clear_500hz 0040  
+             end_of_initialization 0640                            memcpy@d 0048  
+                          memcpy@n 0043                            memcpy@s 0045  
+                       _req_length 001B                      __Lmediumconst 1DAC  
+                       get_2hz@tmp 0013                    _controller_work 00A6  
+                        _RCSTAbits 000FAB                         _tm_handler 0008  
+                          postdec1 000FE5                            postinc0 000FEE  
+             __end_of_table_crc_hi 1FAD               __end_of_table_crc_lo 1EAD  
+                      _re20a_clear 1FBE                          _TXSTAbits 000FAC  
+              __end_of_clear_500hz 06F2                        _re20a_error 1FAD  
+                tm_handler@c_error 001D              __end_of_build_version 1FDE  
+                    __pidataCOMRAM 0712                        _BAUDCTLbits 000FAA  
+                   __end_of_memcpy 0614                start_initialization 0614  
+                        _SetDCPWM1 064E                    SetDCPWM1@DCycle 0044  
+          __end_of_controller_work 03A6         __end_of_init_stream_params 071C  
+         ?_modbus_rtu_send_msg_crc 0048                        ?_tm_handler 0036  
+                         ??_memcpy 0045                        crc16@crc_hi 0046  
+                      crc16@crc_lo 0047                        crc16@buffer 0040  
+           __size_of_set_led_blink 0022                      ??_init_ihcmon 0046  
+                      __pbssCOMRAM 0001                         ?_SetDCPWM1 0040  
+                      _clear_500hz 06DC                          _cc_buffer 0022  
+                     get_500hz@tmp 000F                          _get_500hz 0556  
+                        _clear_2hz 06F2                          __pintcode 0008  
+                    __pmediumconst 1DAC                          _crc_error 0017  
+          controller_work@temp_703 005A                           ?_get_2hz 0040  
+                        _led_blink 0446                 __end_of_re20a_mode 1FCD  
+                   __size_of_crc16 0058                __size_of_tm_handler 009A  
+              __end_of_init_ihcmon 0446                   ?_controller_work 0036  
+                     _table_crc_hi 1EAD                       _table_crc_lo 1DAD  
+                    _set_led_blink 06BA  modbus_rtu_send_msg_crc@req_length 0049  
+                         _LATAbits 000F89                           _LATBbits 000F8A  
+                       ?_get_500hz 0040                           _IPR1bits 000F9F  
+                         _PIE1bits 000F9D                         ?_clear_2hz 0036  
+                         _PIR1bits 000F9E                           _RCONbits 000FD0  
+                       ?_led_blink 0036                   _modbus_cc_freset 1FCD  
+                      ??_SetDCPWM1 0042       __size_of_modbus_rtu_send_msg 0032  
+                      _INTCON2bits 000FF1                          copy_data0 0628  
+                   ?_set_led_blink 0036                 SetDCPWM1@dutycycle 0040  
+                         __Hrparam 0000                          memcpy@tmp 0047  
+                         __Lrparam 0000               __end_of_re20a_freset 1FBE  
+                 __size_of_get_2hz 0040                        _init_ihcmon 03A6  
+             controller_work@c_crc 0056                           __ptext10 0596  
+                         __ptext11 06DC                           __ptext12 06F2  
+                         __ptext13 064E                           __ptext15 0446  
+             controller_work@volts 005F                      __size_of_main 000A  
+                      ??_get_500hz 0044                        ??_clear_2hz 0040  
+               _init_stream_params 0718                       ??_tm_handler 003B  
+     modbus_rtu_send_msg@cc_buffer 004D                           int$flags 0060  
+ __size_of_modbus_rtu_send_msg_crc 0042                    _modbus_cc_clear 1FD3  
+                  _modbus_cc_error 1FDE                ?_init_stream_params 0036  
+                      ??_led_blink 0036                     _cc_stream_file 0021  
+                       _INTCONbits 000FF2                           memcpy@d1 0040  
+                         memcpy@s1 0041                       ?_clear_500hz 0036  
+                      get_2hz@mode 0044                    ??_set_led_blink 0040  
+    modbus_rtu_send_msg@req_length 0050                 __end_of_tm_handler 00A2  
+                         intlevel2 0000               ??_init_stream_params 0040  
+              controller_work@mcmd 001E                controller_work@temp 0054  
+                   _modbus_cc_mode 1FE4                     _modbus_command 001F  
+         __end_of_modbus_cc_freset 1FD3            __end_of_modbus_cc_clear 1FD9  
+          __end_of_modbus_cc_error 1FE4             __end_of_modbus_cc_mode 1FEA  

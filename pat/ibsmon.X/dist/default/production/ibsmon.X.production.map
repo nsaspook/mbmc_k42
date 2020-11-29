@@ -1,0 +1,1062 @@
+Microchip MPLAB XC8 Compiler V2.30
+
+Linker command line:
+
+-W-3 --edf=/opt/microchip/xc8/v2.30/pic/dat/en_msgs.txt -cn \
+  -h+dist/default/production/ibsmon.X.production.sym \
+  --cmf=dist/default/production/ibsmon.X.production.cmf -z -Q18F1320 \
+  -o/tmp/xcXjDeFFb --defsym=__MPLAB_BUILD=1 \
+  -Mdist/default/production/ibsmon.X.production.map -E1 -ver=XC8 Compiler \
+  --acfsm=1493 -ASTACK=080h-0FFh -pstack=STACK -ACODE=00h-01FFFh \
+  -ACONST=00h-01FFFh -ASMALLCONST=0100h-01FFhx31 -AMEDIUMCONST=0100h-01FFFh \
+  -ACOMRAM=01h-07Fh -AABS1=00h-0FFh -ABIGRAM=01h-0FFh -ARAM=080h-0FFh \
+  -ABANK0=080h-0FFh -ASFR=0F80h-0FFFh -ACONFIG=0300000h-030000Dh \
+  -AIDLOC=0200000h-0200007h -AEEDATA=0F00000h-0F000FFh -peeprom_data=EEDATA \
+  -preset_vec=00h,intcode=08h,intcodelo,powerup,init -pramtop=0100h \
+  -psmallconst=SMALLCONST -pmediumconst=MEDIUMCONST -pconst=CONST \
+  -AFARRAM=00h-00h \
+  -prdata=COMRAM,nvrram=COMRAM,nvbit=COMRAM,rbss=COMRAM,rbit=COMRAM \
+  -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
+  -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
+  -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
+  /tmp/xcXmdcIpG.o dist/default/production/ibsmon.X.production.o 
+
+Object code version is 3.11
+
+Machine type is 18F1320
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+/tmp/xcXmdcIpG.o
+                idloc                            200000   200000        8        0       5
+                config                           300000   300000        E        0       4
+                init                                 A2       A2        4        4       0
+                reset_vec                             0        0        6        0       0
+dist/default/production/ibsmon.X.production.o
+                intcode                               8        8       9A        4       0
+                idloc                            200000   200000        8        0       5
+                config                           300000   300000        E        0       4
+                temp                                 60       60        1        1       1
+                mediumconst                        1DAC     1DAC      254      ED6       0
+                text15                              446      446       76        4       0
+                text13                              64E      64E       3A        4       0
+                text12                              6F2      6F2       16        4       0
+                text11                              6DC      6DC       16        4       0
+                text10                              596      596       40        4       0
+                text9                               556      556       40        4       0
+                text8                               5D6      5D6       3E        4       0
+                text7                               4BC      4BC       58        4       0
+                text6                               514      514       42        4       0
+                text5                               688      688       32        4       0
+                text4                               6BA      6BA       22        4       0
+                text3                                A6       A6      300        4       0
+                text2                               718      718        4      38C       0
+                text1                               3A6      3A6       A0        4       0
+                text0                               708      708        A        4       0
+                cstackCOMRAM                         36       36       25        1       1
+                dataCOMRAM                           5B       5B        5        1       1
+                bssCOMRAM                             1        1       35        1       1
+                cinit                               614      614       3A        4       0
+                idataCOMRAM                         712      712        5        4       0
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   STACK          
+
+        CLASS   CODE           
+                intcode                               8        8       9A         0
+                init                                 A2       A2        4         0
+                reset_vec                             0        0        6         0
+                text15                              446      446       76         0
+                text13                              64E      64E       3A         0
+                text12                              6F2      6F2       16         0
+                text11                              6DC      6DC       16         0
+                text10                              596      596       40         0
+                text9                               556      556       40         0
+                text8                               5D6      5D6       3E         0
+                text7                               4BC      4BC       58         0
+                text6                               514      514       42         0
+                text5                               688      688       32         0
+                text4                               6BA      6BA       22         0
+                text3                                A6       A6      300         0
+                text2                               718      718        4         0
+                text1                               3A6      3A6       A0         0
+                text0                               708      708        A         0
+                cinit                               614      614       3A         0
+                idataCOMRAM                         712      712        5         0
+
+        CLASS   CONST          
+
+        CLASS   SMALLCONST     
+
+        CLASS   MEDIUMCONST    
+                mediumconst                        1DAC     1DAC      254         0
+
+        CLASS   COMRAM         
+                temp                                 60       60        1         1
+                cstackCOMRAM                         36       36       25         1
+                dataCOMRAM                           5B       5B        5         1
+                bssCOMRAM                             1        1       35         1
+
+        CLASS   ABS1           
+
+        CLASS   BIGRAM         
+
+        CLASS   RAM            
+
+        CLASS   BANK0          
+
+        CLASS   SFR            
+
+        CLASS   CONFIG         
+                config                           300000   300000        E         4
+
+        CLASS   IDLOC          
+                idloc                            200000   200000        8         5
+
+        CLASS   EEDATA         
+
+        CLASS   FARRAM         
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class
+
+                bssCOMRAM                      000001  000060  000061         1       1  COMRAM  
+                text2                          000718  000004  00071C       38C       0  CODE    
+                reset_vec                      000000  000006  000006         0       0  CODE    
+                intcode                        000008  00070F  000717         4       0  CODE    
+                mediumconst                    001DAC  000254  002000       ED6       0  MEDIUMCO
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            000080-0000FF               80
+        BIGRAM           000061-0000FF               9F
+        CODE             000006-000007                2
+                         000717-000717                1
+                         00071C-001DAB             1690
+        COMRAM           000061-00007F               1F
+        CONST            000006-000007                2
+                         000717-000717                1
+                         00071C-001DAB             1690
+        EEDATA           F00000-F000FF              100
+        MEDIUMCONST      000717-000717                1
+                         00071C-001DAB             1690
+        RAM              000080-0000FF               80
+        SFR              000F80-000FFF               80
+        SMALLCONST       000717-000717                1
+                         00071C-001DAB              100
+        STACK            000080-0000FF               80
+
+                                  Symbol Table
+
+?_crc16                            cstackCOMRAM 000040
+?_get_2hz                          cstackCOMRAM 000040
+?_get_500hz                        cstackCOMRAM 000040
+?_modbus_rtu_send_msg              cstackCOMRAM 00004D
+?_modbus_rtu_send_msg_crc          cstackCOMRAM 000048
+SetDCPWM1@DCycle                   cstackCOMRAM 000044
+SetDCPWM1@dutycycle                cstackCOMRAM 000040
+_ADCON1                            (abs)        000FC1
+_BAUDCTLbits                       (abs)        000FAA
+_CCP1CON                           (abs)        000FBD
+_CCPR1L                            (abs)        000FBE
+_INTCON2bits                       (abs)        000FF1
+_INTCONbits                        (abs)        000FF2
+_IPR1bits                          (abs)        000F9F
+_LATAbits                          (abs)        000F89
+_LATBbits                          (abs)        000F8A
+_PIE1bits                          (abs)        000F9D
+_PIR1bits                          (abs)        000F9E
+_PR2                               (abs)        000FCB
+_RCON                              (abs)        000FD0
+_RCONbits                          (abs)        000FD0
+_RCREG                             (abs)        000FAE
+_RCSTA                             (abs)        000FAB
+_RCSTAbits                         (abs)        000FAB
+_SPBRG                             (abs)        000FAF
+_SPBRGH                            (abs)        000FB0
+_STKPTRbits                        (abs)        000FFC
+_SetDCPWM1                         text13       00064E
+_T0CON                             (abs)        000FD5
+_T1CON                             (abs)        000FCD
+_T2CONbits                         (abs)        000FCA
+_TMR0H                             (abs)        000FD7
+_TMR0L                             (abs)        000FD6
+_TMR1H                             (abs)        000FCF
+_TMR1L                             (abs)        000FCE
+_TRISA                             (abs)        000F92
+_TRISB                             (abs)        000F93
+_TXREG                             (abs)        000FAD
+_TXSTA                             (abs)        000FAC
+_TXSTAbits                         (abs)        000FAC
+_V                                 bssCOMRAM    000001
+__HRAM                             (abs)        000000
+__Habs1                            abs1         000000
+__Hbank0                           bank0        000000
+__Hbigbss                          bigbss       000000
+__Hbigdata                         bigdata      000000
+__Hbigram                          bigram       000000
+__Hbss                             bss          000000
+__HbssCOMRAM                       bssCOMRAM    000000
+__Hcinit                           cinit        000000
+__Hclrtext                         clrtext      000000
+__Hcomram                          comram       000000
+__Hconfig                          config       30000E
+__Hconst                           const        000000
+__HcstackCOMRAM                    cstackCOMRAM 000000
+__Hdata                            data         000000
+__HdataCOMRAM                      dataCOMRAM   000000
+__Heeprom_data                     eeprom_data  000000
+__Hfarbss                          farbss       000000
+__Hfardata                         fardata      000000
+__Hibigdata                        ibigdata     000000
+__Hidata                           idata        000000
+__HidataCOMRAM                     idataCOMRAM  000000
+__Hidloc                           idloc        200008
+__Hifardata                        ifardata     000000
+__Hinit                            init         0000A6
+__Hintcode                         intcode      0000A2
+__Hintcode_body                    intcode_body 000000
+__Hintcodelo                       intcodelo    0000A2
+__Hintentry                        intentry     000000
+__Hintret                          intret       000000
+__Hintsave_regs                    intsave_regs 000000
+__Hirdata                          irdata       000000
+__Hmediumconst                     mediumconst  002000
+__HnvFARRAM                        nvFARRAM     000000
+__Hnvbit                           nvbit        000000
+__Hnvrram                          nvrram       000000
+__Hparam                           rparam       000000
+__Hpowerup                         powerup      0000A2
+__Hram                             ram          000000
+__Hramtop                          ramtop       000100
+__Hrbit                            rbit         000000
+__Hrbss                            rbss         000000
+__Hrdata                           rdata        000000
+__Hreset_vec                       reset_vec    000006
+__Hrparam                          rparam       000000
+__Hsfr                             sfr          000000
+__Hsmallconst                      smallconst   000000
+__Hspace_0                         (abs)        002000
+__Hspace_1                         (abs)        000061
+__Hspace_2                         (abs)        000000
+__Hspace_4                         (abs)        60000E
+__Hstack                           stack        000000
+__Hstruct                          struct       000000
+__Htemp                            temp         000061
+__Htext                            text         000000
+__Htext0                           text0        000000
+__Htext1                           text1        000000
+__Htext10                          text10       000000
+__Htext11                          text11       000000
+__Htext12                          text12       000000
+__Htext13                          text13       000000
+__Htext15                          text15       000000
+__Htext2                           text2        000000
+__Htext3                           text3        000000
+__Htext4                           text4        000000
+__Htext5                           text5        000000
+__Htext6                           text6        000000
+__Htext7                           text7        000000
+__Htext8                           text8        000000
+__Htext9                           text9        000000
+__LRAM                             (abs)        000001
+__Labs1                            abs1         000000
+__Lbank0                           bank0        000000
+__Lbigbss                          bigbss       000000
+__Lbigdata                         bigdata      000000
+__Lbigram                          bigram       000000
+__Lbss                             bss          000000
+__LbssCOMRAM                       bssCOMRAM    000000
+__Lcinit                           cinit        000000
+__Lclrtext                         clrtext      000000
+__Lcomram                          comram       000000
+__Lconfig                          config       000000
+__Lconst                           const        000000
+__LcstackCOMRAM                    cstackCOMRAM 000000
+__Ldata                            data         000000
+__LdataCOMRAM                      dataCOMRAM   000000
+__Leeprom_data                     eeprom_data  000000
+__Lfarbss                          farbss       000000
+__Lfardata                         fardata      000000
+__Libigdata                        ibigdata     000000
+__Lidata                           idata        000000
+__LidataCOMRAM                     idataCOMRAM  000000
+__Lidloc                           idloc        000000
+__Lifardata                        ifardata     000000
+__Linit                            init         0000A2
+__Lintcode                         intcode      000008
+__Lintcode_body                    intcode_body 000000
+__Lintcodelo                       intcodelo    0000A2
+__Lintentry                        intentry     000000
+__Lintret                          intret       000000
+__Lintsave_regs                    intsave_regs 000000
+__Lirdata                          irdata       000000
+__Lmediumconst                     mediumconst  001DAC
+__LnvFARRAM                        nvFARRAM     000000
+__Lnvbit                           nvbit        000000
+__Lnvrram                          nvrram       000000
+__Lparam                           rparam       000000
+__Lpowerup                         powerup      0000A2
+__Lram                             ram          000000
+__Lramtop                          ramtop       000100
+__Lrbit                            rbit         000000
+__Lrbss                            rbss         000000
+__Lrdata                           rdata        000000
+__Lreset_vec                       reset_vec    000000
+__Lrparam                          rparam       000000
+__Lsfr                             sfr          000000
+__Lsmallconst                      smallconst   000000
+__Lspace_0                         (abs)        000000
+__Lspace_1                         (abs)        000000
+__Lspace_2                         (abs)        000000
+__Lspace_4                         (abs)        000000
+__Lstack                           stack        000000
+__Lstruct                          struct       000000
+__Ltemp                            temp         000060
+__Ltext                            text         000000
+__Ltext0                           text0        000000
+__Ltext1                           text1        000000
+__Ltext10                          text10       000000
+__Ltext11                          text11       000000
+__Ltext12                          text12       000000
+__Ltext13                          text13       000000
+__Ltext15                          text15       000000
+__Ltext2                           text2        000000
+__Ltext3                           text3        000000
+__Ltext4                           text4        000000
+__Ltext5                           text5        000000
+__Ltext6                           text6        000000
+__Ltext7                           text7        000000
+__Ltext8                           text8        000000
+__Ltext9                           text9        000000
+__S0                               (abs)        002000
+__S1                               (abs)        000061
+__S2                               (abs)        000000
+__S4                               (abs)        000000
+__S5                               (abs)        000000
+___inthi_sp                        stack        000000
+___intlo_sp                        stack        000000
+___param_bank                      (abs)        000000
+___rparam_used                     (abs)        000001
+___sp                              stack        000000
+__accesstop                        (abs)        000080
+__activetblptr                     (abs)        000002
+__end_of_SetDCPWM1                 text13       000688
+__end_of__initialization           cinit        000640
+__end_of_build_version             mediumconst  001FDE
+__end_of_clear_2hz                 text12       000708
+__end_of_clear_500hz               text11       0006F2
+__end_of_controller_work           text3        0003A6
+__end_of_crc16                     text7        000514
+__end_of_get_2hz                   text10       0005D6
+__end_of_get_500hz                 text9        000596
+__end_of_init_ihcmon               text1        000446
+__end_of_init_stream_params        text2        00071C
+__end_of_led_blink                 text15       0004BC
+__end_of_main                      text0        000712
+__end_of_memcpy                    text8        000614
+__end_of_modbus_cc_clear           mediumconst  001FD9
+__end_of_modbus_cc_error           mediumconst  001FE4
+__end_of_modbus_cc_freset          mediumconst  001FD3
+__end_of_modbus_cc_mode            mediumconst  001FEA
+__end_of_modbus_rtu_send_msg       text5        0006BA
+__end_of_modbus_rtu_send_msg_crc   text6        000556
+__end_of_re20a_clear               mediumconst  001FC6
+__end_of_re20a_error               mediumconst  001FB6
+__end_of_re20a_freset              mediumconst  001FBE
+__end_of_re20a_mode                mediumconst  001FCD
+__end_of_set_led_blink             text4        0006DC
+__end_of_table_crc_hi              mediumconst  001FAD
+__end_of_table_crc_lo              mediumconst  001EAD
+__end_of_tm_handler                intcode      0000A2
+__initialization                   cinit        000614
+__mediumconst                      mediumconst  001DAC
+__pbssCOMRAM                       bssCOMRAM    000001
+__pcinit                           cinit        000614
+__pcstackCOMRAM                    cstackCOMRAM 000036
+__pdataCOMRAM                      dataCOMRAM   00005B
+__pidataCOMRAM                     idataCOMRAM  000712
+__pintcode                         intcode      000008
+__pmediumconst                     mediumconst  001DAC
+__ptext0                           text0        000708
+__ptext1                           text1        0003A6
+__ptext10                          text10       000596
+__ptext11                          text11       0006DC
+__ptext12                          text12       0006F2
+__ptext13                          text13       00064E
+__ptext15                          text15       000446
+__ptext2                           text2        000718
+__ptext3                           text3        0000A6
+__ptext4                           text4        0006BA
+__ptext5                           text5        000688
+__ptext6                           text6        000514
+__ptext7                           text7        0004BC
+__ptext8                           text8        0005D6
+__ptext9                           text9        000556
+__ramtop                           ramtop       000100
+__size_of_SetDCPWM1                (abs)        000000
+__size_of_clear_2hz                (abs)        000000
+__size_of_clear_500hz              (abs)        000000
+__size_of_controller_work          (abs)        000000
+__size_of_crc16                    (abs)        000000
+__size_of_get_2hz                  (abs)        000000
+__size_of_get_500hz                (abs)        000000
+__size_of_init_ihcmon              (abs)        000000
+__size_of_init_stream_params       (abs)        000000
+__size_of_led_blink                (abs)        000000
+__size_of_main                     (abs)        000000
+__size_of_memcpy                   (abs)        000000
+__size_of_modbus_rtu_send_msg      (abs)        000000
+__size_of_modbus_rtu_send_msg_crc  (abs)        000000
+__size_of_set_led_blink            (abs)        000000
+__size_of_tm_handler               (abs)        000000
+__smallconst                       smallconst   000000
+_build_date                        dataCOMRAM   00005D
+_build_time                        dataCOMRAM   00005B
+_build_version                     mediumconst  001FD9
+_cc_buffer                         bssCOMRAM    000022
+_cc_stream_file                    bssCOMRAM    000021
+_clear_2hz                         text12       0006F2
+_clear_500hz                       text11       0006DC
+_controller_work                   text3        0000A6
+_crc16                             text7        0004BC
+_crc_error                         bssCOMRAM    000017
+_cstate                            bssCOMRAM    000020
+_get_2hz                           text10       000596
+_get_500hz                         text9        000556
+_init_ihcmon                       text1        0003A6
+_init_stream_params                text2        000718
+_led_blink                         text15       000446
+_main                              text0        000708
+_memcpy                            text8        0005D6
+_modbus_cc_clear                   mediumconst  001FD3
+_modbus_cc_error                   mediumconst  001FDE
+_modbus_cc_freset                  mediumconst  001FCD
+_modbus_cc_mode                    mediumconst  001FE4
+_modbus_command                    bssCOMRAM    00001F
+_modbus_rtu_send_msg               text5        000688
+_modbus_rtu_send_msg_crc           text6        000514
+_re20a_clear                       mediumconst  001FBE
+_re20a_freset                      mediumconst  001FB6
+_req_length                        bssCOMRAM    00001B
+_set_led_blink                     text4        0006BA
+_table_crc_hi                      mediumconst  001EAD
+_table_crc_lo                      mediumconst  001DAD
+_tm_handler                        intcode      000008
+btemp                              temp         000060
+controller_work@c_crc              cstackCOMRAM 000056
+controller_work@c_crc_rec          cstackCOMRAM 000058
+controller_work@mcmd               bssCOMRAM    00001E
+controller_work@temp               cstackCOMRAM 000054
+controller_work@temp_703           cstackCOMRAM 00005A
+controller_work@volts              dataCOMRAM   00005F
+crc16@buffer                       cstackCOMRAM 000040
+crc16@buffer_length                cstackCOMRAM 000041
+crc16@crc_hi                       cstackCOMRAM 000046
+crc16@crc_lo                       cstackCOMRAM 000047
+crc16@i                            cstackCOMRAM 000045
+end_of_initialization              cinit        000640
+get_2hz@mode                       cstackCOMRAM 000044
+get_2hz@tmp                        bssCOMRAM    000013
+get_500hz@mode                     cstackCOMRAM 000044
+get_500hz@tmp                      bssCOMRAM    00000F
+int$flags                          temp         000060
+intlevel0                          text         000000
+intlevel1                          text         000000
+intlevel2                          text         000000
+intlevel3                          text         000000
+memcpy@d                           cstackCOMRAM 000048
+memcpy@d1                          cstackCOMRAM 000040
+memcpy@n                           cstackCOMRAM 000043
+memcpy@s                           cstackCOMRAM 000045
+memcpy@s1                          cstackCOMRAM 000041
+memcpy@tmp                         cstackCOMRAM 000047
+modbus_rtu_send_msg@cc_buffer      cstackCOMRAM 00004D
+modbus_rtu_send_msg@modbus_cc_mode cstackCOMRAM 00004E
+modbus_rtu_send_msg@req_length     cstackCOMRAM 000050
+modbus_rtu_send_msg_crc@crc        cstackCOMRAM 00004B
+modbus_rtu_send_msg_crc@req        cstackCOMRAM 000048
+modbus_rtu_send_msg_crc@req_length cstackCOMRAM 000049
+set_led_blink@blinks               cstackCOMRAM 000040
+stackhi                            (abs)        0000FF
+stacklo                            (abs)        000080
+start                              init         0000A2
+start_initialization               cinit        000614
+tm_handler@c_error                 bssCOMRAM    00001D
+ttemp5                             temp         000061
+ttemp6                             temp         000064
+ttemp7                             temp         000068
+wtemp8                             temp         000061
+
+
+FUNCTION INFORMATION:
+
+ *************** function _main *****************
+ Defined at:
+		line 347 in file "../ibsmon.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0
+      Params:         0       0
+      Locals:         0       0
+      Temps:          0       0
+      Totals:         0       0
+Total ram usage:        0 bytes
+ Hardware stack levels required when called:    6
+ This function calls:
+		_controller_work
+		_init_ihcmon
+ This function is called by:
+		Startup code after reset
+ This function uses a non-reentrant model
+
+
+ *************** function _init_ihcmon *****************
+ Defined at:
+		line 265 in file "../ibsmon.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  tmp             2    0        unsigned short 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0
+      Params:         0       0
+      Locals:         2       0
+      Temps:          0       0
+      Totals:         2       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_SetDCPWM1
+		_init_stream_params
+		_set_led_blink
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _init_stream_params *****************
+ Defined at:
+		line 341 in file "../ibsmon.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		None
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0
+      Params:         0       0
+      Locals:         0       0
+      Temps:          0       0
+      Totals:         0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		Nothing
+ This function is called by:
+		_init_ihcmon
+ This function uses a non-reentrant model
+
+
+ *************** function _controller_work *****************
+ Defined at:
+		line 116 in file "../ibsmon.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  temp            1   36[COMRAM] unsigned char 
+  temp            2   30[COMRAM] unsigned short 
+  c_crc_rec       2   34[COMRAM] unsigned short 
+  c_crc           2   32[COMRAM] unsigned short 
+ Return value:  Size  Location     Type
+                  1    wreg      char 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0
+      Params:         0       0
+      Locals:         7       0
+      Temps:          2       0
+      Totals:         9       0
+Total ram usage:        9 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		_SetDCPWM1
+		_clear_2hz
+		_clear_500hz
+		_crc16
+		_get_2hz
+		_get_500hz
+		_modbus_rtu_send_msg
+		_set_led_blink
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _set_led_blink *****************
+ Defined at:
+		line 134 in file "../ihc_vector.c"
+ Parameters:    Size  Location     Type
+  blinks          1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  blinks          1   10[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0
+      Params:         0       0
+      Locals:         1       0
+      Temps:          0       0
+      Totals:         1       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		Nothing
+ This function is called by:
+		_controller_work
+		_init_ihcmon
+ This function uses a non-reentrant model
+
+
+ *************** function _modbus_rtu_send_msg *****************
+ Defined at:
+		line 85 in file "../crc.c"
+ Parameters:    Size  Location     Type
+  cc_buffer       1   23[COMRAM] PTR void 
+		 -> cc_buffer(20), 
+  modbus_cc_mo    2   24[COMRAM] PTR const void 
+		 -> modbus_cc_mode(6), modbus_cc_error(6), 
+  req_length      2   26[COMRAM] unsigned short 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  2   23[COMRAM] unsigned short 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0
+      Params:         5       0
+      Locals:         0       0
+      Temps:          0       0
+      Totals:         5       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		_memcpy
+		_modbus_rtu_send_msg_crc
+ This function is called by:
+		_controller_work
+ This function uses a non-reentrant model
+
+
+ *************** function _modbus_rtu_send_msg_crc *****************
+ Defined at:
+		line 71 in file "../crc.c"
+ Parameters:    Size  Location     Type
+  req             1   18[COMRAM] PTR volatile unsigned ch
+		 -> cc_buffer(20), 
+  req_length      2   19[COMRAM] unsigned short 
+ Auto vars:     Size  Location     Type
+  crc             2   21[COMRAM] unsigned short 
+ Return value:  Size  Location     Type
+                  2   18[COMRAM] unsigned short 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0
+      Params:         3       0
+      Locals:         2       0
+      Temps:          0       0
+      Totals:         5       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_crc16
+ This function is called by:
+		_modbus_rtu_send_msg
+ This function uses a non-reentrant model
+
+
+ *************** function _crc16 *****************
+ Defined at:
+		line 94 in file "../crc.c"
+ Parameters:    Size  Location     Type
+  buffer          1   10[COMRAM] PTR volatile unsigned ch
+		 -> cc_buffer(20), 
+  buffer_lengt    2   11[COMRAM] unsigned short 
+ Auto vars:     Size  Location     Type
+  crc_lo          1   17[COMRAM] unsigned char 
+  crc_hi          1   16[COMRAM] unsigned char 
+  i               1   15[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  2   10[COMRAM] unsigned short 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0
+      Params:         3       0
+      Locals:         3       0
+      Temps:          2       0
+      Totals:         8       0
+Total ram usage:        8 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		Nothing
+ This function is called by:
+		_controller_work
+		_modbus_rtu_send_msg_crc
+ This function uses a non-reentrant model
+
+
+ *************** function _memcpy *****************
+ Defined at:
+		line 4 in file "/opt/microchip/xc8/v2.30/pic/sources/c99/common/memcpy.c"
+ Parameters:    Size  Location     Type
+  d1              1   10[COMRAM] PTR void 
+		 -> cc_buffer(20), 
+  s1              2   11[COMRAM] PTR const void 
+		 -> modbus_cc_mode(6), modbus_cc_error(6), 
+  n               2   13[COMRAM] unsigned int 
+ Auto vars:     Size  Location     Type
+  s               2   15[COMRAM] PTR const unsigned char 
+		 -> modbus_cc_mode(6), modbus_cc_error(6), 
+  d               1   18[COMRAM] PTR unsigned char 
+		 -> cc_buffer(20), 
+  tmp             1   17[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      PTR void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0
+      Params:         5       0
+      Locals:         4       0
+      Temps:          0       0
+      Totals:         9       0
+Total ram usage:        9 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		Nothing
+ This function is called by:
+		_modbus_rtu_send_msg
+ This function uses a non-reentrant model
+
+
+ *************** function _get_500hz *****************
+ Defined at:
+		line 86 in file "../ihc_vector.c"
+ Parameters:    Size  Location     Type
+  mode            1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  mode            1   14[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  4   10[COMRAM] unsigned long 
+ Registers used:
+		wreg, status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0
+      Params:         4       0
+      Locals:         1       0
+      Temps:          0       0
+      Totals:         5       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		Nothing
+ This function is called by:
+		_controller_work
+ This function uses a non-reentrant model
+
+
+ *************** function _get_2hz *****************
+ Defined at:
+		line 73 in file "../ihc_vector.c"
+ Parameters:    Size  Location     Type
+  mode            1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  mode            1   14[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  4   10[COMRAM] unsigned long 
+ Registers used:
+		wreg, status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0
+      Params:         4       0
+      Locals:         1       0
+      Temps:          0       0
+      Totals:         5       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		Nothing
+ This function is called by:
+		_controller_work
+ This function uses a non-reentrant model
+
+
+ *************** function _clear_500hz *****************
+ Defined at:
+		line 66 in file "../ihc_vector.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0
+      Params:         0       0
+      Locals:         0       0
+      Temps:          0       0
+      Totals:         0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		Nothing
+ This function is called by:
+		_controller_work
+ This function uses a non-reentrant model
+
+
+ *************** function _clear_2hz *****************
+ Defined at:
+		line 59 in file "../ihc_vector.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0
+      Params:         0       0
+      Locals:         0       0
+      Temps:          0       0
+      Totals:         0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		Nothing
+ This function is called by:
+		_controller_work
+ This function uses a non-reentrant model
+
+
+ *************** function _SetDCPWM1 *****************
+ Defined at:
+		line 102 in file "../ibsmon.c"
+ Parameters:    Size  Location     Type
+  dutycycle       2   10[COMRAM] unsigned short 
+ Auto vars:     Size  Location     Type
+  DCycle          2   14[COMRAM] struct PWMDC
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0
+      Params:         2       0
+      Locals:         2       0
+      Temps:          2       0
+      Totals:         6       0
+Total ram usage:        6 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		Nothing
+ This function is called by:
+		_controller_work
+		_init_ihcmon
+ This function uses a non-reentrant model
+
+
+ *************** function _tm_handler *****************
+ Defined at:
+		line 5 in file "../ihc_vector.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  tmp             2    0        unsigned short 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0
+      Params:         0       0
+      Locals:         2       0
+      Temps:          3       0
+      Totals:         5       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_led_blink
+ This function is called by:
+		Interrupt level 2
+ This function uses a non-reentrant model
+
+
+ *************** function _led_blink *****************
+ Defined at:
+		line 103 in file "../ihc_vector.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0
+      Params:         0       0
+      Locals:         0       0
+      Temps:          5       0
+      Totals:         5       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_tm_handler
+ This function uses a non-reentrant model
+
+
+
+MODULE INFORMATION
+
+Module		Function		Class		Link	Load	Size
+../ihc_vector.c
+		_tm_handler    		CODE           	0008	0000	154
+		_led_blink     		CODE           	0446	0000	118
+		_get_500hz     		CODE           	0556	0000	64
+		_get_2hz       		CODE           	0596	0000	64
+		_clear_2hz     		CODE           	06F2	0000	22
+		_set_led_blink 		CODE           	06BA	0000	34
+		_clear_500hz   		CODE           	06DC	0000	22
+
+../ihc_vector.c estimated size: 478
+
+../ibsmon.c
+		_init_ihcmon   		CODE           	03A6	0000	160
+		_main          		CODE           	0708	0000	10
+		_init_stream_params		CODE           	0718	0000	4
+		_SetDCPWM1     		CODE           	064E	0000	58
+		_controller_work		CODE           	00A6	0000	768
+
+../ibsmon.c estimated size: 1000
+
+shared
+		_re20a_mode    		MEDIUMCONST    	0000	0000	0
+		_table_crc_hi  		MEDIUMCONST    	1EAD	0000	256
+		_table_crc_lo  		MEDIUMCONST    	1DAD	0000	256
+		_re20a_clear   		MEDIUMCONST    	1FBE	0000	8
+		_re20a_freset  		MEDIUMCONST    	1FB6	0000	8
+		__initialization		CODE           	0614	0000	44
+		_modbus_cc_freset		MEDIUMCONST    	1FCD	0000	6
+		_re20a_error   		MEDIUMCONST    	0000	0000	0
+		_build_version 		MEDIUMCONST    	1FD9	0000	5
+		_modbus_cc_mode		MEDIUMCONST    	1FE4	0000	6
+		_modbus_cc_clear		MEDIUMCONST    	1FD3	0000	6
+		_modbus_cc_error		MEDIUMCONST    	1FDE	0000	6
+
+shared estimated size: 601
+
+/opt/microchip/xc8/v2.30/pic/sources/c99/common/memcpy.c
+		_memcpy        		CODE           	05D6	0000	62
+
+/opt/microchip/xc8/v2.30/pic/sources/c99/common/memcpy.c estimated size: 62
+
+../crc.c
+		_modbus_rtu_send_msg_crc		CODE           	0514	0000	66
+		_crc16         		CODE           	04BC	0000	88
+		_modbus_rtu_send_msg		CODE           	0688	0000	50
+
+../crc.c estimated size: 204
+
