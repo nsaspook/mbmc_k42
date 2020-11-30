@@ -2,7 +2,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F17953 `(v ~T0 @X0 0 tf ]
 [v F17955 `(v ~T0 @X0 0 tf ]
 [v F17998 `(v ~T0 @X0 0 tf ]
-"46 bsoc.c
+"47 bsoc.c
 [c E17361 0 1 2 3 4 5 .. ]
 [n E17361 . UI_STATE_INIT UI_STATE_HOST UI_STATE_DEBUG UI_STATE_LOG UI_STATE_MON UI_STATE_ERROR  ]
 [c E17342 0 1 2 3 .. ]
@@ -47,14 +47,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _build_time `*Cuc ~T0 @X0 0 e ]
 "32 ./timers.h
 [v _StartTimer `(v ~T0 @X0 0 ef2`Cuc`Cus ]
-"198 bsoc.c
+"200 bsoc.c
 [c E17486 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 .. ]
 [n E17486 APP_TIMERS TMR_INTERNAL TMR_ADC TMR_T2 TMR_T3 TMR_T4 TMR_MC_TX TMR_HBIO TMR_INFO TMR_HELP TMR_HELPDIS TMR_DISPLAY TMR_FLIPPER TMR_ESR TMR_TEXT TMR_COUNT  ]
 "43 ./eadog.h
 [v _send_port_data_dma `(v ~T0 @X0 0 ef1`us ]
 "54 /opt/microchip/xc8/v2.31/pic/include/c99/string.h
 [v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
-"203 bsoc.c
+"205 bsoc.c
 [c E17708 0 1 2 3 4 .. ]
 [n E17708 . HID_MAIN HID_PWR HID_RUN HID_AUX HID_LAST  ]
 [c E17715 0 1 2 3 4 5 .. ]
@@ -68,7 +68,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _get_ac_charger_relay `(a ~T0 @X0 0 ef ]
 "106 ./bsoc.h
 [v _Volts_to_SOC `(us ~T0 @X0 0 ef1`ul ]
-"232 bsoc.c
+"234 bsoc.c
 [c E17529 0 1 .. ]
 [n E17529 . CONV O_CONV  ]
 "147 ./daq.h
@@ -84,7 +84,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S171 . . ]
 "3884
 [v _PIE6bits `VS171 ~T0 @X0 0 e@14742 ]
-"257 bsoc.c
+"259 bsoc.c
 [c E18023 0 1 2 3 .. ]
 [n E18023 . R_CYCLE R_TOTAL R_PV R_BAT  ]
 [v F16450 `(f ~T0 @X0 1 tf2`f`f ]
@@ -1949,28 +1949,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i F18070
 -> -> 0 `i `a
 ]
-"44
+"43
+[v _ret `a ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `a ]
+"45
 [e $ ! != -> _kill `i -> 0 `i 2251  ]
 {
-"45
-[e = F18069 -> -> 0 `i `us ]
 "46
-[e = . _V 25 -> -> 0 `i `us ]
+[e = F18069 -> -> 0 `i `us ]
 "47
-[e = F18070 -> -> 0 `i `a ]
+[e = . _V 25 -> -> 0 `i `us ]
 "48
-[e ( _diversion_pwm_set (1 . _V 25 ]
+[e = F18070 -> -> 0 `i `a ]
 "49
-[e ) -> -> 0 `i `a ]
-[e $UE 2250  ]
+[e ( _diversion_pwm_set (1 . _V 25 ]
 "50
+[e = _ret -> -> 0 `i `a ]
+"51
 }
+[e $U 2252  ]
 [e :U 2251 ]
+{
 "52
-[e $ ! && || == -> ( _cc_state (1 . _C 13 `i -> . `E18029 5 `i == -> ( _cc_state (1 . _C 13 `i -> . `E18029 4 `i > -> *U + &U . _C 0 * -> . `E17067 4 `ux -> -> # *U &U . _C 0 `ui `ux `d .40.0 2252  ]
+[e $ ! && || == -> ( _cc_state (1 . _C 13 `i -> . `E18029 5 `i == -> ( _cc_state (1 . _C 13 `i -> . `E18029 4 `i > -> *U + &U . _C 0 * -> . `E17067 4 `ux -> -> # *U &U . _C 0 `ui `ux `d .40.0 2253  ]
 {
 "53
-[e $ ! ! != -> F18070 `i -> 0 `i 2253  ]
+[e $ ! ! != -> F18070 `i -> 0 `i 2254  ]
 {
 "54
 [e = F18070 -> -> 1 `i `a ]
@@ -1978,46 +1982,45 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . _C 21 . _C 18 ]
 "59
 }
-[e :U 2253 ]
+[e :U 2254 ]
 "60
-[e $ ! < -> . _C 18 `d .250.0 2254  ]
+[e $ ! < -> . _C 18 `d .250.0 2255  ]
 {
 "61
-[e $ ! > -> =+ F18069 -> -> 1 `i `us `ui -> -> 300 `i `ui 2255  ]
+[e $ ! > -> =+ F18069 -> -> 1 `i `us `ui -> -> 300 `i `ui 2256  ]
 "62
 [e = F18069 -> -> 300 `i `us ]
-[e :U 2255 ]
+[e :U 2256 ]
 "63
 }
-[e :U 2254 ]
+[e :U 2255 ]
 "65
-[e $ ! > -> . _C 18 `d .250.0 2256  ]
+[e $ ! > -> . _C 18 `d .250.0 2257  ]
 {
 "66
-[e $ ! != -> . _V 25 `ui -> -> 0 `i `ui 2257  ]
+[e $ ! != -> . _V 25 `ui -> -> 0 `i `ui 2258  ]
 "67
 [e -- . _V 25 -> -> 1 `i `us ]
-[e :U 2257 ]
+[e :U 2258 ]
 "68
 }
-[e :U 2256 ]
+[e :U 2257 ]
 "70
 [e = . _V 25 F18069 ]
 "71
 [e ( _diversion_pwm_set (1 . _V 25 ]
 "72
-[e ) -> -> 1 `i `a ]
-[e $UE 2250  ]
+[e = _ret -> -> 1 `i `a ]
 "73
 }
-[e $U 2258  ]
-[e :U 2252 ]
+[e $U 2259  ]
+[e :U 2253 ]
 {
 "74
-[e $ ! != -> . _V 25 `ui -> -> 0 `i `ui 2259  ]
+[e $ ! != -> . _V 25 `ui -> -> 0 `i `ui 2260  ]
 "75
 [e -- . _V 25 -> -> 1 `i `us ]
-[e :U 2259 ]
+[e :U 2260 ]
 "77
 [e ( _diversion_pwm_set (1 . _V 25 ]
 "78
@@ -2025,340 +2028,348 @@ Version 4.0 HI-TECH Software Intermediate Code
 "79
 [e = F18070 -> -> 0 `i `a ]
 "80
-[e ) -> -> 0 `i `a ]
-[e $UE 2250  ]
+[e = _ret -> -> 0 `i `a ]
 "81
 }
-[e :U 2258 ]
+[e :U 2259 ]
 "82
+}
+[e :U 2252 ]
+"83
+[e ) _ret ]
+[e $UE 2250  ]
+"84
 [e :UE 2250 ]
 }
-"87
+"89
 [v _calc_bsoc `(v ~T0 @X0 1 ef ]
-"88
+"90
 {
 [e :U _calc_bsoc ]
 [f ]
-"89
+"91
 [v _log_ptr `*uc ~T0 @X0 1 a ]
 [v _lcode `uc ~T0 @X0 1 a ]
 [e = _lcode -> -> 53 `ui `uc ]
-"90
+"92
 [v _t_time `ul ~T0 @X0 1 a ]
-"91
-[v F18075 `uc ~T0 @X0 1 s log_update_wait ]
-[i F18075
+"93
+[v F18076 `uc ~T0 @X0 1 s log_update_wait ]
+[i F18076
 -> -> 0 `i `uc
 ]
-"92
+"94
 [v _adj `f ~T0 @X0 1 a ]
 [e = _adj -> .1.0 `f ]
-"97
+"99
 [e ++ . _V 47 -> -> 1 `i `Vul ]
-"101
+"103
 [e ( _pv_diversion (1 -> -> 0 `i `a ]
-"105
-[e $ ! == -> ( _cc_state (1 . _C 13 `i -> . `E18029 5 `i 2261  ]
-{
-"106
-[e $ ! && ! != -> . _V 45 `i -> 0 `i > -> =+ . _V 18 -> -> 1 `i `uc `i -> 60 `i 2262  ]
 "107
-[e $ ! ! != -> . _V 45 `i -> 0 `i 2263  ]
+[e $ ! == -> ( _cc_state (1 . _C 13 `i -> . `E18029 5 `i 2262  ]
 {
 "108
-[e = . _V 45 -> -> 1 `i `a ]
+[e $ ! && ! != -> . _V 45 `i -> 0 `i > -> =+ . _V 18 -> -> 1 `i `uc `i -> 60 `i 2263  ]
 "109
-[e $ ! < -> . _C 37 `ui -> -> 95 `i `ui 2264  ]
-"110
-[e = . _C 25 * . _C 24 -> .0.95 `f ]
-[e :U 2264 ]
-"111
-}
-[e :U 2263 ]
-[e :U 2262 ]
-"112
-}
-[e $U 2265  ]
-[e :U 2261 ]
+[e $ ! ! != -> . _V 45 `i -> 0 `i 2264  ]
 {
+"110
+[e = . _V 45 -> -> 1 `i `a ]
+"111
+[e $ ! < -> . _C 37 `ui -> -> 95 `i `ui 2265  ]
+"112
+[e = . _C 25 * . _C 24 -> .0.95 `f ]
+[e :U 2265 ]
 "113
-[e = . _V 18 -> -> 0 `i `uc ]
+}
+[e :U 2264 ]
+[e :U 2263 ]
 "114
 }
-[e :U 2265 ]
-"116
-[e $ ! == -> ( _cc_state (1 . _C 13 `i -> . `E18029 4 `i 2266  ]
+[e $U 2266  ]
+[e :U 2262 ]
 {
-"117
-[e $ ! && ! != -> . _V 46 `i -> 0 `i > -> =+ . _V 19 -> -> 1 `i `uc `i -> 60 `i 2267  ]
+"115
+[e = . _V 18 -> -> 0 `i `uc ]
+"116
+}
+[e :U 2266 ]
 "118
-[e $ ! ! != -> . _V 46 `i -> 0 `i 2268  ]
+[e $ ! == -> ( _cc_state (1 . _C 13 `i -> . `E18029 4 `i 2267  ]
 {
 "119
-[e = . _V 46 -> -> 1 `i `a ]
+[e $ ! && ! != -> . _V 46 `i -> 0 `i > -> =+ . _V 19 -> -> 1 `i `uc `i -> 60 `i 2268  ]
 "120
-[e $ ! < -> . _C 37 `ui -> -> 80 `i `ui 2269  ]
-"121
-[e = . _C 25 * . _C 24 -> .0.80 `f ]
-[e :U 2269 ]
-"122
-}
-[e :U 2268 ]
-[e :U 2267 ]
-"123
-}
-[e $U 2270  ]
-[e :U 2266 ]
+[e $ ! ! != -> . _V 46 `i -> 0 `i 2269  ]
 {
+"121
+[e = . _V 46 -> -> 1 `i `a ]
+"122
+[e $ ! < -> . _C 37 `ui -> -> 80 `i `ui 2270  ]
+"123
+[e = . _C 25 * . _C 24 -> .0.80 `f ]
+[e :U 2270 ]
 "124
-[e = . _V 19 -> -> 0 `i `uc ]
+}
+[e :U 2269 ]
+[e :U 2268 ]
 "125
 }
-[e :U 2270 ]
-"130
-[e =+ . _C 25 -> / -> . _C 2 `d .3600.0 `Vf ]
-"131
-[e =+ . _C 29 -> / -> . _C 2 `d .3600.0 `Vf ]
-"132
-[e $ ! > . _C 25 . _C 24 2271  ]
-"133
-[e = . _C 25 . _C 24 ]
+[e $U 2271  ]
+[e :U 2267 ]
+{
+"126
+[e = . _V 19 -> -> 0 `i `uc ]
+"127
+}
 [e :U 2271 ]
+"132
+[e =+ . _C 25 -> / -> . _C 2 `d .3600.0 `Vf ]
+"133
+[e =+ . _C 29 -> / -> . _C 2 `d .3600.0 `Vf ]
 "134
-[e $ ! < -> . _C 25 `d .0.1 2272  ]
+[e $ ! > . _C 25 . _C 24 2272  ]
 "135
-[e = . _C 25 -> .0.1 `f ]
+[e = . _C 25 . _C 24 ]
 [e :U 2272 ]
+"136
+[e $ ! < -> . _C 25 `d .0.1 2273  ]
 "137
-[e $ ! > -> . _C 2 `d .0.01 2273  ]
-"138
-[e = _adj . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 6 ]
+[e = . _C 25 -> .0.1 `f ]
 [e :U 2273 ]
 "139
-[e $ ! < -> . _C 2 `d .0.01 2274  ]
+[e $ ! > -> . _C 2 `d .0.01 2274  ]
 "140
-[e = _adj . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 5 ]
+[e = _adj . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 6 ]
 [e :U 2274 ]
 "141
-[e =+ . _C 25 -> / -> * . _C 2 _adj `d .3600.0 `Vf ]
-"143
-[e = . _C 28 . _C 25 ]
-"144
-[e = . _C 30 . _C 29 ]
-"145
-[e $ ! > . _C 28 . _C 24 2275  ]
-"146
-[e = . _C 28 . _C 24 ]
+[e $ ! < -> . _C 2 `d .0.01 2275  ]
+"142
+[e = _adj . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 5 ]
 [e :U 2275 ]
+"143
+[e =+ . _C 25 -> / -> * . _C 2 _adj `d .3600.0 `Vf ]
+"145
+[e = . _C 28 . _C 25 ]
+"146
+[e = . _C 30 . _C 29 ]
 "147
-[e $ ! < -> . _C 28 `d .0.1 2276  ]
+[e $ ! > . _C 28 . _C 24 2276  ]
 "148
-[e = . _C 28 -> .0.1 `f ]
+[e = . _C 28 . _C 24 ]
 [e :U 2276 ]
-"151
-[e =+ . _C 26 -> / -> . _C 3 `d .3600.0 `Vf ]
-"152
-[e =+ . _C 33 -> / -> . _C 18 `d .3600.0 `Vf ]
-"153
-[e =+ . _C 34 -> / -> . _C 17 `d .3600.0 `Vf ]
-"154
-[e =+ . _C 35 -> / -> . _C 16 `d .3600.0 `Vf ]
-"155
-[e $ ! > -> . _C 19 `d .0.0 2277  ]
-"156
-[e =+ . _C 31 -> / -> . _C 19 `d .3600.0 `Vf ]
+"149
+[e $ ! < -> . _C 28 `d .0.1 2277  ]
+"150
+[e = . _C 28 -> .0.1 `f ]
 [e :U 2277 ]
+"153
+[e =+ . _C 26 -> / -> . _C 3 `d .3600.0 `Vf ]
+"154
+[e =+ . _C 33 -> / -> . _C 18 `d .3600.0 `Vf ]
+"155
+[e =+ . _C 34 -> / -> . _C 17 `d .3600.0 `Vf ]
+"156
+[e =+ . _C 35 -> / -> . _C 16 `d .3600.0 `Vf ]
 "157
-[e $ ! < -> . _C 19 `d .0.0 2278  ]
+[e $ ! > -> . _C 19 `d .0.0 2278  ]
 "158
-[e =+ . _C 32 -> ( _fabsf (1 -> / -> . _C 19 `d .3600.0 `f `Vf ]
+[e =+ . _C 31 -> / -> . _C 19 `d .3600.0 `Vf ]
 [e :U 2278 ]
+"159
+[e $ ! < -> . _C 19 `d .0.0 2279  ]
 "160
-[e = . _C 37 -> + -> -> * -> / . _C 28 . _C 24 `d .100.0 `us `ui -> -> 1 `i `ui `us ]
-"161
-[e $ ! > -> . _C 37 `ui -> -> 100 `i `ui 2279  ]
-"162
-[e = . _C 37 -> -> 100 `i `us ]
+[e =+ . _C 32 -> ( _fabsf (1 -> / -> . _C 19 `d .3600.0 `f `Vf ]
 [e :U 2279 ]
+"162
+[e = . _C 37 -> + -> -> * -> / . _C 28 . _C 24 `d .100.0 `us `ui -> -> 1 `i `ui `us ]
+"163
+[e $ ! > -> . _C 37 `ui -> -> 100 `i `ui 2280  ]
 "164
-[e $ ! < -> . _C 2 `d .0.0 2280  ]
-{
-"165
-[e = . _C 36 -> -U / . _C 28 . _C 2 `us ]
-"166
-}
-[e $U 2281  ]
+[e = . _C 37 -> -> 100 `i `us ]
 [e :U 2280 ]
+"166
+[e $ ! < -> . _C 2 `d .0.0 2281  ]
 {
 "167
-[e = . _C 36 -> -> 99 `i `us ]
+[e = . _C 36 -> -U / . _C 28 . _C 2 `us ]
 "168
 }
+[e $U 2282  ]
 [e :U 2281 ]
+{
 "169
-[e $ ! > -> . _C 36 `ui -> -> 99 `i `ui 2282  ]
-"170
 [e = . _C 36 -> -> 99 `i `us ]
+"170
+}
 [e :U 2282 ]
-"175
-[e $ ! != -> . _V 11 `i -> 0 `i 2283  ]
-{
-"176
-[e = . _V 11 -> -> 0 `i `uc ]
+"171
+[e $ ! > -> . _C 36 `ui -> -> 99 `i `ui 2283  ]
+"172
+[e = . _C 36 -> -> 99 `i `us ]
+[e :U 2283 ]
 "177
-[e = _t_time -> ( _atol (1 -> &U . _V 3 `*Cuc `ul ]
-"178
-[e $ ! > _t_time -> -> 1586643451 `l `ul 2284  ]
+[e $ ! != -> . _V 11 `i -> 0 `i 2284  ]
 {
+"178
+[e = . _V 11 -> -> 0 `i `uc ]
 "179
-[e ( _set_time (1 -> _t_time `o ]
+[e = _t_time -> ( _atol (1 -> &U . _V 3 `*Cuc `ul ]
 "180
+[e $ ! > _t_time -> -> 1586643451 `l `ul 2285  ]
+{
+"181
+[e ( _set_time (1 -> _t_time `o ]
+"182
+}
+[e :U 2285 ]
+"183
 }
 [e :U 2284 ]
-"181
-}
-[e :U 2283 ]
-"186
-[e $ ! != -> . _V 8 `i -> 0 `i 2285  ]
-{
-"187
-[e = . _V 8 -> -> 0 `i `uc ]
 "188
-[e = _log_ptr ( _port_data_dma_ptr ..  ]
+[e $ ! != -> . _V 8 `i -> 0 `i 2286  ]
+{
 "189
-[e = _lcode -> -> 42 `ui `uc ]
+[e = . _V 8 -> -> 0 `i `uc ]
 "190
-[e ( _sprintf (1 , , , , , , , , , , , , , , , , , , , , , , , , , , , , , (. , -> _log_ptr `*uc :s 1C -> _lcode `i -> _lcode `i :s 2C _build_date _build_time -> _lcode `i &U _infoline1 -> _lcode `i . _V 47 . _V 48 . _V 49 . _V 50 . _V 51 . _V 52 . _V 53 -> _lcode `i &U _infoline2 -> _lcode `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 0 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 9 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 10 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 3 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 4 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 5 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 6 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 11 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 1 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 3 -> _lcode `i ]
-"198
-[e ( _StartTimer (2 , -> . `E17486 10 `uc -> -> 125 `i `us ]
-"199
-[e ( _send_port_data_dma (1 -> ( _strlen (1 -> -> _log_ptr `*uc `*Cuc `us ]
-"200
-}
-[e $U 2286  ]
-[e :U 2285 ]
-{
-"201
-[e $ ! && && ! != -> ++ F18075 -> -> 1 `i `uc `i -> 0 `i != -> . _V 43 `i -> 0 `i ! != -> . _V 12 `i -> 0 `i 2287  ]
-{
-"202
 [e = _log_ptr ( _port_data_dma_ptr ..  ]
-"203
-[e $ ! == -> . _H 8 `i -> . `E17708 3 `i 2288  ]
-"204
+"191
 [e = _lcode -> -> 42 `ui `uc ]
-[e :U 2288 ]
-"206
-[e ( _sprintf (1 , , , , , , , , , , , , , , , , , , , , , , , , , , , , , (. , -> _log_ptr `*uc :s 3C -> _lcode `i . _V 4 -> . _C 6 `d -> . _C 5 `d -> . _C 7 `d -> . _C 11 `d -> . _C 4 `d -> . _C 3 `d -> . _C 2 `d -> . _C 20 `d -> . _C 18 `d -> . _C 19 `d -> . _C 16 `d -> . _C 17 `d -> . _C 25 `d -> . _C 29 `d -> . _C 26 `d -> . _C 37 `ui -> . _C 36 `ui -> . _C 23 `d -> . _C 12 `d -> ( _get_ac_charger_relay ..  `i -> . _C 45 `i . _C 47 . _C 48 -> . _C 28 `d -> . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 6 `d -> . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 5 `d -> . _V 36 `i ]
-"214
+"192
+[e ( _sprintf (1 , , , , , , , , , , , , , , , , , , , , , , , , , , , , , (. , -> _log_ptr `*uc :s 1C -> _lcode `i -> _lcode `i :s 2C _build_date _build_time -> _lcode `i &U _infoline1 -> _lcode `i . _V 47 . _V 48 . _V 49 . _V 50 . _V 51 . _V 52 . _V 53 -> _lcode `i &U _infoline2 -> _lcode `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 0 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 9 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 10 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 3 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 4 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 5 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 6 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 11 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 1 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 3 -> _lcode `i ]
+"200
 [e ( _StartTimer (2 , -> . `E17486 10 `uc -> -> 125 `i `us ]
-"215
+"201
 [e ( _send_port_data_dma (1 -> ( _strlen (1 -> -> _log_ptr `*uc `*Cuc `us ]
+"202
+}
+[e $U 2287  ]
+[e :U 2286 ]
+{
+"203
+[e $ ! && && ! != -> ++ F18076 -> -> 1 `i `uc `i -> 0 `i != -> . _V 43 `i -> 0 `i ! != -> . _V 12 `i -> 0 `i 2288  ]
+{
+"204
+[e = _log_ptr ( _port_data_dma_ptr ..  ]
+"205
+[e $ ! == -> . _H 8 `i -> . `E17708 3 `i 2289  ]
+"206
+[e = _lcode -> -> 42 `ui `uc ]
+[e :U 2289 ]
+"208
+[e ( _sprintf (1 , , , , , , , , , , , , , , , , , , , , , , , , , , , , , (. , -> _log_ptr `*uc :s 3C -> _lcode `i . _V 4 -> . _C 6 `d -> . _C 5 `d -> . _C 7 `d -> . _C 11 `d -> . _C 4 `d -> . _C 3 `d -> . _C 2 `d -> . _C 20 `d -> . _C 18 `d -> . _C 19 `d -> . _C 16 `d -> . _C 17 `d -> . _C 25 `d -> . _C 29 `d -> . _C 26 `d -> . _C 37 `ui -> . _C 36 `ui -> . _C 23 `d -> . _C 12 `d -> ( _get_ac_charger_relay ..  `i -> . _C 45 `i . _C 47 . _C 48 -> . _C 28 `d -> . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 6 `d -> . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 5 `d -> . _V 36 `i ]
 "216
+[e ( _StartTimer (2 , -> . `E17486 10 `uc -> -> 125 `i `us ]
+"217
+[e ( _send_port_data_dma (1 -> ( _strlen (1 -> -> _log_ptr `*uc `*Cuc `us ]
+"218
+}
+[e :U 2288 ]
+"219
+[e $ ! >= -> F18076 `i -> 10 `i 2290  ]
+"220
+[e = F18076 -> -> 0 `i `uc ]
+[e :U 2290 ]
+"221
 }
 [e :U 2287 ]
-"217
-[e $ ! >= -> F18075 `i -> 10 `i 2289  ]
-"218
-[e = F18075 -> -> 0 `i `uc ]
-[e :U 2289 ]
-"219
-}
-[e :U 2286 ]
-"221
+"223
 [e = . _C 38 -> -> 0 `i `a ]
-"225
-[e :UE 2260 ]
-}
 "227
+[e :UE 2261 ]
+}
+"229
 [v _init_bsoc `(v ~T0 @X0 1 ef ]
-"228
+"230
 {
 [e :U _init_bsoc ]
 [f ]
-"232
-[e = . _C 37 ( _Volts_to_SOC (1 -> * ( _conv_raw_result (2 , . `E17067 3 . `E17529 0 -> .1000.0 `f `ul ]
-"233
-[e = . _C 25 * . _C 24 / -> -> ( _Volts_to_SOC (1 -> * ( _conv_raw_result (2 , . `E17067 3 . `E17529 0 -> .1000.0 `f `ul `ui `f -> .100.0 `f ]
 "234
-[e $ ! != -> . _V 42 `i -> 0 `i 2291  ]
-{
+[e = . _C 37 ( _Volts_to_SOC (1 -> * ( _conv_raw_result (2 , . `E17067 3 . `E17529 0 -> .1000.0 `f `ul ]
 "235
-[e =+ . _C 25 -> -> .10.0 `f `Vf ]
+[e = . _C 25 * . _C 24 / -> -> ( _Volts_to_SOC (1 -> * ( _conv_raw_result (2 , . `E17067 3 . `E17529 0 -> .1000.0 `f `ul `ui `f -> .100.0 `f ]
 "236
-[e =+ . _C 37 -> -> 10 `i `Vus ]
+[e $ ! != -> . _V 42 `i -> 0 `i 2292  ]
+{
 "237
-}
-[e :U 2291 ]
+[e =+ . _C 25 -> -> .10.0 `f `Vf ]
 "238
-[e = . _C 28 . _C 25 ]
+[e =+ . _C 37 -> -> 10 `i `Vus ]
 "239
-[e ( _TMR3_SetInterruptHandler (1 &U _calc_bsoc ]
-"240
-[e :UE 2290 ]
 }
+[e :U 2292 ]
+"240
+[e = . _C 28 . _C 25 ]
+"241
+[e ( _TMR3_SetInterruptHandler (1 &U _calc_bsoc ]
 "242
+[e :UE 2291 ]
+}
+"244
 [v _start_bsoc `(v ~T0 @X0 1 ef ]
-"243
+"245
 {
 [e :U _start_bsoc ]
 [f ]
-"245
+"247
 [e = . . _PIE6bits 0 6 -> -> 1 `i `uc ]
-"249
-[e :UE 2292 ]
-}
 "251
+[e :UE 2293 ]
+}
+"253
 [v _stop_bsoc `(v ~T0 @X0 1 ef ]
-"252
+"254
 {
 [e :U _stop_bsoc ]
 [f ]
-"254
+"256
 [e = . . _PIE6bits 0 6 -> -> 0 `i `uc ]
-"255
-[e :UE 2293 ]
-}
 "257
-[v _reset_bsoc `(v ~T0 @X0 1 ef1`E18023 ]
-"258
-{
-[e :U _reset_bsoc ]
-"257
-[v _rmode `CE18023 ~T0 @X0 1 r1 ]
-"258
-[f ]
-"259
-[e $U 2296  ]
-{
-"260
-[e :U 2297 ]
-"261
-[e = . _C 26 -> .0.0 `f ]
-"262
-[e $U 2295  ]
-"263
-}
-[e $U 2295  ]
-[e :U 2296 ]
-[e [\ -> _rmode `ui 2297 ]
-[e :U 2295 ]
-"264
 [e :UE 2294 ]
 }
+"259
+[v _reset_bsoc `(v ~T0 @X0 1 ef1`E18023 ]
+"260
+{
+[e :U _reset_bsoc ]
+"259
+[v _rmode `CE18023 ~T0 @X0 1 r1 ]
+"260
+[f ]
+"261
+[e $U 2297  ]
+{
+"262
+[e :U 2298 ]
+"263
+[e :U 2299 ]
+"264
+[e = . _C 26 -> .0.0 `f ]
+"265
+[e $U 2296  ]
+"266
+}
+[e $U 2296  ]
+[e :U 2297 ]
+[e [\ -> _rmode `ui , $ -> . `E18023 0 `ui 2298
+ 2299 ]
+[e :U 2296 ]
 "267
+[e :UE 2295 ]
+}
+"270
 [v _peukert `(ul ~T0 @X0 1 ef4`us`f`f`s ]
-"268
+"271
 {
 [e :U _peukert ]
-"267
+"270
 [v _brate `us ~T0 @X0 1 r1 ]
 [v _bcurrent `f ~T0 @X0 1 r2 ]
 [v _peukert `f ~T0 @X0 1 r3 ]
 [v _bsoc `s ~T0 @X0 1 r4 ]
-"268
+"271
 [f ]
-"269
+"272
 [v _t1 `f ~T0 @X0 1 a ]
 [v _t2 `f ~T0 @X0 1 a ]
 [v _t3 `f ~T0 @X0 1 a ]
@@ -2367,314 +2378,317 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _t6 `f ~T0 @X0 1 a ]
 [v _t7 `f ~T0 @X0 1 a ]
 [v _t_time `f ~T0 @X0 1 a ]
-"271
-[e = _t1 _bcurrent ]
-"272
-[e =/ _t1 .10.0 ]
-"273
-[e $ ! < -> _t1 `d .1.0 2299  ]
-[e = _t1 -> .1.0 `f ]
-[e :U 2299 ]
 "274
-[e = _t2 -> _brate `f ]
+[e = _t1 _bcurrent ]
 "275
-[e = _t3 -> / -> -> _bsoc `f `d .100.0 `f ]
+[e =/ _t1 .10.0 ]
 "276
-[e $ ! > -> _t3 `d .0.0 2300  ]
-[e = _t2 * _t2 _t3 ]
-[e :U 2300 ]
-"277
-[e $ ! < -> _t2 `d .1.0 2301  ]
-[e = _t2 -> .1.0 `f ]
+[e $ ! < -> _t1 `d .1.0 2301  ]
+[e = _t1 -> .1.0 `f ]
 [e :U 2301 ]
+"277
+[e = _t2 -> _brate `f ]
 "278
-[e = _t4 * _t2 ( _powf (2 , / _t2 -> .20.0 `f - _peukert -> .1.0 `f ]
+[e = _t3 -> / -> -> _bsoc `f `d .100.0 `f ]
 "279
-[e = _t_time ( _powf (2 , / _t2 -> .20.0 `f _peukert ]
-"280
-[e = _t5 ( _powf (2 , _t1 _peukert ]
-"281
-[e = _t6 / _t4 _t5 ]
-"282
-[e $ ! > -> _t6 `d .95.0 2302  ]
-[e = _t6 -> .95.0 `f ]
+[e $ ! > -> _t3 `d .0.0 2302  ]
+[e = _t2 * _t2 _t3 ]
 [e :U 2302 ]
-"283
-[e $ ! < -> _t6 `d .0.05 2303  ]
-[e = _t6 -> .0.05 `f ]
+"280
+[e $ ! < -> _t2 `d .1.0 2303  ]
+[e = _t2 -> .1.0 `f ]
 [e :U 2303 ]
+"281
+[e = _t4 * _t2 ( _powf (2 , / _t2 -> .20.0 `f - _peukert -> .1.0 `f ]
+"282
+[e = _t_time ( _powf (2 , / _t2 -> .20.0 `f _peukert ]
+"283
+[e = _t5 ( _powf (2 , _t1 _peukert ]
 "284
-[e = _t7 / _t4 _t_time ]
-"286
-[e = . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 7 / _t7 _t6 ]
-"287
-[e $ ! < -> . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 7 `d .1.10 2304  ]
-"288
-[e = . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 7 -> .1.10 `f ]
+[e = _t6 / _t4 _t5 ]
+"285
+[e $ ! > -> _t6 `d .95.0 2304  ]
+[e = _t6 -> .95.0 `f ]
 [e :U 2304 ]
-"289
-[e $ ! > -> . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 7 `d .5.00 2305  ]
-"290
-[e = . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 7 -> .5.00 `f ]
+"286
+[e $ ! < -> _t6 `d .0.05 2305  ]
+[e = _t6 -> .0.05 `f ]
 [e :U 2305 ]
+"287
+[e = _t7 / _t4 _t_time ]
+"289
+[e = . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 7 / _t7 _t6 ]
+"290
+[e $ ! < -> . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 7 `d .1.10 2306  ]
+"291
+[e = . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 7 -> .1.10 `f ]
+[e :U 2306 ]
 "292
-[e = _t6 * _t6 -> .3600.0 `f ]
+[e $ ! > -> . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 7 `d .5.00 2307  ]
 "293
+[e = . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 7 -> .5.00 `f ]
+[e :U 2307 ]
+"295
+[e = _t6 * _t6 -> .3600.0 `f ]
+"296
 [e ) -> _t6 `ul ]
-[e $UE 2298  ]
-"294
-[e :UE 2298 ]
+[e $UE 2300  ]
+"297
+[e :UE 2300 ]
 }
-"299
+"302
 [v _Volts_to_SOC `(us ~T0 @X0 1 ef1`ul ]
-"300
+"303
 {
 [e :U _Volts_to_SOC ]
-"299
-[v _cvoltage `Cul ~T0 @X0 1 r1 ]
-"300
-[f ]
-"301
-[v _slot `uc ~T0 @X0 1 a ]
 "302
+[v _cvoltage `Cul ~T0 @X0 1 r1 ]
+"303
+[f ]
+"304
+[v _slot `uc ~T0 @X0 1 a ]
+"305
 [v _soc `us ~T0 @X0 1 a ]
 [e = _soc -> -> 0 `i `us ]
-"307
+"310
 {
 [e = _slot -> -> 0 `i `uc ]
-[e $ < -> _slot `i -> 26 `i 2307  ]
-[e $U 2308  ]
-[e :U 2307 ]
+[e $ < -> _slot `i -> 26 `i 2309  ]
+[e $U 2310  ]
+[e :U 2309 ]
 {
-"308
-[e $ ! > _cvoltage *U + &U *U + &U _BVSOC_TABLE * -> _slot `ux -> * -> # *U &U *U &U _BVSOC_TABLE `ui -> -> 2 `i `ui `ux * -> -> -> 0 `i `ui `ux -> -> # *U &U *U + &U _BVSOC_TABLE * -> _slot `ux -> * -> # *U &U *U &U _BVSOC_TABLE `ui -> -> 2 `i `ui `ux `ui `ux 2310  ]
-{
-"309
-[e = _soc -> *U + &U *U + &U _BVSOC_TABLE * -> _slot `ux -> * -> # *U &U *U &U _BVSOC_TABLE `ui -> -> 2 `i `ui `ux * -> -> -> 1 `i `ui `ux -> -> # *U &U *U + &U _BVSOC_TABLE * -> _slot `ux -> * -> # *U &U *U &U _BVSOC_TABLE `ui -> -> 2 `i `ui `ux `ui `ux `us ]
-"310
-}
-[e :U 2310 ]
 "311
-}
-[e ++ _slot -> -> 1 `i `uc ]
-[e $ < -> _slot `i -> 26 `i 2307  ]
-[e :U 2308 ]
-}
+[e $ ! > _cvoltage *U + &U *U + &U _BVSOC_TABLE * -> _slot `ux -> * -> # *U &U *U &U _BVSOC_TABLE `ui -> -> 2 `i `ui `ux * -> -> -> 0 `i `ui `ux -> -> # *U &U *U + &U _BVSOC_TABLE * -> _slot `ux -> * -> # *U &U *U &U _BVSOC_TABLE `ui -> -> 2 `i `ui `ux `ui `ux 2312  ]
+{
 "312
-[e ) _soc ]
-[e $UE 2306  ]
+[e = _soc -> *U + &U *U + &U _BVSOC_TABLE * -> _slot `ux -> * -> # *U &U *U &U _BVSOC_TABLE `ui -> -> 2 `i `ui `ux * -> -> -> 1 `i `ui `ux -> -> # *U &U *U + &U _BVSOC_TABLE * -> _slot `ux -> * -> # *U &U *U &U _BVSOC_TABLE `ui -> -> 2 `i `ui `ux `ui `ux `us ]
 "313
-[e :UE 2306 ]
-}
-"321
-[v _esr_check `(f ~T0 @X0 1 ef1`uc ]
-"322
-{
-[e :U _esr_check ]
-"321
-[v _fsm `Cuc ~T0 @X0 1 r1 ]
-"322
-[f ]
-"323
-[v F18104 `uc ~T0 @X0 1 s esr_state ]
-[i F18104
--> -> 0 `i `uc
-]
-"325
-[e $ ! != -> _fsm `i -> 0 `i 2312  ]
-{
-"326
-[e = F18104 -> -> 0 `i `uc ]
-"327
-[e ) -> -U .10.0 `f ]
-[e $UE 2311  ]
-"328
 }
 [e :U 2312 ]
+"314
+}
+[e ++ _slot -> -> 1 `i `uc ]
+[e $ < -> _slot `i -> 26 `i 2309  ]
+[e :U 2310 ]
+}
+"315
+[e ) _soc ]
+[e $UE 2308  ]
+"316
+[e :UE 2308 ]
+}
+"324
+[v _esr_check `(f ~T0 @X0 1 ef1`uc ]
+"325
+{
+[e :U _esr_check ]
+"324
+[v _fsm `Cuc ~T0 @X0 1 r1 ]
+"325
+[f ]
+"326
+[v F18105 `uc ~T0 @X0 1 s esr_state ]
+[i F18105
+-> -> 0 `i `uc
+]
+"327
+[v _ret `f ~T0 @X0 1 a ]
+[e = _ret -> -U .1.0 `f ]
+"329
+[e $ ! != -> _fsm `i -> 0 `i 2314  ]
+{
 "330
-[e $U 2314  ]
-{
+[e = F18105 -> -> 0 `i `uc ]
 "331
-[e :U 2315 ]
+[e = _ret -> -U .10.0 `f ]
 "332
-[e ( _StartTimer (2 , -> . `E17486 12 `uc -> -> 10000 `i `us ]
-"333
-[e ++ F18104 -> -> 1 `i `uc ]
+}
+[e $U 2315  ]
+[e :U 2314 ]
+{
 "334
-[e $U 2313  ]
+[e $U 2317  ]
+{
 "335
-[e :U 2316 ]
-"339
-[e ( _set_load_relay_one (1 -> -> 0 `i `a ]
-"340
-[e ( _set_load_relay_two (1 -> -> 0 `i `a ]
-"341
-[e $ ! != -> ( _TimerDone (1 -> . `E17486 12 `uc `i -> 0 `i 2317  ]
-{
-"342
-[e ( _StartTimer (2 , -> . `E17486 12 `uc -> -> 10000 `i `us ]
-"343
-}
-[e $U 2318  ]
-[e :U 2317 ]
-{
-"344
-[e ) -> -U .2.0 `f ]
-[e $UE 2311  ]
-"345
-}
 [e :U 2318 ]
-"349
-[e ( _update_adc_result ..  ]
-"350
-[e = . _C 42 ( _conv_raw_result (2 , . `E17067 3 . `E17529 0 ]
-"351
-[e ++ F18104 -> -> 1 `i `uc ]
-"352
-[e $U 2313  ]
-"353
+"336
+[e ( _StartTimer (2 , -> . `E17486 12 `uc -> -> 10000 `i `us ]
+"337
+[e ++ F18105 -> -> 1 `i `uc ]
+"338
+[e $U 2316  ]
+"339
 [e :U 2319 ]
-"354
-[e ( _set_load_relay_one (1 -> -> 1 `i `a ]
-"355
+"343
+[e ( _set_load_relay_one (1 -> -> 0 `i `a ]
+"344
+[e ( _set_load_relay_two (1 -> -> 0 `i `a ]
+"345
 [e $ ! != -> ( _TimerDone (1 -> . `E17486 12 `uc `i -> 0 `i 2320  ]
 {
-"356
+"346
 [e ( _StartTimer (2 , -> . `E17486 12 `uc -> -> 10000 `i `us ]
-"357
+"347
 }
 [e $U 2321  ]
 [e :U 2320 ]
 {
-"358
-[e ) -> -U .3.0 `f ]
-[e $UE 2311  ]
-"359
+"348
+[e = _ret -> -U .2.0 `f ]
+"349
 }
 [e :U 2321 ]
-"361
+"353
 [e ( _update_adc_result ..  ]
-"362
-[e = . _C 43 ( _conv_raw_result (2 , . `E17067 3 . `E17529 0 ]
-"363
-[e = . _C 40 ( _conv_raw_result (2 , . `E17067 0 . `E17529 0 ]
-"364
-[e ++ F18104 -> -> 1 `i `uc ]
-"365
-[e $U 2313  ]
-"366
+"354
+[e = . _C 42 ( _conv_raw_result (2 , . `E17067 3 . `E17529 0 ]
+"355
+[e ++ F18105 -> -> 1 `i `uc ]
+"356
+[e $U 2316  ]
+"357
 [e :U 2322 ]
-"367
-[e ( _set_load_relay_two (1 -> -> 1 `i `a ]
-"368
-[e $ ! ! != -> ( _TimerDone (1 -> . `E17486 12 `uc `i -> 0 `i 2323  ]
-"369
-[e ) -> -U .4.0 `f ]
-[e $UE 2311  ]
+"358
+[e ( _set_load_relay_one (1 -> -> 1 `i `a ]
+"359
+[e $ ! != -> ( _TimerDone (1 -> . `E17486 12 `uc `i -> 0 `i 2323  ]
+{
+"360
+[e ( _StartTimer (2 , -> . `E17486 12 `uc -> -> 10000 `i `us ]
+"361
+}
+[e $U 2324  ]
 [e :U 2323 ]
-"371
-[e ( _update_adc_result ..  ]
-"372
-[e = . _C 44 ( _conv_raw_result (2 , . `E17067 3 . `E17529 0 ]
-"373
-[e = . _C 41 ( _conv_raw_result (2 , . `E17067 0 . `E17529 0 ]
-"375
-[e = . _C 23 ( _fabsf (1 / - . _C 43 . _C 44 - . _C 40 . _C 41 ]
-"376
-[e ( _set_load_relay_one (1 -> -> 0 `i `a ]
-"377
-[e ( _set_load_relay_two (1 -> -> 0 `i `a ]
-"378
-[e = F18104 -> -> 0 `i `uc ]
-"379
-[e ) . _C 23 ]
-[e $UE 2311  ]
-"380
-[e $U 2313  ]
-"381
+{
+"362
+[e = _ret -> -U .3.0 `f ]
+"363
+}
 [e :U 2324 ]
+"365
+[e ( _update_adc_result ..  ]
+"366
+[e = . _C 43 ( _conv_raw_result (2 , . `E17067 3 . `E17529 0 ]
+"367
+[e = . _C 40 ( _conv_raw_result (2 , . `E17067 0 . `E17529 0 ]
+"368
+[e ++ F18105 -> -> 1 `i `uc ]
+"369
+[e $U 2316  ]
+"370
+[e :U 2325 ]
+"371
+[e ( _set_load_relay_two (1 -> -> 1 `i `a ]
+"372
+[e $ ! ! != -> ( _TimerDone (1 -> . `E17486 12 `uc `i -> 0 `i 2326  ]
+"373
+[e = _ret -> -U .4.0 `f ]
+[e :U 2326 ]
+"375
+[e ( _update_adc_result ..  ]
+"376
+[e = . _C 44 ( _conv_raw_result (2 , . `E17067 3 . `E17529 0 ]
+"377
+[e = . _C 41 ( _conv_raw_result (2 , . `E17067 0 . `E17529 0 ]
+"379
+[e = . _C 23 ( _fabsf (1 / - . _C 43 . _C 44 - . _C 40 . _C 41 ]
+"380
+[e ( _set_load_relay_one (1 -> -> 0 `i `a ]
+"381
+[e ( _set_load_relay_two (1 -> -> 0 `i `a ]
 "382
-[e $U 2313  ]
+[e = F18105 -> -> 0 `i `uc ]
 "383
-}
-[e $U 2313  ]
-[e :U 2314 ]
-[e [\ -> F18104 `i , $ -> 0 `i 2315
- , $ -> 1 `i 2316
- , $ -> 2 `i 2319
- , $ -> 3 `i 2322
- 2324 ]
-[e :U 2313 ]
+[e = _ret . _C 23 ]
 "384
-[e ) -> -U .1.0 `f ]
-[e $UE 2311  ]
+[e $U 2316  ]
 "385
-[e :UE 2311 ]
+[e :U 2327 ]
+"386
+[e $U 2316  ]
+"387
 }
+[e $U 2316  ]
+[e :U 2317 ]
+[e [\ -> F18105 `i , $ -> 0 `i 2318
+ , $ -> 1 `i 2319
+ , $ -> 2 `i 2322
+ , $ -> 3 `i 2325
+ 2327 ]
+[e :U 2316 ]
+"388
+}
+[e :U 2315 ]
+"389
+[e ) _ret ]
+[e $UE 2313  ]
 "390
+[e :UE 2313 ]
+}
+"395
 [v _cc_state `(uc ~T0 @X0 1 ef1`f ]
-"391
+"396
 {
 [e :U _cc_state ]
-"390
+"395
 [v _cc_signal `f ~T0 @X0 1 r1 ]
-"391
+"396
 [f ]
-"392
+"397
 [v _state `uc ~T0 @X0 1 a ]
 [e = _state -> . `E18029 7 `uc ]
-"394
-[e $ ! && > -> _cc_signal `d .4.75 < -> _cc_signal `d .0.75 2326  ]
-"395
-[e ) _state ]
-[e $UE 2325  ]
-[e :U 2326 ]
-"397
-[e $ ! && > -> _cc_signal `d .4.25 < -> _cc_signal `d .4.65 2327  ]
-"398
-[e ) _state ]
-[e $UE 2325  ]
-[e :U 2327 ]
+"399
+[e $ ! && > -> _cc_signal `d .4.75 < -> _cc_signal `d .0.75 2329  ]
 "400
-[e $ ! && > -> _cc_signal `d .3.75 < -> _cc_signal `d .4.25 2328  ]
-"401
-[e = _state -> . `E18029 6 `uc ]
-[e :U 2328 ]
-"402
-[e $ ! && > -> _cc_signal `d .3.25 < -> _cc_signal `d .3.75 2329  ]
-"403
-[e = _state -> . `E18029 5 `uc ]
-[e :U 2329 ]
-"404
-[e $ ! && > -> _cc_signal `d .2.75 < -> _cc_signal `d .3.25 2330  ]
-"405
-[e = _state -> . `E18029 4 `uc ]
-[e :U 2330 ]
-"406
-[e $ ! && > -> _cc_signal `d .2.25 < -> _cc_signal `d .2.75 2331  ]
-"407
-[e = _state -> . `E18029 3 `uc ]
-[e :U 2331 ]
-"408
-[e $ ! && > -> _cc_signal `d .1.75 < -> _cc_signal `d .2.25 2332  ]
-"409
-[e = _state -> . `E18029 2 `uc ]
-[e :U 2332 ]
-"410
-[e $ ! && > -> _cc_signal `d .1.25 < -> _cc_signal `d .1.75 2333  ]
-"411
-[e = _state -> . `E18029 1 `uc ]
-[e :U 2333 ]
-"412
-[e $ ! && > -> _cc_signal `d .0.75 < -> _cc_signal `d .1.25 2334  ]
-"413
-[e = _state -> . `E18029 0 `uc ]
-[e :U 2334 ]
-"414
 [e ) _state ]
-[e $UE 2325  ]
+[e $UE 2328  ]
+[e :U 2329 ]
+"402
+[e $ ! && > -> _cc_signal `d .4.25 < -> _cc_signal `d .4.65 2330  ]
+"403
+[e ) _state ]
+[e $UE 2328  ]
+[e :U 2330 ]
+"405
+[e $ ! && > -> _cc_signal `d .3.75 < -> _cc_signal `d .4.25 2331  ]
+"406
+[e = _state -> . `E18029 6 `uc ]
+[e :U 2331 ]
+"407
+[e $ ! && > -> _cc_signal `d .3.25 < -> _cc_signal `d .3.75 2332  ]
+"408
+[e = _state -> . `E18029 5 `uc ]
+[e :U 2332 ]
+"409
+[e $ ! && > -> _cc_signal `d .2.75 < -> _cc_signal `d .3.25 2333  ]
+"410
+[e = _state -> . `E18029 4 `uc ]
+[e :U 2333 ]
+"411
+[e $ ! && > -> _cc_signal `d .2.25 < -> _cc_signal `d .2.75 2334  ]
+"412
+[e = _state -> . `E18029 3 `uc ]
+[e :U 2334 ]
+"413
+[e $ ! && > -> _cc_signal `d .1.75 < -> _cc_signal `d .2.25 2335  ]
+"414
+[e = _state -> . `E18029 2 `uc ]
+[e :U 2335 ]
 "415
-[e :UE 2325 ]
+[e $ ! && > -> _cc_signal `d .1.25 < -> _cc_signal `d .1.75 2336  ]
+"416
+[e = _state -> . `E18029 1 `uc ]
+[e :U 2336 ]
+"417
+[e $ ! && > -> _cc_signal `d .0.75 < -> _cc_signal `d .1.25 2337  ]
+"418
+[e = _state -> . `E18029 0 `uc ]
+[e :U 2337 ]
+"419
+[e ) _state ]
+[e $UE 2328  ]
+"420
+[e :UE 2328 ]
 }
 [p f _sprintf 9282704 ]
 [a 2C 49 46 53 53 0 ]

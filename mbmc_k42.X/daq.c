@@ -81,24 +81,27 @@ static R_data r_cal;
  */
 bool start_adc_scan(void)
 {
-	if (R.done)
-		return false;
-
-	R.scan_index = 0;
-	R.scan_select = (uint16_t) ((ANSELB << 8) + ANSELA) & ADC_SCAN_CHAN; // skip digital pins PORT A and B
-	ADCC_SetADIInterruptHandler(adc_int_handler);
-	ADCC_SetADTIInterruptHandler(adc_int_t_handler);
-	ADCC_DischargeSampleCapacitor(); // short ADC sample cap before channel sampling
-	ADCC_StartConversion(R.scan_index & 0xf);
+	bool ret;
+	if (R.done) {
+		ret = false;
+	} else {
+		R.scan_index = 0;
+		R.scan_select = (uint16_t) ((ANSELB << 8) + ANSELA) & ADC_SCAN_CHAN; // skip digital pins PORT A and B
+		ADCC_SetADIInterruptHandler(adc_int_handler);
+		ADCC_SetADTIInterruptHandler(adc_int_t_handler);
+		ADCC_DischargeSampleCapacitor(); // short ADC sample cap before channel sampling
+		ADCC_StartConversion(R.scan_index & 0xf);
 #ifdef DEBUG_DAQ1
-	DEBUG1_SetHigh();
+		DEBUG1_SetHigh();
 #endif
 #ifdef DEBUG_DAQ2
-	DEBUG2_SetHigh();
+		DEBUG2_SetHigh();
 #else
-	PIE1bits.ADIE = 0;
+		PIE1bits.ADIE = 0;
 #endif
-	return true;
+		ret = true;
+	}
+	return ret;
 }
 
 /*

@@ -40,45 +40,47 @@ bool pv_diversion(bool kill)
 {
 	static uint16_t pwm_val = 0;
 	static bool pwm_active = false;
+	bool ret = false;
 
 	if (kill) {
 		pwm_val = 0;
 		V.mode_pwm = 0;
 		pwm_active = false;
 		diversion_pwm_set(V.mode_pwm); // 10KHz PWM quick stop
-		return false;
-	}
+		ret = false;
+	} else {
+		if ((((cc_state(C.v_cmode) == M_FLOAT) || (cc_state(C.v_cmode) == M_BOOST)) && (C.calc[V_PV] > DPWM_LOW_VOLTS))) {
+			if (!pwm_active) {
+				pwm_active = true;
+				/*
+				 * setup PWM start conditions
+				 */
+				C.start_power = C.p_pv; // save for later possible display
+			}
+			if (C.p_pv < PWM_MAX_POWER) { // increase power
+				if (++pwm_val > DPWM_FULL)
+					pwm_val = DPWM_FULL; // max PWM limiter
+			}
 
-	if ((((cc_state(C.v_cmode) == M_FLOAT) || (cc_state(C.v_cmode) == M_BOOST)) && (C.calc[V_PV] > DPWM_LOW_VOLTS))) {
-		if (!pwm_active) {
-			pwm_active = true;
-			/*
-			 * setup PWM start conditions
-			 */
-			C.start_power = C.p_pv; // save for later possible display
-		}
-		if (C.p_pv < PWM_MAX_POWER) { // increase power
-			if (++pwm_val > DPWM_FULL)
-				pwm_val = DPWM_FULL; // max PWM limiter
-		}
+			if (C.p_pv > PWM_MAX_POWER) { // decrease power
+				if (V.mode_pwm)
+					V.mode_pwm--;
+			}
 
-		if (C.p_pv > PWM_MAX_POWER) { // decrease power
+			V.mode_pwm = pwm_val;
+			diversion_pwm_set(V.mode_pwm); // 10KHz PWM ramp up
+			ret = true;
+		} else {
 			if (V.mode_pwm)
 				V.mode_pwm--;
+
+			diversion_pwm_set(V.mode_pwm); // 10KHz PWM ramp down
+			pwm_val = 0;
+			pwm_active = false;
+			ret = false;
 		}
-
-		V.mode_pwm = pwm_val;
-		diversion_pwm_set(V.mode_pwm); // 10KHz PWM ramp up
-		return true;
-	} else {
-		if (V.mode_pwm)
-			V.mode_pwm--;
-
-		diversion_pwm_set(V.mode_pwm); // 10KHz PWM ramp down
-		pwm_val = 0;
-		pwm_active = false;
-		return false;
 	}
+	return ret;
 }
 
 /*
@@ -257,6 +259,7 @@ void stop_bsoc(void)
 void reset_bsoc(const R_CODES rmode)
 {
 	switch (rmode) {
+	case R_CYCLE:
 	default:
 		C.pv_ah = 0.0;
 		break;
@@ -321,67 +324,69 @@ uint16_t Volts_to_SOC(const uint32_t cvoltage)
 float esr_check(const uint8_t fsm)
 {
 	static uint8_t esr_state = 0;
+	float ret = -1.0;
 
 	if (fsm) {
 		esr_state = 0;
-		return -10.0;
-	}
+		ret = -10.0;
+	} else {
 
-	switch (esr_state) {
-	case 0:
-		StartTimer(TMR_ESR, 10000); // start the sequence timer
-		esr_state++; // move to the next state of the FSM
-		break;
-	case 1:
-		/*
-		 * set the load resistors to all off
-		 */
-		set_load_relay_one(false);
-		set_load_relay_two(false);
-		if (TimerDone(TMR_ESR)) { // check for expired timer
-			StartTimer(TMR_ESR, 10000); // done, restart the timer, complete sequence, return -1.0
-		} else {
-			return -2.0; // nope, return with a progress code
+		switch (esr_state) {
+		case 0:
+			StartTimer(TMR_ESR, 10000); // start the sequence timer
+			esr_state++; // move to the next state of the FSM
+			break;
+		case 1:
+			/*
+			 * set the load resistors to all off
+			 */
+			set_load_relay_one(false);
+			set_load_relay_two(false);
+			if (TimerDone(TMR_ESR)) { // check for expired timer
+				StartTimer(TMR_ESR, 10000); // done, restart the timer, complete sequence, return -1.0
+			} else {
+				ret = -2.0; // nope, return with a progress code
+			}
+			/*
+			 * save unloaded battery voltage
+			 */
+			update_adc_result();
+			C.bv_noload = conv_raw_result(V_BAT, CONV);
+			esr_state++; // move to the next state of the FSM
+			break;
+		case 2:
+			set_load_relay_one(true);
+			if (TimerDone(TMR_ESR)) {
+				StartTimer(TMR_ESR, 10000);
+			} else {
+				ret = -3.0;
+			}
+
+			update_adc_result();
+			C.bv_one_load = conv_raw_result(V_BAT, CONV);
+			C.load_i1 = conv_raw_result(C_BATT, CONV); // get current
+			esr_state++;
+			break;
+		case 3:
+			set_load_relay_two(true);
+			if (!TimerDone(TMR_ESR))
+				ret = -4.0;
+
+			update_adc_result();
+			C.bv_full_load = conv_raw_result(V_BAT, CONV);
+			C.load_i2 = conv_raw_result(C_BATT, CONV); // get current
+
+			C.esr = fabs((C.bv_one_load - C.bv_full_load) / (C.load_i1 - C.load_i2)); // find internal resistance causing voltage drop (sorta)
+			set_load_relay_one(false);
+			set_load_relay_two(false);
+			esr_state = 0;
+			ret = C.esr;
+			break;
+		default:
+			break;
 		}
-		/*
-		 * save unloaded battery voltage
-		 */
-		update_adc_result();
-		C.bv_noload = conv_raw_result(V_BAT, CONV);
-		esr_state++; // move to the next state of the FSM
-		break;
-	case 2:
-		set_load_relay_one(true);
-		if (TimerDone(TMR_ESR)) {
-			StartTimer(TMR_ESR, 10000);
-		} else {
-			return -3.0;
-		}
-
-		update_adc_result();
-		C.bv_one_load = conv_raw_result(V_BAT, CONV);
-		C.load_i1 = conv_raw_result(C_BATT, CONV); // get current
-		esr_state++;
-		break;
-	case 3:
-		set_load_relay_two(true);
-		if (!TimerDone(TMR_ESR))
-			return -4.0;
-
-		update_adc_result();
-		C.bv_full_load = conv_raw_result(V_BAT, CONV);
-		C.load_i2 = conv_raw_result(C_BATT, CONV); // get current
-
-		C.esr = fabs((C.bv_one_load - C.bv_full_load) / (C.load_i1 - C.load_i2)); // find internal resistance causing voltage drop (sorta)
-		set_load_relay_one(false);
-		set_load_relay_two(false);
-		esr_state = 0;
-		return C.esr;
-		break;
-	default:
-		break;
 	}
-	return -1.0;
+	return ret;
 }
 
 /*
