@@ -1,0 +1,744 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$/tmp/xcXCJjCmi.o
+idloc IDLOC 5 200000 200000 8 1
+init CODE 0 A2 A2 4 1
+reset_vec CODE 0 0 0 6 1
+config CONFIG 4 300000 300000 E 1
+$dist/default/production/mbmc_k42.X.production.o
+cinit CODE 0 614 614 3A 1
+idloc IDLOC 5 200000 200000 8 1
+text0 CODE 0 708 708 A 1
+text1 CODE 0 3A6 3A6 A0 1
+text2 CODE 0 718 718 4 1
+text3 CODE 0 A6 A6 300 1
+text4 CODE 0 6BA 6BA 22 1
+text5 CODE 0 688 688 32 1
+text6 CODE 0 514 514 42 1
+text7 CODE 0 4BC 4BC 58 1
+text8 CODE 0 5D6 5D6 3E 1
+text9 CODE 0 556 556 40 1
+text10 CODE 0 596 596 40 1
+text11 CODE 0 6DC 6DC 16 1
+text12 CODE 0 6F2 6F2 16 1
+text13 CODE 0 64E 64E 3A 1
+text15 CODE 0 446 446 76 1
+idataCOMRAM CODE 0 712 712 5 1
+cstackCOMRAM COMRAM 1 36 36 25 1
+temp COMRAM 1 60 60 1 1
+intcode CODE 0 8 8 9A 1
+dataCOMRAM COMRAM 1 5B 5B 5 1
+bssCOMRAM COMRAM 1 1 1 35 1
+mediumconst MEDIUMCONST 0 1DAC 1DAC 254 1
+config CONFIG 4 300000 300000 E 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 80-FF 1
+SFR F80-FFF 1
+BANK0 80-FF 1
+CONST 6-7 1
+CONST 717-717 1
+CONST 71C-1DAB 1
+STACK 80-FF 1
+SMALLCONST 717-717 1
+SMALLCONST 71C-1DAB 1
+CODE 6-7 1
+CODE 717-717 1
+CODE 71C-1DAB 1
+BIGRAM 61-FF 1
+COMRAM 61-7F 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 717-717 1
+MEDIUMCONST 71C-1DAB 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production/mbmc_k42.X.production.o
+8 intcode CODE >5:/fred/mbmc_k42/pat/ihc_vector.c
+8 intcode CODE >4187:/tmp/xcXCAIIgb.s
+12 intcode CODE >10:/fred/mbmc_k42/pat/ihc_vector.c
+16 intcode CODE >11:/fred/mbmc_k42/pat/ihc_vector.c
+1A intcode CODE >12:/fred/mbmc_k42/pat/ihc_vector.c
+22 intcode CODE >13:/fred/mbmc_k42/pat/ihc_vector.c
+26 intcode CODE >14:/fred/mbmc_k42/pat/ihc_vector.c
+28 intcode CODE >15:/fred/mbmc_k42/pat/ihc_vector.c
+2A intcode CODE >16:/fred/mbmc_k42/pat/ihc_vector.c
+36 intcode CODE >17:/fred/mbmc_k42/pat/ihc_vector.c
+3C intcode CODE >23:/fred/mbmc_k42/pat/ihc_vector.c
+48 intcode CODE >24:/fred/mbmc_k42/pat/ihc_vector.c
+50 intcode CODE >25:/fred/mbmc_k42/pat/ihc_vector.c
+54 intcode CODE >29:/fred/mbmc_k42/pat/ihc_vector.c
+58 intcode CODE >30:/fred/mbmc_k42/pat/ihc_vector.c
+5A intcode CODE >32:/fred/mbmc_k42/pat/ihc_vector.c
+5E intcode CODE >34:/fred/mbmc_k42/pat/ihc_vector.c
+62 intcode CODE >35:/fred/mbmc_k42/pat/ihc_vector.c
+6E intcode CODE >38:/fred/mbmc_k42/pat/ihc_vector.c
+72 intcode CODE >39:/fred/mbmc_k42/pat/ihc_vector.c
+74 intcode CODE >41:/fred/mbmc_k42/pat/ihc_vector.c
+78 intcode CODE >43:/fred/mbmc_k42/pat/ihc_vector.c
+7C intcode CODE >44:/fred/mbmc_k42/pat/ihc_vector.c
+88 intcode CODE >45:/fred/mbmc_k42/pat/ihc_vector.c
+8A intcode CODE >46:/fred/mbmc_k42/pat/ihc_vector.c
+8E intcode CODE >49:/fred/mbmc_k42/pat/ihc_vector.c
+90 intcode CODE >50:/fred/mbmc_k42/pat/ihc_vector.c
+92 intcode CODE >53:/fred/mbmc_k42/pat/ihc_vector.c
+94 intcode CODE >54:/fred/mbmc_k42/pat/ihc_vector.c
+96 intcode CODE >57:/fred/mbmc_k42/pat/ihc_vector.c
+446 text15 CODE >103:/fred/mbmc_k42/pat/ihc_vector.c
+446 text15 CODE >106:/fred/mbmc_k42/pat/ihc_vector.c
+44C text15 CODE >107:/fred/mbmc_k42/pat/ihc_vector.c
+44E text15 CODE >108:/fred/mbmc_k42/pat/ihc_vector.c
+452 text15 CODE >109:/fred/mbmc_k42/pat/ihc_vector.c
+456 text15 CODE >112:/fred/mbmc_k42/pat/ihc_vector.c
+462 text15 CODE >113:/fred/mbmc_k42/pat/ihc_vector.c
+466 text15 CODE >120:/fred/mbmc_k42/pat/ihc_vector.c
+46C text15 CODE >121:/fred/mbmc_k42/pat/ihc_vector.c
+49A text15 CODE >122:/fred/mbmc_k42/pat/ihc_vector.c
+49E text15 CODE >123:/fred/mbmc_k42/pat/ihc_vector.c
+4A2 text15 CODE >126:/fred/mbmc_k42/pat/ihc_vector.c
+4BA text15 CODE >129:/fred/mbmc_k42/pat/ihc_vector.c
+64E text13 CODE >102:/fred/mbmc_k42/pat/ibsmon.c
+64E text13 CODE >107:/fred/mbmc_k42/pat/ibsmon.c
+66A text13 CODE >110:/fred/mbmc_k42/pat/ibsmon.c
+66E text13 CODE >113:/fred/mbmc_k42/pat/ibsmon.c
+686 text13 CODE >114:/fred/mbmc_k42/pat/ibsmon.c
+6F2 text12 CODE >59:/fred/mbmc_k42/pat/ihc_vector.c
+6F2 text12 CODE >61:/fred/mbmc_k42/pat/ihc_vector.c
+6F4 text12 CODE >62:/fred/mbmc_k42/pat/ihc_vector.c
+704 text12 CODE >63:/fred/mbmc_k42/pat/ihc_vector.c
+706 text12 CODE >64:/fred/mbmc_k42/pat/ihc_vector.c
+6DC text11 CODE >66:/fred/mbmc_k42/pat/ihc_vector.c
+6DC text11 CODE >68:/fred/mbmc_k42/pat/ihc_vector.c
+6DE text11 CODE >69:/fred/mbmc_k42/pat/ihc_vector.c
+6EE text11 CODE >70:/fred/mbmc_k42/pat/ihc_vector.c
+6F0 text11 CODE >71:/fred/mbmc_k42/pat/ihc_vector.c
+596 text10 CODE >73:/fred/mbmc_k42/pat/ihc_vector.c
+598 text10 CODE >77:/fred/mbmc_k42/pat/ihc_vector.c
+59E text10 CODE >78:/fred/mbmc_k42/pat/ihc_vector.c
+5B0 text10 CODE >80:/fred/mbmc_k42/pat/ihc_vector.c
+5B2 text10 CODE >81:/fred/mbmc_k42/pat/ihc_vector.c
+5C2 text10 CODE >82:/fred/mbmc_k42/pat/ihc_vector.c
+5C4 text10 CODE >83:/fred/mbmc_k42/pat/ihc_vector.c
+5D4 text10 CODE >84:/fred/mbmc_k42/pat/ihc_vector.c
+556 text9 CODE >86:/fred/mbmc_k42/pat/ihc_vector.c
+558 text9 CODE >90:/fred/mbmc_k42/pat/ihc_vector.c
+55E text9 CODE >91:/fred/mbmc_k42/pat/ihc_vector.c
+570 text9 CODE >93:/fred/mbmc_k42/pat/ihc_vector.c
+572 text9 CODE >94:/fred/mbmc_k42/pat/ihc_vector.c
+582 text9 CODE >95:/fred/mbmc_k42/pat/ihc_vector.c
+584 text9 CODE >96:/fred/mbmc_k42/pat/ihc_vector.c
+594 text9 CODE >97:/fred/mbmc_k42/pat/ihc_vector.c
+5D6 text8 CODE >4:/opt/microchip/xc8/v2.30/pic/sources/c99/common/memcpy.c
+5D6 text8 CODE >11:/opt/microchip/xc8/v2.30/pic/sources/c99/common/memcpy.c
+5DE text8 CODE >12:/opt/microchip/xc8/v2.30/pic/sources/c99/common/memcpy.c
+5E2 text8 CODE >13:/opt/microchip/xc8/v2.30/pic/sources/c99/common/memcpy.c
+5E4 text8 CODE >14:/opt/microchip/xc8/v2.30/pic/sources/c99/common/memcpy.c
+5F6 text8 CODE >15:/opt/microchip/xc8/v2.30/pic/sources/c99/common/memcpy.c
+602 text8 CODE >13:/opt/microchip/xc8/v2.30/pic/sources/c99/common/memcpy.c
+4BC text7 CODE >94:/fred/mbmc_k42/pat/crc.c
+4BC text7 CODE >96:/fred/mbmc_k42/pat/crc.c
+4BE text7 CODE >97:/fred/mbmc_k42/pat/crc.c
+4C0 text7 CODE >101:/fred/mbmc_k42/pat/crc.c
+4C2 text7 CODE >102:/fred/mbmc_k42/pat/crc.c
+4D0 text7 CODE >103:/fred/mbmc_k42/pat/crc.c
+4E4 text7 CODE >104:/fred/mbmc_k42/pat/crc.c
+4F6 text7 CODE >101:/fred/mbmc_k42/pat/crc.c
+506 text7 CODE >107:/fred/mbmc_k42/pat/crc.c
+512 text7 CODE >108:/fred/mbmc_k42/pat/crc.c
+514 text6 CODE >71:/fred/mbmc_k42/pat/crc.c
+514 text6 CODE >75:/fred/mbmc_k42/pat/crc.c
+52C text6 CODE >76:/fred/mbmc_k42/pat/crc.c
+53C text6 CODE >77:/fred/mbmc_k42/pat/crc.c
+54C text6 CODE >79:/fred/mbmc_k42/pat/crc.c
+554 text6 CODE >80:/fred/mbmc_k42/pat/crc.c
+688 text5 CODE >85:/fred/mbmc_k42/pat/crc.c
+688 text5 CODE >87:/fred/mbmc_k42/pat/crc.c
+6A0 text5 CODE >91:/fred/mbmc_k42/pat/crc.c
+6B8 text5 CODE >92:/fred/mbmc_k42/pat/crc.c
+6BA text4 CODE >134:/fred/mbmc_k42/pat/ihc_vector.c
+6BC text4 CODE >136:/fred/mbmc_k42/pat/ihc_vector.c
+6C0 text4 CODE >139:/fred/mbmc_k42/pat/ihc_vector.c
+6CC text4 CODE >140:/fred/mbmc_k42/pat/ihc_vector.c
+6D0 text4 CODE >142:/fred/mbmc_k42/pat/ihc_vector.c
+6D2 text4 CODE >143:/fred/mbmc_k42/pat/ihc_vector.c
+6D4 text4 CODE >144:/fred/mbmc_k42/pat/ihc_vector.c
+6D8 text4 CODE >145:/fred/mbmc_k42/pat/ihc_vector.c
+6DA text4 CODE >146:/fred/mbmc_k42/pat/ihc_vector.c
+A6 text3 CODE >116:/fred/mbmc_k42/pat/ibsmon.c
+A6 text3 CODE >120:/fred/mbmc_k42/pat/ibsmon.c
+A8 text3 CODE >122:/fred/mbmc_k42/pat/ibsmon.c
+AC text3 CODE >123:/fred/mbmc_k42/pat/ibsmon.c
+B0 text3 CODE >124:/fred/mbmc_k42/pat/ibsmon.c
+B6 text3 CODE >125:/fred/mbmc_k42/pat/ibsmon.c
+BC text3 CODE >126:/fred/mbmc_k42/pat/ibsmon.c
+C2 text3 CODE >132:/fred/mbmc_k42/pat/ibsmon.c
+E2 text3 CODE >133:/fred/mbmc_k42/pat/ibsmon.c
+E4 text3 CODE >136:/fred/mbmc_k42/pat/ibsmon.c
+104 text3 CODE >137:/fred/mbmc_k42/pat/ibsmon.c
+106 text3 CODE >138:/fred/mbmc_k42/pat/ibsmon.c
+124 text3 CODE >141:/fred/mbmc_k42/pat/ibsmon.c
+13A text3 CODE >145:/fred/mbmc_k42/pat/ibsmon.c
+13C text3 CODE >147:/fred/mbmc_k42/pat/ibsmon.c
+13E text3 CODE >148:/fred/mbmc_k42/pat/ibsmon.c
+142 text3 CODE >149:/fred/mbmc_k42/pat/ibsmon.c
+146 text3 CODE >150:/fred/mbmc_k42/pat/ibsmon.c
+14A text3 CODE >151:/fred/mbmc_k42/pat/ibsmon.c
+150 text3 CODE >155:/fred/mbmc_k42/pat/ibsmon.c
+166 text3 CODE >157:/fred/mbmc_k42/pat/ibsmon.c
+16A text3 CODE >158:/fred/mbmc_k42/pat/ibsmon.c
+176 text3 CODE >159:/fred/mbmc_k42/pat/ibsmon.c
+18A text3 CODE >160:/fred/mbmc_k42/pat/ibsmon.c
+18E text3 CODE >161:/fred/mbmc_k42/pat/ibsmon.c
+192 text3 CODE >166:/fred/mbmc_k42/pat/ibsmon.c
+1A8 text3 CODE >169:/fred/mbmc_k42/pat/ibsmon.c
+1AA text3 CODE >170:/fred/mbmc_k42/pat/ibsmon.c
+1AC text3 CODE >175:/fred/mbmc_k42/pat/ibsmon.c
+1AE text3 CODE >177:/fred/mbmc_k42/pat/ibsmon.c
+1B6 text3 CODE >178:/fred/mbmc_k42/pat/ibsmon.c
+1CA text3 CODE >180:/fred/mbmc_k42/pat/ibsmon.c
+1E2 text3 CODE >181:/fred/mbmc_k42/pat/ibsmon.c
+1EE text3 CODE >182:/fred/mbmc_k42/pat/ibsmon.c
+1FC text3 CODE >183:/fred/mbmc_k42/pat/ibsmon.c
+216 text3 CODE >184:/fred/mbmc_k42/pat/ibsmon.c
+218 text3 CODE >185:/fred/mbmc_k42/pat/ibsmon.c
+21A text3 CODE >186:/fred/mbmc_k42/pat/ibsmon.c
+220 text3 CODE >187:/fred/mbmc_k42/pat/ibsmon.c
+222 text3 CODE >188:/fred/mbmc_k42/pat/ibsmon.c
+224 text3 CODE >191:/fred/mbmc_k42/pat/ibsmon.c
+228 text3 CODE >192:/fred/mbmc_k42/pat/ibsmon.c
+22A text3 CODE >193:/fred/mbmc_k42/pat/ibsmon.c
+242 text3 CODE >194:/fred/mbmc_k42/pat/ibsmon.c
+246 text3 CODE >195:/fred/mbmc_k42/pat/ibsmon.c
+248 text3 CODE >196:/fred/mbmc_k42/pat/ibsmon.c
+24E text3 CODE >202:/fred/mbmc_k42/pat/ibsmon.c
+256 text3 CODE >203:/fred/mbmc_k42/pat/ibsmon.c
+26A text3 CODE >207:/fred/mbmc_k42/pat/ibsmon.c
+282 text3 CODE >208:/fred/mbmc_k42/pat/ibsmon.c
+28E text3 CODE >210:/fred/mbmc_k42/pat/ibsmon.c
+29C text3 CODE >211:/fred/mbmc_k42/pat/ibsmon.c
+2A6 text3 CODE >212:/fred/mbmc_k42/pat/ibsmon.c
+2AC text3 CODE >213:/fred/mbmc_k42/pat/ibsmon.c
+2AE text3 CODE >215:/fred/mbmc_k42/pat/ibsmon.c
+2B2 text3 CODE >218:/fred/mbmc_k42/pat/ibsmon.c
+2B6 text3 CODE >221:/fred/mbmc_k42/pat/ibsmon.c
+2BA text3 CODE >224:/fred/mbmc_k42/pat/ibsmon.c
+2BE text3 CODE >227:/fred/mbmc_k42/pat/ibsmon.c
+2C2 text3 CODE >230:/fred/mbmc_k42/pat/ibsmon.c
+2C6 text3 CODE >235:/fred/mbmc_k42/pat/ibsmon.c
+2FC text3 CODE >237:/fred/mbmc_k42/pat/ibsmon.c
+302 text3 CODE >238:/fred/mbmc_k42/pat/ibsmon.c
+308 text3 CODE >241:/fred/mbmc_k42/pat/ibsmon.c
+314 text3 CODE >242:/fred/mbmc_k42/pat/ibsmon.c
+31A text3 CODE >244:/fred/mbmc_k42/pat/ibsmon.c
+31E text3 CODE >245:/fred/mbmc_k42/pat/ibsmon.c
+32A text3 CODE >248:/fred/mbmc_k42/pat/ibsmon.c
+342 text3 CODE >249:/fred/mbmc_k42/pat/ibsmon.c
+348 text3 CODE >250:/fred/mbmc_k42/pat/ibsmon.c
+34C text3 CODE >251:/fred/mbmc_k42/pat/ibsmon.c
+34E text3 CODE >252:/fred/mbmc_k42/pat/ibsmon.c
+358 text3 CODE >253:/fred/mbmc_k42/pat/ibsmon.c
+35E text3 CODE >256:/fred/mbmc_k42/pat/ibsmon.c
+37C text3 CODE >261:/fred/mbmc_k42/pat/ibsmon.c
+718 text2 CODE >341:/fred/mbmc_k42/pat/ibsmon.c
+718 text2 CODE >343:/fred/mbmc_k42/pat/ibsmon.c
+71A text2 CODE >345:/fred/mbmc_k42/pat/ibsmon.c
+3A6 text1 CODE >265:/fred/mbmc_k42/pat/ibsmon.c
+3A6 text1 CODE >268:/fred/mbmc_k42/pat/ibsmon.c
+3A8 text1 CODE >269:/fred/mbmc_k42/pat/ibsmon.c
+3AA text1 CODE >270:/fred/mbmc_k42/pat/ibsmon.c
+3B0 text1 CODE >271:/fred/mbmc_k42/pat/ibsmon.c
+3B2 text1 CODE >273:/fred/mbmc_k42/pat/ibsmon.c
+3BA text1 CODE >274:/fred/mbmc_k42/pat/ibsmon.c
+3BC text1 CODE >275:/fred/mbmc_k42/pat/ibsmon.c
+3BE text1 CODE >276:/fred/mbmc_k42/pat/ibsmon.c
+3C0 text1 CODE >277:/fred/mbmc_k42/pat/ibsmon.c
+3C0 text1 CODE >279:/fred/mbmc_k42/pat/ibsmon.c
+3C2 text1 CODE >280:/fred/mbmc_k42/pat/ibsmon.c
+3C4 text1 CODE >282:/fred/mbmc_k42/pat/ibsmon.c
+3C8 text1 CODE >284:/fred/mbmc_k42/pat/ibsmon.c
+3CA text1 CODE >286:/fred/mbmc_k42/pat/ibsmon.c
+3CE text1 CODE >287:/fred/mbmc_k42/pat/ibsmon.c
+3D2 text1 CODE >288:/fred/mbmc_k42/pat/ibsmon.c
+3D4 text1 CODE >290:/fred/mbmc_k42/pat/ibsmon.c
+3D6 text1 CODE >291:/fred/mbmc_k42/pat/ibsmon.c
+3D8 text1 CODE >292:/fred/mbmc_k42/pat/ibsmon.c
+3DC text1 CODE >293:/fred/mbmc_k42/pat/ibsmon.c
+3E2 text1 CODE >295:/fred/mbmc_k42/pat/ibsmon.c
+3E6 text1 CODE >297:/fred/mbmc_k42/pat/ibsmon.c
+3EA text1 CODE >299:/fred/mbmc_k42/pat/ibsmon.c
+3EE text1 CODE >301:/fred/mbmc_k42/pat/ibsmon.c
+3F2 text1 CODE >303:/fred/mbmc_k42/pat/ibsmon.c
+3F6 text1 CODE >305:/fred/mbmc_k42/pat/ibsmon.c
+3FA text1 CODE >307:/fred/mbmc_k42/pat/ibsmon.c
+3FE text1 CODE >308:/fred/mbmc_k42/pat/ibsmon.c
+400 text1 CODE >309:/fred/mbmc_k42/pat/ibsmon.c
+404 text1 CODE >310:/fred/mbmc_k42/pat/ibsmon.c
+406 text1 CODE >311:/fred/mbmc_k42/pat/ibsmon.c
+408 text1 CODE >312:/fred/mbmc_k42/pat/ibsmon.c
+412 text1 CODE >315:/fred/mbmc_k42/pat/ibsmon.c
+416 text1 CODE >316:/fred/mbmc_k42/pat/ibsmon.c
+41A text1 CODE >317:/fred/mbmc_k42/pat/ibsmon.c
+41C text1 CODE >318:/fred/mbmc_k42/pat/ibsmon.c
+41E text1 CODE >319:/fred/mbmc_k42/pat/ibsmon.c
+420 text1 CODE >320:/fred/mbmc_k42/pat/ibsmon.c
+422 text1 CODE >321:/fred/mbmc_k42/pat/ibsmon.c
+424 text1 CODE >322:/fred/mbmc_k42/pat/ibsmon.c
+426 text1 CODE >323:/fred/mbmc_k42/pat/ibsmon.c
+428 text1 CODE >324:/fred/mbmc_k42/pat/ibsmon.c
+42A text1 CODE >325:/fred/mbmc_k42/pat/ibsmon.c
+42E text1 CODE >326:/fred/mbmc_k42/pat/ibsmon.c
+432 text1 CODE >327:/fred/mbmc_k42/pat/ibsmon.c
+434 text1 CODE >328:/fred/mbmc_k42/pat/ibsmon.c
+436 text1 CODE >330:/fred/mbmc_k42/pat/ibsmon.c
+438 text1 CODE >331:/fred/mbmc_k42/pat/ibsmon.c
+43A text1 CODE >332:/fred/mbmc_k42/pat/ibsmon.c
+43C text1 CODE >333:/fred/mbmc_k42/pat/ibsmon.c
+43E text1 CODE >335:/fred/mbmc_k42/pat/ibsmon.c
+442 text1 CODE >338:/fred/mbmc_k42/pat/ibsmon.c
+444 text1 CODE >339:/fred/mbmc_k42/pat/ibsmon.c
+708 text0 CODE >347:/fred/mbmc_k42/pat/ibsmon.c
+708 text0 CODE >349:/fred/mbmc_k42/pat/ibsmon.c
+70C text0 CODE >352:/fred/mbmc_k42/pat/ibsmon.c
+614 cinit CODE >1380:/tmp/xcXCAIIgb.s
+614 cinit CODE >1382:/tmp/xcXCAIIgb.s
+614 cinit CODE >1385:/tmp/xcXCAIIgb.s
+614 cinit CODE >1445:/tmp/xcXCAIIgb.s
+616 cinit CODE >1446:/tmp/xcXCAIIgb.s
+618 cinit CODE >1447:/tmp/xcXCAIIgb.s
+61A cinit CODE >1448:/tmp/xcXCAIIgb.s
+61C cinit CODE >1449:/tmp/xcXCAIIgb.s
+61E cinit CODE >1450:/tmp/xcXCAIIgb.s
+620 cinit CODE >1451:/tmp/xcXCAIIgb.s
+624 cinit CODE >1452:/tmp/xcXCAIIgb.s
+628 cinit CODE >1453:/tmp/xcXCAIIgb.s
+628 cinit CODE >1454:/tmp/xcXCAIIgb.s
+62A cinit CODE >1455:/tmp/xcXCAIIgb.s
+62E cinit CODE >1456:/tmp/xcXCAIIgb.s
+630 cinit CODE >1457:/tmp/xcXCAIIgb.s
+632 cinit CODE >1458:/tmp/xcXCAIIgb.s
+634 cinit CODE >1462:/tmp/xcXCAIIgb.s
+638 cinit CODE >1463:/tmp/xcXCAIIgb.s
+63A cinit CODE >1464:/tmp/xcXCAIIgb.s
+63A cinit CODE >1465:/tmp/xcXCAIIgb.s
+63C cinit CODE >1466:/tmp/xcXCAIIgb.s
+63E cinit CODE >1467:/tmp/xcXCAIIgb.s
+640 cinit CODE >1473:/tmp/xcXCAIIgb.s
+640 cinit CODE >1475:/tmp/xcXCAIIgb.s
+642 cinit CODE >1476:/tmp/xcXCAIIgb.s
+644 cinit CODE >1478:/tmp/xcXCAIIgb.s
+646 cinit CODE >1479:/tmp/xcXCAIIgb.s
+648 cinit CODE >1480:/tmp/xcXCAIIgb.s
+64A cinit CODE >1481:/tmp/xcXCAIIgb.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__size_of_init_ihcmon 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+_V 1 0 COMRAM 1 bssCOMRAM dist/default/production/mbmc_k42.X.production.o
+_STKPTRbits FFC 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__end_of_re20a_clear 1FC6 0 MEDIUMCONST 0 mediumconst dist/default/production/mbmc_k42.X.production.o
+__end_of_re20a_error 1FB6 0 MEDIUMCONST 0 mediumconst dist/default/production/mbmc_k42.X.production.o
+__Lmediumconst 1DAC 0 MEDIUMCONST 0 mediumconst dist/default/production/mbmc_k42.X.production.o
+__Hspace_0 2000 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__Hspace_1 61 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__Hspace_2 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__Hspace_4 60000E 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__size_of_modbus_rtu_send_msg_crc 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+_led_blink 446 0 CODE 0 text15 dist/default/production/mbmc_k42.X.production.o
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production/mbmc_k42.X.production.o
+__mediumconst 1DAC 0 MEDIUMCONST 0 mediumconst /tmp/xcXCJjCmi.o
+_req_length 1B 0 COMRAM 1 bssCOMRAM dist/default/production/mbmc_k42.X.production.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production/mbmc_k42.X.production.o
+SetDCPWM1@DCycle 44 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+__Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production/mbmc_k42.X.production.o
+_RCON FD0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+___sp 0 0 STACK 2 stack /tmp/xcXCJjCmi.o
+_main 708 0 CODE 0 text0 dist/default/production/mbmc_k42.X.production.o
+btemp 60 0 COMRAM 1 temp dist/default/production/mbmc_k42.X.production.o
+start A2 0 CODE 0 init /tmp/xcXCJjCmi.o
+__size_of_main 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production/mbmc_k42.X.production.o
+?_get_500hz 40 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+_get_2hz 596 0 CODE 0 text10 dist/default/production/mbmc_k42.X.production.o
+__end_of_build_version 1FDE 0 MEDIUMCONST 0 mediumconst dist/default/production/mbmc_k42.X.production.o
+__size_of_init_stream_params 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__size_of_clear_500hz 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__Hpowerup A2 0 CODE 0 powerup dist/default/production/mbmc_k42.X.production.o
+ttemp5 61 0 COMRAM 1 temp dist/default/production/mbmc_k42.X.production.o
+ttemp6 64 0 COMRAM 1 temp dist/default/production/mbmc_k42.X.production.o
+ttemp7 68 0 COMRAM 1 temp dist/default/production/mbmc_k42.X.production.o
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production/mbmc_k42.X.production.o
+__end_of_re20a_freset 1FBE 0 MEDIUMCONST 0 mediumconst dist/default/production/mbmc_k42.X.production.o
+__end_of_modbus_cc_clear 1FD9 0 MEDIUMCONST 0 mediumconst dist/default/production/mbmc_k42.X.production.o
+__end_of_modbus_cc_error 1FE4 0 MEDIUMCONST 0 mediumconst dist/default/production/mbmc_k42.X.production.o
+__accesstop 80 0 ABS 0 - /tmp/xcXCJjCmi.o
+intlevel0 0 0 CODE 0 text /tmp/xcXCJjCmi.o
+intlevel1 0 0 CODE 0 text /tmp/xcXCJjCmi.o
+intlevel2 0 0 CODE 0 text /tmp/xcXCJjCmi.o
+intlevel3 0 0 CODE 0 text /tmp/xcXCJjCmi.o
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production/mbmc_k42.X.production.o
+__size_of_tm_handler 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production/mbmc_k42.X.production.o
+wtemp8 61 0 COMRAM 1 temp dist/default/production/mbmc_k42.X.production.o
+__end_of_SetDCPWM1 688 0 CODE 0 text13 dist/default/production/mbmc_k42.X.production.o
+__end_of_table_crc_hi 1FAD 0 MEDIUMCONST 0 mediumconst dist/default/production/mbmc_k42.X.production.o
+__end_of_table_crc_lo 1EAD 0 MEDIUMCONST 0 mediumconst dist/default/production/mbmc_k42.X.production.o
+__size_of_SetDCPWM1 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__Hifardata 0 0 CODE 0 ifardata dist/default/production/mbmc_k42.X.production.o
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production/mbmc_k42.X.production.o
+__pidataCOMRAM 712 0 CODE 0 idataCOMRAM dist/default/production/mbmc_k42.X.production.o
+?_modbus_rtu_send_msg 4D 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+_ADCON1 FC1 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+___inthi_sp 0 0 STACK 2 stack /tmp/xcXCJjCmi.o
+___intlo_sp 0 0 STACK 2 stack /tmp/xcXCJjCmi.o
+_modbus_cc_freset 1FCD 0 MEDIUMCONST 0 mediumconst dist/default/production/mbmc_k42.X.production.o
+_SetDCPWM1 64E 0 CODE 0 text13 dist/default/production/mbmc_k42.X.production.o
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production/mbmc_k42.X.production.o
+_CCPR1L FBE 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+?_get_2hz 40 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+__Hintcode_body 0 0 ABS 0 intcode_body dist/default/production/mbmc_k42.X.production.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production/mbmc_k42.X.production.o
+SetDCPWM1@dutycycle 40 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+__Hmediumconst 2000 0 MEDIUMCONST 0 mediumconst dist/default/production/mbmc_k42.X.production.o
+crc16@buffer_length 41 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+__Hintcodelo A2 0 CODE 0 intcodelo dist/default/production/mbmc_k42.X.production.o
+_modbus_cc_clear 1FD3 0 MEDIUMCONST 0 mediumconst dist/default/production/mbmc_k42.X.production.o
+_modbus_cc_error 1FDE 0 MEDIUMCONST 0 mediumconst dist/default/production/mbmc_k42.X.production.o
+_set_led_blink 6BA 0 CODE 0 text4 dist/default/production/mbmc_k42.X.production.o
+get_500hz@mode 44 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+get_2hz@mode 44 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+?_modbus_rtu_send_msg_crc 48 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+_BAUDCTLbits FAA 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__size_of_crc16 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production/mbmc_k42.X.production.o
+memcpy@tmp 47 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+set_led_blink@blinks 40 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+_INTCON2bits FF1 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__Lintcodelo A2 0 CODE 0 intcodelo dist/default/production/mbmc_k42.X.production.o
+start_initialization 614 0 CODE 0 cinit dist/default/production/mbmc_k42.X.production.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production/mbmc_k42.X.production.o
+_init_ihcmon 3A6 0 CODE 0 text1 dist/default/production/mbmc_k42.X.production.o
+___rparam_used 1 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__end_of_memcpy 614 0 CODE 0 text8 dist/default/production/mbmc_k42.X.production.o
+_SPBRGH FB0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+_IPR1bits F9F 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__end_of_modbus_cc_freset 1FD3 0 MEDIUMCONST 0 mediumconst dist/default/production/mbmc_k42.X.production.o
+modbus_rtu_send_msg@modbus_cc_mode 4E 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+__size_of_modbus_rtu_send_msg 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__Hbank0 0 0 ABS 0 bank0 dist/default/production/mbmc_k42.X.production.o
+__Hcinit 0 0 ABS 0 cinit dist/default/production/mbmc_k42.X.production.o
+__Hconst 0 0 CONST 0 const dist/default/production/mbmc_k42.X.production.o
+__Hidata 0 0 CODE 0 idata dist/default/production/mbmc_k42.X.production.o
+__Hidloc 200008 0 IDLOC 5 idloc dist/default/production/mbmc_k42.X.production.o
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production/mbmc_k42.X.production.o
+__Hparam 0 0 COMRAM 1 rparam dist/default/production/mbmc_k42.X.production.o
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production/mbmc_k42.X.production.o
+__Hstack 0 0 STACK 2 stack dist/default/production/mbmc_k42.X.production.o
+__Htext0 0 0 ABS 0 text0 dist/default/production/mbmc_k42.X.production.o
+__Htext1 0 0 ABS 0 text1 dist/default/production/mbmc_k42.X.production.o
+__Htext2 0 0 ABS 0 text2 dist/default/production/mbmc_k42.X.production.o
+__Htext3 0 0 ABS 0 text3 dist/default/production/mbmc_k42.X.production.o
+__Htext4 0 0 ABS 0 text4 dist/default/production/mbmc_k42.X.production.o
+__Htext5 0 0 ABS 0 text5 dist/default/production/mbmc_k42.X.production.o
+__Htext6 0 0 ABS 0 text6 dist/default/production/mbmc_k42.X.production.o
+__Htext7 0 0 ABS 0 text7 dist/default/production/mbmc_k42.X.production.o
+__Htext8 0 0 ABS 0 text8 dist/default/production/mbmc_k42.X.production.o
+__Htext9 0 0 ABS 0 text9 dist/default/production/mbmc_k42.X.production.o
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production/mbmc_k42.X.production.o
+__Hbigram 0 0 ABS 0 bigram dist/default/production/mbmc_k42.X.production.o
+__smallconst 0 0 SMALLCONST 0 smallconst /tmp/xcXCJjCmi.o
+_clear_500hz 6DC 0 CODE 0 text11 dist/default/production/mbmc_k42.X.production.o
+__Hcomram 0 0 ABS 0 comram dist/default/production/mbmc_k42.X.production.o
+__Hconfig 30000E 0 CONFIG 4 config dist/default/production/mbmc_k42.X.production.o
+get_500hz@tmp F 0 COMRAM 1 bssCOMRAM dist/default/production/mbmc_k42.X.production.o
+__Lbank0 0 0 ABS 0 bank0 dist/default/production/mbmc_k42.X.production.o
+__Lcinit 0 0 ABS 0 cinit dist/default/production/mbmc_k42.X.production.o
+__Lconst 0 0 CONST 0 const dist/default/production/mbmc_k42.X.production.o
+__Lidata 0 0 CODE 0 idata dist/default/production/mbmc_k42.X.production.o
+__Lidloc 0 0 IDLOC 5 idloc dist/default/production/mbmc_k42.X.production.o
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production/mbmc_k42.X.production.o
+__Lparam 0 0 COMRAM 1 rparam dist/default/production/mbmc_k42.X.production.o
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production/mbmc_k42.X.production.o
+__Lstack 0 0 STACK 2 stack dist/default/production/mbmc_k42.X.production.o
+__size_of_set_led_blink 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__Ltext0 0 0 ABS 0 text0 dist/default/production/mbmc_k42.X.production.o
+__Ltext1 0 0 ABS 0 text1 dist/default/production/mbmc_k42.X.production.o
+__Ltext2 0 0 ABS 0 text2 dist/default/production/mbmc_k42.X.production.o
+__Ltext3 0 0 ABS 0 text3 dist/default/production/mbmc_k42.X.production.o
+__Ltext4 0 0 ABS 0 text4 dist/default/production/mbmc_k42.X.production.o
+__Ltext5 0 0 ABS 0 text5 dist/default/production/mbmc_k42.X.production.o
+__Ltext6 0 0 ABS 0 text6 dist/default/production/mbmc_k42.X.production.o
+__Ltext7 0 0 ABS 0 text7 dist/default/production/mbmc_k42.X.production.o
+__Ltext8 0 0 ABS 0 text8 dist/default/production/mbmc_k42.X.production.o
+__Ltext9 0 0 ABS 0 text9 dist/default/production/mbmc_k42.X.production.o
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production/mbmc_k42.X.production.o
+controller_work@temp_703 5A 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+__Lintcode_body 0 0 ABS 0 intcode_body dist/default/production/mbmc_k42.X.production.o
+memcpy@d1 40 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+memcpy@s1 41 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+_INTCONbits FF2 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+modbus_rtu_send_msg_crc@crc 4B 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+modbus_rtu_send_msg_crc@req 48 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+__Habs1 0 0 ABS 0 abs1 dist/default/production/mbmc_k42.X.production.o
+__Hdata 0 0 ABS 0 data dist/default/production/mbmc_k42.X.production.o
+__Hinit A6 0 CODE 0 init dist/default/production/mbmc_k42.X.production.o
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production/mbmc_k42.X.production.o
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production/mbmc_k42.X.production.o
+__Htemp 61 0 COMRAM 1 temp dist/default/production/mbmc_k42.X.production.o
+__Htext 0 0 ABS 0 text dist/default/production/mbmc_k42.X.production.o
+__Labs1 0 0 ABS 0 abs1 dist/default/production/mbmc_k42.X.production.o
+__Ldata 0 0 ABS 0 data dist/default/production/mbmc_k42.X.production.o
+__Linit A2 0 CODE 0 init dist/default/production/mbmc_k42.X.production.o
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production/mbmc_k42.X.production.o
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production/mbmc_k42.X.production.o
+__Ltemp 60 0 COMRAM 1 temp dist/default/production/mbmc_k42.X.production.o
+__Ltext 0 0 ABS 0 text dist/default/production/mbmc_k42.X.production.o
+memcpy@d 48 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+memcpy@n 43 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+memcpy@s 45 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+int$flags 60 0 COMRAM 1 temp dist/default/production/mbmc_k42.X.production.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+__Hintret 0 0 ABS 0 intret dist/default/production/mbmc_k42.X.production.o
+__Hirdata 0 0 CODE 0 irdata dist/default/production/mbmc_k42.X.production.o
+_PR2 FCB 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__S0 2000 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__S1 61 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__S2 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__S4 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__S5 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__end_of_get_500hz 596 0 CODE 0 text9 dist/default/production/mbmc_k42.X.production.o
+__size_of_get_500hz 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+_modbus_rtu_send_msg 688 0 CODE 0 text5 dist/default/production/mbmc_k42.X.production.o
+_build_date 5D 0 COMRAM 1 dataCOMRAM dist/default/production/mbmc_k42.X.production.o
+_build_time 5B 0 COMRAM 1 dataCOMRAM dist/default/production/mbmc_k42.X.production.o
+_cstate 20 0 COMRAM 1 bssCOMRAM dist/default/production/mbmc_k42.X.production.o
+_modbus_rtu_send_msg_crc 514 0 CODE 0 text6 dist/default/production/mbmc_k42.X.production.o
+__end_of_set_led_blink 6DC 0 CODE 0 text4 dist/default/production/mbmc_k42.X.production.o
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production/mbmc_k42.X.production.o
+crc16@buffer 40 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production/mbmc_k42.X.production.o
+__size_of_get_2hz 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production/mbmc_k42.X.production.o
+__end_of_modbus_rtu_send_msg_crc 556 0 CODE 0 text6 dist/default/production/mbmc_k42.X.production.o
+crc16@crc_hi 46 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+crc16@crc_lo 47 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+_get_500hz 556 0 CODE 0 text9 dist/default/production/mbmc_k42.X.production.o
+_modbus_cc_mode 1FE4 0 MEDIUMCONST 0 mediumconst dist/default/production/mbmc_k42.X.production.o
+__Lintentry 0 0 ABS 0 intentry dist/default/production/mbmc_k42.X.production.o
+__Hramtop 100 0 RAM 0 ramtop dist/default/production/mbmc_k42.X.production.o
+__Hrparam 0 0 COMRAM 1 rparam dist/default/production/mbmc_k42.X.production.o
+__activetblptr 2 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__Hstruct 0 0 COMRAM 1 struct dist/default/production/mbmc_k42.X.production.o
+__Htext10 0 0 ABS 0 text10 dist/default/production/mbmc_k42.X.production.o
+__Htext11 0 0 ABS 0 text11 dist/default/production/mbmc_k42.X.production.o
+__Htext12 0 0 ABS 0 text12 dist/default/production/mbmc_k42.X.production.o
+__Htext13 0 0 ABS 0 text13 dist/default/production/mbmc_k42.X.production.o
+__Htext15 0 0 ABS 0 text15 dist/default/production/mbmc_k42.X.production.o
+_RCSTAbits FAB 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+_PIE1bits F9D 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+_memcpy 5D6 0 CODE 0 text8 dist/default/production/mbmc_k42.X.production.o
+_re20a_clear 1FBE 0 MEDIUMCONST 0 mediumconst dist/default/production/mbmc_k42.X.production.o
+__ptext10 596 0 CODE 0 text10 dist/default/production/mbmc_k42.X.production.o
+__ptext11 6DC 0 CODE 0 text11 dist/default/production/mbmc_k42.X.production.o
+__ptext12 6F2 0 CODE 0 text12 dist/default/production/mbmc_k42.X.production.o
+__ptext13 64E 0 CODE 0 text13 dist/default/production/mbmc_k42.X.production.o
+__ptext15 446 0 CODE 0 text15 dist/default/production/mbmc_k42.X.production.o
+_cc_buffer 22 0 COMRAM 1 bssCOMRAM dist/default/production/mbmc_k42.X.production.o
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production/mbmc_k42.X.production.o
+__Lbigram 0 0 ABS 0 bigram dist/default/production/mbmc_k42.X.production.o
+_crc_error 17 0 COMRAM 1 bssCOMRAM dist/default/production/mbmc_k42.X.production.o
+__Lcomram 0 0 ABS 0 comram dist/default/production/mbmc_k42.X.production.o
+__Lconfig 0 0 CONFIG 4 config dist/default/production/mbmc_k42.X.production.o
+_LATAbits F89 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+_LATBbits F8A 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__end_of_init_stream_params 71C 0 CODE 0 text2 dist/default/production/mbmc_k42.X.production.o
+get_2hz@tmp 13 0 COMRAM 1 bssCOMRAM dist/default/production/mbmc_k42.X.production.o
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production/mbmc_k42.X.production.o
+__end_of_clear_2hz 708 0 CODE 0 text12 dist/default/production/mbmc_k42.X.production.o
+controller_work@c_crc 56 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production/mbmc_k42.X.production.o
+__end_of_controller_work 3A6 0 CODE 0 text3 dist/default/production/mbmc_k42.X.production.o
+_modbus_command 1F 0 COMRAM 1 bssCOMRAM dist/default/production/mbmc_k42.X.production.o
+controller_work@volts 5F 0 COMRAM 1 dataCOMRAM dist/default/production/mbmc_k42.X.production.o
+__size_of_clear_2hz 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__end_of_modbus_cc_mode 1FEA 0 MEDIUMCONST 0 mediumconst dist/default/production/mbmc_k42.X.production.o
+stackhi FF 0 ABS 0 - /tmp/xcXCJjCmi.o
+stacklo 80 0 ABS 0 - /tmp/xcXCJjCmi.o
+__Lintcode 8 0 CODE 0 intcode dist/default/production/mbmc_k42.X.production.o
+__Lintret 0 0 ABS 0 intret dist/default/production/mbmc_k42.X.production.o
+__Lirdata 0 0 CODE 0 irdata dist/default/production/mbmc_k42.X.production.o
+_tm_handler 8 0 CODE 0 intcode dist/default/production/mbmc_k42.X.production.o
+__Lspace_0 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__Lspace_1 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__Lspace_2 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__Lspace_4 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__pbssCOMRAM 1 0 COMRAM 1 bssCOMRAM dist/default/production/mbmc_k42.X.production.o
+__end_of_modbus_rtu_send_msg 6BA 0 CODE 0 text5 dist/default/production/mbmc_k42.X.production.o
+__size_of_memcpy 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+_clear_2hz 6F2 0 CODE 0 text12 dist/default/production/mbmc_k42.X.production.o
+_PIR1bits F9E 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+controller_work@c_crc_rec 58 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+__end_of_get_2hz 5D6 0 CODE 0 text10 dist/default/production/mbmc_k42.X.production.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+_init_stream_params 718 0 CODE 0 text2 dist/default/production/mbmc_k42.X.production.o
+end_of_initialization 640 0 CODE 0 cinit dist/default/production/mbmc_k42.X.production.o
+__end_of_init_ihcmon 446 0 CODE 0 text1 dist/default/production/mbmc_k42.X.production.o
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production/mbmc_k42.X.production.o
+__Hintentry 0 0 ABS 0 intentry dist/default/production/mbmc_k42.X.production.o
+_RCONbits FD0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__Hreset_vec 6 0 CODE 0 reset_vec dist/default/production/mbmc_k42.X.production.o
+__Lramtop 100 0 RAM 0 ramtop dist/default/production/mbmc_k42.X.production.o
+__Lrparam 0 0 COMRAM 1 rparam dist/default/production/mbmc_k42.X.production.o
+__pcinit 614 0 CODE 0 cinit dist/default/production/mbmc_k42.X.production.o
+tm_handler@c_error 1D 0 COMRAM 1 bssCOMRAM dist/default/production/mbmc_k42.X.production.o
+__ptext0 708 0 CODE 0 text0 dist/default/production/mbmc_k42.X.production.o
+__ptext1 3A6 0 CODE 0 text1 dist/default/production/mbmc_k42.X.production.o
+__ptext2 718 0 CODE 0 text2 dist/default/production/mbmc_k42.X.production.o
+__ptext3 A6 0 CODE 0 text3 dist/default/production/mbmc_k42.X.production.o
+__ptext4 6BA 0 CODE 0 text4 dist/default/production/mbmc_k42.X.production.o
+__ptext5 688 0 CODE 0 text5 dist/default/production/mbmc_k42.X.production.o
+__ptext6 514 0 CODE 0 text6 dist/default/production/mbmc_k42.X.production.o
+__ptext7 4BC 0 CODE 0 text7 dist/default/production/mbmc_k42.X.production.o
+__ptext8 5D6 0 CODE 0 text8 dist/default/production/mbmc_k42.X.production.o
+__ptext9 556 0 CODE 0 text9 dist/default/production/mbmc_k42.X.production.o
+__Lstruct 0 0 COMRAM 1 struct dist/default/production/mbmc_k42.X.production.o
+_controller_work A6 0 CODE 0 text3 dist/default/production/mbmc_k42.X.production.o
+__Ltext10 0 0 ABS 0 text10 dist/default/production/mbmc_k42.X.production.o
+__Ltext11 0 0 ABS 0 text11 dist/default/production/mbmc_k42.X.production.o
+__Ltext12 0 0 ABS 0 text12 dist/default/production/mbmc_k42.X.production.o
+__Ltext13 0 0 ABS 0 text13 dist/default/production/mbmc_k42.X.production.o
+__Ltext15 0 0 ABS 0 text15 dist/default/production/mbmc_k42.X.production.o
+modbus_rtu_send_msg@req_length 50 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+__end_of_re20a_mode 1FCD 0 MEDIUMCONST 0 mediumconst dist/default/production/mbmc_k42.X.production.o
+__ramtop 100 0 RAM 0 ramtop /tmp/xcXCJjCmi.o
+__Lpowerup A2 0 CODE 0 powerup dist/default/production/mbmc_k42.X.production.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production/mbmc_k42.X.production.o
+_build_version 1FD9 0 MEDIUMCONST 0 mediumconst dist/default/production/mbmc_k42.X.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production/mbmc_k42.X.production.o
+__end_of_clear_500hz 6F2 0 CODE 0 text11 dist/default/production/mbmc_k42.X.production.o
+__end_of_tm_handler A2 0 CODE 0 intcode dist/default/production/mbmc_k42.X.production.o
+___param_bank 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production/mbmc_k42.X.production.o
+__end_of__initialization 640 0 CODE 0 cinit dist/default/production/mbmc_k42.X.production.o
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production/mbmc_k42.X.production.o
+crc16@i 45 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+?_crc16 40 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production/mbmc_k42.X.production.o
+__pcstackCOMRAM 36 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+_TXSTAbits FAC 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__pmediumconst 1DAC 0 MEDIUMCONST 0 mediumconst dist/default/production/mbmc_k42.X.production.o
+controller_work@mcmd 1E 0 COMRAM 1 bssCOMRAM dist/default/production/mbmc_k42.X.production.o
+controller_work@temp 54 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+__end_of_main 712 0 CODE 0 text0 dist/default/production/mbmc_k42.X.production.o
+__pintcode 8 0 CODE 0 intcode dist/default/production/mbmc_k42.X.production.o
+modbus_rtu_send_msg@cc_buffer 4D 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+__end_of_crc16 514 0 CODE 0 text7 dist/default/production/mbmc_k42.X.production.o
+_RCREG FAE 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+_RCSTA FAB 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+_SPBRG FAF 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+_T0CON FD5 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+_T1CON FCD 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+_TMR0H FD7 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+_TMR0L FD6 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+_TMR1H FCF 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+_TMR1L FCE 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+_TRISA F92 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+_TRISB F93 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+_TXREG FAD 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+_TXSTA FAC 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__HRAM 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__Hbss 0 0 RAM 1 bss dist/default/production/mbmc_k42.X.production.o
+__Hram 0 0 ABS 0 ram dist/default/production/mbmc_k42.X.production.o
+__Hsfr 0 0 ABS 0 sfr dist/default/production/mbmc_k42.X.production.o
+__LRAM 1 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__Lbss 0 0 RAM 1 bss dist/default/production/mbmc_k42.X.production.o
+__Lram 0 0 ABS 0 ram dist/default/production/mbmc_k42.X.production.o
+__Lsfr 0 0 ABS 0 sfr dist/default/production/mbmc_k42.X.production.o
+_crc16 4BC 0 CODE 0 text7 dist/default/production/mbmc_k42.X.production.o
+_CCP1CON FBD 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+modbus_rtu_send_msg_crc@req_length 49 0 COMRAM 1 cstackCOMRAM dist/default/production/mbmc_k42.X.production.o
+__initialization 614 0 CODE 0 cinit dist/default/production/mbmc_k42.X.production.o
+__pdataCOMRAM 5B 0 COMRAM 1 dataCOMRAM dist/default/production/mbmc_k42.X.production.o
+_T2CONbits FCA 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__size_of_controller_work 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__end_of_led_blink 4BC 0 CODE 0 text15 dist/default/production/mbmc_k42.X.production.o
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production/mbmc_k42.X.production.o
+_re20a_freset 1FB6 0 MEDIUMCONST 0 mediumconst dist/default/production/mbmc_k42.X.production.o
+__Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production/mbmc_k42.X.production.o
+_cc_stream_file 21 0 COMRAM 1 bssCOMRAM dist/default/production/mbmc_k42.X.production.o
+__size_of_led_blink 0 0 ABS 0 - dist/default/production/mbmc_k42.X.production.o
+__Lifardata 0 0 CODE 0 ifardata dist/default/production/mbmc_k42.X.production.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production/mbmc_k42.X.production.o
+__Hintcode A2 0 CODE 0 intcode dist/default/production/mbmc_k42.X.production.o
+_table_crc_hi 1EAD 0 MEDIUMCONST 0 mediumconst dist/default/production/mbmc_k42.X.production.o
+_table_crc_lo 1DAD 0 MEDIUMCONST 0 mediumconst dist/default/production/mbmc_k42.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+text2 0 718 718 4 1
+reset_vec 0 0 0 6 1
+intcode 0 8 8 70F 1
+bssCOMRAM 1 1 1 60 1
+mediumconst 0 1DAC 1DAC 254 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES

@@ -25,8 +25,8 @@
 #pragma config LVP = OFF         // Low-Voltage ICSP Enable bit (Low-Voltage ICSP DISenabled)
 
 // CONFIG5L
-#pragma config CP0 = ON         // Code Protection bit (Block 0 (00200-000FFFh) code-protected)
-#pragma config CP1 = ON         // Code Protection bit (Block 1 (001000-001FFFh) code-protected)
+#pragma config CP0 = OFF         // Code Protection bit (Block 0 (00200-000FFFh) code-protected)
+#pragma config CP1 = OFF         // Code Protection bit (Block 1 (001000-001FFFh) code-protected)
 
 // CONFIG5H
 #pragma config CPB = OFF        // Boot Block Code Protection bit (Boot Block (000000-0001FFh) not code-protected)
