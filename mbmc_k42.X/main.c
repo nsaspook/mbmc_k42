@@ -106,6 +106,21 @@
  * 2	RD6	PV/AC Charger DC charge-controller source relay
  * 4	RF4	spare
  * 
+ * 
+ * enclosure connections
+ * 
+ * digital/power
+ * 11 red			1 black outp1
+ * 12 orange			2 white outp2
+ * 13 blue			3 grey outp3
+ * 14 black			4 purble outp4
+ * 15 grey			5 blue outp5
+ * 16 pink			6 green outp6
+ * 17 white jp2 1 +5		7 yellow outp7
+ * 18 black jp2 2 B		8 orange +24
+ * 19 red jp2 3 A		9 red VSS
+ * 20 green jp2 4 gnd		10 brown 0
+ * modbus board signals
  * system variables float
  *
  */
