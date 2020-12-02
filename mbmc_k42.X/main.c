@@ -119,8 +119,19 @@
  * 17 white jp2 1 +5		7 yellow outp7
  * 18 black jp2 2 B		8 orange +24
  * 19 red jp2 3 A		9 red VSS
- * 20 green jp2 4 gnd		10 brown 0
+ * 20 green jp2 4 gnd		10 brown chassis ground
  * modbus board signals
+ * 
+ * analog signal
+ * 1 orange			2 black
+ * 3 purple			4 yellow
+ * 5 tan			6 blue modbus analog signal
+ * 7 pink			8 brown
+ * 9 grey			10 green
+ * 11 white vss gnd		12 red vdd
+ * 13 black +3.3		14 white 5.0 calibration vref
+ * 15 black pwm vss		16 red pwm sig
+ * 
  * system variables float
  *
  */
