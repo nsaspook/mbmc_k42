@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [v F16252 `(v ~T0 @X0 0 tf ]
-[v F16690 `(v ~T0 @X0 0 tf ]
+[v F17022 `(v ~T0 @X0 0 tf ]
 "41110 /opt/microchip/mplabx/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8/pic/include/proc/pic18f57k42.h
 [v _T6CLKCON `Vuc ~T0 @X0 0 e@16278 ]
 "40982
@@ -99,12 +99,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [t T1 __interrupt irq ( TMR6 ) base ( 8 ) ]
 "829 mcc_generated_files/tmr6.h
 [v _TMR6_CallBack `(v ~T0 @X0 0 ef ]
-[v F16714 `(v ~T0 @X0 0 tf ]
-[v F16716 `(v ~T0 @X0 0 tf ]
-[v F16718 `(v ~T0 @X0 0 tf ]
-"207 mcc_generated_files/tmr6.c
-[c E16664 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 .. ]
-[n E16664 APP_TIMERS TMR_INTERNAL TMR_ADC TMR_T2 TMR_T3 TMR_T4 TMR_MC_TX TMR_HBIO TMR_INFO TMR_HELP TMR_HELPDIS TMR_DISPLAY TMR_FLIPPER TMR_ESR TMR_TEXT TMR_COUNT  ]
+[v F17046 `(v ~T0 @X0 0 tf ]
+[v F17048 `(v ~T0 @X0 0 tf ]
+[v F17050 `(v ~T0 @X0 0 tf ]
+"203 mcc_generated_files/tmr6.c
+[c E16996 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 .. ]
+[n E16996 APP_TIMERS TMR_INTERNAL TMR_ADC TMR_T2 TMR_T3 TMR_T4 TMR_MC_TX TMR_HBIO TMR_INFO TMR_HELP TMR_HELPDIS TMR_DISPLAY TMR_FLIPPER TMR_ESR TMR_TEXT TMR_COUNT  ]
 "59
 [v _tickCount `Vus ~T0 @X0 -> 0 `x e ]
 "163 mcc_generated_files/uart1.h
@@ -113,19 +113,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _UART1_Read `(uc ~T0 @X0 0 ef ]
 "380
 [v _UART1_Write `(v ~T0 @X0 0 ef1`uc ]
-"220 mcc_generated_files/tmr6.c
-[c E16554 0 1 2 3 4 5 .. ]
-[n E16554 . UI_STATE_INIT UI_STATE_HOST UI_STATE_DEBUG UI_STATE_LOG UI_STATE_MON UI_STATE_ERROR  ]
-[c E16535 0 1 2 3 .. ]
-[n E16535 . DIS_STR DIS_HELP DIS_ERR DIS_CLEAR  ]
+"216 mcc_generated_files/tmr6.c
+[c E16886 0 1 2 3 4 5 .. ]
+[n E16886 . UI_STATE_INIT UI_STATE_HOST UI_STATE_DEBUG UI_STATE_LOG UI_STATE_MON UI_STATE_ERROR  ]
+[c E16867 0 1 2 3 .. ]
+[n E16867 . DIS_STR DIS_HELP DIS_ERR DIS_CLEAR  ]
 "170 ./vconfig.h
-[s S2239 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 :1 `uc 1 `E16535 1 `E16535 1 `us 1 `us 1 ]
-[n S2239 terminal_type mesgid TID mcode mparm cmdlen log_seq host_display_ack info help_temp ceid log_num ]
+[s S2241 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 :1 `uc 1 `E16867 1 `E16867 1 `us 1 `us 1 ]
+[n S2241 terminal_type mesgid TID mcode mparm cmdlen log_seq host_display_ack info help_temp ceid log_num ]
 "205
-[s S2240 `E16554 1 `uc -> 64 `i `uc -> 64 `i `uc -> 16 `i `Vo 1 `Vo 1 `Vo 1 `Vc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `E16554 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :2 `uc 1 :1 `uc 1 `S2239 1 `Vuc 1 `Vuc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `Va 1 `Va 1 `Va 1 `Va 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 ]
-[n S2240 V_data ui_state buf info rbuf ticks blight ac_time testing sys_info ac_on ac_off time_info get_time_text error abort msg_error msg_ret alarm float_ticks boost_ticks wdt_ticks ui_sw r_checksum t_checksum checksum_error mode_pwm sequences all_errors set_sequ debug help stack help_id screen response ticker cc_state flipper calib enter sensor_set fixup cc_active system_stable blight_off in_float in_boost lowint_count timerint_count tx_count rx_count adc_count spi_count switch_count ]
+[s S2242 `E16886 1 `uc -> 64 `i `uc -> 64 `i `uc -> 16 `i `Vo 1 `Vo 1 `Vo 1 `Vc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `E16886 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :2 `uc 1 :1 `uc 1 `S2241 1 `Vuc 1 `Vuc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `Va 1 `Va 1 `Va 1 `Va 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 ]
+[n S2242 V_data ui_state buf info rbuf ticks blight ac_time testing sys_info ac_on ac_off time_info get_time_text error abort msg_error msg_ret alarm float_ticks boost_ticks wdt_ticks ui_sw r_checksum t_checksum checksum_error mode_pwm sequences all_errors set_sequ debug help stack help_id screen response ticker cc_state flipper calib enter sensor_set fixup cc_active system_stable blight_off in_float in_boost lowint_count timerint_count tx_count rx_count adc_count spi_count switch_count ]
 "58 mcc_generated_files/tmr6.c
-[v _V `S2240 ~T0 @X0 0 e ]
+[v _V `S2242 ~T0 @X0 0 e ]
 "250 /opt/microchip/mplabx/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "339
@@ -1627,7 +1627,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "497 mcc_generated_files/uart1.h
 [v _UART1_RxInterruptHandler `*F16252 ~T0 @X0 1 e ]
 "65 mcc_generated_files/tmr6.c
-[v _TMR6_InterruptHandler `*F16690 ~T0 @X0 1 e ]
+[v _TMR6_InterruptHandler `*F17022 ~T0 @X0 1 e ]
 "71
 [v _TMR6_Initialize `(v ~T0 @X0 1 ef ]
 "72
@@ -1653,7 +1653,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "100
 [e = _T6CON -> -> 224 `i `uc ]
 "101
-[e :UE 2243 ]
+[e :UE 2245 ]
 }
 "103
 [v _TMR6_ModeSet `(v ~T0 @X0 1 ef1`E16140 ]
@@ -1667,7 +1667,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "106
 [e = . . _T6HLTbits 0 0 -> _mode `uc ]
 "107
-[e :UE 2244 ]
+[e :UE 2246 ]
 }
 "109
 [v _TMR6_ExtResetSourceSet `(v ~T0 @X0 1 ef1`E16163 ]
@@ -1681,7 +1681,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "112
 [e = . . _T6RSTbits 0 0 -> _reset `uc ]
 "113
-[e :UE 2245 ]
+[e :UE 2247 ]
 }
 "115
 [v _TMR6_Start `(v ~T0 @X0 1 ef ]
@@ -1692,7 +1692,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "118
 [e = . . _T6CONbits 3 7 -> -> 1 `i `uc ]
 "119
-[e :UE 2246 ]
+[e :UE 2248 ]
 }
 "121
 [v _TMR6_StartTimer `(v ~T0 @X0 1 ef ]
@@ -1703,7 +1703,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "123
 [e ( _TMR6_Start ..  ]
 "124
-[e :UE 2247 ]
+[e :UE 2249 ]
 }
 "126
 [v _TMR6_Stop `(v ~T0 @X0 1 ef ]
@@ -1714,7 +1714,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "129
 [e = . . _T6CONbits 3 7 -> -> 0 `i `uc ]
 "130
-[e :UE 2248 ]
+[e :UE 2250 ]
 }
 "132
 [v _TMR6_StopTimer `(v ~T0 @X0 1 ef ]
@@ -1725,7 +1725,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "134
 [e ( _TMR6_Stop ..  ]
 "135
-[e :UE 2249 ]
+[e :UE 2251 ]
 }
 "137
 [v _TMR6_Counter8BitGet `(uc ~T0 @X0 1 ef ]
@@ -1739,9 +1739,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _readVal _TMR6 ]
 "143
 [e ) _readVal ]
-[e $UE 2250  ]
+[e $UE 2252  ]
 "144
-[e :UE 2250 ]
+[e :UE 2252 ]
 }
 "146
 [v _TMR6_ReadTimer `(uc ~T0 @X0 1 ef ]
@@ -1751,9 +1751,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "148
 [e ) ( _TMR6_Counter8BitGet ..  ]
-[e $UE 2251  ]
+[e $UE 2253  ]
 "149
-[e :UE 2251 ]
+[e :UE 2253 ]
 }
 "151
 [v _TMR6_Counter8BitSet `(v ~T0 @X0 1 ef1`uc ]
@@ -1767,7 +1767,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "154
 [e = _TMR6 _timerVal ]
 "155
-[e :UE 2252 ]
+[e :UE 2254 ]
 }
 "157
 [v _TMR6_WriteTimer `(v ~T0 @X0 1 ef1`uc ]
@@ -1781,7 +1781,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "159
 [e ( _TMR6_Counter8BitSet (1 _timerVal ]
 "160
-[e :UE 2253 ]
+[e :UE 2255 ]
 }
 "162
 [v _TMR6_Period8BitSet `(v ~T0 @X0 1 ef1`uc ]
@@ -1795,7 +1795,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "164
 [e = _PR6 _periodVal ]
 "165
-[e :UE 2254 ]
+[e :UE 2256 ]
 }
 "167
 [v _TMR6_LoadPeriodRegister `(v ~T0 @X0 1 ef1`uc ]
@@ -1809,7 +1809,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "169
 [e ( _TMR6_Period8BitSet (1 _periodVal ]
 "170
-[e :UE 2255 ]
+[e :UE 2257 ]
 }
 [v $root$_TMR6_ISR `(v ~T0 @X0 0 e ]
 "172
@@ -1823,7 +1823,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "180
 [e ( _TMR6_CallBack ..  ]
 "181
-[e :UE 2256 ]
+[e :UE 2258 ]
 }
 "183
 [v _TMR6_CallBack `(v ~T0 @X0 1 ef ]
@@ -1832,144 +1832,141 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _TMR6_CallBack ]
 [f ]
 "187
-[e $ ! != _TMR6_InterruptHandler -> -> 0 `i `*F16714 2258  ]
-{
+[e $ ! != _TMR6_InterruptHandler -> -> 0 `i `*F17046 2260  ]
 "188
-[e ( *U _TMR6_InterruptHandler ..  ]
+{
 "189
-}
-[e :U 2258 ]
+[e ( *U _TMR6_InterruptHandler ..  ]
 "190
-[e :UE 2257 ]
 }
-"192
-[v _TMR6_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F16716 ]
+[e :U 2260 ]
+"191
+[e :UE 2259 ]
+}
 "193
+[v _TMR6_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F17048 ]
 {
 [e :U _TMR6_SetInterruptHandler ]
-"192
-[v _InterruptHandler `*F16718 ~T0 @X0 1 r1 ]
-"193
+[v _InterruptHandler `*F17050 ~T0 @X0 1 r1 ]
 [f ]
 "194
 [e = _TMR6_InterruptHandler _InterruptHandler ]
 "195
-[e :UE 2259 ]
+[e :UE 2261 ]
 }
-"200
+"197
 [v _TMR6_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
-"201
 {
 [e :U _TMR6_DefaultInterruptHandler ]
 [f ]
-"202
-[v F16721 `uc ~T0 @X0 1 s i ]
-[v F16722 `uc ~T0 @X0 1 s j ]
-[i F16722
+"200
+[v F17053 `uc ~T0 @X0 1 s i ]
+[v F17054 `uc ~T0 @X0 1 s j ]
+[i F17054
 -> -> 0 `i `uc
 ]
-"207
+"203
 {
-[e = F16721 -> -> 0 `i `uc ]
-[e $ < -> F16721 `i -> . `E16664 14 `i 2261  ]
-[e $U 2262  ]
-[e :U 2261 ]
+[e = F17053 -> -> 0 `i `uc ]
+[e $ < -> F17053 `i -> . `E16996 14 `i 2263  ]
+[e $U 2264  ]
+[e :U 2263 ]
 {
-"208
-[e $ ! != -> *U + &U _tickCount * -> F16721 `ux -> -> # *U &U _tickCount `ui `ux `ui -> -> 0 `i `ui 2264  ]
+"204
+[e $ ! != -> *U + &U _tickCount * -> F17053 `ux -> -> # *U &U _tickCount `ui `ux `ui -> -> 0 `i `ui 2266  ]
 {
-"209
-[e -- *U + &U _tickCount * -> F16721 `ux -> -> # *U &U _tickCount `ui `ux -> -> 1 `i `us ]
-"210
-}
-[e :U 2264 ]
-"211
-}
-[e ++ F16721 -> -> 1 `i `uc ]
-[e $ < -> F16721 `i -> . `E16664 14 `i 2261  ]
-[e :U 2262 ]
-}
-"213
-[e $ ! != -> ( _UART1_is_rx_ready ..  `i -> 0 `i 2265  ]
-{
-"214
-[e = F16721 ( _UART1_Read ..  ]
-"216
-[e $ ! == -> F16721 `ui -> 116 `ui 2266  ]
-{
-"217
-[e ( _UART1_Write (1 F16721 ]
-"218
-[e ( _UART1_Write (1 -> -> 13 `ui `uc ]
-"219
-[e ( _UART1_Write (1 -> -> 10 `ui `uc ]
-"220
-[e = . _V 11 -> -> 0 `i `uc ]
-"221
-[e $ ! == -> F16722 `i -> 10 `i 2267  ]
-"222
-[e = . _V 11 -> -> 1 `i `uc ]
-[e :U 2267 ]
-"223
-[e = . _V 12 -> -> 0 `i `uc ]
-"224
-[e = *U + &U . _V 3 * -> F16722 `ux -> -> # *U &U . _V 3 `ui `ux -> -> 0 `i `uc ]
-"225
-[e = F16722 -> -> 0 `i `uc ]
-"226
+"205
+[e -- *U + &U _tickCount * -> F17053 `ux -> -> # *U &U _tickCount `ui `ux -> -> 1 `i `us ]
+"206
 }
 [e :U 2266 ]
-"228
-[e $ ! && != -> . _V 12 `i -> 0 `i < -> F16722 `i -> 12 `i 2268  ]
+"207
+}
+[e ++ F17053 -> -> 1 `i `uc ]
+[e $ < -> F17053 `i -> . `E16996 14 `i 2263  ]
+[e :U 2264 ]
+}
+"209
+[e $ ! != -> ( _UART1_is_rx_ready ..  `i -> 0 `i 2267  ]
 {
-"229
-[e ( _UART1_Write (1 F16721 ]
-"230
-[e = *U + &U . _V 3 * -> ++ F16722 -> -> 1 `i `uc `ux -> -> # *U &U . _V 3 `ui `ux -> F16721 `uc ]
-"231
+"210
+[e = F17053 ( _UART1_Read ..  ]
+"212
+[e $ ! == -> F17053 `ui -> 116 `ui 2268  ]
+{
+"213
+[e ( _UART1_Write (1 F17053 ]
+"214
+[e ( _UART1_Write (1 -> -> 13 `ui `uc ]
+"215
+[e ( _UART1_Write (1 -> -> 10 `ui `uc ]
+"216
+[e = . _V 11 -> -> 0 `i `uc ]
+"217
+[e $ ! == -> F17054 `i -> 10 `i 2269  ]
+"218
+[e = . _V 11 -> -> 1 `i `uc ]
+[e :U 2269 ]
+"219
+[e = . _V 12 -> -> 0 `i `uc ]
+"220
+[e = *U + &U . _V 3 * -> F17054 `ux -> -> # *U &U . _V 3 `ui `ux -> -> 0 `i `uc ]
+"221
+[e = F17054 -> -> 0 `i `uc ]
+"222
 }
 [e :U 2268 ]
-"232
-[e $ ! == -> F16721 `ui -> 35 `ui 2269  ]
+"224
+[e $ ! && != -> . _V 12 `i -> 0 `i < -> F17054 `i -> 12 `i 2270  ]
 {
-"233
-[e = . _V 8 -> -> 1 `i `uc ]
-"234
-}
-[e :U 2269 ]
-"235
-[e $ ! == -> F16721 `ui -> 86 `ui 2270  ]
-{
-"236
-[e = . _V 9 -> -> 1 `i `uc ]
-"237
+"225
+[e ( _UART1_Write (1 F17053 ]
+"226
+[e = *U + &U . _V 3 * -> ++ F17054 -> -> 1 `i `uc `ux -> -> # *U &U . _V 3 `ui `ux -> F17053 `uc ]
+"227
 }
 [e :U 2270 ]
-"238
-[e $ ! == -> F16721 `ui -> 118 `ui 2271  ]
+"228
+[e $ ! == -> F17053 `ui -> 35 `ui 2271  ]
 {
-"239
-[e = . _V 10 -> -> 1 `i `uc ]
-"240
+"229
+[e = . _V 8 -> -> 1 `i `uc ]
+"230
 }
 [e :U 2271 ]
-"241
-[e $ ! == -> F16721 `ui -> 84 `ui 2272  ]
+"231
+[e $ ! == -> F17053 `ui -> 86 `ui 2272  ]
 {
-"242
-[e ( _UART1_Write (1 F16721 ]
-"243
-[e = . _V 11 -> -> 0 `i `uc ]
-"244
-[e = . _V 12 -> -> 1 `i `uc ]
-"245
-[e = F16722 -> -> 0 `i `uc ]
-"246
+"232
+[e = . _V 9 -> -> 1 `i `uc ]
+"233
 }
 [e :U 2272 ]
-"248
+"234
+[e $ ! == -> F17053 `ui -> 118 `ui 2273  ]
+{
+"235
+[e = . _V 10 -> -> 1 `i `uc ]
+"236
 }
-[e :U 2265 ]
-"249
-[e :UE 2260 ]
+[e :U 2273 ]
+"237
+[e $ ! == -> F17053 `ui -> 84 `ui 2274  ]
+{
+"238
+[e ( _UART1_Write (1 F17053 ]
+"239
+[e = . _V 11 -> -> 0 `i `uc ]
+"240
+[e = . _V 12 -> -> 1 `i `uc ]
+"241
+[e = F17054 -> -> 0 `i `uc ]
+"242
+}
+[e :U 2274 ]
+"244
+}
+[e :U 2267 ]
+"245
+[e :UE 2262 ]
 }

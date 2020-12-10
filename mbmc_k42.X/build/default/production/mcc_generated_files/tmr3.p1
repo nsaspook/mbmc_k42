@@ -1,5 +1,5 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F17176 `(v ~T0 @X0 0 tf ]
+[v F16160 `(v ~T0 @X0 0 tf ]
 "43166 /opt/microchip/mplabx/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8/pic/include/proc/pic18f57k42.h
 [v _T3GCON `Vuc ~T0 @X0 0 e@16295 ]
 "43380
@@ -71,9 +71,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [t T1 __interrupt irq ( TMR3 ) base ( 8 ) low_priority ]
 "368 mcc_generated_files/tmr3.h
 [v _TMR3_CallBack `(v ~T0 @X0 0 ef ]
-[v F17193 `(v ~T0 @X0 0 tf ]
-[v F17195 `(v ~T0 @X0 0 tf ]
-[v F17197 `(v ~T0 @X0 0 tf ]
+[v F16177 `(v ~T0 @X0 0 tf ]
+[v F16179 `(v ~T0 @X0 0 tf ]
+[v F16181 `(v ~T0 @X0 0 tf ]
 "250 /opt/microchip/mplabx/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "339
@@ -1572,222 +1572,223 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSH equ 03FFEh ;# ">
 "48644
 [; <" TOSU equ 03FFFh ;# ">
-"60 mcc_generated_files/tmr3.c
+"58 mcc_generated_files/tmr3.c
 [v _timer3ReloadVal `Vus ~T0 @X0 1 e ]
-"61
-[v _TMR3_InterruptHandler `*F17176 ~T0 @X0 1 e ]
-"67
+"59
+[v _TMR3_InterruptHandler `*F16160 ~T0 @X0 1 e ]
+"65
 [v _TMR3_Initialize `(v ~T0 @X0 1 ef ]
-"68
+"66
 {
 [e :U _TMR3_Initialize ]
 [f ]
-"72
+"70
 [e = _T3GCON -> -> 0 `i `uc ]
-"75
+"73
 [e = _T3GATE -> -> 0 `i `uc ]
-"78
+"76
 [e = _T3CLK -> -> 1 `i `uc ]
-"81
+"79
 [e = _TMR3H -> -> 99 `i `uc ]
-"84
+"82
 [e = _TMR3L -> -> 192 `i `uc ]
-"87
-[e = _timer3ReloadVal -> | << -> _TMR3H `i -> 8 `i -> _TMR3L `i `us ]
-"90
+"85
 [e = . . _PIR6bits 0 6 -> -> 0 `i `uc ]
-"93
+"88
+[e = _timer3ReloadVal -> | << -> _TMR3H `i -> 8 `i -> _TMR3L `i `us ]
+"91
 [e = . . _PIE6bits 0 6 -> -> 1 `i `uc ]
-"96
+"94
 [e ( _TMR3_SetInterruptHandler (1 &U _TMR3_DefaultInterruptHandler ]
-"99
+"97
 [e = _T3CON -> -> 17 `i `uc ]
-"100
-[e :UE 2242 ]
+"98
+[e :UE 2230 ]
 }
-"102
+"100
 [v _TMR3_StartTimer `(v ~T0 @X0 1 ef ]
-"103
+"101
 {
 [e :U _TMR3_StartTimer ]
 [f ]
-"105
+"103
 [e = . . _T3CONbits 1 0 -> -> 1 `i `uc ]
-"106
-[e :UE 2243 ]
+"104
+[e :UE 2231 ]
 }
-"108
+"106
 [v _TMR3_StopTimer `(v ~T0 @X0 1 ef ]
-"109
+"107
 {
 [e :U _TMR3_StopTimer ]
 [f ]
-"111
+"109
 [e = . . _T3CONbits 1 0 -> -> 0 `i `uc ]
-"112
-[e :UE 2244 ]
+"110
+[e :UE 2232 ]
 }
-"114
+"112
 [v _TMR3_ReadTimer `(us ~T0 @X0 1 ef ]
-"115
+"113
 {
 [e :U _TMR3_ReadTimer ]
 [f ]
-"116
+"114
 [v _readVal `us ~T0 @X0 1 a ]
-"117
+"115
 [v _readValHigh `uc ~T0 @X0 1 a ]
-"118
+"116
 [v _readValLow `uc ~T0 @X0 1 a ]
-"120
+"118
 [e = . . _T3CONbits 1 1 -> -> 1 `i `uc ]
-"122
+"120
 [e = _readValLow _TMR3L ]
-"123
+"121
 [e = _readValHigh _TMR3H ]
-"125
+"123
 [e = _readVal -> | << -> -> _readValHigh `us `ui -> 8 `i -> _readValLow `ui `us ]
-"127
+"125
 [e ) _readVal ]
-[e $UE 2245  ]
-"128
-[e :UE 2245 ]
+[e $UE 2233  ]
+"126
+[e :UE 2233 ]
 }
-"130
+"128
 [v _TMR3_WriteTimer `(v ~T0 @X0 1 ef1`us ]
-"131
+"129
 {
 [e :U _TMR3_WriteTimer ]
-"130
+"128
 [v _timerVal `us ~T0 @X0 1 r1 ]
-"131
+"129
 [f ]
-"132
-[e $ ! == -> . . _T3CONbits 0 2 `i -> 1 `i 2247  ]
+"130
+[e $ ! == -> . . _T3CONbits 0 2 `i -> 1 `i 2235  ]
+"131
 {
-"134
+"133
 [e = . . _T3CONbits 1 0 -> -> 0 `i `uc ]
+"136
+[e = _TMR3H -> >> -> _timerVal `ui -> 8 `i `uc ]
 "137
-[e = _TMR3H -> >> -> _timerVal `ui -> 8 `i `uc ]
-"138
 [e = _TMR3L -> _timerVal `uc ]
-"141
+"140
 [e = . . _T3CONbits 1 0 -> -> 1 `i `uc ]
+"141
+}
+[e $U 2236  ]
 "142
-}
-[e $U 2248  ]
-[e :U 2247 ]
+[e :U 2235 ]
+"143
 {
-"144
-[e = _TMR3H -> >> -> _timerVal `ui -> 8 `i `uc ]
 "145
-[e = _TMR3L -> _timerVal `uc ]
+[e = _TMR3H -> >> -> _timerVal `ui -> 8 `i `uc ]
 "146
-}
-[e :U 2248 ]
+[e = _TMR3L -> _timerVal `uc ]
 "147
-[e :UE 2246 ]
 }
-"149
-[v _TMR3_Reload `(v ~T0 @X0 1 ef ]
+[e :U 2236 ]
+"148
+[e :UE 2234 ]
+}
 "150
+[v _TMR3_Reload `(v ~T0 @X0 1 ef ]
+"151
 {
 [e :U _TMR3_Reload ]
 [f ]
-"151
-[e ( _TMR3_WriteTimer (1 _timer3ReloadVal ]
 "152
-[e :UE 2249 ]
+[e ( _TMR3_WriteTimer (1 _timer3ReloadVal ]
+"153
+[e :UE 2237 ]
 }
-"154
-[v _TMR3_StartSinglePulseAcquisition `(v ~T0 @X0 1 ef ]
 "155
+[v _TMR3_StartSinglePulseAcquisition `(v ~T0 @X0 1 ef ]
+"156
 {
 [e :U _TMR3_StartSinglePulseAcquisition ]
 [f ]
-"156
-[e = . . _T3GCONbits 1 2 -> -> 1 `i `uc ]
 "157
-[e :UE 2250 ]
+[e = . . _T3GCONbits 1 2 -> -> 1 `i `uc ]
+"158
+[e :UE 2238 ]
 }
-"159
-[v _TMR3_CheckGateValueStatus `(uc ~T0 @X0 1 ef ]
 "160
+[v _TMR3_CheckGateValueStatus `(uc ~T0 @X0 1 ef ]
+"161
 {
 [e :U _TMR3_CheckGateValueStatus ]
 [f ]
-"161
-[e ) . . _T3GCONbits 1 1 ]
-[e $UE 2251  ]
 "162
-[e :UE 2251 ]
+[e ) . . _T3GCONbits 1 1 ]
+[e $UE 2239  ]
+"163
+[e :UE 2239 ]
 }
 [v $root$_TMR3_ISR `(v ~T0 @X0 0 e ]
-"164
-[v _TMR3_ISR `(v ~T1 @X0 1 ef ]
 "165
+[v _TMR3_ISR `(v ~T1 @X0 1 ef ]
+"166
 {
 [e :U _TMR3_ISR ]
 [f ]
-"166
-[v F17191 `Vui ~T0 @X0 1 s CountCallBack ]
-[i F17191
+"167
+[v F16175 `Vui ~T0 @X0 1 s CountCallBack ]
+[i F16175
 -> -> 0 `i `ui
 ]
-"169
-[e = . . _PIR6bits 0 6 -> -> 0 `i `uc ]
 "170
+[e = . . _PIR6bits 0 6 -> -> 0 `i `uc ]
+"171
 [e ( _TMR3_WriteTimer (1 _timer3ReloadVal ]
-"173
-[e $ ! >= =+ F17191 -> -> 1 `i `Vui -> -> 197 `i `ui 2253  ]
-{
+"174
+[e $ ! >= =+ F16175 -> -> 1 `i `Vui -> -> 200 `i `ui 2241  ]
 "175
+{
+"177
 [e ( _TMR3_CallBack ..  ]
-"178
-[e = F17191 -> -> 0 `i `ui ]
-"179
-}
-[e :U 2253 ]
 "180
-[e :UE 2252 ]
+[e = F16175 -> -> 0 `i `ui ]
+"181
 }
+[e :U 2241 ]
 "182
+[e :UE 2240 ]
+}
+"184
 [v _TMR3_CallBack `(v ~T0 @X0 1 ef ]
-"183
+"185
 {
 [e :U _TMR3_CallBack ]
 [f ]
+"187
+[e $ ! != _TMR3_InterruptHandler -> -> 0 `i `*F16177 2243  ]
 "188
-[e $ ! != _TMR3_InterruptHandler -> -> 0 `i `*F17193 2255  ]
 {
 "189
 [e ( *U _TMR3_InterruptHandler ..  ]
 "190
 }
-[e :U 2255 ]
+[e :U 2243 ]
 "191
-[e :UE 2254 ]
+[e :UE 2242 ]
 }
 "193
-[v _TMR3_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F17195 ]
-"194
+[v _TMR3_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F16179 ]
 {
 [e :U _TMR3_SetInterruptHandler ]
-"193
-[v _InterruptHandler `*F17197 ~T0 @X0 1 r1 ]
-"194
+[v _InterruptHandler `*F16181 ~T0 @X0 1 r1 ]
 [f ]
-"195
+"194
 [e = _TMR3_InterruptHandler _InterruptHandler ]
-"196
-[e :UE 2256 ]
+"195
+[e :UE 2244 ]
 }
-"198
+"197
 [v _TMR3_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
-"199
 {
 [e :U _TMR3_DefaultInterruptHandler ]
 [f ]
-"202
-[e :UE 2257 ]
+"200
+[e :UE 2245 ]
 }

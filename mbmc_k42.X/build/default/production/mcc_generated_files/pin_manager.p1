@@ -97,8 +97,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _INLVLF `Vuc ~T0 @X0 0 e@14996 ]
 "12457
 [v _U2RXPPS `Vuc ~T0 @X0 0 e@15080 ]
-"12277
-[v _SPI1SCKPPS `Vuc ~T0 @X0 0 e@15070 ]
 "7216
 [v _RB6PPS `Vuc ~T0 @X0 0 e@14862 ]
 "7466
@@ -1720,34 +1718,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 "144
 [e = _U2RXPPS -> -> 15 `i `uc ]
 "145
-[e = _SPI1SCKPPS -> -> 19 `i `uc ]
-"146
 [e = _RB6PPS -> -> 22 `i `uc ]
-"147
+"146
 [e = _RC3PPS -> -> 30 `i `uc ]
-"148
+"147
 [e = _INT0PPS -> -> 8 `i `uc ]
-"149
+"148
 [e = _RD1PPS -> -> 16 `i `uc ]
-"150
+"149
 [e = _INT1PPS -> -> 9 `i `uc ]
-"151
+"150
 [e = _RC5PPS -> -> 31 `i `uc ]
-"152
+"151
 [e = _RC6PPS -> -> 19 `i `uc ]
-"153
+"152
 [e = _U1RXPPS -> -> 23 `i `uc ]
-"154
+"153
 [e = _SPI1SDIPPS -> -> 20 `i `uc ]
-"155
+"154
 [e :UE 2230 ]
 }
-"157
+"156
 [v _PIN_MANAGER_IOC `(v ~T0 @X0 1 ef ]
-"158
+"157
 {
 [e :U _PIN_MANAGER_IOC ]
 [f ]
-"159
+"158
 [e :UE 2231 ]
 }

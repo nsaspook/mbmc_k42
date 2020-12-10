@@ -1,6 +1,6 @@
 /**
-  DMA Generated Driver File
-  
+  DMA2 Generated Driver File
+
   @Company
     Microchip Technology Inc.
 
@@ -8,17 +8,17 @@
     dma2.c
 
   @Summary
-    This is the generated driver implementation file for the DMA driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+    This is the generated driver implementation file for the DMA2 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
   @Description
-    This header file provides implementations for driver APIs for DMA CHANNEL2.
+    This source file provides APIs for DMA2.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.77
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.6
         Device            :  PIC18F57K42
-        Driver Version    :  2.10
+        Driver Version    :  1.0.0
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.05 and above
-        MPLAB 	          :  MPLAB X 5.20
+        Compiler          :  XC8 2.30 and above
+        MPLAB 	          :  MPLAB X 5.40
 */
 
 /*
@@ -51,50 +51,120 @@
 #include <xc.h>
 #include "dma2.h"
 
-/**
-  Section: Global Variables Definitions
-*/
 
 /**
-  Section: DMA APIs
+  Section: DMA2 APIs
 */
+
 void DMA2_Initialize(void)
 {
-    DMA2SSA = 0x001000; //set source start address
-    DMA2DSA = 0x3FBB; //set destination start address 
-    DMA2CON1 = 0x03; //set control register1 
-    DMA2SSZ = 0x0001; //set source size
-    DMA2DSZ = 0x0001; //set destination size
-    DMA2SIRQ = 0x1C; //set DMA Transfer Trigger Source
-    DMA2AIRQ = 0x3D; //set DMA Transfer abort Source
+    //Source Address : SrcVarName1
+    DMA2SSA = &SrcVarName1;
+    //Destination Address : &DstVarName1
+    DMA2DSA= &DstVarName1;
+    //DMODE unchanged; DSTP not cleared; SMR GPR; SMODE unchanged; SSTP cleared; 
+    DMA2CON1 = 0x01;
+    //Source Message Size : 1
+    DMA2SSZ = 1;
+    //Destination Message Size : 1
+    DMA2DSZ = 1;
+    //Start Trigger : SIRQ None; 
+    DMA2SIRQ = 0x00;
+    //Abort Trigger : AIRQ None; 
+    DMA2AIRQ = 0x00;
+	
+    // Clear Destination Count Interrupt Flag bit
+    PIR5bits.DMA2DCNTIF = 0; 
+    // Clear Source Count Interrupt Flag bit
+    PIR5bits.DMA2SCNTIF = 0; 
+    // Clear Abort Interrupt Flag bit
+    PIR5bits.DMA2AIF = 0; 
+    // Clear Overrun Interrupt Flag bit
+    PIR5bits.DMA2ORIF =0; 
     
-    PIR5bits.DMA2DCNTIF =0; // clear Destination Count Interrupt Flag bit
-    PIR5bits.DMA2SCNTIF =0; // clear Source Count Interrupt Flag bit
-    PIR5bits.DMA2AIF =0; // clear abort Interrupt Flag bit
-	PIR5bits.DMA2ORIF =0; // clear overrun Interrupt Flag bit
-    
-    PIE5bits.DMA2DCNTIE =0; // disable Destination Count 0 Interrupt
-    PIE5bits.DMA2SCNTIE =0; // disable Source Count Interrupt
-    PIE5bits.DMA2AIE =0; // disable abort Interrupt
-    PIE5bits.DMA2ORIE =0; // disable overrun Interrupt 
+    PIE5bits.DMA2DCNTIE = 0;
+    PIE5bits.DMA2SCNTIE = 0;
+    PIE5bits.DMA2AIE = 0;
+    PIE5bits.DMA2ORIE = 0;
 	
-	asm("BCF INTCON0,7");
+    //EN enabled; SIRQEN disabled; DGO not in progress; AIRQEN disabled; 
+    DMA2CON0 = 0x80;
 	
-	asm ("BANKSEL PRLOCK");
-    asm ("MOVLW 0x55");
-    asm ("MOVWF PRLOCK");
-    asm ("MOVLW 0xAA");
-    asm ("MOVWF PRLOCK");
-    asm ("BSF PRLOCK, 0");
-	
-	asm("BSF INTCON0,7");
-        
-    DMA2CON0 = 0x00; //set control register0
 }
 
+void DMA2_SelectSourceRegion(uint8_t region)
+{
+	DMA2CON1bits.SMR  = region;
+}
 
+void DMA2_SetSourceAddress(uint24_t address)
+{
+	DMA2SSA = address;
+}
 
+void DMA2_SetDestinationAddress(uint16_t address)
+{
+	DMA2DSA = address;
+}
+
+void DMA2_SetSourceSize(uint16_t size)
+{
+	DMA2SSZ= size;
+}
+
+void DMA2_SetDestinationSize(uint16_t size)
+{                     
+	DMA2DSZ= size;
+}
+
+uint24_t DMA2_GetSourcePointer(void)
+{
+	return DMA2SPTR;
+}
+
+uint16_t DMA2_GetDestinationPointer(void)
+{
+	return DMA2DPTR;
+}
+
+void DMA2_SetStartTrigger(uint8_t sirq)
+{
+	DMA2SIRQ = sirq;
+}
+
+void DMA2_SetAbortTrigger(uint8_t airq)
+{
+	DMA2AIRQ = airq;
+}
+
+void DMA2_StartTransfer(void)
+{
+	DMA2CON0bits.DGO = 1;
+}
+
+void DMA2_StartTransferWithTrigger(void)
+{
+	DMA2CON0bits.SIRQEN = 1;
+}
+
+void DMA2_StopTransfer(void)
+{
+	DMA2CON0bits.SIRQEN = 0; 
+	DMA2CON0bits.DGO = 0;
+}
+
+void DMA2_SetDMAPriority(uint8_t priority)
+{
+    // This function is dependant on the PR1WAY CONFIG bit
+	PRLOCK = 0x55;
+	PRLOCK = 0xAA;
+	PRLOCKbits.PRLOCKED = 0;
+	DMA2PR = priority;
+	PRLOCK = 0x55;
+	PRLOCK = 0xAA;
+	PRLOCKbits.PRLOCKED = 1;
+}
 
 /**
-  End of File
+ End of File
 */

@@ -1,5 +1,5 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F17176 `(v ~T0 @X0 0 tf ]
+[v F17508 `(v ~T0 @X0 0 tf ]
 "41690 /opt/microchip/mplabx/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8/pic/include/proc/pic18f57k42.h
 [v _T5GCON `Vuc ~T0 @X0 0 e@16283 ]
 "41904
@@ -69,24 +69,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _T5GCONbits `VS1873 ~T0 @X0 0 e@16283 ]
 [t ~ __interrupt . k ]
 [t T1 __interrupt irq ( TMR5 ) base ( 8 ) low_priority ]
-"175 mcc_generated_files/tmr5.c
-[c E16455 0 1 2 3 4 5 .. ]
-[n E16455 . UI_STATE_INIT UI_STATE_HOST UI_STATE_DEBUG UI_STATE_LOG UI_STATE_MON UI_STATE_ERROR  ]
-[c E16436 0 1 2 3 .. ]
-[n E16436 . DIS_STR DIS_HELP DIS_ERR DIS_CLEAR  ]
-"170 ./vconfig.h
-[s S2237 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 :1 `uc 1 `E16436 1 `E16436 1 `us 1 `us 1 ]
-[n S2237 terminal_type mesgid TID mcode mparm cmdlen log_seq host_display_ack info help_temp ceid log_num ]
-"205
-[s S2238 `E16455 1 `uc -> 64 `i `uc -> 64 `i `uc -> 16 `i `Vo 1 `Vo 1 `Vo 1 `Vc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `E16455 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :2 `uc 1 :1 `uc 1 `S2237 1 `Vuc 1 `Vuc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `Va 1 `Va 1 `Va 1 `Va 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 ]
-[n S2238 V_data ui_state buf info rbuf ticks blight ac_time testing sys_info ac_on ac_off time_info get_time_text error abort msg_error msg_ret alarm float_ticks boost_ticks wdt_ticks ui_sw r_checksum t_checksum checksum_error mode_pwm sequences all_errors set_sequ debug help stack help_id screen response ticker cc_state flipper calib enter sensor_set fixup cc_active system_stable blight_off in_float in_boost lowint_count timerint_count tx_count rx_count adc_count spi_count switch_count ]
-"62 mcc_generated_files/tmr5.c
-[v _V `S2238 ~T0 @X0 0 e ]
 "368 mcc_generated_files/tmr5.h
 [v _TMR5_CallBack `(v ~T0 @X0 0 ef ]
-[v F17195 `(v ~T0 @X0 0 tf ]
-[v F17197 `(v ~T0 @X0 0 tf ]
-[v F17199 `(v ~T0 @X0 0 tf ]
+[v F17527 `(v ~T0 @X0 0 tf ]
+[v F17529 `(v ~T0 @X0 0 tf ]
+[v F17531 `(v ~T0 @X0 0 tf ]
 "46274 /opt/microchip/mplabx/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8/pic/include/proc/pic18f57k42.h
 [s S2087 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S2087 . LATE0 LATE1 LATE2 ]
@@ -98,6 +85,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S2086 . . . ]
 "46285
 [v _LATEbits `VS2086 ~T0 @X0 0 e@16318 ]
+"205 mcc_generated_files/tmr5.c
+[c E16787 0 1 2 3 4 5 .. ]
+[n E16787 . UI_STATE_INIT UI_STATE_HOST UI_STATE_DEBUG UI_STATE_LOG UI_STATE_MON UI_STATE_ERROR  ]
+[c E16768 0 1 2 3 .. ]
+[n E16768 . DIS_STR DIS_HELP DIS_ERR DIS_CLEAR  ]
+"170 ./vconfig.h
+[s S2239 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 :1 `uc 1 `E16768 1 `E16768 1 `us 1 `us 1 ]
+[n S2239 terminal_type mesgid TID mcode mparm cmdlen log_seq host_display_ack info help_temp ceid log_num ]
+"205
+[s S2240 `E16787 1 `uc -> 64 `i `uc -> 64 `i `uc -> 16 `i `Vo 1 `Vo 1 `Vo 1 `Vc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `E16787 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :2 `uc 1 :1 `uc 1 `S2239 1 `Vuc 1 `Vuc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `Va 1 `Va 1 `Va 1 `Va 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 ]
+[n S2240 V_data ui_state buf info rbuf ticks blight ac_time testing sys_info ac_on ac_off time_info get_time_text error abort msg_error msg_ret alarm float_ticks boost_ticks wdt_ticks ui_sw r_checksum t_checksum checksum_error mode_pwm sequences all_errors set_sequ debug help stack help_id screen response ticker cc_state flipper calib enter sensor_set fixup cc_active system_stable blight_off in_float in_boost lowint_count timerint_count tx_count rx_count adc_count spi_count switch_count ]
+"62 mcc_generated_files/tmr5.c
+[v _V `S2240 ~T0 @X0 0 e ]
 "111 mcc_generated_files/../mbmc.h
 [v _check_day_time `(a ~T0 @X0 0 ef ]
 "47021 /opt/microchip/mplabx/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8/pic/include/proc/pic18f57k42.h
@@ -1620,7 +1620,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "60 mcc_generated_files/tmr5.c
 [v _timer5ReloadVal `Vus ~T0 @X0 1 e ]
 "61
-[v _TMR5_InterruptHandler `*F17176 ~T0 @X0 1 e ]
+[v _TMR5_InterruptHandler `*F17508 ~T0 @X0 1 e ]
 "69
 [v _TMR5_Initialize `(v ~T0 @X0 1 ef ]
 "70
@@ -1638,9 +1638,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "86
 [e = _TMR5L -> -> 192 `i `uc ]
 "89
-[e = _timer5ReloadVal -> | << -> _TMR5H `i -> 8 `i -> _TMR5L `i `us ]
-"92
 [e = . . _PIR8bits 0 1 -> -> 0 `i `uc ]
+"92
+[e = _timer5ReloadVal -> | << -> _TMR5H `i -> 8 `i -> _TMR5L `i `us ]
 "95
 [e = . . _PIE8bits 0 1 -> -> 1 `i `uc ]
 "98
@@ -1648,7 +1648,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "101
 [e = _T5CON -> -> 17 `i `uc ]
 "102
-[e :UE 2242 ]
+[e :UE 2244 ]
 }
 "104
 [v _TMR5_StartTimer `(v ~T0 @X0 1 ef ]
@@ -1659,7 +1659,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "107
 [e = . . _T5CONbits 1 0 -> -> 1 `i `uc ]
 "108
-[e :UE 2243 ]
+[e :UE 2245 ]
 }
 "110
 [v _TMR5_StopTimer `(v ~T0 @X0 1 ef ]
@@ -1670,7 +1670,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "113
 [e = . . _T5CONbits 1 0 -> -> 0 `i `uc ]
 "114
-[e :UE 2244 ]
+[e :UE 2246 ]
 }
 "116
 [v _TMR5_ReadTimer `(us ~T0 @X0 1 ef ]
@@ -1694,9 +1694,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _readVal -> | << -> -> _readValHigh `us `ui -> 8 `i -> _readValLow `ui `us ]
 "129
 [e ) _readVal ]
-[e $UE 2245  ]
+[e $UE 2247  ]
 "130
-[e :UE 2245 ]
+[e :UE 2247 ]
 }
 "132
 [v _TMR5_WriteTimer `(v ~T0 @X0 1 ef1`us ]
@@ -1708,128 +1708,129 @@ Version 4.0 HI-TECH Software Intermediate Code
 "133
 [f ]
 "134
-[e $ ! == -> . . _T5CONbits 0 2 `i -> 1 `i 2247  ]
+[e $ ! == -> . . _T5CONbits 0 2 `i -> 1 `i 2249  ]
+"135
 {
-"136
+"137
 [e = . . _T5CONbits 1 0 -> -> 0 `i `uc ]
-"139
-[e = _TMR5H -> >> -> _timerVal `ui -> 8 `i `uc ]
 "140
-[e = _TMR5L -> _timerVal `uc ]
-"143
-[e = . . _T5CONbits 1 0 -> -> 1 `i `uc ]
-"144
-}
-[e $U 2248  ]
-[e :U 2247 ]
-{
-"146
 [e = _TMR5H -> >> -> _timerVal `ui -> 8 `i `uc ]
-"147
+"141
 [e = _TMR5L -> _timerVal `uc ]
-"148
+"144
+[e = . . _T5CONbits 1 0 -> -> 1 `i `uc ]
+"145
 }
-[e :U 2248 ]
+[e $U 2250  ]
+"146
+[e :U 2249 ]
+"147
+{
 "149
-[e :UE 2246 ]
-}
+[e = _TMR5H -> >> -> _timerVal `ui -> 8 `i `uc ]
+"150
+[e = _TMR5L -> _timerVal `uc ]
 "151
-[v _TMR5_Reload `(v ~T0 @X0 1 ef ]
+}
+[e :U 2250 ]
 "152
+[e :UE 2248 ]
+}
+"154
+[v _TMR5_Reload `(v ~T0 @X0 1 ef ]
+"155
 {
 [e :U _TMR5_Reload ]
 [f ]
-"153
-[e ( _TMR5_WriteTimer (1 _timer5ReloadVal ]
-"154
-[e :UE 2249 ]
-}
 "156
-[v _TMR5_StartSinglePulseAcquisition `(v ~T0 @X0 1 ef ]
+[e ( _TMR5_WriteTimer (1 _timer5ReloadVal ]
 "157
+[e :UE 2251 ]
+}
+"159
+[v _TMR5_StartSinglePulseAcquisition `(v ~T0 @X0 1 ef ]
+"160
 {
 [e :U _TMR5_StartSinglePulseAcquisition ]
 [f ]
-"158
-[e = . . _T5GCONbits 1 2 -> -> 1 `i `uc ]
-"159
-[e :UE 2250 ]
-}
 "161
-[v _TMR5_CheckGateValueStatus `(uc ~T0 @X0 1 ef ]
+[e = . . _T5GCONbits 1 2 -> -> 1 `i `uc ]
 "162
+[e :UE 2252 ]
+}
+"164
+[v _TMR5_CheckGateValueStatus `(uc ~T0 @X0 1 ef ]
+"165
 {
 [e :U _TMR5_CheckGateValueStatus ]
 [f ]
-"163
+"166
 [e ) . . _T5GCONbits 1 1 ]
-[e $UE 2251  ]
-"164
-[e :UE 2251 ]
+[e $UE 2253  ]
+"167
+[e :UE 2253 ]
 }
 [v $root$_TMR5_ISR `(v ~T0 @X0 0 e ]
-"166
+"169
 [v _TMR5_ISR `(v ~T1 @X0 1 ef ]
-"167
+"170
 {
 [e :U _TMR5_ISR ]
 [f ]
-"168
-[v F17193 `Vui ~T0 @X0 1 s CountCallBack ]
-[i F17193
+"171
+[v F17525 `Vui ~T0 @X0 1 s CountCallBack ]
+[i F17525
 -> -> 0 `i `ui
 ]
-"171
+"174
 [e = . . _PIR8bits 0 1 -> -> 0 `i `uc ]
-"172
-[e ( _TMR5_WriteTimer (1 _timer5ReloadVal ]
 "175
-[e $ ! >= =+ F17193 -> -> 1 `i `Vui -> + -> 197 `i -> . _V 35 `i `ui 2253  ]
+[e ( _TMR5_WriteTimer (1 _timer5ReloadVal ]
+"178
+[e $ ! >= =+ F17525 -> -> 1 `i `Vui -> -> 200 `i `ui 2255  ]
+"179
 {
-"177
-[e ( _TMR5_CallBack ..  ]
-"180
-[e = F17193 -> -> 0 `i `ui ]
 "181
-}
-[e :U 2253 ]
-"182
-[e :UE 2252 ]
-}
+[e ( _TMR5_CallBack ..  ]
 "184
-[v _TMR5_CallBack `(v ~T0 @X0 1 ef ]
+[e = F17525 -> -> 0 `i `ui ]
 "185
+}
+[e :U 2255 ]
+"186
+[e :UE 2254 ]
+}
+"188
+[v _TMR5_CallBack `(v ~T0 @X0 1 ef ]
+"189
 {
 [e :U _TMR5_CallBack ]
 [f ]
-"190
-[e $ ! != _TMR5_InterruptHandler -> -> 0 `i `*F17195 2255  ]
-{
 "191
-[e ( *U _TMR5_InterruptHandler ..  ]
+[e $ ! != _TMR5_InterruptHandler -> -> 0 `i `*F17527 2257  ]
 "192
-}
-[e :U 2255 ]
-"193
-[e :UE 2254 ]
-}
-"195
-[v _TMR5_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F17197 ]
-"196
 {
-[e :U _TMR5_SetInterruptHandler ]
+"193
+[e ( *U _TMR5_InterruptHandler ..  ]
+"194
+}
+[e :U 2257 ]
 "195
-[v _InterruptHandler `*F17199 ~T0 @X0 1 r1 ]
-"196
-[f ]
-"197
-[e = _TMR5_InterruptHandler _InterruptHandler ]
-"198
 [e :UE 2256 ]
 }
-"200
-[v _TMR5_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
+"197
+[v _TMR5_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F17529 ]
+{
+[e :U _TMR5_SetInterruptHandler ]
+[v _InterruptHandler `*F17531 ~T0 @X0 1 r1 ]
+[f ]
+"198
+[e = _TMR5_InterruptHandler _InterruptHandler ]
+"199
+[e :UE 2258 ]
+}
 "201
+[v _TMR5_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
 {
 [e :U _TMR5_DefaultInterruptHandler ]
 [f ]
@@ -1844,58 +1845,58 @@ Version 4.0 HI-TECH Software Intermediate Code
 "208
 [e = . _V 35 -> -> 0 `i `uc ]
 "210
-[e $ ! || != -> . . _PORTDbits 0 4 `i -> 0 `i != -> . . _PORTDbits 0 5 `i -> 0 `i 2258  ]
+[e $ ! || != -> . . _PORTDbits 0 4 `i -> 0 `i != -> . . _PORTDbits 0 5 `i -> 0 `i 2260  ]
 {
 "211
-[e $ ! > -> =+ . _V 20 -> -> 1 `i `uc `i -> 75 `i 2259  ]
+[e $ ! > -> =+ . _V 20 -> -> 1 `i `uc `i -> 75 `i 2261  ]
 {
 "212
-[e :U 2261 ]
+[e :U 2263 ]
 {
 "213
-[e :U 2265 ]
+[e :U 2267 ]
 {
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 2264 ]
+[e :U 2266 ]
 "214
-[e :U 2268 ]
+[e :U 2270 ]
 {
 [e = . . _LATEbits 0 2 -> ~ -> . . _LATEbits 0 2 `i `uc ]
 }
-[e :U 2267 ]
+[e :U 2269 ]
 "215
-[e :U 2271 ]
+[e :U 2273 ]
 {
 [e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 2270 ]
+[e :U 2272 ]
 "216
-[e :U 2274 ]
+[e :U 2276 ]
 {
 [e = . . _LATEbits 0 1 -> ~ -> . . _LATEbits 0 1 `i `uc ]
 }
-[e :U 2273 ]
+[e :U 2275 ]
 "217
 [e = . . _LATEbits 0 0 -> ~ -> . . _LATEbits 0 0 `i `uc ]
 "218
 }
-[e :U 2260 ]
-[e $U 2261  ]
 [e :U 2262 ]
+[e $U 2263  ]
+[e :U 2264 ]
 "219
 }
-[e :U 2259 ]
+[e :U 2261 ]
 "220
 }
-[e $U 2275  ]
-[e :U 2258 ]
+[e $U 2277  ]
+[e :U 2260 ]
 {
 "221
 [e = . _V 20 -> -> 0 `i `uc ]
 "222
 }
-[e :U 2275 ]
+[e :U 2277 ]
 "223
-[e :UE 2257 ]
+[e :UE 2259 ]
 }

@@ -13,12 +13,12 @@
   @Description
     This source file provides APIs for TMR5.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.77
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.6
 	Device            :  PIC18F57K42
 	Driver Version    :  2.11
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.05 and above
-        MPLAB 	          :  MPLAB X 5.20
+        Compiler          :  XC8 2.30 and above
+        MPLAB 	          :  MPLAB X 5.40
  */
 
 /*
@@ -85,11 +85,11 @@ void TMR5_Initialize(void)
 	//TMR5L 192; 
 	TMR5L = 0xC0;
 
-	// Load the TMR value to reload variable
-	timer5ReloadVal = (uint16_t) ((TMR5H << 8) | TMR5L);
-
 	// Clearing IF flag before enabling the interrupt.
 	PIR8bits.TMR5IF = 0;
+
+    // Load the TMR value to reload variable
+    timer5ReloadVal=(uint16_t)((TMR5H << 8) | TMR5L);
 
 	// Enabling TMR5 interrupt.
 	PIE8bits.TMR5IE = 1;
@@ -124,14 +124,15 @@ uint16_t TMR5_ReadTimer(void)
 	readValLow = TMR5L;
 	readValHigh = TMR5H;
 
-	readVal = ((uint16_t) readValHigh << 8) | readValLow;
+    readVal = ((uint16_t)readValHigh << 8) | readValLow;
 
 	return readVal;
 }
 
 void TMR5_WriteTimer(uint16_t timerVal)
 {
-	if (T5CONbits.NOT_SYNC == 1) {
+    if (T5CONbits.NOT_SYNC == 1)
+    {
 		// Stop the Timer by writing to TMRxON bit
 		T5CONbits.TMR5ON = 0;
 
@@ -140,8 +141,10 @@ void TMR5_WriteTimer(uint16_t timerVal)
 		TMR5L = timerVal;
 
 		// Start the Timer after writing to the register
-		T5CONbits.TMR5ON = 1;
-	} else {
+        T5CONbits.TMR5ON =1;
+    }
+    else
+    {
 		// Write to the Timer5 register
 		TMR5H = (timerVal >> 8);
 		TMR5L = timerVal;
@@ -160,10 +163,10 @@ void TMR5_StartSinglePulseAcquisition(void)
 
 uint8_t TMR5_CheckGateValueStatus(void)
 {
-	return(T5GCONbits.T5GVAL);
+    return (T5GCONbits.T5GVAL);
 }
 
-void __interrupt(irq(TMR5), base(8), low_priority) TMR5_ISR()
+void __interrupt(irq(TMR5),base(8),low_priority) TMR5_ISR()
 {
 	static volatile unsigned int CountCallBack = 0;
 
@@ -171,8 +174,9 @@ void __interrupt(irq(TMR5), base(8), low_priority) TMR5_ISR()
 	PIR8bits.TMR5IF = 0;
 	TMR5_WriteTimer(timer5ReloadVal);
 
-	// callback function - called every 100th pass
-	if (++CountCallBack >= (TMR5_INTERRUPT_TICKER_FACTOR + V.ticker)) {
+    // callback function - called every 200th pass
+    if (++CountCallBack >= TMR5_INTERRUPT_TICKER_FACTOR)
+    {
 		// ticker function call
 		TMR5_CallBack();
 
@@ -184,21 +188,17 @@ void __interrupt(irq(TMR5), base(8), low_priority) TMR5_ISR()
 void TMR5_CallBack(void)
 {
 	// Add your custom callback code here
-#ifdef DEBUG_TRM5
-	DEBUG2_Toggle();
-#endif
-	if (TMR5_InterruptHandler) {
+    if(TMR5_InterruptHandler)
+    {
 		TMR5_InterruptHandler();
 	}
 }
 
-void TMR5_SetInterruptHandler(void (* InterruptHandler)(void))
-{
+void TMR5_SetInterruptHandler(void (* InterruptHandler)(void)){
 	TMR5_InterruptHandler = InterruptHandler;
 }
 
-void TMR5_DefaultInterruptHandler(void)
-{
+void TMR5_DefaultInterruptHandler(void){
 	// add your TMR5 interrupt custom code
 	// or set custom function using TMR5_SetInterruptHandler()
 	SLED = (uint8_t) ~SLED;

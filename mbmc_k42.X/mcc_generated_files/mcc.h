@@ -13,12 +13,12 @@
   @Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.77
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.6
         Device            :  PIC18F57K42
         Driver Version    :  2.00
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.05 and above or later
-        MPLAB             :  MPLAB X 5.20
+        Compiler          :  XC8 2.30 and above or later
+        MPLAB             :  MPLAB X 5.40
 */
 
 /*
@@ -51,21 +51,22 @@
 #include "pin_manager.h"
 #include <stdint.h>
 #include <stdbool.h>
+#include <conio.h>
 #include "interrupt_manager.h"
-#include "crc.h"
-#include "adcc.h"
-#include "fvr.h"
-#include "tmr5.h"
-#include "tmr6.h"
-#include "tmr3.h"
-#include "pwm8.h"
-#include "tmr2.h"
-#include "memory.h"
-#include "ext_int.h"
-#include "uart2.h"
-#include "uart1.h"
 #include "dma1.h"
 #include "dma2.h"
+#include "crc.h"
+#include "fvr.h"
+#include "adcc.h"
+#include "tmr5.h"
+#include "tmr6.h"
+#include "pwm8.h"
+#include "tmr3.h"
+#include "tmr2.h"
+#include "ext_int.h"
+#include "memory.h"
+#include "uart2.h"
+#include "uart1.h"
 #include "spi1.h"
 #include "clkref.h"
 
@@ -191,6 +192,17 @@ bool WWDT_TimeOutStatusGet(void);
  */
 bool WWDT_WindowViolationStatusGet(void);
       
+/**
+ * @Param
+    none
+ * @Returns
+    none
+ * @Description
+    Initializes the System Arbiter for DMA to the default priority.
+ * @Example
+    SystemArbiter_DMA_Initialize();
+ */
+void SystemArbiter_Initialize(void);
 
 #endif	/* MCC_H */
 /**

@@ -13,12 +13,12 @@
   @Description
     This source file provides APIs for UART1.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.77
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.6
 	Device            :  PIC18F57K42
         Driver Version    :  2.4.0
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.05 and above
-        MPLAB             :  MPLAB X 5.20
+        Compiler          :  XC8 2.30 and above
+        MPLAB             :  MPLAB X 5.40
  */
 
 /*
@@ -50,8 +50,6 @@
 #include <xc.h>
 #include "uart1.h"
 #include "interrupt_manager.h"
-#include "pin_manager.h"
-#include "../vconfig.h"
 
 /**
   Section: Macro Declarations
@@ -62,7 +60,6 @@
 /**
   Section: Global Variables
  */
-extern struct V_data V;
 
 
 static volatile uint8_t uart1RxHead = 0;

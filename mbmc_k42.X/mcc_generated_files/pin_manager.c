@@ -13,12 +13,12 @@
   Description:
     This header file provides implementations for pin APIs for all pins selected in the GUI.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.77
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.6
         Device            :  PIC18F57K42
         Driver Version    :  2.11
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.05 and above
-        MPLAB             :  MPLAB X 5.20
+        Compiler          :  XC8 2.30 and above
+        MPLAB             :  MPLAB X 5.40
 
     Copyright (c) 2013 - 2015 released Microchip Technology Inc.  All rights reserved.
 */
@@ -142,7 +142,6 @@ void PIN_MANAGER_Initialize(void)
     
 	
     U2RXPPS = 0x0F;   //RB7->UART2:RX2;    
-    SPI1SCKPPS = 0x13;   //RC3->SPI1:SCK1;    
     RB6PPS = 0x16;   //RB6->UART2:TX2;    
     RC3PPS = 0x1E;   //RC3->SPI1:SCK1;    
     INT0PPS = 0x08;   //RB0->EXT_INT:INT0;    

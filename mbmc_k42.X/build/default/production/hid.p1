@@ -1,24 +1,24 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "3 hid.c
-[c E16561 0 1 2 3 4 .. ]
-[n E16561 . HID_MAIN HID_PWR HID_RUN HID_AUX HID_LAST  ]
-[c E16568 0 1 2 3 4 5 .. ]
-[n E16568 . H_STATE_INIT H_STATE_DISPLAY H_STATE_WAIT H_STATE_LOG H_STATE_COMM H_STATE_ERROR  ]
+[c E16893 0 1 2 3 4 .. ]
+[n E16893 . HID_MAIN HID_PWR HID_RUN HID_AUX HID_LAST  ]
+[c E16900 0 1 2 3 4 5 .. ]
+[n E16900 . H_STATE_INIT H_STATE_DISPLAY H_STATE_WAIT H_STATE_LOG H_STATE_COMM H_STATE_ERROR  ]
 "54 ./hid.h
-[s S2242 `E16561 1 `E16568 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `uc 1 ]
-[n S2242 H_data hid_display h_state wait_select select_p wait_enter enter_p wait_calib calib_p sequence ]
+[s S2244 `E16893 1 `E16900 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `uc 1 ]
+[n S2244 H_data hid_display h_state wait_select select_p wait_enter enter_p wait_calib calib_p sequence ]
 "5 hid.c
-[c E16445 0 1 2 .. ]
-[n E16445 . SW_OFF SW_ON SW_INVALID  ]
+[c E16777 0 1 2 .. ]
+[n E16777 . SW_OFF SW_ON SW_INVALID  ]
 "47 ./dio.h
-[v _get_switch_bm `(E16445 ~T0 @X0 0 ef1`Cuc ]
+[v _get_switch_bm `(E16777 ~T0 @X0 0 ef1`Cuc ]
 "5 hid.c
-[c E16450 0 1 2 3 4 5 6 7 .. ]
-[n E16450 . S0 S1 SSELECT SENTER SCALIB S5 S6 SNULL  ]
+[c E16782 0 1 2 3 4 5 6 7 .. ]
+[n E16782 . S0 S1 SSELECT SENTER SCALIB S5 S6 SNULL  ]
 "50 ./dio.h
 [v _clear_switch `(v ~T0 @X0 0 ef1`uc ]
 "46
-[v _get_switch `(E16445 ~T0 @X0 0 ef1`Cuc ]
+[v _get_switch `(E16777 ~T0 @X0 0 ef1`Cuc ]
 "250 /opt/microchip/mplabx/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "339
@@ -1518,76 +1518,76 @@ Version 4.0 HI-TECH Software Intermediate Code
 "48644
 [; <" TOSU equ 03FFFh ;# ">
 "3 hid.c
-[v _hid_input `(*S2242 ~T0 @X0 1 ef1`*S2242 ]
+[v _hid_input `(*S2244 ~T0 @X0 1 ef1`*S2244 ]
 "4
 {
 [e :U _hid_input ]
 "3
-[v _h `*S2242 ~T0 @X0 1 r1 ]
+[v _h `*S2244 ~T0 @X0 1 r1 ]
 "4
 [f ]
 "5
-[e $ ! != -> ( _get_switch_bm (1 -> . `E16450 2 `uc `ui -> -> 0 `i `ui 2244  ]
+[e $ ! != -> ( _get_switch_bm (1 -> . `E16782 2 `uc `ui -> -> 0 `i `ui 2246  ]
 {
 "6
 [e = . *U _h 2 -> -> 0 `i `a ]
 "7
-[e = . *U _h 3 -> ( _get_switch_bm (1 -> . `E16450 2 `uc `a ]
+[e = . *U _h 3 -> ( _get_switch_bm (1 -> . `E16782 2 `uc `a ]
 "8
-[e ( _clear_switch (1 -> . `E16450 2 `uc ]
+[e ( _clear_switch (1 -> . `E16782 2 `uc ]
 "9
 }
-[e :U 2244 ]
+[e :U 2246 ]
 "11
-[e $ ! != -> ( _get_switch_bm (1 -> . `E16450 3 `uc `ui -> -> 0 `i `ui 2245  ]
+[e $ ! != -> ( _get_switch_bm (1 -> . `E16782 3 `uc `ui -> -> 0 `i `ui 2247  ]
 {
 "12
 [e = . *U _h 4 -> -> 0 `i `a ]
 "13
-[e = . *U _h 5 -> ( _get_switch_bm (1 -> . `E16450 3 `uc `a ]
+[e = . *U _h 5 -> ( _get_switch_bm (1 -> . `E16782 3 `uc `a ]
 "14
-[e ( _clear_switch (1 -> . `E16450 3 `uc ]
+[e ( _clear_switch (1 -> . `E16782 3 `uc ]
 "15
 }
-[e :U 2245 ]
+[e :U 2247 ]
 "17
-[e $ ! != -> ( _get_switch_bm (1 -> . `E16450 4 `uc `ui -> -> 0 `i `ui 2246  ]
+[e $ ! != -> ( _get_switch_bm (1 -> . `E16782 4 `uc `ui -> -> 0 `i `ui 2248  ]
 {
 "18
 [e = . *U _h 6 -> -> 0 `i `a ]
 "19
-[e = . *U _h 7 -> ( _get_switch_bm (1 -> . `E16450 4 `uc `a ]
+[e = . *U _h 7 -> ( _get_switch_bm (1 -> . `E16782 4 `uc `a ]
 "20
-[e ( _clear_switch (1 -> . `E16450 4 `uc ]
+[e ( _clear_switch (1 -> . `E16782 4 `uc ]
 "21
 }
-[e :U 2246 ]
+[e :U 2248 ]
 "22
 [e ) _h ]
-[e $UE 2243  ]
+[e $UE 2245  ]
 "23
-[e :UE 2243 ]
+[e :UE 2245 ]
 }
 "25
-[v _hid_display `(*S2242 ~T0 @X0 1 ef1`*S2242 ]
+[v _hid_display `(*S2244 ~T0 @X0 1 ef1`*S2244 ]
 "26
 {
 [e :U _hid_display ]
 "25
-[v _h `*S2242 ~T0 @X0 1 r1 ]
+[v _h `*S2244 ~T0 @X0 1 r1 ]
 "26
 [f ]
 "27
 [e ( _hid_input (1 _h ]
 "29
-[e $U 2249  ]
+[e $U 2251  ]
 {
 "30
-[e :U 2250 ]
+[e :U 2252 ]
 "31
-[e = . *U _h 1 . `E16568 1 ]
+[e = . *U _h 1 . `E16900 1 ]
 "32
-[e = . *U _h 0 . `E16561 0 ]
+[e = . *U _h 0 . `E16893 0 ]
 "33
 [e = . *U _h 4 -> -> 1 `i `a ]
 "34
@@ -1595,127 +1595,127 @@ Version 4.0 HI-TECH Software Intermediate Code
 "35
 [e = . *U _h 6 -> -> 1 `i `a ]
 "36
-[e = . *U _h 3 -> . `E16445 0 `a ]
+[e = . *U _h 3 -> . `E16777 0 `a ]
 "37
-[e = . *U _h 5 -> . `E16445 0 `a ]
+[e = . *U _h 5 -> . `E16777 0 `a ]
 "38
-[e = . *U _h 7 -> . `E16445 0 `a ]
+[e = . *U _h 7 -> . `E16777 0 `a ]
 "39
-[e $U 2248  ]
+[e $U 2250  ]
 "40
-[e :U 2251 ]
+[e :U 2253 ]
 "41
-[e :U 2252 ]
+[e :U 2254 ]
 "42
-[e $ ! && ! != -> . *U _h 2 `i -> 0 `i == -> . *U _h 3 `i -> . `E16445 0 `i 2253  ]
+[e $ ! && ! != -> . *U _h 2 `i -> 0 `i == -> . *U _h 3 `i -> . `E16777 0 `i 2255  ]
 {
 "43
 [e = . *U _h 8 -> & -> =+ . *U _h 8 -> -> 1 `i `uc `i -> 3 `i `uc ]
 "44
-[e $ ! && == -> . *U _h 8 `i -> . `E16561 3 `i ! != -> ( _get_switch (1 -> . `E16450 4 `uc `ui -> -> 0 `i `ui 2254  ]
+[e $ ! && == -> . *U _h 8 `i -> . `E16893 3 `i ! != -> ( _get_switch (1 -> . `E16782 4 `uc `ui -> -> 0 `i `ui 2256  ]
 "45
 [e = . *U _h 8 -> & -> =+ . *U _h 8 -> -> 1 `i `uc `i -> 3 `i `uc ]
-[e :U 2254 ]
+[e :U 2256 ]
 "46
-[e = . *U _h 0 -> . *U _h 8 `E16561 ]
+[e = . *U _h 0 -> . *U _h 8 `E16893 ]
 "47
 [e = . *U _h 2 -> -> 1 `i `a ]
 "48
 }
-[e :U 2253 ]
+[e :U 2255 ]
 "49
-[e $U 2248  ]
+[e $U 2250  ]
 "50
 }
-[e $U 2248  ]
-[e :U 2249 ]
-[e [\ -> . *U _h 1 `ui , $ -> . `E16568 0 `ui 2250
- , $ -> . `E16568 1 `ui 2252
- 2251 ]
-[e :U 2248 ]
+[e $U 2250  ]
+[e :U 2251 ]
+[e [\ -> . *U _h 1 `ui , $ -> . `E16900 0 `ui 2252
+ , $ -> . `E16900 1 `ui 2254
+ 2253 ]
+[e :U 2250 ]
 "51
 [e ) _h ]
-[e $UE 2247  ]
+[e $UE 2249  ]
 "52
-[e :UE 2247 ]
+[e :UE 2249 ]
 }
 "54
-[v _check_enter_button `(a ~T0 @X0 1 ef1`*S2242 ]
+[v _check_enter_button `(a ~T0 @X0 1 ef1`*S2244 ]
 "55
 {
 [e :U _check_enter_button ]
 "54
-[v _h `*S2242 ~T0 @X0 1 r1 ]
+[v _h `*S2244 ~T0 @X0 1 r1 ]
 "55
 [f ]
 "56
-[e $ ! && ! != -> . *U _h 4 `i -> 0 `i == -> . *U _h 5 `i -> . `E16445 0 `i 2256  ]
+[e $ ! && ! != -> . *U _h 4 `i -> 0 `i == -> . *U _h 5 `i -> . `E16777 0 `i 2258  ]
 {
 "57
 [e = . *U _h 4 -> -> 1 `i `a ]
 "58
 [e ) -> -> 1 `i `a ]
-[e $UE 2255  ]
+[e $UE 2257  ]
 "59
 }
-[e :U 2256 ]
+[e :U 2258 ]
 "60
 [e ) -> -> 0 `i `a ]
-[e $UE 2255  ]
+[e $UE 2257  ]
 "61
-[e :UE 2255 ]
+[e :UE 2257 ]
 }
 "63
-[v _check_calib_button `(a ~T0 @X0 1 ef1`*S2242 ]
+[v _check_calib_button `(a ~T0 @X0 1 ef1`*S2244 ]
 "64
 {
 [e :U _check_calib_button ]
 "63
-[v _h `*S2242 ~T0 @X0 1 r1 ]
+[v _h `*S2244 ~T0 @X0 1 r1 ]
 "64
 [f ]
 "65
-[e $ ! && ! != -> . *U _h 6 `i -> 0 `i == -> . *U _h 7 `i -> . `E16445 0 `i 2258  ]
+[e $ ! && ! != -> . *U _h 6 `i -> 0 `i == -> . *U _h 7 `i -> . `E16777 0 `i 2260  ]
 {
 "66
 [e = . *U _h 6 -> -> 1 `i `a ]
 "67
 [e ) -> -> 1 `i `a ]
-[e $UE 2257  ]
+[e $UE 2259  ]
 "68
 }
-[e :U 2258 ]
+[e :U 2260 ]
 "69
 [e ) -> -> 0 `i `a ]
-[e $UE 2257  ]
+[e $UE 2259  ]
 "70
-[e :UE 2257 ]
+[e :UE 2259 ]
 }
 "72
-[v _clear_hid_pflags `(v ~T0 @X0 1 ef1`*S2242 ]
+[v _clear_hid_pflags `(v ~T0 @X0 1 ef1`*S2244 ]
 "73
 {
 [e :U _clear_hid_pflags ]
 "72
-[v _h `*S2242 ~T0 @X0 1 r1 ]
+[v _h `*S2244 ~T0 @X0 1 r1 ]
 "73
 [f ]
 "74
-[e = . *U _h 3 -> . `E16445 0 `a ]
+[e = . *U _h 3 -> . `E16777 0 `a ]
 "75
-[e = . *U _h 5 -> . `E16445 0 `a ]
+[e = . *U _h 5 -> . `E16777 0 `a ]
 "76
-[e = . *U _h 7 -> . `E16445 0 `a ]
+[e = . *U _h 7 -> . `E16777 0 `a ]
 "77
-[e :UE 2259 ]
+[e :UE 2261 ]
 }
 "79
-[v _clear_hid_wflags `(v ~T0 @X0 1 ef1`*S2242 ]
+[v _clear_hid_wflags `(v ~T0 @X0 1 ef1`*S2244 ]
 "80
 {
 [e :U _clear_hid_wflags ]
 "79
-[v _h `*S2242 ~T0 @X0 1 r1 ]
+[v _h `*S2244 ~T0 @X0 1 r1 ]
 "80
 [f ]
 "81
@@ -1725,5 +1725,5 @@ Version 4.0 HI-TECH Software Intermediate Code
 "83
 [e = . *U _h 6 -> -> 1 `i `a ]
 "84
-[e :UE 2260 ]
+[e :UE 2262 ]
 }

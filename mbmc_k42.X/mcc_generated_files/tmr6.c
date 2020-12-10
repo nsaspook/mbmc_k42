@@ -13,12 +13,12 @@
   @Description
     This source file provides APIs for TMR6.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.77
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.6
 	Device            :  PIC18F57K42
 	Driver Version    :  2.11
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.05 and above 
-        MPLAB 	          :  MPLAB X 5.20
+        Compiler          :  XC8 2.30 and above 
+        MPLAB 	          :  MPLAB X 5.40
  */
 
 /*
@@ -169,7 +169,7 @@ void TMR6_LoadPeriodRegister(uint8_t periodVal)
 	TMR6_Period8BitSet(periodVal);
 }
 
-void __interrupt(irq(TMR6), base(8)) TMR6_ISR()
+void __interrupt(irq(TMR6),base(8)) TMR6_ISR()
 {
 
 	// clear the TMR6 interrupt flag
@@ -184,24 +184,20 @@ void TMR6_CallBack(void)
 {
 	// Add your custom callback code here
 	// this code executes every TMR6_INTERRUPT_TICKER_FACTOR periods of TMR6
-	if (TMR6_InterruptHandler) {
+    if(TMR6_InterruptHandler)
+    {
 		TMR6_InterruptHandler();
 	}
 }
 
-void TMR6_SetInterruptHandler(void (* InterruptHandler)(void))
-{
+void TMR6_SetInterruptHandler(void (* InterruptHandler)(void)){
 	TMR6_InterruptHandler = InterruptHandler;
 }
 
-/*
- * update software timers and parse simple serial port #1 single character commands
- */
-void TMR6_DefaultInterruptHandler(void)
-{
-	static uint8_t i, j = 0;
+void TMR6_DefaultInterruptHandler(void){
 	// add your TMR6 interrupt custom code
 	// or set custom function using TMR6_SetInterruptHandler()
+	static uint8_t i,j=0;
 
 	//Decrement each software timer
 	for (i = 0; i < TMR_COUNT; i++) {

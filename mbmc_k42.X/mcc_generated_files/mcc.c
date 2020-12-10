@@ -13,12 +13,12 @@
   @Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.77
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.6
         Device            :  PIC18F57K42
         Driver Version    :  2.00
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.05 and above or later
-        MPLAB             :  MPLAB X 5.20
+        Compiler          :  XC8 2.30 and above or later
+        MPLAB             :  MPLAB X 5.40
 */
 
 /*
@@ -55,8 +55,10 @@ void SYSTEM_Initialize(void)
     OSCILLATOR_Initialize();
     WWDT_Initialize();
     FVR_Initialize();
+    DMA2_Initialize();
     CRC_Initialize();
     ADCC_Initialize();
+    DMA1_Initialize();
     PWM8_Initialize();
     TMR2_Initialize();
     EXT_INT_Initialize();
@@ -66,9 +68,8 @@ void SYSTEM_Initialize(void)
     UART1_Initialize();
     UART2_Initialize();
     SPI1_Initialize();
-    DMA2_Initialize();
-    DMA1_Initialize();
     CLKREF_Initialize();
+    SystemArbiter_Initialize();
 }
 
 void OSCILLATOR_Initialize(void)
@@ -153,6 +154,13 @@ void WWDT_TimerClear(void)
     readBack = WDTCON0;
     CLRWDT();
     GIE = state;
+}
+void SystemArbiter_Initialize(void)
+{
+    // This function is dependant on the PR1WAY CONFIG bit
+    PRLOCK = 0x55;
+    PRLOCK = 0xAA;
+    PRLOCKbits.PRLOCKED = 1;
 }
 /**
  End of File
