@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2518,7 +2518,7 @@ body 1206</description>
 <wire x1="10.0584" y1="38.0619" x2="10.16" y2="38.1" width="0.254" layer="1"/>
 <wire x1="5.0292" y1="26.7462" x2="5.08" y2="26.67" width="0.254" layer="1"/>
 </signal>
-<signal name="N$19">
+<signal name="SIG4">
 <contactref element="IC1" pad="7"/>
 <contactref element="JP3" pad="4"/>
 <wire x1="9.8298" y1="35.5473" x2="10.0584" y2="35.5473" width="0.254" layer="16"/>
@@ -2529,7 +2529,7 @@ body 1206</description>
 <wire x1="10.0584" y1="35.5473" x2="10.16" y2="35.56" width="0.254" layer="16"/>
 <wire x1="5.1435" y1="24.2316" x2="5.08" y2="24.13" width="0.254" layer="16"/>
 </signal>
-<signal name="N$22">
+<signal name="SIG5">
 <contactref element="IC1" pad="15"/>
 <contactref element="JP3" pad="5"/>
 <wire x1="17.145" y1="43.0911" x2="17.7165" y2="43.0911" width="0.254" layer="16"/>
