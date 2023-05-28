@@ -75,7 +75,9 @@ uint32_t get_2hz(uint8_t mode)
 	static uint32_t tmp = 0;
 
 	if (mode)
+	{
 		return tmp;
+	}
 
 	INTCONbits.GIEH = 0;
 	tmp = V.clock_2hz;
@@ -87,8 +89,9 @@ uint32_t get_500hz(uint8_t mode)
 {
 	static uint32_t tmp = 0;
 
-	if (mode)
+	if (mode) {
 		return tmp;
+	}
 
 	INTCONbits.GIEH = 0;
 	tmp = V.clock_500hz;

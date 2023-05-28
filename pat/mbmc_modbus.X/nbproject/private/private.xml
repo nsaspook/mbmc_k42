@@ -8,7 +8,9 @@
             <file>file:/old_os/mplabx/ihc_mon/ihc_vector.c</file>
         </group>
         <group>
+            <file>file:/root/mbmc_k42/pat/crc.c</file>
             <file>file:/root/mbmc_k42/pat/ibsmon.c</file>
+            <file>file:/root/mbmc_k42/pat/ihc_vector.c</file>
         </group>
     </open-files>
 </project-private>

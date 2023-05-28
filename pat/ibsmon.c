@@ -63,6 +63,7 @@
  * 1.5 switch to High Voltage chip programming
  * 1.6 convert to xc8 compiler
  * 1.7 sequence mode and error modbus commands
+ * 3.0 i400hz 3-phase inverter modbus commands
  */
 
 #include <stdint.h>
@@ -97,7 +98,7 @@ volatile uint8_t cc_stream_file, cc_buffer[MAX_DATA]; // half-duplex so we can s
 uint32_t crc_error;
 comm_type cstate = CLEAR;
 cmd_type modbus_command = G_MODE;
-const char *build_date = __DATE__, *build_time = __TIME__, build_version[5] = "1.7";
+const char *build_date = __DATE__, *build_time = __TIME__, build_version[5] = "3.0a";
 
 void SetDCPWM1(uint16_t dutycycle)
 {
