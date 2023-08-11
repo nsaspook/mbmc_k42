@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -3852,7 +3852,7 @@ design rules under a new name.</description>
 <via x="56.4642" y="63.7032" extent="1-16" drill="0.35"/>
 <via x="54.7878" y="52.578" extent="1-16" drill="0.35"/>
 </signal>
-<signal name="N$61">
+<signal name="5VDC_REF">
 <contactref element="J1" pad="14"/>
 <contactref element="IC3" pad="6"/>
 <contactref element="C7" pad="1"/>

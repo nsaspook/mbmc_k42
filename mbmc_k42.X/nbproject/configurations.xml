@@ -101,11 +101,11 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.40</languageToolchainVersion>
+        <languageToolchainVersion>2.41</languageToolchainVersion>
         <platform>2</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC18F-K_DFP" vendor="Microchip" version="1.7.134"/>
+        <pack name="PIC18F-K_DFP" vendor="Microchip" version="1.9.255"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

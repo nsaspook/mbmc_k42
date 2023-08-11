@@ -14615,6 +14615,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="VREF4095" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="B1,27" package3d_urn="urn:adsk.eagle:package:27944/2"/>
 <part name="INT0" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="B1,27" package3d_urn="urn:adsk.eagle:package:27944/2"/>
 <part name="VSS20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
+<part name="SL4" library="con-amp-quick" library_urn="urn:adsk.eagle:library:125" deviceset="M04" device="" package3d_urn="urn:adsk.eagle:package:5958/1" value="SPI SEL"/>
+<part name="VSS38" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
+<part name="VDD10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -15282,6 +15285,14 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="VSS20" gate="G$1" x="-17.78" y="-35.56" smashed="yes" rot="R180">
 <attribute name="VALUE" x="-15.24" y="-30.48" size="1.778" layer="96" rot="R270"/>
 </instance>
+<instance part="SL4" gate="G$1" x="187.96" y="106.68" smashed="yes" rot="R270">
+<attribute name="VALUE" x="180.34" y="111.76" size="1.778" layer="96" rot="R270"/>
+<attribute name="NAME" x="196.342" y="111.76" size="1.778" layer="95" rot="R270"/>
+</instance>
+<instance part="VSS38" gate="G$1" x="182.88" y="101.6" smashed="yes" rot="R270">
+<attribute name="VALUE" x="177.8" y="104.14" size="1.778" layer="96"/>
+</instance>
+<instance part="VDD10" gate="G$1" x="187.96" y="99.06" smashed="yes" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -15662,6 +15673,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="IC2" gate="G$1" pin="1"/>
 <pinref part="VSS20" gate="G$1" pin="VSS"/>
 </segment>
+<segment>
+<pinref part="SL4" gate="G$1" pin="1"/>
+<pinref part="VSS38" gate="G$1" pin="VSS"/>
+<junction x="185.42" y="101.6"/>
+</segment>
 </net>
 <net name="N$21" class="0">
 <segment>
@@ -15838,6 +15854,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="VDD9" gate="G$1" pin="VDD"/>
 <junction x="2.54" y="-58.42"/>
 </segment>
+<segment>
+<pinref part="SL4" gate="G$1" pin="2"/>
+<pinref part="VDD10" gate="G$1" pin="VDD"/>
+<junction x="187.96" y="101.6"/>
+</segment>
 </net>
 <net name="N$27" class="0">
 <segment>
@@ -16009,6 +16030,13 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="U$1" gate="G$1" pin="OUT1"/>
 <wire x1="200.66" y1="-7.62" x2="190.5" y2="-7.62" width="0.1524" layer="91"/>
 <junction x="190.5" y="-7.62"/>
+<wire x1="157.48" y1="91.44" x2="160.02" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="SL4" gate="G$1" pin="3"/>
+<junction x="190.5" y="101.6"/>
+<wire x1="160.02" y1="91.44" x2="190.5" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="91.44" x2="190.5" y2="101.6" width="0.1524" layer="91"/>
+<junction x="160.02" y="91.44"/>
+<junction x="157.48" y="91.44"/>
 </segment>
 </net>
 <net name="N$40" class="0">
@@ -16089,6 +16117,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="U$1" gate="G$1" pin="OUT2"/>
 <wire x1="203.2" y1="-12.7" x2="190.5" y2="-12.7" width="0.1524" layer="91"/>
 <junction x="190.5" y="-12.7"/>
+<wire x1="152.4" y1="93.98" x2="193.04" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="SL4" gate="G$1" pin="4"/>
+<wire x1="193.04" y1="93.98" x2="193.04" y2="101.6" width="0.1524" layer="91"/>
+<junction x="152.4" y="93.98"/>
+<junction x="193.04" y="101.6"/>
 </segment>
 </net>
 <net name="N$44" class="0">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -15304,7 +15304,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <attribute name="TP_SIGNAL_NAME" x="-36.83" y="-3.81" size="1.778" layer="97"/>
 </instance>
 <instance part="REFVDD" gate="G$1" x="-45.72" y="17.78" smashed="yes">
-<attribute name="NAME" x="-46.99" y="19.05" size="1.778" layer="95"/>
+<attribute name="NAME" x="-46.99" y="21.59" size="1.778" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="-44.45" y="16.51" size="1.778" layer="97"/>
 </instance>
 <instance part="VREF5VREF" gate="G$1" x="-30.48" y="-40.64" smashed="yes">
@@ -15320,7 +15320,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <attribute name="TP_SIGNAL_NAME" x="21.59" y="-77.47" size="1.778" layer="97" rot="R180"/>
 </instance>
 <instance part="REF24V" gate="G$1" x="-71.12" y="17.78" smashed="yes">
-<attribute name="NAME" x="-72.39" y="19.05" size="1.778" layer="95"/>
+<attribute name="NAME" x="-74.93" y="21.59" size="1.778" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="-69.85" y="16.51" size="1.778" layer="97"/>
 </instance>
 </instances>
@@ -16537,7 +16537,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="-33.02" y1="-86.36" x2="-33.02" y2="-78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$61" class="0">
+<net name="5VDC_REF" class="0">
 <segment>
 <pinref part="J1" gate="G$1" pin="14"/>
 <wire x1="-48.26" y1="91.44" x2="-48.26" y2="99.06" width="0.1524" layer="91"/>
@@ -16554,6 +16554,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <junction x="-38.1" y="-43.18"/>
 <pinref part="VREF5VREF" gate="G$1" pin="TP"/>
 <junction x="-30.48" y="-43.18"/>
+<label x="-45.72" y="96.52" size="1.778" layer="95"/>
+<label x="-27.94" y="-45.72" size="1.778" layer="95"/>
+<label x="-17.78" y="5.08" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$70" class="0">

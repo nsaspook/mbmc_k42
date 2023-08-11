@@ -55,7 +55,7 @@
  *	nsaspook@nsaspook.com
  * cpu clock 10mhz external
  * Version
- * 1.0 Rover Elite RS485 controller status monitor
+ * 1.0 Rover Elite 20A MPPT RS485 controller status monitor
  * 1.1 for rev 1.1 PCB
  * 1.2 full CRC for TX and RX
  * 1.3 status led blinker code
