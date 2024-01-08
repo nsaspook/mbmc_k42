@@ -13,13 +13,13 @@
   @Description
     This header file provides implementations for driver APIs for SPI1.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.6
-	Device            :  PIC18F57K42
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
+        Device            :  PIC18F57K42
         Driver Version    :  1.0.0
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.30 and above or later
-        MPLAB             :  MPLAB X 5.40
- */
+        Compiler          :  XC8 2.36 and above or later
+        MPLAB             :  MPLAB X 6.00
+*/
 
 /*
     (c) 2018 Microchip Technology Inc. and its subsidiaries. 
@@ -42,7 +42,7 @@
     CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT 
     OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS 
     SOFTWARE.
- */
+*/
 
 #include "spi1.h"
 #include <xc.h>
@@ -58,21 +58,21 @@ typedef struct {
 
 //con0 == SPIxCON0, con1 == SPIxCON1, con2 == SPIxCON2, baud == SPIxBAUD, operation == Master/Slave
 static const spi1_configuration_t spi1_configuration[] = {   
-    { 0x83, 0x40, 0x3, 0x4f, 0 }
+    { 0x2, 0x20, 0x0, 0x5, 0 }
 };
 
 void SPI1_Initialize(void)
 {
     //EN enabled; LSBF MSb first; MST bus master; BMODE every byte; 
-    SPI1CON0 = 0x83;
-    //SMP Middle; CKE Active to idle; CKP Idle:Low, Active:High; FST disabled; SSP active high; SDIP active high; SDOP active high; 
-	SPI1CON1 = 0x40;
+    SPI1CON0 = 0x02;
+    //SMP Middle; CKE Idle to active; CKP Idle:High, Active:Low; FST disabled; SSP active high; SDIP active high; SDOP active high; 
+    SPI1CON1 = 0x20;
     //SSET disabled; TXR required for a transfer; RXR suspended if the RxFIFO is full; 
-	SPI1CON2 = 0x03;
-    //CLKSEL FOSC; 
-    SPI1CLK = 0x00;
-    //BAUD 79; 
-	SPI1BAUD = 0x4F;
+    SPI1CON2 = 0x00;
+    //CLKSEL MFINTOSC; 
+    SPI1CLK = 0x02;
+    //BAUD 5; 
+    SPI1BAUD = 0x05;
     TRISCbits.TRISC3 = 0;
 }
 
@@ -83,12 +83,11 @@ bool SPI1_Open(spi1_modes_t spi1UniqueConfiguration)
         SPI1CON0 = spi1_configuration[spi1UniqueConfiguration].con0;
         SPI1CON1 = spi1_configuration[spi1UniqueConfiguration].con1;
         SPI1CON2 = spi1_configuration[spi1UniqueConfiguration].con2 | (_SPI1CON2_SPI1RXR_MASK | _SPI1CON2_SPI1TXR_MASK);
-        SPI1CLK  = 0x00;
         SPI1BAUD = spi1_configuration[spi1UniqueConfiguration].baud;        
         TRISCbits.TRISC3 = spi1_configuration[spi1UniqueConfiguration].operation;
         SPI1CON0bits.EN = 1;
         return true;
-	}
+    }
     return false;
 }
 
@@ -98,7 +97,7 @@ void SPI1_Close(void)
 }
 
 uint8_t SPI1_ExchangeByte(uint8_t data)
-    {
+{
     SPI1TCNTL = 1;
     SPI1TXB = data;
     while(!PIR2bits.SPI1RXIF);
@@ -106,16 +105,16 @@ uint8_t SPI1_ExchangeByte(uint8_t data)
 }
 
 void SPI1_ExchangeBlock(void *block, size_t blockSize)
-        {
+{
     uint8_t *data = block;
     while(blockSize--)
-            {
+    {
         SPI1TCNTL = 1;
         SPI1TXB = *data;
         while(!PIR2bits.SPI1RXIF);
         *data++ = SPI1RXB;
-                }
-				}
+    }
+}
 
 // Half Duplex SPI Functions
 void SPI1_WriteBlock(void *block, size_t blockSize)
@@ -124,22 +123,22 @@ void SPI1_WriteBlock(void *block, size_t blockSize)
     while(blockSize--)
     {
         SPI1_ExchangeByte(*data++);
-			}
-        }
+    }
+}
 
 void SPI1_ReadBlock(void *block, size_t blockSize)
-        {
+{
     uint8_t *data = block;
     while(blockSize--)
-            {
+    {
         *data++ = SPI1_ExchangeByte(0);
-				}
-			}
+    }
+}
 
 void SPI1_WriteByte(uint8_t byte)
 {
     SPI1TXB = byte;
-		}
+}
 
 uint8_t SPI1_ReadByte(void)
 {

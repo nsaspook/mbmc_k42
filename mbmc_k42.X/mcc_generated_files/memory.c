@@ -13,12 +13,12 @@
   @Description
     This file provides implementations of driver APIs for MEMORY.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.6
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
         Device            :  PIC18F57K42
-        Driver Version    :  2.12
+        Driver Version    :  2.1.3
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.30 and above
-        MPLAB             :  MPLAB X 5.40
+        Compiler          :  XC8 2.36 and above
+        MPLAB             :  MPLAB X 6.00
 */
 
 /*
@@ -83,7 +83,6 @@ void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte)
     for (i=0; i<ERASE_FLASH_BLOCKSIZE; i++)
     {
         flashRdBufPtr[i] = FLASH_ReadByte((blockStartAddr+i));
-        CLRWDT();
     }
 
     // Load byte at offset
@@ -126,8 +125,6 @@ int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr)
         {
             asm("TBLWTPOSTINC");
         }
-
-        CLRWDT();
     }
 
     NVMCON1bits.NVMREG = 2;

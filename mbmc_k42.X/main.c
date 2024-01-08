@@ -13,7 +13,7 @@
   Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.6
+	Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.6
 	Device            :  PIC18F57K42
 	Driver Version    :  2.00
  */
@@ -138,6 +138,7 @@
 
 #pragma warning disable 520
 #pragma warning disable 1498
+#pragma warning disable 1090
 
 #ifndef __DEFINED_int24_t
 typedef signed long long int24_t;
@@ -246,7 +247,8 @@ void main(void)
 	INTERRUPT_GlobalInterruptLowEnable();
 
 	V.ui_state = UI_STATE_INIT;
-	WWDT_SoftEnable();
+	//	WWDT_SoftEnable();
+
 
 	/*
 	 * RS-232 link I/O relay defaults to monitor/log mode with no power
@@ -273,7 +275,9 @@ void main(void)
 
 			init_display();
 			eaDogM_CursorOff();
+#ifdef USE_DAC
 			set_dac(); // set both channels to zero volts
+#endif
 			/*
 			 * load the battery to reduce surface charge
 			 */
@@ -516,23 +520,23 @@ void main(void)
 			switch (H.hid_display) {
 			case HID_PWR:
 				V.calib = false;
-				sprintf(get_vterm_ptr(0, 0), "PV %c W %3.2f       ", (C.day) ? 'D' : ' ', C.p_pv);
+				sprintf(get_vterm_ptr(0, 0), "PV %c W %3.2f         ", (C.day) ? 'D' : ' ', C.p_pv);
 				sprintf(get_vterm_ptr(1, 0), "LOAD W %3.2f LA %2.2f      ", C.p_load, C.c_load);
 				sprintf(get_vterm_ptr(2, 0), "MPPT W %3.2f %d       ", C.p_mppt, V.cc_state);
 
-				sprintf(get_vterm_ptr(0, 1), "PV %c WH %3.2f        ", (C.day) ? 'D' : ' ', C.pvkw);
-				sprintf(get_vterm_ptr(1, 1), "LOAD WH %3.2f         ", C.loadkw);
-				sprintf(get_vterm_ptr(2, 1), "INV  WH %3.2f         ", C.invkw);
+				sprintf(get_vterm_ptr(0, 1), "PV %c WH %3.2f         ", (C.day) ? 'D' : ' ', C.pvkw);
+				sprintf(get_vterm_ptr(1, 1), "LOAD WH %3.2f          ", C.loadkw);
+				sprintf(get_vterm_ptr(2, 1), "INV  WH %3.2f          ", C.invkw);
 				break;
 			case HID_MAIN:
 				V.calib = false;
-				sprintf(get_vterm_ptr(0, 0), "PV %2.2f PA %2.2f     ", calc_fixups(C.calc[V_PV], WIDE_ZERO), calc_fixups(C.calc[C_MPPT], WIDE_ZERO | NO_NEG));
-				sprintf(get_vterm_ptr(1, 0), "BV %2.2f BA %2.2f     ", calc_fixups(C.calc[V_BAT], WIDE_ZERO), C.calc[C_BATT]);
-				sprintf(get_vterm_ptr(2, 0), "CV %2.2f CA %2.2f     ", calc_fixups(C.calc[V_CC], WIDE_ZERO), C.calc[C_PV]);
+				sprintf(get_vterm_ptr(0, 0), "PV %2.2f PA %2.2f      ", calc_fixups(C.calc[V_PV], WIDE_ZERO), calc_fixups(C.calc[C_MPPT], WIDE_ZERO | NO_NEG));
+				sprintf(get_vterm_ptr(1, 0), "BV %2.2f BA %2.2f      ", calc_fixups(C.calc[V_BAT], WIDE_ZERO), C.calc[C_BATT]);
+				sprintf(get_vterm_ptr(2, 0), "CV %2.2f CA %2.2f      ", calc_fixups(C.calc[V_CC], WIDE_ZERO), C.calc[C_PV]);
 
-				sprintf(get_vterm_ptr(0, 1), "BAT IWH %4.1f         ", C.bkwi);
-				sprintf(get_vterm_ptr(1, 1), "BAT OWH %4.1f         ", C.bkwo);
-				sprintf(get_vterm_ptr(2, 1), "BAT TWH %4.1f         ", C.bkwi + C.bkwo);
+				sprintf(get_vterm_ptr(0, 1), "BAT IWH %4.1f          ", C.bkwi);
+				sprintf(get_vterm_ptr(1, 1), "BAT OWH %4.1f          ", C.bkwo);
+				sprintf(get_vterm_ptr(2, 1), "BAT TWH %4.1f          ", C.bkwi + C.bkwo);
 				break;
 			case HID_RUN:
 				V.calib = false;
@@ -540,9 +544,9 @@ void main(void)
 				sprintf(get_vterm_ptr(1, 0), "BAH T%3.2f D%3.2f       ", C.dynamic_ah, C.dynamic_ah_daily);
 				sprintf(get_vterm_ptr(2, 0), "S%cC %d RUN %d V%2.2f        ", spinners(5, false), C.soc, C.runtime, C.calc[V_BAT]);
 
-				sprintf(get_vterm_ptr(0, 1), "ESR  %2.6f             ", C.esr);
-				sprintf(get_vterm_ptr(1, 1), "R1 %2.3f %3.4f         ", C.bv_one_load, C.load_i1);
-				sprintf(get_vterm_ptr(2, 1), "R2 %2.3f %3.4f         ", C.bv_full_load, C.load_i2);
+				sprintf(get_vterm_ptr(0, 1), "ESR  %2.6f              ", C.esr);
+				sprintf(get_vterm_ptr(1, 1), "R1 %2.3f %3.4f          ", C.bv_one_load, C.load_i1);
+				sprintf(get_vterm_ptr(2, 1), "R2 %2.3f %3.4f          ", C.bv_full_load, C.load_i2);
 				break;
 			case HID_AUX:
 				if (!V.calib) { // clear buffer and start from zero
@@ -577,9 +581,11 @@ void main(void)
 			display_history();
 
 			wait_lcd_done();
+#ifdef USE_DAC
 			set_dac_a(3.333);
 			set_dac_b(6.666);
 			set_dac();
+#endif
 		}
 
 		/*

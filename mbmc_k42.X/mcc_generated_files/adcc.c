@@ -13,12 +13,12 @@
   @Description
     This source file provides implementations for driver APIs for ADCC.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.6
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
         Device            :  PIC18F57K42
-        Driver Version    :  2.1.4
+        Driver Version    :  2.1.5
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.30 and above
-        MPLAB             :  MPLAB X 5.40
+        Compiler          :  XC8 2.36 and above
+        MPLAB             :  MPLAB X 6.00
 */
 
 /*
@@ -167,7 +167,6 @@ adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel)
     // Wait for the conversion to finish
     while (ADCON0bits.ADGO)
     {
-        CLRWDT();
     }
     
     
@@ -196,15 +195,15 @@ void ADCC_DischargeSampleCapacitor(void)
 void ADCC_LoadAcquisitionRegister(uint16_t acquisitionValue)
 {
     //Load the ADACQH and ADACQL registers.
-    ADACQH = acquisitionValue >> 8; 
-    ADACQL = acquisitionValue;  
+    ADACQH = (uint8_t) (acquisitionValue >> 8); 
+    ADACQL = (uint8_t) acquisitionValue;  
 }
 
 void ADCC_SetPrechargeTime(uint16_t prechargeTime)
 {
     //Load the ADPREH and ADPREL registers.
-    ADPREH = prechargeTime >> 8;  
-    ADPREL = prechargeTime;
+    ADPREH = (uint8_t) (prechargeTime >> 8);  
+    ADPREL = (uint8_t) prechargeTime;
 }
 
 void ADCC_SetRepeatCount(uint8_t repeatCount)
@@ -252,22 +251,22 @@ uint16_t ADCC_GetPreviousResult(void)
 void ADCC_DefineSetPoint(uint16_t setPoint)
 {
     //Sets the ADSTPTH and ADSTPTL registers
-    ADSTPTH = setPoint >> 8;
-    ADSTPTL = setPoint;
+    ADSTPTH = (uint8_t) (setPoint >> 8);
+    ADSTPTL = (uint8_t) setPoint;
 }
 
 void ADCC_SetUpperThreshold(uint16_t upperThreshold)
 {
     //Sets the ADUTHH and ADUTHL registers
-    ADUTHH = upperThreshold >> 8;
-    ADUTHL = upperThreshold;
+    ADUTHH = (uint8_t) (upperThreshold >> 8);
+    ADUTHL = (uint8_t) (upperThreshold);
 }
 
 void ADCC_SetLowerThreshold(uint16_t lowerThreshold)
 {
     //Sets the ADLTHH and ADLTHL registers
-    ADLTHH = lowerThreshold >> 8;
-    ADLTHL = lowerThreshold;
+    ADLTHH = (uint8_t) (lowerThreshold >> 8);
+    ADLTHL = (uint8_t) lowerThreshold;
 }
 
 uint16_t ADCC_GetErrorCalculation(void)

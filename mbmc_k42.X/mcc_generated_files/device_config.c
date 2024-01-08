@@ -13,12 +13,12 @@
   @Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.6
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
         Device            :  PIC18F57K42
         Driver Version    :  2.00
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.30 and above or later
-        MPLAB             :  MPLAB X 5.40
+        Compiler          :  XC8 2.36 and above or later
+        MPLAB             :  MPLAB X 6.00
 */
 
 /*
@@ -74,7 +74,7 @@
 
 // CONFIG3L
 #pragma config WDTCPS = WDTCPS_15    // WDT Period selection bits->Divider ratio 1:1048576
-#pragma config WDTE = SWDTEN    // WDT operating mode->WDT enabled/disabled by SWDTEN bit
+#pragma config WDTE = OFF    // WDT operating mode->WDT Disabled; SWDTEN is ignored
 
 // CONFIG3H
 #pragma config WDTCWS = WDTCWS_7    // WDT Window Select bits->window always open (100%); software control; keyed access not required
@@ -87,11 +87,11 @@
 #pragma config WRTAPP = OFF    // Application Block write protection bit->Application Block not write protected
 
 // CONFIG4H
-#pragma config WRTB = OFF    // Configuration Register Write Protection bit->Configuration registers (300000-30000Bh) not write-protected
-#pragma config WRTC = OFF    // Boot Block Write Protection bit->Boot Block (000000-0007FFh) not write-protected
+#pragma config WRTB = OFF    // Boot Block Write Protection bit->Boot Block not write-protected
+#pragma config WRTC = OFF    // Configuration Register Write Protection bit->Configuration registers not write-protected
 #pragma config WRTD = OFF    // Data EEPROM Write Protection bit->Data EEPROM not write-protected
 #pragma config WRTSAF = OFF    // SAF Write protection bit->SAF not Write Protected
-#pragma config LVP = ON    // Low Voltage Programming Enable bit->Low voltage programming enabled. MCLR/VPP pin function is MCLR. MCLRE configuration bit is ignored
+#pragma config LVP = OFF    // Low Voltage Programming Enable bit->HV on MCLR/VPP must be used for programming
 
 // CONFIG5L
 #pragma config CP = OFF    // PFM and Data EEPROM Code Protection bit->PFM and Data EEPROM code protection disabled

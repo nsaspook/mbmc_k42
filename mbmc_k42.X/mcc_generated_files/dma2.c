@@ -13,12 +13,12 @@
   @Description
     This source file provides APIs for DMA2.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.6
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
         Device            :  PIC18F57K42
         Driver Version    :  1.0.0
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.30 and above
-        MPLAB 	          :  MPLAB X 5.40
+        Compiler          :  XC8 2.36 and above
+        MPLAB 	          :  MPLAB X 6.00
 */
 
 /*
@@ -58,18 +58,18 @@
 
 void DMA2_Initialize(void)
 {
-    //Source Address : SrcVarName1
-    DMA2SSA = &SrcVarName1;
-    //Destination Address : &DstVarName1
-    DMA2DSA= &DstVarName1;
-    //DMODE unchanged; DSTP not cleared; SMR GPR; SMODE unchanged; SSTP cleared; 
-    DMA2CON1 = 0x01;
+    //Source Address : uart1_dma_buf
+    DMA2SSA = &uart1_dma_buf;
+    //Destination Address : &U1TXB
+    DMA2DSA = &U1TXB;
+    //DMODE unchanged; DSTP not cleared; SMR GPR; SMODE incremented; SSTP cleared; 
+    DMA2CON1 = 0x03;
     //Source Message Size : 1
     DMA2SSZ = 1;
     //Destination Message Size : 1
     DMA2DSZ = 1;
-    //Start Trigger : SIRQ None; 
-    DMA2SIRQ = 0x00;
+    //Start Trigger : SIRQ U1TX; 
+    DMA2SIRQ = 0x1C;
     //Abort Trigger : AIRQ None; 
     DMA2AIRQ = 0x00;
 	
@@ -87,8 +87,8 @@ void DMA2_Initialize(void)
     PIE5bits.DMA2AIE = 0;
     PIE5bits.DMA2ORIE = 0;
 	
-    //EN enabled; SIRQEN disabled; DGO not in progress; AIRQEN disabled; 
-    DMA2CON0 = 0x80;
+    //EN enabled; SIRQEN enabled; DGO not in progress; AIRQEN disabled; 
+    DMA2CON0 = 0xC0;
 	
 }
 

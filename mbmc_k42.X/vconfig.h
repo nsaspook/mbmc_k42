@@ -156,7 +156,7 @@ extern "C" {
 		volatile uint8_t LCD_DATA : 1;
 		uint16_t delay;
 		uint8_t config;
-		struct ringBufS_t *tx1b, *tx1a;
+		uint8_t * txbuf;
 		volatile int32_t int_count;
 	};
 

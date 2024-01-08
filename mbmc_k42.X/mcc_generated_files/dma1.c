@@ -1,6 +1,6 @@
 /**
   DMA1 Generated Driver File
-  
+
   @Company
     Microchip Technology Inc.
 
@@ -13,13 +13,13 @@
   @Description
     This source file provides APIs for DMA1.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.6
-	Device            :  PIC18F57K42
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
+        Device            :  PIC18F57K42
         Driver Version    :  1.0.0
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.30 and above
-        MPLAB 	          :  MPLAB X 5.40
- */
+        Compiler          :  XC8 2.36 and above
+        MPLAB 	          :  MPLAB X 6.00
+*/
 
 /*
     (c) 2018 Microchip Technology Inc. and its subsidiaries. 
@@ -42,16 +42,14 @@
     CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT 
     OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS 
     SOFTWARE.
- */
+*/
 
 /**
   Section: Included Files
- */
+*/
 
 #include <xc.h>
 #include "dma1.h"
-#include "interrupt_manager.h"
-#include "../vconfig.h"
 
 void (*DMA1_SCNTI_InterruptHandler)(void);
 void (*DMA1_DCNTI_InterruptHandler)(void);
@@ -60,14 +58,14 @@ void (*DMA1_ORI_InterruptHandler)(void);
 
 /**
   Section: DMA1 APIs
- */
+*/
 
 void DMA1_Initialize(void)
 {
-    //Source Address : SrcVarName0
-    DMA1SSA = &SrcVarName0;
-    //Destination Address : &DstVarName0
-    DMA1DSA= &DstVarName0;
+    //Source Address : lcd_dma_buf
+    DMA1SSA = &lcd_dma_buf;
+    //Destination Address : &SPI1TXB
+    DMA1DSA = &SPI1TXB;
     //DMODE unchanged; DSTP not cleared; SMR GPR; SMODE incremented; SSTP cleared; 
     DMA1CON1 = 0x03;
     //Source Message Size : 1
@@ -76,9 +74,9 @@ void DMA1_Initialize(void)
     DMA1DSZ = 1;
     //Start Trigger : SIRQ SPI1TX; 
     DMA1SIRQ = 0x15;
-    //Abort Trigger : AIRQ INT2; 
-    DMA1AIRQ = 0x3D;
-
+    //Abort Trigger : AIRQ None; 
+    DMA1AIRQ = 0x00;
+	
     // Clear Destination Count Interrupt Flag bit
     PIR2bits.DMA1DCNTIF = 0; 
     // Clear Source Count Interrupt Flag bit
@@ -87,7 +85,7 @@ void DMA1_Initialize(void)
     PIR2bits.DMA1AIF = 0; 
     // Clear Overrun Interrupt Flag bit
     PIR2bits.DMA1ORIF =0; 
-
+    
     PIE2bits.DMA1DCNTIE = 1;
 	DMA1_SetDCNTIInterruptHandler(DMA1_DefaultInterruptHandler);
     PIE2bits.DMA1SCNTIE = 1; 
@@ -97,8 +95,8 @@ void DMA1_Initialize(void)
     PIE2bits.DMA1ORIE =1; 
 	DMA1_SetORIInterruptHandler(DMA1_DefaultInterruptHandler);
 	
-    //EN enabled; SIRQEN disabled; DGO not in progress; AIRQEN disabled; 
-    DMA1CON0 = 0x80;
+    //EN enabled; SIRQEN enabled; DGO not in progress; AIRQEN disabled; 
+    DMA1CON0 = 0xC0;
 	
 }
 
@@ -236,5 +234,5 @@ void DMA1_DefaultInterruptHandler(void){
     // or set custom function using DMA1_SetSCNTIInterruptHandler() /DMA1_SetDCNTIInterruptHandler() /DMA1_SetAIInterruptHandler() /DMA1_SetORIInterruptHandler()
 }
 /**
-  End of File
- */
+ End of File
+*/

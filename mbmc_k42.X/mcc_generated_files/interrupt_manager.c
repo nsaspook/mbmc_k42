@@ -15,12 +15,12 @@
     For individual peripheral handlers please see the peripheral driver for
     all modules selected in the GUI.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.6
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
         Device            :  PIC18F57K42
         Driver Version    :  2.12
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.30 and above or later
-        MPLAB 	          :  MPLAB X 5.40
+        Compiler          :  XC8 2.36 and above or later
+        MPLAB 	          :  MPLAB X 6.00
 */
 
 /*
@@ -68,6 +68,7 @@ void  INTERRUPT_Initialize (void)
     IVTLOCKbits.IVTLOCKED = 0x01; // lock IVT
 
     GIE = state;
+
     // Assign peripheral interrupt priority vectors
     IPR2bits.DMA1AIP = 1;
     IPR2bits.DMA1DCNTIP = 1;
@@ -80,9 +81,9 @@ void  INTERRUPT_Initialize (void)
     IPR5bits.INT1IP = 0;
     IPR9bits.TMR6IP = 1;
     IPR8bits.TMR5IP = 0;
-    IPR6bits.TMR3IP = 0;
     IPR1bits.ADIP = 1;
     IPR1bits.ADTIP = 1;
+    IPR6bits.TMR3IP = 0;
 }
 
 void __interrupt(irq(default),base(8)) Default_ISR()

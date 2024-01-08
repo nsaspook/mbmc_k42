@@ -26,7 +26,16 @@ extern "C" {
 #include "vconfig.h"
 #include "ringbufs.h"
 
-extern struct V_data V;
+	extern struct V_data V;
+
+//#define USEMCC_SPI
+
+#define USE_LCD_DMA
+
+#define NSB		5
+#define LSB		21
+
+#define LCD_PWR_DELAY	350000
 
 #define LCD_CMD_MASK	0x01
 #define LCD_CMD_SET	0x100
@@ -36,6 +45,32 @@ extern struct V_data V;
 #define NHD_BL_LOW	2
 #define NHD_BL_MED	5
 #define NHD_BL_HIGH	8
+
+#define LCD_CMD_MASK	0x01
+#define LCD_CMD_SET	0x100
+#define LCD_CLEAR_HOME	0x04
+#define LCD_CMD_ON	0x41
+#define LCD_CMD_OFF	0x42
+#define LCD_CMD_HOME	0x46
+#define LCD_CMD_CLR	0x51
+#define LCD_CMD_CONT	0x52
+#define LCD_CMD_BRI	0x53
+#define NHD_CMD		0xFE
+#define NHD_POS		0x45
+#define NHD_BL_OFF	1
+#define NHD_BL_LOW	2
+#define NHD_BL_MED	5
+#define NHD_BL_HIGH	8
+#define NHD_CONT	45
+
+#define NHD_T_DELAY	8
+#define NHD_S_DELAY	200
+#define NHD_L_DELAY	800
+	
+#define LCD0		0
+#define LCD1		1
+#define LCD2		2
+#define LCD3		3
 
 	void wdtdelay(uint32_t);
 	void init_display(void);
@@ -56,6 +91,9 @@ extern struct V_data V;
 	void eaDogM_WriteStringAtPos(uint8_t, uint8_t, char *);
 	void eaDogM_WriteIntAtPos(uint8_t, uint8_t, uint8_t);
 	void eaDogM_WriteByteToCGRAM(uint8_t, uint8_t);
+
+	void clear_lcd_done(void);
+	void spi_rec_done(void);
 
 #define eaDogM_Cls()             eaDogM_WriteCommand(EADOGM_CMD_CLR)
 #define eaDogM_CursorOn()        eaDogM_WriteCommand(EADOGM_CMD_CURSOR_ON)
