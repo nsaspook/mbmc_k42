@@ -5,7 +5,7 @@
  * The end result is a 13-bit ADC value
  */
 
-#include <pic18f57k42.h>
+#include <xc.h>
 
 #include "daq.h"
 

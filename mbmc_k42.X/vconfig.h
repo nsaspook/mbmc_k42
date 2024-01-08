@@ -20,7 +20,7 @@ extern "C" {
 #include "mcc_generated_files/pin_manager.h"
 #include "ringbufs.h"
 
-#define VER	"1.56"
+#define VER	"2.00"
 	/*
 	 * 0.1 MBMC new version for one 24vdc battery string for the 57K42
 	 * 0.2 start to configure the hardware for mbmc duty
@@ -76,6 +76,7 @@ extern "C" {
 	 * 1.52 back to ext clock for ADC with increased time for hold sample
 	 * 1.53 fix lcd display line limits
 	 * 1.56 connection updates and structure fixes
+	 * 2.00 FM80 dump load system monitor
 	 */
 	//#define TESTING
 	//#define DISPLAY_SLOW
@@ -122,6 +123,7 @@ extern "C" {
 #define I_CODE		'*'  // info logging line code
 
 #define CAL_DELAY	64
+//#define SKIP_ESR
 
 	/*
 	 * offsets in bytes

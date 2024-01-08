@@ -5,7 +5,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "23
 [u S2292 `us 1 `uc -> 2 `i `S2290 1 ]
 [n S2292 dac_buf_type ld bd map ]
-"242 ./vconfig.h
+"244 ./vconfig.h
 [s S2289 `l 1 `l 1 `ul 1 `ul 1 `ul 1 `f 1 `f 1 `f 1 `f 1 `f 1 `s -> 13 `i `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `uc 1 ]
 [n S2289 hist_type pv_eff tot_eff ttg_t updates pclock peukert cef peukert_adj cef_calc cef_save h rate udod bsoc bound_rate bound_factor samplei sampleo ah drate esr rest_rate rest_factor esrp version ]
 "29 daq.c
@@ -33,16 +33,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "169 ./mcc_generated_files/adcc.h
 [v _ADCC_StartConversion `(v ~T0 @X0 0 ef1`E17147 ]
 "47140 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
-[s S2136 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2136 . LATE0 LATE1 LATE2 ]
+[s S2141 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2141 . LATE0 LATE1 LATE2 ]
 "47145
-[s S2137 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2137 . LE0 LE1 LE2 ]
+[s S2142 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2142 . LE0 LE1 LE2 ]
 "47139
-[u S2135 `S2136 1 `S2137 1 ]
-[n S2135 . . . ]
+[u S2140 `S2141 1 `S2142 1 ]
+[n S2140 . . . ]
 "47151
-[v _LATEbits `VS2135 ~T0 @X0 0 e@16318 ]
+[v _LATEbits `VS2140 ~T0 @X0 0 e@16318 ]
 "32 ./timers.h
 [v _StartTimer `(v ~T0 @X0 0 ef2`Cuc`Cus ]
 "131 daq.c
@@ -51,13 +51,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "33 ./timers.h
 [v _TimerDone `(a ~T0 @X0 0 ef1`Cuc ]
 "3398 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
-[s S147 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S147 . INT0IE ZCDIE ADIE ADTIE C1IE SMT1IE SMT1PRAIE SMT1PWAIE ]
+[s S152 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S152 . INT0IE ZCDIE ADIE ADTIE C1IE SMT1IE SMT1PRAIE SMT1PWAIE ]
 "3397
-[u S146 `S147 1 ]
-[n S146 . . ]
+[u S151 `S152 1 ]
+[n S151 . . ]
 "3409
-[v _PIE1bits `VS146 ~T0 @X0 0 e@14737 ]
+[v _PIE1bits `VS151 ~T0 @X0 0 e@14737 ]
 "158 daq.c
 [c E17587 0 1 .. ]
 [n E17587 . CONV O_CONV  ]
@@ -72,25 +72,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n E17434 . UI_STATE_INIT UI_STATE_HOST UI_STATE_DEBUG UI_STATE_LOG UI_STATE_MON UI_STATE_ERROR  ]
 [c E17415 0 1 2 3 .. ]
 [n E17415 . DIS_STR DIS_HELP DIS_ERR DIS_CLEAR  ]
-"170 ./vconfig.h
+"172 ./vconfig.h
 [s S2286 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 :1 `uc 1 `E17415 1 `E17415 1 `us 1 `us 1 ]
 [n S2286 terminal_type mesgid TID mcode mparm cmdlen log_seq host_display_ack info help_temp ceid log_num ]
-"205
+"207
 [s S2287 `E17434 1 `uc -> 64 `i `uc -> 64 `i `uc -> 16 `i `Vul 1 `Vul 1 `Vul 1 `Vc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `E17434 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :2 `uc 1 :1 `uc 1 `S2286 1 `Vuc 1 `Vuc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `Va 1 `Va 1 `Va 1 `Va 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 ]
 [n S2287 V_data ui_state buf info rbuf ticks blight ac_time testing sys_info ac_on ac_off time_info get_time_text error abort msg_error msg_ret alarm float_ticks boost_ticks wdt_ticks ui_sw r_checksum t_checksum checksum_error mode_pwm sequences all_errors set_sequ debug help stack help_id screen response ticker cc_state flipper calib enter sensor_set fixup cc_active system_stable blight_off in_float in_boost lowint_count timerint_count tx_count rx_count adc_count spi_count switch_count ]
 "40 ./daq.h
 [v _V `S2287 ~T0 @X0 0 e ]
 "22935 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
-[s S991 :1 `uc 1 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 ]
-[n S991 . BMODE MST LSBF . EN ]
+[s S996 :1 `uc 1 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 ]
+[n S996 . BMODE MST LSBF . EN ]
 "22942
-[s S992 :1 `uc 1 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 ]
-[n S992 . SPI1BMODE SPI1MST SPI1LSBF . SPI1SPIEN ]
+[s S997 :1 `uc 1 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 ]
+[n S997 . SPI1BMODE SPI1MST SPI1LSBF . SPI1SPIEN ]
 "22934
-[u S990 `S991 1 `S992 1 ]
-[n S990 . . . ]
+[u S995 `S996 1 `S997 1 ]
+[n S995 . . . ]
 "22950
-[v _SPI1CON0bits `VS990 ~T0 @X0 0 e@15636 ]
+[v _SPI1CON0bits `VS995 ~T0 @X0 0 e@15636 ]
 "22929
 [v _SPI1CON0 `Vuc ~T0 @X0 0 e@15636 ]
 "22995
@@ -102,49 +102,49 @@ Version 4.0 HI-TECH Software Intermediate Code
 "23297
 [v _SPI1BAUD `Vuc ~T0 @X0 0 e@15641 ]
 "23001
-[s S994 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S994 . SDOP SDIP SSP . FST CKP CKE SMP ]
+[s S999 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S999 . SDOP SDIP SSP . FST CKP CKE SMP ]
 "23011
-[s S995 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S995 . SPI1SDOP SPI1SDIP SPI1SSP . SPI1FST SPI1CKP SPI1CKE SPI1SMP ]
-"23000
-[u S993 `S994 1 `S995 1 ]
-[n S993 . . . ]
-"23022
-[v _SPI1CON1bits `VS993 ~T0 @X0 0 e@15637 ]
-"23181
 [s S1000 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1000 . RXBF . CLRBF RXRE . TXBE . TXWE ]
+[n S1000 . SPI1SDOP SPI1SDIP SPI1SSP . SPI1FST SPI1CKP SPI1CKE SPI1SMP ]
+"23000
+[u S998 `S999 1 `S1000 1 ]
+[n S998 . . . ]
+"23022
+[v _SPI1CON1bits `VS998 ~T0 @X0 0 e@15637 ]
+"23181
+[s S1005 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1005 . RXBF . CLRBF RXRE . TXBE . TXWE ]
 "23191
-[s S1001 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1001 . SPI1RXBF . SPI1CLRBF SPI1RXRE . SPI1TXBE . SPI1TXWE ]
+[s S1006 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1006 . SPI1RXBF . SPI1CLRBF SPI1RXRE . SPI1TXBE . SPI1TXWE ]
 "23180
-[u S999 `S1000 1 `S1001 1 ]
-[n S999 . . . ]
+[u S1004 `S1005 1 `S1006 1 ]
+[n S1004 . . . ]
 "23202
-[v _SPI1STATUSbits `VS999 ~T0 @X0 0 e@15639 ]
+[v _SPI1STATUSbits `VS1004 ~T0 @X0 0 e@15639 ]
 "46916
-[s S2130 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2130 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
+[s S2135 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2135 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
 "46926
-[s S2131 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2131 . LC0 LC1 LC2 LC3 LC4 LC5 LC6 LC7 ]
+[s S2136 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2136 . LC0 LC1 LC2 LC3 LC4 LC5 LC6 LC7 ]
 "46915
-[u S2129 `S2130 1 `S2131 1 ]
-[n S2129 . . . ]
+[u S2134 `S2135 1 `S2136 1 ]
+[n S2134 . . . ]
 "46937
-[v _LATCbits `VS2129 ~T0 @X0 0 e@16316 ]
+[v _LATCbits `VS2134 ~T0 @X0 0 e@16316 ]
 "47192
-[s S2139 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2139 . LATF0 LATF1 LATF2 LATF3 LATF4 LATF5 LATF6 LATF7 ]
+[s S2144 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2144 . LATF0 LATF1 LATF2 LATF3 LATF4 LATF5 LATF6 LATF7 ]
 "47202
-[s S2140 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2140 . LF0 LF1 LF2 LF3 LF4 LF5 LF6 LF7 ]
+[s S2145 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2145 . LF0 LF1 LF2 LF3 LF4 LF5 LF6 LF7 ]
 "47191
-[u S2138 `S2139 1 `S2140 1 ]
-[n S2138 . . . ]
+[u S2143 `S2144 1 `S2145 1 ]
+[n S2143 . . . ]
 "47213
-[v _LATFbits `VS2138 ~T0 @X0 0 e@16319 ]
+[v _LATFbits `VS2143 ~T0 @X0 0 e@16319 ]
 "66 ./mcc_generated_files/spi1.h
 [v _SPI1_ExchangeByte `(uc ~T0 @X0 0 ef1`uc ]
 "123 ./mcc_generated_files/crc.h

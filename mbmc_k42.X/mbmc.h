@@ -59,8 +59,8 @@ extern V_data V;
 #define ROR_LIMIT_SET	0.0001
 #define ROR_LIMIT_NOISE	0.0051
 
-#define ROR_WAIT	2000
-#define ROR_TIMES	30
+#define ROR_WAIT	20
+#define ROR_TIMES	1
 
 #define DAWN_VOLTS	22.0
 #define DUSK_VOLTS	12.0

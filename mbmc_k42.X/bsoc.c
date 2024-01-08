@@ -1,6 +1,8 @@
 #include "bsoc.h"
 #include "mcc_generated_files/interrupt_manager.h"
 
+const char *MQTT_ID = "DUMPLOAD";
+
 const uint32_t BVSOC_TABLE[BVSOC_SLOTS][2] = {
 	23000, 5,
 	23400, 10,
@@ -189,35 +191,45 @@ void calc_bsoc(void)
 		V.sys_info = false;
 		log_ptr = port_data_dma_ptr();
 		lcode = I_CODE;
-		sprintf((char*) log_ptr, " %c\r\n %c ,System Status: Version %s Build %s %s \r\n %c ,%s\r\n %c ,%10lu, %10lu, %10lu, %10lu, %10lu, %10lu, %10lu \r\n %c ,%s\r\n %c ,%10d, %10d, %10d, %10d, %10d, %10d, %10d, %10d, %10d, %10lu\r\n %c\r\n",
-			lcode,
-			lcode, VER, build_date, build_time,
-			lcode, infoline1,
-			lcode, V.lowint_count, V.timerint_count, V.tx_count, V.rx_count, V.adc_count, V.spi_count, V.switch_count,
-			lcode, infoline2,
-			lcode, C.hist[0].h[0], C.hist[0].h[9], C.hist[0].h[10], C.hist[0].h[3], C.hist[0].h[4], C.hist[0].h[5], C.hist[0].h[6], C.hist[0].h[11], C.hist[0].h[1], C.hist[0].updates,
-			lcode);
+		//		sprintf((char*) log_ptr, " %c\r\n %c ,System Status: Version %s Build %s %s \r\n %c ,%s\r\n %c ,%10lu, %10lu, %10lu, %10lu, %10lu, %10lu, %10lu \r\n %c ,%s\r\n %c ,%10d, %10d, %10d, %10d, %10d, %10d, %10d, %10d, %10d, %10lu\r\n %c\r\n",
+		//			lcode, VER, build_date, build_time,
+		//			lcode, infoline1,
+		//			lcode, V.lowint_count, V.timerint_count, V.tx_count, V.rx_count, V.adc_count, V.spi_count, V.switch_count,
+		//			lcode, infoline2,
+		//			lcode, C.hist[0].h[0], C.hist[0].h[9], C.hist[0].h[10], C.hist[0].h[3], C.hist[0].h[4], C.hist[0].h[5], C.hist[0].h[6], C.hist[0].h[11], C.hist[0].h[1], C.hist[0].updates,
+		//			lcode);
 		StartTimer(TMR_DISPLAY, SOCDELAY); // sync the spi dma display updates to avoid memory contention
 		send_port_data_dma(strlen((char*) log_ptr));
 	} else {
 		if (!log_update_wait++ && V.system_stable && !V.get_time_text) {
 			log_ptr = port_data_dma_ptr();
-			if (H.sequence == HID_AUX)
+			if (H.sequence == HID_AUX) {
 				lcode = I_CODE;
+			}
 
-			sprintf((char*) log_ptr, " %c ,%lu,%4.4f,%4.4f,%4.4f,%4.4f,%4.3f,%4.3f,%4.3f,%4.3f,%4.3f,%4.3f,%4.3f,%4.3f,%4.3f,%4.3f,%4.3f,%d,%d,%2.6f,%4.3f,%d,%d,%lu,%lu,%4.3f,%4.3f,%4.3f,%d\r\n",
-				lcode, V.ticks,
-				C.v_pv, C.v_cc, C.v_bat, C.v_inverter,
-				C.c_mppt, C.c_pv, C.c_bat,
-				C.p_mppt, C.p_pv, C.p_bat, C.p_load, C.p_inverter,
-				C.dynamic_ah, C.dynamic_ah_daily, C.pv_ah, C.soc, C.runtime,
-				C.esr, C.v_sensor, get_ac_charger_relay(), C.day, C.day_start, C.day_end, C.dynamic_ah_adj, C.hist[0].cef, C.hist[0].peukert,
-				V.cc_state);
+			/*
+			 * format data to JSON
+			 */
+			snprintf((char *) log_ptr, 510, "{\r\n     \"DLname\": \"%s\",\r\n     \"DLv_bat\": %f,\r\n     \"Qbuild_date\": \"%s\",\r\n     \"Qbuild_time\": \"%s\"\r\n}",
+				VER, C.v_bat, build_date, build_time);
+			/*
+			 * send the string to the external MQTT device
+			 */
+
+			//			sprintf((char*) log_ptr, " %c ,%lu,%4.4f,%4.4f,%4.4f,%4.4f,%4.3f,%4.3f,%4.3f,%4.3f,%4.3f,%4.3f,%4.3f,%4.3f,%4.3f,%4.3f,%4.3f,%d,%d,%2.6f,%4.3f,%d,%d,%lu,%lu,%4.3f,%4.3f,%4.3f,%d\r\n",
+			//				lcode, V.ticks,
+			//				C.v_pv, C.v_cc, C.v_bat, C.v_inverter,
+			//				C.c_mppt, C.c_pv, C.c_bat,
+			//				C.p_mppt, C.p_pv, C.p_bat, C.p_load, C.p_inverter,
+			//				C.dynamic_ah, C.dynamic_ah_daily, C.pv_ah, C.soc, C.runtime,
+			//				C.esr, C.v_sensor, get_ac_charger_relay(), C.day, C.day_start, C.day_end, C.dynamic_ah_adj, C.hist[0].cef, C.hist[0].peukert,
+			//				V.cc_state);
 			StartTimer(TMR_DISPLAY, SOCDELAY); // sync the spi dma display updates to avoid memory contention
 			send_port_data_dma(strlen((char*) log_ptr));
 		}
-		if (log_update_wait >= LOG_WAIT)
+		if (log_update_wait >= LOG_WAIT) {
 			log_update_wait = 0;
+		}
 	}
 
 	C.update = false;

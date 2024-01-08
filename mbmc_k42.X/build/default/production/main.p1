@@ -2,18 +2,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F17252 `(v ~T0 @X0 0 tf ]
 [v F17254 `(v ~T0 @X0 0 tf ]
 [v F17297 `(v ~T0 @X0 0 tf ]
-"162 main.c
+"163 main.c
 [c E17534 0 1 2 3 4 5 .. ]
 [n E17534 . UI_STATE_INIT UI_STATE_HOST UI_STATE_DEBUG UI_STATE_LOG UI_STATE_MON UI_STATE_ERROR  ]
 [c E17515 0 1 2 3 .. ]
 [n E17515 . DIS_STR DIS_HELP DIS_ERR DIS_CLEAR  ]
-"170 ./vconfig.h
+"172 ./vconfig.h
 [s S2290 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 :1 `uc 1 `E17515 1 `E17515 1 `us 1 `us 1 ]
 [n S2290 terminal_type mesgid TID mcode mparm cmdlen log_seq host_display_ack info help_temp ceid log_num ]
-"205
+"207
 [s S2291 `E17534 1 `uc -> 64 `i `uc -> 64 `i `uc -> 16 `i `Vul 1 `Vul 1 `Vul 1 `Vc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `E17534 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :2 `uc 1 :1 `uc 1 `S2290 1 `Vuc 1 `Vuc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `Va 1 `Va 1 `Va 1 `Va 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 ]
 [n S2291 V_data ui_state buf info rbuf ticks blight ac_time testing sys_info ac_on ac_off time_info get_time_text error abort msg_error msg_ret alarm float_ticks boost_ticks wdt_ticks ui_sw r_checksum t_checksum checksum_error mode_pwm sequences all_errors set_sequ debug help stack help_id screen response ticker cc_state flipper calib enter sensor_set fixup cc_active system_stable blight_off in_float in_boost lowint_count timerint_count tx_count rx_count adc_count spi_count switch_count ]
-"187 main.c
+"188 main.c
 [c E18312 0 1 2 3 4 .. ]
 [n E18312 . HID_MAIN HID_PWR HID_RUN HID_AUX HID_LAST  ]
 [c E18319 0 1 2 3 4 5 .. ]
@@ -21,7 +21,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "54 ./hid.h
 [s S2297 `E18312 1 `E18319 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `uc 1 ]
 [n S2297 H_data hid_display h_state wait_select select_p wait_enter enter_p wait_calib calib_p sequence ]
-"242 ./vconfig.h
+"244 ./vconfig.h
 [s S2293 `l 1 `l 1 `ul 1 `ul 1 `ul 1 `f 1 `f 1 `f 1 `f 1 `f 1 `s -> 13 `i `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `uc 1 ]
 [n S2293 hist_type pv_eff tot_eff ttg_t updates pclock peukert cef peukert_adj cef_calc cef_save h rate udod bsoc bound_rate bound_factor samplei sampleo ah drate esr rest_rate rest_factor esrp version ]
 "78 ./mbmc.h
@@ -51,7 +51,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S2187 . . . . . . ]
 "48317
 [v _STATUSbits `VS2187 ~T0 @X0 0 e@16344 ]
-"238 main.c
+"246 main.c
 [c E16936 0 1 2 4 5 6 10 11 12 13 59 60 61 62 63 .. ]
 [n E16936 . C_BATT C_PV V_CC V_BAT V_PV V_CMODE V_BBAT C_MPPT V_INVERTER V_LIGHT_SENSOR channel_VSS channel_Temp channel_DAC1 channel_FVR_Buffer1 channel_FVR_Buffer2  ]
 "86 ./mcc_generated_files/mcc.h
@@ -105,10 +105,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _UART1_Write `(v ~T0 @X0 0 ef1`uc ]
 "32 ./timers.h
 [v _StartTimer `(v ~T0 @X0 0 ef2`Cuc`Cus ]
-"313 main.c
+"321 main.c
 [c E17684 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 .. ]
 [n E17684 APP_TIMERS TMR_INTERNAL TMR_ADC TMR_T2 TMR_T3 TMR_T4 TMR_MC_TX TMR_HBIO TMR_INFO TMR_HELP TMR_HELPDIS TMR_DISPLAY TMR_FLIPPER TMR_ESR TMR_TEXT TMR_COUNT  ]
-"225
+"233
 [v _wdt_reset `(v ~T0 @X0 0 sf ]
 "33 ./timers.h
 [v _TimerDone `(a ~T0 @X0 0 ef1`Cuc ]
@@ -128,16 +128,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _update_hist_data `(a ~T0 @X0 0 ef2`a`*VS2293 ]
 "116 ./mbmc.h
 [v _time `(ul ~T0 @X0 0 ef1`*ul ]
-"144 ./daq.h
+"155 ./daq.h
+[v _write_cal_data `(v ~T0 @X0 0 ef ]
+"144
 [v _clear_adc_scan `(v ~T0 @X0 0 ef ]
 "109 ./bsoc.h
 [v _cc_state `(uc ~T0 @X0 0 ef1`f ]
-"383 main.c
+"392 main.c
 [c E18171 0 1 .. ]
 [n E18171 . CONV O_CONV  ]
 "147 ./daq.h
 [v _conv_raw_result `(f ~T0 @X0 0 ef2`CE16936`CE18171 ]
-"384 main.c
+"393 main.c
 [c E18356 0 1 2 3 4 5 6 255 .. ]
 [n E18356 . M_DEACT M_ACT M_MPPT M_EQUAL M_BOOST M_FLOAT M_LIMIT M_OFFLINE  ]
 "104 ./mbmc.h
@@ -152,15 +154,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _fabsf `(f ~T0 @X0 0 ef1`f ]
 "108 ./bsoc.h
 [v _esr_check `(f ~T0 @X0 0 ef1`uc ]
-"434 main.c
+"444 main.c
 [c E17542 0 1 2 .. ]
 [n E17542 . SW_OFF SW_ON SW_INVALID  ]
 "46 ./dio.h
 [v _get_switch `(E17542 ~T0 @X0 0 ef1`Cuc ]
-"434 main.c
+"444 main.c
 [c E17547 0 1 2 3 4 5 6 7 .. ]
 [n E17547 . S0 S1 SSELECT SENTER SCALIB S5 S6 SNULL  ]
-"223
+"231
 [v _current_sensor_cal `(a ~T0 @X0 0 sf ]
 "143 ./daq.h
 [v _check_adc_scan `(a ~T0 @X0 0 ef ]
@@ -178,8 +180,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _set_hist_flag `(v ~T0 @X0 0 ef ]
 "112 ./mbmc.h
 [v _load_hist_data `(v ~T0 @X0 0 ef ]
-"155 ./daq.h
-[v _write_cal_data `(v ~T0 @X0 0 ef ]
 "43 ./mconfig.h
 [v _set_back_light_off `(a ~T0 @X0 0 ef1`a ]
 "81 ./eadog.h
@@ -190,7 +190,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _wait_lcd_done `(v ~T0 @X0 0 ef ]
 "62 ./hid.h
 [v _hid_display `(*S2297 ~T0 @X0 0 ef1`*S2297 ]
-"533 main.c
+"544 main.c
 [c E18263 1 2 8 .. ]
 [n E18263 . WIDE_ZERO NO_NEG SKIP  ]
 "113 ./mbmc.h
@@ -203,7 +203,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _clear_hid_pflags `(v ~T0 @X0 0 ef1`*S2297 ]
 "63
 [v _check_enter_button `(a ~T0 @X0 0 ef1`*S2297 ]
-"224 main.c
+"232 main.c
 [v _display_history `(a ~T0 @X0 0 sf ]
 "57 ./mydisplay.h
 [v _check_help `(a ~T0 @X0 0 ef1`Ca ]
@@ -1741,7 +1741,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _UART2_TxInterruptHandler `*F17254 ~T0 @X0 1 e ]
 "497 ./mcc_generated_files/uart1.h
 [v _UART1_RxInterruptHandler `*F17297 ~T0 @X0 1 e ]
-"162 main.c
+"163 main.c
 [v _V `S2291 ~T0 @X0 1 e ]
 [i _V
 :U ..
@@ -1945,7 +1945,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-"187
+"188
 [v _H `S2297 ~T0 @X0 1 e ]
 [i _H
 :U ..
@@ -1962,19 +1962,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-"200
+"201
 [v _tickCount `Vus ~T0 @X0 -> 14 `i e ]
 [i _tickCount
 :U ..
 -> -> 0 `i `us
 ..
 ]
-"201
+"202
 [v _mode_sw `Vuc ~T0 @X0 1 e ]
 [i _mode_sw
 -> -> 0 `i `uc
 ]
-"202
+"203
 [v _C `VS2295 ~T0 @X0 1 e ]
 [i _C
 :U ..
@@ -1997,6 +1997,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `f
 -> -> 0 `i `f
 ..
+-> .0.1 `f
+-> .0.1 `f
+-> .0.1 `f
+-> .0.1 `f
+-> -> 0 `i `f
+-> .0.1 `f
 -> -> 0 `i `f
 -> -> 0 `i `f
 -> -> 0 `i `f
@@ -2009,24 +2015,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `f
 -> -> 0 `i `f
 -> -> 0 `i `f
+-> .0.1 `f
 -> -> 0 `i `f
 -> -> 0 `i `f
 -> -> 0 `i `f
--> -> 0 `i `f
--> -> 0 `i `f
--> -> 0 `i `f
--> -> 0 `i `f
--> -> 0 `i `f
--> -> 0 `i `f
--> -> 0 `i `f
--> -> 0 `i `f
+-> .0.1 `f
 -> - .225.0 .150.0 `f
 -> -> 0 `i `f
 -> -> 0 `i `f
 -> -> 0 `i `f
 -> -> 0 `i `f
--> .0.0 `f
--> .0.0 `f
+-> .0.0001 `f
+-> .0.0001 `f
 -> -> 0 `i `f
 -> -> 0 `i `f
 -> -> 0 `i `f
@@ -2090,11 +2090,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-"220
+"228
 [v _t_mbmc `*S2285 ~T0 @X0 1 e ]
-"221
+"229
 [v _pclock `ul ~T0 @X0 1 e ]
-"227
+"235
 [v _build_date `*Cuc ~T0 @X0 1 e ]
 [i _build_date
 :s 1C
@@ -2104,20 +2104,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 :s 2C
 ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"232
+"240
 [v _main `(v ~T0 @X0 1 ef ]
-"233
+"241
 {
 [e :U _main ]
 [f ]
-"234
+"242
 [v _t_out `a ~T0 @X0 1 a ]
 [e = _t_out -> . . _STATUSbits 3 2 `a ]
-"235
+"243
 [v _t_time `ul ~T0 @X0 1 a ]
-"237
+"245
 [v _mode `E17534 ~T0 @X0 1 a ]
-"238
+"246
 [v _inp_index `uc ~T0 @X0 1 a ]
 [e = _inp_index -> -> 0 `i `uc ]
 [v _i `uc ~T0 @X0 1 a ]
@@ -2127,357 +2127,359 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _k `uc ~T0 @X0 1 a ]
 [e = _k -> . `E16936 2 `uc ]
 [v _i_ror `uc ~T0 @X0 1 a ]
-"241
-[e ( _SYSTEM_Initialize ..  ]
-"244
-[e = . . _INTCON0bits 1 1 -> -> 1 `i `uc ]
-"247
-[e = . . _INTCON0bits 0 5 -> -> 1 `i `uc ]
 "249
-[e = . _V 0 . `E17534 0 ]
-"256
-[e ( _WaitMs (1 -> -> 300 `i `us ]
+[e ( _SYSTEM_Initialize ..  ]
+"252
+[e = . . _INTCON0bits 1 1 -> -> 1 `i `uc ]
+"255
+[e = . . _INTCON0bits 0 5 -> -> 1 `i `uc ]
 "257
+[e = . _V 0 . `E17534 0 ]
+"264
+[e ( _WaitMs (1 -> -> 300 `i `us ]
+"265
 [e $ ! != -> . . _PORTBbits 0 0 `i -> 0 `i 2299  ]
 {
-"258
+"266
 [e = _mode . `E17534 1 ]
-"259
+"267
 }
 [e $U 2300  ]
 [e :U 2299 ]
 {
-"260
+"268
 [e = _mode . `E17534 3 ]
-"261
+"269
 }
 [e :U 2300 ]
-"264
+"272
 [e = . _V 25 -> -> 0 `i `us ]
-"266
+"274
 [e ( _diversion_pwm_set (1 . _V 25 ]
-"268
+"276
 [e :U 2302 ]
 {
-"269
+"277
 [e $U 2305  ]
 {
-"270
+"278
 [e :U 2306 ]
-"274
+"282
 [e ( _init_port_dma ..  ]
-"276
-[e ( _init_display ..  ]
-"277
-[e ( _eaDogM_WriteCommand (1 -> -> 12 `i `uc ]
 "284
-[e ( _set_load_relay_zero (1 -> -> 1 `i `a ]
+[e ( _init_display ..  ]
 "285
-[e ( _set_load_relay_one (1 -> -> 1 `i `a ]
-"286
-[e ( _set_load_relay_two (1 -> -> 1 `i `a ]
-"288
-[e = . _V 0 _mode ]
-"289
-[e ( _srand (1 -> -> 1957 `i `ui ]
-"290
-[e ( _set_vterm (1 -> -> 0 `i `uc ]
-"291
-[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc :s 3C ]
+[e ( _eaDogM_WriteCommand (1 -> -> 12 `i `uc ]
 "292
-[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 4C :s 5C ]
+[e ( _set_load_relay_zero (1 -> -> 1 `i `a ]
 "293
-[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 6C ]
+[e ( _set_load_relay_one (1 -> -> 1 `i `a ]
 "294
+[e ( _set_load_relay_two (1 -> -> 1 `i `a ]
+"296
+[e = . _V 0 _mode ]
+"297
+[e ( _srand (1 -> -> 1957 `i `ui ]
+"298
+[e ( _set_vterm (1 -> -> 0 `i `uc ]
+"299
+[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc :s 3C ]
+"300
+[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 4C :s 5C ]
+"301
+[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 6C ]
+"302
 [e $ ! != -> _t_out `i -> 0 `i 2307  ]
 {
-"295
+"303
 [e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 3 `i `uc -> -> 0 `i `uc :s 7C ]
-"296
+"304
 }
 [e $U 2308  ]
 [e :U 2307 ]
 {
-"297
+"305
 [e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 3 `i `uc -> -> 0 `i `uc :s 8C ]
-"298
+"306
 }
 [e :U 2308 ]
-"299
-[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 1 `i `uc :s 9C ]
-"300
-[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 1 `i `uc :s 10C ]
-"301
-[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 1 `i `uc :s 11C ]
-"302
-[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 3 `i `uc -> -> 1 `i `uc :s 12C ]
-"303
-[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 2 `i `uc :s 13C ]
-"304
-[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 2 `i `uc :s 14C ]
-"305
-[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 2 `i `uc :s 15C ]
-"306
-[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 3 `i `uc -> -> 2 `i `uc :s 16C ]
 "307
-[e ( _update_lcd (1 -> -> 0 `i `uc ]
+[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 1 `i `uc :s 9C ]
 "308
-[e ( _UART1_Write (1 -> -> 84 `ui `uc ]
+[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 1 `i `uc :s 10C ]
 "309
-[e ( _UART1_Write (1 -> -> 13 `ui `uc ]
+[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 1 `i `uc :s 11C ]
 "310
-[e ( _UART1_Write (1 -> -> 10 `ui `uc ]
+[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 3 `i `uc -> -> 1 `i `uc :s 12C ]
 "311
-[e ( _WaitMs (1 -> -> 1000 `i `us ]
+[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 2 `i `uc :s 13C ]
 "312
+[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 2 `i `uc :s 14C ]
+"313
+[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 2 `i `uc :s 15C ]
+"314
+[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 3 `i `uc -> -> 2 `i `uc :s 16C ]
+"315
+[e ( _update_lcd (1 -> -> 0 `i `uc ]
+"316
+[e ( _UART1_Write (1 -> -> 84 `ui `uc ]
+"317
+[e ( _UART1_Write (1 -> -> 13 `ui `uc ]
+"318
+[e ( _UART1_Write (1 -> -> 10 `ui `uc ]
+"319
+[e ( _WaitMs (1 -> -> 1000 `i `us ]
+"320
 [e $ ! != -> . _V 12 `i -> 0 `i 2309  ]
 {
-"313
+"321
 [e ( _StartTimer (2 , -> . `E17684 13 `uc -> -> 10000 `i `us ]
-"315
+"323
 [e :U 2311 ]
 {
-"316
+"324
 [e ( _wdt_reset ..  ]
-"317
+"325
 [e $ ! != -> ( _TimerDone (1 -> . `E17684 13 `uc `i -> 0 `i 2313  ]
 {
-"318
+"326
 [e = . _V 12 -> -> 0 `i `uc ]
-"319
+"327
 [e = . _V 11 -> -> 0 `i `uc ]
-"320
+"328
 [e $U 2312  ]
-"321
+"329
 }
 [e :U 2313 ]
-"322
+"330
 [e $ ! != -> . _V 11 `i -> 0 `i 2314  ]
 {
-"323
+"331
 [e = . _V 11 -> -> 0 `i `uc ]
-"324
+"332
 [e = _t_time -> ( _atol (1 -> &U . _V 3 `*Cuc `ul ]
-"325
+"333
 [e $ ! > _t_time -> -> 1586643451 `l `ul 2315  ]
 {
-"326
+"334
 [e ( _set_time (1 _t_time ]
-"327
+"335
 }
 [e :U 2315 ]
-"328
+"336
 }
 [e :U 2314 ]
-"329
+"337
 }
 [e :U 2310 ]
 [e $U 2311  ]
 [e :U 2312 ]
-"330
+"338
 }
 [e :U 2309 ]
-"331
-[e ( _StartTimer (2 , -> . `E17684 10 `uc -> -> 250 `i `us ]
-"332
-[e ( _StartTimer (2 , -> . `E17684 1 `uc -> -> 200 `i `us ]
-"333
-[e ( _StartTimer (2 , -> . `E17684 7 `uc -> -> 3000 `i `us ]
-"334
-[e ( _StartTimer (2 , -> . `E17684 11 `uc -> -> 1500 `i `us ]
-"335
-[e ( _StartTimer (2 , -> . `E17684 9 `uc -> -> 3000 `i `us ]
-"337
-[e ( _start_adc_scan ..  ]
-"338
-[e ( _start_switch_handler ..  ]
 "339
+[e ( _StartTimer (2 , -> . `E17684 10 `uc -> -> 250 `i `us ]
+"340
+[e ( _StartTimer (2 , -> . `E17684 1 `uc -> -> 200 `i `us ]
+"341
+[e ( _StartTimer (2 , -> . `E17684 7 `uc -> -> 3000 `i `us ]
+"342
+[e ( _StartTimer (2 , -> . `E17684 11 `uc -> -> 1500 `i `us ]
+"343
+[e ( _StartTimer (2 , -> . `E17684 9 `uc -> -> 3000 `i `us ]
+"345
+[e ( _start_adc_scan ..  ]
+"346
+[e ( _start_switch_handler ..  ]
+"347
 [e ( _WaitMs (1 -> -> 1000 `i `us ]
-"344
+"352
 [e $ ! != -> ( _read_cal_data ..  `i -> 0 `i 2316  ]
 {
-"345
+"353
 [e ( _update_cal_data ..  ]
-"346
+"354
 [e $ ! && != -> ( _update_hist_data (2 , -> -> 1 `i `a &U *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux `i -> 0 `i > . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 4 ( _time (1 -> -> -> 0 `i `*v `*ul 2317  ]
 {
-"347
+"355
 [e ( _set_time (1 . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 4 ]
-"348
+"356
 }
 [e :U 2317 ]
-"374
+"382
 [e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 17C ]
-"375
+"383
 }
 [e $U 2318  ]
 [e :U 2316 ]
 {
-"376
+"384
 [e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 18C ]
-"377
+"385
+[e ( _write_cal_data ..  ]
+"386
 }
 [e :U 2318 ]
-"378
+"387
 [e ( _update_lcd (1 -> -> 0 `i `uc ]
-"379
+"388
 [e ( _clear_adc_scan ..  ]
-"380
+"389
 [e ( _start_adc_scan ..  ]
-"381
+"390
 [e ( _WaitMs (1 -> -> 2000 `i `us ]
-"383
+"392
 [e = . _V 36 ( _cc_state (1 ( _conv_raw_result (2 , . `E16936 5 . `E18171 0 ]
-"384
+"393
 [e $ ! && != -> . _V 36 `i -> 0 `i != -> . _V 36 `i -> . `E18356 7 `i 2319  ]
 {
-"385
+"394
 [e = . _V 42 -> -> 1 `i `a ]
-"386
+"395
 }
 [e $U 2320  ]
 [e :U 2319 ]
 {
-"387
+"396
 [e = . _V 42 -> -> 0 `i `a ]
-"388
+"397
 }
 [e :U 2320 ]
-"390
+"400
 [e = _i_ror -> -> 1 `i `uc ]
-"391
+"401
 [e :U 2323 ]
 {
-"392
-[e ( _calc_ror_data ..  ]
-"393
-[e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 19C -> ( _conv_raw_result (2 , . `E16936 3 . `E18171 0 `d -> . _V 36 `i ]
-"394
-[e ( _sprintf (1 , , , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 20C -> ( _spinners (2 , -> -> 5 `i `uc -> -> 0 `i `uc `i -> _i_ror `i -> . _C 14 `d ]
-"395
-[e ( _update_lcd (1 -> -> 0 `i `uc ]
-"396
-[e ( _clear_adc_scan ..  ]
-"397
-[e ( _start_adc_scan ..  ]
-"398
-[e ( _wdt_reset ..  ]
-"399
-[e ( _WaitMs (1 -> -> 2000 `i `us ]
 "402
-}
-[e $ && < -> ++ _i_ror -> -> 1 `i `uc `i -> 30 `i > -> . _C 14 `d .0.0140 2323  ]
-[e :U 2322 ]
+[e ( _calc_ror_data ..  ]
+"403
+[e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 19C -> ( _conv_raw_result (2 , . `E16936 3 . `E18171 0 `d -> . _V 36 `i ]
 "404
-[e ( _static_soc ..  ]
+[e ( _sprintf (1 , , , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 20C -> ( _spinners (2 , -> -> 5 `i `uc -> -> 0 `i `uc `i -> _i_ror `i -> . _C 14 `d ]
 "405
-[e ( _init_bsoc ..  ]
+[e ( _update_lcd (1 -> -> 0 `i `uc ]
 "406
-[e ( _set_load_relay_one (1 -> -> 0 `i `a ]
+[e ( _clear_adc_scan ..  ]
 "407
-[e ( _set_load_relay_two (1 -> -> 0 `i `a ]
+[e ( _start_adc_scan ..  ]
 "408
-[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc :s 21C -> . _C 37 `ui ]
+[e ( _wdt_reset ..  ]
 "409
-[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 22C -> . _C 25 `d ]
-"410
-[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 23C ]
+[e ( _WaitMs (1 -> -> 20 `i `us ]
 "411
-[e ( _update_lcd (1 -> -> 0 `i `uc ]
-"412
-[e ( _WaitMs (1 -> -> 2000 `i `us ]
+}
+[e $ && < -> ++ _i_ror -> -> 1 `i `uc `i -> 1 `i > -> . _C 14 `d .0.0140 2323  ]
+[e :U 2322 ]
 "413
-[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc :s 24C ]
+[e ( _static_soc ..  ]
 "414
-[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 25C ]
+[e ( _init_bsoc ..  ]
 "415
-[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 26C ]
+[e ( _set_load_relay_one (1 -> -> 0 `i `a ]
 "416
-[e ( _update_lcd (1 -> -> 0 `i `uc ]
+[e ( _set_load_relay_two (1 -> -> 0 `i `a ]
 "417
+[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc :s 21C -> . _C 37 `ui ]
+"418
+[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 22C -> . _C 25 `d ]
+"419
+[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 23C ]
+"420
+[e ( _update_lcd (1 -> -> 0 `i `uc ]
+"421
+[e ( _WaitMs (1 -> -> 200 `i `us ]
+"422
+[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc :s 24C ]
+"423
+[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 25C ]
+"424
+[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 26C ]
+"425
+[e ( _update_lcd (1 -> -> 0 `i `uc ]
+"426
 [v _i_esr `us ~T0 @X0 1 a ]
 [e = _i_esr -> -> 1 `i `us ]
-"418
+"427
 [v _shape `uc ~T0 @X0 1 a ]
 [e = _shape -> -> 0 `i `uc ]
-"419
+"428
 [v _esr_temp `f ~T0 @X0 1 a ]
-"420
+"429
 [e $U 2324  ]
 [e :U 2325 ]
 {
-"421
+"430
 [e ( _WaitMs (1 -> -> 110 `i `us ]
-"422
+"431
 [e = _shape -> ( _fabsf (1 _esr_temp `uc ]
-"423
+"432
 [e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 27C -> ( _spinners (2 , -> -> 0 `i `uc -> -> 0 `i `uc `i -> ( _spinners (2 , _shape -> -> 0 `i `uc `i ]
-"424
+"433
 [e ( _update_lcd (1 -> -> 0 `i `uc ]
-"426
-[e $ ! > -> ++ _i_esr -> -> 1 `i `us `ui -> -> 512 `i `ui 2327  ]
-"427
+"435
+[e $ ! > -> ++ _i_esr -> -> 1 `i `us `ui -> -> 1 `i `ui 2327  ]
+"436
 [e $U 2326  ]
 [e :U 2327 ]
-"428
+"437
 }
 [e :U 2324 ]
-"420
+"429
 [e $ < -> = _esr_temp ( _esr_check (1 -> -> 0 `i `uc `d .0.0 2325  ]
 [e :U 2326 ]
-"429
+"438
 [e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc :s 28C -> . _C 23 `d ]
-"430
+"439
 [e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 29C -> . _C 43 `d -> . _C 40 `d ]
-"431
+"440
 [e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 30C -> . _C 44 `d -> . _C 41 `d ]
-"432
+"441
 [e ( _update_lcd (1 -> -> 0 `i `uc ]
-"433
-[e ( _WaitMs (1 -> -> 4000 `i `us ]
-"434
+"442
+[e ( _WaitMs (1 -> -> 400 `i `us ]
+"444
 [e = . _V 40 -> ( _get_switch (1 -> . `E17547 4 `uc `a ]
-"435
+"445
 [e ( _WaitMs (1 -> -> 1000 `i `us ]
-"436
+"446
 [e $ ! && != -> . _V 40 `i -> 0 `i != -> ( _get_switch (1 -> . `E17547 4 `uc `ui -> -> 0 `i `ui 2328  ]
 {
-"437
+"447
 [e ( _current_sensor_cal ..  ]
-"438
+"448
 [e ( _WaitMs (1 -> -> 4000 `i `us ]
-"439
+"449
 }
 [e :U 2328 ]
-"440
-[e = . _V 5 + ( _time (1 -> -> -> 0 `i `*v `*ul -> -> -> 600 `i `l `ul ]
-"441
-[e = . _V 40 -> -> 0 `i `a ]
-"442
-[e = . _V 43 -> -> 1 `i `a ]
-"443
-[e $U 2304  ]
-"444
-[e :U 2329 ]
-"445
-[e $U 2304  ]
-"446
-[e :U 2330 ]
-"447
-[e $U 2304  ]
-"448
-[e :U 2331 ]
 "450
-[e $U 2304  ]
+[e = . _V 5 + ( _time (1 -> -> -> 0 `i `*v `*ul -> -> -> 600 `i `l `ul ]
 "451
-[e :U 2332 ]
+[e = . _V 40 -> -> 0 `i `a ]
 "452
-[e :U 2333 ]
+[e = . _V 43 -> -> 1 `i `a ]
 "453
-[e = . _V 0 . `E17534 0 ]
-"454
 [e $U 2304  ]
+"454
+[e :U 2329 ]
 "455
+[e $U 2304  ]
+"456
+[e :U 2330 ]
+"457
+[e $U 2304  ]
+"458
+[e :U 2331 ]
+"460
+[e $U 2304  ]
+"461
+[e :U 2332 ]
+"462
+[e :U 2333 ]
+"463
+[e = . _V 0 . `E17534 0 ]
+"464
+[e $U 2304  ]
+"465
 }
 [e $U 2304  ]
 [e :U 2305 ]
@@ -2488,218 +2490,218 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E17534 5 `ui 2332
  2333 ]
 [e :U 2304 ]
-"460
+"470
 [e $ ! && != -> ( _TimerDone (1 -> . `E17684 1 `uc `i -> 0 `i != -> ( _check_adc_scan ..  `i -> 0 `i 2334  ]
 {
-"464
+"474
 [e ( _convert_adc_data ..  ]
-"468
+"478
 [e ( _clear_adc_scan ..  ]
-"469
+"479
 [e ( _start_adc_scan ..  ]
-"470
+"480
 [e ( _StartTimer (2 , -> . `E17684 1 `uc -> -> 200 `i `us ]
-"471
+"481
 }
 [e :U 2334 ]
-"473
+"483
 [e $ ! != -> ( _TimerDone (1 -> . `E17684 10 `uc `i -> 0 `i 2335  ]
 {
-"474
+"484
 [e $ ! != -> ( _TimerDone (1 -> . `E17684 9 `uc `i -> 0 `i 2336  ]
 {
-"475
+"485
 [e ( _set_display_info (1 . `E17515 0 ]
-"476
+"486
 }
 [e :U 2336 ]
-"477
+"487
 [e = _pclock ( _time (1 -> -> -> 0 `i `*v `*ul ]
-"478
+"488
 [e = _t_mbmc ( _localtime (1 -> &U _pclock `*Cul ]
-"479
+"489
 [e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 3 `i `uc -> -> 0 `i `uc :s 31C ( _asctime (1 -> _t_mbmc `*CS2285 ]
-"480
+"490
 [e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 3 `i `uc -> -> 1 `i `uc :s 32C ( _asctime (1 -> _t_mbmc `*CS2285 ]
-"481
+"491
 [e ( _calc_model_data ..  ]
-"482
+"492
 [e = . _V 36 ( _cc_state (1 . _C 13 ]
-"483
+"493
 [e $ ! != -> . _C 46 `i -> 0 `i 2337  ]
 {
-"484
+"494
 [e = . _C 46 -> -> 0 `i `a ]
-"485
+"495
 [e ( _set_hist_flag ..  ]
-"487
+"497
 [v _i_esr `us ~T0 @X0 1 a ]
 [e = _i_esr -> -> 1 `i `us ]
-"488
+"498
 [e ( _esr_check (1 -> -> 1 `i `uc ]
-"489
+"499
 [e $U 2338  ]
 [e :U 2339 ]
 {
-"490
+"500
 [e ( _WaitMs (1 -> -> 110 `i `us ]
-"491
+"501
 [e $ ! > -> ++ _i_esr -> -> 1 `i `us `ui -> -> 512 `i `ui 2341  ]
-"492
+"502
 [e $U 2340  ]
 [e :U 2341 ]
-"493
+"503
 }
 [e :U 2338 ]
-"489
+"499
 [e $ < -> ( _esr_check (1 -> -> 0 `i `uc `d .0.0 2339  ]
 [e :U 2340 ]
-"494
+"505
 [e ( _load_hist_data ..  ]
-"495
+"506
 [e ( _update_hist_data (2 , -> -> 0 `i `a &U *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux ]
-"496
+"507
 [e ( _write_cal_data ..  ]
-"497
+"508
 [e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc :s 33C ]
-"498
+"509
 [e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 34C ]
-"499
+"510
 [e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 35C ( _time (1 -> -> -> 0 `i `*v `*ul . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 3 ]
-"500
+"511
 [e ( _update_lcd (1 -> -> 0 `i `uc ]
-"501
+"512
 [e ( _WaitMs (1 -> -> 2000 `i `us ]
-"502
+"513
 }
 [e :U 2337 ]
-"506
+"517
 [e $ ! != -> ( _set_back_light_off (1 -> -> 0 `i `a `i -> 0 `i 2342  ]
 {
-"507
+"518
 [e ( _send_lcd_cmd_dma (1 -> -> 83 `i `uc ]
-"508
+"519
 [e ( _send_lcd_data_dma (1 -> -> 5 `i `uc ]
-"509
+"520
 [e ( _wait_lcd_done ..  ]
-"510
+"521
 }
 [e :U 2342 ]
-"511
+"522
 [e $ ! != -> ( _set_back_light_off (1 -> -> 1 `i `a `i -> 0 `i 2343  ]
 {
-"512
+"523
 [e ( _send_lcd_cmd_dma (1 -> -> 83 `i `uc ]
-"513
+"524
 [e ( _send_lcd_data_dma (1 -> -> 1 `i `uc ]
-"514
+"525
 [e ( _wait_lcd_done ..  ]
-"515
+"526
 }
 [e :U 2343 ]
-"519
+"530
 [e ( _hid_display (1 &U _H ]
-"520
+"531
 [e $U 2345  ]
 {
-"521
-[e :U 2346 ]
-"522
-[e = . _V 38 -> -> 0 `i `a ]
-"523
-[e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc :s 36C ? != -> . _C 45 `i -> 0 `i : -> 68 `ui -> 32 `ui -> . _C 18 `d ]
-"524
-[e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 37C -> . _C 16 `d -> . _C 1 `d ]
-"525
-[e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 38C -> . _C 20 `d -> . _V 36 `i ]
-"527
-[e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 1 `i `uc :s 39C ? != -> . _C 45 `i -> 0 `i : -> 68 `ui -> 32 `ui -> . _C 33 `d ]
-"528
-[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 1 `i `uc :s 40C -> . _C 35 `d ]
-"529
-[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 1 `i `uc :s 41C -> . _C 34 `d ]
-"530
-[e $U 2344  ]
-"531
-[e :U 2347 ]
 "532
-[e = . _V 38 -> -> 0 `i `a ]
+[e :U 2346 ]
 "533
-[e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc :s 42C -> ( _calc_fixups (2 , *U + &U . _C 0 * -> . `E16936 4 `ux -> -> # *U &U . _C 0 `ui `ux . `E18263 0 `d -> ( _calc_fixups (2 , *U + &U . _C 0 * -> . `E16936 7 `ux -> -> # *U &U . _C 0 `ui `ux -> | -> . `E18263 0 `i -> . `E18263 1 `i `E18263 `d ]
-"534
-[e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 43C -> ( _calc_fixups (2 , *U + &U . _C 0 * -> . `E16936 3 `ux -> -> # *U &U . _C 0 `ui `ux . `E18263 0 `d -> *U + &U . _C 0 * -> . `E16936 0 `ux -> -> # *U &U . _C 0 `ui `ux `d ]
-"535
-[e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 44C -> ( _calc_fixups (2 , *U + &U . _C 0 * -> . `E16936 2 `ux -> -> # *U &U . _C 0 `ui `ux . `E18263 0 `d -> *U + &U . _C 0 * -> . `E16936 1 `ux -> -> # *U &U . _C 0 `ui `ux `d ]
-"537
-[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 1 `i `uc :s 45C -> . _C 31 `d ]
-"538
-[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 1 `i `uc :s 46C -> . _C 32 `d ]
-"539
-[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 1 `i `uc :s 47C -> + . _C 31 . _C 32 `d ]
-"540
-[e $U 2344  ]
-"541
-[e :U 2348 ]
-"542
 [e = . _V 38 -> -> 0 `i `a ]
-"543
-[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc :s 48C -> . _C 19 `d ]
-"544
-[e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 49C -> . _C 25 `d -> . _C 29 `d ]
-"545
-[e ( _sprintf (1 , , , , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 50C -> ( _spinners (2 , -> -> 5 `i `uc -> -> 0 `i `uc `i -> . _C 37 `ui -> . _C 36 `ui -> *U + &U . _C 0 * -> . `E16936 3 `ux -> -> # *U &U . _C 0 `ui `ux `d ]
-"547
-[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 1 `i `uc :s 51C -> . _C 23 `d ]
-"548
-[e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 1 `i `uc :s 52C -> . _C 43 `d -> . _C 40 `d ]
-"549
-[e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 1 `i `uc :s 53C -> . _C 44 `d -> . _C 41 `d ]
-"550
+"534
+[e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc :s 36C ? != -> . _C 45 `i -> 0 `i : -> 68 `ui -> 32 `ui -> . _C 18 `d ]
+"535
+[e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 37C -> . _C 16 `d -> . _C 1 `d ]
+"536
+[e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 38C -> . _C 20 `d -> . _V 36 `i ]
+"538
+[e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 1 `i `uc :s 39C ? != -> . _C 45 `i -> 0 `i : -> 68 `ui -> 32 `ui -> . _C 33 `d ]
+"539
+[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 1 `i `uc :s 40C -> . _C 35 `d ]
+"540
+[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 1 `i `uc :s 41C -> . _C 34 `d ]
+"541
 [e $U 2344  ]
+"542
+[e :U 2347 ]
+"543
+[e = . _V 38 -> -> 0 `i `a ]
+"544
+[e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc :s 42C -> ( _calc_fixups (2 , *U + &U . _C 0 * -> . `E16936 4 `ux -> -> # *U &U . _C 0 `ui `ux . `E18263 0 `d -> ( _calc_fixups (2 , *U + &U . _C 0 * -> . `E16936 7 `ux -> -> # *U &U . _C 0 `ui `ux -> | -> . `E18263 0 `i -> . `E18263 1 `i `E18263 `d ]
+"545
+[e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 43C -> ( _calc_fixups (2 , *U + &U . _C 0 * -> . `E16936 3 `ux -> -> # *U &U . _C 0 `ui `ux . `E18263 0 `d -> *U + &U . _C 0 * -> . `E16936 0 `ux -> -> # *U &U . _C 0 `ui `ux `d ]
+"546
+[e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 44C -> ( _calc_fixups (2 , *U + &U . _C 0 * -> . `E16936 2 `ux -> -> # *U &U . _C 0 `ui `ux . `E18263 0 `d -> *U + &U . _C 0 * -> . `E16936 1 `ux -> -> # *U &U . _C 0 `ui `ux `d ]
+"548
+[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 1 `i `uc :s 45C -> . _C 31 `d ]
+"549
+[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 1 `i `uc :s 46C -> . _C 32 `d ]
+"550
+[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 1 `i `uc :s 47C -> + . _C 31 . _C 32 `d ]
 "551
-[e :U 2349 ]
+[e $U 2344  ]
 "552
+[e :U 2348 ]
+"553
+[e = . _V 38 -> -> 0 `i `a ]
+"554
+[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc :s 48C -> . _C 19 `d ]
+"555
+[e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 49C -> . _C 25 `d -> . _C 29 `d ]
+"556
+[e ( _sprintf (1 , , , , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 50C -> ( _spinners (2 , -> -> 5 `i `uc -> -> 0 `i `uc `i -> . _C 37 `ui -> . _C 36 `ui -> *U + &U . _C 0 * -> . `E16936 3 `ux -> -> # *U &U . _C 0 `ui `ux `d ]
+"558
+[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 1 `i `uc :s 51C -> . _C 23 `d ]
+"559
+[e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 1 `i `uc :s 52C -> . _C 43 `d -> . _C 40 `d ]
+"560
+[e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 1 `i `uc :s 53C -> . _C 44 `d -> . _C 41 `d ]
+"561
+[e $U 2344  ]
+"562
+[e :U 2349 ]
+"563
 [e $ ! ! != -> . _V 38 `i -> 0 `i 2350  ]
 {
-"553
+"564
 [e ( _lp_filter (3 , , -> .0.0 `f _i -> -U -> 1 `i `c ]
-"554
+"565
 [e ( _lp_filter (3 , , -> .0.0 `f _j -> -U -> 1 `i `c ]
-"555
+"566
 [e ( _lp_filter (3 , , -> .0.0 `f _k -> -U -> 1 `i `c ]
-"556
+"567
 }
 [e :U 2350 ]
-"557
+"568
 [e = . _V 38 -> -> 1 `i `a ]
-"558
+"569
 [e ( _sprintf (1 , , , (. , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc :s 54C -> ( _get_raw_result (1 -> _i `E16936 `ui -> *U + &U . _C 0 * -> _i `ux -> -> # *U &U . _C 0 `ui `ux `d + -> _inp_index `i -> 1 `i ]
-"559
+"570
 [e $ ! < -> _inp_index `i -> 9 `i 2351  ]
 {
-"560
+"571
 [e ( _sprintf (1 , , , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 55C -> ( _get_raw_result (1 -> _j `E16936 `ui -> *U + &U . _C 0 * -> _j `ux -> -> # *U &U . _C 0 `ui `ux `d + -> _inp_index `i -> 2 `i ]
-"561
+"572
 [e ( _sprintf (1 , , , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 56C -> ( _get_raw_result (1 -> _k `E16936 `ui -> *U + &U . _C 0 * -> _k `ux -> -> # *U &U . _C 0 `ui `ux `d + -> _inp_index `i -> 3 `i ]
-"562
+"573
 }
 [e $U 2352  ]
 [e :U 2351 ]
 {
-"563
+"574
 [e ( _sprintf (1 , , , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 57C -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 11 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 1 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 3 ]
-"564
+"575
 [e ( _sprintf (1 , , , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 58C -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 0 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 9 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 10 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i ]
-"565
+"576
 }
 [e :U 2352 ]
-"566
+"577
 [e $U 2344  ]
-"567
+"578
 [e :U 2353 ]
-"568
+"579
 [e $U 2344  ]
-"569
+"580
 }
 [e $U 2344  ]
 [e :U 2345 ]
@@ -2709,99 +2711,99 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E18312 3 `ui 2349
  2353 ]
 [e :U 2344 ]
-"570
+"581
 [e ( _clear_hid_pflags (1 &U _H ]
-"572
+"583
 [e ( _StartTimer (2 , -> . `E17684 10 `uc -> -> 250 `i `us ]
-"573
+"584
 [e = . _V 39 ( _check_enter_button (1 &U _H ]
-"574
+"585
 [e $ ! && != -> . _V 39 `i -> 0 `i != -> . _H 0 `ui -> . `E18312 3 `ui 2354  ]
 {
-"575
+"586
 [e = . _V 39 -> -> 0 `i `a ]
-"576
+"587
 [e = . _V 33 -> ~ -> . _V 33 `i `uc ]
-"577
+"588
 [e = _inp_index -> -> 0 `i `uc ]
-"578
-}
-[e :U 2354 ]
-"579
-[e ( _set_vterm (1 . _V 33 ]
-"580
-[e ( _update_lcd (1 . _V 33 ]
-"581
-[e ( _display_history ..  ]
-"583
-[e ( _wait_lcd_done ..  ]
 "589
 }
-[e :U 2335 ]
+[e :U 2354 ]
+"590
+[e ( _set_vterm (1 . _V 33 ]
+"591
+[e ( _update_lcd (1 . _V 33 ]
+"592
+[e ( _display_history ..  ]
 "594
+[e ( _wait_lcd_done ..  ]
+"600
+}
+[e :U 2335 ]
+"605
 [e ( _check_help (1 . _V 37 ]
-"596
+"607
 [e $ ! != -> . _V 39 `i -> 0 `i 2355  ]
 {
-"597
+"608
 [e = . _V 39 -> -> 0 `i `a ]
-"598
+"609
 [e = . _V 38 -> -> 0 `i `a ]
-"599
+"610
 [e =+ _inp_index -> -> 3 `i `uc ]
-"600
+"611
 [e $ ! > -> _inp_index `i -> 9 `i 2356  ]
-"601
+"612
 [e = _inp_index -> -> 0 `i `uc ]
 [e :U 2356 ]
-"602
+"613
 [e $U 2358  ]
 {
-"603
-[e :U 2359 ]
-"604
-[e = _i -> . `E16936 0 `uc ]
-"605
-[e = _j -> . `E16936 1 `uc ]
-"606
-[e = _k -> . `E16936 2 `uc ]
-"607
-[e $U 2357  ]
-"608
-[e :U 2360 ]
-"609
-[e = _i -> . `E16936 3 `uc ]
-"610
-[e = _j -> . `E16936 4 `uc ]
-"611
-[e = _k -> . `E16936 5 `uc ]
-"612
-[e $U 2357  ]
-"613
-[e :U 2361 ]
 "614
-[e = _i -> . `E16936 6 `uc ]
+[e :U 2359 ]
 "615
-[e = _j -> . `E16936 7 `uc ]
+[e = _i -> . `E16936 0 `uc ]
 "616
-[e = _k -> . `E16936 8 `uc ]
+[e = _j -> . `E16936 1 `uc ]
 "617
-[e $U 2357  ]
+[e = _k -> . `E16936 2 `uc ]
 "618
-[e :U 2362 ]
+[e $U 2357  ]
 "619
-[e = _i -> . `E16936 9 `uc ]
+[e :U 2360 ]
 "620
-[e = _j -> . `E16936 9 `uc ]
+[e = _i -> . `E16936 3 `uc ]
 "621
-[e = _k -> . `E16936 9 `uc ]
+[e = _j -> . `E16936 4 `uc ]
 "622
-[e $U 2357  ]
+[e = _k -> . `E16936 5 `uc ]
 "623
-[e :U 2363 ]
-"624
 [e $U 2357  ]
+"624
+[e :U 2361 ]
 "625
+[e = _i -> . `E16936 6 `uc ]
+"626
+[e = _j -> . `E16936 7 `uc ]
+"627
+[e = _k -> . `E16936 8 `uc ]
+"628
+[e $U 2357  ]
+"629
+[e :U 2362 ]
+"630
+[e = _i -> . `E16936 9 `uc ]
+"631
+[e = _j -> . `E16936 9 `uc ]
+"632
+[e = _k -> . `E16936 9 `uc ]
+"633
+[e $U 2357  ]
+"634
+[e :U 2363 ]
+"635
+[e $U 2357  ]
+"636
 }
 [e $U 2357  ]
 [e :U 2358 ]
@@ -2811,239 +2813,239 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 9 `i 2362
  2363 ]
 [e :U 2357 ]
-"626
+"637
 }
 [e :U 2355 ]
-"631
+"642
 [e $ ! != -> . _V 28 `i -> 0 `i 2364  ]
 {
-"632
+"643
 [e $ ! != -> ( _TimerDone (1 -> . `E17684 7 `uc `i -> 0 `i 2365  ]
 {
-"633
+"644
 [e = . _V 28 -> -> 0 `i `uc ]
-"634
+"645
 [e ( _set_vterm (1 -> -> 0 `i `uc ]
-"635
+"646
 [e ( _update_lcd (1 -> -> 0 `i `uc ]
-"636
+"647
 }
 [e $U 2366  ]
 [e :U 2365 ]
 {
-"638
+"649
 [e ( _set_vterm (1 -> -> 2 `i `uc ]
-"639
+"650
 [e ( _update_lcd (1 -> -> 2 `i `uc ]
-"640
+"651
 }
 [e :U 2366 ]
-"641
+"652
 }
 [e :U 2364 ]
-"642
+"653
 [e ( _wdt_reset ..  ]
-"643
+"654
 }
 [e :U 2301 ]
 [e $U 2302  ]
 [e :U 2303 ]
-"644
+"655
 [e :UE 2298 ]
 }
-"646
+"657
 [v _current_sensor_cal `(a ~T0 @X0 1 sf ]
-"647
+"658
 {
 [e :U _current_sensor_cal ]
 [f ]
-"648
+"659
 [v _x `uc ~T0 @X0 1 a ]
 [e = _x -> -> 0 `i `uc ]
-"649
+"660
 [v _cb `ul ~T0 @X0 1 a ]
 [e = _cb -> -> -> 0 `i `l `ul ]
 [v _cp `ul ~T0 @X0 1 a ]
 [e = _cp -> -> -> 0 `i `l `ul ]
 [v _cm `ul ~T0 @X0 1 a ]
 [e = _cm -> -> -> 0 `i `l `ul ]
-"651
+"662
 [e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc :s 59C ]
-"652
+"663
 [e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 60C ]
-"653
+"664
 [e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 61C ]
-"654
+"665
 [e ( _update_lcd (1 -> -> 0 `i `uc ]
-"655
+"666
 [e ( _WaitMs (1 -> -> 2000 `i `us ]
-"656
+"667
 [e :U 2370 ]
 {
-"657
+"668
 [e $ ! > -> =+ _x -> -> 1 `i `uc `i -> 64 `i 2371  ]
-"658
+"669
 [e ) -> -> 0 `i `a ]
 [e $UE 2367  ]
 [e :U 2371 ]
-"659
+"670
 [e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 62C -> ( _spinners (2 , -> -> 4 `i `uc -> -> 0 `i `uc `i ]
-"660
+"671
 [e ( _update_lcd (1 -> -> 0 `i `uc ]
-"661
+"672
 [e ( _WaitMs (1 -> -> 100 `i `us ]
-"662
+"673
 }
 [e $ != -> ( _get_switch (1 -> . `E17547 4 `uc `ui -> -> 0 `i `ui 2370  ]
 [e :U 2369 ]
-"664
+"675
 [e = _x -> -> 0 `i `uc ]
-"665
+"676
 [e :U 2374 ]
 {
-"666
-[e =+ _cb -> ( _get_raw_result (1 . `E16936 0 `ul ]
-"667
-[e =+ _cp -> ( _get_raw_result (1 . `E16936 1 `ul ]
-"668
-[e =+ _cm -> ( _get_raw_result (1 . `E16936 7 `ul ]
-"672
-[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc :s 63C ]
-"673
-[e ( _sprintf (1 , , , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 64C -> ( _get_raw_result (1 . `E16936 0 `ui -> ( _get_raw_result (1 . `E16936 1 `ui -> ( _get_raw_result (1 . `E16936 7 `ui ]
-"674
-[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 65C -> _x `i ]
-"675
-[e ( _update_lcd (1 -> -> 0 `i `uc ]
-"676
-[e ( _clear_adc_scan ..  ]
 "677
-[e ( _start_adc_scan ..  ]
+[e =+ _cb -> ( _get_raw_result (1 . `E16936 0 `ul ]
 "678
-[e ( _WaitMs (1 -> -> 100 `i `us ]
+[e =+ _cp -> ( _get_raw_result (1 . `E16936 1 `ul ]
 "679
+[e =+ _cm -> ( _get_raw_result (1 . `E16936 7 `ul ]
+"683
+[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc :s 63C ]
+"684
+[e ( _sprintf (1 , , , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 64C -> ( _get_raw_result (1 . `E16936 0 `ui -> ( _get_raw_result (1 . `E16936 1 `ui -> ( _get_raw_result (1 . `E16936 7 `ui ]
+"685
+[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 65C -> _x `i ]
+"686
+[e ( _update_lcd (1 -> -> 0 `i `uc ]
+"687
+[e ( _clear_adc_scan ..  ]
+"688
+[e ( _start_adc_scan ..  ]
+"689
+[e ( _WaitMs (1 -> -> 100 `i `us ]
+"690
 }
 [e $ < -> =+ _x -> -> 1 `i `uc `i -> 64 `i 2374  ]
 [e :U 2373 ]
-"680
+"691
 [e = _cb >> _cb -> 6 `i ]
-"681
+"692
 [e = _cp >> _cp -> 6 `i ]
-"682
+"693
 [e = _cm >> _cm -> 6 `i ]
-"684
+"695
 [e $ ! != -> ( _cal_current_zero (4 , , , -> -> 0 `i `a -> _cb `s -> _cp `s -> _cm `s `i -> 0 `i 2375  ]
 {
-"685
+"696
 [e ( _cal_current_zero (4 , , , -> -> 1 `i `a -> _cb `s -> _cp `s -> _cm `s ]
-"686
+"697
 [e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc :s 66C ]
-"687
+"698
 [e ( _sprintf (1 , , , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 67C _cb _cp _cm ]
-"688
+"699
 [e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 68C ]
-"689
+"700
 [e ( _update_lcd (1 -> -> 0 `i `uc ]
-"690
+"701
 [e ( _WaitMs (1 -> -> 2000 `i `us ]
-"691
+"702
 [e ( _write_cal_data ..  ]
-"692
+"703
 }
 [e $U 2376  ]
 [e :U 2375 ]
 {
-"693
+"704
 [e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc :s 69C ]
-"694
+"705
 [e ( _sprintf (1 , , , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 70C _cb _cp _cm ]
-"695
+"706
 [e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 71C ]
-"696
+"707
 [e ( _update_lcd (1 -> -> 0 `i `uc ]
-"697
+"708
 [e ( _WaitMs (1 -> -> 2000 `i `us ]
-"698
+"709
 [e ) -> -> 0 `i `a ]
 [e $UE 2367  ]
-"699
+"710
 }
 [e :U 2376 ]
-"757
+"768
 [e ) -> -> 1 `i `a ]
 [e $UE 2367  ]
-"758
+"769
 [e :UE 2367 ]
 }
-"760
+"771
 [v _display_history `(a ~T0 @X0 1 sf ]
-"761
+"772
 {
 [e :U _display_history ]
 [f ]
-"762
+"773
 [v F18421 `uc ~T0 @X0 1 s bwait ]
 [i F18421
 -> -> 0 `i `uc
 ]
-"764
+"775
 [e $ ! && != -> ( _get_switch (1 -> . `E17547 4 `uc `ui -> -> 0 `i `ui > -> =+ F18421 -> -> 1 `i `uc `i -> 5 `i 2378  ]
 {
-"765
+"776
 [e = _pclock ( _time (1 -> -> -> 0 `i `*v `*ul ]
-"766
+"777
 [e = _t_mbmc ( _localtime (1 -> &U _pclock `*Cul ]
-"767
+"778
 [e ( _sprintf (1 , , , , (. , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc :s 72C -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 0 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 1 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 2 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 3 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i ]
-"768
+"779
 [e ( _sprintf (1 , , , , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 73C -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 4 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 5 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 6 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 7 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i ]
-"769
+"780
 [e ( _sprintf (1 , , , , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 74C -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 8 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 9 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 10 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i -> *U + &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 * -> -> -> 12 `i `ui `ux -> -> # *U &U . *U + &U . _C 39 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 39 `ui `ux 10 `ui `ux `i ]
-"770
+"781
 [e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 3 `i `uc -> -> 0 `i `uc :s 75C ( _asctime (1 -> _t_mbmc `*CS2285 ]
-"771
+"782
 [e ( _update_lcd (1 -> -> 0 `i `uc ]
-"772
+"783
 [e ( _WaitMs (1 -> -> 2000 `i `us ]
-"773
+"784
 [e = F18421 -> -> 0 `i `uc ]
-"774
+"785
 [e ) -> -> 1 `i `a ]
 [e $UE 2377  ]
-"775
+"786
 }
 [e $U 2379  ]
 [e :U 2378 ]
 {
-"776
+"787
 [e $ ! ! != -> ( _get_switch (1 -> . `E17547 4 `uc `ui -> -> 0 `i `ui 2380  ]
-"777
+"788
 [e = F18421 -> -> 0 `i `uc ]
 [e :U 2380 ]
-"778
+"789
 [e ) -> -> 0 `i `a ]
 [e $UE 2377  ]
-"779
+"790
 }
 [e :U 2379 ]
-"780
+"791
 [e :UE 2377 ]
 }
-"782
+"793
 [v _wdt_reset `(v ~T0 @X0 1 sf ]
-"783
+"794
 {
 [e :U _wdt_reset ]
 [f ]
-"790
+"801
 [; <"  clrwdt ;# ">
-"791
+"802
 [e :UE 2381 ]
 }
 [p f _sprintf 9282704 ]
-[a 2C 50 50 58 49 49 58 48 56 0 ]
-[a 5C 49 46 53 54 0 ]
-[a 1C 74 97 110 32 32 55 32 50 48 50 52 0 ]
+[a 2C 49 52 58 50 53 58 53 57 0 ]
+[a 1C 74 97 110 32 32 56 32 50 48 50 52 0 ]
+[a 5C 50 46 48 48 0 ]
 [a 8C 32 87 68 84 32 84 73 77 69 79 85 84 32 82 69 66 79 79 84 32 0 ]
 [a 18C 73 110 118 97 108 105 100 32 69 69 80 82 79 77 32 68 65 84 65 32 0 ]
 [a 33C 72 105 115 116 111 114 121 32 68 97 116 97 32 32 83 97 118 101 100 32 32 0 ]

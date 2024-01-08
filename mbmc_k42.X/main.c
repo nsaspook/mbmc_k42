@@ -159,6 +159,7 @@ typedef signed long long int24_t;
 #include "hid.h"
 #include "bsoc.h"
 
+
 V_data V = {
 	.ticks = DEF_TIME,
 	.ticker = 25, // timer start offset
@@ -213,8 +214,15 @@ volatile C_data C = {
 	.day_update = 0,
 	.dupdate = false,
 	.updates = 0,
-	.dynamic_ah_daily = 0.0,
-	.dynamic_ah_adj_daily = 0.0,
+	.dynamic_ah_daily = 0.0001,
+	.dynamic_ah_adj_daily = 0.0001,
+	.c_bat=0.1,
+	.c_load=0.1,
+	.c_mppt=0.1,
+	.c_pv=0.1,
+	.esr=0.1,
+	.p_bat=0.1,
+	.v_pv=0.1,
 };
 
 struct tm *t_mbmc;
@@ -374,6 +382,7 @@ void main(void)
 				sprintf(get_vterm_ptr(2, 0), "Read EEPROM DATA    ");
 			} else {
 				sprintf(get_vterm_ptr(2, 0), "Invalid EEPROM DATA ");
+				write_cal_data();
 			}
 			update_lcd(0);
 			clear_adc_scan();
@@ -387,6 +396,7 @@ void main(void)
 				V.cc_active = false;
 			}
 
+#ifndef SKIP_ESR
 			i_ror = 1;
 			do {
 				calc_ror_data();
@@ -398,7 +408,6 @@ void main(void)
 				wdt_reset();
 				WaitMs(ROR_WAIT); // time between samples
 
-				//WaitMs(500); // wait for updated ADC data
 			} while ((i_ror++ < ROR_TIMES) && (C.bv_ror > ROR_LIMIT_LOW));
 
 			static_soc(); // defaults
@@ -409,7 +418,7 @@ void main(void)
 			sprintf(get_vterm_ptr(1, 0), "Battery Ah %3.2f      ", C.dynamic_ah);
 			sprintf(get_vterm_ptr(2, 0), "                      ");
 			update_lcd(0);
-			WaitMs(2000);
+			WaitMs(200);
 			sprintf(get_vterm_ptr(0, 0), "Battery ESR          ");
 			sprintf(get_vterm_ptr(1, 0), "Calculation          ");
 			sprintf(get_vterm_ptr(2, 0), "Check 30 seconds     ");
@@ -423,14 +432,15 @@ void main(void)
 				sprintf(get_vterm_ptr(2, 0), "Checking %c %c       ", spinners(0, false), spinners(shape, false));
 				update_lcd(0);
 
-				if (i_esr++ > 512)
+				if (i_esr++ > 1)
 					break;
 			};
 			sprintf(get_vterm_ptr(0, 0), "ESR  %2.6f            ", C.esr);
 			sprintf(get_vterm_ptr(1, 0), "R1 %2.3f %3.4f            ", C.bv_one_load, C.load_i1);
 			sprintf(get_vterm_ptr(2, 0), "R2 %2.3f %3.4f            ", C.bv_full_load, C.load_i2);
 			update_lcd(0);
-			WaitMs(4000);
+			WaitMs(400);
+#endif
 			V.sensor_set = get_switch(SCALIB);
 			WaitMs(1000);
 			if (V.sensor_set && get_switch(SCALIB)) {
@@ -483,7 +493,7 @@ void main(void)
 			if (C.dupdate) {
 				C.dupdate = false;
 				set_hist_flag();
-
+#ifndef SKIP_ESR
 				uint16_t i_esr = 1;
 				esr_check(true); // init FSM
 				while (esr_check(false) < 0.0) {
@@ -491,6 +501,7 @@ void main(void)
 					if (i_esr++ > 512)
 						break;
 				};
+#endif
 				load_hist_data(); // calculate history data
 				update_hist_data(false, &C.hist[0]); // load EEPROM history buffer
 				write_cal_data(); // save updated history to EEPROM
