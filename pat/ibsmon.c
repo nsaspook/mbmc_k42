@@ -5,6 +5,7 @@
 
 // CONFIG1H
 #pragma config OSC = HSPLL      // Oscillator Selection bits (HS oscillator, PLL enabled (clock frequency = 4 x FOSC1))
+//#pragma config OSC = INTIO1
 #pragma config FSCM = ON        // Fail-Safe Clock Monitor Enable bit (Fail-Safe Clock Monitor enabled)
 #pragma config IESO = ON        // Internal External Switchover bit (Internal External Switchover mode enabled)
 
@@ -266,6 +267,8 @@ int8_t controller_work(void)
 void init_ihcmon(void)
 {
 	uint16_t tmp;
+	
+	OSCCON=0b01100000;
 	V.boot_code = FALSE;
 	BOOT_FLAG = FALSE;
 	if (RCON != 0b0011100)
