@@ -313,10 +313,7 @@ void main(void)
 			sprintf(get_vterm_ptr(2, 2), "                    ");
 			sprintf(get_vterm_ptr(3, 2), "                    ");
 			update_lcd(0);
-			UART1_Write('T');
-			UART1_Write('\r');
-			UART1_Write('\n');
-			WaitMs(1000);
+			WaitMs(100);
 			if (V.get_time_text) {
 				StartTimer(TMR_TEXT, TXTDELAY);
 
@@ -541,7 +538,8 @@ void main(void)
 				break;
 			case HID_MAIN:
 				V.calib = false;
-				sprintf(get_vterm_ptr(0, 0), "PV %2.2f PA %2.2f      ", calc_fixups(C.calc[V_PV], WIDE_ZERO), calc_fixups(C.calc[C_MPPT], WIDE_ZERO | NO_NEG));
+//				sprintf(get_vterm_ptr(0, 0), "PV %2.2f PA %2.2f      ", calc_fixups(C.calc[V_PV], WIDE_ZERO), calc_fixups(C.calc[C_MPPT], WIDE_ZERO | NO_NEG));
+				sprintf(get_vterm_ptr(0, 0), "PV %2.2f PA %2.2f      ", calc_fixups(C.calc[V_PV], WIDE_ZERO), C.calc[C_MPPT]);
 				sprintf(get_vterm_ptr(1, 0), "BV %2.2f BA %2.2f      ", calc_fixups(C.calc[V_BAT], WIDE_ZERO), C.calc[C_BATT]);
 				sprintf(get_vterm_ptr(2, 0), "CV %2.2f CA %2.2f      ", calc_fixups(C.calc[V_CC], WIDE_ZERO), C.calc[C_PV]);
 

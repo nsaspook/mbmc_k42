@@ -35,6 +35,8 @@ const uint32_t BVSOC_TABLE[BVSOC_SLOTS][2] = {
 const char infoline1[] = "   LOW Count   TOD Count    TX Count    RX Count   ADC Count   SPI Count   DIO Count";
 const char infoline2[] = "    DAILY AH      LO ESR      HI ESR       PV AH   BAT W Out    BAT W IN     REAL AH    F CYCLES   B CYCLES     UPDATES";
 
+static uint32_t seq_log = 0;
+
 /*
  * DC PWM diversion for direct PV power before MPPT
  */
@@ -189,17 +191,6 @@ void calc_bsoc(void)
 	 */
 	if (V.sys_info) {
 		V.sys_info = false;
-		log_ptr = port_data_dma_ptr();
-		lcode = I_CODE;
-		//		sprintf((char*) log_ptr, " %c\r\n %c ,System Status: Version %s Build %s %s \r\n %c ,%s\r\n %c ,%10lu, %10lu, %10lu, %10lu, %10lu, %10lu, %10lu \r\n %c ,%s\r\n %c ,%10d, %10d, %10d, %10d, %10d, %10d, %10d, %10d, %10d, %10lu\r\n %c\r\n",
-		//			lcode, VER, build_date, build_time,
-		//			lcode, infoline1,
-		//			lcode, V.lowint_count, V.timerint_count, V.tx_count, V.rx_count, V.adc_count, V.spi_count, V.switch_count,
-		//			lcode, infoline2,
-		//			lcode, C.hist[0].h[0], C.hist[0].h[9], C.hist[0].h[10], C.hist[0].h[3], C.hist[0].h[4], C.hist[0].h[5], C.hist[0].h[6], C.hist[0].h[11], C.hist[0].h[1], C.hist[0].updates,
-		//			lcode);
-		StartTimer(TMR_DISPLAY, SOCDELAY); // sync the spi dma display updates to avoid memory contention
-		send_port_data_dma(strlen((char*) log_ptr));
 	} else {
 		if (!log_update_wait++ && V.system_stable && !V.get_time_text) {
 			log_ptr = port_data_dma_ptr();
@@ -210,8 +201,8 @@ void calc_bsoc(void)
 			/*
 			 * format data to JSON
 			 */
-			snprintf((char *) log_ptr, 510, "{\r\n     \"DLname\": \"%s\",\r\n     \"DLv_bat\": %f,\r\n     \"Qbuild_date\": \"%s\",\r\n     \"Qbuild_time\": \"%s\"\r\n}",
-				VER, C.v_bat, build_date, build_time);
+			snprintf((char *) log_ptr, max_port_data - 1, "{\r\n \"DLname\": \"%s MBMC K42\",\r\n \"DLsequence\": %lu,\r\n \"DLv_pv\": %f,\r\n \"DLv_bat\": %f,\r\n \"DLc_bat\": %f,\r\n \"DLc_pv\": %f,\r\n \"Qbuild_date\": \"%s\",\r\n \"Qbuild_time\": \"%s\"\r\n}\r\n",
+				VER, seq_log++, C.v_pv, C.v_bat, C.c_bat, C.c_pv, build_date, build_time);
 			/*
 			 * send the string to the external MQTT device
 			 */

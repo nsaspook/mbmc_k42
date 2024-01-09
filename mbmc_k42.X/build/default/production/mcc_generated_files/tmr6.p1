@@ -111,21 +111,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _UART1_is_rx_ready `(a ~T0 @X0 0 ef ]
 "355
 [v _UART1_Read `(uc ~T0 @X0 0 ef ]
-"380
-[v _UART1_Write `(v ~T0 @X0 0 ef1`uc ]
-"216 mcc_generated_files/tmr6.c
-[c E17112 0 1 2 3 4 5 .. ]
-[n E17112 . UI_STATE_INIT UI_STATE_HOST UI_STATE_DEBUG UI_STATE_LOG UI_STATE_MON UI_STATE_ERROR  ]
-[c E17093 0 1 2 3 .. ]
-[n E17093 . DIS_STR DIS_HELP DIS_ERR DIS_CLEAR  ]
-"172 ./vconfig.h
-[s S2288 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 :1 `uc 1 `E17093 1 `E17093 1 `us 1 `us 1 ]
-[n S2288 terminal_type mesgid TID mcode mparm cmdlen log_seq host_display_ack info help_temp ceid log_num ]
-"207
-[s S2289 `E17112 1 `uc -> 64 `i `uc -> 64 `i `uc -> 16 `i `Vul 1 `Vul 1 `Vul 1 `Vc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `E17112 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :2 `uc 1 :1 `uc 1 `S2288 1 `Vuc 1 `Vuc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `Va 1 `Va 1 `Va 1 `Va 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 ]
-[n S2289 V_data ui_state buf info rbuf ticks blight ac_time testing sys_info ac_on ac_off time_info get_time_text error abort msg_error msg_ret alarm float_ticks boost_ticks wdt_ticks ui_sw r_checksum t_checksum checksum_error mode_pwm sequences all_errors set_sequ debug help stack help_id screen response ticker cc_state flipper calib enter sensor_set fixup cc_active system_stable blight_off in_float in_boost lowint_count timerint_count tx_count rx_count adc_count spi_count switch_count ]
-"58 mcc_generated_files/tmr6.c
-[v _V `S2289 ~T0 @X0 0 e ]
 "250 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "339
@@ -1909,82 +1894,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "210
 [e = F17279 ( _UART1_Read ..  ]
-"212
-[e $ ! == -> F17279 `ui -> 116 `ui 2315  ]
-{
-"213
-[e ( _UART1_Write (1 F17279 ]
-"214
-[e ( _UART1_Write (1 -> -> 13 `ui `uc ]
-"215
-[e ( _UART1_Write (1 -> -> 10 `ui `uc ]
-"216
-[e = . _V 11 -> -> 0 `i `uc ]
-"217
-[e $ ! == -> F17280 `i -> 10 `i 2316  ]
-"218
-[e = . _V 11 -> -> 1 `i `uc ]
-[e :U 2316 ]
-"219
-[e = . _V 12 -> -> 0 `i `uc ]
-"220
-[e = *U + &U . _V 3 * -> F17280 `ux -> -> # *U &U . _V 3 `ui `ux -> -> 0 `i `uc ]
-"221
-[e = F17280 -> -> 0 `i `uc ]
-"222
-}
-[e :U 2315 ]
-"224
-[e $ ! && != -> . _V 12 `i -> 0 `i < -> F17280 `i -> 12 `i 2317  ]
-{
-"225
-[e ( _UART1_Write (1 F17279 ]
-"226
-[e = *U + &U . _V 3 * -> ++ F17280 -> -> 1 `i `uc `ux -> -> # *U &U . _V 3 `ui `ux -> F17279 `uc ]
-"227
-}
-[e :U 2317 ]
-"228
-[e $ ! == -> F17279 `ui -> 35 `ui 2318  ]
-{
-"229
-[e = . _V 8 -> -> 1 `i `uc ]
-"230
-}
-[e :U 2318 ]
-"231
-[e $ ! == -> F17279 `ui -> 86 `ui 2319  ]
-{
-"232
-[e = . _V 9 -> -> 1 `i `uc ]
-"233
-}
-[e :U 2319 ]
-"234
-[e $ ! == -> F17279 `ui -> 118 `ui 2320  ]
-{
-"235
-[e = . _V 10 -> -> 1 `i `uc ]
-"236
-}
-[e :U 2320 ]
-"237
-[e $ ! == -> F17279 `ui -> 84 `ui 2321  ]
-{
-"238
-[e ( _UART1_Write (1 F17279 ]
-"239
-[e = . _V 11 -> -> 0 `i `uc ]
-"240
-[e = . _V 12 -> -> 1 `i `uc ]
-"241
-[e = F17280 -> -> 0 `i `uc ]
-"242
-}
-[e :U 2321 ]
-"244
+"211
 }
 [e :U 2314 ]
-"245
+"212
 [e :UE 2309 ]
 }

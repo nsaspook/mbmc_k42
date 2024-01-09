@@ -150,6 +150,8 @@ extern "C" {
 #define CC_FLOAT	180	// 2.82
 #define CC_LIMIT	200	// 3.20
 #define CC_OFFLINE	240	// 4.00
+	
+#define max_port_data	1024
 
 	struct spi_link_type { // internal SPI state table
 		uint8_t SPI_LCD : 1;

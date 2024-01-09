@@ -6,7 +6,7 @@
 #include "mcc_generated_files/mcc.h"
 
 #define max_strlen	21
-#define max_port_data	1024
+//#define max_port_data	1024
 
 struct spi_link_type spi_link;
 static uint8_t port_data[max_port_data] = {255, 0, 255, 0, 255, 0, 255, 0, 255, 0, 255, 0, 255, 0, 255, 0};
