@@ -200,8 +200,8 @@ void calc_bsoc(void)
 			/*
 			 * format data to JSON
 			 */
-			snprintf((char *) log_ptr, max_port_data - 1, "{\r\n \"DLname\": \"%s MBMC K42\",\r\n \"DLsequence\": %lu,\r\n \"DLv_pv\": %f,\r\n \"DLv_bat\": %f,\r\n \"DLc_bat\": %f,\r\n \"DLc_pv\": %f,\r\n \"Qbuild_date\": \"%s\",\r\n \"Qbuild_time\": \"%s\"\r\n}\r\n",
-				VER, seq_log++, C.v_pv, C.v_bat, C.c_pv, C.c_mppt, build_date, build_time);
+			snprintf((char *) log_ptr, max_port_data - 1, "{\r\n \"DLname\": \"%s MBMC K42\",\r\n \"DLsequence\": %lu,\r\n \"DLv_pv\": %f,\r\n \"DLv_bat\": %f,\r\n \"DLc_pv\": %f,\r\n \"DLc_mppt\": %f,\r\n \"DLc_bat\": %f,\r\n \"Qbuild_date\": \"%s\",\r\n \"Qbuild_time\": \"%s\"\r\n}\r\n",
+				VER, seq_log++, C.v_pv, C.v_bat, C.c_pv, C.c_mppt, C.c_bat, build_date, build_time);
 			/*
 			 * send the string to the external MQTT device
 			 */

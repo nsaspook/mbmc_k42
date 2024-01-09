@@ -107,14 +107,14 @@ extern struct V_data V;
 #define A100M		2 // PV,       adc line 1
 
 #ifndef BAT_100A
-#define C_A200		0.0862000f // BATTERY Amp scalar, second line [0]
+#define C_A200		0.0361010f // BATTERY Amp scalar, second line [0], 0.0862000f, BO PLUG
 #endif
 #define C_A100B		0.0361010f // PV Amp scalar, second line [0]
-#define C_A100		0.0361010f// PV Amp scalar, first line [1]
-#define C_A100M		0.0361010f // MPPT Amp scalar, first line [2]
+#define C_A100		0.0361010f // PV Amp scalar, first line [1]
+#define C_A100M		0.0862000f // MPPT Amp scalar, first line [2]
 
 #ifndef BAT_100A
-#define C_OFFSET200	3934 // BATTERY sensor adc zero Amp counts, line 0
+#define C_OFFSET200	3965 // BATTERY sensor adc zero Amp counts, line 0,  BO sensor PLUG
 #endif
 #define C_OFFSET100B	3934 // BATTERY sensor adc zero Amp counts, line 0
 #define C_OFFSET100	3995 // PV sensor adc zero Amp counts,      line 1

@@ -77,6 +77,7 @@ extern "C" {
 	 * 1.53 fix lcd display line limits
 	 * 1.56 connection updates and structure fixes
 	 * 2.00 FM80 dump load system monitor
+	 * 2.01 swap around the voltage and current sensors offsets and scalars for the FM80 system configuration
 	 */
 	//#define TESTING
 	//#define DISPLAY_SLOW

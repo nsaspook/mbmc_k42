@@ -1710,14 +1710,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 :U ..
--> -> 3934 `i `s
+-> -> 3965 `i `s
 -> -> 3995 `i `s
 -> -> 3934 `i `s
 ..
 :U ..
+-> .0.0361010 `f
+-> .0.0361010 `f
 -> .0.0862000 `f
--> .0.0361010 `f
--> .0.0361010 `f
 ..
 -> -> 0 `i `uc
 -> -> 0 `i `us
@@ -2614,7 +2614,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! ! != -> . _R 11 `i -> 0 `i 2415  ]
 {
 "502
-[e = *U + &U . _R 3 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _R 3 `ui `ux -> -> 3934 `i `s ]
+[e = *U + &U . _R 3 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _R 3 `ui `ux -> -> 3965 `i `s ]
 "504
 [e = *U + &U . _R 3 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _R 3 `ui `ux -> -> 3995 `i `s ]
 "505
@@ -2626,11 +2626,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! ! != -> . _R 12 `i -> 0 `i 2416  ]
 {
 "512
-[e = *U + &U . _R 4 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _R 4 `ui `ux -> .0.0862000 `f ]
+[e = *U + &U . _R 4 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _R 4 `ui `ux -> .0.0361010 `f ]
 "514
 [e = *U + &U . _R 4 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _R 4 `ui `ux -> .0.0361010 `f ]
 "515
-[e = *U + &U . _R 4 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _R 4 `ui `ux -> .0.0361010 `f ]
+[e = *U + &U . _R 4 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _R 4 `ui `ux -> .0.0862000 `f ]
 "516
 }
 [e :U 2416 ]
