@@ -92,7 +92,7 @@ bool pv_diversion(bool kill)
  */
 void calc_bsoc(void)
 {
-	uint8_t * log_ptr, lcode = D_CODE;
+	uint8_t * log_ptr;
 	uint32_t t_time;
 	static uint8_t log_update_wait = 0;
 	float adj = 1.0;
@@ -195,14 +195,13 @@ void calc_bsoc(void)
 		if (!log_update_wait++ && V.system_stable && !V.get_time_text) {
 			log_ptr = port_data_dma_ptr();
 			if (H.sequence == HID_AUX) {
-				lcode = I_CODE;
 			}
 
 			/*
 			 * format data to JSON
 			 */
 			snprintf((char *) log_ptr, max_port_data - 1, "{\r\n \"DLname\": \"%s MBMC K42\",\r\n \"DLsequence\": %lu,\r\n \"DLv_pv\": %f,\r\n \"DLv_bat\": %f,\r\n \"DLc_bat\": %f,\r\n \"DLc_pv\": %f,\r\n \"Qbuild_date\": \"%s\",\r\n \"Qbuild_time\": \"%s\"\r\n}\r\n",
-				VER, seq_log++, C.v_pv, C.v_bat, C.c_bat, C.c_pv, build_date, build_time);
+				VER, seq_log++, C.v_pv, C.v_bat, C.c_pv, C.c_mppt, build_date, build_time);
 			/*
 			 * send the string to the external MQTT device
 			 */

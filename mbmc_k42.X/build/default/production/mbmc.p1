@@ -1833,7 +1833,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "87
 [e = . _C 18 ( _lp_filter (3 , , * . _C 3 . _C 5 -> -> 18 `i `uc -> -> 1 `i `c ]
 "88
-[e = . _C 17 ( _lp_filter (3 , , -> - -> * . _C 1 . _C 11 `d .14.00 `f -> -> 19 `i `uc -> -> 1 `i `c ]
+[e = . _C 17 ( _lp_filter (3 , , - * . _C 1 . _C 11 -> .14.00 `f -> -> 19 `i `uc -> -> 1 `i `c ]
 "89
 [e = . _C 19 ( _lp_filter (3 , , * . _C 2 . _C 7 -> -> 20 `i `uc -> -> 1 `i `c ]
 "90

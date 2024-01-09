@@ -1710,9 +1710,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 :U ..
--> -> 3938 `i `s
--> -> 4004 `i `s
--> -> 4000 `i `s
+-> -> 3934 `i `s
+-> -> 3995 `i `s
+-> -> 3934 `i `s
 ..
 :U ..
 -> .0.0862000 `f
@@ -1988,7 +1988,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! != & >> -> 8224 `i -> _chan `ui -> 1 `i -> 0 `i 2325  ]
 {
 "185
-[e ) -> / * -> -> ( _get_raw_result (1 _chan `f `d .8.2000000 -> -> .1000.0 `f `d `f ]
+[e ) / * -> ( _get_raw_result (1 _chan `f -> .8.2000000 `f -> .1000.0 `f ]
 [e $UE 2312  ]
 "186
 }
@@ -1996,7 +1996,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 2325 ]
 {
 "187
-[e ) -> / * -> -> ( _get_raw_result (1 _chan `f `d .4.1254125 -> -> .1000.0 `f `d `f ]
+[e ) / * -> ( _get_raw_result (1 _chan `f -> .4.1254125 `f -> .1000.0 `f ]
 [e $UE 2312  ]
 "188
 }
@@ -2014,14 +2014,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "193
 [e $ ! || != & >> -> 2051 `i -> _chan `ui -> 1 `i -> 0 `i != & >> -> 0 `i -> _chan `ui -> 1 `i -> 0 `i 2328  ]
 "194
-[e ) -> / * -> -> ( _get_raw_result (1 _chan `f `d .0.6250000 -> -> .1000.0 `f `d `f ]
+[e ) / * -> ( _get_raw_result (1 _chan `f -> .0.6250000 `f -> .1000.0 `f ]
 [e $UE 2312  ]
 [e :U 2328 ]
 "196
 [e $ ! != & >> -> 8224 `i -> _chan `ui -> 1 `i -> 0 `i 2329  ]
 {
 "197
-[e ) -> / * -> -> ( _get_raw_result (1 _chan `f `d .8.2000000 -> -> .1000.0 `f `d `f ]
+[e ) / * -> ( _get_raw_result (1 _chan `f -> .8.2000000 `f -> .1000.0 `f ]
 [e $UE 2312  ]
 "198
 }
@@ -2029,7 +2029,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 2329 ]
 {
 "199
-[e ) -> / * -> -> ( _get_raw_result (1 _chan `f `d .4.1254125 -> -> .1000.0 `f `d `f ]
+[e ) / * -> ( _get_raw_result (1 _chan `f -> .4.1254125 `f -> .1000.0 `f ]
 [e $UE 2312  ]
 "200
 }
@@ -2311,7 +2311,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _voltage -> .10.0 `f ]
 [e :U 2379 ]
 "334
-[e ) -> / -> _voltage `d .0.002442 `us ]
+[e ) -> / _voltage -> .0.002442 `f `us ]
 [e $UE 2377  ]
 "335
 [e :UE 2377 ]
@@ -2614,11 +2614,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! ! != -> . _R 11 `i -> 0 `i 2415  ]
 {
 "502
-[e = *U + &U . _R 3 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _R 3 `ui `ux -> -> 3938 `i `s ]
+[e = *U + &U . _R 3 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _R 3 `ui `ux -> -> 3934 `i `s ]
 "504
-[e = *U + &U . _R 3 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _R 3 `ui `ux -> -> 4004 `i `s ]
+[e = *U + &U . _R 3 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _R 3 `ui `ux -> -> 3995 `i `s ]
 "505
-[e = *U + &U . _R 3 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _R 3 `ui `ux -> -> 4000 `i `s ]
+[e = *U + &U . _R 3 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _R 3 `ui `ux -> -> 3934 `i `s ]
 "506
 }
 [e :U 2415 ]

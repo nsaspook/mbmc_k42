@@ -75,7 +75,7 @@ extern struct V_data V;
 #define DAC_LOAD_B	0b0101
 #define DCHAN_A		0
 #define DCHAN_B		1
-#define DAC_SCALE	0.002442 // 10 vdc @ 12-bits resolution per bit
+#define DAC_SCALE	0.002442f // 10 vdc @ 12-bits resolution per bit
 
 #define ZERO_RANGE	100
 #define TEN_A_RANGE	100
@@ -95,9 +95,9 @@ extern struct V_data V;
 /*
  * 13-bit adc result ADRPT 64 samples and a ADCRS of 5 [0..8190] steps
  */
-#define C_SCALE		0.6250000
-#define V_SCALE		4.1254125
-#define V_SCALE_H	8.2000000
+#define C_SCALE		0.6250000f
+#define V_SCALE		4.1254125f
+#define V_SCALE_H	8.2000000f
 
 #ifndef BAT_100A
 #define A200		0 // BATTERY,  adc line 0
@@ -107,18 +107,18 @@ extern struct V_data V;
 #define A100M		2 // PV,       adc line 1
 
 #ifndef BAT_100A
-#define C_A200		0.0862000 // BATTERY Amp scalar, second line [0]
+#define C_A200		0.0862000f // BATTERY Amp scalar, second line [0]
 #endif
-#define C_A100B		0.0361010 // PV Amp scalar, second line [0]
-#define C_A100		0.0361010 // PV Amp scalar, first line [1]
-#define C_A100M		0.0361010 // MPPT Amp scalar, first line [2]
+#define C_A100B		0.0361010f // PV Amp scalar, second line [0]
+#define C_A100		0.0361010f// PV Amp scalar, first line [1]
+#define C_A100M		0.0361010f // MPPT Amp scalar, first line [2]
 
 #ifndef BAT_100A
-#define C_OFFSET200	3938 // BATTERY sensor adc zero Amp counts, line 0
+#define C_OFFSET200	3934 // BATTERY sensor adc zero Amp counts, line 0
 #endif
-#define C_OFFSET100B	4004 // BATTERY sensor adc zero Amp counts, line 0
-#define C_OFFSET100	4004 // PV sensor adc zero Amp counts,      line 1
-#define C_OFFSET100M	4000 // MPPT sensor adc zero Amp counts,      line 2
+#define C_OFFSET100B	3934 // BATTERY sensor adc zero Amp counts, line 0
+#define C_OFFSET100	3995 // PV sensor adc zero Amp counts,      line 1
+#define C_OFFSET100M	3934 // MPPT sensor adc zero Amp counts,      line 2
 
 /*
  * sanity check values for current calibration routines
