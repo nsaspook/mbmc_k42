@@ -216,13 +216,13 @@ volatile C_data C = {
 	.updates = 0,
 	.dynamic_ah_daily = 0.0001,
 	.dynamic_ah_adj_daily = 0.0001,
-	.c_bat=0.1,
-	.c_load=0.1,
-	.c_mppt=0.1,
-	.c_pv=0.1,
-	.esr=0.1,
-	.p_bat=0.1,
-	.v_pv=0.1,
+	.c_bat = 0.1,
+	.c_load = 0.1,
+	.c_mppt = 0.1,
+	.c_pv = 0.1,
+	.esr = 0.1,
+	.p_bat = 0.1,
+	.v_pv = 0.1,
 };
 
 struct tm *t_mbmc;
@@ -538,9 +538,8 @@ void main(void)
 				break;
 			case HID_MAIN:
 				V.calib = false;
-//				sprintf(get_vterm_ptr(0, 0), "PV %2.2f PA %2.2f      ", calc_fixups(C.calc[V_PV], WIDE_ZERO), calc_fixups(C.calc[C_MPPT], WIDE_ZERO | NO_NEG));
-				sprintf(get_vterm_ptr(0, 0), "PV %2.2f PA %2.2f      ", calc_fixups(C.calc[V_PV], WIDE_ZERO), C.calc[C_MPPT]);
-				sprintf(get_vterm_ptr(1, 0), "BV %2.2f BA %2.2f      ", calc_fixups(C.calc[V_BAT], WIDE_ZERO), C.calc[C_BATT]);
+				sprintf(get_vterm_ptr(0, 0), "PV %2.2f PA %2.2f      ", calc_fixups(C.calc[V_PV], WIDE_ZERO), calc_fixups(C.calc[C_BATT], WIDE_ZERO | NO_NEG));
+				sprintf(get_vterm_ptr(1, 0), "BV %2.2f BA %2.2f      ", calc_fixups(C.calc[V_BAT], WIDE_ZERO), C.calc[C_MPPT]);
 				sprintf(get_vterm_ptr(2, 0), "CV %2.2f CA %2.2f      ", calc_fixups(C.calc[V_CC], WIDE_ZERO), C.calc[C_PV]);
 
 				sprintf(get_vterm_ptr(0, 1), "BAT IWH %4.1f          ", C.bkwi);
@@ -690,8 +689,8 @@ static bool current_sensor_cal(void)
 	cp = cp >> 6;
 	cm = cm >> 6;
 
-	if (cal_current_zero(false, cb, cp, cm)) {
-		cal_current_zero(true, cb, cp, cm);
+	if (cal_current_zero(false, (int16_t) cb, (int16_t) cp, (int16_t) cm)) {
+		cal_current_zero(true, (int16_t) cb, (int16_t) cp, (int16_t) cm);
 		sprintf(get_vterm_ptr(0, 0), "Battery and PV       ");
 		sprintf(get_vterm_ptr(1, 0), " %ld %ld %ld            ", cb, cp, cm);
 		sprintf(get_vterm_ptr(2, 0), "Zero Cal Set         ");

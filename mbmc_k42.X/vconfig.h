@@ -78,6 +78,7 @@ extern "C" {
 	 * 1.56 connection updates and structure fixes
 	 * 2.00 FM80 dump load system monitor
 	 * 2.01 swap around the voltage and current sensors offsets and scalars for the FM80 system configuration
+	 * 2.02 move variables on the LCD display code to match the actual measurements
 	 */
 	//#define TESTING
 	//#define DISPLAY_SLOW

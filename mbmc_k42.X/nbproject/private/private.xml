@@ -6,13 +6,11 @@
             <file>file:/root/mbmc_k42/mbmc_k42.X/vconfig.h</file>
             <file>file:/root/mbmc_k42/mbmc_k42.X/daq.c</file>
             <file>file:/root/mbmc_k42/mbmc_k42.X/eadog.c</file>
-            <file>file:/root/mbmc_k42/mbmc_k42.X/mbmc.c</file>
             <file>file:/root/mbmc_k42/mbmc_k42.X/bsoc.c</file>
             <file>file:/root/mbmc_k42/mbmc_k42.X/mconfig.h</file>
             <file>file:/root/mbmc_k42/mbmc_k42.X/main.c</file>
             <file>file:/root/mbmc_k42/mbmc_k42.X/mbmc.h</file>
             <file>file:/root/mbmc_k42/mbmc_k42.X/daq.h</file>
-            <file>file:/root/mbmc_k42/mbmc_k42.X/mconfig.c</file>
         </group>
     </open-files>
 </project-private>
