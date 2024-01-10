@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -4518,7 +4518,7 @@ design rules under a new name.</description>
 <via x="81.8388" y="32.6898" extent="1-16" drill="0.35"/>
 <via x="81.8388" y="44.577" extent="1-16" drill="0.35"/>
 </signal>
-<signal name="N$61">
+<signal name="VREF5V">
 <contactref element="J1" pad="14"/>
 <contactref element="IC3" pad="6"/>
 <contactref element="C7" pad="1"/>
@@ -4919,7 +4919,7 @@ design rules under a new name.</description>
 <via x="49.4538" y="11.049" extent="1-16" drill="0.35"/>
 <via x="48.768" y="13.0302" extent="1-16" drill="0.35"/>
 </signal>
-<signal name="N$234">
+<signal name="CLK16MHZCPU">
 <contactref element="Q3" pad="3"/>
 <contactref element="IC15" pad="32"/>
 <wire x1="57.6834" y1="29.4894" x2="57.6834" y2="28.4226" width="0.1524" layer="1"/>
@@ -4934,7 +4934,7 @@ design rules under a new name.</description>
 <via x="58.0644" y="29.8704" extent="1-16" drill="0.35"/>
 <via x="67.437" y="25.2222" extent="1-16" drill="0.35"/>
 </signal>
-<signal name="N$235">
+<signal name="VREF4.1">
 <contactref element="C60" pad="1"/>
 <contactref element="C57" pad="1"/>
 <contactref element="IC16" pad="5"/>
@@ -5040,7 +5040,7 @@ design rules under a new name.</description>
 <wire x1="35.56" y1="8.89" x2="33.9852" y2="7.3152" width="0.1524" layer="1"/>
 <wire x1="22.86" y1="11.1252" x2="22.86" y2="11.11" width="0.1524" layer="1"/>
 </signal>
-<signal name="N$243">
+<signal name="TX2">
 <contactref element="IC17" pad="7"/>
 <contactref element="RS-232-3" pad="2"/>
 <wire x1="45.72" y1="8.6868" x2="45.72" y2="8.89" width="0.1524" layer="1"/>
@@ -5049,7 +5049,7 @@ design rules under a new name.</description>
 <wire x1="24.1554" y1="3.81" x2="25.8318" y2="2.1336" width="0.1524" layer="1"/>
 <wire x1="24.1554" y1="3.81" x2="24.13" y2="3.81" width="0.1524" layer="1"/>
 </signal>
-<signal name="N$244">
+<signal name="RX1">
 <contactref element="IC17" pad="13"/>
 <contactref element="RS232-3" pad="3"/>
 <wire x1="37.4904" y1="16.5354" x2="38.1" y2="16.5354" width="0.1524" layer="16"/>
@@ -5188,7 +5188,7 @@ design rules under a new name.</description>
 <via x="84.963" y="53.9496" extent="1-16" drill="0.35"/>
 <via x="4.2672" y="47.7774" extent="1-16" drill="0.35"/>
 </signal>
-<signal name="N$252">
+<signal name="DLED">
 <contactref element="SV8" pad="4"/>
 <contactref element="IC15" pad="29"/>
 <contactref element="R70" pad="2"/>
@@ -6486,7 +6486,7 @@ design rules under a new name.</description>
 <wire x1="52.8066" y1="12.2682" x2="52.8066" y2="8.382" width="0.1524" layer="1"/>
 <wire x1="55.8546" y1="2.5908" x2="55.88" y2="2.54" width="0.1524" layer="1"/>
 </signal>
-<signal name="N$89">
+<signal name="RX2">
 <contactref element="RS-232-3" pad="3"/>
 <contactref element="IC17" pad="8"/>
 <wire x1="47.625" y1="8.8392" x2="48.2346" y2="8.8392" width="0.1524" layer="16"/>
@@ -6495,7 +6495,7 @@ design rules under a new name.</description>
 <wire x1="26.67" y1="3.81" x2="29.5656" y2="6.7056" width="0.1524" layer="16"/>
 <wire x1="48.2346" y1="8.8392" x2="48.26" y2="8.89" width="0.1524" layer="16"/>
 </signal>
-<signal name="N$90">
+<signal name="TX1">
 <contactref element="RS232-3" pad="2"/>
 <contactref element="IC17" pad="14"/>
 <wire x1="34.9758" y1="16.5354" x2="35.5092" y2="16.5354" width="0.1524" layer="16"/>
