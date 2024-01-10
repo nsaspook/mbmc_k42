@@ -20,7 +20,7 @@ extern "C" {
 #include "mcc_generated_files/pin_manager.h"
 #include "ringbufs.h"
 
-#define VER	"2.01"
+#define VER	"2.02"
 	/*
 	 * 0.1 MBMC new version for one 24vdc battery string for the 57K42
 	 * 0.2 start to configure the hardware for mbmc duty
@@ -115,7 +115,7 @@ extern "C" {
 #define LDELAY	1000
 #define SDELAY	500
 #define BDELAY	300
-#define DDELAY	250  // display update spacing
+#define DDELAY	125  // display update spacing
 #define TXTDELAY 10000 // unix time from server timeout
 #define SOCDELAY 125 // sync SPI and UART dma
 #define DFLIP	1500 // display info flipping spacing
