@@ -86,7 +86,7 @@
  * anb4 inverter voltage				R9
  * anb5 light sensor voltage				R10 ~60 v max
  *
- * switch MAX debounce inputs INP, uses external interrupt 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+ * switch MAX debounce inputs INP, uses external interrupt 1
  * max pin	pic pin		connector pin	name	MBMC_IO board input connector pin
  * 1		rf0		spi 9			10
  * 2		rf1		spi 10			1
@@ -105,10 +105,10 @@
  * 1	RD5	load relay 2
  * 2	RD6	PV/AC Charger DC charge-controller source relay
  * 4	RF4	spare
- * 
- * 
+ *
+ *
  * enclosure connections
- * 
+ *
  * digital/power
  * 11 red			1 black outp1
  * 12 orange			2 white outp2
@@ -121,7 +121,7 @@
  * 19 red jp2 3 A		9 red VSS
  * 20 green jp2 4 gnd		10 brown chassis ground
  * modbus board signals
- * 
+ *
  * analog signal
  * 1 orange			2 black
  * 3 purple			4 yellow
@@ -131,7 +131,7 @@
  * 11 white vss gnd		12 red vdd
  * 13 black +3.3		14 white 5.0 calibration vref
  * 15 black pwm vss		16 red pwm sig
- * 
+ *
  * system variables float
  *
  */

@@ -61,9 +61,9 @@ void init_display(void)
 
 #ifndef USEMCC_SPI
 	SPI1CON0bits.EN = 0;
-	// SSET disabled; RXR suspended if the RxFIFO is full; TXR required for a transfer; 
+	// SSET disabled; RXR suspended if the RxFIFO is full; TXR required for a transfer;
 	SPI1CON2 = 0x03;
-	// BMODE every byte; LSBF MSb first; EN enabled; MST bus master; 
+	// BMODE every byte; LSBF MSb first; EN enabled; MST bus master;
 	SPI1CON0 = 0x83;
 	SPI1CON0bits.EN = 1;
 #endif
@@ -73,7 +73,7 @@ void init_display(void)
 	DMA1_SetSCNTIInterruptHandler(clear_lcd_done);
 	DMA1_SetORIInterruptHandler(spi_byte);
 	DMA1_SetDMAPriority(2);
-#endif	
+#endif
 
 	wdtdelay(LCD_PWR_DELAY); // > 400ms power up delay
 
@@ -104,13 +104,13 @@ void init_display(void)
 	SPI1CON0bits.EN = 0;
 	// mode 3
 	SPI1CON1 = 0x20;
-	// SSET disabled; RXR suspended if the RxFIFO is full; TXR required for a transfer; 
+	// SSET disabled; RXR suspended if the RxFIFO is full; TXR required for a transfer;
 	SPI1CON2 = 0x03;
-	// BAUD 0; 
+	// BAUD 0;
 	SPI1BAUD = 0x04; // 50kHz SCK
-	// CLKSEL MFINTOSC; 
+	// CLKSEL MFINTOSC;
 	SPI1CLK = 0x02;
-	// BMODE every byte; LSBF MSb first; EN enabled; MST bus master; 
+	// BMODE every byte; LSBF MSb first; EN enabled; MST bus master;
 	SPI1CON0 = 0x83;
 	SPI1CON0bits.EN = 1;
 	send_lcd_cmd(LCD_CMD_BRI); // set back-light level

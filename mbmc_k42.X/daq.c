@@ -263,20 +263,20 @@ void dac_spi_control(bool set)
 			SB = SPI1BAUD;
 		}
 		/*
-		 * set DAC SPI mode, speed and fifo 
+		 * set DAC SPI mode, speed and fifo
 		 */
 		// mode 1
 		SPI1CON1 = 0x00;
 		SPI1CON1bits.CKE = 1;
 		SPI1CON1bits.CKP = 0;
 		SPI1CON1bits.SMP = 0;
-		// SSET disabled; RXR suspended if the RxFIFO is full; TXR required for a transfer; 
+		// SSET disabled; RXR suspended if the RxFIFO is full; TXR required for a transfer;
 		SPI1CON2 = 0x03;
-		// BAUD 0; 
+		// BAUD 0;
 		SPI1BAUD = 0x0f; // 2MHz SCK
-		// CLKSEL FOSC; 
+		// CLKSEL FOSC;
 		SPI1CLK = 0x00;
-		// BMODE every byte; LSBF MSb first; EN enabled; MST bus master; 
+		// BMODE every byte; LSBF MSb first; EN enabled; MST bus master;
 		SPI1CON0 = 0x83;
 		SPI1CON0bits.EN = 1;
 	} else {
@@ -456,7 +456,7 @@ bool read_cal_data(void)
 	} else {
 		return false;
 	}
-	r_cal.crc = crcVal_save; // reload actual eeprom CRC 
+	r_cal.crc = crcVal_save; // reload actual eeprom CRC
 	return true;
 }
 

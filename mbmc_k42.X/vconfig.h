@@ -20,7 +20,11 @@ extern "C" {
 #include "mcc_generated_files/pin_manager.h"
 #include "ringbufs.h"
 
-#define VER	"2.02"
+#define VER	"2.03"
+	/*
+	 * REMOVE THE CHIP PROGRAMMER, IT CHANGES THE ADC READINGS
+	 */
+
 	/*
 	 * 0.1 MBMC new version for one 24vdc battery string for the 57K42
 	 * 0.2 start to configure the hardware for mbmc duty
@@ -79,10 +83,15 @@ extern "C" {
 	 * 2.00 FM80 dump load system monitor
 	 * 2.01 swap around the voltage and current sensors offsets and scalars for the FM80 system configuration
 	 * 2.02 move variables on the LCD display code to match the actual measurements
+	 * 2.03 add json power variables, change MQTT data update to 1 second
+	 */
+
+	/*
+	 * REMOVE THE CHIP PROGRAMMER, IT CHANGES THE ADC READINGS
 	 */
 	//#define TESTING
 	//#define DISPLAY_SLOW
-#define DEF_TIME	1586643451
+#define DEF_TIME	1704906123
 
 #define SLED	LED0_LAT
 
@@ -115,17 +124,17 @@ extern "C" {
 #define LDELAY	1000
 #define SDELAY	500
 #define BDELAY	300
-#define DDELAY	125  // display update spacing
+#define DDELAY	125  // display update spacing 125
 #define TXTDELAY 10000 // unix time from server timeout
-#define SOCDELAY 125 // sync SPI and UART dma
+#define SOCDELAY 250 // sync SPI and UART dma 250
 #define DFLIP	1500 // display info flipping spacing
 
-#define LOG_WAIT	10 // data logging internval in seconds
+#define LOG_WAIT	1 // data logging interval in seconds
 #define D_CODE		'5'  // data logging line code version
 #define I_CODE		'*'  // info logging line code
 
 #define CAL_DELAY	64
-//#define SKIP_ESR
+	//#define SKIP_ESR
 
 	/*
 	 * offsets in bytes
@@ -152,7 +161,7 @@ extern "C" {
 #define CC_FLOAT	180	// 2.82
 #define CC_LIMIT	200	// 3.20
 #define CC_OFFLINE	240	// 4.00
-	
+
 #define max_port_data	1024
 
 	struct spi_link_type { // internal SPI state table
@@ -208,7 +217,7 @@ extern "C" {
 		SNULL,
 	} SW_NAMES;
 
-	typedef struct V_data { // control data structure 
+	typedef struct V_data { // control data structure
 		UI_STATES ui_state;
 		char buf[64], info[64], rbuf[16];
 		volatile time_t ticks, blight, ac_time;
@@ -234,9 +243,9 @@ extern "C" {
 	 *		h1	Total charge cycles into at least boost
 	 *		h2	Current lowest discharge,
 	 *		h3	PV ah total
-	 *		h4	Batt W out 
+	 *		h4	Batt W out
 	 *		h5	Batt W in
-	 *		h6	Real Ah usage 
+	 *		h6	Real Ah usage
 	 *		h7	Batt Voltage full load
 	 *		h8	Batt Voltage one load
 	 *		h9	Lowest ESR

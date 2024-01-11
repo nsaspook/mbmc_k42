@@ -102,7 +102,7 @@ void calc_bsoc(void)
 #endif
 	V.lowint_count++;
 	/*
-	 * check for excess power and send to DC dump load 
+	 * check for excess power and send to DC dump load
 	 */
 	pv_diversion(false);
 	/*
@@ -198,10 +198,16 @@ void calc_bsoc(void)
 			}
 
 			/*
+			 * REMOVE THE CHIP PROGRAMMER, IT CHANGES THE ADC READINGS
+			 */
+			/*
 			 * format data to JSON
 			 */
-			snprintf((char *) log_ptr, max_port_data - 1, "{\r\n \"DLname\": \"%s MBMC K42\",\r\n \"DLsequence\": %lu,\r\n \"DLv_pv\": %f,\r\n \"DLv_bat\": %f,\r\n \"DLc_pv\": %f,\r\n \"DLc_mppt\": %f,\r\n \"DLc_bat\": %f,\r\n \"Qbuild_date\": \"%s\",\r\n \"Qbuild_time\": \"%s\"\r\n}\r\n",
-				VER, seq_log++, C.v_pv, C.v_bat, C.c_pv, C.c_mppt, C.c_bat, build_date, build_time);
+			C.p_pv = C.v_pv * C.c_bat; // power from FM80 AC
+			C.p_bat = C.v_bat * C.c_mppt; // Power to/from BATTERY
+			C.p_mppt = C.v_bat * C.c_pv; // Power from Charge Controller
+			snprintf((char *) log_ptr, max_port_data - 1, "{\r\n \"DLname\": \"%s MBMC K42\",\r\n \"DLsequence\": %lu,\r\n \"DLv_pv\": %7.3f,\r\n \"DLv_bat\": %7.3f,\r\n \"DLc_pv\": %7.3f,\r\n \"DLc_mppt\": %7.3f,\r\n \"DLc_bat\": %7.3f,\r\n \"DLp_pv\": %7.3f,\r\n \"DLp_mppt\": %7.3f,\r\n \"DLp_bat\": %7.3f,\r\n \"Qbuild_date\": \"%s\",\r\n \"Qbuild_time\": \"%s\"\r\n}\r\n",
+				VER, seq_log++, C.v_pv, C.v_bat, C.c_pv, C.c_mppt, C.c_bat, C.p_pv, C.p_mppt, C.p_bat, build_date, build_time);
 			/*
 			 * send the string to the external MQTT device
 			 */
@@ -215,6 +221,9 @@ void calc_bsoc(void)
 			//				C.esr, C.v_sensor, get_ac_charger_relay(), C.day, C.day_start, C.day_end, C.dynamic_ah_adj, C.hist[0].cef, C.hist[0].peukert,
 			//				V.cc_state);
 			StartTimer(TMR_DISPLAY, SOCDELAY); // sync the spi dma display updates to avoid memory contention
+#ifdef DEBUG_JSON
+			DEBUG2_Toggle();
+#endif
 			send_port_data_dma(strlen((char*) log_ptr));
 		}
 		if (log_update_wait >= LOG_WAIT) {
@@ -240,7 +249,7 @@ void init_bsoc(void)
 		C.soc += 10;
 	}
 	C.dynamic_ah_adj = C.dynamic_ah;
-	TMR3_SetInterruptHandler(calc_bsoc);
+	TMR3_SetInterruptHandler(calc_bsoc); // one second timer
 }
 
 void start_bsoc(void)
