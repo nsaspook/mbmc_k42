@@ -51,12 +51,6 @@
 #include <xc.h>
 #include "tmr6.h"
 #include "interrupt_manager.h"
-#include "uart1.h"
-#include "../vconfig.h"
-#include "../timers.h"
-
-extern struct V_data V;
-extern volatile uint16_t tickCount[TMR_COUNT];
 
 /**
   Section: Global Variables Definitions
@@ -197,18 +191,6 @@ void TMR6_SetInterruptHandler(void (* InterruptHandler)(void)){
 void TMR6_DefaultInterruptHandler(void){
     // add your TMR6 interrupt custom code
     // or set custom function using TMR6_SetInterruptHandler()
-	static uint8_t i,j=0;
-
-	//Decrement each software timer
-	for (i = 0; i < TMR_COUNT; i++) {
-		if (tickCount[i] != 0) {
-			tickCount[i]--;
-}
-	}
-
-	if (UART1_is_rx_ready()) {
-		i = UART1_Read();
-	}
 }
 
 /**

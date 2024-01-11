@@ -231,6 +231,7 @@ time_t pclock;
 static bool current_sensor_cal(void);
 static bool display_history(void);
 static void wdt_reset(void);
+static void clock_tick_isr(void);
 
 const char *build_date = __DATE__, *build_time = __TIME__;
 
@@ -247,6 +248,8 @@ void main(void)
 
 	// Initialize the device
 	SYSTEM_Initialize();
+	TMR5_SetInterruptHandler(clock_tick_isr);
+	TMR6_SetInterruptHandler(sw_timers_isr);
 
 	// Enable high priority global interrupts
 	INTERRUPT_GlobalInterruptHighEnable();
@@ -796,6 +799,29 @@ static void wdt_reset(void)
 	RELAYL2_SetHigh();
 #endif
 	CLRWDT();
+}
+
+static void clock_tick_isr(void)
+{
+	SLED = (uint8_t) ~SLED;
+	V.timerint_count++;
+	V.ticks++;
+	check_day_time();
+	V.ticker = 0;
+
+	if (RELAYL1_PORT || RELAYL2_PORT) {
+		if (++V.wdt_ticks > MAX_LOAD_TIME) {
+			while (1) { // shutdown load relays and lockup for WDT to reboot
+				RELAYL1_SetLow();
+				DEBUG2_Toggle();
+				RELAYL2_SetLow();
+				DEBUG1_Toggle();
+				SLED = (uint8_t) ~SLED;
+			};
+		}
+	} else {
+		V.wdt_ticks = 0;
+	}
 }
 /**
  End of File

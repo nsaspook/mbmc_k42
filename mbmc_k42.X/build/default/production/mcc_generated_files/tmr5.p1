@@ -1,5 +1,5 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F17734 `(v ~T0 @X0 0 tf ]
+[v F16384 `(v ~T0 @X0 0 tf ]
 "41796 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [v _T5GCON `Vuc ~T0 @X0 0 e@16283 ]
 "42082
@@ -86,54 +86,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [t T1 __interrupt irq ( TMR5 ) base ( 8 ) low_priority ]
 "368 mcc_generated_files/tmr5.h
 [v _TMR5_CallBack `(v ~T0 @X0 0 ef ]
-[v F17753 `(v ~T0 @X0 0 tf ]
-[v F17755 `(v ~T0 @X0 0 tf ]
-[v F17757 `(v ~T0 @X0 0 tf ]
-"47140 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
-[s S2141 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2141 . LATE0 LATE1 LATE2 ]
-"47145
-[s S2142 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2142 . LE0 LE1 LE2 ]
-"47139
-[u S2140 `S2141 1 `S2142 1 ]
-[n S2140 . . . ]
-"47151
-[v _LATEbits `VS2140 ~T0 @X0 0 e@16318 ]
-"205 mcc_generated_files/tmr5.c
-[c E17013 0 1 2 3 4 5 .. ]
-[n E17013 . UI_STATE_INIT UI_STATE_HOST UI_STATE_DEBUG UI_STATE_LOG UI_STATE_MON UI_STATE_ERROR  ]
-[c E16994 0 1 2 3 .. ]
-[n E16994 . DIS_STR DIS_HELP DIS_ERR DIS_CLEAR  ]
-"185 ./vconfig.h
-[s S2286 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 :1 `uc 1 `E16994 1 `E16994 1 `us 1 `us 1 ]
-[n S2286 terminal_type mesgid TID mcode mparm cmdlen log_seq host_display_ack info help_temp ceid log_num ]
-"220
-[s S2287 `E17013 1 `uc -> 64 `i `uc -> 64 `i `uc -> 16 `i `Vul 1 `Vul 1 `Vul 1 `Vc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `E17013 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :2 `uc 1 :1 `uc 1 `S2286 1 `Vuc 1 `Vuc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `Va 1 `Va 1 `Va 1 `Va 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 ]
-[n S2287 V_data ui_state buf info rbuf ticks blight ac_time testing sys_info ac_on ac_off time_info get_time_text error abort msg_error msg_ret alarm float_ticks boost_ticks wdt_ticks ui_sw r_checksum t_checksum checksum_error mode_pwm sequences all_errors set_sequ debug help stack help_id screen response ticker cc_state flipper calib enter sensor_set fixup cc_active system_stable blight_off in_float in_boost lowint_count timerint_count tx_count rx_count adc_count spi_count switch_count ]
-"62 mcc_generated_files/tmr5.c
-[v _V `S2287 ~T0 @X0 0 e ]
-"111 mcc_generated_files/../mbmc.h
-[v _check_day_time `(a ~T0 @X0 0 ef ]
-"47832 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
-[s S2165 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2165 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
-"47831
-[u S2164 `S2165 1 ]
-[n S2164 . . ]
-"47843
-[v _PORTDbits `VS2164 ~T0 @X0 0 e@16333 ]
-"47028
-[s S2138 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2138 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
-"47038
-[s S2139 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2139 . LD0 LD1 LD2 LD3 LD4 LD5 LD6 LD7 ]
-"47027
-[u S2137 `S2138 1 `S2139 1 ]
-[n S2137 . . . ]
-"47049
-[v _LATDbits `VS2137 ~T0 @X0 0 e@16317 ]
+[v F16401 `(v ~T0 @X0 0 tf ]
+[v F16403 `(v ~T0 @X0 0 tf ]
+[v F16405 `(v ~T0 @X0 0 tf ]
 "250 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "339
@@ -1650,286 +1605,222 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSH equ 03FFEh ;# ">
 "49428
 [; <" TOSU equ 03FFFh ;# ">
-"60 mcc_generated_files/tmr5.c
+"58 mcc_generated_files/tmr5.c
 [v _timer5ReloadVal `Vus ~T0 @X0 1 e ]
-"61
-[v _TMR5_InterruptHandler `*F17734 ~T0 @X0 1 e ]
-"69
+"59
+[v _TMR5_InterruptHandler `*F16384 ~T0 @X0 1 e ]
+"65
 [v _TMR5_Initialize `(v ~T0 @X0 1 ef ]
-"70
+"66
 {
 [e :U _TMR5_Initialize ]
 [f ]
-"74
+"70
 [e = _T5GCON -> -> 0 `i `uc ]
-"77
+"73
 [e = _T5GATE -> -> 0 `i `uc ]
-"80
+"76
 [e = _T5CLK -> -> 1 `i `uc ]
-"83
+"79
 [e = _TMR5H -> -> 99 `i `uc ]
-"86
+"82
 [e = _TMR5L -> -> 192 `i `uc ]
-"89
+"85
 [e = . . _PIR8bits 0 1 -> -> 0 `i `uc ]
-"92
+"88
 [e = _timer5ReloadVal -> | << -> _TMR5H `i -> 8 `i -> _TMR5L `i `us ]
-"95
+"91
 [e = . . _PIE8bits 0 1 -> -> 1 `i `uc ]
-"98
+"94
 [e ( _TMR5_SetInterruptHandler (1 &U _TMR5_DefaultInterruptHandler ]
-"101
+"97
 [e = _T5CON -> -> 17 `i `uc ]
-"102
-[e :UE 2291 ]
+"98
+[e :UE 2277 ]
 }
-"104
+"100
 [v _TMR5_StartTimer `(v ~T0 @X0 1 ef ]
-"105
+"101
 {
 [e :U _TMR5_StartTimer ]
 [f ]
-"107
+"103
 [e = . . _T5CONbits 1 0 -> -> 1 `i `uc ]
-"108
-[e :UE 2292 ]
+"104
+[e :UE 2278 ]
 }
-"110
+"106
 [v _TMR5_StopTimer `(v ~T0 @X0 1 ef ]
-"111
+"107
 {
 [e :U _TMR5_StopTimer ]
 [f ]
-"113
+"109
 [e = . . _T5CONbits 1 0 -> -> 0 `i `uc ]
-"114
-[e :UE 2293 ]
+"110
+[e :UE 2279 ]
 }
-"116
+"112
 [v _TMR5_ReadTimer `(us ~T0 @X0 1 ef ]
-"117
+"113
 {
 [e :U _TMR5_ReadTimer ]
 [f ]
-"118
+"114
 [v _readVal `us ~T0 @X0 1 a ]
-"119
+"115
 [v _readValHigh `uc ~T0 @X0 1 a ]
-"120
+"116
 [v _readValLow `uc ~T0 @X0 1 a ]
-"122
+"118
 [e = . . _T5CONbits 1 1 -> -> 1 `i `uc ]
-"124
+"120
 [e = _readValLow _TMR5L ]
-"125
+"121
 [e = _readValHigh _TMR5H ]
-"127
+"123
 [e = _readVal -> | << -> -> _readValHigh `us `ui -> 8 `i -> _readValLow `ui `us ]
-"129
+"125
 [e ) _readVal ]
-[e $UE 2294  ]
-"130
-[e :UE 2294 ]
+[e $UE 2280  ]
+"126
+[e :UE 2280 ]
 }
-"132
+"128
 [v _TMR5_WriteTimer `(v ~T0 @X0 1 ef1`us ]
-"133
+"129
 {
 [e :U _TMR5_WriteTimer ]
-"132
+"128
 [v _timerVal `us ~T0 @X0 1 r1 ]
-"133
+"129
 [f ]
-"134
-[e $ ! == -> . . _T5CONbits 0 2 `i -> 1 `i 2296  ]
-"135
+"130
+[e $ ! == -> . . _T5CONbits 0 2 `i -> 1 `i 2282  ]
 {
-"137
+"132
 [e = . . _T5CONbits 1 0 -> -> 0 `i `uc ]
-"140
+"135
 [e = _TMR5H -> >> -> _timerVal `ui -> 8 `i `uc ]
-"141
+"136
+[e = _TMR5L -> _timerVal `uc ]
+"139
+[e = . . _T5CONbits 1 0 -> -> 1 `i `uc ]
+"140
+}
+[e $U 2283  ]
+[e :U 2282 ]
+{
+"142
+[e = _TMR5H -> >> -> _timerVal `ui -> 8 `i `uc ]
+"143
 [e = _TMR5L -> _timerVal `uc ]
 "144
-[e = . . _T5CONbits 1 0 -> -> 1 `i `uc ]
+}
+[e :U 2283 ]
 "145
+[e :UE 2281 ]
 }
-[e $U 2297  ]
-"146
-[e :U 2296 ]
 "147
-{
-"149
-[e = _TMR5H -> >> -> _timerVal `ui -> 8 `i `uc ]
-"150
-[e = _TMR5L -> _timerVal `uc ]
-"151
-}
-[e :U 2297 ]
-"152
-[e :UE 2295 ]
-}
-"154
 [v _TMR5_Reload `(v ~T0 @X0 1 ef ]
-"155
+"148
 {
 [e :U _TMR5_Reload ]
 [f ]
-"156
+"149
 [e ( _TMR5_WriteTimer (1 _timer5ReloadVal ]
-"157
-[e :UE 2298 ]
+"150
+[e :UE 2284 ]
 }
-"159
+"152
 [v _TMR5_StartSinglePulseAcquisition `(v ~T0 @X0 1 ef ]
-"160
+"153
 {
 [e :U _TMR5_StartSinglePulseAcquisition ]
 [f ]
-"161
+"154
 [e = . . _T5GCONbits 1 2 -> -> 1 `i `uc ]
-"162
-[e :UE 2299 ]
+"155
+[e :UE 2285 ]
 }
-"164
+"157
 [v _TMR5_CheckGateValueStatus `(uc ~T0 @X0 1 ef ]
-"165
+"158
 {
 [e :U _TMR5_CheckGateValueStatus ]
 [f ]
-"166
+"159
 [e ) . . _T5GCONbits 1 1 ]
-[e $UE 2300  ]
-"167
-[e :UE 2300 ]
+[e $UE 2286  ]
+"160
+[e :UE 2286 ]
 }
 [v $root$_TMR5_ISR `(v ~T0 @X0 0 e ]
-"169
+"162
 [v _TMR5_ISR `(v ~T1 @X0 1 ef ]
-"170
+"163
 {
 [e :U _TMR5_ISR ]
 [f ]
-"171
-[v F17751 `Vui ~T0 @X0 1 s CountCallBack ]
-[i F17751
+"164
+[v F16399 `Vui ~T0 @X0 1 s CountCallBack ]
+[i F16399
 -> -> 0 `i `ui
 ]
-"174
+"167
 [e = . . _PIR8bits 0 1 -> -> 0 `i `uc ]
-"175
+"168
 [e ( _TMR5_WriteTimer (1 _timer5ReloadVal ]
-"178
-[e $ ! >= =+ F17751 -> -> 1 `i `Vui -> -> 200 `i `ui 2302  ]
-"179
+"171
+[e $ ! >= =+ F16399 -> -> 1 `i `Vui -> -> 200 `i `ui 2288  ]
 {
-"181
+"173
 [e ( _TMR5_CallBack ..  ]
-"184
-[e = F17751 -> -> 0 `i `ui ]
-"185
+"176
+[e = F16399 -> -> 0 `i `ui ]
+"177
 }
-[e :U 2302 ]
-"186
-[e :UE 2301 ]
+[e :U 2288 ]
+"178
+[e :UE 2287 ]
 }
-"188
+"180
 [v _TMR5_CallBack `(v ~T0 @X0 1 ef ]
-"189
+"181
 {
 [e :U _TMR5_CallBack ]
 [f ]
-"191
-[e $ ! != _TMR5_InterruptHandler -> -> 0 `i `*F17753 2304  ]
-"192
+"183
+[e $ ! != _TMR5_InterruptHandler -> -> 0 `i `*F16401 2290  ]
 {
-"193
+"184
 [e ( *U _TMR5_InterruptHandler ..  ]
-"194
+"185
 }
-[e :U 2304 ]
-"195
-[e :UE 2303 ]
+[e :U 2290 ]
+"186
+[e :UE 2289 ]
 }
-"197
-[v _TMR5_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F17755 ]
+"188
+[v _TMR5_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F16403 ]
+"189
 {
 [e :U _TMR5_SetInterruptHandler ]
-[v _InterruptHandler `*F17757 ~T0 @X0 1 r1 ]
+"188
+[v _InterruptHandler `*F16405 ~T0 @X0 1 r1 ]
+"189
 [f ]
-"198
+"190
 [e = _TMR5_InterruptHandler _InterruptHandler ]
-"199
-[e :UE 2305 ]
+"191
+[e :UE 2291 ]
 }
-"201
+"193
 [v _TMR5_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
+"194
 {
 [e :U _TMR5_DefaultInterruptHandler ]
 [f ]
-"204
-[e = . . _LATEbits 0 0 -> ~ -> . . _LATEbits 0 0 `i `uc ]
-"205
-[e ++ . _V 48 -> -> 1 `i `Vul ]
-"206
-[e ++ . _V 4 -> -> 1 `i `Vul ]
-"207
-[e ( _check_day_time ..  ]
-"208
-[e = . _V 35 -> -> 0 `i `uc ]
-"210
-[e $ ! || != -> . . _PORTDbits 0 4 `i -> 0 `i != -> . . _PORTDbits 0 5 `i -> 0 `i 2307  ]
-{
-"211
-[e $ ! > -> =+ . _V 20 -> -> 1 `i `uc `i -> 75 `i 2308  ]
-{
-"212
-[e :U 2310 ]
-{
-"213
-[e :U 2314 ]
-{
-[e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-}
-[e :U 2313 ]
-"214
-[e :U 2317 ]
-{
-[e = . . _LATEbits 0 2 -> ~ -> . . _LATEbits 0 2 `i `uc ]
-}
-[e :U 2316 ]
-"215
-[e :U 2320 ]
-{
-[e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
-}
-[e :U 2319 ]
-"216
-[e :U 2323 ]
-{
-[e = . . _LATEbits 0 1 -> ~ -> . . _LATEbits 0 1 `i `uc ]
-}
-[e :U 2322 ]
-"217
-[e = . . _LATEbits 0 0 -> ~ -> . . _LATEbits 0 0 `i `uc ]
-"218
-}
-[e :U 2309 ]
-[e $U 2310  ]
-[e :U 2311 ]
-"219
-}
-[e :U 2308 ]
-"220
-}
-[e $U 2324  ]
-[e :U 2307 ]
-{
-"221
-[e = . _V 20 -> -> 0 `i `uc ]
-"222
-}
-[e :U 2324 ]
-"223
-[e :UE 2306 ]
+"197
+[e :UE 2292 ]
 }

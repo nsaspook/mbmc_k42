@@ -3,6 +3,7 @@
 #include <stdbool.h>
 #include "vconfig.h"
 #include "timers.h"
+#include "mcc_generated_files/uart1.h"
 
 extern volatile uint16_t tickCount[TMR_COUNT];
 
@@ -21,7 +22,7 @@ bool TimerDone(const uint8_t timer)
 {
 	bool ret = false;
 	ClrWdt(); // reset the WDT timer
-	if (tickCount[timer] == (uint16_t)0) { //Check if counted down to zero
+	if (tickCount[timer] == (uint16_t) 0) { //Check if counted down to zero
 		ret = true; //then return true
 	}
 	return ret; //return status
@@ -43,3 +44,18 @@ void WaitMs(const uint16_t numMilliseconds)
 	} //Enter idle mode to reduce power while waiting
 } //(timer interrupt will wake part from idle)
 
+void sw_timers_isr(void)
+{
+	static uint8_t i;
+
+	//Decrement each software timer
+	for (i = 0; i < TMR_COUNT; i++) {
+		if (tickCount[i] != 0) {
+			tickCount[i]--;
+		}
+	}
+
+	if (UART1_is_rx_ready()) {
+		i = UART1_Read();
+	}
+}

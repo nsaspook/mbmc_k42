@@ -20,7 +20,7 @@ extern "C" {
 #include "mcc_generated_files/pin_manager.h"
 #include "ringbufs.h"
 
-#define VER	"2.03"
+#define VER	"2.04"
 	/*
 	 * REMOVE THE CHIP PROGRAMMER, IT CHANGES THE ADC READINGS
 	 */
@@ -84,6 +84,7 @@ extern "C" {
 	 * 2.01 swap around the voltage and current sensors offsets and scalars for the FM80 system configuration
 	 * 2.02 move variables on the LCD display code to match the actual measurements
 	 * 2.03 add json power variables, change MQTT data update to 1 second
+	 * 2.04 general code cleanup
 	 */
 
 	/*

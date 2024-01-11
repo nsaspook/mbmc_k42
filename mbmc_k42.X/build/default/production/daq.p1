@@ -5,7 +5,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "23
 [u S2292 `us 1 `uc -> 2 `i `S2290 1 ]
 [n S2292 dac_buf_type ld bd map ]
-"257 ./vconfig.h
+"258 ./vconfig.h
 [s S2289 `l 1 `l 1 `ul 1 `ul 1 `ul 1 `f 1 `f 1 `f 1 `f 1 `f 1 `s -> 13 `i `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `uc 1 ]
 [n S2289 hist_type pv_eff tot_eff ttg_t updates pclock peukert cef peukert_adj cef_calc cef_save h rate udod bsoc bound_rate bound_factor samplei sampleo ah drate esr rest_rate rest_factor esrp version ]
 "29 daq.c
@@ -48,8 +48,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "33 ./timers.h
 [v _TimerDone `(a ~T0 @X0 0 ef1`Cuc ]
 "158 daq.c
-[c E17587 0 1 .. ]
-[n E17587 . CONV O_CONV  ]
+[c E17588 0 1 .. ]
+[n E17588 . CONV O_CONV  ]
 "297 /opt/microchip/xc8/v2.45/pic/include/c99/math.h
 [v _nanf `(f ~T0 @X0 0 ef1`*Cuc ]
 "29905 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
@@ -61,10 +61,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n E17434 . UI_STATE_INIT UI_STATE_HOST UI_STATE_DEBUG UI_STATE_LOG UI_STATE_MON UI_STATE_ERROR  ]
 [c E17415 0 1 2 3 .. ]
 [n E17415 . DIS_STR DIS_HELP DIS_ERR DIS_CLEAR  ]
-"185 ./vconfig.h
+"186 ./vconfig.h
 [s S2286 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 :1 `uc 1 `E17415 1 `E17415 1 `us 1 `us 1 ]
 [n S2286 terminal_type mesgid TID mcode mparm cmdlen log_seq host_display_ack info help_temp ceid log_num ]
-"220
+"221
 [s S2287 `E17434 1 `uc -> 64 `i `uc -> 64 `i `uc -> 16 `i `Vul 1 `Vul 1 `Vul 1 `Vc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `E17434 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :2 `uc 1 :1 `uc 1 `S2286 1 `Vuc 1 `Vuc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `Va 1 `Va 1 `Va 1 `Va 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 ]
 [n S2287 V_data ui_state buf info rbuf ticks blight ac_time testing sys_info ac_on ac_off time_info get_time_text error abort msg_error msg_ret alarm float_ticks boost_ticks wdt_ticks ui_sw r_checksum t_checksum checksum_error mode_pwm sequences all_errors set_sequ debug help stack help_id screen response ticker cc_state flipper calib enter sensor_set fixup cc_active system_stable blight_off in_float in_boost lowint_count timerint_count tx_count rx_count adc_count spi_count switch_count ]
 "43 ./daq.h
@@ -1879,27 +1879,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 "143
 [f ]
 "144
-[v F17671 `us ~T0 @X0 1 s raw_result ]
+[v F17672 `us ~T0 @X0 1 s raw_result ]
 "147
 [e = . . _PIE1bits 0 3 -> -> 0 `i `uc ]
 "148
-[e = F17671 *U + &U . _R 0 * -> _index `ux -> -> # *U &U . _R 0 `ui `ux ]
+[e = F17672 *U + &U . _R 0 * -> _index `ux -> -> # *U &U . _R 0 `ui `ux ]
 "150
 [e = . . _PIE1bits 0 3 -> -> 1 `i `uc ]
 "152
-[e ) F17671 ]
+[e ) F17672 ]
 [e $UE 2305  ]
 "153
 [e :UE 2305 ]
 }
 "158
-[v _conv_raw_result `(f ~T0 @X0 1 ef2`CE17147`CE17587 ]
+[v _conv_raw_result `(f ~T0 @X0 1 ef2`CE17147`CE17588 ]
 "159
 {
 [e :U _conv_raw_result ]
 "158
 [v _chan `CE17147 ~T0 @X0 1 r1 ]
-[v _to_what `CE17587 ~T0 @X0 1 r2 ]
+[v _to_what `CE17588 ~T0 @X0 1 r2 ]
 "159
 [f ]
 "161
@@ -2026,8 +2026,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 2307  ]
 [e :U 2308 ]
-[e [\ -> _to_what `ui , $ -> . `E17587 0 `ui 2309
- , $ -> . `E17587 1 `ui 2321
+[e [\ -> _to_what `ui , $ -> . `E17588 0 `ui 2309
+ , $ -> . `E17588 1 `ui 2321
  2325 ]
 [e :U 2307 ]
 "207
@@ -2089,36 +2089,36 @@ Version 4.0 HI-TECH Software Intermediate Code
 "251
 [f ]
 "252
-[v F17679 `a ~T0 @X0 1 s init ]
-[i F17679
+[v F17680 `a ~T0 @X0 1 s init ]
+[i F17680
 -> -> 0 `i `a
 ]
 "253
-[v F17680 `uc ~T0 @X0 1 s S0 ]
-[v F17681 `uc ~T0 @X0 1 s S1 ]
-[v F17682 `uc ~T0 @X0 1 s S2 ]
-[v F17683 `uc ~T0 @X0 1 s SC ]
-[v F17684 `uc ~T0 @X0 1 s SB ]
+[v F17681 `uc ~T0 @X0 1 s S0 ]
+[v F17682 `uc ~T0 @X0 1 s S1 ]
+[v F17683 `uc ~T0 @X0 1 s S2 ]
+[v F17684 `uc ~T0 @X0 1 s SC ]
+[v F17685 `uc ~T0 @X0 1 s SB ]
 "255
 [e $ ! != -> _set `i -> 0 `i 2333  ]
 {
 "256
 [e = . . _SPI1CON0bits 0 4 -> -> 0 `i `uc ]
 "257
-[e $ ! ! != -> F17679 `i -> 0 `i 2334  ]
+[e $ ! ! != -> F17680 `i -> 0 `i 2334  ]
 {
 "258
-[e = F17679 -> -> 1 `i `a ]
+[e = F17680 -> -> 1 `i `a ]
 "259
-[e = F17680 _SPI1CON0 ]
+[e = F17681 _SPI1CON0 ]
 "260
-[e = F17681 _SPI1CON1 ]
+[e = F17682 _SPI1CON1 ]
 "261
-[e = F17682 _SPI1CON2 ]
+[e = F17683 _SPI1CON2 ]
 "262
-[e = F17683 _SPI1CLK ]
+[e = F17684 _SPI1CLK ]
 "263
-[e = F17684 _SPI1BAUD ]
+[e = F17685 _SPI1BAUD ]
 "264
 }
 [e :U 2334 ]
@@ -2146,20 +2146,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 2333 ]
 {
 "283
-[e $ ! != -> F17679 `i -> 0 `i 2336  ]
+[e $ ! != -> F17680 `i -> 0 `i 2336  ]
 {
 "287
 [e = . . _SPI1CON0bits 0 4 -> -> 0 `i `uc ]
 "288
-[e = _SPI1CON1 F17681 ]
+[e = _SPI1CON1 F17682 ]
 "289
-[e = _SPI1CON2 F17682 ]
+[e = _SPI1CON2 F17683 ]
 "290
-[e = _SPI1CLK F17683 ]
+[e = _SPI1CLK F17684 ]
 "291
-[e = _SPI1BAUD F17684 ]
+[e = _SPI1BAUD F17685 ]
 "292
-[e = _SPI1CON0 F17680 ]
+[e = _SPI1CON0 F17681 ]
 "293
 [e = . . _SPI1CON0bits 0 4 -> -> 1 `i `uc ]
 "294

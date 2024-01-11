@@ -2,16 +2,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F17085 `(v ~T0 @X0 0 tf ]
 [v F17087 `(v ~T0 @X0 0 tf ]
 [v F17130 `(v ~T0 @X0 0 tf ]
-"237 ./vconfig.h
+"238 ./vconfig.h
 [s S2292 `Cuc -> 22 `i `Cuc -> 22 `i ]
 [n S2292 V_help message display ]
-[v F17718 `uc ~T0 @X0 -> 40 `i t ]
-[v F17717 `F17718 ~T0 @X0 -> 4 `i t ]
+[v F17719 `uc ~T0 @X0 -> 40 `i t ]
+[v F17718 `F17719 ~T0 @X0 -> 4 `i t ]
 "9 mconfig.c
 [c E17350 0 1 2 3 .. ]
 [n E17350 . DIS_STR DIS_HELP DIS_ERR DIS_CLEAR  ]
 "42 ./mydisplay.h
-[s S2294 `F17717 -> 4 `i :1 `uc 1 `E17350 1 ]
+[s S2294 `F17718 -> 4 `i :1 `uc 1 `E17350 1 ]
 [n S2294 D_data lcd vterm last_info ]
 "129 ./mcc_generated_files/pwm8.h
 [v _PWM8_LoadDutyValue `(v ~T0 @X0 0 ef1`us ]
@@ -26,10 +26,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "30 mconfig.c
 [c E17369 0 1 2 3 4 5 .. ]
 [n E17369 . UI_STATE_INIT UI_STATE_HOST UI_STATE_DEBUG UI_STATE_LOG UI_STATE_MON UI_STATE_ERROR  ]
-"185 ./vconfig.h
+"186 ./vconfig.h
 [s S2290 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 :1 `uc 1 `E17350 1 `E17350 1 `us 1 `us 1 ]
 [n S2290 terminal_type mesgid TID mcode mparm cmdlen log_seq host_display_ack info help_temp ceid log_num ]
-"220
+"221
 [s S2291 `E17369 1 `uc -> 64 `i `uc -> 64 `i `uc -> 16 `i `Vul 1 `Vul 1 `Vul 1 `Vc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `E17369 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :2 `uc 1 :1 `uc 1 `S2290 1 `Vuc 1 `Vuc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `Va 1 `Va 1 `Va 1 `Va 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 ]
 [n S2291 V_data ui_state buf info rbuf ticks blight ac_time testing sys_info ac_on ac_off time_info get_time_text error abort msg_error msg_ret alarm float_ticks boost_ticks wdt_ticks ui_sw r_checksum t_checksum checksum_error mode_pwm sequences all_errors set_sequ debug help stack help_id screen response ticker cc_state flipper calib enter sensor_set fixup cc_active system_stable blight_off in_float in_boost lowint_count timerint_count tx_count rx_count adc_count spi_count switch_count ]
 "97 ./bsoc.h
@@ -41,9 +41,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n E17692 APP_TIMERS TMR_INTERNAL TMR_ADC TMR_T2 TMR_T3 TMR_T4 TMR_MC_TX TMR_HBIO TMR_INFO TMR_HELP TMR_HELPDIS TMR_DISPLAY TMR_FLIPPER TMR_ESR TMR_TEXT TMR_COUNT  ]
 "32 ./timers.h
 [v _StartTimer `(v ~T0 @X0 0 ef2`Cuc`Cus ]
-[v F17736 `(E17350 ~T0 @X0 1 tf ]
+[v F17737 `(E17350 ~T0 @X0 1 tf ]
 "54 ./mydisplay.h
-[v _display_info `TF17736 ~T0 @X0 0 e ]
+[v _display_info `TF17737 ~T0 @X0 0 e ]
 "52
 [v _vterm_dump `(v ~T0 @X0 0 ef ]
 "50
@@ -61,9 +61,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _build_time `*Cuc ~T0 @X0 0 e ]
 "49 ./mydisplay.h
 [v _update_lcd `(uc ~T0 @X0 0 ef1`uc ]
-[v F17738 `(E17350 ~T0 @X0 1 tf ]
+[v F17739 `(E17350 ~T0 @X0 1 tf ]
 "55
-[v _display_help `TF17738 ~T0 @X0 0 e ]
+[v _display_help `TF17739 ~T0 @X0 0 e ]
 "85 ./eadog.h
 [v _wait_lcd_done `(v ~T0 @X0 0 ef ]
 "91
@@ -2113,9 +2113,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "193
 [e :UE 2323 ]
 }
-[v F18481 `(E17350 ~T0 @X0 1 tf ]
+[v F18482 `(E17350 ~T0 @X0 1 tf ]
 "195
-[v _display_info `TF18481 ~T0 @X0 1 e ]
+[v _display_info `TF18482 ~T0 @X0 1 e ]
 "196
 {
 [e :U _display_info ]
@@ -2126,9 +2126,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "198
 [e :UE 2332 ]
 }
-[v F18483 `(E17350 ~T0 @X0 1 tf ]
+[v F18484 `(E17350 ~T0 @X0 1 tf ]
 "200
-[v _display_help `TF18483 ~T0 @X0 1 e ]
+[v _display_help `TF18484 ~T0 @X0 1 e ]
 "201
 {
 [e :U _display_help ]
@@ -2149,22 +2149,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 "206
 [f ]
 "207
-[v F18486 `E17350 ~T0 @X0 1 s old_info ]
-[i F18486
+[v F18487 `E17350 ~T0 @X0 1 s old_info ]
+[i F18487
 . `E17350 0
 ]
 "209
 [e $ ! != -> ( _TimerDone (1 -> . `E17692 7 `uc `i -> 0 `i 2335  ]
 {
 "210
-[e = F18486 . . _V 34 7 ]
+[e = F18487 . . _V 34 7 ]
 "211
 [e = . . _V 34 7 _new_response_info ]
 "212
 }
 [e :U 2335 ]
 "213
-[e ) F18486 ]
+[e ) F18487 ]
 [e $UE 2334  ]
 "214
 [e :UE 2334 ]
@@ -2179,13 +2179,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "217
 [f ]
 "218
-[v F18489 `E17350 ~T0 @X0 1 s old_info ]
+[v F18490 `E17350 ~T0 @X0 1 s old_info ]
 "220
-[e = F18489 . . _V 34 8 ]
+[e = F18490 . . _V 34 8 ]
 "221
 [e = . . _V 34 8 _new_response_info ]
 "222
-[e ) F18489 ]
+[e ) F18490 ]
 [e $UE 2336  ]
 "223
 [e :UE 2336 ]
@@ -2200,8 +2200,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "226
 [f ]
 "227
-[v F18492 `a ~T0 @X0 1 s blight_on ]
-[i F18492
+[v F18493 `a ~T0 @X0 1 s blight_on ]
+[i F18493
 -> -> 1 `i `a
 ]
 "228
@@ -2214,10 +2214,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! != -> . _V 44 `i -> 0 `i 2339  ]
 {
 "232
-[e $ ! != -> F18492 `i -> 0 `i 2340  ]
+[e $ ! != -> F18493 `i -> 0 `i 2340  ]
 {
 "233
-[e = F18492 -> -> 0 `i `a ]
+[e = F18493 -> -> 0 `i `a ]
 "234
 [e = _send_cmd -> -> 1 `i `a ]
 "235
@@ -2235,12 +2235,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! ! != -> . _V 44 `i -> 0 `i 2342  ]
 {
 "239
-[e $ ! ! != -> F18492 `i -> 0 `i 2343  ]
+[e $ ! ! != -> F18493 `i -> 0 `i 2343  ]
 {
 "240
 [e = . _V 44 -> -> 0 `i `a ]
 "241
-[e = F18492 -> -> 1 `i `a ]
+[e = F18493 -> -> 1 `i `a ]
 "242
 [e = . _V 5 + ( _time (1 -> -> -> 0 `i `*v `*ul -> -> -> 600 `i `l `ul ]
 "243
