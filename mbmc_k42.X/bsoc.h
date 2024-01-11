@@ -43,20 +43,20 @@
 #include "hid.h"
 #include "mconfig.h"
 
-#define	MAXRUNTIME	95.0
-#define MINRUNTIME	0.05
-#define Perk_ADJ_FL	1.10	// If the peukert_adj is below this, adjust the Ah out by this Ah adjustment factor
-#define Perk_ADJ_FH	5.00	// If the peukert_adj is above this, adjust the Ah out by this Ah adjustment factor
-#define Temp_ADJ_FL	1.20	// Adjust the battery cap up or down 1C by this percentage from Temp_ZERO
+#define	MAXRUNTIME	95.0f
+#define MINRUNTIME	0.05f
+#define Perk_ADJ_FL	1.10f	// If the peukert_adj is below this, adjust the Ah out by this Ah adjustment factor
+#define Perk_ADJ_FH	5.00f	// If the peukert_adj is above this, adjust the Ah out by this Ah adjustment factor
+#define Temp_ADJ_FL	1.20f	// Adjust the battery cap up or down 1C by this percentage from Temp_ZERO
 #define Temp_ZERO	267l	// Temperature for base battery rate capacity in tenths of C
-#define	CEF_HSOC	0.45    // Charge Efficiency Factor, high SOC
-#define CEF_MSOC	0.70    // middle
-#define	CEF_LSOC	0.90    // Charge Efficiency Factor, low SOC
-#define CEF_OVER	0.99    // CEF overflow in calc
-#define CEF_MAX		0.95 	// Invalid charge factor above this, should be about the same as CEF_LOSC
-#define CEF_MIN		0.40	// Invalid charge factor below this
-#define CEF_RESET	0.80    // reset AH values below this point.
-#define CEF_DERATE	1.20	// Ahi derate factor to start dynamic CEF corrections
+#define	CEF_HSOC	0.45f    // Charge Efficiency Factor, high SOC
+#define CEF_MSOC	0.70f    // middle
+#define	CEF_LSOC	0.90f    // Charge Efficiency Factor, low SOC
+#define CEF_OVER	0.99f    // CEF overflow in calc
+#define CEF_MAX		0.95f 	// Invalid charge factor above this, should be about the same as CEF_LOSC
+#define CEF_MIN		0.40f	// Invalid charge factor below this
+#define CEF_RESET	0.80f    // reset AH values below this point.
+#define CEF_DERATE	1.20f	// Ahi derate factor to start dynamic CEF corrections
 #define	SOC_DERATE	70      // derate CEF above this
 #define SOC_CEF		100	// Max state of charge to update dynamic charge efficiency factors
 #define HI_ESR		1500	// highest possible esr
@@ -69,10 +69,10 @@
  * PV side diversion
  */
 #define DPWM_FULL	300
-#define DPWM_LOW_VOLTS	40.0
-#define PV_MAX_POWER	300.0
-#define PWM_MAX_POWER	250.0
-#define PWM_WIN_POWER	10.0
+#define DPWM_LOW_VOLTS	40.0f
+#define PV_MAX_POWER	300.0f
+#define PWM_MAX_POWER	250.0f
+#define PWM_WIN_POWER	10.0f
 
 
 typedef enum {

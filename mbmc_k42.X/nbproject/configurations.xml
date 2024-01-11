@@ -168,8 +168,8 @@
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
         <property key="verbose" value="false"/>
-        <property key="warning-level" value="-3"/>
-        <property key="what-to-do" value="ignore"/>
+        <property key="warning-level" value="9"/>
+        <property key="what-to-do" value="require"/>
       </HI-TECH-COMP>
       <HI-TECH-LINK>
         <property key="additional-options-checksum" value=""/>

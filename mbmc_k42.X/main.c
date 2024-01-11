@@ -214,15 +214,15 @@ volatile C_data C = {
 	.day_update = 0,
 	.dupdate = false,
 	.updates = 0,
-	.dynamic_ah_daily = 0.0001,
-	.dynamic_ah_adj_daily = 0.0001,
-	.c_bat = 0.1,
-	.c_load = 0.1,
-	.c_mppt = 0.1,
-	.c_pv = 0.1,
-	.esr = 0.1,
-	.p_bat = 0.1,
-	.v_pv = 0.1,
+	.dynamic_ah_daily = 0.0001f,
+	.dynamic_ah_adj_daily = 0.0001f,
+	.c_bat = 0.1f,
+	.c_load = 0.1f,
+	.c_mppt = 0.1f,
+	.c_pv = 0.1f,
+	.esr = 0.1f,
+	.p_bat = 0.1f,
+	.v_pv = 0.1f,
 };
 
 struct tm *t_mbmc;
@@ -423,7 +423,7 @@ void main(void)
 			uint16_t i_esr = 1;
 			uint8_t shape = 0;
 			float esr_temp;
-			while ((esr_temp = esr_check(false)) < 0.0) {
+			while ((esr_temp = esr_check(false)) < 0.0f) {
 				WaitMs(110); // limit display updates
 				shape = (uint8_t) fabs(esr_temp);
 				sprintf(get_vterm_ptr(2, 0), "Checking %c %c       ", spinners(0, false), spinners(shape, false));
@@ -493,7 +493,7 @@ void main(void)
 #ifndef SKIP_ESR
 				uint16_t i_esr = 1;
 				esr_check(true); // init FSM
-				while (esr_check(false) < 0.0) {
+				while (esr_check(false) < 0.0f) {
 					WaitMs(110);
 					if (i_esr++ > 512)
 						break;
@@ -558,9 +558,9 @@ void main(void)
 				break;
 			case HID_AUX:
 				if (!V.calib) { // clear buffer and start from zero
-					lp_filter(0.0, i, -1);
-					lp_filter(0.0, j, -1);
-					lp_filter(0.0, k, -1);
+					lp_filter(0.0f, i, -1);
+					lp_filter(0.0f, j, -1);
+					lp_filter(0.0f, k, -1);
 				}
 				V.calib = true;
 				sprintf(get_vterm_ptr(0, 0), "%d %2.4f, %d  TRIM   ", get_raw_result(i), C.calc[i], inp_index + 1);

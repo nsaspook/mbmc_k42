@@ -1875,9 +1875,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "110
 [e = . _C 14 ( _fabsf (1 - ( _conv_raw_result (2 , . `E16519 3 . `E17587 0 F18375 ]
 "111
-[e $ ! < -> . _C 14 `d .0.0051 2314  ]
+[e $ ! < . _C 14 -> .0.0051 `f 2314  ]
 "112
-[e = . _C 14 -> + .0.0140 .0.0001 `f ]
+[e = . _C 14 + -> .0.0140 `f -> .0.0001 `f ]
 [e :U 2314 ]
 "113
 [e = F18375 ( _conv_raw_result (2 , . `E16519 3 . `E17587 0 ]
@@ -2119,7 +2119,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! != -> . _V 43 `i -> 0 `i 2335  ]
 {
 "231
-[e $ ! && && < -> . _C 7 `d .21.5 > -> . _C 7 `d .18.0 > -> =+ F18396 -> -> 1 `i `uc `i -> 10 `i 2336  ]
+[e $ ! && && < . _C 7 -> .21.5 `f > . _C 7 -> .18.0 `f > -> =+ F18396 -> -> 1 `i `uc `i -> 10 `i 2336  ]
 {
 "232
 [e = . _V 9 -> -> 1 `i `uc ]
@@ -2145,7 +2145,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! ! != -> . _C 45 `i -> 0 `i 2340  ]
 {
 "241
-[e $ ! > -> _light `d .22.0 2341  ]
+[e $ ! > _light -> .22.0 `f 2341  ]
 {
 "242
 [e = . _C 45 -> -> 1 `i `a ]
@@ -2173,7 +2173,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 2340 ]
 {
 "251
-[e $ ! < -> _light `d .12.0 2344  ]
+[e $ ! < _light -> .12.0 `f 2344  ]
 {
 "252
 [e = . _C 45 -> -> 0 `i `a ]
@@ -2206,7 +2206,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 2339 ]
 {
 "266
-[e $ ! && < . _C 18 . _C 17 < -> _light `d .50.0 2347  ]
+[e $ ! && < . _C 18 . _C 17 < _light -> .50.0 `f 2347  ]
 {
 "267
 [e $ ! ! != -> ( _get_ac_charger_relay ..  `i -> 0 `i 2348  ]

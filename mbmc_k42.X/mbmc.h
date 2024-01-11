@@ -41,9 +41,9 @@ extern V_data V;
 #define LOCALTIME_OFFSET	60ul*60ul*(-8ul)
 #define LP_BUFFER_SIZE	ADC_BUFFER_SIZE+8
 #define STATIC_LOAD_POWER	14.00f
-#define BANKAH	225.0	// baatery bank label Ah
-#define DEGRADE	150.0	// adjust to what the battery bank Ah really is
-#define SSLICE	3600.0	// samples per hour
+#define BANKAH	225.0f	// baatery bank label Ah
+#define DEGRADE	150.0f	// adjust to what the battery bank Ah really is
+#define SSLICE	3600.0f	// samples per hour
 
 #ifdef DEBUG_HIST1
 #define DUPDATE 600 // after dark update time offset
@@ -51,29 +51,29 @@ extern V_data V;
 #define DUPDATE 14400 // after dark update time offset
 #endif
 
-#define BLOAD1		10.0       	// load resistor in ohms
-#define BLOAD2		2.5       	// ditto
+#define BLOAD1		10.0f       	// load resistor in ohms
+#define BLOAD2		2.5f       	// ditto
 #define MAX_LOAD_TIME	75
 
-#define ROR_LIMIT_LOW	0.0140
-#define ROR_LIMIT_SET	0.0001
-#define ROR_LIMIT_NOISE	0.0051
+#define ROR_LIMIT_LOW	0.0140f
+#define ROR_LIMIT_SET	0.0001f
+#define ROR_LIMIT_NOISE	0.0051f
 
 #define ROR_WAIT	20
 #define ROR_TIMES	1
 
-#define DAWN_VOLTS	22.0
-#define DUSK_VOLTS	12.0
-#define BRIGHT_VOLTS	50.0
-#define BAT_LOW_VOLTS	21.5
-#define BAT_DEAD_VOLTS	18.0
+#define DAWN_VOLTS	22.0f
+#define DUSK_VOLTS	12.0f
+#define BRIGHT_VOLTS	50.0f
+#define BAT_LOW_VOLTS	21.5f
+#define BAT_DEAD_VOLTS	18.0f
 #define MAX_AC_TIME	60*60*4 // AC charger max runtime per trigger
 #define DAY_DELAY	240
 #define SOC_TOO_LOW	20
 #define SOC_CRITICAL	3
 
-#define CEF		1.0
-#define PEUKERT		1.0
+#define CEF		1.0f
+#define PEUKERT		1.0f
 
 typedef struct C_data { // real calculated variables
 	float calc[ADC_BUFFER_SIZE];

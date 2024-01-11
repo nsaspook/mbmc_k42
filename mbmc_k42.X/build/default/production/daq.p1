@@ -2262,12 +2262,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "323
 [f ]
 "327
-[e $ ! < -> _voltage `d .0.001 2363  ]
+[e $ ! < _voltage -> .0.001 `f 2363  ]
 "328
 [e = _voltage -> .0.001 `f ]
 [e :U 2363 ]
 "329
-[e $ ! > -> _voltage `d .10.0 2364  ]
+[e $ ! > _voltage -> .10.0 `f 2364  ]
 "330
 [e = _voltage -> .10.0 `f ]
 [e :U 2364 ]

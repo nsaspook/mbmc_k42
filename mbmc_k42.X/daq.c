@@ -201,10 +201,10 @@ float conv_raw_result(const adcc_channel_t chan, const adc_conv_t to_what)
 
 		break;
 	default:
-		return 0.0;
+		return 0.0f;
 		break;
 	}
-	return 0.0;
+	return 0.0f;
 }
 
 /*
@@ -324,10 +324,10 @@ static uint16_t convert_dac_raw(float voltage)
 	/*
 	 * check limits
 	 */
-	if (voltage < 0.001)
-		voltage = 0.001;
-	if (voltage > 10.0)
-		voltage = 10.0;
+	if (voltage < 0.001f)
+		voltage = 0.001f;
+	if (voltage > 10.0f)
+		voltage = 10.0f;
 	/*
 	 * scale to DAC units
 	 */
