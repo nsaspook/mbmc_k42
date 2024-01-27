@@ -260,17 +260,21 @@ void calc_bsoc(void)
 			 */
 			if (UART2_is_rx_ready()) {
 				uint8_t mqtt_r;
+				static uint16_t cmd_value = 0;
 
 				mqtt_r = UART2_Read();
 				switch (mqtt_r) {
 				case 'Z': // zero power/idle
-					gti_power = 0;
+					cmd_value = 0;
 					break;
 				case 'F': // normal operation
-					gti_power = 600;
+					cmd_value = 600;
 					break;
 				case 'M': // max unit rated power testing
-					gti_power = 1000;
+					cmd_value = 1000;
+					break;
+				case '#': // execute command symbol
+					gti_power = cmd_value;
 					break;
 				default: // eat extra characters
 					while (UART2_is_rx_ready()) {
