@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: mbmc_k42
-creation_date: 2024-01-11T15:05:57.672-08:00[America/Los_Angeles]
+creation_date: 2024-01-27T10:01:49.625-08:00[America/Los_Angeles]
 operating_system: Linux
 mcc_mode: IDE
 mcc_mode_version: v6.15
@@ -10,7 +10,7 @@ device_name: PIC18F57K42
 compiler: XC8 2.45
 mcc_version: 5.4.1
 mcc_core_version: 5.6.1
-content_manager_version: 4.3.1
+content_manager_version: 4.3.2
 is_mcc_offline: false
 is_using_prerelease_versions: false
 mcc_content_registries: https://registry.npmjs.org/

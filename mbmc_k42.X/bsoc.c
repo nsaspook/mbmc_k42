@@ -37,6 +37,18 @@ const char infoline2[] = "    DAILY AH      LO ESR      HI ESR       PV AH   BAT
 
 static uint32_t seq_log = 0;
 
+#define GTI_POWER	600
+#define SPINNER_SPEED	200
+#define GTI_SPEED	1000
+#define Swrite		UART2_Write
+
+uint16_t gti_power = GTI_POWER;
+bool flop = true;
+uint8_t gti_sbuf[8] = {0x24, 0x56, 0x00, 0x21, 0x03, 0x99, 0x80, 0x6c};
+uint8_t gti_zero[8] = {0x24, 0x56, 0x00, 0x21, 0x00, 0x00, 0x80, 0x08};
+
+uint8_t gti_checksum(uint8_t *, uint16_t);
+
 /*
  * DC PWM diversion for direct PV power before MPPT
  */
@@ -85,6 +97,23 @@ bool pv_diversion(bool kill)
 		}
 	}
 	return ret;
+}
+
+uint8_t gti_checksum(uint8_t * gti_sbuf, uint16_t power)
+{
+	uint16_t pu, pl, cs;
+
+	pu = power >> 8;
+	pl = power & 0xff;
+	cs = 264 - pu - pl;
+	if (cs >= 256) {
+		cs = 8;
+	}
+
+	gti_sbuf[4] = (uint8_t) pu;
+	gti_sbuf[5] = (uint8_t) pl;
+	gti_sbuf[7] = (uint8_t) cs;
+	return(uint8_t) cs;
 }
 
 /*
@@ -206,8 +235,8 @@ void calc_bsoc(void)
 			C.p_pv = C.v_pv * C.c_bat; // power from FM80 AC
 			C.p_bat = C.v_bat * C.c_mppt; // Power to/from BATTERY
 			C.p_mppt = C.v_bat * C.c_pv; // Power from Charge Controller
-			snprintf((char *) log_ptr, max_port_data - 1, "{\r\n \"DLname\": \"%s MBMC K42\",\r\n \"DLsequence\": %lu,\r\n \"DLv_pv\": %7.2f,\r\n \"DLv_bat\": %7.2f,\r\n \"DLc_pv\": %7.2f,\r\n \"DLc_mppt\": %7.2f,\r\n \"DLc_bat\": %7.2f,\r\n \"DLp_pv\": %7.2f,\r\n \"DLp_mppt\": %7.2f,\r\n \"DLp_bat\": %7.2f,\r\n \"Qbuild_date\": \"%s\",\r\n \"Qbuild_time\": \"%s\"\r\n}\r\n",
-				VER, seq_log++, C.v_pv, C.v_bat, C.c_pv, C.c_mppt, C.c_bat, C.p_pv, C.p_mppt, C.p_bat, build_date, build_time);
+			snprintf((char *) log_ptr, max_port_data - 1, "{\r\n \"DLname\": \"%s MBMC K42\",\r\n \"DLsequence\": %lu,\r\n \"DLgti\": %u,\r\n \"DLv_pv\": %7.2f,\r\n \"DLv_bat\": %7.2f,\r\n \"DLc_pv\": %7.2f,\r\n \"DLc_mppt\": %7.2f,\r\n \"DLc_bat\": %7.2f,\r\n \"DLp_pv\": %7.2f,\r\n \"DLp_mppt\": %7.2f,\r\n \"DLp_bat\": %7.2f,\r\n \"Qbuild_date\": \"%s\",\r\n \"Qbuild_time\": \"%s\"\r\n}\r\n",
+				VER, seq_log++, gti_power, C.v_pv, C.v_bat, C.c_pv, C.c_mppt, C.c_bat, C.p_pv, C.p_mppt, C.p_bat, build_date, build_time);
 			/*
 			 * send the string to the external MQTT device
 			 */
@@ -225,7 +254,45 @@ void calc_bsoc(void)
 			DEBUG2_Toggle();
 #endif
 			send_port_data_dma(strlen((char*) log_ptr));
+
+			/*
+			 * check for incoming data on the MQTT connection
+			 */
+			if (UART2_is_rx_ready()) {
+				uint8_t mqtt_r;
+
+				mqtt_r = UART2_Read();
+				switch (mqtt_r) {
+				case 'Z': // zero power/idle
+					gti_power = 0;
+					break;
+				case 'F': // normal operation
+					gti_power = 600;
+					break;
+				case 'M': // max unit rated power testing
+					gti_power = 1000;
+					break;
+				default: // eat extra characters
+					while (UART2_is_rx_ready()) {
+						mqtt_r = UART2_Read();
+					}
+					break;
+				}
+			}
+			/*
+			 * send power limiter commands to the GTI Inverter
+			 * uses serial port 2 4800 baud
+			 */
+			gti_checksum(gti_sbuf, gti_power);
+			for (uint8_t i = 0; i < 8; i++) {
+				if (flop) {
+					Swrite(gti_sbuf[i]);
+				} else {
+					Swrite(gti_zero[i]);
+				}
+			}
 		}
+
 		if (log_update_wait >= LOG_WAIT) {
 			log_update_wait = 0;
 		}

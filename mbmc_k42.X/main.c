@@ -62,7 +62,7 @@
  * D: structure, LCD control and buffers
  * H: structure, battery history parameters
  *
- * USART2 		client comm port 38400
+ * USART2 		GTI power limiter command output
  * USART1		MBMC logger and command channel
  * timer 2 100us PWM clock, no interrupt
  * timer 3 one second housekeeping clock for battery state tracking, low priority interrupt
