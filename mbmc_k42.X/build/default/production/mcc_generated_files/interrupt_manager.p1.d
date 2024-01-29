@@ -7,8 +7,8 @@ mcc_generated_files/pin_manager.h  \
 mcc_generated_files/dma1.h  \
 mcc_generated_files/dma2.h  \
 mcc_generated_files/crc.h  \
-mcc_generated_files/fvr.h  \
 mcc_generated_files/adcc.h  \
+mcc_generated_files/fvr.h  \
 mcc_generated_files/tmr5.h  \
 mcc_generated_files/tmr6.h  \
 mcc_generated_files/pwm8.h  \

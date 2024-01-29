@@ -1,13 +1,33 @@
 Version 4.0 HI-TECH Software Intermediate Code
+[v F16399 `(v ~T0 @X0 0 tf ]
+[v F16401 `(v ~T0 @X0 0 tf ]
 "75 mcc_generated_files/uart2.h
 [s S2278 :1 `uc 1 :1 `uc 1 :1 `uc 1 :5 `uc 1 ]
 [n S2278 . perr ferr oerr reserved ]
 "74
 [u S2277 `S2278 1 `uc 1 ]
 [n S2277 . . status ]
-[v F16395 `(v ~T0 @X0 0 tf ]
-[v F16397 `(v ~T0 @X0 0 tf ]
-[v F16399 `(v ~T0 @X0 0 tf ]
+[v F16422 `(v ~T0 @X0 0 tf ]
+[v F16424 `(v ~T0 @X0 0 tf ]
+[v F16426 `(v ~T0 @X0 0 tf ]
+"3703 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+[s S162 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S162 . I2C2IE I2C2EIE U2RXIE U2TXIE U2EIE U2IE TMR3IE TMR3GIE ]
+"3702
+[u S161 `S162 1 ]
+[n S161 . . ]
+"3714
+[v _PIE6bits `VS161 ~T0 @X0 0 e@14742 ]
+[v F16403 `(v ~T0 @X0 0 tf ]
+"555 mcc_generated_files/uart2.h
+[v _UART2_SetRxInterruptHandler `(v ~T0 @X0 0 ef1`*F16403 ]
+"422
+[v _UART2_Receive_ISR `(v ~T0 @X0 0 ef ]
+[v F16407 `(v ~T0 @X0 0 tf ]
+"573
+[v _UART2_SetTxInterruptHandler `(v ~T0 @X0 0 ef1`*F16407 ]
+"401
+[v _UART2_Transmit_ISR `(v ~T0 @X0 0 ef ]
 "25756 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [v _U2P1L `Vuc ~T0 @X0 0 e@15828 ]
 "25783
@@ -32,47 +52,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _U2ERRIR `Vuc ~T0 @X0 0 e@15841 ]
 "26503
 [v _U2ERRIE `Vuc ~T0 @X0 0 e@15842 ]
-[v F16382 `(v ~T0 @X0 0 tf ]
-"395 mcc_generated_files/uart2.h
-[v _UART2_SetFramingErrorHandler `(v ~T0 @X0 0 ef1`*F16382 ]
-"62 mcc_generated_files/uart2.c
+[v F16387 `(v ~T0 @X0 0 tf ]
+"461 mcc_generated_files/uart2.h
+[v _UART2_SetFramingErrorHandler `(v ~T0 @X0 0 ef1`*F16387 ]
+"83 mcc_generated_files/uart2.c
 [v _UART2_DefaultFramingErrorHandler `(v ~T0 @X0 0 ef ]
-[v F16386 `(v ~T0 @X0 0 tf ]
-"413 mcc_generated_files/uart2.h
-[v _UART2_SetOverrunErrorHandler `(v ~T0 @X0 0 ef1`*F16386 ]
-"63 mcc_generated_files/uart2.c
+[v F16391 `(v ~T0 @X0 0 tf ]
+"479 mcc_generated_files/uart2.h
+[v _UART2_SetOverrunErrorHandler `(v ~T0 @X0 0 ef1`*F16391 ]
+"84 mcc_generated_files/uart2.c
 [v _UART2_DefaultOverrunErrorHandler `(v ~T0 @X0 0 ef ]
-[v F16390 `(v ~T0 @X0 0 tf ]
-"431 mcc_generated_files/uart2.h
-[v _UART2_SetErrorHandler `(v ~T0 @X0 0 ef1`*F16390 ]
-"64 mcc_generated_files/uart2.c
+[v F16395 `(v ~T0 @X0 0 tf ]
+"497 mcc_generated_files/uart2.h
+[v _UART2_SetErrorHandler `(v ~T0 @X0 0 ef1`*F16395 ]
+"85 mcc_generated_files/uart2.c
 [v _UART2_DefaultErrorHandler `(v ~T0 @X0 0 ef ]
-"4268 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
-[s S184 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S184 . I2C2IF I2C2EIF U2RXIF U2TXIF U2EIF U2IF TMR3IF TMR3GIF ]
-"4267
-[u S183 `S184 1 ]
-[n S183 . . ]
-"4279
-[v _PIR6bits `VS183 ~T0 @X0 0 e@14758 ]
-"25836
-[s S1145 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1145 . MODE0 MODE1 MODE2 ]
-"25841
-[s S1146 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1146 . U2MODE U2RXEN U2TXEN U2ABDEN U2BRGS ]
-"25848
-[s S1147 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1147 . U2MODE0 U2MODE1 U2MODE2 ]
-"25853
-[s S1148 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1148 . MODE RXEN TXEN ABDEN BRGS ]
-"25835
-[u S1144 `S1145 1 `S1146 1 `S1147 1 `S1148 1 ]
-[n S1144 . . . . . ]
-"25861
-[v _U2CON0bits `VS1144 ~T0 @X0 0 e@15834 ]
-"26397
+"26397 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [s S1170 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1170 . TXCIF RXFOIF RXBKIF FERIF CERIF ABDOVF PERIF TXMTIF ]
 "26407
@@ -83,16 +78,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S1169 . . . ]
 "26418
 [v _U2ERRIRbits `VS1169 ~T0 @X0 0 e@15841 ]
-"25673
-[v _U2RXB `Vuc ~T0 @X0 0 e@15824 ]
 "25711
 [v _U2TXB `Vuc ~T0 @X0 0 e@15826 ]
-[v F16418 `(v ~T0 @X0 0 tf ]
-[v F16420 `(v ~T0 @X0 0 tf ]
-[v F16423 `(v ~T0 @X0 0 tf ]
-[v F16425 `(v ~T0 @X0 0 tf ]
-[v F16428 `(v ~T0 @X0 0 tf ]
-[v F16430 `(v ~T0 @X0 0 tf ]
+[t ~ __interrupt . k ]
+[t T1 __interrupt irq ( U2TX ) base ( 8 ) ]
+[v F16445 `(v ~T0 @X0 0 tf ]
+[t T2 __interrupt irq ( U2RX ) base ( 8 ) ]
+[v F16447 `(v ~T0 @X0 0 tf ]
+"443 mcc_generated_files/uart2.h
+[v _UART2_RxDataHandler `(v ~T0 @X0 0 ef ]
+"25673 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+[v _U2RXB `Vuc ~T0 @X0 0 e@15824 ]
+[v F16455 `(v ~T0 @X0 0 tf ]
+[v F16457 `(v ~T0 @X0 0 tf ]
+[v F16460 `(v ~T0 @X0 0 tf ]
+[v F16462 `(v ~T0 @X0 0 tf ]
+[v F16465 `(v ~T0 @X0 0 tf ]
+[v F16467 `(v ~T0 @X0 0 tf ]
+[v F16470 `(v ~T0 @X0 0 tf ]
+[v F16472 `(v ~T0 @X0 0 tf ]
+[v F16475 `(v ~T0 @X0 0 tf ]
+[v F16477 `(v ~T0 @X0 0 tf ]
 "250 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "339
@@ -1609,232 +1615,478 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSH equ 03FFEh ;# ">
 "49428
 [; <" TOSU equ 03FFFh ;# ">
-"53 mcc_generated_files/uart2.c
-[v _uart2RxLastError `VS2277 ~T0 @X0 1 s ]
-"58
-[v _UART2_FramingErrorHandler `*F16395 ~T0 @X0 1 e ]
-"59
-[v _UART2_OverrunErrorHandler `*F16397 ~T0 @X0 1 e ]
-"60
-[v _UART2_ErrorHandler `*F16399 ~T0 @X0 1 e ]
+"517 mcc_generated_files/uart2.h
+[v _UART2_RxInterruptHandler `*F16399 ~T0 @X0 1 e ]
+"535
+[v _UART2_TxInterruptHandler `*F16401 ~T0 @X0 1 e ]
+"64 mcc_generated_files/uart2.c
+[v _uart2TxHead `Vuc ~T0 @X0 1 s ]
+[i _uart2TxHead
+-> -> 0 `i `uc
+]
+"65
+[v _uart2TxTail `Vuc ~T0 @X0 1 s ]
+[i _uart2TxTail
+-> -> 0 `i `uc
+]
 "66
-[v _UART2_Initialize `(v ~T0 @X0 1 ef ]
+[v _uart2TxBuffer `Vuc ~T0 @X0 -> 64 `i s ]
 "67
+[v _uart2TxBufferRemaining `Vuc ~T0 @X0 1 e ]
+"69
+[v _uart2RxHead `Vuc ~T0 @X0 1 s ]
+[i _uart2RxHead
+-> -> 0 `i `uc
+]
+"70
+[v _uart2RxTail `Vuc ~T0 @X0 1 s ]
+[i _uart2RxTail
+-> -> 0 `i `uc
+]
+"71
+[v _uart2RxBuffer `Vuc ~T0 @X0 -> 64 `i s ]
+"72
+[v _uart2RxStatusBuffer `VS2277 ~T0 @X0 -> 64 `i s ]
+"73
+[v _uart2RxCount `Vuc ~T0 @X0 1 e ]
+"74
+[v _uart2RxLastError `VS2277 ~T0 @X0 1 s ]
+"79
+[v _UART2_FramingErrorHandler `*F16422 ~T0 @X0 1 e ]
+"80
+[v _UART2_OverrunErrorHandler `*F16424 ~T0 @X0 1 e ]
+"81
+[v _UART2_ErrorHandler `*F16426 ~T0 @X0 1 e ]
+"87
+[v _UART2_Initialize `(v ~T0 @X0 1 ef ]
+"88
 {
 [e :U _UART2_Initialize ]
 [f ]
-"73
-[e = _U2P1L -> -> 0 `i `uc ]
-"76
-[e = _U2P2L -> -> 0 `i `uc ]
-"79
-[e = _U2P3L -> -> 0 `i `uc ]
-"82
-[e = _U2CON0 -> -> 176 `i `uc ]
-"85
-[e = _U2CON1 -> -> 128 `i `uc ]
-"88
-[e = _U2CON2 -> -> 48 `i `uc ]
+"90
+[e = . . _PIE6bits 0 2 -> -> 0 `i `uc ]
 "91
-[e = _U2BRGL -> -> 4 `i `uc ]
-"94
-[e = _U2BRGH -> -> 13 `i `uc ]
-"97
-[e = _U2FIFO -> -> 0 `i `uc ]
-"100
-[e = _U2UIR -> -> 0 `i `uc ]
-"103
-[e = _U2ERRIR -> -> 0 `i `uc ]
-"106
-[e = _U2ERRIE -> -> 0 `i `uc ]
-"109
-[e ( _UART2_SetFramingErrorHandler (1 &U _UART2_DefaultFramingErrorHandler ]
+[e ( _UART2_SetRxInterruptHandler (1 &U _UART2_Receive_ISR ]
+"92
+[e = . . _PIE6bits 0 3 -> -> 0 `i `uc ]
+"93
+[e ( _UART2_SetTxInterruptHandler (1 &U _UART2_Transmit_ISR ]
+"98
+[e = _U2P1L -> -> 0 `i `uc ]
+"101
+[e = _U2P2L -> -> 0 `i `uc ]
+"104
+[e = _U2P3L -> -> 0 `i `uc ]
+"107
+[e = _U2CON0 -> -> 176 `i `uc ]
 "110
-[e ( _UART2_SetOverrunErrorHandler (1 &U _UART2_DefaultOverrunErrorHandler ]
-"111
-[e ( _UART2_SetErrorHandler (1 &U _UART2_DefaultErrorHandler ]
+[e = _U2CON1 -> -> 128 `i `uc ]
 "113
+[e = _U2CON2 -> -> 48 `i `uc ]
+"116
+[e = _U2BRGL -> -> 4 `i `uc ]
+"119
+[e = _U2BRGH -> -> 13 `i `uc ]
+"122
+[e = _U2FIFO -> -> 0 `i `uc ]
+"125
+[e = _U2UIR -> -> 0 `i `uc ]
+"128
+[e = _U2ERRIR -> -> 0 `i `uc ]
+"131
+[e = _U2ERRIE -> -> 0 `i `uc ]
+"134
+[e ( _UART2_SetFramingErrorHandler (1 &U _UART2_DefaultFramingErrorHandler ]
+"135
+[e ( _UART2_SetOverrunErrorHandler (1 &U _UART2_DefaultOverrunErrorHandler ]
+"136
+[e ( _UART2_SetErrorHandler (1 &U _UART2_DefaultErrorHandler ]
+"138
 [e = . _uart2RxLastError 1 -> -> 0 `i `uc ]
-"115
+"141
+[e = _uart2TxHead -> -> 0 `i `uc ]
+"142
+[e = _uart2TxTail -> -> 0 `i `uc ]
+"143
+[e = _uart2TxBufferRemaining -> -> # _uart2TxBuffer `ui `uc ]
+"144
+[e = _uart2RxHead -> -> 0 `i `uc ]
+"145
+[e = _uart2RxTail -> -> 0 `i `uc ]
+"146
+[e = _uart2RxCount -> -> 0 `i `uc ]
+"149
+[e = . . _PIE6bits 0 2 -> -> 1 `i `uc ]
+"150
 [e :UE 2279 ]
 }
-"117
+"152
 [v _UART2_is_rx_ready `(a ~T0 @X0 1 ef ]
-"118
+"153
 {
 [e :U _UART2_is_rx_ready ]
 [f ]
-"119
-[e ) -> . . _PIR6bits 0 2 `a ]
+"154
+[e ) -> ? != -> _uart2RxCount `i -> 0 `i : -> 1 `i -> 0 `i `a ]
 [e $UE 2280  ]
-"120
+"155
 [e :UE 2280 ]
 }
-"122
+"157
 [v _UART2_is_tx_ready `(a ~T0 @X0 1 ef ]
-"123
+"158
 {
 [e :U _UART2_is_tx_ready ]
 [f ]
-"124
-[e ) -> -> && != -> . . _PIR6bits 0 3 `i -> 0 `i != -> . . _U2CON0bits 3 2 `i -> 0 `i `i `a ]
+"159
+[e ) -> ? != -> _uart2TxBufferRemaining `i -> 0 `i : -> 1 `i -> 0 `i `a ]
 [e $UE 2281  ]
-"125
+"160
 [e :UE 2281 ]
 }
-"127
+"162
 [v _UART2_is_tx_done `(a ~T0 @X0 1 ef ]
-"128
+"163
 {
 [e :U _UART2_is_tx_done ]
 [f ]
-"129
+"164
 [e ) -> . . _U2ERRIRbits 0 7 `a ]
 [e $UE 2282  ]
-"130
+"165
 [e :UE 2282 ]
 }
-"132
+"167
 [v _UART2_get_last_status `(S2277 ~T0 @X0 1 ef ]
 {
 [e :U _UART2_get_last_status ]
 [f ]
-"133
+"168
 [e ) _uart2RxLastError ]
 [e $UE 2283  ]
-"134
+"169
 [e :UE 2283 ]
 }
-"136
+"171
 [v _UART2_Read `(uc ~T0 @X0 1 ef ]
-"137
+"172
 {
 [e :U _UART2_Read ]
 [f ]
-"138
+"173
+[v _readValue `uc ~T0 @X0 1 a ]
+[e = _readValue -> -> 0 `i `uc ]
+"175
 [e $U 2285  ]
 [e :U 2286 ]
-"139
+"176
 {
-"140
+"177
 }
 [e :U 2285 ]
-"138
-[e $ ! != -> . . _PIR6bits 0 2 `i -> 0 `i 2286  ]
+"175
+[e $ == -> 0 `i -> _uart2RxCount `i 2286  ]
 [e :U 2287 ]
-"142
-[e = . _uart2RxLastError 1 -> -> 0 `i `uc ]
-"144
-[e $ ! != -> . . _U2ERRIRbits 0 3 `i -> 0 `i 2288  ]
+"179
+[e = _uart2RxLastError *U + &U _uart2RxStatusBuffer * -> _uart2RxTail `ux -> -> # *U &U _uart2RxStatusBuffer `ui `ux ]
+"181
+[e = _readValue *U + &U _uart2RxBuffer * -> ++ _uart2RxTail -> -> 1 `i `Vuc `ux -> -> # *U &U _uart2RxBuffer `ui `ux ]
+"182
+[e $ ! <= -> # _uart2RxBuffer `ui -> _uart2RxTail `ui 2288  ]
+"183
 {
-"145
-[e = . . _uart2RxLastError 0 1 -> -> 1 `i `uc ]
-"146
-[e ( *U _UART2_FramingErrorHandler ..  ]
-"147
+"184
+[e = _uart2RxTail -> -> 0 `i `uc ]
+"185
 }
 [e :U 2288 ]
-"149
-[e $ ! != -> . . _U2ERRIRbits 0 1 `i -> 0 `i 2289  ]
-{
-"150
-[e = . . _uart2RxLastError 0 2 -> -> 1 `i `uc ]
-"151
-[e ( *U _UART2_OverrunErrorHandler ..  ]
-"152
-}
-[e :U 2289 ]
-"154
-[e $ ! != -> . _uart2RxLastError 1 `i -> 0 `i 2290  ]
-{
-"155
-[e ( *U _UART2_ErrorHandler ..  ]
-"156
-}
-[e :U 2290 ]
-"158
-[e ) _U2RXB ]
+"186
+[e = . . _PIE6bits 0 2 -> -> 0 `i `uc ]
+"187
+[e -- _uart2RxCount -> -> 1 `i `Vuc ]
+"188
+[e = . . _PIE6bits 0 2 -> -> 1 `i `uc ]
+"190
+[e ) _readValue ]
 [e $UE 2284  ]
-"159
+"191
 [e :UE 2284 ]
 }
-"161
+"193
 [v _UART2_Write `(v ~T0 @X0 1 ef1`uc ]
-"162
+"194
 {
 [e :U _UART2_Write ]
-"161
+"193
 [v _txData `uc ~T0 @X0 1 r1 ]
-"162
+"194
 [f ]
-"163
-[e $U 2292  ]
-[e :U 2293 ]
-"164
+"195
+[e $U 2290  ]
+[e :U 2291 ]
+"196
 {
-"165
+"197
 }
+[e :U 2290 ]
+"195
+[e $ == -> 0 `i -> _uart2TxBufferRemaining `i 2291  ]
 [e :U 2292 ]
-"163
-[e $ == -> 0 `i -> . . _PIR6bits 0 3 `i 2293  ]
-[e :U 2294 ]
-"167
+"199
+[e $ ! == -> 0 `i -> . . _PIE6bits 0 3 `i 2293  ]
+"200
+{
+"201
 [e = _U2TXB _txData ]
-"168
-[e :UE 2291 ]
+"202
 }
-"174
+[e $U 2294  ]
+"203
+[e :U 2293 ]
+"204
+{
+"205
+[e = . . _PIE6bits 0 3 -> -> 0 `i `uc ]
+"206
+[e = *U + &U _uart2TxBuffer * -> ++ _uart2TxHead -> -> 1 `i `Vuc `ux -> -> # *U &U _uart2TxBuffer `ui `ux _txData ]
+"207
+[e $ ! <= -> # _uart2TxBuffer `ui -> _uart2TxHead `ui 2295  ]
+"208
+{
+"209
+[e = _uart2TxHead -> -> 0 `i `uc ]
+"210
+}
+[e :U 2295 ]
+"211
+[e -- _uart2TxBufferRemaining -> -> 1 `i `Vuc ]
+"212
+}
+[e :U 2294 ]
+"213
+[e = . . _PIE6bits 0 3 -> -> 1 `i `uc ]
+"214
+[e :UE 2289 ]
+}
+[v $root$_UART2_tx_vect_isr `(v ~T0 @X0 0 e ]
+"216
+[v _UART2_tx_vect_isr `(v ~T1 @X0 1 ef ]
+"217
+{
+[e :U _UART2_tx_vect_isr ]
+[f ]
+"218
+[e $ ! != _UART2_TxInterruptHandler -> -> 0 `i `*F16445 2297  ]
+"219
+{
+"220
+[e ( *U _UART2_TxInterruptHandler ..  ]
+"221
+}
+[e :U 2297 ]
+"222
+[e :UE 2296 ]
+}
+[v $root$_UART2_rx_vect_isr `(v ~T0 @X0 0 e ]
+"224
+[v _UART2_rx_vect_isr `(v ~T2 @X0 1 ef ]
+"225
+{
+[e :U _UART2_rx_vect_isr ]
+[f ]
+"226
+[e $ ! != _UART2_RxInterruptHandler -> -> 0 `i `*F16447 2299  ]
+"227
+{
+"228
+[e ( *U _UART2_RxInterruptHandler ..  ]
+"229
+}
+[e :U 2299 ]
+"230
+[e :UE 2298 ]
+}
+"234
+[v _UART2_Transmit_ISR `(v ~T0 @X0 1 ef ]
+"235
+{
+[e :U _UART2_Transmit_ISR ]
+[f ]
+"237
+[e $ ! > -> # _uart2TxBuffer `ui -> _uart2TxBufferRemaining `ui 2301  ]
+"238
+{
+"239
+[e = _U2TXB *U + &U _uart2TxBuffer * -> ++ _uart2TxTail -> -> 1 `i `Vuc `ux -> -> # *U &U _uart2TxBuffer `ui `ux ]
+"240
+[e $ ! <= -> # _uart2TxBuffer `ui -> _uart2TxTail `ui 2302  ]
+"241
+{
+"242
+[e = _uart2TxTail -> -> 0 `i `uc ]
+"243
+}
+[e :U 2302 ]
+"244
+[e ++ _uart2TxBufferRemaining -> -> 1 `i `Vuc ]
+"245
+}
+[e $U 2303  ]
+"246
+[e :U 2301 ]
+"247
+{
+"248
+[e = . . _PIE6bits 0 3 -> -> 0 `i `uc ]
+"249
+}
+[e :U 2303 ]
+"252
+[e :UE 2300 ]
+}
+"254
+[v _UART2_Receive_ISR `(v ~T0 @X0 1 ef ]
+"255
+{
+[e :U _UART2_Receive_ISR ]
+[f ]
+"257
+[e = . *U + &U _uart2RxStatusBuffer * -> _uart2RxHead `ux -> -> # *U &U _uart2RxStatusBuffer `ui `ux 1 -> -> 0 `i `uc ]
+"259
+[e $ ! != -> . . _U2ERRIRbits 0 3 `i -> 0 `i 2305  ]
+{
+"260
+[e = . . *U + &U _uart2RxStatusBuffer * -> _uart2RxHead `ux -> -> # *U &U _uart2RxStatusBuffer `ui `ux 0 1 -> -> 1 `i `uc ]
+"261
+[e ( *U _UART2_FramingErrorHandler ..  ]
+"262
+}
+[e :U 2305 ]
+"264
+[e $ ! != -> . . _U2ERRIRbits 0 1 `i -> 0 `i 2306  ]
+{
+"265
+[e = . . *U + &U _uart2RxStatusBuffer * -> _uart2RxHead `ux -> -> # *U &U _uart2RxStatusBuffer `ui `ux 0 2 -> -> 1 `i `uc ]
+"266
+[e ( *U _UART2_OverrunErrorHandler ..  ]
+"267
+}
+[e :U 2306 ]
+"269
+[e $ ! != -> . *U + &U _uart2RxStatusBuffer * -> _uart2RxHead `ux -> -> # *U &U _uart2RxStatusBuffer `ui `ux 1 `i -> 0 `i 2307  ]
+{
+"270
+[e ( *U _UART2_ErrorHandler ..  ]
+"271
+}
+[e $U 2308  ]
+[e :U 2307 ]
+{
+"272
+[e ( _UART2_RxDataHandler ..  ]
+"273
+}
+[e :U 2308 ]
+"276
+[e :UE 2304 ]
+}
+"278
+[v _UART2_RxDataHandler `(v ~T0 @X0 1 ef ]
+{
+[e :U _UART2_RxDataHandler ]
+[f ]
+"280
+[e = *U + &U _uart2RxBuffer * -> ++ _uart2RxHead -> -> 1 `i `Vuc `ux -> -> # *U &U _uart2RxBuffer `ui `ux _U2RXB ]
+"281
+[e $ ! <= -> # _uart2RxBuffer `ui -> _uart2RxHead `ui 2310  ]
+"282
+{
+"283
+[e = _uart2RxHead -> -> 0 `i `uc ]
+"284
+}
+[e :U 2310 ]
+"285
+[e ++ _uart2RxCount -> -> 1 `i `Vuc ]
+"286
+[e :UE 2309 ]
+}
+"288
 [v _UART2_DefaultFramingErrorHandler `(v ~T0 @X0 1 ef ]
 {
 [e :U _UART2_DefaultFramingErrorHandler ]
 [f ]
-[e :UE 2295 ]
+[e :UE 2311 ]
 }
-"176
+"290
 [v _UART2_DefaultOverrunErrorHandler `(v ~T0 @X0 1 ef ]
 {
 [e :U _UART2_DefaultOverrunErrorHandler ]
 [f ]
-[e :UE 2296 ]
+[e :UE 2312 ]
 }
-"178
+"292
 [v _UART2_DefaultErrorHandler `(v ~T0 @X0 1 ef ]
 {
 [e :U _UART2_DefaultErrorHandler ]
 [f ]
-"179
-[e :UE 2297 ]
+"293
+[e ( _UART2_RxDataHandler ..  ]
+"294
+[e :UE 2313 ]
 }
-"181
-[v _UART2_SetFramingErrorHandler `(v ~T0 @X0 1 ef1`*F16418 ]
+"296
+[v _UART2_SetFramingErrorHandler `(v ~T0 @X0 1 ef1`*F16455 ]
 {
 [e :U _UART2_SetFramingErrorHandler ]
-[v _interruptHandler `*F16420 ~T0 @X0 1 r1 ]
+[v _interruptHandler `*F16457 ~T0 @X0 1 r1 ]
 [f ]
-"182
+"297
 [e = _UART2_FramingErrorHandler _interruptHandler ]
-"183
-[e :UE 2298 ]
+"298
+[e :UE 2314 ]
 }
-"185
-[v _UART2_SetOverrunErrorHandler `(v ~T0 @X0 1 ef1`*F16423 ]
+"300
+[v _UART2_SetOverrunErrorHandler `(v ~T0 @X0 1 ef1`*F16460 ]
 {
 [e :U _UART2_SetOverrunErrorHandler ]
-[v _interruptHandler `*F16425 ~T0 @X0 1 r1 ]
+[v _interruptHandler `*F16462 ~T0 @X0 1 r1 ]
 [f ]
-"186
+"301
 [e = _UART2_OverrunErrorHandler _interruptHandler ]
-"187
-[e :UE 2299 ]
+"302
+[e :UE 2315 ]
 }
-"189
-[v _UART2_SetErrorHandler `(v ~T0 @X0 1 ef1`*F16428 ]
+"304
+[v _UART2_SetErrorHandler `(v ~T0 @X0 1 ef1`*F16465 ]
 {
 [e :U _UART2_SetErrorHandler ]
-[v _interruptHandler `*F16430 ~T0 @X0 1 r1 ]
+[v _interruptHandler `*F16467 ~T0 @X0 1 r1 ]
 [f ]
-"190
+"305
 [e = _UART2_ErrorHandler _interruptHandler ]
-"191
-[e :UE 2300 ]
+"306
+[e :UE 2316 ]
+}
+"310
+[v _UART2_SetRxInterruptHandler `(v ~T0 @X0 1 ef1`*F16470 ]
+{
+[e :U _UART2_SetRxInterruptHandler ]
+[v _InterruptHandler `*F16472 ~T0 @X0 1 r1 ]
+[f ]
+"311
+[e = _UART2_RxInterruptHandler _InterruptHandler ]
+"312
+[e :UE 2317 ]
+}
+"314
+[v _UART2_SetTxInterruptHandler `(v ~T0 @X0 1 ef1`*F16475 ]
+{
+[e :U _UART2_SetTxInterruptHandler ]
+[v _InterruptHandler `*F16477 ~T0 @X0 1 r1 ]
+[f ]
+"315
+[e = _UART2_TxInterruptHandler _InterruptHandler ]
+"316
+[e :UE 2318 ]
 }

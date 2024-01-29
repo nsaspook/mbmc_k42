@@ -1,5 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F17657 `(v ~T0 @X0 0 tf ]
+[v F17629 `(v ~T0 @X0 0 tf ]
+[v F17631 `(v ~T0 @X0 0 tf ]
+[v F17674 `(v ~T0 @X0 0 tf ]
 "170 ./vconfig.h
 [s S2285 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `us 1 `uc 1 `*uc 1 `Vl 1 ]
 [n S2285 spi_link_type SPI_LCD SPI_AUX LCD_TIMER LCD_DATA delay config txbuf int_count ]
@@ -1669,8 +1671,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _lcd_dma_buf `uc ~T0 @X0 -> 32 `i e ]
 "55 ./mcc_generated_files/dma2.h
 [v _uart1_dma_buf `uc ~T0 @X0 -> 32 `i e ]
+"517 ./mcc_generated_files/uart2.h
+[v _UART2_RxInterruptHandler `*F17629 ~T0 @X0 1 e ]
+"535
+[v _UART2_TxInterruptHandler `*F17631 ~T0 @X0 1 e ]
 "497 ./mcc_generated_files/uart1.h
-[v _UART1_RxInterruptHandler `*F17657 ~T0 @X0 1 e ]
+[v _UART1_RxInterruptHandler `*F17674 ~T0 @X0 1 e ]
 "11 eadog.c
 [v _spi_link `S2285 ~T0 @X0 1 e ]
 "12
@@ -1734,11 +1740,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "41
 [f ]
 "42
-[v F17681 `ul ~T0 @X0 1 s dcount ]
+[v F17698 `ul ~T0 @X0 1 s dcount ]
 "44
 {
-[e = F17681 -> -> -> 0 `i `l `ul ]
-[e $ <= F17681 _delay 2298  ]
+[e = F17698 -> -> -> 0 `i `l `ul ]
+[e $ <= F17698 _delay 2298  ]
 [e $U 2299  ]
 [e :U 2298 ]
 {
@@ -1748,8 +1754,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <"  clrwdt ;# ">
 "47
 }
-[e ++ F17681 -> -> -> 1 `i `l `ul ]
-[e $ <= F17681 _delay 2298  ]
+[e ++ F17698 -> -> -> 1 `i `l `ul ]
+[e $ <= F17698 _delay 2298  ]
 [e :U 2299 ]
 }
 "48

@@ -1,5 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F17113 `(v ~T0 @X0 0 tf ]
+[v F17085 `(v ~T0 @X0 0 tf ]
+[v F17087 `(v ~T0 @X0 0 tf ]
+[v F17130 `(v ~T0 @X0 0 tf ]
 "47994 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [s S2171 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S2171 . INT0EDG INT1EDG INT2EDG . IPEN GIEL GIE ]
@@ -37,6 +39,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S131 . . ]
 "2906
 [v _IPR2bits `VS131 ~T0 @X0 0 e@14722 ]
+"3138
+[s S140 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S140 . I2C2IP I2C2EIP U2RXIP U2TXIP U2EIP U2IP TMR3IP TMR3GIP ]
+"3137
+[u S139 `S140 1 ]
+[n S139 . . ]
+"3149
+[v _IPR6bits `VS139 ~T0 @X0 0 e@14726 ]
 "2957
 [s S134 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S134 . I2C1TXIP I2C1IP I2C1EIP U1RXIP U1TXIP U1EIP U1IP TMR0IP ]
@@ -77,14 +87,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S143 . . ]
 "3251
 [v _IPR8bits `VS143 ~T0 @X0 0 e@14728 ]
-"3138
-[s S140 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S140 . I2C2IP I2C2EIP U2RXIP U2TXIP U2EIP U2IP TMR3IP TMR3GIP ]
-"3137
-[u S139 `S140 1 ]
-[n S139 . . ]
-"3149
-[v _IPR6bits `VS139 ~T0 @X0 0 e@14726 ]
 [t ~ __interrupt . k ]
 [t T1 __interrupt irq ( default ) base ( 8 ) ]
 "250 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
@@ -1607,8 +1609,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _lcd_dma_buf `uc ~T0 @X0 -> 32 `i e ]
 "55 mcc_generated_files/dma2.h
 [v _uart1_dma_buf `uc ~T0 @X0 -> 32 `i e ]
+"517 mcc_generated_files/uart2.h
+[v _UART2_RxInterruptHandler `*F17085 ~T0 @X0 1 e ]
+"535
+[v _UART2_TxInterruptHandler `*F17087 ~T0 @X0 1 e ]
 "497 mcc_generated_files/uart1.h
-[v _UART1_RxInterruptHandler `*F17113 ~T0 @X0 1 e ]
+[v _UART1_RxInterruptHandler `*F17130 ~T0 @X0 1 e ]
 "52 mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize `(v ~T0 @X0 1 ef ]
 "53
@@ -1651,31 +1657,35 @@ Version 4.0 HI-TECH Software Intermediate Code
 "76
 [e = . . _IPR2bits 0 2 -> -> 1 `i `uc ]
 "77
-[e = . . _IPR3bits 0 3 -> -> 1 `i `uc ]
+[e = . . _IPR6bits 0 3 -> -> 1 `i `uc ]
 "78
-[e = . . _IPR1bits 0 0 -> -> 1 `i `uc ]
+[e = . . _IPR6bits 0 2 -> -> 1 `i `uc ]
 "79
-[e = . . _IPR5bits 0 0 -> -> 0 `i `uc ]
+[e = . . _IPR3bits 0 3 -> -> 1 `i `uc ]
 "80
-[e = . . _IPR9bits 0 0 -> -> 1 `i `uc ]
+[e = . . _IPR1bits 0 0 -> -> 1 `i `uc ]
 "81
-[e = . . _IPR8bits 0 1 -> -> 0 `i `uc ]
+[e = . . _IPR5bits 0 0 -> -> 0 `i `uc ]
 "82
-[e = . . _IPR1bits 0 2 -> -> 1 `i `uc ]
+[e = . . _IPR9bits 0 0 -> -> 1 `i `uc ]
 "83
-[e = . . _IPR1bits 0 3 -> -> 1 `i `uc ]
+[e = . . _IPR8bits 0 1 -> -> 0 `i `uc ]
 "84
 [e = . . _IPR6bits 0 6 -> -> 0 `i `uc ]
 "85
+[e = . . _IPR1bits 0 2 -> -> 1 `i `uc ]
+"86
+[e = . . _IPR1bits 0 3 -> -> 1 `i `uc ]
+"87
 [e :UE 2283 ]
 }
 [v $root$_Default_ISR `(v ~T0 @X0 0 e ]
-"87
+"89
 [v _Default_ISR `(v ~T1 @X0 1 ef ]
-"88
+"90
 {
 [e :U _Default_ISR ]
 [f ]
-"89
+"91
 [e :UE 2284 ]
 }

@@ -86,7 +86,7 @@ extern "C" {
 	 * 2.03 add json power variables, change MQTT data update to 1 second
 	 * 2.04 general code cleanup
 	 * 2.05 GTI power control and monitoring using UART2
-	 * 2.08 GTI command set
+	 * 2.08 GTI command set, serial UART2
 	 */
 
 	/*
