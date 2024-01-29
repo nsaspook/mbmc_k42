@@ -20,7 +20,7 @@ extern "C" {
 #include "mcc_generated_files/pin_manager.h"
 #include "ringbufs.h"
 
-#define VER	"2.05"
+#define VER	"2.08"
 	/*
 	 * REMOVE THE CHIP PROGRAMMER, IT CHANGES THE ADC READINGS
 	 */
@@ -86,6 +86,7 @@ extern "C" {
 	 * 2.03 add json power variables, change MQTT data update to 1 second
 	 * 2.04 general code cleanup
 	 * 2.05 GTI power control and monitoring using UART2
+	 * 2.08 GTI command set
 	 */
 
 	/*

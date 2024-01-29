@@ -37,12 +37,13 @@ const char infoline2[] = "    DAILY AH      LO ESR      HI ESR       PV AH   BAT
 
 static uint32_t seq_log = 0;
 
+#define MAX_GTI		1000
 #define GTI_POWER	600
 #define SPINNER_SPEED	200
 #define GTI_SPEED	1000
 #define Swrite		UART2_Write
 
-uint16_t gti_power = GTI_POWER;
+int16_t gti_power = GTI_POWER;
 bool flop = true;
 uint8_t gti_sbuf[8] = {0x24, 0x56, 0x00, 0x21, 0x03, 0x99, 0x80, 0x6c};
 uint8_t gti_zero[8] = {0x24, 0x56, 0x00, 0x21, 0x00, 0x00, 0x80, 0x08};
@@ -102,6 +103,10 @@ bool pv_diversion(bool kill)
 uint8_t gti_checksum(uint8_t * gti_sbuf, uint16_t power)
 {
 	uint16_t pu, pl, cs;
+
+	if (power > MAX_GTI) {
+		power = MAX_GTI;
+	}
 
 	pu = power >> 8;
 	pl = power & 0xff;
@@ -260,12 +265,27 @@ void calc_bsoc(void)
 			 */
 			if (UART2_is_rx_ready()) {
 				uint8_t mqtt_r;
-				static uint16_t cmd_value = 0;
+				static int16_t cmd_value = 0;
 
 				mqtt_r = UART2_Read();
 				switch (mqtt_r) {
-				case 'Z': // zero power/idle
+				case 'Z': // zero power
 					cmd_value = 0;
+					break;
+				case '+': // incr power
+					cmd_value = gti_power + 100;
+					if (cmd_value > 1000) {
+						cmd_value = 1000;
+					}
+					break;
+				case '-': // decr power
+					cmd_value = gti_power - 100;
+					if (cmd_value < 0) {
+						cmd_value = 0;
+					}
+					break;
+				case 'I': // idle power
+					cmd_value = 5;
 					break;
 				case 'F': // normal operation
 					cmd_value = 600;
@@ -287,7 +307,7 @@ void calc_bsoc(void)
 			 * send power limiter commands to the GTI Inverter
 			 * uses serial port 2 4800 baud
 			 */
-			gti_checksum(gti_sbuf, gti_power);
+			gti_checksum(gti_sbuf, (uint16_t) gti_power);
 			for (uint8_t i = 0; i < 8; i++) {
 				if (flop) {
 					Swrite(gti_sbuf[i]);
