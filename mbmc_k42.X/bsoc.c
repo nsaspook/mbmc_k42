@@ -37,8 +37,8 @@ const char infoline2[] = "    DAILY AH      LO ESR      HI ESR       PV AH   BAT
 
 static uint32_t seq_log = 0;
 
-#define MAX_GTI		1000
-#define GTI_POWER	600
+#define MAX_GTI		650
+#define GTI_POWER	250
 #define SPINNER_SPEED	200
 #define GTI_SPEED	1000
 #define Swrite		UART2_Write
@@ -129,6 +129,8 @@ uint8_t gti_checksum(uint8_t * gti_sbuf, uint16_t power)
 /*
  * check for incoming data on the MQTT connection
  * use UART1 or the MQTT receive data port
+ * calc_bsoc runs in interrupt low context and uses 16-bit results -> git_power from this
+ * cmd_value is the buffer variable
  */
 void gti_cmds(void)
 {
@@ -164,8 +166,9 @@ void gti_cmds(void)
 			cmd_value = 1000;
 			break;
 		case '#': // execute command symbol
+			INTERRUPT_GlobalInterruptLowDisable(); // 16-bit atomic update
 			gti_power = cmd_value;
-
+			INTERRUPT_GlobalInterruptLowEnable();
 			break;
 		default: // eat extra characters
 			while (Sready()) {
