@@ -42,9 +42,14 @@ static uint32_t seq_log = 0;
 #define SPINNER_SPEED	200
 #define GTI_SPEED	1000
 #define Swrite		UART2_Write
+#define Sread		UART1_Read
+#define Sready		UART1_is_rx_ready
 
-int16_t gti_power = GTI_POWER;
-bool flop = true;
+volatile int16_t gti_power = GTI_POWER;
+volatile bool flop = true;
+volatile uint8_t mqtt_r;
+volatile int16_t cmd_value = 0;
+
 uint8_t gti_sbuf[8] = {0x24, 0x56, 0x00, 0x21, 0x03, 0x99, 0x80, 0x6c};
 uint8_t gti_zero[8] = {0x24, 0x56, 0x00, 0x21, 0x00, 0x00, 0x80, 0x08};
 
@@ -119,6 +124,56 @@ uint8_t gti_checksum(uint8_t * gti_sbuf, uint16_t power)
 	gti_sbuf[5] = (uint8_t) pl;
 	gti_sbuf[7] = (uint8_t) cs;
 	return(uint8_t) cs;
+}
+
+/*
+ * check for incoming data on the MQTT connection
+ * use UART1 or the MQTT receive data port
+ */
+void gti_cmds(void)
+{
+	if (Sready()) {
+		mqtt_r = Sread();
+#ifdef GTI_ECHO
+		UART1_Write(mqtt_r); // debug echo
+#endif
+
+		switch (mqtt_r) {
+		case 'Z': // zero power
+			cmd_value = 0;
+			break;
+		case '+': // incr power
+			cmd_value = gti_power + 100;
+			if (cmd_value > 1000) {
+				cmd_value = 1000;
+			}
+			break;
+		case '-': // decr power
+			cmd_value = gti_power - 100;
+			if (cmd_value < 0) {
+				cmd_value = 0;
+			}
+			break;
+		case 'I': // idle power
+			cmd_value = 5;
+			break;
+		case 'F': // normal operation
+			cmd_value = 600;
+			break;
+		case 'M': // max unit rated power testing
+			cmd_value = 1000;
+			break;
+		case '#': // execute command symbol
+			gti_power = cmd_value;
+
+			break;
+		default: // eat extra characters
+			while (Sready()) {
+				mqtt_r = Sread();
+			}
+			break;
+		}
+	}
 }
 
 /*
@@ -242,67 +297,12 @@ void calc_bsoc(void)
 			C.p_mppt = C.v_bat * C.c_pv; // Power from Charge Controller
 			snprintf((char *) log_ptr, max_port_data - 1, "{\r\n \"DLname\": \"%s MBMC K42\",\r\n \"DLsequence\": %lu,\r\n \"DLgti\": %u,\r\n \"DLv_pv\": %7.2f,\r\n \"DLv_bat\": %7.2f,\r\n \"DLc_pv\": %7.2f,\r\n \"DLc_mppt\": %7.2f,\r\n \"DLc_bat\": %7.2f,\r\n \"DLp_pv\": %7.2f,\r\n \"DLp_mppt\": %7.2f,\r\n \"DLp_bat\": %7.2f,\r\n \"Qbuild_date\": \"%s\",\r\n \"Qbuild_time\": \"%s\"\r\n}\r\n",
 				VER, seq_log++, gti_power, C.v_pv, C.v_bat, C.c_pv, C.c_mppt, C.c_bat, C.p_pv, C.p_mppt, C.p_bat, build_date, build_time);
-			/*
-			 * send the string to the external MQTT device
-			 */
 
-			//			sprintf((char*) log_ptr, " %c ,%lu,%4.4f,%4.4f,%4.4f,%4.4f,%4.3f,%4.3f,%4.3f,%4.3f,%4.3f,%4.3f,%4.3f,%4.3f,%4.3f,%4.3f,%4.3f,%d,%d,%2.6f,%4.3f,%d,%d,%lu,%lu,%4.3f,%4.3f,%4.3f,%d\r\n",
-			//				lcode, V.ticks,
-			//				C.v_pv, C.v_cc, C.v_bat, C.v_inverter,
-			//				C.c_mppt, C.c_pv, C.c_bat,
-			//				C.p_mppt, C.p_pv, C.p_bat, C.p_load, C.p_inverter,
-			//				C.dynamic_ah, C.dynamic_ah_daily, C.pv_ah, C.soc, C.runtime,
-			//				C.esr, C.v_sensor, get_ac_charger_relay(), C.day, C.day_start, C.day_end, C.dynamic_ah_adj, C.hist[0].cef, C.hist[0].peukert,
-			//				V.cc_state);
 			StartTimer(TMR_DISPLAY, SOCDELAY); // sync the spi dma display updates to avoid memory contention
 #ifdef DEBUG_JSON
 			DEBUG2_Toggle();
 #endif
 			send_port_data_dma(strlen((char*) log_ptr));
-
-			/*
-			 * check for incoming data on the MQTT connection
-			 */
-			if (UART2_is_rx_ready()) {
-				uint8_t mqtt_r;
-				static int16_t cmd_value = 0;
-
-				mqtt_r = UART2_Read();
-				switch (mqtt_r) {
-				case 'Z': // zero power
-					cmd_value = 0;
-					break;
-				case '+': // incr power
-					cmd_value = gti_power + 100;
-					if (cmd_value > 1000) {
-						cmd_value = 1000;
-					}
-					break;
-				case '-': // decr power
-					cmd_value = gti_power - 100;
-					if (cmd_value < 0) {
-						cmd_value = 0;
-					}
-					break;
-				case 'I': // idle power
-					cmd_value = 5;
-					break;
-				case 'F': // normal operation
-					cmd_value = 600;
-					break;
-				case 'M': // max unit rated power testing
-					cmd_value = 1000;
-					break;
-				case '#': // execute command symbol
-					gti_power = cmd_value;
-					break;
-				default: // eat extra characters
-					while (UART2_is_rx_ready()) {
-						mqtt_r = UART2_Read();
-					}
-					break;
-				}
-			}
 			/*
 			 * send power limiter commands to the GTI Inverter
 			 * uses serial port 2 4800 baud

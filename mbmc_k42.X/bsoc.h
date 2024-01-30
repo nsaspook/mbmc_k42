@@ -74,7 +74,6 @@
 #define PWM_MAX_POWER	250.0f
 #define PWM_WIN_POWER	10.0f
 
-
 typedef enum {
 	R_CYCLE = 0,
 	R_TOTAL,
@@ -108,6 +107,7 @@ uint32_t peukert(uint16_t, float, float, int16_t);
 float esr_check(uint8_t);
 uint8_t cc_state(float);
 bool pv_diversion(bool);
+void gti_cmds(void);
 
 #endif	/* BSOC_H */
 

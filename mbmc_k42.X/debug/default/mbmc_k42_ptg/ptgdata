@@ -193,7 +193,7 @@ oi.append(o)
 o = Opinfo("write",0x0)
 t = Tinfo()
 t.start = 0x0
-t.end = 0x1ff
+t.end = 0x2ff
 t.data = "write_Pgm_st_0x0_op2_0.dat"
 t.type = "Pgm"
 t.mask = 0x0

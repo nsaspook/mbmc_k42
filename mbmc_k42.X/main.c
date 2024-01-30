@@ -276,6 +276,8 @@ void main(void)
 
 	diversion_pwm_set(V.mode_pwm); // 10KHz PWM
 
+	i_ror = U1RXB;
+
 	while (true) {
 		switch (V.ui_state) {
 		case UI_STATE_INIT:
@@ -481,6 +483,7 @@ void main(void)
 		}
 
 		if (TimerDone(TMR_DISPLAY)) { // limit update rate
+			gti_cmds();
 			if (TimerDone(TMR_HELPDIS)) {
 				set_display_info(DIS_STR);
 			}

@@ -55,12 +55,16 @@
   Section: Macro Declarations
 */
 #define UART1_TX_BUFFER_SIZE 64
-#define UART1_RX_BUFFER_SIZE 64
+#define UART1_RX_BUFFER_SIZE 8
 
 /**
   Section: Global Variables
 */
 
+static volatile uint8_t uart1TxHead = 0;
+static volatile uint8_t uart1TxTail = 0;
+static volatile uint8_t uart1TxBuffer[UART1_TX_BUFFER_SIZE];
+volatile uint8_t uart1TxBufferRemaining;
 
 static volatile uint8_t uart1RxHead = 0;
 static volatile uint8_t uart1RxTail = 0;
@@ -85,6 +89,8 @@ void UART1_Initialize(void)
     // Disable interrupts before changing states
     PIE3bits.U1RXIE = 0;
     UART1_SetRxInterruptHandler(UART1_Receive_ISR);
+    PIE3bits.U1TXIE = 0;
+    UART1_SetTxInterruptHandler(UART1_Transmit_ISR);
 
     // Set the UART1 module to the options selected in the user interface.
 
@@ -140,6 +146,10 @@ void UART1_Initialize(void)
 
     uart1RxLastError.status = 0;
 
+    // initializing the driver state
+    uart1TxHead = 0;
+    uart1TxTail = 0;
+    uart1TxBufferRemaining = sizeof(uart1TxBuffer);
     uart1RxHead = 0;
     uart1RxTail = 0;
     uart1RxCount = 0;
@@ -155,7 +165,7 @@ bool UART1_is_rx_ready(void)
 
 bool UART1_is_tx_ready(void)
 {
-    return (bool)(PIR3bits.U1TXIF && U1CON0bits.TXEN);
+    return (uart1TxBufferRemaining ? true : false);
 }
 
 bool UART1_is_tx_done(void)
@@ -191,11 +201,33 @@ uint8_t UART1_Read(void)
 
 void UART1_Write(uint8_t txData)
 {
-    while(0 == PIR3bits.U1TXIF)
+    while(0 == uart1TxBufferRemaining)
     {
     }
 
-    U1TXB = txData;    // Write the data byte to the USART.
+    if(0 == PIE3bits.U1TXIE)
+    {
+        U1TXB = txData;
+    }
+    else
+    {
+        PIE3bits.U1TXIE = 0;
+        uart1TxBuffer[uart1TxHead++] = txData;
+        if(sizeof(uart1TxBuffer) <= uart1TxHead)
+        {
+            uart1TxHead = 0;
+        }
+        uart1TxBufferRemaining--;
+    }
+    PIE3bits.U1TXIE = 1;
+}
+
+void __interrupt(irq(U1TX),base(8)) UART1_tx_vect_isr()
+{   
+    if(UART1_TxInterruptHandler)
+    {
+        UART1_TxInterruptHandler();
+    }
 }
 
 void __interrupt(irq(U1RX),base(8)) UART1_rx_vect_isr()
@@ -208,6 +240,25 @@ void __interrupt(irq(U1RX),base(8)) UART1_rx_vect_isr()
 
 
 
+void UART1_Transmit_ISR(void)
+{
+    // use this default transmit interrupt handler code
+    if(sizeof(uart1TxBuffer) > uart1TxBufferRemaining)
+    {
+        U1TXB = uart1TxBuffer[uart1TxTail++];
+       if(sizeof(uart1TxBuffer) <= uart1TxTail)
+        {
+            uart1TxTail = 0;
+        }
+        uart1TxBufferRemaining++;
+    }
+    else
+    {
+        PIE3bits.U1TXIE = 0;
+    }
+    
+    // or set custom function using UART1_SetTxInterruptHandler()
+}
 
 void UART1_Receive_ISR(void)
 {
@@ -269,6 +320,9 @@ void UART1_SetRxInterruptHandler(void (* InterruptHandler)(void)){
     UART1_RxInterruptHandler = InterruptHandler;
 }
 
+void UART1_SetTxInterruptHandler(void (* InterruptHandler)(void)){
+    UART1_TxInterruptHandler = InterruptHandler;
+}
 
 
 /**

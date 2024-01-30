@@ -54,8 +54,4 @@ void sw_timers_isr(void)
 			tickCount[i]--;
 		}
 	}
-
-	if (UART1_is_rx_ready()) {
-		i = UART1_Read();
-	}
 }
