@@ -38,7 +38,7 @@ const char infoline2[] = "    DAILY AH      LO ESR      HI ESR       PV AH   BAT
 static uint32_t seq_log = 0;
 
 #define MAX_GTI		650
-#define GTI_POWER	250
+#define GTI_POWER	0	// start with zero power
 #define SPINNER_SPEED	200
 #define GTI_SPEED	1000
 #define Swrite		UART2_Write

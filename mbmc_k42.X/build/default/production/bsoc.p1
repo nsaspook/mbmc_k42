@@ -1994,7 +1994,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "48
 [v _gti_power `Vs ~T0 @X0 1 e ]
 [i _gti_power
--> -> 250 `i `s
+-> -> 0 `i `s
 ]
 "49
 [v _flop `Va ~T0 @X0 1 e ]
