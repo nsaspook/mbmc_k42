@@ -42,6 +42,7 @@
  */
 
 /*
+ * THIS IS the DUMPLOAD version of this program with MQTT
  *
  * This program controls and monitors solar power battery arrays on a 24vdc system
  * MBMC uses a simple expert machine to try and keep current the energy stored in a bank of batteries
