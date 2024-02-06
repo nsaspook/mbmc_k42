@@ -298,7 +298,7 @@ void calc_bsoc(void)
 			C.p_pv = C.v_pv * C.c_bat; // power from FM80 AC
 			C.p_bat = C.v_bat * C.c_mppt; // Power to/from BATTERY
 			C.p_mppt = C.v_bat * C.c_pv; // Power from Charge Controller
-			snprintf((char *) log_ptr, max_port_data - 1, "{\r\n \"DLname\": \"%s MBMC K42\",\r\n \"DLsequence\": %lu,\r\n \"DLgti\": %u,\r\n \"DLv_pv\": %7.2f,\r\n \"DLv_bat\": %7.2f,\r\n \"DLc_pv\": %7.2f,\r\n \"DLc_mppt\": %7.2f,\r\n \"DLc_bat\": %7.2f,\r\n \"DLp_pv\": %7.2f,\r\n \"DLp_mppt\": %7.2f,\r\n \"DLp_bat\": %7.2f,\r\n \"Qbuild_date\": \"%s\",\r\n \"Qbuild_time\": \"%s\"\r\n}\r\n",
+			snprintf((char *) log_ptr, max_port_data - 1, "{\r\n \"DLname\": \"%s MBMC K42\",\r\n \"DLsequence\": %lu,\r\n \"DLgti\": %u,\r\n \"DLv_pv\": %7.2f,\r\n \"DLv_bat\": %7.2f,\r\n \"DLc_pv\": %7.2f,\r\n \"DLc_mppt\": %7.2f,\r\n \"DLc_bat\": %7.2f,\r\n \"DLp_pv\": %7.2f,\r\n \"DLp_mppt\": %7.2f,\r\n \"DLp_bat\": %7.2f,\r\n \"DLbuild_date\": \"%s\",\r\n \"DLbuild_time\": \"%s\"\r\n}\r\n",
 				VER, seq_log++, gti_power, C.v_pv, C.v_bat, C.c_pv, C.c_mppt, C.c_bat, C.p_pv, C.p_mppt, C.p_bat, build_date, build_time);
 
 			StartTimer(TMR_DISPLAY, SOCDELAY); // sync the spi dma display updates to avoid memory contention
