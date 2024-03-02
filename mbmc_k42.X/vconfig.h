@@ -20,7 +20,7 @@ extern "C" {
 #include "mcc_generated_files/pin_manager.h"
 #include "ringbufs.h"
 
-#define VER	"2.11"
+#define VER	"2.12"
 	/*
 	 * REMOVE THE CHIP PROGRAMMER, IT CHANGES THE ADC READINGS
 	 */
@@ -90,6 +90,7 @@ extern "C" {
 	 * 2.09 Fix UART1 receive bugs
 	 * 2.10 Alpha version
 	 * 2.11 typo corrections
+	 * 2.12 cleanup GTI parser code
 	 */
 
 	/*

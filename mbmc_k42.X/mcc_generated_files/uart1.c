@@ -55,7 +55,7 @@
   Section: Macro Declarations
 */
 #define UART1_TX_BUFFER_SIZE 64
-#define UART1_RX_BUFFER_SIZE 8
+#define UART1_RX_BUFFER_SIZE 64
 
 /**
   Section: Global Variables

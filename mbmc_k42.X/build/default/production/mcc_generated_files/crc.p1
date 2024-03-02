@@ -2,7 +2,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "59 mcc_generated_files/crc.c
 [s S2277 `uc 1 `uc 1 `uc 1 ]
 [n S2277 . dataWidth polyWidth seedDirection ]
-"1820 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"1820 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [v _CRCCON0 `Vuc ~T0 @X0 0 e@14696 ]
 "1880
 [v _CRCCON1 `Vuc ~T0 @X0 0 e@14697 ]
@@ -72,7 +72,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S123 . . ]
 "2710
 [v _SCANCON0bits `VS123 ~T0 @X0 0 e@14716 ]
-"250 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"250 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "339
 [; <" WREG_CSHAD equ 03881h ;# ">

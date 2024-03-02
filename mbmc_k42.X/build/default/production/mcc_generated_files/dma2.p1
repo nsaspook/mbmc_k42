@@ -1,5 +1,5 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"14132 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"14132 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [v _DMA2SSA `Vum ~T0 @X0 0 e@15321 ]
 "13069
 [v _DMA2DSA `Vus ~T0 @X0 0 e@15312 ]
@@ -68,7 +68,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _PRLOCKbits `VS262 ~T0 @X0 0 e@14831 ]
 "6131
 [v _DMA2PR `Vuc ~T0 @X0 0 e@14836 ]
-"250 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"250 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "339
 [; <" WREG_CSHAD equ 03881h ;# ">

@@ -145,25 +145,25 @@ void gti_cmds(void)
 			cmd_value = 0;
 			break;
 		case '+': // incr power
-			cmd_value = gti_power + 100;
-			if (cmd_value > 1000) {
-				cmd_value = 1000;
+			cmd_value = gti_power + GTI_INCR;
+			if (cmd_value > GTI_MAX) {
+				cmd_value = GTI_MAX;
 			}
 			break;
 		case '-': // decr power
-			cmd_value = gti_power - 100;
+			cmd_value = gti_power - GTI_INCR;
 			if (cmd_value < 0) {
 				cmd_value = 0;
 			}
 			break;
 		case 'I': // idle power
-			cmd_value = 5;
+			cmd_value = GTI_IDLE;
 			break;
 		case 'F': // normal operation
-			cmd_value = 600;
+			cmd_value = GTI_NORM;
 			break;
 		case 'M': // max unit rated power testing
-			cmd_value = 1000;
+			cmd_value = GTI_MAX;
 			break;
 		case '#': // execute command symbol
 			INTERRUPT_GlobalInterruptLowDisable(); // 16-bit atomic update

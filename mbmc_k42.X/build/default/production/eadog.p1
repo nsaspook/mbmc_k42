@@ -3,13 +3,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F17631 `(v ~T0 @X0 0 tf ]
 [v F17675 `(v ~T0 @X0 0 tf ]
 [v F17677 `(v ~T0 @X0 0 tf ]
-"173 ./vconfig.h
+"174 ./vconfig.h
 [s S2285 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `us 1 `uc 1 `*uc 1 `Vl 1 ]
 [n S2285 spi_link_type SPI_LCD SPI_AUX LCD_TIMER LCD_DATA delay config txbuf int_count ]
-"8 /opt/microchip/xc8/v2.45/pic/include/builtins.h
+"8 /opt/microchip/xc8/v2.46/pic/include/builtins.h
 [v ___nop `(v ~T0 @X0 0 ef ]
 [p i ___nop ]
-"22935 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"22935 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [s S997 :1 `uc 1 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 ]
 [n S997 . BMODE MST LSBF . EN ]
 "22942
@@ -32,7 +32,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _DMA1_SetORIInterruptHandler `(v ~T0 @X0 0 ef1`*F17347 ]
 "154
 [v _DMA1_SetDMAPriority `(v ~T0 @X0 0 ef1`uc ]
-"23373 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"23373 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [s S1015 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1015 . . TXUIF RXOIF . EOSIF SOSIF TCZIF SRMTIF ]
 "23383
@@ -70,7 +70,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _send_lcd_data_dma `(v ~T0 @X0 0 ef1`uc ]
 "147 ./mcc_generated_files/dma1.h
 [v _DMA1_StopTransfer `(v ~T0 @X0 0 ef ]
-"14586 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"14586 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [s S673 :1 `uc 1 :2 `uc 1 :2 `uc 1 :1 `uc 1 :2 `uc 1 ]
 [n S673 . SSTP SMODE SMR DSTP DMODE ]
 "14585
@@ -106,13 +106,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _LATCbits `VS2135 ~T0 @X0 0 e@16316 ]
 "66 ./mcc_generated_files/spi1.h
 [v _SPI1_ExchangeByte `(uc ~T0 @X0 0 ef1`uc ]
-"54 /opt/microchip/xc8/v2.45/pic/include/c99/string.h
+"54 /opt/microchip/xc8/v2.46/pic/include/c99/string.h
 [v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
 "85 ./eadog.h
 [v _wait_lcd_done `(v ~T0 @X0 0 ef ]
 "83
 [v _wait_lcd_set `(v ~T0 @X0 0 ef ]
-"29 /opt/microchip/xc8/v2.45/pic/include/c99/string.h
+"29 /opt/microchip/xc8/v2.46/pic/include/c99/string.h
 [v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
 "27
 [v _memcpy `(*v ~T0 @X0 0 ef3`*v`*Cv`ui ]
@@ -122,7 +122,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _DMA1_SetDestinationSize `(v ~T0 @X0 0 ef1`us ]
 "82 ./eadog.h
 [v _start_lcd `(v ~T0 @X0 0 ef ]
-"13916 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"13916 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [v _DMA2SSZ `Vus ~T0 @X0 0 e@15319 ]
 "12854
 [v _DMA2DSZ `Vus ~T0 @X0 0 e@15310 ]
@@ -131,17 +131,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n E17160 . UI_STATE_INIT UI_STATE_HOST UI_STATE_DEBUG UI_STATE_LOG UI_STATE_MON UI_STATE_ERROR  ]
 [c E17141 0 1 2 3 .. ]
 [n E17141 . DIS_STR DIS_HELP DIS_ERR DIS_CLEAR  ]
-"191 ./vconfig.h
+"192 ./vconfig.h
 [s S2286 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 :1 `uc 1 `E17141 1 `E17141 1 `us 1 `us 1 ]
 [n S2286 terminal_type mesgid TID mcode mparm cmdlen log_seq host_display_ack info help_temp ceid log_num ]
-"226
+"227
 [s S2287 `E17160 1 `uc -> 64 `i `uc -> 64 `i `uc -> 16 `i `Vul 1 `Vul 1 `Vul 1 `Vc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `E17160 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :2 `uc 1 :1 `uc 1 `S2286 1 `Vuc 1 `Vuc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `Va 1 `Va 1 `Va 1 `Va 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 ]
 [n S2287 V_data ui_state buf info rbuf ticks blight ac_time testing sys_info ac_on ac_off time_info get_time_text error abort msg_error msg_ret alarm float_ticks boost_ticks wdt_ticks ui_sw r_checksum t_checksum checksum_error mode_pwm sequences all_errors set_sequ debug help stack help_id screen response ticker cc_state flipper calib enter sensor_set fixup cc_active system_stable blight_off in_float in_boost lowint_count timerint_count tx_count rx_count adc_count spi_count switch_count ]
 "29 ./eadog.h
 [v _V `S2287 ~T0 @X0 0 e ]
 "140 ./mcc_generated_files/dma1.h
 [v _DMA1_StartTransferWithTrigger `(v ~T0 @X0 0 ef ]
-"23181 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"23181 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [s S1006 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1006 . RXBF . CLRBF RXRE . TXBE . TXWE ]
 "23191
@@ -152,7 +152,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S1005 . . . ]
 "23202
 [v _SPI1STATUSbits `VS1005 ~T0 @X0 0 e@15639 ]
-"250 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"250 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "339
 [; <" WREG_CSHAD equ 03881h ;# ">
@@ -2121,7 +2121,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 2330  ]
 [e :U 2331 ]
-[e [\ -> _r `i , $ -> 1 `i 2332
+[e [\ _r , $ -> 1 `i 2332
  , $ -> 2 `i 2333
  , $ -> 3 `i 2334
  , $ -> 0 `i 2335
