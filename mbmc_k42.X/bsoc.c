@@ -135,6 +135,7 @@ uint8_t gti_checksum(uint8_t * gti_sbuf, uint16_t power)
 void gti_cmds(void)
 {
 	static uint8_t value[] = {0, 0, 0, 0}, vi = 0;
+	uint8_t vcmd_size = sizeof(value);
 
 	if (Sready()) {
 		mqtt_r = Sread();
@@ -153,19 +154,24 @@ void gti_cmds(void)
 		case '7':
 		case '8':
 		case '9':
-			if (vi < 3) {
+			if (vi < vcmd_size) {
 				value[vi++] = mqtt_r - 48;
 			} else {
-				vi = 0;
 			}
 			break;
 		case 'V': // begin power value
 			vi = 0;
 			break;
 		case 'X': // end power value
-			if (vi >= 3) {
+			if (vi >= vcmd_size) {
 				vi = 0;
-				cmd_value = value[0]*1000 + value [1]*100 + value[2]*10;
+				cmd_value = value[0]*1000 + value [1]*100 + value[2]*10 + value[3];
+				if (cmd_value > GTI_MAX) {
+					cmd_value = GTI_MAX;
+				}
+				if (cmd_value < 0) {
+					cmd_value = 0;
+				}
 				INTERRUPT_GlobalInterruptLowDisable(); // 16-bit atomic update
 				gti_power = cmd_value;
 				INTERRUPT_GlobalInterruptLowEnable();
@@ -328,8 +334,8 @@ void calc_bsoc(void)
 			C.p_pv = C.v_pv * C.c_bat; // power from FM80 AC
 			C.p_bat = C.v_bat * C.c_mppt; // Power to/from BATTERY
 			C.p_mppt = C.v_bat * C.c_pv; // Power from Charge Controller
-			snprintf((char *) log_ptr, max_port_data - 1, "{\r\n \"DLname\": \"%s MBMC K42\",\r\n \"DLsequence\": %lu,\r\n \"DLgti\": %u,\r\n \"DLv_pv\": %7.2f,\r\n \"DLv_bat\": %7.2f,\r\n \"DLc_pv\": %7.2f,\r\n \"DLc_mppt\": %7.2f,\r\n \"DLc_bat\": %7.2f,\r\n \"DLp_pv\": %7.2f,\r\n \"DLp_mppt\": %7.2f,\r\n \"DLp_bat\": %7.2f,\r\n \"DLbuild_date\": \"%s\",\r\n \"DLbuild_time\": \"%s\"\r\n}\r\n",
-				VER, seq_log++, gti_power, C.v_pv, C.v_bat, C.c_pv, C.c_mppt, C.c_bat, C.p_pv, C.p_mppt, C.p_bat, build_date, build_time);
+			snprintf((char *) log_ptr, max_port_data - 1, "{\r\n \"DLname\": \"%s MBMC K42\",\r\n \"DLsequence\": %lu,\r\n \"DLgti\": %u,\r\n \"DLv_pv\": %7.2f,\r\n \"DLv_bat\": %7.2f,\r\n \"DLc_pv\": %7.2f,\r\n \"DLc_mppt\": %7.2f,\r\n \"DLc_bat\": %7.2f,\r\n \"DLp_pv\": %7.2f,\r\n \"DLp_mppt\": %7.2f,\r\n \"DLp_bat\": %7.2f,\r\n \"DLah_bat\": %7.2f,\r\n \"DLbuild_date\": \"%s\",\r\n \"DLbuild_time\": \"%s\"\r\n}\r\n",
+				VER, seq_log++, gti_power, C.v_pv, C.v_bat, C.c_pv, C.c_mppt, C.c_bat, C.p_pv, C.p_mppt, C.p_bat, C.dynamic_ah, build_date, build_time);
 
 			StartTimer(TMR_DISPLAY, SOCDELAY); // sync the spi dma display updates to avoid memory contention
 #ifdef DEBUG_JSON

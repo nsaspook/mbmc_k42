@@ -41,8 +41,8 @@ extern V_data V;
 #define LOCALTIME_OFFSET	60ul*60ul*(-8ul)
 #define LP_BUFFER_SIZE	ADC_BUFFER_SIZE+8
 #define STATIC_LOAD_POWER	14.00f
-#define BANKAH	225.0f	// baatery bank label Ah
-#define DEGRADE	150.0f	// adjust to what the battery bank Ah really is
+#define BANKAH	200.0f	// baatery bank label Ah
+#define DEGRADE	25.0f	// adjust to what the battery bank Ah really is
 #define SSLICE	3600.0f	// samples per hour
 
 #ifdef DEBUG_HIST1
