@@ -134,6 +134,8 @@ uint8_t gti_checksum(uint8_t * gti_sbuf, uint16_t power)
  */
 void gti_cmds(void)
 {
+	static uint8_t value[] = {0, 0, 0, 0}, vi = 0;
+
 	if (Sready()) {
 		mqtt_r = Sread();
 #ifdef GTI_ECHO
@@ -141,6 +143,34 @@ void gti_cmds(void)
 #endif
 
 		switch (mqtt_r) {
+		case '0':
+		case '1':
+		case '2':
+		case '3':
+		case '4':
+		case '5':
+		case '6':
+		case '7':
+		case '8':
+		case '9':
+			if (vi < 3) {
+				value[vi++] = mqtt_r - 48;
+			} else {
+				vi = 0;
+			}
+			break;
+		case 'V': // begin power value
+			vi = 0;
+			break;
+		case 'X': // end power value
+			if (vi >= 3) {
+				vi = 0;
+				cmd_value = value[0]*1000 + value [1]*100 + value[2]*10;
+				INTERRUPT_GlobalInterruptLowDisable(); // 16-bit atomic update
+				gti_power = cmd_value;
+				INTERRUPT_GlobalInterruptLowEnable();
+			};
+			break;
 		case 'Z': // zero power
 			cmd_value = 0;
 			break;
