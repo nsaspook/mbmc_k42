@@ -2277,10 +2277,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "168
 [e = _cmd_value -> + + + * -> *U + &U F18397 * -> -> -> 0 `i `ui `ux -> -> # *U &U F18397 `ui `ux `i -> 1000 `i * -> *U + &U F18397 * -> -> -> 1 `i `ui `ux -> -> # *U &U F18397 `ui `ux `i -> 100 `i * -> *U + &U F18397 * -> -> -> 2 `i `ui `ux -> -> # *U &U F18397 `ui `ux `i -> 10 `i -> *U + &U F18397 * -> -> -> 3 `i `ui `ux -> -> # *U &U F18397 `ui `ux `i `s ]
 "169
-[e $ ! > -> _cmd_value `i -> 450 `i 2330  ]
+[e $ ! > -> _cmd_value `i -> 600 `i 2330  ]
 {
 "170
-[e = _cmd_value -> -> 450 `i `s ]
+[e = _cmd_value -> -> 600 `i `s ]
 "171
 }
 [e :U 2330 ]
@@ -2314,10 +2314,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "184
 [e = _cmd_value -> + -> _gti_power `i -> 100 `i `s ]
 "185
-[e $ ! > -> _cmd_value `i -> 450 `i 2334  ]
+[e $ ! > -> _cmd_value `i -> 600 `i 2334  ]
 {
 "186
-[e = _cmd_value -> -> 450 `i `s ]
+[e = _cmd_value -> -> 600 `i `s ]
 "187
 }
 [e :U 2334 ]
@@ -2346,13 +2346,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "198
 [e :U 2338 ]
 "199
-[e = _cmd_value -> -> 400 `i `s ]
+[e = _cmd_value -> -> 450 `i `s ]
 "200
 [e $U 2313  ]
 "201
 [e :U 2339 ]
 "202
-[e = _cmd_value -> -> 450 `i `s ]
+[e = _cmd_value -> -> 600 `i `s ]
 "203
 [e $U 2313  ]
 "204
