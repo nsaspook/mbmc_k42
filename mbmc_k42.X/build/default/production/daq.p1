@@ -5,13 +5,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "23
 [u S2292 `us 1 `uc -> 2 `i `S2290 1 ]
 [n S2292 dac_buf_type ld bd map ]
-"265 ./vconfig.h
+"266 ./vconfig.h
 [s S2289 `l 1 `l 1 `ul 1 `ul 1 `ul 1 `f 1 `f 1 `f 1 `f 1 `f 1 `s -> 13 `i `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `uc 1 ]
 [n S2289 hist_type pv_eff tot_eff ttg_t updates pclock peukert cef peukert_adj cef_calc cef_save h rate udod bsoc bound_rate bound_factor samplei sampleo ah drate esr rest_rate rest_factor esrp version ]
 "29 daq.c
 [s S2293 `us -> 16 `i `us -> 2 `i `S2292 1 `s -> 3 `i `f -> 3 `i `uc 1 `us 1 `a 1 `S2289 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `us 1 `uc 1 ]
 [n S2293 R_data raw_adc raw_dac max5322_cmd n_offset n_scalar scan_index scan_select done H hist_save hist_update c_zero_cal c_scale_cal checkmark crc ]
-"8913 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"8913 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [v _ANSELB `Vuc ~T0 @X0 0 e@14928 ]
 "8417
 [v _ANSELA `Vuc ~T0 @X0 0 e@14912 ]
@@ -32,7 +32,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n E17147 . C_BATT C_PV V_CC V_BAT V_PV V_CMODE V_BBAT C_MPPT V_INVERTER V_LIGHT_SENSOR channel_VSS channel_Temp channel_DAC1 channel_FVR_Buffer1 channel_FVR_Buffer2  ]
 "169 ./mcc_generated_files/adcc.h
 [v _ADCC_StartConversion `(v ~T0 @X0 0 ef1`E17147 ]
-"3398 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"3398 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [s S152 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S152 . INT0IE ZCDIE ADIE ADTIE C1IE SMT1IE SMT1PRAIE SMT1PWAIE ]
 "3397
@@ -52,7 +52,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n E17590 . CONV O_CONV  ]
 "297 /opt/microchip/xc8/v2.46/pic/include/c99/math.h
 [v _nanf `(f ~T0 @X0 0 ef1`*Cuc ]
-"29905 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"29905 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [v _ADFLTRH `Vuc ~T0 @X0 0 e@16103 ]
 "29777
 [v _ADFLTRL `Vuc ~T0 @X0 0 e@16102 ]
@@ -61,15 +61,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n E17434 . UI_STATE_INIT UI_STATE_HOST UI_STATE_DEBUG UI_STATE_LOG UI_STATE_MON UI_STATE_ERROR  ]
 [c E17415 0 1 2 3 .. ]
 [n E17415 . DIS_STR DIS_HELP DIS_ERR DIS_CLEAR  ]
-"193 ./vconfig.h
+"194 ./vconfig.h
 [s S2286 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 :1 `uc 1 `E17415 1 `E17415 1 `us 1 `us 1 ]
 [n S2286 terminal_type mesgid TID mcode mparm cmdlen log_seq host_display_ack info help_temp ceid log_num ]
-"228
+"229
 [s S2287 `E17434 1 `uc -> 64 `i `uc -> 64 `i `uc -> 16 `i `Vul 1 `Vul 1 `Vul 1 `Vc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `E17434 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :2 `uc 1 :1 `uc 1 `S2286 1 `Vuc 1 `Vuc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `Va 1 `Va 1 `Va 1 `Va 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 ]
 [n S2287 V_data ui_state buf info rbuf ticks blight ac_time testing sys_info ac_on ac_off time_info get_time_text error abort msg_error msg_ret alarm float_ticks boost_ticks wdt_ticks ui_sw r_checksum t_checksum checksum_error mode_pwm sequences all_errors set_sequ debug help stack help_id screen response ticker cc_state flipper calib enter sensor_set fixup cc_active system_stable blight_off in_float in_boost lowint_count timerint_count tx_count rx_count adc_count spi_count switch_count ]
 "43 ./daq.h
 [v _V `S2287 ~T0 @X0 0 e ]
-"22935 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"22935 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [s S996 :1 `uc 1 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 ]
 [n S996 . BMODE MST LSBF . EN ]
 "22942
@@ -150,7 +150,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _CRC_CalculatedResultGet `(us ~T0 @X0 0 ef2`a`us ]
 "249 ./mcc_generated_files/memory.h
 [v _DATAEE_WriteByte `(v ~T0 @X0 0 ef2`us`uc ]
-"250 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"250 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "339
 [; <" WREG_CSHAD equ 03881h ;# ">

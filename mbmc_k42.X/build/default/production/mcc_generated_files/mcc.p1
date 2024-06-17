@@ -21,10 +21,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ADCC_Initialize `(v ~T0 @X0 0 ef ]
 "63 mcc_generated_files/dma1.h
 [v _DMA1_Initialize `(v ~T0 @X0 0 ef ]
-"102 mcc_generated_files/pwm8.h
-[v _PWM8_Initialize `(v ~T0 @X0 0 ef ]
 "365 mcc_generated_files/tmr2.h
 [v _TMR2_Initialize `(v ~T0 @X0 0 ef ]
+"102 mcc_generated_files/pwm8.h
+[v _PWM8_Initialize `(v ~T0 @X0 0 ef ]
 "406 mcc_generated_files/ext_int.h
 [v _EXT_INT_Initialize `(v ~T0 @X0 0 ef ]
 "365 mcc_generated_files/tmr6.h
@@ -43,7 +43,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _CLKREF_Initialize `(v ~T0 @X0 0 ef ]
 "124 mcc_generated_files/mcc.h
 [v _SystemArbiter_Initialize `(v ~T0 @X0 0 ef ]
-"4958 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"4958 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [v _OSCCON1 `Vuc ~T0 @X0 0 e@14809 ]
 "5098
 [v _OSCCON3 `Vuc ~T0 @X0 0 e@14811 ]
@@ -81,7 +81,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S262 . . ]
 "5917
 [v _PRLOCKbits `VS262 ~T0 @X0 0 e@14831 ]
-"250 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"250 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "339
 [; <" WREG_CSHAD equ 03881h ;# ">
@@ -1634,9 +1634,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "60
 [e ( _DMA1_Initialize ..  ]
 "61
-[e ( _PWM8_Initialize ..  ]
-"62
 [e ( _TMR2_Initialize ..  ]
+"62
+[e ( _PWM8_Initialize ..  ]
 "63
 [e ( _EXT_INT_Initialize ..  ]
 "64

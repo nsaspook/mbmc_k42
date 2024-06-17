@@ -8,10 +8,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n E17541 . UI_STATE_INIT UI_STATE_HOST UI_STATE_DEBUG UI_STATE_LOG UI_STATE_MON UI_STATE_ERROR  ]
 [c E17522 0 1 2 3 .. ]
 [n E17522 . DIS_STR DIS_HELP DIS_ERR DIS_CLEAR  ]
-"193 ./vconfig.h
+"194 ./vconfig.h
 [s S2290 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 :1 `uc 1 `E17522 1 `E17522 1 `us 1 `us 1 ]
 [n S2290 terminal_type mesgid TID mcode mparm cmdlen log_seq host_display_ack info help_temp ceid log_num ]
-"228
+"229
 [s S2291 `E17541 1 `uc -> 64 `i `uc -> 64 `i `uc -> 16 `i `Vul 1 `Vul 1 `Vul 1 `Vc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `E17541 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :2 `uc 1 :1 `uc 1 `S2290 1 `Vuc 1 `Vuc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `Va 1 `Va 1 `Va 1 `Va 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 ]
 [n S2291 V_data ui_state buf info rbuf ticks blight ac_time testing sys_info ac_on ac_off time_info get_time_text error abort msg_error msg_ret alarm float_ticks boost_ticks wdt_ticks ui_sw r_checksum t_checksum checksum_error mode_pwm sequences all_errors set_sequ debug help stack help_id screen response ticker cc_state flipper calib enter sensor_set fixup cc_active system_stable blight_off in_float in_boost lowint_count timerint_count tx_count rx_count adc_count spi_count switch_count ]
 "189 main.c
@@ -22,7 +22,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "54 ./hid.h
 [s S2297 `E18322 1 `E18329 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `uc 1 ]
 [n S2297 H_data hid_display h_state wait_select select_p wait_enter enter_p wait_calib calib_p sequence ]
-"265 ./vconfig.h
+"266 ./vconfig.h
 [s S2293 `l 1 `l 1 `ul 1 `ul 1 `ul 1 `f 1 `f 1 `f 1 `f 1 `f 1 `s -> 13 `i `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `uc 1 ]
 [n S2293 hist_type pv_eff tot_eff ttg_t updates pclock peukert cef peukert_adj cef_calc cef_save h rate udod bsoc bound_rate bound_factor samplei sampleo ah drate esr rest_rate rest_factor esrp version ]
 "78 ./mbmc.h
@@ -32,7 +32,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [s S2285 `i 1 `i 1 `i 1 `i 1 `i 1 `i 1 `i 1 `i 1 `i 1 `l 1 `*Cuc 1 ]
 [n S2285 tm tm_sec tm_min tm_hour tm_mday tm_mon tm_year tm_wday tm_yday tm_isdst __tm_gmtoff __tm_zone ]
 [p mainexit ]
-"48287 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"48287 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [s S2188 :5 `uc 1 :1 `uc 1 ]
 [n S2188 . . NOT_PD ]
 "48291
@@ -67,7 +67,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _TMR6_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F17085 ]
 "37 ./timers.h
 [v _sw_timers_isr `(v ~T0 @X0 0 ef ]
-"47994 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"47994 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [s S2174 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S2174 . INT0EDG INT1EDG INT2EDG . IPEN GIEL GIE ]
 "48003
@@ -80,7 +80,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _INTCON0bits `VS2173 ~T0 @X0 0 e@16338 ]
 "36 ./timers.h
 [v _WaitMs `(v ~T0 @X0 0 ef1`Cus ]
-"47708 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"47708 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [s S2164 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S2164 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
 "47707
@@ -90,7 +90,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _PORTBbits `VS2163 ~T0 @X0 0 e@16331 ]
 "42 ./mconfig.h
 [v _diversion_pwm_set `(v ~T0 @X0 0 ef1`us ]
-"26615 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"26615 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [v _U1RXB `Vuc ~T0 @X0 0 e@15848 ]
 "77 ./eadog.h
 [v _init_port_dma `(v ~T0 @X0 0 ef ]
@@ -222,7 +222,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _check_help `(a ~T0 @X0 0 ef1`Ca ]
 "158 ./daq.h
 [v _cal_current_zero `(a ~T0 @X0 0 ef4`a`s`s`s ]
-"47140 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"47140 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [s S2144 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S2144 . LATE0 LATE1 LATE2 ]
 "47145
@@ -235,7 +235,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _LATEbits `VS2143 ~T0 @X0 0 e@16318 ]
 "111 ./mbmc.h
 [v _check_day_time `(a ~T0 @X0 0 ef ]
-"47832 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"47832 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [s S2168 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S2168 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
 "47831
@@ -260,7 +260,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p n 1498 ]
 "142
 [p n 1090 ]
-"250 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"250 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "339
 [; <" WREG_CSHAD equ 03881h ;# ">
@@ -3164,9 +3164,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 2382 ]
 }
 [p f _sprintf 9282704 ]
-[a 1C 65 112 114 32 32 52 32 50 48 50 52 0 ]
-[a 5C 50 46 49 51 0 ]
-[a 2C 49 49 58 50 49 58 51 49 0 ]
+[a 2C 49 54 58 48 53 58 48 55 0 ]
+[a 1C 74 117 110 32 49 55 32 50 48 50 52 0 ]
+[a 5C 50 46 49 52 0 ]
 [a 8C 32 87 68 84 32 84 73 77 69 79 85 84 32 82 69 66 79 79 84 32 0 ]
 [a 18C 73 110 118 97 108 105 100 32 69 69 80 82 79 77 32 68 65 84 65 32 0 ]
 [a 33C 72 105 115 116 111 114 121 32 68 97 116 97 32 32 83 97 118 101 100 32 32 0 ]

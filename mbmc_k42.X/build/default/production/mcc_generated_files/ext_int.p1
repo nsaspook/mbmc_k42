@@ -3,7 +3,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F16385 `(v ~T0 @X0 0 tf ]
 [t ~ __interrupt . k ]
 [t T1 __interrupt irq ( INT0 ) base ( 8 ) ]
-"3963 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"3963 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [s S174 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S174 . INT0IF ZCDIF ADIF ADTIF C1IF SMT1IF SMT1PRAIF SMT1PWAIF ]
 "3962
@@ -17,7 +17,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F16390 `(v ~T0 @X0 0 tf ]
 [v F16392 `(v ~T0 @X0 0 tf ]
 [t T2 __interrupt irq ( INT1 ) base ( 8 ) low_priority ]
-"4206 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"4206 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [s S182 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S182 . INT1IF C2IF DMA2SCNTIF DMA2DCNTIF DMA2ORIF DMA2AIF I2C2RXIF I2C2TXIF ]
 "4205
@@ -30,7 +30,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F16397 `(v ~T0 @X0 0 tf ]
 [v F16399 `(v ~T0 @X0 0 tf ]
 [v F16401 `(v ~T0 @X0 0 tf ]
-"47994 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"47994 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [s S2171 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S2171 . INT0EDG INT1EDG INT2EDG . IPEN GIEL GIE ]
 "48003
@@ -57,7 +57,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S159 . . ]
 "3652
 [v _PIE5bits `VS159 ~T0 @X0 0 e@14741 ]
-"250 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"250 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "339
 [; <" WREG_CSHAD equ 03881h ;# ">

@@ -10,7 +10,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F16422 `(v ~T0 @X0 0 tf ]
 [v F16424 `(v ~T0 @X0 0 tf ]
 [v F16426 `(v ~T0 @X0 0 tf ]
-"3522 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"3522 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [s S156 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S156 . I2C1TXIE I2C1IE I2C1EIE U1RXIE U1TXIE U1EIE U1IE TMR0IE ]
 "3521
@@ -28,7 +28,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _UART1_SetTxInterruptHandler `(v ~T0 @X0 0 ef1`*F16407 ]
 "401
 [v _UART1_Transmit_ISR `(v ~T0 @X0 0 ef ]
-"26738 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"26738 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [v _U1P1L `Vuc ~T0 @X0 0 e@15852 ]
 "26758
 [v _U1P1H `Vuc ~T0 @X0 0 e@15853 ]
@@ -73,7 +73,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _UART1_SetErrorHandler `(v ~T0 @X0 0 ef1`*F16395 ]
 "85 mcc_generated_files/uart1.c
 [v _UART1_DefaultErrorHandler `(v ~T0 @X0 0 ef ]
-"27461 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"27461 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [s S1225 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1225 . TXCIF RXFOIF RXBKIF FERIF CERIF ABDOVF PERIF TXMTIF ]
 "27471
@@ -93,7 +93,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F16447 `(v ~T0 @X0 0 tf ]
 "443 mcc_generated_files/uart1.h
 [v _UART1_RxDataHandler `(v ~T0 @X0 0 ef ]
-"26615 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"26615 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [v _U1RXB `Vuc ~T0 @X0 0 e@15848 ]
 [v F16455 `(v ~T0 @X0 0 tf ]
 [v F16457 `(v ~T0 @X0 0 tf ]
@@ -105,7 +105,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F16472 `(v ~T0 @X0 0 tf ]
 [v F16475 `(v ~T0 @X0 0 tf ]
 [v F16477 `(v ~T0 @X0 0 tf ]
-"250 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"250 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "339
 [; <" WREG_CSHAD equ 03881h ;# ">

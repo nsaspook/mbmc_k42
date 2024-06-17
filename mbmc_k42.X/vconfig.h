@@ -20,7 +20,7 @@ extern "C" {
 #include "mcc_generated_files/pin_manager.h"
 #include "ringbufs.h"
 
-#define VER	"2.13"
+#define VER	"2.14"
 	/*
 	 * REMOVE THE CHIP PROGRAMMER, IT CHANGES THE ADC READINGS
 	 */
@@ -92,6 +92,7 @@ extern "C" {
 	 * 2.11 typo corrections
 	 * 2.12 cleanup GTI parser code
 	 * 2.13 add GTI power value parsing with V start value, [0..9][3], X execute value
+	 * 2.14 misc cleanup
 	 */
 
 	/*

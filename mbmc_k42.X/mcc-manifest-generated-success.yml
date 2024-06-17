@@ -2,14 +2,14 @@
 
 manifest_file_version: 1.0.0
 project: mbmc_k42
-creation_date: 2024-03-02T15:15:30.158-08:00[America/Los_Angeles]
+creation_date: 2024-06-17T15:34:12.363-07:00[America/Los_Angeles]
 operating_system: Linux
 mcc_mode: IDE
 mcc_mode_version: v6.20
 device_name: PIC18F57K42
 compiler: XC8 2.46
-mcc_version: 5.5.0
-mcc_core_version: 5.7.0
+mcc_version: 5.5.1
+mcc_core_version: 5.7.1
 content_manager_version: 5.0.0
 is_mcc_offline: false
 is_using_prerelease_versions: false

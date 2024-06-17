@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [v F16384 `(v ~T0 @X0 0 tf ]
-"43563 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"43563 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [v _T3GCON `Vuc ~T0 @X0 0 e@16295 ]
 "43849
 [v _T3GATE `Vuc ~T0 @X0 0 e@16296 ]
@@ -31,7 +31,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _TMR3_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F16375 ]
 "422
 [v _TMR3_DefaultInterruptHandler `(v ~T0 @X0 0 ef ]
-"43341 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"43341 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [v _T3CON `Vuc ~T0 @X0 0 e@16294 ]
 "43352
 [s S1962 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 ]
@@ -89,7 +89,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F16401 `(v ~T0 @X0 0 tf ]
 [v F16403 `(v ~T0 @X0 0 tf ]
 [v F16405 `(v ~T0 @X0 0 tf ]
-"250 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"250 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "339
 [; <" WREG_CSHAD equ 03881h ;# ">

@@ -2,7 +2,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "50 mcc_generated_files/spi1.c
 [s S2279 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
 [n S2279 . con0 con1 con2 baud operation ]
-"22929 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"22929 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [v _SPI1CON0 `Vuc ~T0 @X0 0 e@15636 ]
 "22995
 [v _SPI1CON1 `Vuc ~T0 @X0 0 e@15637 ]
@@ -23,7 +23,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "79 mcc_generated_files/spi1.c
 [c E364 0 .. ]
 [n E364 . SPI1_DEFAULT  ]
-"22935 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"22935 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [s S998 :1 `uc 1 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 ]
 [n S998 . BMODE MST LSBF . EN ]
 "22942
@@ -48,7 +48,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _PIR2bits `VS177 ~T0 @X0 0 e@14754 ]
 "22742
 [v _SPI1RXB `Vuc ~T0 @X0 0 e@15632 ]
-"250 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"250 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "339
 [; <" WREG_CSHAD equ 03881h ;# ">
