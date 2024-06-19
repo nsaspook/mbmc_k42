@@ -74,10 +74,10 @@
 #define PWM_MAX_POWER	250.0f
 #define PWM_WIN_POWER	10.0f
 
-#define GTI_MAX		600
+#define GTI_MAX		600 // 600
 #define GTI_IDLE	50
 #define GTI_INCR	100
-#define GTI_NORM	450
+#define GTI_NORM	450 // 450
 
 typedef enum {
 	R_CYCLE = 0,
