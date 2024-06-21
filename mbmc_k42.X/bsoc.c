@@ -334,8 +334,8 @@ void calc_bsoc(void)
 			C.p_pv = C.v_pv * C.c_bat; // power from FM80 AC
 			C.p_bat = C.v_bat * C.c_mppt; // Power to/from BATTERY
 			C.p_mppt = C.v_bat * C.c_pv; // Power from Charge Controller
-			snprintf((char *) log_ptr, max_port_data - 1, "{\r\n \"DLname\": \"%s MBMC K42\",\r\n \"DLsequence\": %lu,\r\n \"DLgti\": %u,\r\n \"DLv_pv\": %7.2f,\r\n \"DLv_bat\": %7.2f,\r\n \"DLc_pv\": %7.2f,\r\n \"DLc_mppt\": %7.2f,\r\n \"DLc_bat\": %7.2f,\r\n \"DLp_pv\": %7.2f,\r\n \"DLp_mppt\": %7.2f,\r\n \"DLp_bat\": %7.2f,\r\n \"DLah_bat\": %7.2f,\r\n \"DLbuild_date\": \"%s\",\r\n \"DLbuild_time\": \"%s\"\r\n}\r\n",
-				VER, seq_log++, gti_power, C.v_pv, C.v_bat, C.c_pv, C.c_mppt, C.c_bat, C.p_pv, C.p_mppt, C.p_bat, C.dynamic_ah, build_date, build_time);
+			snprintf((char *) log_ptr, max_port_data - 1, "{\r\n \"DLname\": \"%s MBMC K42\",\r\n \"DLsequence\": %lu,\r\n \"DLccmode\": %u,\r\n \"DLgti\": %u,\r\n \"DLv_pv\": %7.2f,\r\n \"DLv_bat\": %7.2f,\r\n \"DLc_pv\": %7.2f,\r\n \"DLc_mppt\": %7.2f,\r\n \"DLc_bat\": %7.2f,\r\n \"DLp_pv\": %7.2f,\r\n \"DLp_mppt\": %7.2f,\r\n \"DLp_bat\": %7.2f,\r\n \"DLah_bat\": %7.2f,\r\n \"DLbuild_date\": \"%s\",\r\n \"DLbuild_time\": \"%s\"\r\n}\r\n",
+				VER, seq_log++, V.cc_state, gti_power, C.v_pv, C.v_bat, C.c_pv, C.c_mppt, C.c_bat, C.p_pv, C.p_mppt, C.p_bat, C.dynamic_ah, build_date, build_time);
 
 			StartTimer(TMR_DISPLAY, SOCDELAY); // sync the spi dma display updates to avoid memory contention
 #ifdef DEBUG_JSON
@@ -537,25 +537,25 @@ uint8_t cc_state(float cc_signal)
 {
 	uint8_t state = M_OFFLINE; // offline
 
-	if ((cc_signal > 4.75) && (cc_signal < 0.75))
+	if ((cc_signal >= 4.65) || (cc_signal < 0.75))
 		return state; // dead signal range
 
-	if ((cc_signal > 4.25) && (cc_signal < 4.65)) // 4.4
+	if ((cc_signal >= 4.25) && (cc_signal < 4.65)) // 4.4
 		return state; //offline
 
-	if ((cc_signal > 3.75) && (cc_signal < 4.25)) // 4.0
+	if ((cc_signal >= 3.75) && (cc_signal < 4.25)) // 4.0
 		state = M_LIMIT;
-	if ((cc_signal > 3.25) && (cc_signal < 3.75)) // 3.5
+	if ((cc_signal >= 3.25) && (cc_signal < 3.75)) // 3.5
 		state = M_FLOAT;
-	if ((cc_signal > 2.75) && (cc_signal < 3.25)) // 3.0
+	if ((cc_signal >= 2.75) && (cc_signal < 3.25)) // 3.0
 		state = M_BOOST;
-	if ((cc_signal > 2.25) && (cc_signal < 2.75)) // 2.5
+	if ((cc_signal >= 2.25) && (cc_signal < 2.75)) // 2.5
 		state = M_EQUAL;
-	if ((cc_signal > 1.75) && (cc_signal < 2.25)) // 2.0
+	if ((cc_signal >= 1.75) && (cc_signal < 2.25)) // 2.0
 		state = M_MPPT;
-	if ((cc_signal > 1.25) && (cc_signal < 1.75)) // 1.5
+	if ((cc_signal >= 1.25) && (cc_signal < 1.75)) // 1.5
 		state = M_ACT;
-	if ((cc_signal > .75) && cc_signal < 1.25) // 1.0
+	if ((cc_signal >= .75) && cc_signal < 1.25) // 1.0
 		state = M_DEACT;
 	return state;
 }

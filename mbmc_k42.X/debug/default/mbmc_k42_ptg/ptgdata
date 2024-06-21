@@ -182,6 +182,17 @@ tool.communicationInterface = "SWD"
 tool.physicalActivation = "nohv"
 
 ######################## Operation Info ########################
+o = Opinfo("read",0x100)
+t = Tinfo()
+t.start = 0x310000
+t.end = 0x3103ff
+t.type = "EEData"
+t.data = None
+o.addTI(t)
+o.preserveEEPROM = True
+oi.append(o)
+
+######################## Operation Info ########################
 o = Opinfo("erase",0x0)
 oi.append(o)
 
@@ -189,23 +200,30 @@ oi.append(o)
 o = Opinfo("write",0x0)
 t = Tinfo()
 t.start = 0x0
-t.end = 0xff
-t.data = "write_Pgm_st_0x0_op1_0.dat"
+t.end = 0x17f
+t.data = "write_Pgm_st_0x0_op2_0.dat"
 t.type = "Pgm"
 t.mask = 0x0
 o.addTI(t)
 t = Tinfo()
-t.start = 0xf700
+t.start = 0xf680
 t.end = 0x1ffff
-t.data = "write_Pgm_st_0xf700_op1_1.dat"
+t.data = "write_Pgm_st_0xf680_op2_1.dat"
 t.type = "Pgm"
 t.mask = 0x0
 o.addTI(t)
 t = Tinfo()
 t.start = 0x300000
 t.end = 0x300009
-t.data = "write_Cfg_st_0x300000_op1_2.dat"
+t.data = "write_Cfg_st_0x300000_op2_2.dat"
 t.type = "Cfg"
+t.mask = 0x0
+o.addTI(t)
+t = Tinfo()
+t.start = 0x310000
+t.end = 0x3103ff
+t.data = "write_EEData_st_0x310000_op2_3.dat"
+t.type = "EEData"
 t.mask = 0x0
 o.addTI(t)
 oi.append(o)
