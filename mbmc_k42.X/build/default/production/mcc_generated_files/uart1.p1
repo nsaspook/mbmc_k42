@@ -1636,7 +1636,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ]
 "66
-[v _uart1TxBuffer `Vuc ~T0 @X0 -> 64 `i s ]
+[v _uart1TxBuffer `Vuc ~T0 @X0 -> 8 `i s ]
 "67
 [v _uart1TxBufferRemaining `Vuc ~T0 @X0 1 e ]
 "69
