@@ -49,6 +49,7 @@ volatile int16_t gti_power = GTI_POWER;
 volatile bool flop = true;
 volatile uint8_t mqtt_r;
 volatile int16_t cmd_value = 0;
+time_t utc_cmd_value = 0;
 
 uint8_t gti_sbuf[8] = {0x24, 0x56, 0x00, 0x21, 0x03, 0x99, 0x80, 0x6c};
 uint8_t gti_zero[8] = {0x24, 0x56, 0x00, 0x21, 0x00, 0x00, 0x80, 0x08};
@@ -135,7 +136,10 @@ uint8_t gti_checksum(uint8_t * gti_sbuf, uint16_t power)
 void gti_cmds(void)
 {
 	static uint8_t value[] = {0, 0, 0, 0}, vi = 0;
+	static uint8_t utc_value[11] = {0};
+	static bool utc = false;
 	uint8_t vcmd_size = sizeof(value);
+	uint8_t utc_vcmd_size = sizeof(utc_value) - 1;
 
 	if (Sready()) {
 		mqtt_r = Sread();
@@ -154,15 +158,38 @@ void gti_cmds(void)
 		case '7':
 		case '8':
 		case '9':
-			if (vi < vcmd_size) {
-				value[vi++] = mqtt_r - 48;
-			} else {
+			if (!utc) { // process power cmds
+				if (vi < vcmd_size) {
+					value[vi++] = mqtt_r - 48;
+				} else {
+				}
+			} else { // process UTC time from host cmds
+				if (vi < utc_vcmd_size) {
+					utc_value[vi++] = mqtt_r - 48;
+				} else {
+				}
 			}
 			break;
-		case 'V': // begin power value
+		case 'T': // begin UTC value
+			utc = true;
+			break;
+		case 't': // end UTC value
+			utc = false;
+			if (vi >= utc_vcmd_size) {
+				vi = 0;
+				utc_cmd_value = (time_t) atol((const char *)utc_value);
+
+				if (utc_cmd_value < DEF_TIME) {
+					utc_cmd_value = DEF_TIME;
+				}
+				set_time(utc_cmd_value);
+			};
+			break;
+		case 'V': // begin power/utc value
 			vi = 0;
 			break;
 		case 'X': // end power value
+			utc = false;
 			if (vi >= vcmd_size) {
 				vi = 0;
 				cmd_value = value[0]*1000 + value [1]*100 + value[2]*10 + value[3];
@@ -178,35 +205,43 @@ void gti_cmds(void)
 			};
 			break;
 		case 'Z': // zero power
+			utc = false;
 			cmd_value = 0;
 			break;
 		case '+': // incr power
+			utc = false;
 			cmd_value = gti_power + GTI_INCR;
 			if (cmd_value > GTI_MAX) {
 				cmd_value = GTI_MAX;
 			}
 			break;
 		case '-': // decr power
+			utc = false;
 			cmd_value = gti_power - GTI_INCR;
 			if (cmd_value < 0) {
 				cmd_value = 0;
 			}
 			break;
 		case 'I': // idle power
+			utc = false;
 			cmd_value = GTI_IDLE;
 			break;
 		case 'F': // normal operation
+			utc = false;
 			cmd_value = GTI_NORM;
 			break;
 		case 'M': // max unit rated power testing
+			utc = false;
 			cmd_value = GTI_MAX;
 			break;
 		case '#': // execute command symbol
+			utc = false;
 			INTERRUPT_GlobalInterruptLowDisable(); // 16-bit atomic update
 			gti_power = cmd_value;
 			INTERRUPT_GlobalInterruptLowEnable();
 			break;
 		default: // eat extra characters
+			utc = false;
 			while (Sready()) {
 				mqtt_r = Sread();
 			}

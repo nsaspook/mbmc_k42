@@ -186,6 +186,7 @@ V_data V = {
 	.ac_time = 0,
 	.rbuf = "1",
 };
+
 H_data H = {
 	.hid_display = HID_MAIN,
 	.h_state = H_STATE_INIT,

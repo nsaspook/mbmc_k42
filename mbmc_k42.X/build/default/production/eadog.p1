@@ -3,7 +3,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F17631 `(v ~T0 @X0 0 tf ]
 [v F17675 `(v ~T0 @X0 0 tf ]
 [v F17677 `(v ~T0 @X0 0 tf ]
-"178 ./vconfig.h
+"179 ./vconfig.h
 [s S2285 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `us 1 `uc 1 `*uc 1 `Vl 1 ]
 [n S2285 spi_link_type SPI_LCD SPI_AUX LCD_TIMER LCD_DATA delay config txbuf int_count ]
 "8 /opt/microchip/xc8/v2.46/pic/include/builtins.h
@@ -131,10 +131,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n E17160 . UI_STATE_INIT UI_STATE_HOST UI_STATE_DEBUG UI_STATE_LOG UI_STATE_MON UI_STATE_ERROR  ]
 [c E17141 0 1 2 3 .. ]
 [n E17141 . DIS_STR DIS_HELP DIS_ERR DIS_CLEAR  ]
-"196 ./vconfig.h
+"197 ./vconfig.h
 [s S2286 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 :1 `uc 1 `E17141 1 `E17141 1 `us 1 `us 1 ]
 [n S2286 terminal_type mesgid TID mcode mparm cmdlen log_seq host_display_ack info help_temp ceid log_num ]
-"231
+"232
 [s S2287 `E17160 1 `uc -> 64 `i `uc -> 64 `i `uc -> 16 `i `Vul 1 `Vul 1 `Vul 1 `Vc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `E17160 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :2 `uc 1 :1 `uc 1 `S2286 1 `Vuc 1 `Vuc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `Va 1 `Va 1 `Va 1 `Va 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 ]
 [n S2287 V_data ui_state buf info rbuf ticks blight ac_time testing sys_info ac_on ac_off time_info get_time_text error abort msg_error msg_ret alarm float_ticks boost_ticks wdt_ticks ui_sw r_checksum t_checksum checksum_error mode_pwm sequences all_errors set_sequ debug help stack help_id screen response ticker cc_state flipper calib enter sensor_set fixup cc_active system_stable blight_off in_float in_boost lowint_count timerint_count tx_count rx_count adc_count spi_count switch_count ]
 "29 ./eadog.h
