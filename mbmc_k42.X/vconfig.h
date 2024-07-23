@@ -103,7 +103,8 @@ extern "C" {
 	 */
 	//#define TESTING
 	//#define DISPLAY_SLOW
-#define DEF_TIME	1704906123
+#define DEF_TIME	1721693000
+#define DEF_TIME_SIZE	11
 
 #define SLED	LED0_LAT
 

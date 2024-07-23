@@ -136,10 +136,10 @@ uint8_t gti_checksum(uint8_t * gti_sbuf, uint16_t power)
 void gti_cmds(void)
 {
 	static uint8_t value[] = {0, 0, 0, 0}, vi = 0;
-	static uint8_t utc_value[11] = {0};
+	static uint8_t utc_value[DEF_TIME_SIZE] = {0};
 	static bool utc = false;
 	uint8_t vcmd_size = sizeof(value);
-	uint8_t utc_vcmd_size = sizeof(utc_value) - 1;
+	uint8_t utc_vcmd_size = DEF_TIME_SIZE-1;
 
 	if (Sready()) {
 		mqtt_r = Sread();
@@ -165,7 +165,7 @@ void gti_cmds(void)
 				}
 			} else { // process UTC time from host cmds
 				if (vi < utc_vcmd_size) {
-					utc_value[vi++] = mqtt_r - 48;
+					utc_value[vi++] = mqtt_r;
 				} else {
 				}
 			}
@@ -177,7 +177,8 @@ void gti_cmds(void)
 			utc = false;
 			if (vi >= utc_vcmd_size) {
 				vi = 0;
-				utc_cmd_value = (time_t) atol((const char *)utc_value);
+				utc_value[10] = 0;
+				utc_cmd_value = (time_t) atol((char *)utc_value);
 
 				if (utc_cmd_value < DEF_TIME) {
 					utc_cmd_value = DEF_TIME;
