@@ -20,7 +20,7 @@ extern "C" {
 #include "mcc_generated_files/pin_manager.h"
 #include "ringbufs.h"
 
-#define VER	"2.17"
+#define VER	"2.18"
 	/*
 	 * REMOVE THE CHIP PROGRAMMER, IT CHANGES THE ADC READINGS
 	 */
@@ -96,6 +96,7 @@ extern "C" {
 	 * 2.15 more cleanups
 	 * 2.16 add charge controller mode to MQTT variables, fix CCMODE voltage ranges
 	 * 2.17 add UTC time setting from MQTT
+	 * 2.18 doc updates and minor fixes
 	 */
 
 	/*

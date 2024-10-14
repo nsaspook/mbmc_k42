@@ -106,6 +106,9 @@ bool pv_diversion(bool kill)
 	return ret;
 }
 
+/*
+ * for GTI RS485 messages
+ */
 uint8_t gti_checksum(uint8_t * gti_sbuf, uint16_t power)
 {
 	uint16_t pu, pl, cs;
