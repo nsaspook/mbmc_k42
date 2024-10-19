@@ -299,10 +299,11 @@ void calc_bsoc(void)
 
 	/*
 	 * Battery data calculations
+	 * had to move the current sensors for the correct PV, BAT and CC currents for this configuration
 	 */
 #ifdef FM80_FIXUPS
-	C.dynamic_ah += (C.c_pv / SSLICE); // Ah
-	C.dynamic_ah_daily += (C.c_pv / SSLICE); // Ah
+	C.dynamic_ah += (C.c_mppt / SSLICE); // Ah
+	C.dynamic_ah_daily += (C.c_mppt / SSLICE); // Ah
 	if (C.dynamic_ah > (C.bank_ah))
 		C.dynamic_ah = C.bank_ah;
 	if (C.dynamic_ah < 0.1)
@@ -322,7 +323,7 @@ void calc_bsoc(void)
 		C.dynamic_ah_adj = 0.1;
 
 
-	C.pv_ah += (C.c_mppt / SSLICE);
+	C.pv_ah += (C.c_bat / SSLICE);
 	C.pvkw += (C.p_pv / SSLICE);
 	C.invkw += (C.p_inverter / SSLICE);
 	C.loadkw += (C.p_load / SSLICE);
@@ -335,8 +336,8 @@ void calc_bsoc(void)
 	if (C.soc > 100)
 		C.soc = 100;
 
-	if (C.c_pv < 0.0) {
-		C.runtime = (uint16_t) (-(C.dynamic_ah_adj / C.c_pv));
+	if (C.c_mppt < 0.0) {
+		C.runtime = (uint16_t) (-(C.dynamic_ah_adj / C.c_mppt));
 	} else {
 		C.runtime = 99;
 	}
