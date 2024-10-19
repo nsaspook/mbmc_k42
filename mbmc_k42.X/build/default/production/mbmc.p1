@@ -11,21 +11,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n E16995 . UI_STATE_INIT UI_STATE_HOST UI_STATE_DEBUG UI_STATE_LOG UI_STATE_MON UI_STATE_ERROR  ]
 [c E16976 0 1 2 3 .. ]
 [n E16976 . DIS_STR DIS_HELP DIS_ERR DIS_CLEAR  ]
-"199 ./vconfig.h
+"200 ./vconfig.h
 [s S2286 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 :1 `uc 1 `E16976 1 `E16976 1 `us 1 `us 1 ]
 [n S2286 terminal_type mesgid TID mcode mparm cmdlen log_seq host_display_ack info help_temp ceid log_num ]
-"234
+"235
 [s S2287 `E16995 1 `uc -> 64 `i `uc -> 64 `i `uc -> 16 `i `Vul 1 `Vul 1 `Vul 1 `Vc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `E16995 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :2 `uc 1 :1 `uc 1 `S2286 1 `Vuc 1 `Vuc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `Va 1 `Va 1 `Va 1 `Va 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 ]
 [n S2287 V_data ui_state buf info rbuf ticks blight ac_time testing sys_info ac_on ac_off time_info get_time_text error abort msg_error msg_ret alarm float_ticks boost_ticks wdt_ticks ui_sw r_checksum t_checksum checksum_error mode_pwm sequences all_errors set_sequ debug help stack help_id screen response ticker cc_state flipper calib enter sensor_set fixup cc_active system_stable blight_off in_float in_boost lowint_count timerint_count tx_count rx_count adc_count spi_count switch_count ]
-"101 ./bsoc.h
+"103 ./bsoc.h
 [v _V `S2287 ~T0 @X0 0 e ]
-"271 ./vconfig.h
+"272 ./vconfig.h
 [s S2289 `l 1 `l 1 `ul 1 `ul 1 `ul 1 `f 1 `f 1 `f 1 `f 1 `f 1 `s -> 13 `i `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `uc 1 ]
 [n S2289 hist_type pv_eff tot_eff ttg_t updates pclock peukert cef peukert_adj cef_calc cef_save h rate udod bsoc bound_rate bound_factor samplei sampleo ah drate esr rest_rate rest_factor esrp version ]
 "78 ./mbmc.h
 [s S2290 `f -> 16 `i `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `us 1 `us 1 `a 1 `S2289 -> -> 1 `i `ux `f 1 `f 1 `f 1 `f 1 `f 1 `a 1 `a 1 `ul 1 `ul 1 `ul 1 `ul 1 ]
 [n S2290 C_data calc c_load c_bat c_pv c_mppt v_cc v_pv v_bat v_cbus v_bbat v_temp v_inverter v_sensor v_cmode bv_ror bc_ror p_load p_inverter p_pv p_bat p_mppt start_power t_comp esr bank_ah dynamic_ah pv_ah loadah dynamic_ah_adj dynamic_ah_daily dynamic_ah_adj_daily bkwi bkwo pvkw invkw loadkw runtime soc update hist load_i1 load_i2 bv_noload bv_one_load bv_full_load day dupdate day_start day_end day_update updates ]
-"100 ./bsoc.h
+"102 ./bsoc.h
 [v _C `VS2290 ~T0 @X0 0 e ]
 "51 mbmc.c
 [c E16519 0 1 2 4 5 6 10 11 12 13 59 60 61 62 63 .. ]
@@ -34,9 +34,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n E17590 . CONV O_CONV  ]
 "153 ./daq.h
 [v _conv_raw_result `(f ~T0 @X0 0 ef2`CE16519`CE17590 ]
-"108 ./bsoc.h
+"110 ./bsoc.h
 [v _stop_bsoc `(v ~T0 @X0 0 ef ]
-"107
+"109
 [v _start_bsoc `(v ~T0 @X0 0 ef ]
 "162 /opt/microchip/xc8/v2.46/pic/include/c99/math.h
 [v _fabsf `(f ~T0 @X0 0 ef1`f ]

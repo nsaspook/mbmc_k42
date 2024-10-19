@@ -142,7 +142,7 @@ void gti_cmds(void)
 	static uint8_t utc_value[DEF_TIME_SIZE] = {0};
 	static bool utc = false;
 	uint8_t vcmd_size = sizeof(value);
-	uint8_t utc_vcmd_size = DEF_TIME_SIZE-1;
+	uint8_t utc_vcmd_size = DEF_TIME_SIZE - 1;
 
 	if (Sready()) {
 		mqtt_r = Sread();
@@ -181,7 +181,7 @@ void gti_cmds(void)
 			if (vi >= utc_vcmd_size) {
 				vi = 0;
 				utc_value[10] = 0;
-				utc_cmd_value = (time_t) atol((char *)utc_value);
+				utc_cmd_value = (time_t) atol((char *) utc_value);
 
 				if (utc_cmd_value < DEF_TIME) {
 					utc_cmd_value = DEF_TIME;
@@ -300,6 +300,50 @@ void calc_bsoc(void)
 	/*
 	 * Battery data calculations
 	 */
+#ifdef FM80_FIXUPS
+	C.dynamic_ah += (C.c_pv / SSLICE); // Ah
+	C.dynamic_ah_daily += (C.c_pv / SSLICE); // Ah
+	if (C.dynamic_ah > (C.bank_ah))
+		C.dynamic_ah = C.bank_ah;
+	if (C.dynamic_ah < 0.1)
+		C.dynamic_ah = 0.1;
+
+	if (C.c_pv > 0.01)
+		adj = C.hist[0].cef;
+	if (C.c_pv < 0.01)
+		adj = C.hist[0].peukert;
+	C.dynamic_ah += ((C.c_pv * adj) / SSLICE); // Ah
+
+	C.dynamic_ah_adj = C.dynamic_ah; // need to add peukert factor here
+	C.dynamic_ah_adj_daily = C.dynamic_ah_daily; // need to add peukert factor here
+	if (C.dynamic_ah_adj > (C.bank_ah))
+		C.dynamic_ah_adj = C.bank_ah;
+	if (C.dynamic_ah_adj < 0.1)
+		C.dynamic_ah_adj = 0.1;
+
+
+	C.pv_ah += (C.c_mppt / SSLICE);
+	C.pvkw += (C.p_pv / SSLICE);
+	C.invkw += (C.p_inverter / SSLICE);
+	C.loadkw += (C.p_load / SSLICE);
+	if (C.p_bat > 0.0)
+		C.bkwi += (C.p_bat / SSLICE);
+	if (C.p_bat < 0.0)
+		C.bkwo += fabs(C.p_bat / SSLICE);
+
+	C.soc = ((uint16_t) ((C.dynamic_ah_adj / C.bank_ah)*100.0) + 1);
+	if (C.soc > 100)
+		C.soc = 100;
+
+	if (C.c_pv < 0.0) {
+		C.runtime = (uint16_t) (-(C.dynamic_ah_adj / C.c_pv));
+	} else {
+		C.runtime = 99;
+	}
+	if (C.runtime > 99) {
+		C.runtime = 99;
+	}
+#else
 	C.dynamic_ah += (C.c_bat / SSLICE); // Ah
 	C.dynamic_ah_daily += (C.c_bat / SSLICE); // Ah
 	if (C.dynamic_ah > (C.bank_ah))
@@ -339,8 +383,10 @@ void calc_bsoc(void)
 	} else {
 		C.runtime = 99;
 	}
-	if (C.runtime > 99)
+	if (C.runtime > 99) {
 		C.runtime = 99;
+	}
+#endif
 
 	/*
 	 * check event flags
@@ -370,9 +416,15 @@ void calc_bsoc(void)
 			/*
 			 * format data to JSON
 			 */
+#ifdef FM80_FIXUPS
 			C.p_pv = C.v_pv * C.c_bat; // power from FM80 AC
 			C.p_bat = C.v_bat * C.c_mppt; // Power to/from BATTERY
 			C.p_mppt = C.v_bat * C.c_pv; // Power from Charge Controller
+#else
+			C.p_pv = C.v_pv * C.c_pv; // power from FM80 AC
+			C.p_bat = C.v_bat * C.c_bat; // Power to/from BATTERY
+			C.p_mppt = C.v_bat * C.c_mppt; // Power from Charge Controller
+#endif
 			snprintf((char *) log_ptr, max_port_data - 1, "{\r\n \"DLname\": \"%s MBMC K42\",\r\n \"DLsequence\": %lu,\r\n \"DLccmode\": %u,\r\n \"DLgti\": %u,\r\n \"DLv_pv\": %7.2f,\r\n \"DLv_bat\": %7.2f,\r\n \"DLc_pv\": %7.2f,\r\n \"DLc_mppt\": %7.2f,\r\n \"DLc_bat\": %7.2f,\r\n \"DLp_pv\": %7.2f,\r\n \"DLp_mppt\": %7.2f,\r\n \"DLp_bat\": %7.2f,\r\n \"DLah_bat\": %7.2f,\r\n \"DLbuild_date\": \"%s\",\r\n \"DLbuild_time\": \"%s\"\r\n}\r\n",
 				VER, seq_log++, V.cc_state, gti_power, C.v_pv, C.v_bat, C.c_pv, C.c_mppt, C.c_bat, C.p_pv, C.p_mppt, C.p_bat, C.dynamic_ah, build_date, build_time);
 

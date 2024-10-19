@@ -43,6 +43,8 @@
 #include "hid.h"
 #include "mconfig.h"
 
+#define FM80_FIXUPS	// correct current variables
+
 #define	MAXRUNTIME	95.0f
 #define MINRUNTIME	0.05f
 #define Perk_ADJ_FL	1.10f	// If the peukert_adj is below this, adjust the Ah out by this Ah adjustment factor
