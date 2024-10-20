@@ -1701,7 +1701,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 :U ..
 -> -> 3965 `i `s
 -> -> 3995 `i `s
--> -> 3934 `i `s
+-> -> 3938 `i `s
 ..
 :U ..
 -> .0.0361010 `f
@@ -2579,7 +2579,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "504
 [e = *U + &U . _R 3 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _R 3 `ui `ux -> -> 3995 `i `s ]
 "505
-[e = *U + &U . _R 3 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _R 3 `ui `ux -> -> 3934 `i `s ]
+[e = *U + &U . _R 3 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _R 3 `ui `ux -> -> 3938 `i `s ]
 "506
 }
 [e :U 2400 ]
