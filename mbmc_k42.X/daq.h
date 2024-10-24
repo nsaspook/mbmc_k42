@@ -124,7 +124,7 @@ extern struct V_data V;
 #endif
 #define C_OFFSET100B	3934 // BATTERY sensor adc zero Amp counts, line 0
 #define C_OFFSET100	3995 // PV sensor adc zero Amp counts,      line 1
-#define C_OFFSET100M	3938 // MPPT sensor adc zero Amp counts,      line 2, Orig value 3934, adjust this for DL bat current zero
+#define C_OFFSET100M	3939 // MPPT sensor adc zero Amp counts,      line 2, Orig value 3934, adjust this for DL bat current zero
 
 /*
  * sanity check values for current calibration routines

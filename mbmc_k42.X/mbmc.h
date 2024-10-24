@@ -93,6 +93,7 @@ typedef struct C_data { // real calculated variables
 typedef enum {
 	WIDE_ZERO = 1,
 	NO_NEG = 2,
+	WIDE_NEG = 4,
 	SKIP = 8,
 } FIX_CODES;
 
