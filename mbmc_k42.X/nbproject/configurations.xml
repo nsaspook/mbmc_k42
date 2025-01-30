@@ -108,7 +108,7 @@
         <platform>2</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC18F-K_DFP" vendor="Microchip" version="1.13.292"/>
+        <pack name="PIC18F-K_DFP" vendor="Microchip" version="1.14.301"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

@@ -163,7 +163,7 @@ void gti_cmds(void)
 		case '9':
 			if (!utc) { // process power cmds
 				if (vi < vcmd_size) {
-					value[vi++] = mqtt_r - 48;
+					value[vi++] = mqtt_r - 48; // ascii '0'
 				} else {
 				}
 			} else { // process UTC time from host cmds

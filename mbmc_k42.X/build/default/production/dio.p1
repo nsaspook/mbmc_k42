@@ -11,7 +11,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "45
 [c E17008 0 1 2 3 4 5 6 7 .. ]
 [n E17008 . S0 S1 SSELECT SENTER SCALIB S5 S6 SNULL  ]
-"47192 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"47192 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.14.301/xc8/pic/include/proc/pic18f57k42.h
 [s S2144 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S2144 . LATF0 LATF1 LATF2 LATF3 LATF4 LATF5 LATF6 LATF7 ]
 "47202
@@ -38,7 +38,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8 /opt/microchip/xc8/v2.46/pic/include/builtins.h
 [v ___nop `(v ~T0 @X0 0 ef ]
 [p i ___nop ]
-"47932 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"47932 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.14.301/xc8/pic/include/proc/pic18f57k42.h
 [s S2169 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S2169 . RF0 RF1 RF2 RF3 RF4 RF5 RF6 RF7 ]
 "47931
@@ -65,7 +65,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F16438 `(v ~T0 @X0 0 tf ]
 "552 ./mcc_generated_files/ext_int.h
 [v _INT1_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F16438 ]
-"250 /ldrv/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
+"250 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.14.301/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "339
 [; <" WREG_CSHAD equ 03881h ;# ">
