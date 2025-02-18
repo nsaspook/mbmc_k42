@@ -59,9 +59,9 @@
 void DMA2_Initialize(void)
 {
     //Source Address : uart1_dma_buf
-    DMA2SSA = &uart1_dma_buf;
+    DMA2SSA = (volatile __uint24) &uart1_dma_buf;
     //Destination Address : &U1TXB
-    DMA2DSA = &U1TXB;
+    DMA2DSA = (volatile unsigned short) &U1TXB;
     //DMODE unchanged; DSTP not cleared; SMR GPR; SMODE incremented; SSTP cleared; 
     DMA2CON1 = 0x03;
     //Source Message Size : 1

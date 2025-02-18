@@ -8,10 +8,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n E17601 . UI_STATE_INIT UI_STATE_HOST UI_STATE_DEBUG UI_STATE_LOG UI_STATE_MON UI_STATE_ERROR  ]
 [c E17582 0 1 2 3 .. ]
 [n E17582 . DIS_STR DIS_HELP DIS_ERR DIS_CLEAR  ]
-"200 ./vconfig.h
+"201 ./vconfig.h
 [s S2286 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 :1 `uc 1 `E17582 1 `E17582 1 `us 1 `us 1 ]
 [n S2286 terminal_type mesgid TID mcode mparm cmdlen log_seq host_display_ack info help_temp ceid log_num ]
-"235
+"236
 [s S2287 `E17601 1 `uc -> 64 `i `uc -> 64 `i `uc -> 16 `i `Vul 1 `Vul 1 `Vul 1 `Vc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `E17601 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :2 `uc 1 :1 `uc 1 `S2286 1 `Vuc 1 `Vuc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `Va 1 `Va 1 `Va 1 `Va 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 ]
 [n S2287 V_data ui_state buf info rbuf ticks blight ac_time testing sys_info ac_on ac_off time_info get_time_text error abort msg_error msg_ret alarm float_ticks boost_ticks wdt_ticks ui_sw r_checksum t_checksum checksum_error mode_pwm sequences all_errors set_sequ debug help stack help_id screen response ticker cc_state flipper calib enter sensor_set fixup cc_active system_stable blight_off in_float in_boost lowint_count timerint_count tx_count rx_count adc_count spi_count switch_count ]
 "103 ./bsoc.h
@@ -20,7 +20,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _diversion_pwm_set `(v ~T0 @X0 0 ef1`us ]
 "115 ./bsoc.h
 [v _cc_state `(uc ~T0 @X0 0 ef1`f ]
-"272 ./vconfig.h
+"273 ./vconfig.h
 [s S2289 `l 1 `l 1 `ul 1 `ul 1 `ul 1 `f 1 `f 1 `f 1 `f 1 `f 1 `s -> 13 `i `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `uc 1 ]
 [n S2289 hist_type pv_eff tot_eff ttg_t updates pclock peukert cef peukert_adj cef_calc cef_save h rate udod bsoc bound_rate bound_factor samplei sampleo ah drate esr rest_rate rest_factor esrp version ]
 "78 ./mbmc.h
@@ -37,7 +37,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _UART1_is_rx_ready `(a ~T0 @X0 0 ef ]
 "355
 [v _UART1_Read `(uc ~T0 @X0 0 ef ]
-"24 /opt/microchip/xc8/v2.46/pic/include/c99/stdlib.h
+"24 /opt/microchip/xc8/v3.00/pic/include/c99/stdlib.h
 [v _atol `(l ~T0 @X0 0 ef1`*Cuc ]
 "118 ./mbmc.h
 [v _set_time `(v ~T0 @X0 0 ef1`Cul ]
@@ -52,7 +52,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S2170 . . . ]
 "48008
 [v _INTCON0bits `VS2170 ~T0 @X0 0 e@16338 ]
-"162 /opt/microchip/xc8/v2.46/pic/include/c99/math.h
+"162 /opt/microchip/xc8/v3.00/pic/include/c99/math.h
 [v _fabsf `(f ~T0 @X0 0 ef1`f ]
 "79 ./eadog.h
 [v _port_data_dma_ptr `(*uc ~T0 @X0 0 ef ]
@@ -66,7 +66,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S2292 H_data hid_display h_state wait_select select_p wait_enter enter_p wait_calib calib_p sequence ]
 "104 ./bsoc.h
 [v _H `S2292 ~T0 @X0 0 e ]
-"123 /opt/microchip/xc8/v2.46/pic/include/c99/stdio.h
+"123 /opt/microchip/xc8/v3.00/pic/include/c99/stdio.h
 [v _snprintf `(i ~T0 @X0 0 e2v`*uc`ui`*Cuc ]
 "105 ./bsoc.h
 [v _build_date `*Cuc ~T0 @X0 0 e ]
@@ -89,7 +89,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _LATEbits `VS2140 ~T0 @X0 0 e@16318 ]
 "78 ./eadog.h
 [v _send_port_data_dma `(v ~T0 @X0 0 ef1`us ]
-"54 /opt/microchip/xc8/v2.46/pic/include/c99/string.h
+"54 /opt/microchip/xc8/v3.00/pic/include/c99/string.h
 [v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
 "380 ./mcc_generated_files/uart2.h
 [v _UART2_Write `(v ~T0 @X0 0 ef1`uc ]
@@ -115,7 +115,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [c E18330 0 1 2 3 .. ]
 [n E18330 . R_CYCLE R_TOTAL R_PV R_BAT  ]
 [v F16674 `(f ~T0 @X0 1 tf2`f`f ]
-"327 /opt/microchip/xc8/v2.46/pic/include/c99/math.h
+"327 /opt/microchip/xc8/v3.00/pic/include/c99/math.h
 [v _powf `JF16674 ~T0 @X0 0 e ]
 "108 ./mbmc.h
 [v _set_load_relay_one `(v ~T0 @X0 0 ef1`Ca ]
@@ -3199,5 +3199,5 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [p f _snprintf 8758288 ]
 [a 1C 68 85 77 80 76 79 65 68 0 ]
-[a 3C 50 46 49 57 0 ]
+[a 3C 50 46 50 48 0 ]
 [a 2C 123 13 10 32 34 68 76 110 97 109 101 34 58 32 34 37 115 32 77 66 77 67 32 75 52 50 34 44 13 10 32 34 68 76 115 101 113 117 101 110 99 101 34 58 32 37 108 117 44 13 10 32 34 68 76 99 99 109 111 100 101 34 58 32 37 117 44 13 10 32 34 68 76 103 116 105 34 58 32 37 117 44 13 10 32 34 68 76 118 95 112 118 34 58 32 37 55 46 50 102 44 13 10 32 34 68 76 118 95 98 97 116 34 58 32 37 55 46 50 102 44 13 10 32 34 68 76 99 95 112 118 34 58 32 37 55 46 50 102 44 13 10 32 34 68 76 99 95 109 112 112 116 34 58 32 37 55 46 50 102 44 13 10 32 34 68 76 99 95 98 97 116 34 58 32 37 55 46 50 102 44 13 10 32 34 68 76 112 95 112 118 34 58 32 37 55 46 50 102 44 13 10 32 34 68 76 112 95 109 112 112 116 34 58 32 37 55 46 50 102 44 13 10 32 34 68 76 112 95 98 97 116 34 58 32 37 55 46 50 102 44 13 10 32 34 68 76 97 104 95 98 97 116 34 58 32 37 55 46 50 102 44 13 10 32 34 68 76 98 117 105 108 100 95 100 97 116 101 34 58 32 34 37 115 34 44 13 10 32 34 68 76 98 117 105 108 100 95 116 105 109 101 34 58 32 34 37 115 34 13 10 125 13 10 0 ]

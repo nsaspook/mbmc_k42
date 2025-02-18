@@ -287,7 +287,7 @@ void load_hist_data(void)
 	stop_bsoc();
 	esr_rescale = (int16_t) (C.esr * 1000.0);
 	C.hist[0].updates++;
-	C.hist[0].h[12] += C.pvkw;
+	C.hist[0].h[12] += (volatile int16_t) C.pvkw;
 	if (esr_rescale > C.hist[0].h[10])
 		C.hist[0].h[10] = esr_rescale;
 	if (esr_rescale < C.hist[0].h[9])

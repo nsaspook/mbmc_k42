@@ -63,9 +63,9 @@ void (*DMA1_ORI_InterruptHandler)(void);
 void DMA1_Initialize(void)
 {
     //Source Address : lcd_dma_buf
-    DMA1SSA = &lcd_dma_buf;
+    DMA1SSA = (volatile __uint24) &lcd_dma_buf;
     //Destination Address : &SPI1TXB
-    DMA1DSA = &SPI1TXB;
+    DMA1DSA = (volatile unsigned short) &SPI1TXB;
     //DMODE unchanged; DSTP not cleared; SMR GPR; SMODE incremented; SSTP cleared; 
     DMA1CON1 = 0x03;
     //Source Message Size : 1
