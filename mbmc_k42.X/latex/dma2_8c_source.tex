@@ -1,0 +1,146 @@
+\doxysection{dma2.\+c}
+\hypertarget{dma2_8c_source}{}\label{dma2_8c_source}\index{mcc\_generated\_files/dma2.c@{mcc\_generated\_files/dma2.c}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00024}00024\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00025}00025\ \textcolor{comment}{\ \ \ \ (c)\ 2018\ Microchip\ Technology\ Inc.\ and\ its\ subsidiaries.\ }}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00026}00026\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00027}00027\ \textcolor{comment}{\ \ \ \ Subject\ to\ your\ compliance\ with\ these\ terms,\ you\ may\ use\ Microchip\ software\ and\ any\ }}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00028}00028\ \textcolor{comment}{\ \ \ \ derivatives\ exclusively\ with\ Microchip\ products.\ It\ is\ your\ responsibility\ to\ comply\ with\ third\ party\ }}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00029}00029\ \textcolor{comment}{\ \ \ \ license\ terms\ applicable\ to\ your\ use\ of\ third\ party\ software\ (including\ open\ source\ software)\ that\ }}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00030}00030\ \textcolor{comment}{\ \ \ \ may\ accompany\ Microchip\ software.}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00031}00031\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00032}00032\ \textcolor{comment}{\ \ \ \ THIS\ SOFTWARE\ IS\ SUPPLIED\ BY\ MICROCHIP\ "{}AS\ IS"{}.\ NO\ WARRANTIES,\ WHETHER\ }}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00033}00033\ \textcolor{comment}{\ \ \ \ EXPRESS,\ IMPLIED\ OR\ STATUTORY,\ APPLY\ TO\ THIS\ SOFTWARE,\ INCLUDING\ ANY\ }}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00034}00034\ \textcolor{comment}{\ \ \ \ IMPLIED\ WARRANTIES\ OF\ NON-\/INFRINGEMENT,\ MERCHANTABILITY,\ AND\ FITNESS\ }}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00035}00035\ \textcolor{comment}{\ \ \ \ FOR\ A\ PARTICULAR\ PURPOSE.}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00036}00036\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00037}00037\ \textcolor{comment}{\ \ \ \ IN\ NO\ EVENT\ WILL\ MICROCHIP\ BE\ LIABLE\ FOR\ ANY\ INDIRECT,\ SPECIAL,\ PUNITIVE,\ }}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00038}00038\ \textcolor{comment}{\ \ \ \ INCIDENTAL\ OR\ CONSEQUENTIAL\ LOSS,\ DAMAGE,\ COST\ OR\ EXPENSE\ OF\ ANY\ KIND\ }}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00039}00039\ \textcolor{comment}{\ \ \ \ WHATSOEVER\ RELATED\ TO\ THE\ SOFTWARE,\ HOWEVER\ CAUSED,\ EVEN\ IF\ MICROCHIP\ }}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00040}00040\ \textcolor{comment}{\ \ \ \ HAS\ BEEN\ ADVISED\ OF\ THE\ POSSIBILITY\ OR\ THE\ DAMAGES\ ARE\ FORESEEABLE.\ TO\ }}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00041}00041\ \textcolor{comment}{\ \ \ \ THE\ FULLEST\ EXTENT\ ALLOWED\ BY\ LAW,\ MICROCHIP'S\ TOTAL\ LIABILITY\ ON\ ALL\ }}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00042}00042\ \textcolor{comment}{\ \ \ \ CLAIMS\ IN\ ANY\ WAY\ RELATED\ TO\ THIS\ SOFTWARE\ WILL\ NOT\ EXCEED\ THE\ AMOUNT\ }}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00043}00043\ \textcolor{comment}{\ \ \ \ OF\ FEES,\ IF\ ANY,\ THAT\ YOU\ HAVE\ PAID\ DIRECTLY\ TO\ MICROCHIP\ FOR\ THIS\ }}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00044}00044\ \textcolor{comment}{\ \ \ \ SOFTWARE.}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00045}00045\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00051}00051\ \textcolor{preprocessor}{\#include\ <xc.h>}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00052}00052\ \textcolor{preprocessor}{\#include\ "{}dma2.h"{}}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00059}00059\ \textcolor{keywordtype}{void}\ DMA2\_Initialize(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00060}00060\ \{}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00061}00061\ \ \ \ \ \textcolor{comment}{//Source\ Address\ :\ uart1\_dma\_buf}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00062}00062\ \ \ \ \ DMA2SSA\ =\ (\textcolor{keyword}{volatile}\ \_\_uint24)\ \&uart1\_dma\_buf;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00063}00063\ \ \ \ \ \textcolor{comment}{//Destination\ Address\ :\ \&U1TXB}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00064}00064\ \ \ \ \ DMA2DSA\ =\ (\textcolor{keyword}{volatile}\ \textcolor{keywordtype}{unsigned}\ short)\ \&U1TXB;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00065}00065\ \ \ \ \ \textcolor{comment}{//DMODE\ unchanged;\ DSTP\ not\ cleared;\ SMR\ GPR;\ SMODE\ incremented;\ SSTP\ cleared;\ }}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00066}00066\ \ \ \ \ DMA2CON1\ =\ 0x03;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00067}00067\ \ \ \ \ \textcolor{comment}{//Source\ Message\ Size\ :\ 1}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00068}00068\ \ \ \ \ DMA2SSZ\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00069}00069\ \ \ \ \ \textcolor{comment}{//Destination\ Message\ Size\ :\ 1}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00070}00070\ \ \ \ \ DMA2DSZ\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00071}00071\ \ \ \ \ \textcolor{comment}{//Start\ Trigger\ :\ SIRQ\ U1TX;\ }}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00072}00072\ \ \ \ \ DMA2SIRQ\ =\ 0x1C;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00073}00073\ \ \ \ \ \textcolor{comment}{//Abort\ Trigger\ :\ AIRQ\ None;\ }}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00074}00074\ \ \ \ \ DMA2AIRQ\ =\ 0x00;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00075}00075\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00076}00076\ \ \ \ \ \textcolor{comment}{//\ Clear\ Destination\ Count\ Interrupt\ Flag\ bit}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00077}00077\ \ \ \ \ PIR5bits.DMA2DCNTIF\ =\ 0;\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00078}00078\ \ \ \ \ \textcolor{comment}{//\ Clear\ Source\ Count\ Interrupt\ Flag\ bit}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00079}00079\ \ \ \ \ PIR5bits.DMA2SCNTIF\ =\ 0;\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00080}00080\ \ \ \ \ \textcolor{comment}{//\ Clear\ Abort\ Interrupt\ Flag\ bit}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00081}00081\ \ \ \ \ PIR5bits.DMA2AIF\ =\ 0;\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00082}00082\ \ \ \ \ \textcolor{comment}{//\ Clear\ Overrun\ Interrupt\ Flag\ bit}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00083}00083\ \ \ \ \ PIR5bits.DMA2ORIF\ =0;\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00084}00084\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00085}00085\ \ \ \ \ PIE5bits.DMA2DCNTIE\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00086}00086\ \ \ \ \ PIE5bits.DMA2SCNTIE\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00087}00087\ \ \ \ \ PIE5bits.DMA2AIE\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00088}00088\ \ \ \ \ PIE5bits.DMA2ORIE\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00089}00089\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00090}00090\ \ \ \ \ \textcolor{comment}{//EN\ enabled;\ SIRQEN\ enabled;\ DGO\ not\ in\ progress;\ AIRQEN\ disabled;\ }}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00091}00091\ \ \ \ \ DMA2CON0\ =\ 0xC0;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00092}00092\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00093}00093\ \}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00095}00095\ \textcolor{keywordtype}{void}\ DMA2\_SelectSourceRegion(uint8\_t\ region)}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00096}00096\ \{}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00097}00097\ \ \ \ \ DMA2CON1bits.SMR\ \ =\ region;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00098}00098\ \}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00100}00100\ \textcolor{keywordtype}{void}\ DMA2\_SetSourceAddress(uint24\_t\ address)}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00101}00101\ \{}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00102}00102\ \ \ \ \ DMA2SSA\ =\ address;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00103}00103\ \}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00105}00105\ \textcolor{keywordtype}{void}\ DMA2\_SetDestinationAddress(uint16\_t\ address)}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00106}00106\ \{}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00107}00107\ \ \ \ \ DMA2DSA\ =\ address;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00108}00108\ \}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00110}00110\ \textcolor{keywordtype}{void}\ DMA2\_SetSourceSize(uint16\_t\ size)}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00111}00111\ \{}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00112}00112\ \ \ \ \ DMA2SSZ=\ size;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00113}00113\ \}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00115}00115\ \textcolor{keywordtype}{void}\ DMA2\_SetDestinationSize(uint16\_t\ size)}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00116}00116\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00117}00117\ \ \ \ \ DMA2DSZ=\ size;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00118}00118\ \}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00120}00120\ uint24\_t\ DMA2\_GetSourcePointer(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00121}00121\ \{}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00122}00122\ \ \ \ \ \textcolor{keywordflow}{return}\ DMA2SPTR;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00123}00123\ \}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00125}00125\ uint16\_t\ DMA2\_GetDestinationPointer(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00126}00126\ \{}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00127}00127\ \ \ \ \ \textcolor{keywordflow}{return}\ DMA2DPTR;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00128}00128\ \}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00130}00130\ \textcolor{keywordtype}{void}\ DMA2\_SetStartTrigger(uint8\_t\ sirq)}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00131}00131\ \{}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00132}00132\ \ \ \ \ DMA2SIRQ\ =\ sirq;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00133}00133\ \}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00135}00135\ \textcolor{keywordtype}{void}\ DMA2\_SetAbortTrigger(uint8\_t\ airq)}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00136}00136\ \{}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00137}00137\ \ \ \ \ DMA2AIRQ\ =\ airq;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00138}00138\ \}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00140}00140\ \textcolor{keywordtype}{void}\ DMA2\_StartTransfer(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00141}00141\ \{}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00142}00142\ \ \ \ \ DMA2CON0bits.DGO\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00143}00143\ \}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00145}00145\ \textcolor{keywordtype}{void}\ DMA2\_StartTransferWithTrigger(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00146}00146\ \{}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00147}00147\ \ \ \ \ DMA2CON0bits.SIRQEN\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00148}00148\ \}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00150}00150\ \textcolor{keywordtype}{void}\ DMA2\_StopTransfer(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00151}00151\ \{}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00152}00152\ \ \ \ \ DMA2CON0bits.SIRQEN\ =\ 0;\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00153}00153\ \ \ \ \ DMA2CON0bits.DGO\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00154}00154\ \}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00156}00156\ \textcolor{keywordtype}{void}\ DMA2\_SetDMAPriority(uint8\_t\ priority)}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00157}00157\ \{}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00158}00158\ \ \ \ \ \textcolor{comment}{//\ This\ function\ is\ dependant\ on\ the\ PR1WAY\ CONFIG\ bit}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00159}00159\ \ \ \ \ PRLOCK\ =\ 0x55;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00160}00160\ \ \ \ \ PRLOCK\ =\ 0xAA;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00161}00161\ \ \ \ \ PRLOCKbits.PRLOCKED\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00162}00162\ \ \ \ \ DMA2PR\ =\ priority;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00163}00163\ \ \ \ \ PRLOCK\ =\ 0x55;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00164}00164\ \ \ \ \ PRLOCK\ =\ 0xAA;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00165}00165\ \ \ \ \ PRLOCKbits.PRLOCKED\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00166}00166\ \}}
+\DoxyCodeLine{\Hypertarget{dma2_8c_source_l00167}00167\ }
+
+\end{DoxyCode}

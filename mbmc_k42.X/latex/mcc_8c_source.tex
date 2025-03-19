@@ -1,0 +1,104 @@
+\doxysection{mcc.\+c}
+\hypertarget{mcc_8c_source}{}\label{mcc_8c_source}\index{mcc\_generated\_files/mcc.c@{mcc\_generated\_files/mcc.c}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00024}00024\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00025}00025\ \textcolor{comment}{\ \ \ \ (c)\ 2018\ Microchip\ Technology\ Inc.\ and\ its\ subsidiaries.\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00026}00026\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00027}00027\ \textcolor{comment}{\ \ \ \ Subject\ to\ your\ compliance\ with\ these\ terms,\ you\ may\ use\ Microchip\ software\ and\ any\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00028}00028\ \textcolor{comment}{\ \ \ \ derivatives\ exclusively\ with\ Microchip\ products.\ It\ is\ your\ responsibility\ to\ comply\ with\ third\ party\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00029}00029\ \textcolor{comment}{\ \ \ \ license\ terms\ applicable\ to\ your\ use\ of\ third\ party\ software\ (including\ open\ source\ software)\ that\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00030}00030\ \textcolor{comment}{\ \ \ \ may\ accompany\ Microchip\ software.}}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00031}00031\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00032}00032\ \textcolor{comment}{\ \ \ \ THIS\ SOFTWARE\ IS\ SUPPLIED\ BY\ MICROCHIP\ "{}AS\ IS"{}.\ NO\ WARRANTIES,\ WHETHER\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00033}00033\ \textcolor{comment}{\ \ \ \ EXPRESS,\ IMPLIED\ OR\ STATUTORY,\ APPLY\ TO\ THIS\ SOFTWARE,\ INCLUDING\ ANY\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00034}00034\ \textcolor{comment}{\ \ \ \ IMPLIED\ WARRANTIES\ OF\ NON-\/INFRINGEMENT,\ MERCHANTABILITY,\ AND\ FITNESS\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00035}00035\ \textcolor{comment}{\ \ \ \ FOR\ A\ PARTICULAR\ PURPOSE.}}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00036}00036\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00037}00037\ \textcolor{comment}{\ \ \ \ IN\ NO\ EVENT\ WILL\ MICROCHIP\ BE\ LIABLE\ FOR\ ANY\ INDIRECT,\ SPECIAL,\ PUNITIVE,\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00038}00038\ \textcolor{comment}{\ \ \ \ INCIDENTAL\ OR\ CONSEQUENTIAL\ LOSS,\ DAMAGE,\ COST\ OR\ EXPENSE\ OF\ ANY\ KIND\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00039}00039\ \textcolor{comment}{\ \ \ \ WHATSOEVER\ RELATED\ TO\ THE\ SOFTWARE,\ HOWEVER\ CAUSED,\ EVEN\ IF\ MICROCHIP\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00040}00040\ \textcolor{comment}{\ \ \ \ HAS\ BEEN\ ADVISED\ OF\ THE\ POSSIBILITY\ OR\ THE\ DAMAGES\ ARE\ FORESEEABLE.\ TO\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00041}00041\ \textcolor{comment}{\ \ \ \ THE\ FULLEST\ EXTENT\ ALLOWED\ BY\ LAW,\ MICROCHIP'S\ TOTAL\ LIABILITY\ ON\ ALL\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00042}00042\ \textcolor{comment}{\ \ \ \ CLAIMS\ IN\ ANY\ WAY\ RELATED\ TO\ THIS\ SOFTWARE\ WILL\ NOT\ EXCEED\ THE\ AMOUNT\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00043}00043\ \textcolor{comment}{\ \ \ \ OF\ FEES,\ IF\ ANY,\ THAT\ YOU\ HAVE\ PAID\ DIRECTLY\ TO\ MICROCHIP\ FOR\ THIS\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00044}00044\ \textcolor{comment}{\ \ \ \ SOFTWARE.}}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00045}00045\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00047}00047\ \textcolor{preprocessor}{\#include\ "{}mcc.h"{}}}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00050}00050\ \textcolor{keywordtype}{void}\ SYSTEM\_Initialize(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00051}00051\ \{}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00052}00052\ \ \ \ \ INTERRUPT\_Initialize();}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00053}00053\ \ \ \ \ PMD\_Initialize();}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00054}00054\ \ \ \ \ PIN\_MANAGER\_Initialize();}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00055}00055\ \ \ \ \ OSCILLATOR\_Initialize();}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00056}00056\ \ \ \ \ FVR\_Initialize();}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00057}00057\ \ \ \ \ CRC\_Initialize();}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00058}00058\ \ \ \ \ DMA2\_Initialize();}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00059}00059\ \ \ \ \ ADCC\_Initialize();}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00060}00060\ \ \ \ \ DMA1\_Initialize();}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00061}00061\ \ \ \ \ TMR2\_Initialize();}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00062}00062\ \ \ \ \ PWM8\_Initialize();}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00063}00063\ \ \ \ \ EXT\_INT\_Initialize();}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00064}00064\ \ \ \ \ TMR6\_Initialize();}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00065}00065\ \ \ \ \ TMR3\_Initialize();}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00066}00066\ \ \ \ \ TMR5\_Initialize();}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00067}00067\ \ \ \ \ UART1\_Initialize();}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00068}00068\ \ \ \ \ UART2\_Initialize();}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00069}00069\ \ \ \ \ SPI1\_Initialize();}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00070}00070\ \ \ \ \ CLKREF\_Initialize();}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00071}00071\ \ \ \ \ SystemArbiter\_Initialize();}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00072}00072\ \}}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00074}00074\ \textcolor{keywordtype}{void}\ OSCILLATOR\_Initialize(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00075}00075\ \{}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00076}00076\ \ \ \ \ \textcolor{comment}{//\ NOSC\ EXTOSC\ \ \ with\ 4x\ PLL;\ NDIV\ 1;\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00077}00077\ \ \ \ \ OSCCON1\ =\ 0x20;}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00078}00078\ \ \ \ \ \textcolor{comment}{//\ CSWHOLD\ may\ proceed;\ SOSCPWR\ Low\ power;\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00079}00079\ \ \ \ \ OSCCON3\ =\ 0x00;}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00080}00080\ \ \ \ \ \textcolor{comment}{//\ MFOEN\ disabled;\ LFOEN\ disabled;\ ADOEN\ disabled;\ SOSCEN\ disabled;\ EXTOEN\ disabled;\ HFOEN\ disabled;\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00081}00081\ \ \ \ \ OSCEN\ =\ 0x00;}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00082}00082\ \ \ \ \ \textcolor{comment}{//\ HFFRQ\ 4\_MHz;\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00083}00083\ \ \ \ \ OSCFRQ\ =\ 0x02;}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00084}00084\ \ \ \ \ \textcolor{comment}{//\ TUN\ 0;\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00085}00085\ \ \ \ \ OSCTUNE\ =\ 0x00;}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00086}00086\ \ \ \ \ \textcolor{comment}{//\ Wait\ for\ PLL\ to\ stabilize}}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00087}00087\ \ \ \ \ \textcolor{keywordflow}{while}(PLLR\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00088}00088\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00089}00089\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00090}00090\ \}}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00092}00092\ \textcolor{keywordtype}{void}\ PMD\_Initialize(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00093}00093\ \{}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00094}00094\ \ \ \ \ \textcolor{comment}{//\ CLKRMD\ CLKR\ enabled;\ SYSCMD\ SYSCLK\ enabled;\ SCANMD\ SCANNER\ enabled;\ FVRMD\ FVR\ enabled;\ IOCMD\ IOC\ enabled;\ CRCMD\ CRC\ enabled;\ HLVDMD\ HLVD\ enabled;\ NVMMD\ NVM\ enabled;\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00095}00095\ \ \ \ \ PMD0\ =\ 0x00;}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00096}00096\ \ \ \ \ \textcolor{comment}{//\ NCO1MD\ DDS(NCO1)\ enabled;\ TMR0MD\ TMR0\ enabled;\ TMR1MD\ TMR1\ enabled;\ TMR4MD\ TMR4\ enabled;\ TMR5MD\ TMR5\ enabled;\ TMR2MD\ TMR2\ enabled;\ TMR3MD\ TMR3\ enabled;\ TMR6MD\ TMR6\ enabled;\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00097}00097\ \ \ \ \ PMD1\ =\ 0x00;}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00098}00098\ \ \ \ \ \textcolor{comment}{//\ ZCDMD\ ZCD\ enabled;\ DACMD\ DAC\ enabled;\ CMP1MD\ CMP1\ enabled;\ ADCMD\ ADC\ enabled;\ CMP2MD\ CMP2\ enabled;\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00099}00099\ \ \ \ \ PMD2\ =\ 0x00;}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00100}00100\ \ \ \ \ \textcolor{comment}{//\ CCP2MD\ CCP2\ enabled;\ CCP1MD\ CCP1\ enabled;\ CCP4MD\ CCP4\ enabled;\ CCP3MD\ CCP3\ enabled;\ PWM6MD\ PWM6\ enabled;\ PWM5MD\ PWM5\ enabled;\ PWM8MD\ PWM8\ enabled;\ PWM7MD\ PWM7\ enabled;\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00101}00101\ \ \ \ \ PMD3\ =\ 0x00;}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00102}00102\ \ \ \ \ \textcolor{comment}{//\ CWG3MD\ CWG3\ enabled;\ CWG2MD\ CWG2\ enabled;\ CWG1MD\ CWG1\ enabled;\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00103}00103\ \ \ \ \ PMD4\ =\ 0x00;}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00104}00104\ \ \ \ \ \textcolor{comment}{//\ U2MD\ UART2\ enabled;\ U1MD\ UART1\ enabled;\ SPI1MD\ SPI1\ enabled;\ I2C2MD\ I2C2\ enabled;\ I2C1MD\ I2C1\ enabled;\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00105}00105\ \ \ \ \ PMD5\ =\ 0x00;}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00106}00106\ \ \ \ \ \textcolor{comment}{//\ DSMMD\ DSM1\ enabled;\ CLC3MD\ CLC3\ enabled;\ CLC4MD\ CLC4\ enabled;\ SMT1MD\ SMT1\ enabled;\ CLC1MD\ CLC1\ enabled;\ CLC2MD\ CLC2\ enabled;\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00107}00107\ \ \ \ \ PMD6\ =\ 0x00;}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00108}00108\ \ \ \ \ \textcolor{comment}{//\ DMA1MD\ DMA1\ enabled;\ DMA2MD\ DMA2\ enabled;\ }}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00109}00109\ \ \ \ \ PMD7\ =\ 0x00;}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00110}00110\ \}}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00113}00113\ \textcolor{keywordtype}{void}\ SystemArbiter\_Initialize(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00114}00114\ \{}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00115}00115\ \ \ \ \ \textcolor{comment}{//\ This\ function\ is\ dependant\ on\ the\ PR1WAY\ CONFIG\ bit}}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00116}00116\ \ \ \ \ PRLOCK\ =\ 0x55;}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00117}00117\ \ \ \ \ PRLOCK\ =\ 0xAA;}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00118}00118\ \ \ \ \ PRLOCKbits.PRLOCKED\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{mcc_8c_source_l00119}00119\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,89 @@
+\doxysection{hid.\+c}
+\hypertarget{hid_8c_source}{}\label{hid_8c_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}hid.h"{}}}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00003}00003\ \mbox{\hyperlink{structH__data}{H\_data}}*\ hid\_input(\mbox{\hyperlink{structH__data}{H\_data}}*\ h)}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00005}00005\ \ \ \ \ \textcolor{keywordflow}{if}\ (get\_switch\_bm(SSELECT))\ \{}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00006}00006\ \ \ \ \ \ \ \ \ h-\/>wait\_select\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00007}00007\ \ \ \ \ \ \ \ \ h-\/>select\_p\ =\ get\_switch\_bm(SSELECT);}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00008}00008\ \ \ \ \ \ \ \ \ clear\_switch(SSELECT);}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00009}00009\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00011}00011\ \ \ \ \ \textcolor{keywordflow}{if}\ (get\_switch\_bm(SENTER))\ \{}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00012}00012\ \ \ \ \ \ \ \ \ h-\/>wait\_enter\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00013}00013\ \ \ \ \ \ \ \ \ h-\/>enter\_p\ =\ get\_switch\_bm(SENTER);}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00014}00014\ \ \ \ \ \ \ \ \ clear\_switch(SENTER);}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00015}00015\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{if}\ (get\_switch\_bm(SCALIB))\ \{}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00018}00018\ \ \ \ \ \ \ \ \ h-\/>wait\_calib\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00019}00019\ \ \ \ \ \ \ \ \ h-\/>calib\_p\ =\ get\_switch\_bm(SCALIB);}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00020}00020\ \ \ \ \ \ \ \ \ clear\_switch(SCALIB);}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00021}00021\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00022}00022\ \ \ \ \ \textcolor{keywordflow}{return}\ h;}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00023}00023\ \}}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00025}00025\ \mbox{\hyperlink{structH__data}{H\_data}}*\ hid\_display(\mbox{\hyperlink{structH__data}{H\_data}}*\ h)}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00026}00026\ \{}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00027}00027\ \ \ \ \ hid\_input(h);}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{switch}\ (h-\/>h\_state)\ \{}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{case}\ H\_STATE\_INIT:}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00031}00031\ \ \ \ \ \ \ \ \ h-\/>h\_state\ =\ H\_STATE\_DISPLAY;}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00032}00032\ \ \ \ \ \ \ \ \ h-\/>hid\_display\ =\ HID\_MAIN;}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00033}00033\ \ \ \ \ \ \ \ \ h-\/>wait\_enter\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00034}00034\ \ \ \ \ \ \ \ \ h-\/>wait\_select\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00035}00035\ \ \ \ \ \ \ \ \ h-\/>wait\_calib\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00036}00036\ \ \ \ \ \ \ \ \ h-\/>select\_p\ =\ SW\_OFF;}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00037}00037\ \ \ \ \ \ \ \ \ h-\/>enter\_p\ =\ SW\_OFF;}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00038}00038\ \ \ \ \ \ \ \ \ h-\/>calib\_p\ =\ SW\_OFF;}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{comment}{//\ need\ to\ look\ at\ this\ logic}}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{case}\ H\_STATE\_DISPLAY:}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!h-\/>wait\_select\ \&\&\ (h-\/>select\_p\ ==\ SW\_OFF))\ \{}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ h-\/>sequence\ =\ ++h-\/>sequence\ \&\ 0x3;}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((h-\/>sequence\ ==\ HID\_AUX)\ \&\&\ !get\_switch(SCALIB))}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ h-\/>sequence\ =\ (++h-\/>sequence)\ \&\ 0x3;\ \textcolor{comment}{//\ skip\ TRIM\ screen\ unless\ CALIB\ button\ is\ also\ pressed}}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ h-\/>hid\_display\ =\ h-\/>sequence;}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ h-\/>wait\_select\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{return}\ h;}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00052}00052\ \}}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00054}00054\ \textcolor{keywordtype}{bool}\ check\_enter\_button(\mbox{\hyperlink{structH__data}{H\_data}}*\ h)}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00055}00055\ \{}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{if}\ (!h-\/>wait\_enter\ \&\&\ (h-\/>enter\_p\ ==\ SW\_OFF))\ \{}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00057}00057\ \ \ \ \ \ \ \ \ h-\/>wait\_enter\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00060}00060\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00061}00061\ \}}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00063}00063\ \textcolor{keywordtype}{bool}\ check\_calib\_button(\mbox{\hyperlink{structH__data}{H\_data}}*\ h)}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00064}00064\ \{}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00065}00065\ \ \ \ \ \textcolor{keywordflow}{if}\ (!h-\/>wait\_calib\ \&\&\ (h-\/>calib\_p\ ==\ SW\_OFF))\ \{}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00066}00066\ \ \ \ \ \ \ \ \ h-\/>wait\_calib\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00068}00068\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00069}00069\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00070}00070\ \}}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00072}00072\ \textcolor{keywordtype}{void}\ clear\_hid\_pflags(\mbox{\hyperlink{structH__data}{H\_data}}*\ h)}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00073}00073\ \{}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00074}00074\ \ \ \ \ h-\/>select\_p\ =\ SW\_OFF;}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00075}00075\ \ \ \ \ h-\/>enter\_p\ =\ SW\_OFF;}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00076}00076\ \ \ \ \ h-\/>calib\_p\ =\ SW\_OFF;}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00077}00077\ \}}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00079}00079\ \textcolor{keywordtype}{void}\ clear\_hid\_wflags(\mbox{\hyperlink{structH__data}{H\_data}}*\ h)}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00080}00080\ \{}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00081}00081\ \ \ \ \ h-\/>wait\_enter\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00082}00082\ \ \ \ \ h-\/>wait\_select\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00083}00083\ \ \ \ \ h-\/>wait\_calib\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{hid_8c_source_l00084}00084\ \}}
+
+\end{DoxyCode}

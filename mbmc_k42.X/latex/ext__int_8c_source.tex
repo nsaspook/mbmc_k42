@@ -1,0 +1,90 @@
+\doxysection{ext\+\_\+int.\+c}
+\hypertarget{ext__int_8c_source}{}\label{ext__int_8c_source}\index{mcc\_generated\_files/ext\_int.c@{mcc\_generated\_files/ext\_int.c}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00001}00001\ \ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00027}00027\ \textcolor{preprocessor}{\#include\ <xc.h>}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00028}00028\ \textcolor{preprocessor}{\#include\ "{}ext\_int.h"{}}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00029}00029\ \textcolor{preprocessor}{\#include\ "{}interrupt\_manager.h"{}}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00031}00031\ void\ (*INT0\_InterruptHandler)(void);}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00032}00032\ void\ (*INT1\_InterruptHandler)(void);}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00034}00034\ \textcolor{keywordtype}{void}\ \_\_interrupt(irq(INT0),base(8))\ INT0\_ISR()}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00035}00035\ \{}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00036}00036\ \ \ \ \ EXT\_INT0\_InterruptFlagClear();}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00038}00038\ \ \ \ \ \textcolor{comment}{//\ Callback\ function\ gets\ called\ everytime\ this\ ISR\ executes}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00039}00039\ \ \ \ \ INT0\_CallBack();\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00040}00040\ \}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00043}00043\ \textcolor{keywordtype}{void}\ INT0\_CallBack(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00044}00044\ \{}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00045}00045\ \ \ \ \ \textcolor{comment}{//\ Add\ your\ custom\ callback\ code\ here}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{if}(INT0\_InterruptHandler)}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00047}00047\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00048}00048\ \ \ \ \ \ \ \ \ INT0\_InterruptHandler();}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00050}00050\ \}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00052}00052\ \textcolor{keywordtype}{void}\ INT0\_SetInterruptHandler(\textcolor{keywordtype}{void}\ (*\ InterruptHandler)(\textcolor{keywordtype}{void}))\{}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00053}00053\ \ \ \ \ INT0\_InterruptHandler\ =\ InterruptHandler;}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00054}00054\ \}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00056}00056\ \textcolor{keywordtype}{void}\ INT0\_DefaultInterruptHandler(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00057}00057\ \ \ \ \ \textcolor{comment}{//\ add\ your\ INT0\ interrupt\ custom\ code}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00058}00058\ \ \ \ \ \textcolor{comment}{//\ or\ set\ custom\ function\ using\ INT0\_SetInterruptHandler()}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00059}00059\ \}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00060}00060\ \textcolor{keywordtype}{void}\ \_\_interrupt(irq(INT1),base(8),low\_priority)\ INT1\_ISR()}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00061}00061\ \{}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00062}00062\ \ \ \ \ EXT\_INT1\_InterruptFlagClear();}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00064}00064\ \ \ \ \ \textcolor{comment}{//\ Callback\ function\ gets\ called\ everytime\ this\ ISR\ executes}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00065}00065\ \ \ \ \ INT1\_CallBack();\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00066}00066\ \}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00069}00069\ \textcolor{keywordtype}{void}\ INT1\_CallBack(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00070}00070\ \{}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00071}00071\ \ \ \ \ \textcolor{comment}{//\ Add\ your\ custom\ callback\ code\ here}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00072}00072\ \ \ \ \ \textcolor{keywordflow}{if}(INT1\_InterruptHandler)}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00073}00073\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00074}00074\ \ \ \ \ \ \ \ \ INT1\_InterruptHandler();}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00075}00075\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00076}00076\ \}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00078}00078\ \textcolor{keywordtype}{void}\ INT1\_SetInterruptHandler(\textcolor{keywordtype}{void}\ (*\ InterruptHandler)(\textcolor{keywordtype}{void}))\{}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00079}00079\ \ \ \ \ INT1\_InterruptHandler\ =\ InterruptHandler;}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00080}00080\ \}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00082}00082\ \textcolor{keywordtype}{void}\ INT1\_DefaultInterruptHandler(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00083}00083\ \ \ \ \ \textcolor{comment}{//\ add\ your\ INT1\ interrupt\ custom\ code}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00084}00084\ \ \ \ \ \textcolor{comment}{//\ or\ set\ custom\ function\ using\ INT1\_SetInterruptHandler()}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00085}00085\ \}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00087}00087\ \textcolor{keywordtype}{void}\ EXT\_INT\_Initialize(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00088}00088\ \{}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00089}00089\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00090}00090\ \ \ \ \ \textcolor{comment}{//\ Clear\ the\ interrupt\ flag}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00091}00091\ \ \ \ \ \textcolor{comment}{//\ Set\ the\ external\ interrupt\ edge\ detect}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00092}00092\ \ \ \ \ EXT\_INT0\_InterruptFlagClear();\ \ \ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00093}00093\ \ \ \ \ EXT\_INT0\_fallingEdgeSet();\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00094}00094\ \ \ \ \ \textcolor{comment}{//\ Set\ Default\ Interrupt\ Handler}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00095}00095\ \ \ \ \ INT0\_SetInterruptHandler(INT0\_DefaultInterruptHandler);}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00096}00096\ \ \ \ \ EXT\_INT0\_InterruptEnable();\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00098}00098\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00099}00099\ \ \ \ \ \textcolor{comment}{//\ Clear\ the\ interrupt\ flag}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00100}00100\ \ \ \ \ \textcolor{comment}{//\ Set\ the\ external\ interrupt\ edge\ detect}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00101}00101\ \ \ \ \ EXT\_INT1\_InterruptFlagClear();\ \ \ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00102}00102\ \ \ \ \ EXT\_INT1\_fallingEdgeSet();\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00103}00103\ \ \ \ \ \textcolor{comment}{//\ Set\ Default\ Interrupt\ Handler}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00104}00104\ \ \ \ \ INT1\_SetInterruptHandler(INT1\_DefaultInterruptHandler);}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00105}00105\ \ \ \ \ EXT\_INT1\_InterruptEnable();\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00107}00107\ \}}
+\DoxyCodeLine{\Hypertarget{ext__int_8c_source_l00108}00108\ }
+
+\end{DoxyCode}

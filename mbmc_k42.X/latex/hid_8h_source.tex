@@ -1,74 +1,74 @@
 \doxysection{hid.\+h}
 \hypertarget{hid_8h_source}{}\label{hid_8h_source}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{comment}{/*\ Microchip\ Technology\ Inc.\ and\ its\ subsidiaries.\ \ You\ may\ use\ this\ software\ }}
-\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ and\ any\ derivatives\ exclusively\ with\ Microchip\ products.\ }}
-\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ }}
-\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ THIS\ SOFTWARE\ IS\ SUPPLIED\ BY\ MICROCHIP\ "{}AS\ IS"{}.\ \ NO\ WARRANTIES,\ WHETHER\ }}
-\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ EXPRESS,\ IMPLIED\ OR\ STATUTORY,\ APPLY\ TO\ THIS\ SOFTWARE,\ INCLUDING\ ANY\ IMPLIED\ }}
-\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ WARRANTIES\ OF\ NON-\/INFRINGEMENT,\ MERCHANTABILITY,\ AND\ FITNESS\ FOR\ A\ }}
-\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ PARTICULAR\ PURPOSE,\ OR\ ITS\ INTERACTION\ WITH\ MICROCHIP\ PRODUCTS,\ COMBINATION\ }}
-\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ WITH\ ANY\ OTHER\ PRODUCTS,\ OR\ USE\ IN\ ANY\ APPLICATION.\ }}
-\DoxyCodeLine{00009\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ IN\ NO\ EVENT\ WILL\ MICROCHIP\ BE\ LIABLE\ FOR\ ANY\ INDIRECT,\ SPECIAL,\ PUNITIVE,\ }}
-\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ INCIDENTAL\ OR\ CONSEQUENTIAL\ LOSS,\ DAMAGE,\ COST\ OR\ EXPENSE\ OF\ ANY\ KIND\ }}
-\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ WHATSOEVER\ RELATED\ TO\ THE\ SOFTWARE,\ HOWEVER\ CAUSED,\ EVEN\ IF\ MICROCHIP\ HAS\ }}
-\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ BEEN\ ADVISED\ OF\ THE\ POSSIBILITY\ OR\ THE\ DAMAGES\ ARE\ FORESEEABLE.\ \ TO\ THE\ }}
-\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ FULLEST\ EXTENT\ ALLOWED\ BY\ LAW,\ MICROCHIP'S\ TOTAL\ LIABILITY\ ON\ ALL\ CLAIMS\ }}
-\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ IN\ ANY\ WAY\ RELATED\ TO\ THIS\ SOFTWARE\ WILL\ NOT\ EXCEED\ THE\ AMOUNT\ OF\ FEES,\ IF\ }}
-\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ ANY,\ THAT\ YOU\ HAVE\ PAID\ DIRECTLY\ TO\ MICROCHIP\ FOR\ THIS\ SOFTWARE.}}
-\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ MICROCHIP\ PROVIDES\ THIS\ SOFTWARE\ CONDITIONALLY\ UPON\ YOUR\ ACCEPTANCE\ OF\ THESE\ }}
-\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ TERMS.\ }}
-\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ \textcolor{comment}{/*\ }}
-\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ File:\ \ \ }}
-\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ Author:\ }}
-\DoxyCodeLine{00025\ \textcolor{comment}{\ *\ Comments:}}
-\DoxyCodeLine{00026\ \textcolor{comment}{\ *\ Revision\ history:\ }}
-\DoxyCodeLine{00027\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \textcolor{comment}{//\ This\ is\ a\ guard\ condition\ so\ that\ contents\ of\ this\ file\ are\ not\ included}}
-\DoxyCodeLine{00030\ \textcolor{comment}{//\ more\ than\ once.\ \ }}
-\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#ifndef\ HID\_H}}
-\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ HID\_H}}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <xc.h>}\ \textcolor{comment}{//\ include\ processor\ files\ -\/\ each\ processor\ file\ is\ guarded.\ \ }}
-\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ "{}dio.h"{}}}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
-\DoxyCodeLine{00038\ \ \ \ \ HID\_MAIN\ =\ 0,}
-\DoxyCodeLine{00039\ \ \ \ \ HID\_PWR,}
-\DoxyCodeLine{00040\ \ \ \ \ HID\_RUN,}
-\DoxyCodeLine{00041\ \ \ \ \ HID\_AUX,}
-\DoxyCodeLine{00042\ \ \ \ \ HID\_LAST,}
-\DoxyCodeLine{00043\ \}\ H\_CODES;}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
-\DoxyCodeLine{00046\ \ \ \ \ H\_STATE\_INIT\ =\ 0,}
-\DoxyCodeLine{00047\ \ \ \ \ H\_STATE\_DISPLAY,}
-\DoxyCodeLine{00048\ \ \ \ \ H\_STATE\_WAIT,}
-\DoxyCodeLine{00049\ \ \ \ \ H\_STATE\_LOG,}
-\DoxyCodeLine{00050\ \ \ \ \ H\_STATE\_COMM,}
-\DoxyCodeLine{00051\ \ \ \ \ H\_STATE\_ERROR}
-\DoxyCodeLine{00052\ \}\ H\_STATES;}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structH__data}{H\_data}}\ \{\ \textcolor{comment}{//\ control\ data\ structure\ }}
-\DoxyCodeLine{00055\ \ \ \ \ H\_CODES\ hid\_display;}
-\DoxyCodeLine{00056\ \ \ \ \ H\_STATES\ h\_state;}
-\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ wait\_select,\ select\_p,\ wait\_enter,\ enter\_p,\ wait\_calib,\ calib\_p;\ \textcolor{comment}{//\ buttons\ pressed\ should\ clean}}
-\DoxyCodeLine{00058\ \ \ \ \ uint8\_t\ sequence;}
-\DoxyCodeLine{00059\ \}\ \mbox{\hyperlink{structH__data}{H\_data}};}
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00061\ \mbox{\hyperlink{structH__data}{H\_data}}*\ hid\_input(\mbox{\hyperlink{structH__data}{H\_data}}*);}
-\DoxyCodeLine{00062\ \mbox{\hyperlink{structH__data}{H\_data}}*\ hid\_display(\mbox{\hyperlink{structH__data}{H\_data}}*);}
-\DoxyCodeLine{00063\ \textcolor{keywordtype}{bool}\ check\_enter\_button(\mbox{\hyperlink{structH__data}{H\_data}}*);}
-\DoxyCodeLine{00064\ \textcolor{keywordtype}{bool}\ check\_calib\_button(\mbox{\hyperlink{structH__data}{H\_data}}*);}
-\DoxyCodeLine{00065\ \textcolor{keywordtype}{void}\ clear\_hid\_pflags(\mbox{\hyperlink{structH__data}{H\_data}}*);}
-\DoxyCodeLine{00066\ \textcolor{keywordtype}{void}\ clear\_hid\_wflags(\mbox{\hyperlink{structH__data}{H\_data}}*);}
-\DoxyCodeLine{00067\ }
-\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ HID\_H\ */}\textcolor{preprocessor}{}}
-\DoxyCodeLine{00069\ }
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00001}00001\ \textcolor{comment}{/*\ Microchip\ Technology\ Inc.\ and\ its\ subsidiaries.\ \ You\ may\ use\ this\ software\ }}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00002}00002\ \textcolor{comment}{\ *\ and\ any\ derivatives\ exclusively\ with\ Microchip\ products.\ }}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00003}00003\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00004}00004\ \textcolor{comment}{\ *\ THIS\ SOFTWARE\ IS\ SUPPLIED\ BY\ MICROCHIP\ "{}AS\ IS"{}.\ \ NO\ WARRANTIES,\ WHETHER\ }}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00005}00005\ \textcolor{comment}{\ *\ EXPRESS,\ IMPLIED\ OR\ STATUTORY,\ APPLY\ TO\ THIS\ SOFTWARE,\ INCLUDING\ ANY\ IMPLIED\ }}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00006}00006\ \textcolor{comment}{\ *\ WARRANTIES\ OF\ NON-\/INFRINGEMENT,\ MERCHANTABILITY,\ AND\ FITNESS\ FOR\ A\ }}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00007}00007\ \textcolor{comment}{\ *\ PARTICULAR\ PURPOSE,\ OR\ ITS\ INTERACTION\ WITH\ MICROCHIP\ PRODUCTS,\ COMBINATION\ }}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00008}00008\ \textcolor{comment}{\ *\ WITH\ ANY\ OTHER\ PRODUCTS,\ OR\ USE\ IN\ ANY\ APPLICATION.\ }}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00009}00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00010}00010\ \textcolor{comment}{\ *\ IN\ NO\ EVENT\ WILL\ MICROCHIP\ BE\ LIABLE\ FOR\ ANY\ INDIRECT,\ SPECIAL,\ PUNITIVE,\ }}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00011}00011\ \textcolor{comment}{\ *\ INCIDENTAL\ OR\ CONSEQUENTIAL\ LOSS,\ DAMAGE,\ COST\ OR\ EXPENSE\ OF\ ANY\ KIND\ }}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00012}00012\ \textcolor{comment}{\ *\ WHATSOEVER\ RELATED\ TO\ THE\ SOFTWARE,\ HOWEVER\ CAUSED,\ EVEN\ IF\ MICROCHIP\ HAS\ }}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00013}00013\ \textcolor{comment}{\ *\ BEEN\ ADVISED\ OF\ THE\ POSSIBILITY\ OR\ THE\ DAMAGES\ ARE\ FORESEEABLE.\ \ TO\ THE\ }}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00014}00014\ \textcolor{comment}{\ *\ FULLEST\ EXTENT\ ALLOWED\ BY\ LAW,\ MICROCHIP'S\ TOTAL\ LIABILITY\ ON\ ALL\ CLAIMS\ }}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00015}00015\ \textcolor{comment}{\ *\ IN\ ANY\ WAY\ RELATED\ TO\ THIS\ SOFTWARE\ WILL\ NOT\ EXCEED\ THE\ AMOUNT\ OF\ FEES,\ IF\ }}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00016}00016\ \textcolor{comment}{\ *\ ANY,\ THAT\ YOU\ HAVE\ PAID\ DIRECTLY\ TO\ MICROCHIP\ FOR\ THIS\ SOFTWARE.}}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00017}00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00018}00018\ \textcolor{comment}{\ *\ MICROCHIP\ PROVIDES\ THIS\ SOFTWARE\ CONDITIONALLY\ UPON\ YOUR\ ACCEPTANCE\ OF\ THESE\ }}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00019}00019\ \textcolor{comment}{\ *\ TERMS.\ }}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00020}00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00022}00022\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00023}00023\ \textcolor{comment}{\ *\ File:\ \ \ }}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00024}00024\ \textcolor{comment}{\ *\ Author:\ }}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00025}00025\ \textcolor{comment}{\ *\ Comments:}}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00026}00026\ \textcolor{comment}{\ *\ Revision\ history:\ }}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00027}00027\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00029}00029\ \textcolor{comment}{//\ This\ is\ a\ guard\ condition\ so\ that\ contents\ of\ this\ file\ are\ not\ included}}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00030}00030\ \textcolor{comment}{//\ more\ than\ once.\ \ }}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00031}00031\ \textcolor{preprocessor}{\#ifndef\ HID\_H}}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00032}00032\ \textcolor{preprocessor}{\#define\ HID\_H}}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00034}00034\ \textcolor{preprocessor}{\#include\ <xc.h>}\ \textcolor{comment}{//\ include\ processor\ files\ -\/\ each\ processor\ file\ is\ guarded.\ \ }}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00035}00035\ \textcolor{preprocessor}{\#include\ "{}dio.h"{}}}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00037}00037\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00038}00038\ \ \ \ \ HID\_MAIN\ =\ 0,}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00039}00039\ \ \ \ \ HID\_PWR,}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00040}00040\ \ \ \ \ HID\_RUN,}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00041}00041\ \ \ \ \ HID\_AUX,}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00042}00042\ \ \ \ \ HID\_LAST,}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00043}00043\ \}\ H\_CODES;}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00045}00045\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00046}00046\ \ \ \ \ H\_STATE\_INIT\ =\ 0,}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00047}00047\ \ \ \ \ H\_STATE\_DISPLAY,}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00048}00048\ \ \ \ \ H\_STATE\_WAIT,}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00049}00049\ \ \ \ \ H\_STATE\_LOG,}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00050}00050\ \ \ \ \ H\_STATE\_COMM,}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00051}00051\ \ \ \ \ H\_STATE\_ERROR}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00052}00052\ \}\ H\_STATES;}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00054}\mbox{\hyperlink{structH__data}{00054}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structH__data}{H\_data}}\ \{\ \textcolor{comment}{//\ control\ data\ structure\ }}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00055}00055\ \ \ \ \ H\_CODES\ hid\_display;}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00056}00056\ \ \ \ \ H\_STATES\ h\_state;}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00057}00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ wait\_select,\ select\_p,\ wait\_enter,\ enter\_p,\ wait\_calib,\ calib\_p;\ \textcolor{comment}{//\ buttons\ pressed\ should\ clean}}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00058}00058\ \ \ \ \ uint8\_t\ sequence;}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00059}00059\ \}\ \mbox{\hyperlink{structH__data}{H\_data}};}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00061}00061\ \mbox{\hyperlink{structH__data}{H\_data}}*\ hid\_input(\mbox{\hyperlink{structH__data}{H\_data}}*);}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00062}00062\ \mbox{\hyperlink{structH__data}{H\_data}}*\ hid\_display(\mbox{\hyperlink{structH__data}{H\_data}}*);}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00063}00063\ \textcolor{keywordtype}{bool}\ check\_enter\_button(\mbox{\hyperlink{structH__data}{H\_data}}*);}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00064}00064\ \textcolor{keywordtype}{bool}\ check\_calib\_button(\mbox{\hyperlink{structH__data}{H\_data}}*);}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00065}00065\ \textcolor{keywordtype}{void}\ clear\_hid\_pflags(\mbox{\hyperlink{structH__data}{H\_data}}*);}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00066}00066\ \textcolor{keywordtype}{void}\ clear\_hid\_wflags(\mbox{\hyperlink{structH__data}{H\_data}}*);}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00068}00068\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ HID\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{hid_8h_source_l00069}00069\ }
 
 \end{DoxyCode}

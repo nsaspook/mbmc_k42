@@ -1,293 +1,293 @@
 \doxysection{vconfig.\+h}
 \hypertarget{vconfig_8h_source}{}\label{vconfig_8h_source}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{comment}{/*\ \ *\ File:\ \ \ vconfig.h}}
-\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Author:\ root}}
-\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Created\ on\ February\ 19,\ 2019,\ 4:41\ PM}}
-\DoxyCodeLine{00005\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ VCONFIG\_H}}
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ VCONFIG\_H}}
-\DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}mcc\_generated\_files/adcc.h"{}}}
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}mcc\_generated\_files/ext\_int.h"{}}}
-\DoxyCodeLine{00012\ }
-\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifdef\ \ \_\_cplusplus}}
-\DoxyCodeLine{00014\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
-\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <xc.h>}}
-\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <time.h>}}
-\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}mcc\_generated\_files/spi1.h"{}}}
-\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}mcc\_generated\_files/pin\_manager.h"{}}}
-\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}ringbufs.h"{}}}
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ VER\ "{}2.20"{}}}
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{/*}}
-\DoxyCodeLine{00025\ \textcolor{comment}{\ \ \ \ \ *\ REMOVE\ THE\ CHIP\ PROGRAMMER,\ IT\ CHANGES\ THE\ ADC\ READINGS}}
-\DoxyCodeLine{00026\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{/*}}
-\DoxyCodeLine{00029\ \textcolor{comment}{\ \ \ \ \ *\ 0.1\ MBMC\ new\ version\ for\ one\ 24vdc\ battery\ string\ for\ the\ 57K42}}
-\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ \ *\ 0.2\ start\ to\ configure\ the\ hardware\ for\ mbmc\ duty}}
-\DoxyCodeLine{00031\ \textcolor{comment}{\ \ \ \ \ *\ 0.3\ configure\ for\ mbmc\_io\ board}}
-\DoxyCodeLine{00032\ \textcolor{comment}{\ \ \ \ \ *\ 0.4\ ADC\ setup}}
-\DoxyCodeLine{00033\ \textcolor{comment}{\ \ \ \ \ *\ 0.5\ remove\ gemsecs\ coding}}
-\DoxyCodeLine{00034\ \textcolor{comment}{\ \ \ \ \ *\ 0.6\ adc\ scanning\ by\ threshold\ interrupt\ using\ burst\ average\ mode}}
-\DoxyCodeLine{00035\ \textcolor{comment}{\ \ \ \ \ *\ 0.7\ system\ data\ conversion\ from\ ADC\ data}}
-\DoxyCodeLine{00036\ \textcolor{comment}{\ \ \ \ \ *\ 0.8\ basic\ current\ and\ voltage\ tracking}}
-\DoxyCodeLine{00037\ \textcolor{comment}{\ \ \ \ \ *\ 0.9\ auto\ convert\ bitmaps}}
-\DoxyCodeLine{00038\ \textcolor{comment}{\ \ \ \ \ *\ 0.91\ start\ adding\ 32\ utc\ time\ code}}
-\DoxyCodeLine{00039\ \textcolor{comment}{\ \ \ \ \ *\ 0.94\ switch\ input\ code}}
-\DoxyCodeLine{00040\ \textcolor{comment}{\ \ \ \ \ *\ 0.95\ MAX6818\ interrupt\ coding}}
-\DoxyCodeLine{00041\ \textcolor{comment}{\ \ \ \ \ *\ 0.97\ need\ hardware\ fix\ on\ mbmc\_io\ board\ to\ repair\ bypassed\ resistors\ R20\ and\ R18}}
-\DoxyCodeLine{00042\ \textcolor{comment}{\ \ \ \ \ *\ 0.98\ last\ of\ the\ hardware\ bugs\ fixed}}
-\DoxyCodeLine{00043\ \textcolor{comment}{\ \ \ \ \ *\ 0.99\ power\ load\ calculations}}
-\DoxyCodeLine{00044\ \textcolor{comment}{\ \ \ \ \ *\ 1.0+\ mainly\ working\ code\ base}}
-\DoxyCodeLine{00045\ \textcolor{comment}{\ \ \ \ \ *\ 1.07\ move\ MAX6818\ enable\ pin\ for\ board\ rev\ 1.1}}
-\DoxyCodeLine{00046\ \textcolor{comment}{\ \ \ \ \ *\ 1.08\ NHD\ 4x20\ display}}
-\DoxyCodeLine{00047\ \textcolor{comment}{\ \ \ \ \ *\ 1.16\ update\ logging\ format}}
-\DoxyCodeLine{00048\ \textcolor{comment}{\ \ \ \ \ *\ 1.17\ current\ sensor\ calibration\ functions}}
-\DoxyCodeLine{00049\ \textcolor{comment}{\ \ \ \ \ *\ 1.18\ EEPROM\ routines}}
-\DoxyCodeLine{00050\ \textcolor{comment}{\ \ \ \ \ *\ 1.19\ 8-\/bit\ crc\ for\ EEPROM\ change\ detection}}
-\DoxyCodeLine{00051\ \textcolor{comment}{\ \ \ \ \ *\ 1.20\ optional\ 10A\ calibration}}
-\DoxyCodeLine{00052\ \textcolor{comment}{\ \ \ \ \ *\ 1.21\ history\ tracking\ in\ EEPROM}}
-\DoxyCodeLine{00053\ \textcolor{comment}{\ \ \ \ \ *\ 1.21\ history\ update\ in\ EEPROM}}
-\DoxyCodeLine{00054\ \textcolor{comment}{\ \ \ \ \ *\ 1.23\ line\ 4\ display\ issues\ with\ history\ display\ functions,\ temp\ fix\ is\ to\ set\ MAX\_LINE\ to\ 19}}
-\DoxyCodeLine{00055\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ need\ to\ work\ on\ this\ for\ a\ correct\ fix.\ review\ LCD\_addressing.pdf\ in\ host\_board\ folder}}
-\DoxyCodeLine{00056\ \textcolor{comment}{\ \ \ \ \ *\ 1.24\ fix\ LCD\ problems,\ was\ trying\ to\ send\ a\ 0x00\ using\ printf}}
-\DoxyCodeLine{00057\ \textcolor{comment}{\ \ \ \ \ *\ 1.25\ load\ time\_t\ date\ from\ saved\ EEPROM\ history\ if\ valid}}
-\DoxyCodeLine{00058\ \textcolor{comment}{\ \ \ \ \ *\ 1.29\ fine\ tuning\ the\ ADC\ configuration}}
-\DoxyCodeLine{00059\ \textcolor{comment}{\ \ \ \ \ *\ 1.31\ add\ third\ hall-\/sensor\ for\ actual\ PV\ current\ and\ CC\ current\ for\ MPPT\ VI\ conversion\ tracking}}
-\DoxyCodeLine{00060\ \textcolor{comment}{\ \ \ \ \ *\ 1.32\ data\ number\ fixups\ for\ display\ and\ calculations}}
-\DoxyCodeLine{00061\ \textcolor{comment}{\ \ \ \ \ *\ 1.33\ reorder\ logging\ data\ format}}
-\DoxyCodeLine{00062\ \textcolor{comment}{\ \ \ \ \ *\ 1.34\ CC\ mode\ to\ voltage\ decoding\ routines}}
-\DoxyCodeLine{00063\ \textcolor{comment}{\ \ \ \ \ *\ 1.35\ AC\ charger\ limits\ and\ float\ cycle\ counts\ for\ H[11]}}
-\DoxyCodeLine{00064\ \textcolor{comment}{\ \ \ \ \ *\ 1.36\ Charge\ controller\ op\ mode\ FIXUPS}}
-\DoxyCodeLine{00065\ \textcolor{comment}{\ \ \ \ \ *\ 1.37\ HID\ button\ response\ fixes,\ use\ bitmap\ data\ for\ stored\ button\ press\ info\ in\ hid.c}}
-\DoxyCodeLine{00066\ \textcolor{comment}{\ \ \ \ \ *\ 1.38\ UART\ 1\ serial\ control\ parser.\ 'V'\ AC\ charger\ ON,\ 'v'\ AC\ charger\ off,\ '\#'\ Show\ system\ information}}
-\DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ \ \ *\ 1.39\ Tweak\ one\ second\ interrupt\ times\ for\ better\ precision}}
-\DoxyCodeLine{00068\ \textcolor{comment}{\ \ \ \ \ *\ 1.40\ SOC\ and\ AH\ corrections\ at\ FLOAT\ and\ BOOST\ triggers\ from\ charge\ controller}}
-\DoxyCodeLine{00069\ \textcolor{comment}{\ \ \ \ \ *\ 1.41\ add\ daily\ ah\ tracking}}
-\DoxyCodeLine{00070\ \textcolor{comment}{\ \ \ \ \ *\ 1.42\ fix\ daily\ tracking}}
-\DoxyCodeLine{00071\ \textcolor{comment}{\ \ \ \ \ *\ 1.43\ add\ option\ using\ BAT\_100A\ in\ daq.h\ to\ select\ Honeywell\ sensor\ for\ battery\ current\ sensor}}
-\DoxyCodeLine{00072\ \textcolor{comment}{\ \ \ \ \ *\ 1.44\ DC\ dump\ load\ from\ PV\ functions}}
-\DoxyCodeLine{00073\ \textcolor{comment}{\ \ \ \ \ *\ 1.45\ WDT\ hang\ protection}}
-\DoxyCodeLine{00074\ \textcolor{comment}{\ \ \ \ \ *\ 1.46\ server\ time\ updates}}
-\DoxyCodeLine{00075\ \textcolor{comment}{\ \ \ \ \ *\ 1.47\ Battery\ low\ voltage\ checks\ for\ charger\ activation}}
-\DoxyCodeLine{00076\ \textcolor{comment}{\ \ \ \ \ *\ 1.48\ add\ third\ current\ sensor\ zero\ calibration}}
-\DoxyCodeLine{00077\ \textcolor{comment}{\ \ \ \ \ *\ 1.49\ restructure\ and\ optimizations}}
-\DoxyCodeLine{00078\ \textcolor{comment}{\ \ \ \ \ *\ 1.50\ current\ sensor\ options\ in\ daq.h:\ CAL\_10A\ \ CAL\_TWO}}
-\DoxyCodeLine{00079\ \textcolor{comment}{\ \ \ \ \ *\ 1.51\ change\ ADC\ to\ FRC\ clock\ source}}
-\DoxyCodeLine{00080\ \textcolor{comment}{\ \ \ \ \ *\ 1.52\ back\ to\ ext\ clock\ for\ ADC\ with\ increased\ time\ for\ hold\ sample}}
-\DoxyCodeLine{00081\ \textcolor{comment}{\ \ \ \ \ *\ 1.53\ fix\ lcd\ display\ line\ limits}}
-\DoxyCodeLine{00082\ \textcolor{comment}{\ \ \ \ \ *\ 1.56\ connection\ updates\ and\ structure\ fixes}}
-\DoxyCodeLine{00083\ \textcolor{comment}{\ \ \ \ \ *\ 2.00\ FM80\ dump\ load\ system\ monitor}}
-\DoxyCodeLine{00084\ \textcolor{comment}{\ \ \ \ \ *\ 2.01\ swap\ around\ the\ voltage\ and\ current\ sensors\ offsets\ and\ scalars\ for\ the\ FM80\ system\ configuration}}
-\DoxyCodeLine{00085\ \textcolor{comment}{\ \ \ \ \ *\ 2.02\ move\ variables\ on\ the\ LCD\ display\ code\ to\ match\ the\ actual\ measurements}}
-\DoxyCodeLine{00086\ \textcolor{comment}{\ \ \ \ \ *\ 2.03\ add\ json\ power\ variables,\ change\ MQTT\ data\ update\ to\ 1\ second}}
-\DoxyCodeLine{00087\ \textcolor{comment}{\ \ \ \ \ *\ 2.04\ general\ code\ cleanup}}
-\DoxyCodeLine{00088\ \textcolor{comment}{\ \ \ \ \ *\ 2.05\ GTI\ power\ control\ and\ monitoring\ using\ UART2}}
-\DoxyCodeLine{00089\ \textcolor{comment}{\ \ \ \ \ *\ 2.08\ GTI\ command\ set,\ serial\ UART2}}
-\DoxyCodeLine{00090\ \textcolor{comment}{\ \ \ \ \ *\ 2.09\ Fix\ UART1\ receive\ bugs}}
-\DoxyCodeLine{00091\ \textcolor{comment}{\ \ \ \ \ *\ 2.10\ Alpha\ version}}
-\DoxyCodeLine{00092\ \textcolor{comment}{\ \ \ \ \ *\ 2.11\ typo\ corrections}}
-\DoxyCodeLine{00093\ \textcolor{comment}{\ \ \ \ \ *\ 2.12\ cleanup\ GTI\ parser\ code}}
-\DoxyCodeLine{00094\ \textcolor{comment}{\ \ \ \ \ *\ 2.13\ add\ GTI\ power\ value\ parsing\ with\ V\ start\ value,\ [0..9][3],\ X\ execute\ value}}
-\DoxyCodeLine{00095\ \textcolor{comment}{\ \ \ \ \ *\ 2.14\ misc\ cleanup}}
-\DoxyCodeLine{00096\ \textcolor{comment}{\ \ \ \ \ *\ 2.15\ more\ cleanups}}
-\DoxyCodeLine{00097\ \textcolor{comment}{\ \ \ \ \ *\ 2.16\ add\ charge\ controller\ mode\ to\ MQTT\ variables,\ fix\ CCMODE\ voltage\ ranges}}
-\DoxyCodeLine{00098\ \textcolor{comment}{\ \ \ \ \ *\ 2.17\ add\ UTC\ time\ setting\ from\ MQTT}}
-\DoxyCodeLine{00099\ \textcolor{comment}{\ \ \ \ \ *\ 2.18\ doc\ updates\ and\ minor\ fixes}}
-\DoxyCodeLine{00100\ \textcolor{comment}{\ \ \ \ \ *\ 2.19\ current\ and\ power\ fixups\ for\ FM80\ coding\ to\ JSON}}
-\DoxyCodeLine{00101\ \textcolor{comment}{\ \ \ \ \ *\ 2.20\ update\ to\ use\ xc8\ 3.0}}
-\DoxyCodeLine{00102\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{00103\ }
-\DoxyCodeLine{00104\ \ \ \ \ \textcolor{comment}{/*}}
-\DoxyCodeLine{00105\ \textcolor{comment}{\ \ \ \ \ *\ REMOVE\ THE\ CHIP\ PROGRAMMER,\ IT\ CHANGES\ THE\ ADC\ READINGS}}
-\DoxyCodeLine{00106\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{00107\ \ \ \ \ \textcolor{comment}{//\#define\ TESTING}}
-\DoxyCodeLine{00108\ \ \ \ \ \textcolor{comment}{//\#define\ DISPLAY\_SLOW}}
-\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#define\ DEF\_TIME\ \ \ \ 1721693000}}
-\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#define\ DEF\_TIME\_SIZE\ \ \ 11}}
-\DoxyCodeLine{00111\ }
-\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#define\ SLED\ \ \ \ LED0\_LAT}}
-\DoxyCodeLine{00113\ }
-\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#define\ EADOGM\_CMD\_CLR\ \ \ \ \ \ 1}}
-\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#define\ EADOGM\_CMD\_CURSOR\_ON\ \ \ \ \ 0b00001111}}
-\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#define\ EADOGM\_CMD\_CURSOR\_OFF\ \ \ \ 0b00001100}}
-\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#define\ EADOGM\_CMD\_DISPLAY\_ON\ \ \ \ 0b00001100}}
-\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#define\ EADOGM\_CMD\_DISPLAY\_OFF\ \ \ 0b00001000}}
-\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#define\ EADOGM\_CMD\_DDRAM\_ADDR\ \ \ \ 0b10000000}}
-\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#define\ EADOGM\_CMD\_CGRAM\_ADDR\ \ \ \ 0b01000000}}
-\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#define\ EADOGM\_CMD\_SELECT\_R0\ \ \ \ \ 0b00011000}}
-\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#define\ EADOGM\_CMD\_SELECT\_R1\ \ \ \ \ 0b00010000}}
-\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#define\ EADOGM\_CMD\_SET\_TABLE2\ \ \ \ 0b00101010}}
-\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#define\ EADOGM\_COLSPAN\ \ \ \ \ \ 16}}
-\DoxyCodeLine{00125\ }
-\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#define\ NHD\ \ \ \ \ }\textcolor{comment}{//\ 4x20\ SPI\ display}}
-\DoxyCodeLine{00127\ }
-\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#define\ T1\ \ 500}}
-\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#define\ T2\ \ 3000}}
-\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#define\ T3\ \ 5000}}
-\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#define\ T4\ \ 5000}}
-\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#define\ HBTS\ \ \ \ 5000\ }\textcolor{comment}{//\ short\ ping\ delay}}
-\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#define\ HBTL\ \ \ \ 30000\ }\textcolor{comment}{//\ ping\ delay}}
-\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#define\ RTY\ 3}}
-\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#define\ ERROR\_CHECKSUM\ \ 31500}}
-\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#define\ ERROR\_COMM\ \ 31500}}
-\DoxyCodeLine{00137\ }
-\DoxyCodeLine{00138\ \textcolor{preprocessor}{\#define\ DEFAULT\_TID\ 1}}
-\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#define\ TDELAY\ \ 3000}}
-\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#define\ LDELAY\ \ 1000}}
-\DoxyCodeLine{00141\ \textcolor{preprocessor}{\#define\ SDELAY\ \ 500}}
-\DoxyCodeLine{00142\ \textcolor{preprocessor}{\#define\ BDELAY\ \ 300}}
-\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#define\ DDELAY\ \ 125\ \ }\textcolor{comment}{//\ display\ update\ spacing\ 125}}
-\DoxyCodeLine{00144\ \textcolor{preprocessor}{\#define\ TXTDELAY\ 10000\ }\textcolor{comment}{//\ unix\ time\ from\ server\ timeout}}
-\DoxyCodeLine{00145\ \textcolor{preprocessor}{\#define\ SOCDELAY\ 250\ }\textcolor{comment}{//\ sync\ SPI\ and\ UART\ dma\ 250}}
-\DoxyCodeLine{00146\ \textcolor{preprocessor}{\#define\ DFLIP\ \ \ 1500\ }\textcolor{comment}{//\ display\ info\ flipping\ spacing}}
-\DoxyCodeLine{00147\ }
-\DoxyCodeLine{00148\ \textcolor{preprocessor}{\#define\ LOG\_WAIT\ \ \ \ 1\ }\textcolor{comment}{//\ data\ logging\ interval\ in\ seconds}}
-\DoxyCodeLine{00149\ \textcolor{preprocessor}{\#define\ D\_CODE\ \ \ \ \ \ '5'\ \ }\textcolor{comment}{//\ data\ logging\ line\ code\ version}}
-\DoxyCodeLine{00150\ \textcolor{preprocessor}{\#define\ I\_CODE\ \ \ \ \ \ '*'\ \ }\textcolor{comment}{//\ info\ logging\ line\ code}}
-\DoxyCodeLine{00151\ }
-\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#define\ CAL\_DELAY\ \ \ 64}}
-\DoxyCodeLine{00153\ \ \ \ \ \textcolor{comment}{//\#define\ SKIP\_ESR}}
-\DoxyCodeLine{00154\ }
-\DoxyCodeLine{00155\ \ \ \ \ \textcolor{comment}{/*}}
-\DoxyCodeLine{00156\ \textcolor{comment}{\ \ \ \ \ *\ offsets\ in\ bytes}}
-\DoxyCodeLine{00157\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{00158\ }
-\DoxyCodeLine{00159\ \textcolor{preprocessor}{\#define\ TX\_RESERVE\ \ 59}}
-\DoxyCodeLine{00160\ \textcolor{preprocessor}{\#ifdef\ \ NHD}}
-\DoxyCodeLine{00161\ \textcolor{preprocessor}{\#define\ MAX\_LINE\ \ \ \ 20}}
-\DoxyCodeLine{00162\ \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{00163\ \textcolor{preprocessor}{\#define\ MAX\_LINE\ \ \ \ 16}}
-\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#define\ MAX\_BUTTONS\ 8}}
-\DoxyCodeLine{00166\ }
-\DoxyCodeLine{00167\ \textcolor{preprocessor}{\#define\ HPARAM\_SIZE\ \ \ \ \ 13}}
-\DoxyCodeLine{00168\ \textcolor{preprocessor}{\#define\ HVER\ \ \ \ \ \ \ \ 1}}
-\DoxyCodeLine{00169\ }
-\DoxyCodeLine{00170\ \textcolor{preprocessor}{\#define\ BL\_TIME\ \ \ \ \ 600}}
-\DoxyCodeLine{00171\ }
-\DoxyCodeLine{00172\ \textcolor{preprocessor}{\#define\ CC\_DEACT\ \ \ \ 74\ \ }\textcolor{comment}{//\ 1.10}}
-\DoxyCodeLine{00173\ \textcolor{preprocessor}{\#define\ CC\_ACT\ \ \ \ \ \ 100\ }\textcolor{comment}{//\ 1.43}}
-\DoxyCodeLine{00174\ \textcolor{preprocessor}{\#define\ CC\_MPPT\ \ \ \ \ 120\ }\textcolor{comment}{//\ 1.75}}
-\DoxyCodeLine{00175\ \textcolor{preprocessor}{\#define\ CC\_EQUAL\ \ \ \ 140\ }\textcolor{comment}{//\ 2.10}}
-\DoxyCodeLine{00176\ \textcolor{preprocessor}{\#define\ CC\_BOOST\ \ \ \ 160\ }\textcolor{comment}{//\ 2.45}}
-\DoxyCodeLine{00177\ \textcolor{preprocessor}{\#define\ CC\_FLOAT\ \ \ \ 180\ }\textcolor{comment}{//\ 2.82}}
-\DoxyCodeLine{00178\ \textcolor{preprocessor}{\#define\ CC\_LIMIT\ \ \ \ 200\ }\textcolor{comment}{//\ 3.20}}
-\DoxyCodeLine{00179\ \textcolor{preprocessor}{\#define\ CC\_OFFLINE\ \ 240\ }\textcolor{comment}{//\ 4.00}}
-\DoxyCodeLine{00180\ }
-\DoxyCodeLine{00181\ \textcolor{preprocessor}{\#define\ max\_port\_data\ \ \ 1024}}
-\DoxyCodeLine{00182\ }
-\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structspi__link__type}{spi\_link\_type}}\ \{\ \textcolor{comment}{//\ internal\ SPI\ state\ table}}
-\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ uint8\_t\ SPI\_LCD\ :\ 1;}
-\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ uint8\_t\ SPI\_AUX\ :\ 1;}
-\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ uint8\_t\ LCD\_TIMER\ :\ 1;}
-\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ LCD\_DATA\ :\ 1;}
-\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ uint16\_t\ delay;}
-\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ uint8\_t\ config;}
-\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ uint8\_t\ *\ txbuf;}
-\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ int32\_t\ int\_count;}
-\DoxyCodeLine{00192\ \ \ \ \ \};}
-\DoxyCodeLine{00193\ }
-\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
-\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ DIS\_STR\ =\ 0,}
-\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ DIS\_HELP,}
-\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ DIS\_ERR,}
-\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ DIS\_CLEAR,}
-\DoxyCodeLine{00199\ \ \ \ \ \}\ D\_CODES;}
-\DoxyCodeLine{00200\ }
-\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structterminal__type}{terminal\_type}}\ \{}
-\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ uint8\_t\ mesgid;}
-\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ uint8\_t\ TID,\ mcode,\ mparm,\ cmdlen,\ log\_seq;}
-\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ uint8\_t\ host\_display\_ack\ :\ 1;}
-\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ D\_CODES\ info,\ help\_temp;}
-\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ uint16\_t\ ceid;}
-\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ uint16\_t\ log\_num;}
-\DoxyCodeLine{00208\ \ \ \ \ \}\ \mbox{\hyperlink{structterminal__type}{terminal\_type}};}
-\DoxyCodeLine{00209\ }
-\DoxyCodeLine{00210\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
-\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ UI\_STATE\_INIT\ =\ 0,}
-\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ UI\_STATE\_HOST,}
-\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ UI\_STATE\_DEBUG,}
-\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ UI\_STATE\_LOG,}
-\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ UI\_STATE\_MON,}
-\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ UI\_STATE\_ERROR}
-\DoxyCodeLine{00217\ \ \ \ \ \}\ UI\_STATES;}
-\DoxyCodeLine{00218\ }
-\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
-\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ SW\_OFF\ =\ 0,}
-\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ SW\_ON,}
-\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ SW\_INVALID,}
-\DoxyCodeLine{00223\ \ \ \ \ \}\ SW\_STATES;}
-\DoxyCodeLine{00224\ }
-\DoxyCodeLine{00225\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
-\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ S0\ =\ 0,}
-\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ S1\ =\ 1,}
-\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ SSELECT\ =\ 2,}
-\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ SENTER\ =\ 3,}
-\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ SCALIB\ =\ 4,}
-\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ S5,}
-\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ S6,}
-\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ SNULL,}
-\DoxyCodeLine{00234\ \ \ \ \ \}\ SW\_NAMES;}
-\DoxyCodeLine{00235\ }
-\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structV__data}{V\_data}}\ \{\ \textcolor{comment}{//\ control\ data\ structure}}
-\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ UI\_STATES\ ui\_state;}
-\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ buf[64],\ info[64],\ rbuf[16];}
-\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ time\_t\ ticks,\ blight,\ ac\_time;}
-\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ int8\_t\ testing;}
-\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ sys\_info\ :\ 1,\ ac\_on\ :\ 1,\ ac\_off\ :\ 1,\ time\_info\ :\ 1,\ get\_time\_text\ :\ 1;}
-\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ uint8\_t\ error,\ abort,\ msg\_error,\ msg\_ret,\ alarm,\ float\_ticks,\ boost\_ticks,\ wdt\_ticks;}
-\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ UI\_STATES\ ui\_sw;}
-\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ uint16\_t\ r\_checksum,\ t\_checksum,\ checksum\_error,\ mode\_pwm,\ sequences,\ all\_errors;}
-\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ uint8\_t\ set\_sequ\ :\ 1,\ debug\ :\ 1,\ help\ :\ 1,\ stack\ :\ 3,\ help\_id\ :\ 2,\ screen\ :\ 1;}
-\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structterminal__type}{terminal\_type}}\ response;}
-\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ ticker,\ cc\_state;}
-\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ flipper,\ calib,\ enter,\ sensor\_set,\ fixup,\ cc\_active;}
-\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{bool}\ system\_stable,\ blight\_off,\ in\_float,\ in\_boost;}
-\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ lowint\_count,\ timerint\_count,\ tx\_count,\ rx\_count,\ adc\_count,\ spi\_count,\ switch\_count;}
-\DoxyCodeLine{00251\ \ \ \ \ \}\ \mbox{\hyperlink{structV__data}{V\_data}};}
-\DoxyCodeLine{00252\ }
-\DoxyCodeLine{00253\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structV__help}{V\_help}}\ \{}
-\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ message[22],\ display[22];}
-\DoxyCodeLine{00255\ \ \ \ \ \}\ \mbox{\hyperlink{structV__help}{V\_help}};}
-\DoxyCodeLine{00256\ }
-\DoxyCodeLine{00257\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ hist[x].h[x]}}
-\DoxyCodeLine{00258\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h0\ \ Real\ Ah\ usage\ this\ cycle}}
-\DoxyCodeLine{00259\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h1\ \ Total\ charge\ cycles\ into\ at\ least\ boost}}
-\DoxyCodeLine{00260\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h2\ \ Current\ lowest\ discharge,}}
-\DoxyCodeLine{00261\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h3\ \ PV\ ah\ total}}
-\DoxyCodeLine{00262\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h4\ \ Batt\ W\ out}}
-\DoxyCodeLine{00263\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h5\ \ Batt\ W\ in}}
-\DoxyCodeLine{00264\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h6\ \ Real\ Ah\ usage}}
-\DoxyCodeLine{00265\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h7\ \ Batt\ Voltage\ full\ load}}
-\DoxyCodeLine{00266\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h8\ \ Batt\ Voltage\ one\ load}}
-\DoxyCodeLine{00267\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h9\ \ Lowest\ ESR}}
-\DoxyCodeLine{00268\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h10\ Highest\ ESR}}
-\DoxyCodeLine{00269\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h11\ Total\ charge\ cycles\ into\ float}}
-\DoxyCodeLine{00270\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h12\ Total\ kWH\ in}}
-\DoxyCodeLine{00271\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{00272\ }
-\DoxyCodeLine{00273\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structhist__type}{hist\_type}}\ \{}
-\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ int32\_t\ pv\_eff,\ tot\_eff;\ \textcolor{comment}{//\ pv\ generation\ eff\ factor,\ total\ system\ eff\ factor}}
-\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ uint32\_t\ ttg\_t,\ updates;}
-\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ time\_t\ pclock;}
-\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ peukert,\ cef,\ peukert\_adj,\ cef\_calc,\ cef\_save;}
-\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ int16\_t\ h[HPARAM\_SIZE];\ \textcolor{comment}{//\ h[6]=cumulative\ battery\ Ah\ cc\ and\ inv\ (real),h[0]=cumulative\ battery\ Ah\ cc\ and\ inv\ (p\_adj)}}
-\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ uint16\_t\ rate,\ udod,\ bsoc,\ bound\_rate,\ bound\_factor,\ samplei,\ sampleo,\ ah,\ drate,\ esr,\ rest\_rate,\ rest\_factor,\ esrp;}
-\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ uint8\_t\ version;}
-\DoxyCodeLine{00281\ \ \ \ \ \}\ \mbox{\hyperlink{structhist__type}{hist\_type}};}
-\DoxyCodeLine{00282\ }
-\DoxyCodeLine{00283\ \textcolor{preprocessor}{\#ifdef\ \ \_\_cplusplus}}
-\DoxyCodeLine{00284\ \}}
-\DoxyCodeLine{00285\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00286\ }
-\DoxyCodeLine{00287\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ VCONFIG\_H\ */}\textcolor{preprocessor}{}}
-\DoxyCodeLine{00288\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00001}00001\ \textcolor{comment}{/*\ \ *\ File:\ \ \ vconfig.h}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00002}00002\ \textcolor{comment}{\ *\ Author:\ root}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00004}00004\ \textcolor{comment}{\ *\ Created\ on\ February\ 19,\ 2019,\ 4:41\ PM}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00005}00005\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00007}00007\ \textcolor{preprocessor}{\#ifndef\ VCONFIG\_H}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00008}00008\ \textcolor{preprocessor}{\#define\ VCONFIG\_H}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}mcc\_generated\_files/adcc.h"{}}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}mcc\_generated\_files/ext\_int.h"{}}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00013}00013\ \textcolor{preprocessor}{\#ifdef\ \ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00014}00014\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00015}00015\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <xc.h>}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00019}00019\ \textcolor{preprocessor}{\#include\ "{}mcc\_generated\_files/spi1.h"{}}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}mcc\_generated\_files/pin\_manager.h"{}}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00021}00021\ \textcolor{preprocessor}{\#include\ "{}ringbufs.h"{}}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00023}00023\ \textcolor{preprocessor}{\#define\ VER\ "{}2.20"{}}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00024}00024\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00025}00025\ \textcolor{comment}{\ \ \ \ \ *\ REMOVE\ THE\ CHIP\ PROGRAMMER,\ IT\ CHANGES\ THE\ ADC\ READINGS}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00026}00026\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00028}00028\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00029}00029\ \textcolor{comment}{\ \ \ \ \ *\ 0.1\ MBMC\ new\ version\ for\ one\ 24vdc\ battery\ string\ for\ the\ 57K42}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00030}00030\ \textcolor{comment}{\ \ \ \ \ *\ 0.2\ start\ to\ configure\ the\ hardware\ for\ mbmc\ duty}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00031}00031\ \textcolor{comment}{\ \ \ \ \ *\ 0.3\ configure\ for\ mbmc\_io\ board}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00032}00032\ \textcolor{comment}{\ \ \ \ \ *\ 0.4\ ADC\ setup}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00033}00033\ \textcolor{comment}{\ \ \ \ \ *\ 0.5\ remove\ gemsecs\ coding}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00034}00034\ \textcolor{comment}{\ \ \ \ \ *\ 0.6\ adc\ scanning\ by\ threshold\ interrupt\ using\ burst\ average\ mode}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00035}00035\ \textcolor{comment}{\ \ \ \ \ *\ 0.7\ system\ data\ conversion\ from\ ADC\ data}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00036}00036\ \textcolor{comment}{\ \ \ \ \ *\ 0.8\ basic\ current\ and\ voltage\ tracking}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00037}00037\ \textcolor{comment}{\ \ \ \ \ *\ 0.9\ auto\ convert\ bitmaps}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00038}00038\ \textcolor{comment}{\ \ \ \ \ *\ 0.91\ start\ adding\ 32\ utc\ time\ code}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00039}00039\ \textcolor{comment}{\ \ \ \ \ *\ 0.94\ switch\ input\ code}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00040}00040\ \textcolor{comment}{\ \ \ \ \ *\ 0.95\ MAX6818\ interrupt\ coding}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00041}00041\ \textcolor{comment}{\ \ \ \ \ *\ 0.97\ need\ hardware\ fix\ on\ mbmc\_io\ board\ to\ repair\ bypassed\ resistors\ R20\ and\ R18}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00042}00042\ \textcolor{comment}{\ \ \ \ \ *\ 0.98\ last\ of\ the\ hardware\ bugs\ fixed}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00043}00043\ \textcolor{comment}{\ \ \ \ \ *\ 0.99\ power\ load\ calculations}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00044}00044\ \textcolor{comment}{\ \ \ \ \ *\ 1.0+\ mainly\ working\ code\ base}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00045}00045\ \textcolor{comment}{\ \ \ \ \ *\ 1.07\ move\ MAX6818\ enable\ pin\ for\ board\ rev\ 1.1}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00046}00046\ \textcolor{comment}{\ \ \ \ \ *\ 1.08\ NHD\ 4x20\ display}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00047}00047\ \textcolor{comment}{\ \ \ \ \ *\ 1.16\ update\ logging\ format}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00048}00048\ \textcolor{comment}{\ \ \ \ \ *\ 1.17\ current\ sensor\ calibration\ functions}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00049}00049\ \textcolor{comment}{\ \ \ \ \ *\ 1.18\ EEPROM\ routines}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00050}00050\ \textcolor{comment}{\ \ \ \ \ *\ 1.19\ 8-\/bit\ crc\ for\ EEPROM\ change\ detection}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00051}00051\ \textcolor{comment}{\ \ \ \ \ *\ 1.20\ optional\ 10A\ calibration}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00052}00052\ \textcolor{comment}{\ \ \ \ \ *\ 1.21\ history\ tracking\ in\ EEPROM}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00053}00053\ \textcolor{comment}{\ \ \ \ \ *\ 1.21\ history\ update\ in\ EEPROM}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00054}00054\ \textcolor{comment}{\ \ \ \ \ *\ 1.23\ line\ 4\ display\ issues\ with\ history\ display\ functions,\ temp\ fix\ is\ to\ set\ MAX\_LINE\ to\ 19}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00055}00055\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ need\ to\ work\ on\ this\ for\ a\ correct\ fix.\ review\ LCD\_addressing.pdf\ in\ host\_board\ folder}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00056}00056\ \textcolor{comment}{\ \ \ \ \ *\ 1.24\ fix\ LCD\ problems,\ was\ trying\ to\ send\ a\ 0x00\ using\ printf}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00057}00057\ \textcolor{comment}{\ \ \ \ \ *\ 1.25\ load\ time\_t\ date\ from\ saved\ EEPROM\ history\ if\ valid}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00058}00058\ \textcolor{comment}{\ \ \ \ \ *\ 1.29\ fine\ tuning\ the\ ADC\ configuration}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00059}00059\ \textcolor{comment}{\ \ \ \ \ *\ 1.31\ add\ third\ hall-\/sensor\ for\ actual\ PV\ current\ and\ CC\ current\ for\ MPPT\ VI\ conversion\ tracking}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00060}00060\ \textcolor{comment}{\ \ \ \ \ *\ 1.32\ data\ number\ fixups\ for\ display\ and\ calculations}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00061}00061\ \textcolor{comment}{\ \ \ \ \ *\ 1.33\ reorder\ logging\ data\ format}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00062}00062\ \textcolor{comment}{\ \ \ \ \ *\ 1.34\ CC\ mode\ to\ voltage\ decoding\ routines}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00063}00063\ \textcolor{comment}{\ \ \ \ \ *\ 1.35\ AC\ charger\ limits\ and\ float\ cycle\ counts\ for\ H[11]}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00064}00064\ \textcolor{comment}{\ \ \ \ \ *\ 1.36\ Charge\ controller\ op\ mode\ FIXUPS}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00065}00065\ \textcolor{comment}{\ \ \ \ \ *\ 1.37\ HID\ button\ response\ fixes,\ use\ bitmap\ data\ for\ stored\ button\ press\ info\ in\ hid.c}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00066}00066\ \textcolor{comment}{\ \ \ \ \ *\ 1.38\ UART\ 1\ serial\ control\ parser.\ 'V'\ AC\ charger\ ON,\ 'v'\ AC\ charger\ off,\ '\#'\ Show\ system\ information}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00067}00067\ \textcolor{comment}{\ \ \ \ \ *\ 1.39\ Tweak\ one\ second\ interrupt\ times\ for\ better\ precision}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00068}00068\ \textcolor{comment}{\ \ \ \ \ *\ 1.40\ SOC\ and\ AH\ corrections\ at\ FLOAT\ and\ BOOST\ triggers\ from\ charge\ controller}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00069}00069\ \textcolor{comment}{\ \ \ \ \ *\ 1.41\ add\ daily\ ah\ tracking}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00070}00070\ \textcolor{comment}{\ \ \ \ \ *\ 1.42\ fix\ daily\ tracking}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00071}00071\ \textcolor{comment}{\ \ \ \ \ *\ 1.43\ add\ option\ using\ BAT\_100A\ in\ daq.h\ to\ select\ Honeywell\ sensor\ for\ battery\ current\ sensor}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00072}00072\ \textcolor{comment}{\ \ \ \ \ *\ 1.44\ DC\ dump\ load\ from\ PV\ functions}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00073}00073\ \textcolor{comment}{\ \ \ \ \ *\ 1.45\ WDT\ hang\ protection}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00074}00074\ \textcolor{comment}{\ \ \ \ \ *\ 1.46\ server\ time\ updates}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00075}00075\ \textcolor{comment}{\ \ \ \ \ *\ 1.47\ Battery\ low\ voltage\ checks\ for\ charger\ activation}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00076}00076\ \textcolor{comment}{\ \ \ \ \ *\ 1.48\ add\ third\ current\ sensor\ zero\ calibration}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00077}00077\ \textcolor{comment}{\ \ \ \ \ *\ 1.49\ restructure\ and\ optimizations}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00078}00078\ \textcolor{comment}{\ \ \ \ \ *\ 1.50\ current\ sensor\ options\ in\ daq.h:\ CAL\_10A\ \ CAL\_TWO}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00079}00079\ \textcolor{comment}{\ \ \ \ \ *\ 1.51\ change\ ADC\ to\ FRC\ clock\ source}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00080}00080\ \textcolor{comment}{\ \ \ \ \ *\ 1.52\ back\ to\ ext\ clock\ for\ ADC\ with\ increased\ time\ for\ hold\ sample}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00081}00081\ \textcolor{comment}{\ \ \ \ \ *\ 1.53\ fix\ lcd\ display\ line\ limits}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00082}00082\ \textcolor{comment}{\ \ \ \ \ *\ 1.56\ connection\ updates\ and\ structure\ fixes}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00083}00083\ \textcolor{comment}{\ \ \ \ \ *\ 2.00\ FM80\ dump\ load\ system\ monitor}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00084}00084\ \textcolor{comment}{\ \ \ \ \ *\ 2.01\ swap\ around\ the\ voltage\ and\ current\ sensors\ offsets\ and\ scalars\ for\ the\ FM80\ system\ configuration}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00085}00085\ \textcolor{comment}{\ \ \ \ \ *\ 2.02\ move\ variables\ on\ the\ LCD\ display\ code\ to\ match\ the\ actual\ measurements}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00086}00086\ \textcolor{comment}{\ \ \ \ \ *\ 2.03\ add\ json\ power\ variables,\ change\ MQTT\ data\ update\ to\ 1\ second}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00087}00087\ \textcolor{comment}{\ \ \ \ \ *\ 2.04\ general\ code\ cleanup}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00088}00088\ \textcolor{comment}{\ \ \ \ \ *\ 2.05\ GTI\ power\ control\ and\ monitoring\ using\ UART2}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00089}00089\ \textcolor{comment}{\ \ \ \ \ *\ 2.08\ GTI\ command\ set,\ serial\ UART2}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00090}00090\ \textcolor{comment}{\ \ \ \ \ *\ 2.09\ Fix\ UART1\ receive\ bugs}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00091}00091\ \textcolor{comment}{\ \ \ \ \ *\ 2.10\ Alpha\ version}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00092}00092\ \textcolor{comment}{\ \ \ \ \ *\ 2.11\ typo\ corrections}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00093}00093\ \textcolor{comment}{\ \ \ \ \ *\ 2.12\ cleanup\ GTI\ parser\ code}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00094}00094\ \textcolor{comment}{\ \ \ \ \ *\ 2.13\ add\ GTI\ power\ value\ parsing\ with\ V\ start\ value,\ [0..9][3],\ X\ execute\ value}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00095}00095\ \textcolor{comment}{\ \ \ \ \ *\ 2.14\ misc\ cleanup}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00096}00096\ \textcolor{comment}{\ \ \ \ \ *\ 2.15\ more\ cleanups}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00097}00097\ \textcolor{comment}{\ \ \ \ \ *\ 2.16\ add\ charge\ controller\ mode\ to\ MQTT\ variables,\ fix\ CCMODE\ voltage\ ranges}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00098}00098\ \textcolor{comment}{\ \ \ \ \ *\ 2.17\ add\ UTC\ time\ setting\ from\ MQTT}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00099}00099\ \textcolor{comment}{\ \ \ \ \ *\ 2.18\ doc\ updates\ and\ minor\ fixes}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00100}00100\ \textcolor{comment}{\ \ \ \ \ *\ 2.19\ current\ and\ power\ fixups\ for\ FM80\ coding\ to\ JSON}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00101}00101\ \textcolor{comment}{\ \ \ \ \ *\ 2.20\ update\ to\ use\ xc8\ 3.0}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00102}00102\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00104}00104\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00105}00105\ \textcolor{comment}{\ \ \ \ \ *\ REMOVE\ THE\ CHIP\ PROGRAMMER,\ IT\ CHANGES\ THE\ ADC\ READINGS}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00106}00106\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00107}00107\ \ \ \ \ \textcolor{comment}{//\#define\ TESTING}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00108}00108\ \ \ \ \ \textcolor{comment}{//\#define\ DISPLAY\_SLOW}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00109}00109\ \textcolor{preprocessor}{\#define\ DEF\_TIME\ \ \ \ 1721693000}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00110}00110\ \textcolor{preprocessor}{\#define\ DEF\_TIME\_SIZE\ \ \ 11}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00112}00112\ \textcolor{preprocessor}{\#define\ SLED\ \ \ \ LED0\_LAT}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00114}00114\ \textcolor{preprocessor}{\#define\ EADOGM\_CMD\_CLR\ \ \ \ \ \ 1}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00115}00115\ \textcolor{preprocessor}{\#define\ EADOGM\_CMD\_CURSOR\_ON\ \ \ \ \ 0b00001111}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00116}00116\ \textcolor{preprocessor}{\#define\ EADOGM\_CMD\_CURSOR\_OFF\ \ \ \ 0b00001100}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00117}00117\ \textcolor{preprocessor}{\#define\ EADOGM\_CMD\_DISPLAY\_ON\ \ \ \ 0b00001100}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00118}00118\ \textcolor{preprocessor}{\#define\ EADOGM\_CMD\_DISPLAY\_OFF\ \ \ 0b00001000}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00119}00119\ \textcolor{preprocessor}{\#define\ EADOGM\_CMD\_DDRAM\_ADDR\ \ \ \ 0b10000000}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00120}00120\ \textcolor{preprocessor}{\#define\ EADOGM\_CMD\_CGRAM\_ADDR\ \ \ \ 0b01000000}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00121}00121\ \textcolor{preprocessor}{\#define\ EADOGM\_CMD\_SELECT\_R0\ \ \ \ \ 0b00011000}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00122}00122\ \textcolor{preprocessor}{\#define\ EADOGM\_CMD\_SELECT\_R1\ \ \ \ \ 0b00010000}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00123}00123\ \textcolor{preprocessor}{\#define\ EADOGM\_CMD\_SET\_TABLE2\ \ \ \ 0b00101010}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00124}00124\ \textcolor{preprocessor}{\#define\ EADOGM\_COLSPAN\ \ \ \ \ \ 16}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00126}00126\ \textcolor{preprocessor}{\#define\ NHD\ \ \ \ \ }\textcolor{comment}{//\ 4x20\ SPI\ display}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00128}00128\ \textcolor{preprocessor}{\#define\ T1\ \ 500}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00129}00129\ \textcolor{preprocessor}{\#define\ T2\ \ 3000}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00130}00130\ \textcolor{preprocessor}{\#define\ T3\ \ 5000}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00131}00131\ \textcolor{preprocessor}{\#define\ T4\ \ 5000}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00132}00132\ \textcolor{preprocessor}{\#define\ HBTS\ \ \ \ 5000\ }\textcolor{comment}{//\ short\ ping\ delay}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00133}00133\ \textcolor{preprocessor}{\#define\ HBTL\ \ \ \ 30000\ }\textcolor{comment}{//\ ping\ delay}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00134}00134\ \textcolor{preprocessor}{\#define\ RTY\ 3}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00135}00135\ \textcolor{preprocessor}{\#define\ ERROR\_CHECKSUM\ \ 31500}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00136}00136\ \textcolor{preprocessor}{\#define\ ERROR\_COMM\ \ 31500}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00137}00137\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00138}00138\ \textcolor{preprocessor}{\#define\ DEFAULT\_TID\ 1}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00139}00139\ \textcolor{preprocessor}{\#define\ TDELAY\ \ 3000}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00140}00140\ \textcolor{preprocessor}{\#define\ LDELAY\ \ 1000}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00141}00141\ \textcolor{preprocessor}{\#define\ SDELAY\ \ 500}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00142}00142\ \textcolor{preprocessor}{\#define\ BDELAY\ \ 300}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00143}00143\ \textcolor{preprocessor}{\#define\ DDELAY\ \ 125\ \ }\textcolor{comment}{//\ display\ update\ spacing\ 125}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00144}00144\ \textcolor{preprocessor}{\#define\ TXTDELAY\ 10000\ }\textcolor{comment}{//\ unix\ time\ from\ server\ timeout}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00145}00145\ \textcolor{preprocessor}{\#define\ SOCDELAY\ 250\ }\textcolor{comment}{//\ sync\ SPI\ and\ UART\ dma\ 250}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00146}00146\ \textcolor{preprocessor}{\#define\ DFLIP\ \ \ 1500\ }\textcolor{comment}{//\ display\ info\ flipping\ spacing}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00148}00148\ \textcolor{preprocessor}{\#define\ LOG\_WAIT\ \ \ \ 1\ }\textcolor{comment}{//\ data\ logging\ interval\ in\ seconds}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00149}00149\ \textcolor{preprocessor}{\#define\ D\_CODE\ \ \ \ \ \ '5'\ \ }\textcolor{comment}{//\ data\ logging\ line\ code\ version}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00150}00150\ \textcolor{preprocessor}{\#define\ I\_CODE\ \ \ \ \ \ '*'\ \ }\textcolor{comment}{//\ info\ logging\ line\ code}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00152}00152\ \textcolor{preprocessor}{\#define\ CAL\_DELAY\ \ \ 64}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00153}00153\ \ \ \ \ \textcolor{comment}{//\#define\ SKIP\_ESR}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00155}00155\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00156}00156\ \textcolor{comment}{\ \ \ \ \ *\ offsets\ in\ bytes}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00157}00157\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00158}00158\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00159}00159\ \textcolor{preprocessor}{\#define\ TX\_RESERVE\ \ 59}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00160}00160\ \textcolor{preprocessor}{\#ifdef\ \ NHD}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00161}00161\ \textcolor{preprocessor}{\#define\ MAX\_LINE\ \ \ \ 20}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00162}00162\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00163}00163\ \textcolor{preprocessor}{\#define\ MAX\_LINE\ \ \ \ 16}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00164}00164\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00165}00165\ \textcolor{preprocessor}{\#define\ MAX\_BUTTONS\ 8}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00167}00167\ \textcolor{preprocessor}{\#define\ HPARAM\_SIZE\ \ \ \ \ 13}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00168}00168\ \textcolor{preprocessor}{\#define\ HVER\ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00170}00170\ \textcolor{preprocessor}{\#define\ BL\_TIME\ \ \ \ \ 600}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00172}00172\ \textcolor{preprocessor}{\#define\ CC\_DEACT\ \ \ \ 74\ \ }\textcolor{comment}{//\ 1.10}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00173}00173\ \textcolor{preprocessor}{\#define\ CC\_ACT\ \ \ \ \ \ 100\ }\textcolor{comment}{//\ 1.43}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00174}00174\ \textcolor{preprocessor}{\#define\ CC\_MPPT\ \ \ \ \ 120\ }\textcolor{comment}{//\ 1.75}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00175}00175\ \textcolor{preprocessor}{\#define\ CC\_EQUAL\ \ \ \ 140\ }\textcolor{comment}{//\ 2.10}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00176}00176\ \textcolor{preprocessor}{\#define\ CC\_BOOST\ \ \ \ 160\ }\textcolor{comment}{//\ 2.45}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00177}00177\ \textcolor{preprocessor}{\#define\ CC\_FLOAT\ \ \ \ 180\ }\textcolor{comment}{//\ 2.82}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00178}00178\ \textcolor{preprocessor}{\#define\ CC\_LIMIT\ \ \ \ 200\ }\textcolor{comment}{//\ 3.20}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00179}00179\ \textcolor{preprocessor}{\#define\ CC\_OFFLINE\ \ 240\ }\textcolor{comment}{//\ 4.00}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00180}00180\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00181}00181\ \textcolor{preprocessor}{\#define\ max\_port\_data\ \ \ 1024}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00182}00182\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00183}\mbox{\hyperlink{structspi__link__type}{00183}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structspi__link__type}{spi\_link\_type}}\ \{\ \textcolor{comment}{//\ internal\ SPI\ state\ table}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00184}00184\ \ \ \ \ \ \ \ \ uint8\_t\ SPI\_LCD\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00185}00185\ \ \ \ \ \ \ \ \ uint8\_t\ SPI\_AUX\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00186}00186\ \ \ \ \ \ \ \ \ uint8\_t\ LCD\_TIMER\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00187}00187\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ LCD\_DATA\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00188}00188\ \ \ \ \ \ \ \ \ uint16\_t\ delay;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00189}00189\ \ \ \ \ \ \ \ \ uint8\_t\ config;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00190}00190\ \ \ \ \ \ \ \ \ uint8\_t\ *\ txbuf;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00191}00191\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ int32\_t\ int\_count;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00192}00192\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00193}00193\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00194}00194\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00195}00195\ \ \ \ \ \ \ \ \ DIS\_STR\ =\ 0,}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00196}00196\ \ \ \ \ \ \ \ \ DIS\_HELP,}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00197}00197\ \ \ \ \ \ \ \ \ DIS\_ERR,}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00198}00198\ \ \ \ \ \ \ \ \ DIS\_CLEAR,}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00199}00199\ \ \ \ \ \}\ D\_CODES;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00200}00200\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00201}\mbox{\hyperlink{structterminal__type}{00201}}\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structterminal__type}{terminal\_type}}\ \{}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00202}00202\ \ \ \ \ \ \ \ \ uint8\_t\ mesgid;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00203}00203\ \ \ \ \ \ \ \ \ uint8\_t\ TID,\ mcode,\ mparm,\ cmdlen,\ log\_seq;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00204}00204\ \ \ \ \ \ \ \ \ uint8\_t\ host\_display\_ack\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00205}00205\ \ \ \ \ \ \ \ \ D\_CODES\ info,\ help\_temp;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00206}00206\ \ \ \ \ \ \ \ \ uint16\_t\ ceid;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00207}00207\ \ \ \ \ \ \ \ \ uint16\_t\ log\_num;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00208}00208\ \ \ \ \ \}\ \mbox{\hyperlink{structterminal__type}{terminal\_type}};}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00209}00209\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00210}00210\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00211}00211\ \ \ \ \ \ \ \ \ UI\_STATE\_INIT\ =\ 0,}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00212}00212\ \ \ \ \ \ \ \ \ UI\_STATE\_HOST,}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00213}00213\ \ \ \ \ \ \ \ \ UI\_STATE\_DEBUG,}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00214}00214\ \ \ \ \ \ \ \ \ UI\_STATE\_LOG,}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00215}00215\ \ \ \ \ \ \ \ \ UI\_STATE\_MON,}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00216}00216\ \ \ \ \ \ \ \ \ UI\_STATE\_ERROR}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00217}00217\ \ \ \ \ \}\ UI\_STATES;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00218}00218\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00219}00219\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00220}00220\ \ \ \ \ \ \ \ \ SW\_OFF\ =\ 0,}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00221}00221\ \ \ \ \ \ \ \ \ SW\_ON,}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00222}00222\ \ \ \ \ \ \ \ \ SW\_INVALID,}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00223}00223\ \ \ \ \ \}\ SW\_STATES;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00224}00224\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00225}00225\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00226}00226\ \ \ \ \ \ \ \ \ S0\ =\ 0,}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00227}00227\ \ \ \ \ \ \ \ \ S1\ =\ 1,}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00228}00228\ \ \ \ \ \ \ \ \ SSELECT\ =\ 2,}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00229}00229\ \ \ \ \ \ \ \ \ SENTER\ =\ 3,}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00230}00230\ \ \ \ \ \ \ \ \ SCALIB\ =\ 4,}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00231}00231\ \ \ \ \ \ \ \ \ S5,}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00232}00232\ \ \ \ \ \ \ \ \ S6,}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00233}00233\ \ \ \ \ \ \ \ \ SNULL,}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00234}00234\ \ \ \ \ \}\ SW\_NAMES;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00235}00235\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00236}\mbox{\hyperlink{structV__data}{00236}}\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structV__data}{V\_data}}\ \{\ \textcolor{comment}{//\ control\ data\ structure}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00237}00237\ \ \ \ \ \ \ \ \ UI\_STATES\ ui\_state;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00238}00238\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ buf[64],\ info[64],\ rbuf[16];}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00239}00239\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ time\_t\ ticks,\ blight,\ ac\_time;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00240}00240\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ int8\_t\ testing;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00241}00241\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ sys\_info\ :\ 1,\ ac\_on\ :\ 1,\ ac\_off\ :\ 1,\ time\_info\ :\ 1,\ get\_time\_text\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00242}00242\ \ \ \ \ \ \ \ \ uint8\_t\ error,\ abort,\ msg\_error,\ msg\_ret,\ alarm,\ float\_ticks,\ boost\_ticks,\ wdt\_ticks;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00243}00243\ \ \ \ \ \ \ \ \ UI\_STATES\ ui\_sw;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00244}00244\ \ \ \ \ \ \ \ \ uint16\_t\ r\_checksum,\ t\_checksum,\ checksum\_error,\ mode\_pwm,\ sequences,\ all\_errors;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00245}00245\ \ \ \ \ \ \ \ \ uint8\_t\ set\_sequ\ :\ 1,\ debug\ :\ 1,\ help\ :\ 1,\ stack\ :\ 3,\ help\_id\ :\ 2,\ screen\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00246}00246\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structterminal__type}{terminal\_type}}\ response;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00247}00247\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ ticker,\ cc\_state;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00248}00248\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ flipper,\ calib,\ enter,\ sensor\_set,\ fixup,\ cc\_active;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00249}00249\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{bool}\ system\_stable,\ blight\_off,\ in\_float,\ in\_boost;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00250}00250\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ lowint\_count,\ timerint\_count,\ tx\_count,\ rx\_count,\ adc\_count,\ spi\_count,\ switch\_count;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00251}00251\ \ \ \ \ \}\ \mbox{\hyperlink{structV__data}{V\_data}};}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00252}00252\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00253}\mbox{\hyperlink{structV__help}{00253}}\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structV__help}{V\_help}}\ \{}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00254}00254\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ message[22],\ display[22];}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00255}00255\ \ \ \ \ \}\ \mbox{\hyperlink{structV__help}{V\_help}};}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00256}00256\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00257}00257\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ hist[x].h[x]}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00258}00258\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h0\ \ Real\ Ah\ usage\ this\ cycle}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00259}00259\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h1\ \ Total\ charge\ cycles\ into\ at\ least\ boost}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00260}00260\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h2\ \ Current\ lowest\ discharge,}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00261}00261\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h3\ \ PV\ ah\ total}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00262}00262\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h4\ \ Batt\ W\ out}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00263}00263\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h5\ \ Batt\ W\ in}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00264}00264\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h6\ \ Real\ Ah\ usage}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00265}00265\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h7\ \ Batt\ Voltage\ full\ load}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00266}00266\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h8\ \ Batt\ Voltage\ one\ load}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00267}00267\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h9\ \ Lowest\ ESR}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00268}00268\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h10\ Highest\ ESR}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00269}00269\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h11\ Total\ charge\ cycles\ into\ float}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00270}00270\ \textcolor{comment}{\ \ \ \ \ *\ \ \ \ \ \ h12\ Total\ kWH\ in}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00271}00271\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00272}00272\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00273}\mbox{\hyperlink{structhist__type}{00273}}\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structhist__type}{hist\_type}}\ \{}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00274}00274\ \ \ \ \ \ \ \ \ int32\_t\ pv\_eff,\ tot\_eff;\ \textcolor{comment}{//\ pv\ generation\ eff\ factor,\ total\ system\ eff\ factor}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00275}00275\ \ \ \ \ \ \ \ \ uint32\_t\ ttg\_t,\ updates;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00276}00276\ \ \ \ \ \ \ \ \ time\_t\ pclock;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00277}00277\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ peukert,\ cef,\ peukert\_adj,\ cef\_calc,\ cef\_save;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00278}00278\ \ \ \ \ \ \ \ \ int16\_t\ h[HPARAM\_SIZE];\ \textcolor{comment}{//\ h[6]=cumulative\ battery\ Ah\ cc\ and\ inv\ (real),h[0]=cumulative\ battery\ Ah\ cc\ and\ inv\ (p\_adj)}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00279}00279\ \ \ \ \ \ \ \ \ uint16\_t\ rate,\ udod,\ bsoc,\ bound\_rate,\ bound\_factor,\ samplei,\ sampleo,\ ah,\ drate,\ esr,\ rest\_rate,\ rest\_factor,\ esrp;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00280}00280\ \ \ \ \ \ \ \ \ uint8\_t\ version;}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00281}00281\ \ \ \ \ \}\ \mbox{\hyperlink{structhist__type}{hist\_type}};}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00282}00282\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00283}00283\ \textcolor{preprocessor}{\#ifdef\ \ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00284}00284\ \}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00285}00285\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00286}00286\ }
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00287}00287\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ VCONFIG\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{vconfig_8h_source_l00288}00288\ }
 
 \end{DoxyCode}

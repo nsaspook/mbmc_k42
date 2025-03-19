@@ -1,124 +1,124 @@
 \doxysection{mbmc.\+h}
 \hypertarget{mbmc_8h_source}{}\label{mbmc_8h_source}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{comment}{/*\ Microchip\ Technology\ Inc.\ and\ its\ subsidiaries.\ \ You\ may\ use\ this\ software}}
-\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ and\ any\ derivatives\ exclusively\ with\ Microchip\ products.}}
-\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ THIS\ SOFTWARE\ IS\ SUPPLIED\ BY\ MICROCHIP\ "{}AS\ IS"{}.\ \ NO\ WARRANTIES,\ WHETHER}}
-\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ EXPRESS,\ IMPLIED\ OR\ STATUTORY,\ APPLY\ TO\ THIS\ SOFTWARE,\ INCLUDING\ ANY\ IMPLIED}}
-\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ WARRANTIES\ OF\ NON-\/INFRINGEMENT,\ MERCHANTABILITY,\ AND\ FITNESS\ FOR\ A}}
-\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ PARTICULAR\ PURPOSE,\ OR\ ITS\ INTERACTION\ WITH\ MICROCHIP\ PRODUCTS,\ COMBINATION}}
-\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ WITH\ ANY\ OTHER\ PRODUCTS,\ OR\ USE\ IN\ ANY\ APPLICATION.}}
-\DoxyCodeLine{00009\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ IN\ NO\ EVENT\ WILL\ MICROCHIP\ BE\ LIABLE\ FOR\ ANY\ INDIRECT,\ SPECIAL,\ PUNITIVE,}}
-\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ INCIDENTAL\ OR\ CONSEQUENTIAL\ LOSS,\ DAMAGE,\ COST\ OR\ EXPENSE\ OF\ ANY\ KIND}}
-\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ WHATSOEVER\ RELATED\ TO\ THE\ SOFTWARE,\ HOWEVER\ CAUSED,\ EVEN\ IF\ MICROCHIP\ HAS}}
-\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ BEEN\ ADVISED\ OF\ THE\ POSSIBILITY\ OR\ THE\ DAMAGES\ ARE\ FORESEEABLE.\ \ TO\ THE}}
-\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ FULLEST\ EXTENT\ ALLOWED\ BY\ LAW,\ MICROCHIP'S\ TOTAL\ LIABILITY\ ON\ ALL\ CLAIMS}}
-\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ IN\ ANY\ WAY\ RELATED\ TO\ THIS\ SOFTWARE\ WILL\ NOT\ EXCEED\ THE\ AMOUNT\ OF\ FEES,\ IF}}
-\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ ANY,\ THAT\ YOU\ HAVE\ PAID\ DIRECTLY\ TO\ MICROCHIP\ FOR\ THIS\ SOFTWARE.}}
-\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ MICROCHIP\ PROVIDES\ THIS\ SOFTWARE\ CONDITIONALLY\ UPON\ YOUR\ ACCEPTANCE\ OF\ THESE}}
-\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ TERMS.}}
-\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ \textcolor{comment}{/*}}
-\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ File:}}
-\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ Author:}}
-\DoxyCodeLine{00025\ \textcolor{comment}{\ *\ Comments:}}
-\DoxyCodeLine{00026\ \textcolor{comment}{\ *\ Revision\ history:}}
-\DoxyCodeLine{00027\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \textcolor{comment}{//\ This\ is\ a\ guard\ condition\ so\ that\ contents\ of\ this\ file\ are\ not\ included}}
-\DoxyCodeLine{00030\ \textcolor{comment}{//\ more\ than\ once.}}
-\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#ifndef\ MBMC\_H}}
-\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ MBMC\_H}}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <xc.h>}\ \textcolor{comment}{//\ include\ processor\ files\ -\/\ each\ processor\ file\ is\ guarded.}}
-\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <time.h>}}
-\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ "{}vconfig.h"{}}}
-\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ "{}daq.h"{}}}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{structV__data}{V\_data}}\ V;}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ LOCALTIME\_OFFSET\ \ \ \ 60ul*60ul*(-\/8ul)}}
-\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ LP\_BUFFER\_SIZE\ \ ADC\_BUFFER\_SIZE+8}}
-\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ STATIC\_LOAD\_POWER\ \ \ 14.00f}}
-\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ BANKAH\ \ 200.0f\ \ }\textcolor{comment}{//\ baatery\ bank\ label\ Ah}}
-\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ DEGRADE\ 25.0f\ \ \ }\textcolor{comment}{//\ adjust\ to\ what\ the\ battery\ bank\ Ah\ really\ is}}
-\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ SSLICE\ \ 3600.0f\ }\textcolor{comment}{//\ samples\ per\ hour}}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#ifdef\ DEBUG\_HIST1}}
-\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ DUPDATE\ 600\ }\textcolor{comment}{//\ after\ dark\ update\ time\ offset}}
-\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ DUPDATE\ 14400\ }\textcolor{comment}{//\ after\ dark\ update\ time\ offset}}
-\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ BLOAD1\ \ \ \ \ \ 10.0f\ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ load\ resistor\ in\ ohms}}
-\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ BLOAD2\ \ \ \ \ \ 2.5f\ \ \ \ \ \ \ \ }\textcolor{comment}{//\ ditto}}
-\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ MAX\_LOAD\_TIME\ \ \ 75}}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ ROR\_LIMIT\_LOW\ \ \ 0.0140f}}
-\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ ROR\_LIMIT\_SET\ \ \ 0.0001f}}
-\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ ROR\_LIMIT\_NOISE\ 0.0051f}}
-\DoxyCodeLine{00061\ }
-\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ ROR\_WAIT\ \ \ \ 20}}
-\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ ROR\_TIMES\ \ \ 1}}
-\DoxyCodeLine{00064\ }
-\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ DAWN\_VOLTS\ \ 22.0f}}
-\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ DUSK\_VOLTS\ \ 12.0f}}
-\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ BRIGHT\_VOLTS\ \ \ \ 50.0f}}
-\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ BAT\_LOW\_VOLTS\ \ \ 21.5f}}
-\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ BAT\_DEAD\_VOLTS\ \ 18.0f}}
-\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ MAX\_AC\_TIME\ 60*60*4\ }\textcolor{comment}{//\ AC\ charger\ max\ runtime\ per\ trigger}}
-\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ DAY\_DELAY\ \ \ 240}}
-\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ SOC\_TOO\_LOW\ 20}}
-\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ SOC\_CRITICAL\ \ \ \ 3}}
-\DoxyCodeLine{00074\ }
-\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ CEF\ \ \ \ \ 1.0f}}
-\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ PEUKERT\ \ \ \ \ 1.0f}}
-\DoxyCodeLine{00077\ }
-\DoxyCodeLine{00078\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structC__data}{C\_data}}\ \{\ \textcolor{comment}{//\ real\ calculated\ variables}}
-\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{float}\ calc[ADC\_BUFFER\_SIZE];}
-\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{float}\ c\_load,\ c\_bat,\ c\_pv,\ c\_mppt,\ v\_cc,\ v\_pv,\ v\_bat,\ v\_cbus,\ v\_bbat,\ v\_temp,\ v\_inverter,\ v\_sensor,\ v\_cmode,\ bv\_ror,\ bc\_ror;}
-\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{float}\ p\_load,\ p\_inverter,\ p\_pv,\ p\_bat,\ p\_mppt,\ start\_power;}
-\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{float}\ t\_comp,\ esr;}
-\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{float}\ bank\_ah,\ dynamic\_ah,\ pv\_ah,\ loadah,\ dynamic\_ah\_adj,\ dynamic\_ah\_daily,\ dynamic\_ah\_adj\_daily;}
-\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{float}\ bkwi,\ bkwo,\ pvkw,\ invkw,\ loadkw;}
-\DoxyCodeLine{00085\ \ \ \ \ uint16\_t\ runtime,\ soc;}
-\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{bool}\ update;}
-\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{structhist__type}{hist\_type}}\ hist[1];}
-\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{float}\ load\_i1,\ load\_i2,\ bv\_noload,\ bv\_one\_load,\ bv\_full\_load;}
-\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{bool}\ day,\ dupdate;}
-\DoxyCodeLine{00090\ \ \ \ \ time\_t\ day\_start,\ day\_end,\ day\_update,\ updates;}
-\DoxyCodeLine{00091\ \}\ \mbox{\hyperlink{structC__data}{C\_data}};}
-\DoxyCodeLine{00092\ }
-\DoxyCodeLine{00093\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
-\DoxyCodeLine{00094\ \ \ \ \ WIDE\_ZERO\ =\ 1,}
-\DoxyCodeLine{00095\ \ \ \ \ NO\_NEG\ =\ 2,}
-\DoxyCodeLine{00096\ \ \ \ \ WIDE\_NEG\ =\ 4,}
-\DoxyCodeLine{00097\ \ \ \ \ SKIP\ =\ 8,}
-\DoxyCodeLine{00098\ \}\ FIX\_CODES;}
-\DoxyCodeLine{00099\ }
-\DoxyCodeLine{00100\ \textcolor{keyword}{extern}\ \textcolor{keyword}{volatile}\ \mbox{\hyperlink{structC__data}{C\_data}}\ C;}
-\DoxyCodeLine{00101\ }
-\DoxyCodeLine{00102\ \textcolor{keywordtype}{float}\ lp\_filter(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float},\ \textcolor{keyword}{const}\ uint8\_t,\ \textcolor{keyword}{const}\ int8\_t);}
-\DoxyCodeLine{00103\ \textcolor{keywordtype}{void}\ convert\_adc\_data(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{00104\ \textcolor{keywordtype}{void}\ calc\_model\_data(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{00105\ \textcolor{keywordtype}{void}\ calc\_ror\_data(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{00106\ \textcolor{keywordtype}{void}\ static\_soc(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{00107\ \textcolor{keywordtype}{void}\ set\_load\_relay\_zero(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool});}
-\DoxyCodeLine{00108\ \textcolor{keywordtype}{void}\ set\_load\_relay\_one(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool});}
-\DoxyCodeLine{00109\ \textcolor{keywordtype}{void}\ set\_load\_relay\_two(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool});}
-\DoxyCodeLine{00110\ \textcolor{keywordtype}{void}\ set\_ac\_charger\_relay(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool});}
-\DoxyCodeLine{00111\ \textcolor{keywordtype}{bool}\ get\_ac\_charger\_relay(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{00112\ \textcolor{keywordtype}{bool}\ check\_day\_time(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{00113\ \textcolor{keywordtype}{void}\ load\_hist\_data(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{00114\ \textcolor{keywordtype}{float}\ calc\_fixups(\textcolor{keywordtype}{float}\ data,\ FIX\_CODES\ fixup);}
-\DoxyCodeLine{00115\ }
-\DoxyCodeLine{00116\ \textcolor{keywordtype}{char}\ spinners(uint8\_t,\ uint8\_t);}
-\DoxyCodeLine{00117\ time\_t\ time(time\_t\ *);}
-\DoxyCodeLine{00118\ \textcolor{keywordtype}{void}\ set\_time(\textcolor{keyword}{const}\ time\_t\ t);}
-\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00001}00001\ \textcolor{comment}{/*\ Microchip\ Technology\ Inc.\ and\ its\ subsidiaries.\ \ You\ may\ use\ this\ software}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00002}00002\ \textcolor{comment}{\ *\ and\ any\ derivatives\ exclusively\ with\ Microchip\ products.}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00004}00004\ \textcolor{comment}{\ *\ THIS\ SOFTWARE\ IS\ SUPPLIED\ BY\ MICROCHIP\ "{}AS\ IS"{}.\ \ NO\ WARRANTIES,\ WHETHER}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00005}00005\ \textcolor{comment}{\ *\ EXPRESS,\ IMPLIED\ OR\ STATUTORY,\ APPLY\ TO\ THIS\ SOFTWARE,\ INCLUDING\ ANY\ IMPLIED}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00006}00006\ \textcolor{comment}{\ *\ WARRANTIES\ OF\ NON-\/INFRINGEMENT,\ MERCHANTABILITY,\ AND\ FITNESS\ FOR\ A}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00007}00007\ \textcolor{comment}{\ *\ PARTICULAR\ PURPOSE,\ OR\ ITS\ INTERACTION\ WITH\ MICROCHIP\ PRODUCTS,\ COMBINATION}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00008}00008\ \textcolor{comment}{\ *\ WITH\ ANY\ OTHER\ PRODUCTS,\ OR\ USE\ IN\ ANY\ APPLICATION.}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00009}00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00010}00010\ \textcolor{comment}{\ *\ IN\ NO\ EVENT\ WILL\ MICROCHIP\ BE\ LIABLE\ FOR\ ANY\ INDIRECT,\ SPECIAL,\ PUNITIVE,}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00011}00011\ \textcolor{comment}{\ *\ INCIDENTAL\ OR\ CONSEQUENTIAL\ LOSS,\ DAMAGE,\ COST\ OR\ EXPENSE\ OF\ ANY\ KIND}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00012}00012\ \textcolor{comment}{\ *\ WHATSOEVER\ RELATED\ TO\ THE\ SOFTWARE,\ HOWEVER\ CAUSED,\ EVEN\ IF\ MICROCHIP\ HAS}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00013}00013\ \textcolor{comment}{\ *\ BEEN\ ADVISED\ OF\ THE\ POSSIBILITY\ OR\ THE\ DAMAGES\ ARE\ FORESEEABLE.\ \ TO\ THE}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00014}00014\ \textcolor{comment}{\ *\ FULLEST\ EXTENT\ ALLOWED\ BY\ LAW,\ MICROCHIP'S\ TOTAL\ LIABILITY\ ON\ ALL\ CLAIMS}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00015}00015\ \textcolor{comment}{\ *\ IN\ ANY\ WAY\ RELATED\ TO\ THIS\ SOFTWARE\ WILL\ NOT\ EXCEED\ THE\ AMOUNT\ OF\ FEES,\ IF}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00016}00016\ \textcolor{comment}{\ *\ ANY,\ THAT\ YOU\ HAVE\ PAID\ DIRECTLY\ TO\ MICROCHIP\ FOR\ THIS\ SOFTWARE.}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00017}00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00018}00018\ \textcolor{comment}{\ *\ MICROCHIP\ PROVIDES\ THIS\ SOFTWARE\ CONDITIONALLY\ UPON\ YOUR\ ACCEPTANCE\ OF\ THESE}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00019}00019\ \textcolor{comment}{\ *\ TERMS.}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00020}00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00022}00022\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00023}00023\ \textcolor{comment}{\ *\ File:}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00024}00024\ \textcolor{comment}{\ *\ Author:}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00025}00025\ \textcolor{comment}{\ *\ Comments:}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00026}00026\ \textcolor{comment}{\ *\ Revision\ history:}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00027}00027\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00029}00029\ \textcolor{comment}{//\ This\ is\ a\ guard\ condition\ so\ that\ contents\ of\ this\ file\ are\ not\ included}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00030}00030\ \textcolor{comment}{//\ more\ than\ once.}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00031}00031\ \textcolor{preprocessor}{\#ifndef\ MBMC\_H}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00032}00032\ \textcolor{preprocessor}{\#define\ MBMC\_H}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00034}00034\ \textcolor{preprocessor}{\#include\ <xc.h>}\ \textcolor{comment}{//\ include\ processor\ files\ -\/\ each\ processor\ file\ is\ guarded.}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00035}00035\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00036}00036\ \textcolor{preprocessor}{\#include\ "{}vconfig.h"{}}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00037}00037\ \textcolor{preprocessor}{\#include\ "{}daq.h"{}}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00039}00039\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{structV__data}{V\_data}}\ V;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00041}00041\ \textcolor{preprocessor}{\#define\ LOCALTIME\_OFFSET\ \ \ \ 60ul*60ul*(-\/8ul)}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00042}00042\ \textcolor{preprocessor}{\#define\ LP\_BUFFER\_SIZE\ \ ADC\_BUFFER\_SIZE+8}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00043}00043\ \textcolor{preprocessor}{\#define\ STATIC\_LOAD\_POWER\ \ \ 14.00f}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00044}00044\ \textcolor{preprocessor}{\#define\ BANKAH\ \ 200.0f\ \ }\textcolor{comment}{//\ baatery\ bank\ label\ Ah}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00045}00045\ \textcolor{preprocessor}{\#define\ DEGRADE\ 25.0f\ \ \ }\textcolor{comment}{//\ adjust\ to\ what\ the\ battery\ bank\ Ah\ really\ is}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00046}00046\ \textcolor{preprocessor}{\#define\ SSLICE\ \ 3600.0f\ }\textcolor{comment}{//\ samples\ per\ hour}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00048}00048\ \textcolor{preprocessor}{\#ifdef\ DEBUG\_HIST1}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00049}00049\ \textcolor{preprocessor}{\#define\ DUPDATE\ 600\ }\textcolor{comment}{//\ after\ dark\ update\ time\ offset}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00050}00050\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00051}00051\ \textcolor{preprocessor}{\#define\ DUPDATE\ 14400\ }\textcolor{comment}{//\ after\ dark\ update\ time\ offset}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00052}00052\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00054}00054\ \textcolor{preprocessor}{\#define\ BLOAD1\ \ \ \ \ \ 10.0f\ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ load\ resistor\ in\ ohms}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00055}00055\ \textcolor{preprocessor}{\#define\ BLOAD2\ \ \ \ \ \ 2.5f\ \ \ \ \ \ \ \ }\textcolor{comment}{//\ ditto}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00056}00056\ \textcolor{preprocessor}{\#define\ MAX\_LOAD\_TIME\ \ \ 75}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00058}00058\ \textcolor{preprocessor}{\#define\ ROR\_LIMIT\_LOW\ \ \ 0.0140f}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00059}00059\ \textcolor{preprocessor}{\#define\ ROR\_LIMIT\_SET\ \ \ 0.0001f}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00060}00060\ \textcolor{preprocessor}{\#define\ ROR\_LIMIT\_NOISE\ 0.0051f}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00062}00062\ \textcolor{preprocessor}{\#define\ ROR\_WAIT\ \ \ \ 20}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00063}00063\ \textcolor{preprocessor}{\#define\ ROR\_TIMES\ \ \ 1}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00065}00065\ \textcolor{preprocessor}{\#define\ DAWN\_VOLTS\ \ 22.0f}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00066}00066\ \textcolor{preprocessor}{\#define\ DUSK\_VOLTS\ \ 12.0f}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00067}00067\ \textcolor{preprocessor}{\#define\ BRIGHT\_VOLTS\ \ \ \ 50.0f}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00068}00068\ \textcolor{preprocessor}{\#define\ BAT\_LOW\_VOLTS\ \ \ 21.5f}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00069}00069\ \textcolor{preprocessor}{\#define\ BAT\_DEAD\_VOLTS\ \ 18.0f}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00070}00070\ \textcolor{preprocessor}{\#define\ MAX\_AC\_TIME\ 60*60*4\ }\textcolor{comment}{//\ AC\ charger\ max\ runtime\ per\ trigger}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00071}00071\ \textcolor{preprocessor}{\#define\ DAY\_DELAY\ \ \ 240}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00072}00072\ \textcolor{preprocessor}{\#define\ SOC\_TOO\_LOW\ 20}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00073}00073\ \textcolor{preprocessor}{\#define\ SOC\_CRITICAL\ \ \ \ 3}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00075}00075\ \textcolor{preprocessor}{\#define\ CEF\ \ \ \ \ 1.0f}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00076}00076\ \textcolor{preprocessor}{\#define\ PEUKERT\ \ \ \ \ 1.0f}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00078}\mbox{\hyperlink{structC__data}{00078}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structC__data}{C\_data}}\ \{\ \textcolor{comment}{//\ real\ calculated\ variables}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00079}00079\ \ \ \ \ \textcolor{keywordtype}{float}\ calc[ADC\_BUFFER\_SIZE];}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00080}00080\ \ \ \ \ \textcolor{keywordtype}{float}\ c\_load,\ c\_bat,\ c\_pv,\ c\_mppt,\ v\_cc,\ v\_pv,\ v\_bat,\ v\_cbus,\ v\_bbat,\ v\_temp,\ v\_inverter,\ v\_sensor,\ v\_cmode,\ bv\_ror,\ bc\_ror;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00081}00081\ \ \ \ \ \textcolor{keywordtype}{float}\ p\_load,\ p\_inverter,\ p\_pv,\ p\_bat,\ p\_mppt,\ start\_power;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00082}00082\ \ \ \ \ \textcolor{keywordtype}{float}\ t\_comp,\ esr;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00083}00083\ \ \ \ \ \textcolor{keywordtype}{float}\ bank\_ah,\ dynamic\_ah,\ pv\_ah,\ loadah,\ dynamic\_ah\_adj,\ dynamic\_ah\_daily,\ dynamic\_ah\_adj\_daily;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00084}00084\ \ \ \ \ \textcolor{keywordtype}{float}\ bkwi,\ bkwo,\ pvkw,\ invkw,\ loadkw;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00085}00085\ \ \ \ \ uint16\_t\ runtime,\ soc;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00086}00086\ \ \ \ \ \textcolor{keywordtype}{bool}\ update;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00087}00087\ \ \ \ \ \mbox{\hyperlink{structhist__type}{hist\_type}}\ hist[1];}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00088}00088\ \ \ \ \ \textcolor{keywordtype}{float}\ load\_i1,\ load\_i2,\ bv\_noload,\ bv\_one\_load,\ bv\_full\_load;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00089}00089\ \ \ \ \ \textcolor{keywordtype}{bool}\ day,\ dupdate;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00090}00090\ \ \ \ \ time\_t\ day\_start,\ day\_end,\ day\_update,\ updates;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00091}00091\ \}\ \mbox{\hyperlink{structC__data}{C\_data}};}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00093}00093\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00094}00094\ \ \ \ \ WIDE\_ZERO\ =\ 1,}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00095}00095\ \ \ \ \ NO\_NEG\ =\ 2,}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00096}00096\ \ \ \ \ WIDE\_NEG\ =\ 4,}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00097}00097\ \ \ \ \ SKIP\ =\ 8,}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00098}00098\ \}\ FIX\_CODES;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00100}00100\ \textcolor{keyword}{extern}\ \textcolor{keyword}{volatile}\ \mbox{\hyperlink{structC__data}{C\_data}}\ C;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00102}00102\ \textcolor{keywordtype}{float}\ lp\_filter(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float},\ \textcolor{keyword}{const}\ uint8\_t,\ \textcolor{keyword}{const}\ int8\_t);}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00103}00103\ \textcolor{keywordtype}{void}\ convert\_adc\_data(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00104}00104\ \textcolor{keywordtype}{void}\ calc\_model\_data(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00105}00105\ \textcolor{keywordtype}{void}\ calc\_ror\_data(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00106}00106\ \textcolor{keywordtype}{void}\ static\_soc(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00107}00107\ \textcolor{keywordtype}{void}\ set\_load\_relay\_zero(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool});}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00108}00108\ \textcolor{keywordtype}{void}\ set\_load\_relay\_one(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool});}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00109}00109\ \textcolor{keywordtype}{void}\ set\_load\_relay\_two(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool});}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00110}00110\ \textcolor{keywordtype}{void}\ set\_ac\_charger\_relay(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool});}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00111}00111\ \textcolor{keywordtype}{bool}\ get\_ac\_charger\_relay(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00112}00112\ \textcolor{keywordtype}{bool}\ check\_day\_time(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00113}00113\ \textcolor{keywordtype}{void}\ load\_hist\_data(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00114}00114\ \textcolor{keywordtype}{float}\ calc\_fixups(\textcolor{keywordtype}{float}\ data,\ FIX\_CODES\ fixup);}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00116}00116\ \textcolor{keywordtype}{char}\ spinners(uint8\_t,\ uint8\_t);}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00117}00117\ time\_t\ time(time\_t\ *);}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00118}00118\ \textcolor{keywordtype}{void}\ set\_time(\textcolor{keyword}{const}\ time\_t\ t);}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00119}00119\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

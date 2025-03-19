@@ -1,86 +1,743 @@
 \begin{theindex}
 
+  \item {abort}
+    \subitem {V\_data}, \hyperpage{37}
+  \item {ac\_off}
+    \subitem {V\_data}, \hyperpage{37}
+  \item {ac\_on}
+    \subitem {V\_data}, \hyperpage{37}
+  \item {ac\_time}
+    \subitem {V\_data}, \hyperpage{37}
+  \item {adc\_count}
+    \subitem {V\_data}, \hyperpage{37}
+  \item {ah}
+    \subitem {hist\_type}, \hyperpage{19}
+  \item {alarm}
+    \subitem {V\_data}, \hyperpage{37}
+  \item {all\_errors}
+    \subitem {V\_data}, \hyperpage{37}
+
+  \indexspace
+
+  \item {bank\_ah}
+    \subitem {C\_data}, \hyperpage{7}
+  \item {baud}
+    \subitem {spi1\_configuration\_t}, \hyperpage{29}
+  \item {bc\_ror}
+    \subitem {C\_data}, \hyperpage{7}
+  \item {bd}
+    \subitem {bytes2}, \hyperpage{5}
+    \subitem {dac\_buf\_type}, \hyperpage{16}
+  \item {bkwi}
+    \subitem {C\_data}, \hyperpage{7}
+  \item {bkwo}
+    \subitem {C\_data}, \hyperpage{7}
+  \item {blight}
+    \subitem {V\_data}, \hyperpage{38}
+  \item {blight\_off}
+    \subitem {V\_data}, \hyperpage{38}
+  \item {boost\_ticks}
+    \subitem {V\_data}, \hyperpage{38}
+  \item {bound\_factor}
+    \subitem {hist\_type}, \hyperpage{19}
+  \item {bound\_rate}
+    \subitem {hist\_type}, \hyperpage{19}
+  \item {bsoc}
+    \subitem {hist\_type}, \hyperpage{20}
+  \item {buf}
+    \subitem {ringBufS\_t}, \hyperpage{26}
+    \subitem {V\_data}, \hyperpage{38}
+  \item {button}
+    \subitem {S\_data}, \hyperpage{28}
+  \item {bv\_full\_load}
+    \subitem {C\_data}, \hyperpage{7}
+  \item {bv\_noload}
+    \subitem {C\_data}, \hyperpage{8}
+  \item {bv\_one\_load}
+    \subitem {C\_data}, \hyperpage{8}
+  \item {bv\_ror}
+    \subitem {C\_data}, \hyperpage{8}
   \item {bytes2}, \hyperpage{5}
+    \subitem {bd}, \hyperpage{5}
+    \subitem {ld}, \hyperpage{5}
 
   \indexspace
 
-  \item {C\_data}, \hyperpage{5}
-  \item {cJSON}, \hyperpage{7}
-  \item {cjson/cJSON.h}, \hyperpage{20}
-  \item {cjson/cJSON\_Utils.h}, \hyperpage{24}
-  \item {cJSON\_Hooks}, \hyperpage{7}
-  \item {CRC\_OBJ}, \hyperpage{7}
+  \item {c\_bat}
+    \subitem {C\_data}, \hyperpage{8}
+  \item {C\_data}, \hyperpage{6}
+    \subitem {bank\_ah}, \hyperpage{7}
+    \subitem {bc\_ror}, \hyperpage{7}
+    \subitem {bkwi}, \hyperpage{7}
+    \subitem {bkwo}, \hyperpage{7}
+    \subitem {bv\_full\_load}, \hyperpage{7}
+    \subitem {bv\_noload}, \hyperpage{8}
+    \subitem {bv\_one\_load}, \hyperpage{8}
+    \subitem {bv\_ror}, \hyperpage{8}
+    \subitem {c\_bat}, \hyperpage{8}
+    \subitem {c\_load}, \hyperpage{8}
+    \subitem {c\_mppt}, \hyperpage{8}
+    \subitem {c\_pv}, \hyperpage{8}
+    \subitem {calc}, \hyperpage{8}
+    \subitem {day}, \hyperpage{9}
+    \subitem {day\_end}, \hyperpage{9}
+    \subitem {day\_start}, \hyperpage{9}
+    \subitem {day\_update}, \hyperpage{9}
+    \subitem {dupdate}, \hyperpage{9}
+    \subitem {dynamic\_ah}, \hyperpage{9}
+    \subitem {dynamic\_ah\_adj}, \hyperpage{9}
+    \subitem {dynamic\_ah\_adj\_daily}, \hyperpage{9}
+    \subitem {dynamic\_ah\_daily}, \hyperpage{10}
+    \subitem {esr}, \hyperpage{10}
+    \subitem {hist}, \hyperpage{10}
+    \subitem {invkw}, \hyperpage{10}
+    \subitem {load\_i1}, \hyperpage{10}
+    \subitem {load\_i2}, \hyperpage{10}
+    \subitem {loadah}, \hyperpage{10}
+    \subitem {loadkw}, \hyperpage{10}
+    \subitem {p\_bat}, \hyperpage{11}
+    \subitem {p\_inverter}, \hyperpage{11}
+    \subitem {p\_load}, \hyperpage{11}
+    \subitem {p\_mppt}, \hyperpage{11}
+    \subitem {p\_pv}, \hyperpage{11}
+    \subitem {pv\_ah}, \hyperpage{11}
+    \subitem {pvkw}, \hyperpage{11}
+    \subitem {runtime}, \hyperpage{11}
+    \subitem {soc}, \hyperpage{12}
+    \subitem {start\_power}, \hyperpage{12}
+    \subitem {t\_comp}, \hyperpage{12}
+    \subitem {update}, \hyperpage{12}
+    \subitem {updates}, \hyperpage{12}
+    \subitem {v\_bat}, \hyperpage{12}
+    \subitem {v\_bbat}, \hyperpage{12}
+    \subitem {v\_cbus}, \hyperpage{12}
+    \subitem {v\_cc}, \hyperpage{13}
+    \subitem {v\_cmode}, \hyperpage{13}
+    \subitem {v\_inverter}, \hyperpage{13}
+    \subitem {v\_pv}, \hyperpage{13}
+    \subitem {v\_sensor}, \hyperpage{13}
+    \subitem {v\_temp}, \hyperpage{13}
+  \item {c\_load}
+    \subitem {C\_data}, \hyperpage{8}
+  \item {c\_mppt}
+    \subitem {C\_data}, \hyperpage{8}
+  \item {c\_pv}
+    \subitem {C\_data}, \hyperpage{8}
+  \item {c\_scale\_cal}
+    \subitem {R\_data}, \hyperpage{23}
+  \item {c\_zero\_cal}
+    \subitem {R\_data}, \hyperpage{23}
+  \item {calc}
+    \subitem {C\_data}, \hyperpage{8}
+  \item {calib}
+    \subitem {V\_data}, \hyperpage{38}
+  \item {calib\_p}
+    \subitem {H\_data}, \hyperpage{17}
+  \item {cc\_active}
+    \subitem {V\_data}, \hyperpage{38}
+  \item {cc\_state}
+    \subitem {V\_data}, \hyperpage{38}
+  \item {cef}
+    \subitem {hist\_type}, \hyperpage{20}
+  \item {cef\_calc}
+    \subitem {hist\_type}, \hyperpage{20}
+  \item {cef\_save}
+    \subitem {hist\_type}, \hyperpage{20}
+  \item {ceid}
+    \subitem {terminal\_type}, \hyperpage{31}
+  \item {checkmark}
+    \subitem {R\_data}, \hyperpage{24}
+  \item {checksum\_error}
+    \subitem {V\_data}, \hyperpage{38}
+  \item {cmdlen}
+    \subitem {terminal\_type}, \hyperpage{31}
+  \item {con0}
+    \subitem {spi1\_configuration\_t}, \hyperpage{29}
+  \item {con1}
+    \subitem {spi1\_configuration\_t}, \hyperpage{29}
+  \item {con2}
+    \subitem {spi1\_configuration\_t}, \hyperpage{29}
+  \item {config}
+    \subitem {spi\_link\_type}, \hyperpage{30}
+  \item {cont}
+    \subitem {D\_data}, \hyperpage{15}
+  \item {count}
+    \subitem {rbutton\_type}, \hyperpage{26}
+    \subitem {ringBufS\_t}, \hyperpage{26}
+  \item {crc}
+    \subitem {R\_data}, \hyperpage{24}
+  \item {CRC\_OBJ}, \hyperpage{14}
+    \subitem {dataWidth}, \hyperpage{14}
+    \subitem {polyWidth}, \hyperpage{14}
+    \subitem {seedDirection}, \hyperpage{14}
 
   \indexspace
 
-  \item {D\_data}, \hyperpage{8}
-  \item {dac\_buf\_type}, \hyperpage{8}
+  \item {D\_data}, \hyperpage{15}
+    \subitem {cont}, \hyperpage{15}
+    \subitem {dac0}, \hyperpage{15}
+    \subitem {dac1}, \hyperpage{15}
+    \subitem {last\_info}, \hyperpage{15}
+    \subitem {lcd}, \hyperpage{15}
+    \subitem {vterm}, \hyperpage{15}
+  \item {dac0}
+    \subitem {D\_data}, \hyperpage{15}
+  \item {dac1}
+    \subitem {D\_data}, \hyperpage{15}
+  \item {dac\_buf\_type}, \hyperpage{16}
+    \subitem {bd}, \hyperpage{16}
+    \subitem {ld}, \hyperpage{16}
+    \subitem {map}, \hyperpage{17}
+  \item {dataWidth}
+    \subitem {CRC\_OBJ}, \hyperpage{14}
+  \item {day}
+    \subitem {C\_data}, \hyperpage{9}
+  \item {day\_end}
+    \subitem {C\_data}, \hyperpage{9}
+  \item {day\_start}
+    \subitem {C\_data}, \hyperpage{9}
+  \item {day\_update}
+    \subitem {C\_data}, \hyperpage{9}
+  \item {debug}
+    \subitem {V\_data}, \hyperpage{39}
+  \item {delay}
+    \subitem {spi\_link\_type}, \hyperpage{30}
+  \item {display}
+    \subitem {V\_help}, \hyperpage{44}
+  \item {done}
+    \subitem {R\_data}, \hyperpage{24}
+  \item {drate}
+    \subitem {hist\_type}, \hyperpage{20}
+  \item {dupdate}
+    \subitem {C\_data}, \hyperpage{9}
+  \item {dynamic\_ah}
+    \subitem {C\_data}, \hyperpage{9}
+  \item {dynamic\_ah\_adj}
+    \subitem {C\_data}, \hyperpage{9}
+  \item {dynamic\_ah\_adj\_daily}
+    \subitem {C\_data}, \hyperpage{9}
+  \item {dynamic\_ah\_daily}
+    \subitem {C\_data}, \hyperpage{10}
 
   \indexspace
 
-  \item {error}, \hyperpage{9}
+  \item {enter}
+    \subitem {V\_data}, \hyperpage{39}
+  \item {enter\_p}
+    \subitem {H\_data}, \hyperpage{17}
+  \item {error}
+    \subitem {V\_data}, \hyperpage{39}
+  \item {esr}
+    \subitem {C\_data}, \hyperpage{10}
+    \subitem {hist\_type}, \hyperpage{20}
+  \item {esrp}
+    \subitem {hist\_type}, \hyperpage{20}
 
   \indexspace
 
-  \item {H\_data}, \hyperpage{9}
-  \item {hist\_type}, \hyperpage{10}
+  \item {ferr}
+    \subitem {uart1\_status\_t}, \hyperpage{33}
+    \subitem {uart2\_status\_t}, \hyperpage{35}
+  \item {fixup}
+    \subitem {V\_data}, \hyperpage{39}
+  \item {flipper}
+    \subitem {V\_data}, \hyperpage{39}
+  \item {float\_ticks}
+    \subitem {V\_data}, \hyperpage{39}
 
   \indexspace
 
-  \item {internal\_hooks}, \hyperpage{10}
+  \item {get\_time\_text}
+    \subitem {V\_data}, \hyperpage{39}
 
   \indexspace
 
-  \item {mcc\_generated\_files/adcc.h}, \hyperpage{32}
-  \item {mcc\_generated\_files/clkref.h}, \hyperpage{34}
-  \item {mcc\_generated\_files/crc.h}, \hyperpage{34}
-  \item {mcc\_generated\_files/device\_config.h}, \hyperpage{35}
-  \item {mcc\_generated\_files/dma1.h}, \hyperpage{36}
-  \item {mcc\_generated\_files/dma2.h}, \hyperpage{36}
-  \item {mcc\_generated\_files/ext\_int.h}, \hyperpage{37}
-  \item {mcc\_generated\_files/fvr.h}, \hyperpage{38}
-  \item {mcc\_generated\_files/interrupt\_manager.h}, \hyperpage{39}
-  \item {mcc\_generated\_files/mcc.h}, \hyperpage{40}
-  \item {mcc\_generated\_files/memory.h}, \hyperpage{40}
-  \item {mcc\_generated\_files/pin\_manager.h}, \hyperpage{41}
-  \item {mcc\_generated\_files/pwm8.h}, \hyperpage{51}
-  \item {mcc\_generated\_files/spi1.h}, \hyperpage{51}
-  \item {mcc\_generated\_files/tmr2.h}, \hyperpage{52}
-  \item {mcc\_generated\_files/tmr3.h}, \hyperpage{56}
-  \item {mcc\_generated\_files/tmr5.h}, \hyperpage{57}
-  \item {mcc\_generated\_files/tmr6.h}, \hyperpage{57}
-  \item {mcc\_generated\_files/uart1.h}, \hyperpage{61}
-  \item {mcc\_generated\_files/uart2.h}, \hyperpage{63}
+  \item {H}
+    \subitem {R\_data}, \hyperpage{24}
+  \item {h}
+    \subitem {hist\_type}, \hyperpage{20}
+  \item {H\_data}, \hyperpage{17}
+    \subitem {calib\_p}, \hyperpage{17}
+    \subitem {enter\_p}, \hyperpage{17}
+    \subitem {h\_state}, \hyperpage{17}
+    \subitem {hid\_display}, \hyperpage{18}
+    \subitem {select\_p}, \hyperpage{18}
+    \subitem {sequence}, \hyperpage{18}
+    \subitem {wait\_calib}, \hyperpage{18}
+    \subitem {wait\_enter}, \hyperpage{18}
+    \subitem {wait\_select}, \hyperpage{18}
+  \item {h\_state}
+    \subitem {H\_data}, \hyperpage{17}
+  \item {head}
+    \subitem {ringBufS\_t}, \hyperpage{27}
+  \item {help}
+    \subitem {V\_data}, \hyperpage{39}
+  \item {help\_id}
+    \subitem {V\_data}, \hyperpage{40}
+  \item {help\_temp}
+    \subitem {terminal\_type}, \hyperpage{32}
+  \item {hid\_display}
+    \subitem {H\_data}, \hyperpage{18}
+  \item {hist}
+    \subitem {C\_data}, \hyperpage{10}
+  \item {hist\_save}
+    \subitem {R\_data}, \hyperpage{24}
+  \item {hist\_type}, \hyperpage{19}
+    \subitem {ah}, \hyperpage{19}
+    \subitem {bound\_factor}, \hyperpage{19}
+    \subitem {bound\_rate}, \hyperpage{19}
+    \subitem {bsoc}, \hyperpage{20}
+    \subitem {cef}, \hyperpage{20}
+    \subitem {cef\_calc}, \hyperpage{20}
+    \subitem {cef\_save}, \hyperpage{20}
+    \subitem {drate}, \hyperpage{20}
+    \subitem {esr}, \hyperpage{20}
+    \subitem {esrp}, \hyperpage{20}
+    \subitem {h}, \hyperpage{20}
+    \subitem {pclock}, \hyperpage{21}
+    \subitem {peukert}, \hyperpage{21}
+    \subitem {peukert\_adj}, \hyperpage{21}
+    \subitem {pv\_eff}, \hyperpage{21}
+    \subitem {rate}, \hyperpage{21}
+    \subitem {rest\_factor}, \hyperpage{21}
+    \subitem {rest\_rate}, \hyperpage{21}
+    \subitem {samplei}, \hyperpage{21}
+    \subitem {sampleo}, \hyperpage{22}
+    \subitem {tot\_eff}, \hyperpage{22}
+    \subitem {ttg\_t}, \hyperpage{22}
+    \subitem {udod}, \hyperpage{22}
+    \subitem {updates}, \hyperpage{22}
+    \subitem {version}, \hyperpage{22}
+  \item {hist\_update}
+    \subitem {R\_data}, \hyperpage{24}
+  \item {host\_display\_ack}
+    \subitem {terminal\_type}, \hyperpage{32}
 
   \indexspace
 
-  \item {parse\_buffer}, \hyperpage{11}
-  \item {printbuffer}, \hyperpage{11}
+  \item {in\_boost}
+    \subitem {V\_data}, \hyperpage{40}
+  \item {in\_float}
+    \subitem {V\_data}, \hyperpage{40}
+  \item {info}
+    \subitem {terminal\_type}, \hyperpage{32}
+    \subitem {V\_data}, \hyperpage{40}
+  \item {int\_count}
+    \subitem {spi\_link\_type}, \hyperpage{30}
+  \item {invkw}
+    \subitem {C\_data}, \hyperpage{10}
 
   \indexspace
 
-  \item {R\_data}, \hyperpage{12}
-  \item {rbutton\_type}, \hyperpage{13}
-  \item {ringBufS\_t}, \hyperpage{13}
+  \item {last\_info}
+    \subitem {D\_data}, \hyperpage{15}
+  \item {lcd}
+    \subitem {D\_data}, \hyperpage{15}
+  \item {LCD\_DATA}
+    \subitem {spi\_link\_type}, \hyperpage{30}
+  \item {LCD\_TIMER}
+    \subitem {spi\_link\_type}, \hyperpage{30}
+  \item {ld}
+    \subitem {bytes2}, \hyperpage{5}
+    \subitem {dac\_buf\_type}, \hyperpage{16}
+  \item {load\_i1}
+    \subitem {C\_data}, \hyperpage{10}
+  \item {load\_i2}
+    \subitem {C\_data}, \hyperpage{10}
+  \item {loadah}
+    \subitem {C\_data}, \hyperpage{10}
+  \item {loadkw}
+    \subitem {C\_data}, \hyperpage{10}
+  \item {log\_num}
+    \subitem {terminal\_type}, \hyperpage{32}
+  \item {log\_seq}
+    \subitem {terminal\_type}, \hyperpage{32}
+  \item {lowint\_count}
+    \subitem {V\_data}, \hyperpage{40}
 
   \indexspace
 
-  \item {S\_data}, \hyperpage{13}
-  \item {spi1\_configuration\_t}, \hyperpage{14}
-  \item {spi\_link\_type}, \hyperpage{14}
+  \item {map}
+    \subitem {dac\_buf\_type}, \hyperpage{17}
+  \item {max5322\_cmd}
+    \subitem {R\_data}, \hyperpage{24}
+  \item {mcc\_generated\_files/adcc.c}, \hyperpage{89}
+  \item {mcc\_generated\_files/adcc.h}, \hyperpage{93}
+  \item {mcc\_generated\_files/clkref.c}, \hyperpage{95}
+  \item {mcc\_generated\_files/clkref.h}, \hyperpage{95}
+  \item {mcc\_generated\_files/crc.c}, \hyperpage{96}
+  \item {mcc\_generated\_files/crc.h}, \hyperpage{99}
+  \item {mcc\_generated\_files/device\_config.c}, \hyperpage{100}
+  \item {mcc\_generated\_files/device\_config.h}, \hyperpage{101}
+  \item {mcc\_generated\_files/dma1.c}, \hyperpage{101}
+  \item {mcc\_generated\_files/dma1.h}, \hyperpage{104}
+  \item {mcc\_generated\_files/dma2.c}, \hyperpage{105}
+  \item {mcc\_generated\_files/dma2.h}, \hyperpage{106}
+  \item {mcc\_generated\_files/ext\_int.c}, \hyperpage{107}
+  \item {mcc\_generated\_files/ext\_int.h}, \hyperpage{108}
+  \item {mcc\_generated\_files/fvr.c}, \hyperpage{109}
+  \item {mcc\_generated\_files/fvr.h}, \hyperpage{110}
+  \item {mcc\_generated\_files/interrupt\_manager.c}, \hyperpage{110}
+  \item {mcc\_generated\_files/interrupt\_manager.h}, \hyperpage{111}
+  \item {mcc\_generated\_files/mcc.c}, \hyperpage{112}
+  \item {mcc\_generated\_files/mcc.h}, \hyperpage{113}
+  \item {mcc\_generated\_files/memory.c}, \hyperpage{114}
+  \item {mcc\_generated\_files/memory.h}, \hyperpage{116}
+  \item {mcc\_generated\_files/pin\_manager.c}, \hyperpage{117}
+  \item {mcc\_generated\_files/pin\_manager.h}, \hyperpage{118}
+  \item {mcc\_generated\_files/pwm8.c}, \hyperpage{128}
+  \item {mcc\_generated\_files/pwm8.h}, \hyperpage{128}
+  \item {mcc\_generated\_files/spi1.c}, \hyperpage{129}
+  \item {mcc\_generated\_files/spi1.h}, \hyperpage{131}
+  \item {mcc\_generated\_files/tmr2.c}, \hyperpage{131}
+  \item {mcc\_generated\_files/tmr2.h}, \hyperpage{133}
+  \item {mcc\_generated\_files/tmr3.c}, \hyperpage{137}
+  \item {mcc\_generated\_files/tmr3.h}, \hyperpage{139}
+  \item {mcc\_generated\_files/tmr5.c}, \hyperpage{140}
+  \item {mcc\_generated\_files/tmr5.h}, \hyperpage{142}
+  \item {mcc\_generated\_files/tmr6.c}, \hyperpage{143}
+  \item {mcc\_generated\_files/tmr6.h}, \hyperpage{145}
+  \item {mcc\_generated\_files/uart1.c}, \hyperpage{149}
+  \item {mcc\_generated\_files/uart1.h}, \hyperpage{152}
+  \item {mcc\_generated\_files/uart2.c}, \hyperpage{153}
+  \item {mcc\_generated\_files/uart2.h}, \hyperpage{157}
+  \item {mcode}
+    \subitem {terminal\_type}, \hyperpage{32}
+  \item {mesgid}
+    \subitem {terminal\_type}, \hyperpage{32}
+  \item {message}
+    \subitem {V\_help}, \hyperpage{44}
+  \item {mode\_pwm}
+    \subitem {V\_data}, \hyperpage{40}
+  \item {mparm}
+    \subitem {terminal\_type}, \hyperpage{32}
+  \item {msg\_error}
+    \subitem {V\_data}, \hyperpage{40}
+  \item {msg\_ret}
+    \subitem {V\_data}, \hyperpage{40}
 
   \indexspace
 
-  \item {terminal\_type}, \hyperpage{15}
+  \item {n\_offset}
+    \subitem {R\_data}, \hyperpage{24}
+  \item {n\_scalar}
+    \subitem {R\_data}, \hyperpage{25}
 
   \indexspace
 
-  \item {uart1\_status\_t}, \hyperpage{15}
-  \item {uart2\_status\_t}, \hyperpage{15}
+  \item {oerr}
+    \subitem {uart1\_status\_t}, \hyperpage{33}
+    \subitem {uart2\_status\_t}, \hyperpage{35}
+  \item {operation}
+    \subitem {spi1\_configuration\_t}, \hyperpage{29}
 
   \indexspace
 
-  \item {V\_data}, \hyperpage{16}
-  \item {V\_help}, \hyperpage{18}
+  \item {p\_bat}
+    \subitem {C\_data}, \hyperpage{11}
+  \item {p\_inverter}
+    \subitem {C\_data}, \hyperpage{11}
+  \item {p\_load}
+    \subitem {C\_data}, \hyperpage{11}
+  \item {p\_mppt}
+    \subitem {C\_data}, \hyperpage{11}
+  \item {p\_pv}
+    \subitem {C\_data}, \hyperpage{11}
+  \item {pclock}
+    \subitem {hist\_type}, \hyperpage{21}
+  \item {perr}
+    \subitem {uart1\_status\_t}, \hyperpage{34}
+    \subitem {uart2\_status\_t}, \hyperpage{35}
+  \item {peukert}
+    \subitem {hist\_type}, \hyperpage{21}
+  \item {peukert\_adj}
+    \subitem {hist\_type}, \hyperpage{21}
+  \item {polyWidth}
+    \subitem {CRC\_OBJ}, \hyperpage{14}
+  \item {pv\_ah}
+    \subitem {C\_data}, \hyperpage{11}
+  \item {pv\_eff}
+    \subitem {hist\_type}, \hyperpage{21}
+  \item {pvkw}
+    \subitem {C\_data}, \hyperpage{11}
+
+  \indexspace
+
+  \item {r\_checksum}
+    \subitem {V\_data}, \hyperpage{41}
+  \item {R\_data}, \hyperpage{23}
+    \subitem {c\_scale\_cal}, \hyperpage{23}
+    \subitem {c\_zero\_cal}, \hyperpage{23}
+    \subitem {checkmark}, \hyperpage{24}
+    \subitem {crc}, \hyperpage{24}
+    \subitem {done}, \hyperpage{24}
+    \subitem {H}, \hyperpage{24}
+    \subitem {hist\_save}, \hyperpage{24}
+    \subitem {hist\_update}, \hyperpage{24}
+    \subitem {max5322\_cmd}, \hyperpage{24}
+    \subitem {n\_offset}, \hyperpage{24}
+    \subitem {n\_scalar}, \hyperpage{25}
+    \subitem {raw\_adc}, \hyperpage{25}
+    \subitem {raw\_dac}, \hyperpage{25}
+    \subitem {scan\_index}, \hyperpage{25}
+    \subitem {scan\_select}, \hyperpage{25}
+  \item {rate}
+    \subitem {hist\_type}, \hyperpage{21}
+  \item {raw\_adc}
+    \subitem {R\_data}, \hyperpage{25}
+  \item {raw\_dac}
+    \subitem {R\_data}, \hyperpage{25}
+  \item {rbuf}
+    \subitem {V\_data}, \hyperpage{41}
+  \item {rbutton\_type}, \hyperpage{25}
+    \subitem {count}, \hyperpage{26}
+    \subitem {sw}, \hyperpage{26}
+  \item {reserved}
+    \subitem {uart1\_status\_t}, \hyperpage{34}
+    \subitem {uart2\_status\_t}, \hyperpage{35}
+  \item {response}
+    \subitem {V\_data}, \hyperpage{41}
+  \item {rest\_factor}
+    \subitem {hist\_type}, \hyperpage{21}
+  \item {rest\_rate}
+    \subitem {hist\_type}, \hyperpage{21}
+  \item {ringBufS\_t}, \hyperpage{26}
+    \subitem {buf}, \hyperpage{26}
+    \subitem {count}, \hyperpage{26}
+    \subitem {head}, \hyperpage{27}
+    \subitem {tail}, \hyperpage{27}
+  \item {runtime}
+    \subitem {C\_data}, \hyperpage{11}
+  \item {rx\_count}
+    \subitem {V\_data}, \hyperpage{41}
+
+  \indexspace
+
+  \item {S\_data}, \hyperpage{27}
+    \subitem {button}, \hyperpage{28}
+    \subitem {sw\_bitmap}, \hyperpage{28}
+  \item {samplei}
+    \subitem {hist\_type}, \hyperpage{21}
+  \item {sampleo}
+    \subitem {hist\_type}, \hyperpage{22}
+  \item {scan\_index}
+    \subitem {R\_data}, \hyperpage{25}
+  \item {scan\_select}
+    \subitem {R\_data}, \hyperpage{25}
+  \item {screen}
+    \subitem {V\_data}, \hyperpage{41}
+  \item {seedDirection}
+    \subitem {CRC\_OBJ}, \hyperpage{14}
+  \item {select\_p}
+    \subitem {H\_data}, \hyperpage{18}
+  \item {sensor\_set}
+    \subitem {V\_data}, \hyperpage{41}
+  \item {sequence}
+    \subitem {H\_data}, \hyperpage{18}
+  \item {sequences}
+    \subitem {V\_data}, \hyperpage{41}
+  \item {set\_sequ}
+    \subitem {V\_data}, \hyperpage{41}
+  \item {soc}
+    \subitem {C\_data}, \hyperpage{12}
+  \item {spi1\_configuration\_t}, \hyperpage{28}
+    \subitem {baud}, \hyperpage{29}
+    \subitem {con0}, \hyperpage{29}
+    \subitem {con1}, \hyperpage{29}
+    \subitem {con2}, \hyperpage{29}
+    \subitem {operation}, \hyperpage{29}
+  \item {SPI\_AUX}
+    \subitem {spi\_link\_type}, \hyperpage{30}
+  \item {spi\_count}
+    \subitem {V\_data}, \hyperpage{42}
+  \item {SPI\_LCD}
+    \subitem {spi\_link\_type}, \hyperpage{30}
+  \item {spi\_link\_type}, \hyperpage{29}
+    \subitem {config}, \hyperpage{30}
+    \subitem {delay}, \hyperpage{30}
+    \subitem {int\_count}, \hyperpage{30}
+    \subitem {LCD\_DATA}, \hyperpage{30}
+    \subitem {LCD\_TIMER}, \hyperpage{30}
+    \subitem {SPI\_AUX}, \hyperpage{30}
+    \subitem {SPI\_LCD}, \hyperpage{30}
+    \subitem {txbuf}, \hyperpage{31}
+  \item {stack}
+    \subitem {V\_data}, \hyperpage{42}
+  \item {start\_power}
+    \subitem {C\_data}, \hyperpage{12}
+  \item {status}
+    \subitem {uart1\_status\_t}, \hyperpage{34}
+    \subitem {uart2\_status\_t}, \hyperpage{35}
+  \item {sw}
+    \subitem {rbutton\_type}, \hyperpage{26}
+  \item {sw\_bitmap}
+    \subitem {S\_data}, \hyperpage{28}
+  \item {switch\_count}
+    \subitem {V\_data}, \hyperpage{42}
+  \item {sys\_info}
+    \subitem {V\_data}, \hyperpage{42}
+  \item {system\_stable}
+    \subitem {V\_data}, \hyperpage{42}
+
+  \indexspace
+
+  \item {t\_checksum}
+    \subitem {V\_data}, \hyperpage{42}
+  \item {t\_comp}
+    \subitem {C\_data}, \hyperpage{12}
+  \item {tail}
+    \subitem {ringBufS\_t}, \hyperpage{27}
+  \item {terminal\_type}, \hyperpage{31}
+    \subitem {ceid}, \hyperpage{31}
+    \subitem {cmdlen}, \hyperpage{31}
+    \subitem {help\_temp}, \hyperpage{32}
+    \subitem {host\_display\_ack}, \hyperpage{32}
+    \subitem {info}, \hyperpage{32}
+    \subitem {log\_num}, \hyperpage{32}
+    \subitem {log\_seq}, \hyperpage{32}
+    \subitem {mcode}, \hyperpage{32}
+    \subitem {mesgid}, \hyperpage{32}
+    \subitem {mparm}, \hyperpage{32}
+    \subitem {TID}, \hyperpage{33}
+  \item {testing}
+    \subitem {V\_data}, \hyperpage{42}
+  \item {ticker}
+    \subitem {V\_data}, \hyperpage{42}
+  \item {ticks}
+    \subitem {V\_data}, \hyperpage{43}
+  \item {TID}
+    \subitem {terminal\_type}, \hyperpage{33}
+  \item {time\_info}
+    \subitem {V\_data}, \hyperpage{43}
+  \item {timerint\_count}
+    \subitem {V\_data}, \hyperpage{43}
+  \item {tot\_eff}
+    \subitem {hist\_type}, \hyperpage{22}
+  \item {ttg\_t}
+    \subitem {hist\_type}, \hyperpage{22}
+  \item {tx\_count}
+    \subitem {V\_data}, \hyperpage{43}
+  \item {txbuf}
+    \subitem {spi\_link\_type}, \hyperpage{31}
+
+  \indexspace
+
+  \item {uart1\_status\_t}, \hyperpage{33}
+    \subitem {ferr}, \hyperpage{33}
+    \subitem {oerr}, \hyperpage{33}
+    \subitem {perr}, \hyperpage{34}
+    \subitem {reserved}, \hyperpage{34}
+    \subitem {status}, \hyperpage{34}
+  \item {uart2\_status\_t}, \hyperpage{34}
+    \subitem {ferr}, \hyperpage{35}
+    \subitem {oerr}, \hyperpage{35}
+    \subitem {perr}, \hyperpage{35}
+    \subitem {reserved}, \hyperpage{35}
+    \subitem {status}, \hyperpage{35}
+  \item {udod}
+    \subitem {hist\_type}, \hyperpage{22}
+  \item {ui\_state}
+    \subitem {V\_data}, \hyperpage{43}
+  \item {ui\_sw}
+    \subitem {V\_data}, \hyperpage{43}
+  \item {update}
+    \subitem {C\_data}, \hyperpage{12}
+  \item {updates}
+    \subitem {C\_data}, \hyperpage{12}
+    \subitem {hist\_type}, \hyperpage{22}
+
+  \indexspace
+
+  \item {v\_bat}
+    \subitem {C\_data}, \hyperpage{12}
+  \item {v\_bbat}
+    \subitem {C\_data}, \hyperpage{12}
+  \item {v\_cbus}
+    \subitem {C\_data}, \hyperpage{12}
+  \item {v\_cc}
+    \subitem {C\_data}, \hyperpage{13}
+  \item {v\_cmode}
+    \subitem {C\_data}, \hyperpage{13}
+  \item {V\_data}, \hyperpage{35}
+    \subitem {abort}, \hyperpage{37}
+    \subitem {ac\_off}, \hyperpage{37}
+    \subitem {ac\_on}, \hyperpage{37}
+    \subitem {ac\_time}, \hyperpage{37}
+    \subitem {adc\_count}, \hyperpage{37}
+    \subitem {alarm}, \hyperpage{37}
+    \subitem {all\_errors}, \hyperpage{37}
+    \subitem {blight}, \hyperpage{38}
+    \subitem {blight\_off}, \hyperpage{38}
+    \subitem {boost\_ticks}, \hyperpage{38}
+    \subitem {buf}, \hyperpage{38}
+    \subitem {calib}, \hyperpage{38}
+    \subitem {cc\_active}, \hyperpage{38}
+    \subitem {cc\_state}, \hyperpage{38}
+    \subitem {checksum\_error}, \hyperpage{38}
+    \subitem {debug}, \hyperpage{39}
+    \subitem {enter}, \hyperpage{39}
+    \subitem {error}, \hyperpage{39}
+    \subitem {fixup}, \hyperpage{39}
+    \subitem {flipper}, \hyperpage{39}
+    \subitem {float\_ticks}, \hyperpage{39}
+    \subitem {get\_time\_text}, \hyperpage{39}
+    \subitem {help}, \hyperpage{39}
+    \subitem {help\_id}, \hyperpage{40}
+    \subitem {in\_boost}, \hyperpage{40}
+    \subitem {in\_float}, \hyperpage{40}
+    \subitem {info}, \hyperpage{40}
+    \subitem {lowint\_count}, \hyperpage{40}
+    \subitem {mode\_pwm}, \hyperpage{40}
+    \subitem {msg\_error}, \hyperpage{40}
+    \subitem {msg\_ret}, \hyperpage{40}
+    \subitem {r\_checksum}, \hyperpage{41}
+    \subitem {rbuf}, \hyperpage{41}
+    \subitem {response}, \hyperpage{41}
+    \subitem {rx\_count}, \hyperpage{41}
+    \subitem {screen}, \hyperpage{41}
+    \subitem {sensor\_set}, \hyperpage{41}
+    \subitem {sequences}, \hyperpage{41}
+    \subitem {set\_sequ}, \hyperpage{41}
+    \subitem {spi\_count}, \hyperpage{42}
+    \subitem {stack}, \hyperpage{42}
+    \subitem {switch\_count}, \hyperpage{42}
+    \subitem {sys\_info}, \hyperpage{42}
+    \subitem {system\_stable}, \hyperpage{42}
+    \subitem {t\_checksum}, \hyperpage{42}
+    \subitem {testing}, \hyperpage{42}
+    \subitem {ticker}, \hyperpage{42}
+    \subitem {ticks}, \hyperpage{43}
+    \subitem {time\_info}, \hyperpage{43}
+    \subitem {timerint\_count}, \hyperpage{43}
+    \subitem {tx\_count}, \hyperpage{43}
+    \subitem {ui\_state}, \hyperpage{43}
+    \subitem {ui\_sw}, \hyperpage{43}
+    \subitem {wdt\_ticks}, \hyperpage{43}
+  \item {V\_help}, \hyperpage{44}
+    \subitem {display}, \hyperpage{44}
+    \subitem {message}, \hyperpage{44}
+  \item {v\_inverter}
+    \subitem {C\_data}, \hyperpage{13}
+  \item {v\_pv}
+    \subitem {C\_data}, \hyperpage{13}
+  \item {v\_sensor}
+    \subitem {C\_data}, \hyperpage{13}
+  \item {v\_temp}
+    \subitem {C\_data}, \hyperpage{13}
+  \item {version}
+    \subitem {hist\_type}, \hyperpage{22}
+  \item {vterm}
+    \subitem {D\_data}, \hyperpage{15}
+
+  \indexspace
+
+  \item {wait\_calib}
+    \subitem {H\_data}, \hyperpage{18}
+  \item {wait\_enter}
+    \subitem {H\_data}, \hyperpage{18}
+  \item {wait\_select}
+    \subitem {H\_data}, \hyperpage{18}
+  \item {wdt\_ticks}
+    \subitem {V\_data}, \hyperpage{43}
 
 \end{theindex}

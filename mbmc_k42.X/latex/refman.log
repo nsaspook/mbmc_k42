@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.3.18)  19 MAR 2025 13:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.3.18)  19 MAR 2025 14:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -828,7 +828,7 @@ Package hyperref Info: Option `unicode' set `true' on input line 217.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 12.9599pt on input line 222.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 224.
+(Font)              scaled to size 10.79993pt on input line 223.
 
 
 [1
@@ -844,42 +844,60 @@ st/fonts/enc/dvips/base/8r.enc}]
 \openout6 = `refman.toc'.
 
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.99994pt on input line 230.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 230
+(Font)              scaled to size 8.99994pt on input line 231.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 231
 .
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 230
+LaTeX Font Info:    Trying to load font information for U+msb on input line 231
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+wasy on input line 23
-0.
+1.
 
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.29996pt on input line 230.
+(Font)              scaled to size 6.29996pt on input line 231.
 
 
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.29996pt on input line 230.
+(Font)              scaled to size 6.29996pt on input line 231.
 [1]
 
 [2]
-Package hyperref Info: Option `pageanchor' set `true' on input line 233.
+
+[3]
+
+[4]
+
+[5]
+
+[6]
+
+[7]
+
+[8]
+
+[9]
+
+[10
+
+]
+Package hyperref Info: Option `pageanchor' set `true' on input line 234.
 
 Chapter 1.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 18.66588pt on input line 235.
+(Font)              scaled to size 18.66588pt on input line 236.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 18.66588pt on input line 235.
+(Font)              scaled to size 18.66588pt on input line 236.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 22.39185pt on input line 235.
+(Font)              scaled to size 22.39185pt on input line 236.
 (./annotated.tex
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 12.9599pt on input line 1.
@@ -887,20 +905,17 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 
 [1
 
-
 ]
 
 [2
 
 ]
 Chapter 2.
-(./files.tex)
+(./files.tex
 
-[3]
+[3])
 
-[4
-
-]
+[4]
 Chapter 3.
 (./unionbytes2.tex
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 6
@@ -910,163 +925,135 @@ File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 6.
-)
-(./structC__data.tex <./structC__data__coll__graph.pdf>
-<structC__data__coll__graph.pdf, id=567, 142.5325pt x 171.64125pt>
-File: structC__data__coll__graph.pdf Graphic file (type pdf)
-<use structC__data__coll__graph.pdf>
-Package pdftex.def Info: structC__data__coll__graph.pdf  used on input line 10.
-
-(pdftex.def)             Requested size: 142.0pt x 170.99915pt.
-
-
-[5]) (./structcJSON.tex <./structcJSON__coll__graph.pdf>
-<structcJSON__coll__graph.pdf, id=585, 174.6525pt x 127.47626pt>
-File: structcJSON__coll__graph.pdf Graphic file (type pdf)
-<use structcJSON__coll__graph.pdf>
-Package pdftex.def Info: structcJSON__coll__graph.pdf  used on input line 10.
-(pdftex.def)             Requested size: 174.0pt x 127.00716pt.
-
-
-[6]) (./structcJSON__Hooks.tex) (./structCRC__OBJ.tex
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 17.
-
-
-[7]) (./structD__data.tex) (./uniondac__buf__type.tex <./uniondac__buf__type__c
-oll__graph.pdf>
-<uniondac__buf__type__coll__graph.pdf, id=676, 162.6075pt x 171.64125pt>
-File: uniondac__buf__type__coll__graph.pdf Graphic file (type pdf)
-<use uniondac__buf__type__coll__graph.pdf>
-Package pdftex.def Info: uniondac__buf__type__coll__graph.pdf  used on input li
-ne 10.
-(pdftex.def)             Requested size: 162.0pt x 171.01224pt.
-
-
-[8]) (./structerror.tex) (./structH__data.tex) (./structhist__type.tex
-
-[9]) (./structinternal__hooks.tex) (./structparse__buffer.tex <./structparse__b
-uffer__coll__graph.pdf>
-<structparse__buffer__coll__graph.pdf, id=721, 169.63374pt x 171.64125pt>
-File: structparse__buffer__coll__graph.pdf Graphic file (type pdf)
-<use structparse__buffer__coll__graph.pdf>
-Package pdftex.def Info: structparse__buffer__coll__graph.pdf  used on input li
-ne 10.
-(pdftex.def)             Requested size: 169.0pt x 171.00699pt.
-
-
-[10]) (./structprintbuffer.tex <./structprintbuffer__coll__graph.pdf>
-<structprintbuffer__coll__graph.pdf, id=764, 169.63374pt x 171.64125pt>
-File: structprintbuffer__coll__graph.pdf Graphic file (type pdf)
-<use structprintbuffer__coll__graph.pdf>
-Package pdftex.def Info: structprintbuffer__coll__graph.pdf  used on input line
- 10.
-(pdftex.def)             Requested size: 169.0pt x 171.00699pt.
-
-
-[11]) (./structR__data.tex <./structR__data__coll__graph.pdf>
-<structR__data__coll__graph.pdf, id=786, 254.9525pt x 243.91125pt>
-File: structR__data__coll__graph.pdf Graphic file (type pdf)
-<use structR__data__coll__graph.pdf>
-Package pdftex.def Info: structR__data__coll__graph.pdf  used on input line 10.
-
-(pdftex.def)             Requested size: 254.0pt x 243.00996pt.
-
-
-[12]) (./structrbutton__type.tex) (./structringBufS__t.tex)
-(./structS__data.tex <./structS__data__coll__graph.pdf>
-<structS__data__coll__graph.pdf, id=822, 159.59625pt x 171.64125pt>
-File: structS__data__coll__graph.pdf Graphic file (type pdf)
-<use structS__data__coll__graph.pdf>
-Package pdftex.def Info: structS__data__coll__graph.pdf  used on input line 10.
-
-(pdftex.def)             Requested size: 159.0pt x 171.00175pt.
-
-
-[13]) (./structspi1__configuration__t.tex) (./structspi__link__type.tex)
-(./structterminal__type.tex
-
-[14]) (./unionuart1__status__t.tex
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 5.
-
+(Font)              scaled to size 10.79993pt on input line 12.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 23.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 23
+.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-))
-(./unionuart2__status__t.tex
-
-[15]) (./structV__data.tex <./structV__data__coll__graph.pdf>
-<structV__data__coll__graph.pdf, id=894, 174.6525pt x 171.64125pt>
-File: structV__data__coll__graph.pdf Graphic file (type pdf)
-<use structV__data__coll__graph.pdf>
-Package pdftex.def Info: structV__data__coll__graph.pdf  used on input line 10.
-
-(pdftex.def)             Requested size: 174.0pt x 171.00961pt.
+)) (./structC__data.tex <./structC__data__coll__graph.pdf>
+<structC__data__coll__graph.pdf, id=2005, 142.5325pt x 171.64125pt>
+File: structC__data__coll__graph.pdf Graphic file (type pdf)
+<use structC__data__coll__graph.pdf>
+Package pdftex.def Info: structC__data__coll__graph.pdf  used on input line 9.
+(pdftex.def)             Requested size: 142.0pt x 170.99915pt.
 
 
-[16]) (./structV__help.tex)
+[5
 
-[17]
+]
+
+[6]
+
+[7]
+
+[8]
+
+[9]
+
+[10]
+
+[11]
+
+[12]) (./structCRC__OBJ.tex
+
+[13]) (./structD__data.tex
+
+[14]) (./uniondac__buf__type.tex <./uniondac__buf__type__coll__graph.pdf>
+<uniondac__buf__type__coll__graph.pdf, id=2329, 162.6075pt x 171.64125pt>
+File: uniondac__buf__type__coll__graph.pdf Graphic file (type pdf)
+<use uniondac__buf__type__coll__graph.pdf>
+Package pdftex.def Info: uniondac__buf__type__coll__graph.pdf  used on input li
+ne 9.
+(pdftex.def)             Requested size: 162.0pt x 171.01224pt.
+
+
+[15]
+
+[16]) (./structH__data.tex
+
+[17]) (./structhist__type.tex
 
 [18]
-Chapter 4.
-(./bsoc_8h_source.tex
 
-[19
-
-]) (./cJSON_8h_source.tex
+[19]
 
 [20]
 
-[21]
+[21]) (./structR__data.tex <./structR__data__coll__graph.pdf>
+<structR__data__coll__graph.pdf, id=2558, 254.9525pt x 243.91125pt>
+File: structR__data__coll__graph.pdf Graphic file (type pdf)
+<use structR__data__coll__graph.pdf>
+Package pdftex.def Info: structR__data__coll__graph.pdf  used on input line 9.
+(pdftex.def)             Requested size: 254.0pt x 243.00996pt.
+
 
 [22]
 
-[23]) (./cJSON__Utils_8h_source.tex
+[23]
 
-[24]) (./daq_8h_source.tex
+[24]) (./structrbutton__type.tex
 
-[25]
+[25]) (./structringBufS__t.tex
 
-[26]) (./dio_8h_source.tex
+[26]) (./structS__data.tex <./structS__data__coll__graph.pdf>
+<structS__data__coll__graph.pdf, id=2711, 159.59625pt x 171.64125pt>
+File: structS__data__coll__graph.pdf Graphic file (type pdf)
+<use structS__data__coll__graph.pdf>
+Package pdftex.def Info: structS__data__coll__graph.pdf  used on input line 9.
+(pdftex.def)             Requested size: 159.0pt x 171.00175pt.
 
-[27]) (./eadog_8h_source.tex
 
-[28]) (./hid_8h_source.tex
+[27]) (./structspi1__configuration__t.tex
 
-[29]) (./mbmc_8h_source.tex
+[28]) (./structspi__link__type.tex
+
+[29]) (./structterminal__type.tex
 
 [30]
 
-[31]) (./adcc_8h_source.tex
+[31]
 
-[32]) (./clkref_8h_source.tex
+[32]) (./unionuart1__status__t.tex
 
-[33]) (./crc_8h_source.tex
+[33]) (./unionuart2__status__t.tex
 
-[34]) (./device__config_8h_source.tex) (./dma1_8h_source.tex
+[34]) (./structV__data.tex <./structV__data__coll__graph.pdf>
+<structV__data__coll__graph.pdf, id=2962, 174.6525pt x 171.64125pt>
+File: structV__data__coll__graph.pdf Graphic file (type pdf)
+<use structV__data__coll__graph.pdf>
+Package pdftex.def Info: structV__data__coll__graph.pdf  used on input line 9.
+(pdftex.def)             Requested size: 174.0pt x 171.00961pt.
 
-[35]) (./dma2_8h_source.tex
 
-[36]) (./ext__int_8h_source.tex
+[35]
 
-[37]) (./fvr_8h_source.tex
+[36]
 
-[38]) (./interrupt__manager_8h_source.tex) (./mcc_8h_source.tex
+[37]
 
-[39]) (./memory_8h_source.tex
+[38]
 
-[40]) (./pin__manager_8h_source.tex
+[39]
+
+[40]
 
 [41]
 
-[42]
+[42]) (./structV__help.tex
 
-[43]
+[43])
 
 [44]
+Chapter 4.
+(./bsoc_8c_source.tex
 
-[45]
+[45
+
+]
 
 [46]
 
@@ -1074,63 +1061,302 @@ Chapter 4.
 
 [48]
 
-[49]) (./pwm8_8h_source.tex
+[49]
 
-[50]) (./spi1_8h_source.tex
+[50]
 
-[51]) (./tmr2_8h_source.tex
+[51]) (./bsoc_8h_source.tex
 
 [52]
 
-[53]
+[53]) (./daq_8c_source.tex
 
 [54]
 
-[55]) (./tmr3_8h_source.tex) (./tmr5_8h_source.tex
+[55]
 
-[56]) (./tmr6_8h_source.tex
+[56]
 
 [57]
 
 [58]
 
-[59]
+[59]) (./daq_8h_source.tex
 
-[60]) (./uart1_8h_source.tex
+[60]
 
-[61]) (./uart2_8h_source.tex
+[61]) (./dio_8c_source.tex
 
 [62]
 
-[63]) (./mconfig_8h_source.tex) (./msg__text_8h_source.tex
+[63]) (./dio_8h_source.tex
 
-[64]) (./mydisplay_8h_source.tex
+[64]) (./eadog_8c_source.tex
 
-[65]) (./ringbufs_8h_source.tex) (./tests_8h_source.tex
+[65]
 
-[66]) (./timers_8h_source.tex
+[66]
 
-[67]) (./vconfig_8h_source.tex
+[67]
 
 [68]
 
 [69]
 
-[70])
+[70]) (./eadog_8h_source.tex
 
-[71]
+[71]) (./hid_8c_source.tex
 
-[72
+[72]) (./hid_8h_source.tex
 
-] (./refman.ind
+[73]) (./main_8c_source.tex
+
+[74]
+
+[75]
+
+[76]
+
+[77]
+
+[78]
+
+[79]
+
+[80]
+
+[81]
+
+[82]
+
+[83]) (./mbmc_8c_source.tex
+
+[84]
+
+[85]
+
+[86]
+
+[87]) (./mbmc_8h_source.tex
+
+[88]) (./adcc_8c_source.tex
+
+[89]
+
+[90]
+
+[91]
+
+[92]) (./adcc_8h_source.tex
+
+[93]
+
+[94]) (./clkref_8c_source.tex) (./clkref_8h_source.tex
+
+[95]) (./crc_8c_source.tex
+
+[96]
+
+[97]
+
+[98]) (./crc_8h_source.tex) (./device__config_8c_source.tex
+
+[99]
+
+[100]) (./device__config_8h_source.tex) (./dma1_8c_source.tex
+
+[101]
+
+[102]
+
+[103]) (./dma1_8h_source.tex) (./dma2_8c_source.tex
+
+[104]
+
+[105]) (./dma2_8h_source.tex
+
+[106]) (./ext__int_8c_source.tex
+
+[107]) (./ext__int_8h_source.tex
+
+[108]) (./fvr_8c_source.tex
+
+[109]) (./fvr_8h_source.tex) (./interrupt__manager_8c_source.tex
+
+[110]) (./interrupt__manager_8h_source.tex
+
+[111]) (./mcc_8c_source.tex
+
+[112]) (./mcc_8h_source.tex
+
+[113]) (./memory_8c_source.tex
+
+[114]
+
+[115]) (./memory_8h_source.tex
+
+[116]) (./pin__manager_8c_source.tex
+
+[117]) (./pin__manager_8h_source.tex
+
+[118]
+
+[119]
+
+[120]
+
+[121]
+
+[122]
+
+[123]
+
+[124]
+
+[125]
+
+[126]
+
+[127]) (./pwm8_8c_source.tex) (./pwm8_8h_source.tex
+
+[128]) (./spi1_8c_source.tex
+
+[129]
+
+[130]) (./spi1_8h_source.tex) (./tmr2_8c_source.tex
+
+[131]
+
+[132]) (./tmr2_8h_source.tex
+
+[133]
+
+[134]
+
+[135]
+
+[136]) (./tmr3_8c_source.tex
+
+[137]
+
+[138]) (./tmr3_8h_source.tex
+
+[139]) (./tmr5_8c_source.tex
+
+[140]
+
+[141]) (./tmr5_8h_source.tex
+
+[142]) (./tmr6_8c_source.tex
+
+[143]
+
+[144]) (./tmr6_8h_source.tex
+
+[145]
+
+[146]
+
+[147]) (./uart1_8c_source.tex
+
+[148]
+
+[149]
+
+[150]
+
+[151]) (./uart1_8h_source.tex
+
+[152]) (./uart2_8c_source.tex
+
+[153]
+
+[154]
+
+[155]
+
+[156]) (./uart2_8h_source.tex
+
+[157]) (./mconfig_8c_source.tex
+
+[158]
+
+[159]
+
+[160]) (./mconfig_8h_source.tex
+
+[161]) (./msg__text_8h_source.tex) (./mydisplay_8h_source.tex
+
+[162]) (./ringbufs_8c_source.tex
+
+[163]) (./ringbufs_8h_source.tex
+
+[164]) (./tests_8h_source.tex
+
+[165]) (./timers_8c_source.tex
+Overfull \hbox (73.9555pt too wide) in paragraph at lines 13--13
+[]\T1/pcr/m/n/7 //*************************************************************
+*********************************************************[]  
+ []
+
+
+Overfull \hbox (73.9555pt too wide) in paragraph at lines 21--21
+[]\T1/pcr/m/n/7 //*************************************************************
+*********************************************************[]  
+ []
+
+
+Overfull \hbox (73.9555pt too wide) in paragraph at lines 34--34
+[]\T1/pcr/m/n/7 //*************************************************************
+*********************************************************[]  
+ []
+
+) (./timers_8h_source.tex
+
+[166]) (./vconfig_8h_source.tex
+
+[167]
+
+[168]
+
+[169])
+
+[170] (./refman.ind
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 22.39185pt on input line 1.
 
 
 
 
-[73
+[171
 
+
+
+]
+
+
+
+[172]
+
+
+
+[173]
+
+
+
+[174]
+
+
+
+[175]
+
+
+
+[176]
+
+
+
+[177
 
 ]) (./refman.aux)
  ***********
@@ -1138,26 +1364,27 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 8AC5F86AF1E98ED6EA528E8D0C84B092;11403.
+(rerunfilecheck)             Checksum: 052215A0A14958A3B01F19E6B394C7E2;53396.
  ) 
 Here is how much of TeX's memory you used:
- 19316 strings out of 473197
- 328217 string characters out of 5718605
- 745508 words of memory out of 5000000
- 41675 multiletter control sequences out of 15000+600000
- 593876 words of font info for 75 fonts, out of 8000000 for 9000
+ 30417 strings out of 473197
+ 573029 string characters out of 5718605
+ 802381 words of memory out of 5000000
+ 42042 multiletter control sequences out of 15000+600000
+ 599771 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,16n,117p,537b,571s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,16n,117p,1676b,563s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/urw/helvetic/uhvr8a.pfb>
-Output written on refman.pdf (77 pages, 274333 bytes).
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/he
+lvetic/uhvr8a.pfb>
+Output written on refman.pdf (189 pages, 742612 bytes).
 PDF statistics:
- 1588 PDF objects out of 1728 (max. 8388607)
- 1455 compressed objects within 15 object streams
- 469 named destinations out of 1000 (max. 500000)
- 601 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 17034 PDF objects out of 18468 (max. 8388607)
+ 16642 compressed objects within 167 object streams
+ 11149 named destinations out of 12825 (max. 500000)
+ 2714 words of extra memory for PDF output out of 10000 (max. 10000000)
 
