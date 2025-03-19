@@ -1,0 +1,171 @@
+\doxysection{daq.\+h}
+\hypertarget{daq_8h_source}{}\label{daq_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ Microchip\ Technology\ Inc.\ and\ its\ subsidiaries.\ \ You\ may\ use\ this\ software}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ and\ any\ derivatives\ exclusively\ with\ Microchip\ products.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ THIS\ SOFTWARE\ IS\ SUPPLIED\ BY\ MICROCHIP\ "{}AS\ IS"{}.\ \ NO\ WARRANTIES,\ WHETHER}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ EXPRESS,\ IMPLIED\ OR\ STATUTORY,\ APPLY\ TO\ THIS\ SOFTWARE,\ INCLUDING\ ANY\ IMPLIED}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ WARRANTIES\ OF\ NON-\/INFRINGEMENT,\ MERCHANTABILITY,\ AND\ FITNESS\ FOR\ A}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ PARTICULAR\ PURPOSE,\ OR\ ITS\ INTERACTION\ WITH\ MICROCHIP\ PRODUCTS,\ COMBINATION}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ WITH\ ANY\ OTHER\ PRODUCTS,\ OR\ USE\ IN\ ANY\ APPLICATION.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ IN\ NO\ EVENT\ WILL\ MICROCHIP\ BE\ LIABLE\ FOR\ ANY\ INDIRECT,\ SPECIAL,\ PUNITIVE,}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ INCIDENTAL\ OR\ CONSEQUENTIAL\ LOSS,\ DAMAGE,\ COST\ OR\ EXPENSE\ OF\ ANY\ KIND}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ WHATSOEVER\ RELATED\ TO\ THE\ SOFTWARE,\ HOWEVER\ CAUSED,\ EVEN\ IF\ MICROCHIP\ HAS}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ BEEN\ ADVISED\ OF\ THE\ POSSIBILITY\ OR\ THE\ DAMAGES\ ARE\ FORESEEABLE.\ \ TO\ THE}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ FULLEST\ EXTENT\ ALLOWED\ BY\ LAW,\ MICROCHIP'S\ TOTAL\ LIABILITY\ ON\ ALL\ CLAIMS}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ IN\ ANY\ WAY\ RELATED\ TO\ THIS\ SOFTWARE\ WILL\ NOT\ EXCEED\ THE\ AMOUNT\ OF\ FEES,\ IF}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ ANY,\ THAT\ YOU\ HAVE\ PAID\ DIRECTLY\ TO\ MICROCHIP\ FOR\ THIS\ SOFTWARE.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ MICROCHIP\ PROVIDES\ THIS\ SOFTWARE\ CONDITIONALLY\ UPON\ YOUR\ ACCEPTANCE\ OF\ THESE}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ TERMS.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ REMOVE\ THE\ CHIP\ PROGRAMMER,\ IT\ CHANGES\ THE\ ADC\ READINGS}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00025\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ *\ 12-\/bit\ analog\ 64\ sample\ average\ per\ channel\ on\ ports\ A\ and\ B}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ *\ uses\ the\ compute\ burst\ average\ mode\ threshold\ interrupt\ to\ auto\ change}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ *\ channels\ during\ interrupt\ after\ a\ repeat\ count}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ This\ is\ a\ guard\ condition\ so\ that\ contents\ of\ this\ file\ are\ not\ included}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ more\ than\ once.}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#ifndef\ DAQ\_H}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ DAQ\_H}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ "{}mcc\_generated\_files/spi1.h"{}}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#include\ "{}mcc\_generated\_files/crc.h"{}}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ "{}vconfig.h"{}}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ "{}timers.h"{}}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ "{}tests.h"{}}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{extern}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structV__data}{V\_data}}\ V;}
+\DoxyCodeLine{00044\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ *\ adc\ channel\ configuration}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ LAST\_ADC\_CHAN\ \ \ 0XD}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ ADC\_BUFFER\_SIZE\ 16\ }\textcolor{comment}{//\ MUST\ BE\ AT\ LEAST\ 1}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ ADC\_SCAN\_SPEED\ \ 200\ }\textcolor{comment}{//\ sample\ timer\ speed\ in\ ms}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ ADC\_SCAN\_CHAN\ \ \ 0b0011110001110111\ }\textcolor{comment}{//\ convert\ these\ analog\ ports\ bitmap}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00053\ \textcolor{comment}{\ *\ Normal\ or\ high\ volt\ channels\ (bit\ set)}}
+\DoxyCodeLine{00054\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ ADC\_V\_CHAN\_TYPE\ 0b0010000000100000}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00058\ \textcolor{comment}{\ *\ current\ sensor\ configuration}}
+\DoxyCodeLine{00059\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00060\ \textcolor{comment}{//\#define\ BAT\_100A\ //\ USE\ the\ 100A\ honeywell\ sensor\ for\ battery\ current,\ reduces\ range\ but\ has\ better\ data\ within\ that\ range}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ NUM\_C\_SENSORS\ \ \ 3}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ ADC\_C\_CHAN\ \ 0b0000100000000011\ }\textcolor{comment}{//\ 5\ volt\ hall\ current\ sensor\ bitmap}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ ADC\_C\_CHAN\_TYPE\ 0b0000000000000001\ }\textcolor{comment}{//\ 0\ -\/\ 100A,\ 1=200A\ or\ battery\ 100A\ type\ if\ BAT\_100A\ is\ defined}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ ADC\_C\_CHAN\_MPPT\ 0b0000100000000000\ }\textcolor{comment}{//\ 0\ -\/\ 100A\ mppt\ channel}}
+\DoxyCodeLine{00065\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00066\ \textcolor{comment}{\ *\ temp\ sensor\ configuration}}
+\DoxyCodeLine{00067\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ NUM\_T\_SENSORS\ \ \ 0}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ ADC\_T\_CHAN\ \ 0b0000000000000000\ }\textcolor{comment}{//\ 5\ volt\ temp\ sensor\ bitmap}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ ADC\_T\_CHAN\_TYPE\ 0b0000000000000000\ }\textcolor{comment}{//\ type\ bitmap}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00073\ \textcolor{comment}{\ *\ dac\ channel\ configuration}}
+\DoxyCodeLine{00074\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ LAST\_DAC\_CHAN\ \ \ 0X1}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ DAC\_BUFFER\_SIZE\ 2\ }\textcolor{comment}{//\ MUST\ BE\ AT\ LEAST\ 1}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ DAC\_LOAD\_A\ \ 0b0100}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ DAC\_LOAD\_B\ \ 0b0101}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ DCHAN\_A\ \ \ \ \ 0}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ DCHAN\_B\ \ \ \ \ 1}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ DAC\_SCALE\ \ \ 0.002442f\ }\textcolor{comment}{//\ 10\ vdc\ @\ 12-\/bits\ resolution\ per\ bit}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ ZERO\_RANGE\ \ 100}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ TEN\_A\_RANGE\ 100}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ EE\_CHECKMARK\ \ \ \ 0x1957}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ TATE\ \ \ \ \ \ \ \ 0x42}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00090\ \textcolor{comment}{\ *\ current\ sensor\ configuration}}
+\DoxyCodeLine{00091\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00092\ \textcolor{comment}{//\#define\ CAL\_10A\ \ \ //\ set\ 10A\ scaling}}
+\DoxyCodeLine{00093\ \textcolor{comment}{//\#define\ CAL\_TWO\ //\ dupe\ the\ PV\ sensor\ results\ into\ the\ MPPT\ calibration\ table}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00096\ \textcolor{comment}{\ *\ conversion\ constants}}
+\DoxyCodeLine{00097\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00098\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00099\ \textcolor{comment}{\ *\ REMOVE\ THE\ CHIP\ PROGRAMMER,\ IT\ CHANGES\ THE\ ADC\ READINGS}}
+\DoxyCodeLine{00100\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00101\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00102\ \textcolor{comment}{\ *\ 13-\/bit\ adc\ result\ ADRPT\ 64\ samples\ and\ a\ ADCRS\ of\ 5\ [0..8190]\ steps}}
+\DoxyCodeLine{00103\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ C\_SCALE\ \ \ \ \ 0.6250000f}}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#define\ V\_SCALE\ \ \ \ \ 4.1254125f}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#define\ V\_SCALE\_H\ \ \ 8.2000000f}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#ifndef\ BAT\_100A}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#define\ A200\ \ \ \ \ \ \ \ 0\ }\textcolor{comment}{//\ BATTERY,\ \ adc\ line\ 0}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ A100B\ \ \ \ \ \ \ 0\ }\textcolor{comment}{//\ BATTERY,\ \ adc\ line\ 0}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#define\ A100\ \ \ \ \ \ \ \ 1\ }\textcolor{comment}{//\ CV,\ \ \ \ \ \ \ adc\ line\ 1}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#define\ A100M\ \ \ \ \ \ \ 2\ }\textcolor{comment}{//\ PV,\ \ \ \ \ \ \ adc\ line\ 1}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#ifndef\ BAT\_100A}}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#define\ C\_A200\ \ \ \ \ \ 0.0361010f\ }\textcolor{comment}{//\ BATTERY\ Amp\ scalar,\ second\ line\ [0],\ 0.0862000f,\ BO\ PLUG}}
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#define\ C\_A100B\ \ \ \ \ 0.0361010f\ }\textcolor{comment}{//\ PV\ Amp\ scalar,\ second\ line\ [0]}}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#define\ C\_A100\ \ \ \ \ \ 0.0361010f\ }\textcolor{comment}{//\ PV\ Amp\ scalar,\ first\ line\ [1]}}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#define\ C\_A100M\ \ \ \ \ 0.0862000f\ }\textcolor{comment}{//\ MPPT\ Amp\ scalar,\ first\ line\ [2]}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#ifndef\ BAT\_100A}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#define\ C\_OFFSET200\ 3965\ }\textcolor{comment}{//\ BATTERY\ sensor\ adc\ zero\ Amp\ counts,\ line\ 0,\ \ BO\ sensor\ PLUG,\ orig\ value\ 3965}}
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ C\_OFFSET100B\ \ \ \ 3934\ }\textcolor{comment}{//\ BATTERY\ sensor\ adc\ zero\ Amp\ counts,\ line\ 0}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#define\ C\_OFFSET100\ 3995\ }\textcolor{comment}{//\ PV\ sensor\ adc\ zero\ Amp\ counts,\ \ \ \ \ \ line\ 1}}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#define\ C\_OFFSET100M\ \ \ \ 3939\ }\textcolor{comment}{//\ MPPT\ sensor\ adc\ zero\ Amp\ counts,\ \ \ \ \ \ line\ 2,\ Orig\ value\ 3934,\ adjust\ this\ for\ DL\ bat\ current\ zero}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00130\ \textcolor{comment}{\ *\ sanity\ check\ values\ for\ current\ calibration\ routines}}
+\DoxyCodeLine{00131\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#define\ C\_CAL\_ZERO\ \ 4000}}
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#ifndef\ BAT\_100A}}
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#define\ C\_CAL\_A200\ \ 4150\ }\textcolor{comment}{//\ fixme\ with\ real\ values}}
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#define\ C\_CAL\_A100\ \ 4240\ }\textcolor{comment}{//\ ..}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \textcolor{preprocessor}{\#include\ <xc.h>}\ \textcolor{comment}{//\ include\ processor\ files\ -\/\ each\ processor\ file\ is\ guarded.}}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#include\ "{}mcc\_generated\_files/adcc.h"{}}}
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#include\ "{}mcc\_generated\_files/pin\_manager.h"{}}}
+\DoxyCodeLine{00141\ \textcolor{preprocessor}{\#include\ "{}mcc\_generated\_files/memory.h"{}}}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00144\ \ \ \ \ CONV,\ \textcolor{comment}{//\ auto\ system\ conversion}}
+\DoxyCodeLine{00145\ \ \ \ \ O\_CONV,\ \textcolor{comment}{//\ convert\ to\ voltage\ for\ calibration/offsets}}
+\DoxyCodeLine{00146\ \}\ adc\_conv\_t;}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \textcolor{keywordtype}{bool}\ start\_adc\_scan(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00149\ \textcolor{keywordtype}{bool}\ check\_adc\_scan(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00150\ \textcolor{keywordtype}{void}\ clear\_adc\_scan(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00151\ \textcolor{keywordtype}{bool}\ update\_adc\_result(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00152\ adc\_result\_t\ get\_raw\_result(\textcolor{keyword}{const}\ adcc\_channel\_t);}
+\DoxyCodeLine{00153\ \textcolor{keywordtype}{float}\ conv\_raw\_result(\textcolor{keyword}{const}\ adcc\_channel\_t,\ \textcolor{keyword}{const}\ adc\_conv\_t);}
+\DoxyCodeLine{00154\ \textcolor{keywordtype}{void}\ dac\_spi\_control(\textcolor{keywordtype}{bool});}
+\DoxyCodeLine{00155\ \textcolor{keywordtype}{void}\ set\_dac(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00156\ uint16\_t\ set\_dac\_a(\textcolor{keywordtype}{float});}
+\DoxyCodeLine{00157\ uint16\_t\ set\_dac\_b(\textcolor{keywordtype}{float});}
+\DoxyCodeLine{00158\ \textcolor{keywordtype}{bool}\ cal\_current\_zero(\textcolor{keywordtype}{bool},\ int16\_t,\ int16\_t,\ int16\_t);}
+\DoxyCodeLine{00159\ \textcolor{keywordtype}{bool}\ cal\_current\_10A(\textcolor{keywordtype}{bool},\ int16\_t,\ int16\_t,\ \textcolor{keywordtype}{float},\ \textcolor{keywordtype}{float});}
+\DoxyCodeLine{00160\ \textcolor{keywordtype}{bool}\ read\_cal\_data(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00161\ \textcolor{keywordtype}{void}\ write\_cal\_data(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00162\ \textcolor{keywordtype}{void}\ update\_cal\_data(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00163\ \textcolor{keywordtype}{bool}\ update\_hist\_data(\textcolor{keywordtype}{bool},\ \textcolor{keyword}{volatile}\ \mbox{\hyperlink{structhist__type}{hist\_type}}*);}
+\DoxyCodeLine{00164\ \textcolor{keywordtype}{void}\ set\_hist\_flag(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00166\ }
+
+\end{DoxyCode}

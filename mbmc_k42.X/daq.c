@@ -2,7 +2,7 @@
  * 12-bit analog 64 sample average per channel on ports A and B
  * uses the compute burst average mode threshold interrupt to auto change
  * channels during interrupt after a repeat count
- * The end result is a 13-bit ADC value
+ * The end result is a ~13-bit ADC value
  */
 
 #include <xc.h>

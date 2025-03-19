@@ -1,0 +1,144 @@
+\doxysection{adcc.\+h}
+\hypertarget{adcc_8h_source}{}\label{adcc_8h_source}\index{mcc\_generated\_files/adcc.h@{mcc\_generated\_files/adcc.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ \ \ \ (c)\ 2018\ Microchip\ Technology\ Inc.\ and\ its\ subsidiaries.\ }}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ \ \ \ Subject\ to\ your\ compliance\ with\ these\ terms,\ you\ may\ use\ Microchip\ software\ and\ any\ }}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ \ \ \ derivatives\ exclusively\ with\ Microchip\ products.\ It\ is\ your\ responsibility\ to\ comply\ with\ third\ party\ }}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ \ \ \ license\ terms\ applicable\ to\ your\ use\ of\ third\ party\ software\ (including\ open\ source\ software)\ that\ }}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ may\ accompany\ Microchip\ software.}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ \ \ \ THIS\ SOFTWARE\ IS\ SUPPLIED\ BY\ MICROCHIP\ "{}AS\ IS"{}.\ NO\ WARRANTIES,\ WHETHER\ }}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ \ \ EXPRESS,\ IMPLIED\ OR\ STATUTORY,\ APPLY\ TO\ THIS\ SOFTWARE,\ INCLUDING\ ANY\ }}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ \ \ IMPLIED\ WARRANTIES\ OF\ NON-\/INFRINGEMENT,\ MERCHANTABILITY,\ AND\ FITNESS\ }}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ \ \ \ FOR\ A\ PARTICULAR\ PURPOSE.}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ \ \ IN\ NO\ EVENT\ WILL\ MICROCHIP\ BE\ LIABLE\ FOR\ ANY\ INDIRECT,\ SPECIAL,\ PUNITIVE,\ }}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ \ \ INCIDENTAL\ OR\ CONSEQUENTIAL\ LOSS,\ DAMAGE,\ COST\ OR\ EXPENSE\ OF\ ANY\ KIND\ }}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ \ \ \ WHATSOEVER\ RELATED\ TO\ THE\ SOFTWARE,\ HOWEVER\ CAUSED,\ EVEN\ IF\ MICROCHIP\ }}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ \ \ HAS\ BEEN\ ADVISED\ OF\ THE\ POSSIBILITY\ OR\ THE\ DAMAGES\ ARE\ FORESEEABLE.\ TO\ }}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ \ \ \ THE\ FULLEST\ EXTENT\ ALLOWED\ BY\ LAW,\ MICROCHIP'S\ TOTAL\ LIABILITY\ ON\ ALL\ }}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ \ \ \ CLAIMS\ IN\ ANY\ WAY\ RELATED\ TO\ THIS\ SOFTWARE\ WILL\ NOT\ EXCEED\ THE\ AMOUNT\ }}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ \ \ \ OF\ FEES,\ IF\ ANY,\ THAT\ YOU\ HAVE\ PAID\ DIRECTLY\ TO\ MICROCHIP\ FOR\ THIS\ }}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ \ \ \ SOFTWARE.}}
+\DoxyCodeLine{00045\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#ifndef\ ADCC\_H}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ ADCC\_H}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#include\ <xc.h>}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus\ \ }\textcolor{comment}{//\ Provide\ C++\ Compatibility}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{typedef}\ uint16\_t\ adc\_result\_t;}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#ifndef\ uint24\_t}}
+\DoxyCodeLine{00074\ \textcolor{keyword}{typedef}\ \_\_uint24\ uint24\_t;}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00090\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ C\_BATT\ =\ \ 0x0,}
+\DoxyCodeLine{00092\ \ \ \ \ C\_PV\ =\ \ 0x1,}
+\DoxyCodeLine{00093\ \ \ \ \ V\_CC\ =\ \ 0x2,}
+\DoxyCodeLine{00094\ \ \ \ \ V\_BAT\ =\ \ 0x4,}
+\DoxyCodeLine{00095\ \ \ \ \ V\_PV\ =\ \ 0x5,}
+\DoxyCodeLine{00096\ \ \ \ \ V\_CMODE\ =\ \ 0x6,}
+\DoxyCodeLine{00097\ \ \ \ \ V\_BBAT\ =\ \ 0xA,}
+\DoxyCodeLine{00098\ \ \ \ \ C\_MPPT\ =\ \ 0xB,}
+\DoxyCodeLine{00099\ \ \ \ \ V\_INVERTER\ =\ \ 0xC,}
+\DoxyCodeLine{00100\ \ \ \ \ V\_LIGHT\_SENSOR\ =\ \ 0xD,}
+\DoxyCodeLine{00101\ \ \ \ \ channel\_VSS\ =\ \ 0x3B,}
+\DoxyCodeLine{00102\ \ \ \ \ channel\_Temp\ =\ \ 0x3C,}
+\DoxyCodeLine{00103\ \ \ \ \ channel\_DAC1\ =\ \ 0x3D,}
+\DoxyCodeLine{00104\ \ \ \ \ channel\_FVR\_Buffer1\ =\ \ 0x3E,}
+\DoxyCodeLine{00105\ \ \ \ \ channel\_FVR\_Buffer2\ =\ \ 0x3F}
+\DoxyCodeLine{00106\ \}\ adcc\_channel\_t;}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00140\ \textcolor{keywordtype}{void}\ ADCC\_Initialize(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00169\ \textcolor{keywordtype}{void}\ ADCC\_StartConversion(adcc\_channel\_t\ channel);}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00199\ \textcolor{keywordtype}{bool}\ ADCC\_IsConversionDone(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00231\ adc\_result\_t\ ADCC\_GetConversionResult(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00262\ adc\_result\_t\ ADCC\_GetSingleConversion(adcc\_channel\_t\ channel);}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00287\ \textcolor{keywordtype}{void}\ ADCC\_StopConversion(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00314\ \textcolor{keywordtype}{void}\ ADCC\_SetStopOnInterrupt(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00315\ }
+\DoxyCodeLine{00339\ \textcolor{keywordtype}{void}\ ADCC\_DischargeSampleCapacitor(\textcolor{keywordtype}{void});\ }
+\DoxyCodeLine{00340\ }
+\DoxyCodeLine{00365\ \textcolor{keywordtype}{void}\ ADCC\_LoadAcquisitionRegister(uint16\_t);}
+\DoxyCodeLine{00366\ }
+\DoxyCodeLine{00391\ \textcolor{keywordtype}{void}\ ADCC\_SetPrechargeTime(uint16\_t);}
+\DoxyCodeLine{00392\ }
+\DoxyCodeLine{00416\ \textcolor{keywordtype}{void}\ ADCC\_SetRepeatCount(uint8\_t);}
+\DoxyCodeLine{00417\ }
+\DoxyCodeLine{00444\ uint8\_t\ ADCC\_GetCurrentCountofConversions(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00445\ }
+\DoxyCodeLine{00468\ \textcolor{keywordtype}{void}\ ADCC\_ClearAccumulator(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00469\ }
+\DoxyCodeLine{00493\ uint24\_t\ ADCC\_GetAccumulatorValue(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00494\ }
+\DoxyCodeLine{00521\ \textcolor{keywordtype}{bool}\ ADCC\_HasAccumulatorOverflowed(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00522\ }
+\DoxyCodeLine{00546\ uint16\_t\ ADCC\_GetFilterValue(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00547\ }
+\DoxyCodeLine{00574\ uint16\_t\ ADCC\_GetPreviousResult(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00575\ }
+\DoxyCodeLine{00600\ \textcolor{keywordtype}{void}\ ADCC\_DefineSetPoint(uint16\_t);}
+\DoxyCodeLine{00601\ }
+\DoxyCodeLine{00626\ \textcolor{keywordtype}{void}\ ADCC\_SetUpperThreshold(uint16\_t);}
+\DoxyCodeLine{00627\ }
+\DoxyCodeLine{00652\ \textcolor{keywordtype}{void}\ ADCC\_SetLowerThreshold(uint16\_t);}
+\DoxyCodeLine{00653\ }
+\DoxyCodeLine{00679\ uint16\_t\ ADCC\_GetErrorCalculation(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00680\ }
+\DoxyCodeLine{00706\ \textcolor{keywordtype}{void}\ ADCC\_EnableDoubleSampling(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00707\ }
+\DoxyCodeLine{00730\ \textcolor{keywordtype}{void}\ ADCC\_EnableContinuousConversion(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00731\ }
+\DoxyCodeLine{00754\ \textcolor{keywordtype}{void}\ ADCC\_DisableContinuousConversion(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00755\ }
+\DoxyCodeLine{00782\ \textcolor{keywordtype}{bool}\ ADCC\_HasErrorCrossedUpperThreshold(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00783\ }
+\DoxyCodeLine{00810\ \textcolor{keywordtype}{bool}\ ADCC\_HasErrorCrossedLowerThreshold(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00811\ }
+\DoxyCodeLine{00837\ uint8\_t\ ADCC\_GetConversionStageStatus(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00838\ }
+\DoxyCodeLine{00839\ }
+\DoxyCodeLine{00840\ }
+\DoxyCodeLine{00854\ \textcolor{keywordtype}{void}\ ADCC\_SetADIInterruptHandler(\textcolor{keywordtype}{void}\ (*\ InterruptHandler)(\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{00855\ }
+\DoxyCodeLine{00856\ }
+\DoxyCodeLine{00870\ \textcolor{keywordtype}{void}\ ADCC\_SetADTIInterruptHandler(\textcolor{keywordtype}{void}\ (*\ InterruptHandler)(\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{00871\ }
+\DoxyCodeLine{00872\ }
+\DoxyCodeLine{00889\ \textcolor{keywordtype}{void}\ ADCC\_DefaultInterruptHandler(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00890\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus\ \ }\textcolor{comment}{//\ Provide\ C++\ Compatibility}}
+\DoxyCodeLine{00891\ }
+\DoxyCodeLine{00892\ \ \ \ \ \}}
+\DoxyCodeLine{00893\ }
+\DoxyCodeLine{00894\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00895\ }
+\DoxyCodeLine{00896\ \textcolor{preprocessor}{\#endif\ \ \ \ }\textcolor{comment}{//ADCC\_H}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00900\ }
+
+\end{DoxyCode}

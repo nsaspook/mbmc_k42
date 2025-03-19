@@ -1,0 +1,220 @@
+\doxysection{main.\+c File Reference}
+\hypertarget{main_8c}{}\label{main_8c}\index{main.c@{main.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}mcc\+\_\+generated\+\_\+files/mcc.\+h"{}}\newline
+{\ttfamily \#include "{}mcc\+\_\+generated\+\_\+files/uart1.\+h"{}}\newline
+{\ttfamily \#include "{}eadog.\+h"{}}\newline
+{\ttfamily \#include "{}timers.\+h"{}}\newline
+{\ttfamily \#include "{}mconfig.\+h"{}}\newline
+{\ttfamily \#include "{}mydisplay.\+h"{}}\newline
+{\ttfamily \#include "{}daq.\+h"{}}\newline
+{\ttfamily \#include "{}mbmc.\+h"{}}\newline
+{\ttfamily \#include "{}dio.\+h"{}}\newline
+{\ttfamily \#include "{}hid.\+h"{}}\newline
+{\ttfamily \#include "{}bsoc.\+h"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8c_a264362c275898b8493cf451f32d24a36}{\+\_\+\+\_\+\+DEFINED\+\_\+int24\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef signed long long \mbox{\hyperlink{main_8c_a5b45919dd9dbd4d48b64a76567b9b599}{int24\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{main}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structV__data}{V\+\_\+data}} \mbox{\hyperlink{main_8c_a3677a1b059657e0e0bcfa48d64f81cb4}{V}}
+\item 
+\mbox{\hyperlink{structH__data}{H\+\_\+data}} \mbox{\hyperlink{main_8c_aa0c654d6f8f3dfdeeb7ce2f2d7725d25}{H}}
+\item 
+volatile uint16\+\_\+t \mbox{\hyperlink{main_8c_ada284e1e4e960e3a4fd5c0b0a93314e1}{tick\+Count}} \mbox{[}\mbox{\hyperlink{timers_8h_ad499250d949643c5a12161767059a3d2abaa7883f9d3702d4c1fba3442fec0595}{TMR\+\_\+\+COUNT}}\mbox{]} = \{0\}
+\item 
+volatile uint8\+\_\+t \mbox{\hyperlink{main_8c_a100a8078f274b8dcba40099c11217cf6}{mode\+\_\+sw}} = \mbox{\hyperlink{cJSON_8c_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+volatile \mbox{\hyperlink{structC__data}{C\+\_\+data}} \mbox{\hyperlink{main_8c_aac2173f40f4f1cc4ae25246854f2df52}{C}}
+\item 
+struct tm \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_8c_aa036d313473a0fda1bf6cfe78049bc98}{t\+\_\+mbmc}}
+\item 
+time\+\_\+t \mbox{\hyperlink{main_8c_a6c960db3534fa0c0384dda57d8f88cc1}{pclock}}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_8c_a2fd487055c79a1c6b3ffa3dcd59b98fb}{build\+\_\+date}} = \+\_\+\+\_\+\+DATE\+\_\+\+\_\+
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_8c_a0c1b6525ab4582a08673967cfee5b994}{build\+\_\+time}} = \+\_\+\+\_\+\+TIME\+\_\+\+\_\+
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{main_8c_a264362c275898b8493cf451f32d24a36}\index{main.c@{main.c}!\_\_DEFINED\_int24\_t@{\_\_DEFINED\_int24\_t}}
+\index{\_\_DEFINED\_int24\_t@{\_\_DEFINED\_int24\_t}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{\_\_DEFINED\_int24\_t}{\_\_DEFINED\_int24\_t}}
+{\footnotesize\ttfamily \label{main_8c_a264362c275898b8493cf451f32d24a36} 
+\#define \+\_\+\+\_\+\+DEFINED\+\_\+int24\+\_\+t}
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{main_8c_a5b45919dd9dbd4d48b64a76567b9b599}\index{main.c@{main.c}!int24\_t@{int24\_t}}
+\index{int24\_t@{int24\_t}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{int24\_t}{int24\_t}}
+{\footnotesize\ttfamily \label{main_8c_a5b45919dd9dbd4d48b64a76567b9b599} 
+typedef signed long long \mbox{\hyperlink{main_8c_a5b45919dd9dbd4d48b64a76567b9b599}{int24\+\_\+t}}}
+
+Generated Main Source File
+
+Company\+: Microchip Technology Inc.
+
+File Name\+: \doxylink{main_8c}{main.\+c}
+
+Summary\+: This is the main file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+
+Description\+: This header file provides implementations for driver APIs for all modules selected in the GUI. Generation Information \+: Product Revision \+: PIC10 / PIC12 / PIC16 / PIC18 MCUs -\/ 1.\+81.\+6 Device \+: PIC18\+F57\+K42 Driver Version \+: 2.\+00 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667} 
+void main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8c_a2fd487055c79a1c6b3ffa3dcd59b98fb}\index{main.c@{main.c}!build\_date@{build\_date}}
+\index{build\_date@{build\_date}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{build\_date}{build\_date}}
+{\footnotesize\ttfamily \label{main_8c_a2fd487055c79a1c6b3ffa3dcd59b98fb} 
+const char\texorpdfstring{$\ast$}{*} build\+\_\+date = \+\_\+\+\_\+\+DATE\+\_\+\+\_\+}
+
+\Hypertarget{main_8c_a0c1b6525ab4582a08673967cfee5b994}\index{main.c@{main.c}!build\_time@{build\_time}}
+\index{build\_time@{build\_time}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{build\_time}{build\_time}}
+{\footnotesize\ttfamily \label{main_8c_a0c1b6525ab4582a08673967cfee5b994} 
+const char \texorpdfstring{$\ast$}{*} build\+\_\+time = \+\_\+\+\_\+\+TIME\+\_\+\+\_\+}
+
+\Hypertarget{main_8c_aac2173f40f4f1cc4ae25246854f2df52}\index{main.c@{main.c}!C@{C}}
+\index{C@{C}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{C}{C}}
+{\footnotesize\ttfamily \label{main_8c_aac2173f40f4f1cc4ae25246854f2df52} 
+volatile \mbox{\hyperlink{structC__data}{C\+\_\+data}} C}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ .bank\_ah\ =\ \mbox{\hyperlink{mbmc_8h_a6ebf392dc4e5cd6166570b4226522230}{BANKAH}}\ -\/\ \mbox{\hyperlink{mbmc_8h_a0937defabc3c0768e6caf81389f61e93}{DEGRADE}},}
+\DoxyCodeLine{\ \ \ \ .day\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\ \ \ \ .hist[0].version\ =\ \mbox{\hyperlink{vconfig_8h_a81cabd1535b0f278efdeb7e81a013a9b}{HVER}},}
+\DoxyCodeLine{\ \ \ \ .hist[0].cef\ =\ \mbox{\hyperlink{mbmc_8h_a9849247c9e48a2b57fd7f993d601d0c5}{CEF}},}
+\DoxyCodeLine{\ \ \ \ .hist[0].peukert\ =\ \mbox{\hyperlink{mbmc_8h_a65132e9eab1ab74d4460174002cedecd}{PEUKERT}},}
+\DoxyCodeLine{\ \ \ \ .hist[0].updates\ =\ 0,}
+\DoxyCodeLine{\ \ \ \ .hist[0].h[10]\ =\ 0,}
+\DoxyCodeLine{\ \ \ \ .hist[0].h[9]\ =\ \mbox{\hyperlink{bsoc_8h_afc95e1e2e1dc420680cf75e8c1e894eb}{HI\_ESR}},\ }
+\DoxyCodeLine{\ \ \ \ .day\_start\ =\ 0,}
+\DoxyCodeLine{\ \ \ \ .day\_end\ =\ 0,}
+\DoxyCodeLine{\ \ \ \ .day\_update\ =\ 0,}
+\DoxyCodeLine{\ \ \ \ .dupdate\ =\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\ \ \ \ .updates\ =\ 0,}
+\DoxyCodeLine{\ \ \ \ .dynamic\_ah\_daily\ =\ 0.0001f,}
+\DoxyCodeLine{\ \ \ \ .dynamic\_ah\_adj\_daily\ =\ 0.0001f,}
+\DoxyCodeLine{\ \ \ \ .c\_bat\ =\ 0.1f,}
+\DoxyCodeLine{\ \ \ \ .c\_load\ =\ 0.1f,}
+\DoxyCodeLine{\ \ \ \ .c\_mppt\ =\ 0.1f,}
+\DoxyCodeLine{\ \ \ \ .c\_pv\ =\ 0.1f,}
+\DoxyCodeLine{\ \ \ \ .esr\ =\ 0.1f,}
+\DoxyCodeLine{\ \ \ \ .p\_bat\ =\ 0.1f,}
+\DoxyCodeLine{\ \ \ \ .v\_pv\ =\ 0.1f,}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{main_8c_aa0c654d6f8f3dfdeeb7ce2f2d7725d25}\index{main.c@{main.c}!H@{H}}
+\index{H@{H}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{H}{H}}
+{\footnotesize\ttfamily \label{main_8c_aa0c654d6f8f3dfdeeb7ce2f2d7725d25} 
+\mbox{\hyperlink{structH__data}{H\+\_\+data}} H}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ .hid\_display\ =\ \mbox{\hyperlink{hid_8h_ab660c3234fcd29918951b5d47a8d14cda60ba739be5e9b59c4b08264b7d7ac0d0}{HID\_MAIN}},}
+\DoxyCodeLine{\ \ \ \ .h\_state\ =\ \mbox{\hyperlink{hid_8h_a71c7d233b03f2915aca90df7a62aafe7a4a812d6645d00297c64d54e9baf7f63b}{H\_STATE\_INIT}},}
+\DoxyCodeLine{\ \ \ \ .wait\_enter\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\ \ \ \ .wait\_select\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\ \ \ \ .wait\_calib\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\ \ \ \ .sequence\ =\ 0,}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{main_8c_a100a8078f274b8dcba40099c11217cf6}\index{main.c@{main.c}!mode\_sw@{mode\_sw}}
+\index{mode\_sw@{mode\_sw}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{mode\_sw}{mode\_sw}}
+{\footnotesize\ttfamily \label{main_8c_a100a8078f274b8dcba40099c11217cf6} 
+volatile uint8\+\_\+t mode\+\_\+sw = \mbox{\hyperlink{cJSON_8c_a65e9886d74aaee76545e83dd09011727}{false}}}
+
+\Hypertarget{main_8c_a6c960db3534fa0c0384dda57d8f88cc1}\index{main.c@{main.c}!pclock@{pclock}}
+\index{pclock@{pclock}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{pclock}{pclock}}
+{\footnotesize\ttfamily \label{main_8c_a6c960db3534fa0c0384dda57d8f88cc1} 
+time\+\_\+t pclock}
+
+\Hypertarget{main_8c_aa036d313473a0fda1bf6cfe78049bc98}\index{main.c@{main.c}!t\_mbmc@{t\_mbmc}}
+\index{t\_mbmc@{t\_mbmc}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{t\_mbmc}{t\_mbmc}}
+{\footnotesize\ttfamily \label{main_8c_aa036d313473a0fda1bf6cfe78049bc98} 
+struct tm\texorpdfstring{$\ast$}{*} t\+\_\+mbmc}
+
+\Hypertarget{main_8c_ada284e1e4e960e3a4fd5c0b0a93314e1}\index{main.c@{main.c}!tickCount@{tickCount}}
+\index{tickCount@{tickCount}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{tickCount}{tickCount}}
+{\footnotesize\ttfamily \label{main_8c_ada284e1e4e960e3a4fd5c0b0a93314e1} 
+volatile uint16\+\_\+t tick\+Count\mbox{[}\mbox{\hyperlink{timers_8h_ad499250d949643c5a12161767059a3d2abaa7883f9d3702d4c1fba3442fec0595}{TMR\+\_\+\+COUNT}}\mbox{]} = \{0\}}
+
+\Hypertarget{main_8c_a3677a1b059657e0e0bcfa48d64f81cb4}\index{main.c@{main.c}!V@{V}}
+\index{V@{V}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{V}{V}}
+{\footnotesize\ttfamily \label{main_8c_a3677a1b059657e0e0bcfa48d64f81cb4} 
+\mbox{\hyperlink{structV__data}{V\+\_\+data}} V}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ .ticks\ =\ \mbox{\hyperlink{vconfig_8h_aea39dd94dc1a08f74fc5cd8adeaddec8}{DEF\_TIME}},}
+\DoxyCodeLine{\ \ \ \ .ticker\ =\ 25,\ }
+\DoxyCodeLine{\ \ \ \ .checksum\_error\ =\ 0,}
+\DoxyCodeLine{\ \ \ \ .all\_errors\ =\ 0,}
+\DoxyCodeLine{\ \ \ \ .debug\ =\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\ \ \ \ .stack\ =\ \textcolor{keyword}{false},\ }
+\DoxyCodeLine{\ \ \ \ .help\_id\ =\ 0,}
+\DoxyCodeLine{\ \ \ \ .sequences\ =\ 0,}
+\DoxyCodeLine{\ \ \ \ .set\_sequ\ =\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\ \ \ \ .lowint\_count\ =\ 0,}
+\DoxyCodeLine{\ \ \ \ .timerint\_count\ =\ 0,}
+\DoxyCodeLine{\ \ \ \ .calib\ =\ \mbox{\hyperlink{tests_8h_a6536ddf58e8eb4c48d4bb2aaa5d1f122}{CALIB}},}
+\DoxyCodeLine{\ \ \ \ .screen\ =\ 0,}
+\DoxyCodeLine{\ \ \ \ .system\_stable\ =\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\ \ \ \ .fixup\ =\ \mbox{\hyperlink{tests_8h_a6f45e83c3999b497c00a713ca2de58af}{FIXUPS}},}
+\DoxyCodeLine{\ \ \ \ .blight\_off\ =\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\ \ \ \ .blight\ =\ 0,}
+\DoxyCodeLine{\ \ \ \ .float\_ticks\ =\ 0,}
+\DoxyCodeLine{\ \ \ \ .boost\_ticks\ =\ 0,}
+\DoxyCodeLine{\ \ \ \ .in\_float\ =\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\ \ \ \ .in\_boost\ =\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\ \ \ \ .ac\_time\ =\ 0,}
+\DoxyCodeLine{\ \ \ \ .rbuf\ =\ \textcolor{stringliteral}{"{}1"{}},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

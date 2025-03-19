@@ -1,0 +1,623 @@
+\doxysection{bsoc.\+h File Reference}
+\hypertarget{bsoc_8h}{}\label{bsoc_8h}\index{bsoc.h@{bsoc.h}}
+{\ttfamily \#include $<$xc.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}mcc\+\_\+generated\+\_\+files/tmr3.\+h"{}}\newline
+{\ttfamily \#include "{}vconfig.\+h"{}}\newline
+{\ttfamily \#include "{}mbmc.\+h"{}}\newline
+{\ttfamily \#include "{}eadog.\+h"{}}\newline
+{\ttfamily \#include "{}timers.\+h"{}}\newline
+{\ttfamily \#include "{}hid.\+h"{}}\newline
+{\ttfamily \#include "{}mconfig.\+h"{}}\newline
+Include dependency graph for bsoc.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsoc_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsoc_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_a4a1493b4c23e70da509e900f5d1a43fa}{FM80\+\_\+\+FIXUPS}}
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_ae1a939c1d605e65f72c7b4a8fe577e02}{MAXRUNTIME}}~95.\+0f
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_ada2574c6615b9d470929902c1f9b963f}{MINRUNTIME}}~0.\+05f
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_ac1f5951c76ea83516c28462a33d1e026}{Perk\+\_\+\+ADJ\+\_\+\+FL}}~1.\+10f
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_ad56b488f3dc5a4c35ddb2964c2ea31b7}{Perk\+\_\+\+ADJ\+\_\+\+FH}}~5.\+00f
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_a58813ac6df267a91998fc9273aa42f9b}{Temp\+\_\+\+ADJ\+\_\+\+FL}}~1.\+20f
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_af9901f76eb7b8b42e4c961a18f8e1344}{Temp\+\_\+\+ZERO}}~267l
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_a96071f0261d7a1809447507ceb661cef}{CEF\+\_\+\+HSOC}}~0.\+45f
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_aed651963ad18b2b3f869c782a8ce1450}{CEF\+\_\+\+MSOC}}~0.\+70f
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_aa1e9574d94a478789dc2790715b7f3f4}{CEF\+\_\+\+LSOC}}~0.\+90f
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_ad3a89ab92b0c23e98bb69e52a7a7f678}{CEF\+\_\+\+OVER}}~0.\+99f
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_a810a8c89ac6a6dfdb88a681712bc649b}{CEF\+\_\+\+MAX}}~0.\+95f
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_a641d9bc73273799512e100a9828065fd}{CEF\+\_\+\+MIN}}~0.\+40f
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_a91ec00754fbe6909cdd7826f7bfbb8c1}{CEF\+\_\+\+RESET}}~0.\+80f
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_a878a488f0764c971991adc6ad73e6c49}{CEF\+\_\+\+DERATE}}~1.\+20f
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_ad09b91a85b32b1c1996347ef72385ad6}{SOC\+\_\+\+DERATE}}~70
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_a655c9847927c460425e116dbe7ada722}{SOC\+\_\+\+CEF}}~100
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_afc95e1e2e1dc420680cf75e8c1e894eb}{HI\+\_\+\+ESR}}~1500
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_aa30a92a619f5bd97c8469a385f693639}{BVSOC\+\_\+\+SLOTS}}~26
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_ab791f37ed04ca9368693d4a7a87490f2}{FLOAT\+\_\+\+TIME}}~60
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_a200f2f9164c6a6b806d71a2fac5abc41}{DPWM\+\_\+\+FULL}}~300
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_ad12a91fa47c3219a6ada4af6d6b9a0f8}{DPWM\+\_\+\+LOW\+\_\+\+VOLTS}}~40.\+0f
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_a73ad26d060dd555398ba730ca944748b}{PV\+\_\+\+MAX\+\_\+\+POWER}}~300.\+0f
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_a10d011348cafa7e14aeb0cb5ea2c6b9c}{PWM\+\_\+\+MAX\+\_\+\+POWER}}~250.\+0f
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_ada3187fcfd651802725d63473e69db7b}{PWM\+\_\+\+WIN\+\_\+\+POWER}}~10.\+0f
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_a203882c27cff50d2ba5fe225d70dcb05}{GTI\+\_\+\+MAX}}~600
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_a269a9c6319feb5ee8691baaf95a2053a}{GTI\+\_\+\+IDLE}}~50
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_af87ae0ed7cfc12dafbeb92d03959ebf4}{GTI\+\_\+\+INCR}}~100
+\item 
+\#define \mbox{\hyperlink{bsoc_8h_a37f51eb06f09d5498245114085914e48}{GTI\+\_\+\+NORM}}~450
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{bsoc_8h_afaf843bd2aece7e6a077167b098b7630}{R\+\_\+\+CODES}} \{ \mbox{\hyperlink{bsoc_8h_afaf843bd2aece7e6a077167b098b7630afaa4237d33537d9d808292253799ab3f}{R\+\_\+\+CYCLE}} = 0
+, \mbox{\hyperlink{bsoc_8h_afaf843bd2aece7e6a077167b098b7630af1cead5c18fe620361d49edc088a68f1}{R\+\_\+\+TOTAL}}
+, \mbox{\hyperlink{bsoc_8h_afaf843bd2aece7e6a077167b098b7630a1db66030efb36bf9f5100901eb6fdfeb}{R\+\_\+\+PV}}
+, \mbox{\hyperlink{bsoc_8h_afaf843bd2aece7e6a077167b098b7630a2561931701c26d303320b92e600822ad}{R\+\_\+\+BAT}}
+ \}
+\item 
+enum \mbox{\hyperlink{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815}{M\+\_\+\+CODES}} \{ \newline
+\mbox{\hyperlink{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815af7f3173fd015d2ea9399f5c8c3bc8121}{M\+\_\+\+DEACT}} = 0
+, \mbox{\hyperlink{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815a7df9e1577c4eceb7ccd8e2d60b5d0f1e}{M\+\_\+\+ACT}} = 1
+, \mbox{\hyperlink{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815adc519d823b1f2a3558bd2a3b6cfe0d19}{M\+\_\+\+MPPT}} = 2
+, \mbox{\hyperlink{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815a571244fbfe6cfaafcda2afa48c5b86ab}{M\+\_\+\+EQUAL}} = 3
+, \newline
+\mbox{\hyperlink{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815afeec912eb58ed31616e81655cfb77d62}{M\+\_\+\+BOOST}} = 4
+, \mbox{\hyperlink{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815a3915f10d8dd1c975d2a246689bcb1831}{M\+\_\+\+FLOAT}} = 5
+, \mbox{\hyperlink{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815a9a8131e8a7c57b96f0529e814e24cef1}{M\+\_\+\+LIMIT}} = 6
+, \mbox{\hyperlink{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815a8b0b5f2337ab42026e7ae69d2756797e}{M\+\_\+\+OFFLINE}} = 255
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{bsoc_8h_ac1c05d61890db61b2cf904a8fa8fcba1}{calc\+\_\+bsoc}} (void)
+\item 
+void \mbox{\hyperlink{bsoc_8h_a9472dd04e63765316757125607a624f3}{init\+\_\+bsoc}} (void)
+\item 
+void \mbox{\hyperlink{bsoc_8h_a018c31ab87827b040b20435127d5719a}{start\+\_\+bsoc}} (void)
+\item 
+void \mbox{\hyperlink{bsoc_8h_a31f7f3239fc1f59f159d360d29f3af83}{stop\+\_\+bsoc}} (void)
+\item 
+void \mbox{\hyperlink{bsoc_8h_a39f7720f7620a8343a495ec8def92f79}{reset\+\_\+bsoc}} (\mbox{\hyperlink{bsoc_8h_afaf843bd2aece7e6a077167b098b7630}{R\+\_\+\+CODES}})
+\item 
+uint16\+\_\+t \mbox{\hyperlink{bsoc_8h_a7b4f3f69c68151cb462ec3b22e13c649}{Volts\+\_\+to\+\_\+\+SOC}} (uint32\+\_\+t)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{bsoc_8h_a204278831433cb2ab68902bb94ddaa27}{peukert}} (uint16\+\_\+t, float, float, int16\+\_\+t)
+\item 
+float \mbox{\hyperlink{bsoc_8h_a620852efe2ba4bdde558a6013a3650d4}{esr\+\_\+check}} (uint8\+\_\+t)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{bsoc_8h_a5ac787683a0fcf6eff58bdf6c75f6666}{cc\+\_\+state}} (float)
+\item 
+bool \mbox{\hyperlink{bsoc_8h_afdf62b51b29d2a3d57e9b77b460bbbea}{pv\+\_\+diversion}} (bool)
+\item 
+void \mbox{\hyperlink{bsoc_8h_aa2a5a6cfcb8aa698b027590c288c64bb}{gti\+\_\+cmds}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile \mbox{\hyperlink{structC__data}{C\+\_\+data}} \mbox{\hyperlink{bsoc_8h_aac2173f40f4f1cc4ae25246854f2df52}{C}}
+\item 
+\mbox{\hyperlink{structV__data}{V\+\_\+data}} \mbox{\hyperlink{bsoc_8h_a3677a1b059657e0e0bcfa48d64f81cb4}{V}}
+\item 
+\mbox{\hyperlink{structH__data}{H\+\_\+data}} \mbox{\hyperlink{bsoc_8h_aa0c654d6f8f3dfdeeb7ce2f2d7725d25}{H}}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{bsoc_8h_a2fd487055c79a1c6b3ffa3dcd59b98fb}{build\+\_\+date}}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{bsoc_8h_a0c1b6525ab4582a08673967cfee5b994}{build\+\_\+time}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{bsoc_8h_aa30a92a619f5bd97c8469a385f693639}\index{bsoc.h@{bsoc.h}!BVSOC\_SLOTS@{BVSOC\_SLOTS}}
+\index{BVSOC\_SLOTS@{BVSOC\_SLOTS}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{BVSOC\_SLOTS}{BVSOC\_SLOTS}}
+{\footnotesize\ttfamily \label{bsoc_8h_aa30a92a619f5bd97c8469a385f693639} 
+\#define BVSOC\+\_\+\+SLOTS~26}
+
+\Hypertarget{bsoc_8h_a878a488f0764c971991adc6ad73e6c49}\index{bsoc.h@{bsoc.h}!CEF\_DERATE@{CEF\_DERATE}}
+\index{CEF\_DERATE@{CEF\_DERATE}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{CEF\_DERATE}{CEF\_DERATE}}
+{\footnotesize\ttfamily \label{bsoc_8h_a878a488f0764c971991adc6ad73e6c49} 
+\#define CEF\+\_\+\+DERATE~1.\+20f}
+
+\Hypertarget{bsoc_8h_a96071f0261d7a1809447507ceb661cef}\index{bsoc.h@{bsoc.h}!CEF\_HSOC@{CEF\_HSOC}}
+\index{CEF\_HSOC@{CEF\_HSOC}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{CEF\_HSOC}{CEF\_HSOC}}
+{\footnotesize\ttfamily \label{bsoc_8h_a96071f0261d7a1809447507ceb661cef} 
+\#define CEF\+\_\+\+HSOC~0.\+45f}
+
+\Hypertarget{bsoc_8h_aa1e9574d94a478789dc2790715b7f3f4}\index{bsoc.h@{bsoc.h}!CEF\_LSOC@{CEF\_LSOC}}
+\index{CEF\_LSOC@{CEF\_LSOC}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{CEF\_LSOC}{CEF\_LSOC}}
+{\footnotesize\ttfamily \label{bsoc_8h_aa1e9574d94a478789dc2790715b7f3f4} 
+\#define CEF\+\_\+\+LSOC~0.\+90f}
+
+\Hypertarget{bsoc_8h_a810a8c89ac6a6dfdb88a681712bc649b}\index{bsoc.h@{bsoc.h}!CEF\_MAX@{CEF\_MAX}}
+\index{CEF\_MAX@{CEF\_MAX}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{CEF\_MAX}{CEF\_MAX}}
+{\footnotesize\ttfamily \label{bsoc_8h_a810a8c89ac6a6dfdb88a681712bc649b} 
+\#define CEF\+\_\+\+MAX~0.\+95f}
+
+\Hypertarget{bsoc_8h_a641d9bc73273799512e100a9828065fd}\index{bsoc.h@{bsoc.h}!CEF\_MIN@{CEF\_MIN}}
+\index{CEF\_MIN@{CEF\_MIN}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{CEF\_MIN}{CEF\_MIN}}
+{\footnotesize\ttfamily \label{bsoc_8h_a641d9bc73273799512e100a9828065fd} 
+\#define CEF\+\_\+\+MIN~0.\+40f}
+
+\Hypertarget{bsoc_8h_aed651963ad18b2b3f869c782a8ce1450}\index{bsoc.h@{bsoc.h}!CEF\_MSOC@{CEF\_MSOC}}
+\index{CEF\_MSOC@{CEF\_MSOC}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{CEF\_MSOC}{CEF\_MSOC}}
+{\footnotesize\ttfamily \label{bsoc_8h_aed651963ad18b2b3f869c782a8ce1450} 
+\#define CEF\+\_\+\+MSOC~0.\+70f}
+
+\Hypertarget{bsoc_8h_ad3a89ab92b0c23e98bb69e52a7a7f678}\index{bsoc.h@{bsoc.h}!CEF\_OVER@{CEF\_OVER}}
+\index{CEF\_OVER@{CEF\_OVER}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{CEF\_OVER}{CEF\_OVER}}
+{\footnotesize\ttfamily \label{bsoc_8h_ad3a89ab92b0c23e98bb69e52a7a7f678} 
+\#define CEF\+\_\+\+OVER~0.\+99f}
+
+\Hypertarget{bsoc_8h_a91ec00754fbe6909cdd7826f7bfbb8c1}\index{bsoc.h@{bsoc.h}!CEF\_RESET@{CEF\_RESET}}
+\index{CEF\_RESET@{CEF\_RESET}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{CEF\_RESET}{CEF\_RESET}}
+{\footnotesize\ttfamily \label{bsoc_8h_a91ec00754fbe6909cdd7826f7bfbb8c1} 
+\#define CEF\+\_\+\+RESET~0.\+80f}
+
+\Hypertarget{bsoc_8h_a200f2f9164c6a6b806d71a2fac5abc41}\index{bsoc.h@{bsoc.h}!DPWM\_FULL@{DPWM\_FULL}}
+\index{DPWM\_FULL@{DPWM\_FULL}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{DPWM\_FULL}{DPWM\_FULL}}
+{\footnotesize\ttfamily \label{bsoc_8h_a200f2f9164c6a6b806d71a2fac5abc41} 
+\#define DPWM\+\_\+\+FULL~300}
+
+\Hypertarget{bsoc_8h_ad12a91fa47c3219a6ada4af6d6b9a0f8}\index{bsoc.h@{bsoc.h}!DPWM\_LOW\_VOLTS@{DPWM\_LOW\_VOLTS}}
+\index{DPWM\_LOW\_VOLTS@{DPWM\_LOW\_VOLTS}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{DPWM\_LOW\_VOLTS}{DPWM\_LOW\_VOLTS}}
+{\footnotesize\ttfamily \label{bsoc_8h_ad12a91fa47c3219a6ada4af6d6b9a0f8} 
+\#define DPWM\+\_\+\+LOW\+\_\+\+VOLTS~40.\+0f}
+
+\Hypertarget{bsoc_8h_ab791f37ed04ca9368693d4a7a87490f2}\index{bsoc.h@{bsoc.h}!FLOAT\_TIME@{FLOAT\_TIME}}
+\index{FLOAT\_TIME@{FLOAT\_TIME}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{FLOAT\_TIME}{FLOAT\_TIME}}
+{\footnotesize\ttfamily \label{bsoc_8h_ab791f37ed04ca9368693d4a7a87490f2} 
+\#define FLOAT\+\_\+\+TIME~60}
+
+\Hypertarget{bsoc_8h_a4a1493b4c23e70da509e900f5d1a43fa}\index{bsoc.h@{bsoc.h}!FM80\_FIXUPS@{FM80\_FIXUPS}}
+\index{FM80\_FIXUPS@{FM80\_FIXUPS}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{FM80\_FIXUPS}{FM80\_FIXUPS}}
+{\footnotesize\ttfamily \label{bsoc_8h_a4a1493b4c23e70da509e900f5d1a43fa} 
+\#define FM80\+\_\+\+FIXUPS}
+
+\Hypertarget{bsoc_8h_a269a9c6319feb5ee8691baaf95a2053a}\index{bsoc.h@{bsoc.h}!GTI\_IDLE@{GTI\_IDLE}}
+\index{GTI\_IDLE@{GTI\_IDLE}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{GTI\_IDLE}{GTI\_IDLE}}
+{\footnotesize\ttfamily \label{bsoc_8h_a269a9c6319feb5ee8691baaf95a2053a} 
+\#define GTI\+\_\+\+IDLE~50}
+
+\Hypertarget{bsoc_8h_af87ae0ed7cfc12dafbeb92d03959ebf4}\index{bsoc.h@{bsoc.h}!GTI\_INCR@{GTI\_INCR}}
+\index{GTI\_INCR@{GTI\_INCR}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{GTI\_INCR}{GTI\_INCR}}
+{\footnotesize\ttfamily \label{bsoc_8h_af87ae0ed7cfc12dafbeb92d03959ebf4} 
+\#define GTI\+\_\+\+INCR~100}
+
+\Hypertarget{bsoc_8h_a203882c27cff50d2ba5fe225d70dcb05}\index{bsoc.h@{bsoc.h}!GTI\_MAX@{GTI\_MAX}}
+\index{GTI\_MAX@{GTI\_MAX}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{GTI\_MAX}{GTI\_MAX}}
+{\footnotesize\ttfamily \label{bsoc_8h_a203882c27cff50d2ba5fe225d70dcb05} 
+\#define GTI\+\_\+\+MAX~600}
+
+\Hypertarget{bsoc_8h_a37f51eb06f09d5498245114085914e48}\index{bsoc.h@{bsoc.h}!GTI\_NORM@{GTI\_NORM}}
+\index{GTI\_NORM@{GTI\_NORM}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{GTI\_NORM}{GTI\_NORM}}
+{\footnotesize\ttfamily \label{bsoc_8h_a37f51eb06f09d5498245114085914e48} 
+\#define GTI\+\_\+\+NORM~450}
+
+\Hypertarget{bsoc_8h_afc95e1e2e1dc420680cf75e8c1e894eb}\index{bsoc.h@{bsoc.h}!HI\_ESR@{HI\_ESR}}
+\index{HI\_ESR@{HI\_ESR}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{HI\_ESR}{HI\_ESR}}
+{\footnotesize\ttfamily \label{bsoc_8h_afc95e1e2e1dc420680cf75e8c1e894eb} 
+\#define HI\+\_\+\+ESR~1500}
+
+\Hypertarget{bsoc_8h_ae1a939c1d605e65f72c7b4a8fe577e02}\index{bsoc.h@{bsoc.h}!MAXRUNTIME@{MAXRUNTIME}}
+\index{MAXRUNTIME@{MAXRUNTIME}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{MAXRUNTIME}{MAXRUNTIME}}
+{\footnotesize\ttfamily \label{bsoc_8h_ae1a939c1d605e65f72c7b4a8fe577e02} 
+\#define MAXRUNTIME~95.\+0f}
+
+\Hypertarget{bsoc_8h_ada2574c6615b9d470929902c1f9b963f}\index{bsoc.h@{bsoc.h}!MINRUNTIME@{MINRUNTIME}}
+\index{MINRUNTIME@{MINRUNTIME}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{MINRUNTIME}{MINRUNTIME}}
+{\footnotesize\ttfamily \label{bsoc_8h_ada2574c6615b9d470929902c1f9b963f} 
+\#define MINRUNTIME~0.\+05f}
+
+\Hypertarget{bsoc_8h_ad56b488f3dc5a4c35ddb2964c2ea31b7}\index{bsoc.h@{bsoc.h}!Perk\_ADJ\_FH@{Perk\_ADJ\_FH}}
+\index{Perk\_ADJ\_FH@{Perk\_ADJ\_FH}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{Perk\_ADJ\_FH}{Perk\_ADJ\_FH}}
+{\footnotesize\ttfamily \label{bsoc_8h_ad56b488f3dc5a4c35ddb2964c2ea31b7} 
+\#define Perk\+\_\+\+ADJ\+\_\+\+FH~5.\+00f}
+
+\Hypertarget{bsoc_8h_ac1f5951c76ea83516c28462a33d1e026}\index{bsoc.h@{bsoc.h}!Perk\_ADJ\_FL@{Perk\_ADJ\_FL}}
+\index{Perk\_ADJ\_FL@{Perk\_ADJ\_FL}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{Perk\_ADJ\_FL}{Perk\_ADJ\_FL}}
+{\footnotesize\ttfamily \label{bsoc_8h_ac1f5951c76ea83516c28462a33d1e026} 
+\#define Perk\+\_\+\+ADJ\+\_\+\+FL~1.\+10f}
+
+\Hypertarget{bsoc_8h_a73ad26d060dd555398ba730ca944748b}\index{bsoc.h@{bsoc.h}!PV\_MAX\_POWER@{PV\_MAX\_POWER}}
+\index{PV\_MAX\_POWER@{PV\_MAX\_POWER}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{PV\_MAX\_POWER}{PV\_MAX\_POWER}}
+{\footnotesize\ttfamily \label{bsoc_8h_a73ad26d060dd555398ba730ca944748b} 
+\#define PV\+\_\+\+MAX\+\_\+\+POWER~300.\+0f}
+
+\Hypertarget{bsoc_8h_a10d011348cafa7e14aeb0cb5ea2c6b9c}\index{bsoc.h@{bsoc.h}!PWM\_MAX\_POWER@{PWM\_MAX\_POWER}}
+\index{PWM\_MAX\_POWER@{PWM\_MAX\_POWER}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_MAX\_POWER}{PWM\_MAX\_POWER}}
+{\footnotesize\ttfamily \label{bsoc_8h_a10d011348cafa7e14aeb0cb5ea2c6b9c} 
+\#define PWM\+\_\+\+MAX\+\_\+\+POWER~250.\+0f}
+
+\Hypertarget{bsoc_8h_ada3187fcfd651802725d63473e69db7b}\index{bsoc.h@{bsoc.h}!PWM\_WIN\_POWER@{PWM\_WIN\_POWER}}
+\index{PWM\_WIN\_POWER@{PWM\_WIN\_POWER}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_WIN\_POWER}{PWM\_WIN\_POWER}}
+{\footnotesize\ttfamily \label{bsoc_8h_ada3187fcfd651802725d63473e69db7b} 
+\#define PWM\+\_\+\+WIN\+\_\+\+POWER~10.\+0f}
+
+\Hypertarget{bsoc_8h_a655c9847927c460425e116dbe7ada722}\index{bsoc.h@{bsoc.h}!SOC\_CEF@{SOC\_CEF}}
+\index{SOC\_CEF@{SOC\_CEF}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{SOC\_CEF}{SOC\_CEF}}
+{\footnotesize\ttfamily \label{bsoc_8h_a655c9847927c460425e116dbe7ada722} 
+\#define SOC\+\_\+\+CEF~100}
+
+\Hypertarget{bsoc_8h_ad09b91a85b32b1c1996347ef72385ad6}\index{bsoc.h@{bsoc.h}!SOC\_DERATE@{SOC\_DERATE}}
+\index{SOC\_DERATE@{SOC\_DERATE}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{SOC\_DERATE}{SOC\_DERATE}}
+{\footnotesize\ttfamily \label{bsoc_8h_ad09b91a85b32b1c1996347ef72385ad6} 
+\#define SOC\+\_\+\+DERATE~70}
+
+\Hypertarget{bsoc_8h_a58813ac6df267a91998fc9273aa42f9b}\index{bsoc.h@{bsoc.h}!Temp\_ADJ\_FL@{Temp\_ADJ\_FL}}
+\index{Temp\_ADJ\_FL@{Temp\_ADJ\_FL}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{Temp\_ADJ\_FL}{Temp\_ADJ\_FL}}
+{\footnotesize\ttfamily \label{bsoc_8h_a58813ac6df267a91998fc9273aa42f9b} 
+\#define Temp\+\_\+\+ADJ\+\_\+\+FL~1.\+20f}
+
+\Hypertarget{bsoc_8h_af9901f76eb7b8b42e4c961a18f8e1344}\index{bsoc.h@{bsoc.h}!Temp\_ZERO@{Temp\_ZERO}}
+\index{Temp\_ZERO@{Temp\_ZERO}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{Temp\_ZERO}{Temp\_ZERO}}
+{\footnotesize\ttfamily \label{bsoc_8h_af9901f76eb7b8b42e4c961a18f8e1344} 
+\#define Temp\+\_\+\+ZERO~267l}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815}\index{bsoc.h@{bsoc.h}!M\_CODES@{M\_CODES}}
+\index{M\_CODES@{M\_CODES}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{M\_CODES}{M\_CODES}}
+{\footnotesize\ttfamily \label{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815} 
+enum \mbox{\hyperlink{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815}{M\+\_\+\+CODES}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_DEACT@{M\_DEACT}!bsoc.h@{bsoc.h}}\index{bsoc.h@{bsoc.h}!M\_DEACT@{M\_DEACT}}}\Hypertarget{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815af7f3173fd015d2ea9399f5c8c3bc8121}\label{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815af7f3173fd015d2ea9399f5c8c3bc8121} 
+M\+\_\+\+DEACT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_ACT@{M\_ACT}!bsoc.h@{bsoc.h}}\index{bsoc.h@{bsoc.h}!M\_ACT@{M\_ACT}}}\Hypertarget{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815a7df9e1577c4eceb7ccd8e2d60b5d0f1e}\label{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815a7df9e1577c4eceb7ccd8e2d60b5d0f1e} 
+M\+\_\+\+ACT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_MPPT@{M\_MPPT}!bsoc.h@{bsoc.h}}\index{bsoc.h@{bsoc.h}!M\_MPPT@{M\_MPPT}}}\Hypertarget{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815adc519d823b1f2a3558bd2a3b6cfe0d19}\label{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815adc519d823b1f2a3558bd2a3b6cfe0d19} 
+M\+\_\+\+MPPT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_EQUAL@{M\_EQUAL}!bsoc.h@{bsoc.h}}\index{bsoc.h@{bsoc.h}!M\_EQUAL@{M\_EQUAL}}}\Hypertarget{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815a571244fbfe6cfaafcda2afa48c5b86ab}\label{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815a571244fbfe6cfaafcda2afa48c5b86ab} 
+M\+\_\+\+EQUAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_BOOST@{M\_BOOST}!bsoc.h@{bsoc.h}}\index{bsoc.h@{bsoc.h}!M\_BOOST@{M\_BOOST}}}\Hypertarget{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815afeec912eb58ed31616e81655cfb77d62}\label{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815afeec912eb58ed31616e81655cfb77d62} 
+M\+\_\+\+BOOST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_FLOAT@{M\_FLOAT}!bsoc.h@{bsoc.h}}\index{bsoc.h@{bsoc.h}!M\_FLOAT@{M\_FLOAT}}}\Hypertarget{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815a3915f10d8dd1c975d2a246689bcb1831}\label{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815a3915f10d8dd1c975d2a246689bcb1831} 
+M\+\_\+\+FLOAT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_LIMIT@{M\_LIMIT}!bsoc.h@{bsoc.h}}\index{bsoc.h@{bsoc.h}!M\_LIMIT@{M\_LIMIT}}}\Hypertarget{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815a9a8131e8a7c57b96f0529e814e24cef1}\label{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815a9a8131e8a7c57b96f0529e814e24cef1} 
+M\+\_\+\+LIMIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_OFFLINE@{M\_OFFLINE}!bsoc.h@{bsoc.h}}\index{bsoc.h@{bsoc.h}!M\_OFFLINE@{M\_OFFLINE}}}\Hypertarget{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815a8b0b5f2337ab42026e7ae69d2756797e}\label{bsoc_8h_a191b0cdbc2a48ad34e218834f0911815a8b0b5f2337ab42026e7ae69d2756797e} 
+M\+\_\+\+OFFLINE&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{bsoc_8h_afaf843bd2aece7e6a077167b098b7630}\index{bsoc.h@{bsoc.h}!R\_CODES@{R\_CODES}}
+\index{R\_CODES@{R\_CODES}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{R\_CODES}{R\_CODES}}
+{\footnotesize\ttfamily \label{bsoc_8h_afaf843bd2aece7e6a077167b098b7630} 
+enum \mbox{\hyperlink{bsoc_8h_afaf843bd2aece7e6a077167b098b7630}{R\+\_\+\+CODES}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\_CYCLE@{R\_CYCLE}!bsoc.h@{bsoc.h}}\index{bsoc.h@{bsoc.h}!R\_CYCLE@{R\_CYCLE}}}\Hypertarget{bsoc_8h_afaf843bd2aece7e6a077167b098b7630afaa4237d33537d9d808292253799ab3f}\label{bsoc_8h_afaf843bd2aece7e6a077167b098b7630afaa4237d33537d9d808292253799ab3f} 
+R\+\_\+\+CYCLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\_TOTAL@{R\_TOTAL}!bsoc.h@{bsoc.h}}\index{bsoc.h@{bsoc.h}!R\_TOTAL@{R\_TOTAL}}}\Hypertarget{bsoc_8h_afaf843bd2aece7e6a077167b098b7630af1cead5c18fe620361d49edc088a68f1}\label{bsoc_8h_afaf843bd2aece7e6a077167b098b7630af1cead5c18fe620361d49edc088a68f1} 
+R\+\_\+\+TOTAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\_PV@{R\_PV}!bsoc.h@{bsoc.h}}\index{bsoc.h@{bsoc.h}!R\_PV@{R\_PV}}}\Hypertarget{bsoc_8h_afaf843bd2aece7e6a077167b098b7630a1db66030efb36bf9f5100901eb6fdfeb}\label{bsoc_8h_afaf843bd2aece7e6a077167b098b7630a1db66030efb36bf9f5100901eb6fdfeb} 
+R\+\_\+\+PV&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\_BAT@{R\_BAT}!bsoc.h@{bsoc.h}}\index{bsoc.h@{bsoc.h}!R\_BAT@{R\_BAT}}}\Hypertarget{bsoc_8h_afaf843bd2aece7e6a077167b098b7630a2561931701c26d303320b92e600822ad}\label{bsoc_8h_afaf843bd2aece7e6a077167b098b7630a2561931701c26d303320b92e600822ad} 
+R\+\_\+\+BAT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{bsoc_8h_ac1c05d61890db61b2cf904a8fa8fcba1}\index{bsoc.h@{bsoc.h}!calc\_bsoc@{calc\_bsoc}}
+\index{calc\_bsoc@{calc\_bsoc}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{calc\_bsoc()}{calc\_bsoc()}}
+{\footnotesize\ttfamily \label{bsoc_8h_ac1c05d61890db61b2cf904a8fa8fcba1} 
+void calc\+\_\+bsoc (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsoc_8h_ac1c05d61890db61b2cf904a8fa8fcba1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{bsoc_8h_ac1c05d61890db61b2cf904a8fa8fcba1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsoc_8h_a5ac787683a0fcf6eff58bdf6c75f6666}\index{bsoc.h@{bsoc.h}!cc\_state@{cc\_state}}
+\index{cc\_state@{cc\_state}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{cc\_state()}{cc\_state()}}
+{\footnotesize\ttfamily \label{bsoc_8h_a5ac787683a0fcf6eff58bdf6c75f6666} 
+uint8\+\_\+t cc\+\_\+state (\begin{DoxyParamCaption}\item[{float}]{cc\+\_\+signal}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsoc_8h_a5ac787683a0fcf6eff58bdf6c75f6666_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsoc_8h_a620852efe2ba4bdde558a6013a3650d4}\index{bsoc.h@{bsoc.h}!esr\_check@{esr\_check}}
+\index{esr\_check@{esr\_check}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{esr\_check()}{esr\_check()}}
+{\footnotesize\ttfamily \label{bsoc_8h_a620852efe2ba4bdde558a6013a3650d4} 
+float esr\+\_\+check (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{fsm}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsoc_8h_a620852efe2ba4bdde558a6013a3650d4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{bsoc_8h_a620852efe2ba4bdde558a6013a3650d4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsoc_8h_aa2a5a6cfcb8aa698b027590c288c64bb}\index{bsoc.h@{bsoc.h}!gti\_cmds@{gti\_cmds}}
+\index{gti\_cmds@{gti\_cmds}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{gti\_cmds()}{gti\_cmds()}}
+{\footnotesize\ttfamily \label{bsoc_8h_aa2a5a6cfcb8aa698b027590c288c64bb} 
+void gti\+\_\+cmds (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{bsoc_8h_aa2a5a6cfcb8aa698b027590c288c64bb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{bsoc_8h_aa2a5a6cfcb8aa698b027590c288c64bb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsoc_8h_a9472dd04e63765316757125607a624f3}\index{bsoc.h@{bsoc.h}!init\_bsoc@{init\_bsoc}}
+\index{init\_bsoc@{init\_bsoc}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{init\_bsoc()}{init\_bsoc()}}
+{\footnotesize\ttfamily \label{bsoc_8h_a9472dd04e63765316757125607a624f3} 
+void init\+\_\+bsoc (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsoc_8h_a9472dd04e63765316757125607a624f3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{bsoc_8h_a9472dd04e63765316757125607a624f3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsoc_8h_a204278831433cb2ab68902bb94ddaa27}\index{bsoc.h@{bsoc.h}!peukert@{peukert}}
+\index{peukert@{peukert}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{peukert()}{peukert()}}
+{\footnotesize\ttfamily \label{bsoc_8h_a204278831433cb2ab68902bb94ddaa27} 
+uint32\+\_\+t peukert (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{brate}{, }\item[{float}]{bcurrent}{, }\item[{float}]{peukert}{, }\item[{int16\+\_\+t}]{bsoc}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{bsoc_8h_a204278831433cb2ab68902bb94ddaa27_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{bsoc_8h_a204278831433cb2ab68902bb94ddaa27_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsoc_8h_afdf62b51b29d2a3d57e9b77b460bbbea}\index{bsoc.h@{bsoc.h}!pv\_diversion@{pv\_diversion}}
+\index{pv\_diversion@{pv\_diversion}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{pv\_diversion()}{pv\_diversion()}}
+{\footnotesize\ttfamily \label{bsoc_8h_afdf62b51b29d2a3d57e9b77b460bbbea} 
+bool pv\+\_\+diversion (\begin{DoxyParamCaption}\item[{bool}]{kill}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsoc_8h_afdf62b51b29d2a3d57e9b77b460bbbea_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsoc_8h_afdf62b51b29d2a3d57e9b77b460bbbea_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsoc_8h_a39f7720f7620a8343a495ec8def92f79}\index{bsoc.h@{bsoc.h}!reset\_bsoc@{reset\_bsoc}}
+\index{reset\_bsoc@{reset\_bsoc}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{reset\_bsoc()}{reset\_bsoc()}}
+{\footnotesize\ttfamily \label{bsoc_8h_a39f7720f7620a8343a495ec8def92f79} 
+void reset\+\_\+bsoc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{bsoc_8h_afaf843bd2aece7e6a077167b098b7630}{R\+\_\+\+CODES}}}]{rmode}{}\end{DoxyParamCaption})}
+
+\Hypertarget{bsoc_8h_a018c31ab87827b040b20435127d5719a}\index{bsoc.h@{bsoc.h}!start\_bsoc@{start\_bsoc}}
+\index{start\_bsoc@{start\_bsoc}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{start\_bsoc()}{start\_bsoc()}}
+{\footnotesize\ttfamily \label{bsoc_8h_a018c31ab87827b040b20435127d5719a} 
+void start\+\_\+bsoc (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsoc_8h_a018c31ab87827b040b20435127d5719a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsoc_8h_a31f7f3239fc1f59f159d360d29f3af83}\index{bsoc.h@{bsoc.h}!stop\_bsoc@{stop\_bsoc}}
+\index{stop\_bsoc@{stop\_bsoc}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{stop\_bsoc()}{stop\_bsoc()}}
+{\footnotesize\ttfamily \label{bsoc_8h_a31f7f3239fc1f59f159d360d29f3af83} 
+void stop\+\_\+bsoc (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsoc_8h_a31f7f3239fc1f59f159d360d29f3af83_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsoc_8h_a7b4f3f69c68151cb462ec3b22e13c649}\index{bsoc.h@{bsoc.h}!Volts\_to\_SOC@{Volts\_to\_SOC}}
+\index{Volts\_to\_SOC@{Volts\_to\_SOC}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{Volts\_to\_SOC()}{Volts\_to\_SOC()}}
+{\footnotesize\ttfamily \label{bsoc_8h_a7b4f3f69c68151cb462ec3b22e13c649} 
+uint16\+\_\+t Volts\+\_\+to\+\_\+\+SOC (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{cvoltage}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{bsoc_8h_a7b4f3f69c68151cb462ec3b22e13c649_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{bsoc_8h_a2fd487055c79a1c6b3ffa3dcd59b98fb}\index{bsoc.h@{bsoc.h}!build\_date@{build\_date}}
+\index{build\_date@{build\_date}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{build\_date}{build\_date}}
+{\footnotesize\ttfamily \label{bsoc_8h_a2fd487055c79a1c6b3ffa3dcd59b98fb} 
+const char\texorpdfstring{$\ast$}{*} build\+\_\+date\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{bsoc_8h_a0c1b6525ab4582a08673967cfee5b994}\index{bsoc.h@{bsoc.h}!build\_time@{build\_time}}
+\index{build\_time@{build\_time}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{build\_time}{build\_time}}
+{\footnotesize\ttfamily \label{bsoc_8h_a0c1b6525ab4582a08673967cfee5b994} 
+const char \texorpdfstring{$\ast$}{*} build\+\_\+time}
+
+\Hypertarget{bsoc_8h_aac2173f40f4f1cc4ae25246854f2df52}\index{bsoc.h@{bsoc.h}!C@{C}}
+\index{C@{C}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{C}{C}}
+{\footnotesize\ttfamily \label{bsoc_8h_aac2173f40f4f1cc4ae25246854f2df52} 
+volatile \mbox{\hyperlink{structC__data}{C\+\_\+data}} C\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{bsoc_8h_aa0c654d6f8f3dfdeeb7ce2f2d7725d25}\index{bsoc.h@{bsoc.h}!H@{H}}
+\index{H@{H}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{H}{H}}
+{\footnotesize\ttfamily \label{bsoc_8h_aa0c654d6f8f3dfdeeb7ce2f2d7725d25} 
+\mbox{\hyperlink{structH__data}{H\+\_\+data}} H\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{bsoc_8h_a3677a1b059657e0e0bcfa48d64f81cb4}\index{bsoc.h@{bsoc.h}!V@{V}}
+\index{V@{V}!bsoc.h@{bsoc.h}}
+\doxysubsubsection{\texorpdfstring{V}{V}}
+{\footnotesize\ttfamily \label{bsoc_8h_a3677a1b059657e0e0bcfa48d64f81cb4} 
+\mbox{\hyperlink{structV__data}{V\+\_\+data}} V\hspace{0.3cm}{\ttfamily [extern]}}
+

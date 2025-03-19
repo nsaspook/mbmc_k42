@@ -303,7 +303,7 @@ void main(void)
 			V.ui_state = mode;
 			srand(1957);
 			set_vterm(0); // set to buffer 0
-			sprintf(get_vterm_ptr(0, 0), " MBMC SOLARMON      ");
+			sprintf(get_vterm_ptr(0, 0), " Dump Load Mon      ");
 			sprintf(get_vterm_ptr(1, 0), " Version %s         ", VER);
 			sprintf(get_vterm_ptr(2, 0), " NSASPOOK           ");
 			if (t_out) {

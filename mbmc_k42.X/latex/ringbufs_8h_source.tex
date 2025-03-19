@@ -1,0 +1,46 @@
+\doxysection{ringbufs.\+h}
+\hypertarget{ringbufs_8h_source}{}\label{ringbufs_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ File:\ \ \ ringbufs.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ Author:\ rootswitcDC\ circuit\ breakerh\ debounce\ icdebounce\ icfuse\ type\ T}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Created\ on\ July\ 25,\ 2015,\ 2:03\ PM}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ RINGBUFS\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ RINGBUFS\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifdef\ \ \_\_cplusplus}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}vconfig.h"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ RBUF\_SIZE\ \ \ \ 64}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structringBufS__t}{ringBufS\_t}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ uint8\_t\ buf[RBUF\_SIZE];}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ uint8\_t\ head;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ uint8\_t\ tail;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ uint8\_t\ count;}
+\DoxyCodeLine{00024\ \ \ \ \ \}\ \mbox{\hyperlink{structringBufS__t}{ringBufS\_t}};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ ringBufS\_init(\textcolor{keyword}{volatile}\ \mbox{\hyperlink{structringBufS__t}{ringBufS\_t}}\ *\_this);}
+\DoxyCodeLine{00027\ \ \ \ \ int8\_t\ ringBufS\_empty(\mbox{\hyperlink{structringBufS__t}{ringBufS\_t}}\ *\_this);}
+\DoxyCodeLine{00028\ \ \ \ \ int8\_t\ ringBufS\_full(\mbox{\hyperlink{structringBufS__t}{ringBufS\_t}}\ *\_this);}
+\DoxyCodeLine{00029\ \ \ \ \ uint8\_t\ ringBufS\_get(\mbox{\hyperlink{structringBufS__t}{ringBufS\_t}}\ *\_this);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ ringBufS\_put(\mbox{\hyperlink{structringBufS__t}{ringBufS\_t}}\ *\_this,\ \textcolor{keyword}{const}\ uint8\_t\ c);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ ringBufS\_put\_dma(\mbox{\hyperlink{structringBufS__t}{ringBufS\_t}}\ *\_this,\ \textcolor{keyword}{const}\ uint8\_t\ c);}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ ringBufS\_put\_dma\_cpy(\mbox{\hyperlink{structringBufS__t}{ringBufS\_t}}\ *,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *,\ \textcolor{keyword}{const}\ uint8\_t);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ ringBufS\_flush(\mbox{\hyperlink{structringBufS__t}{ringBufS\_t}}\ *\_this,\ \textcolor{keyword}{const}\ int8\_t\ clearBuffer);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#ifdef\ \ \_\_cplusplus}}
+\DoxyCodeLine{00037\ \}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ RINGBUFS\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00041\ }
+
+\end{DoxyCode}

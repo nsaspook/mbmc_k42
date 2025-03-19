@@ -1,0 +1,89 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Data Structure Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Data Structures}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}File Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}File List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Data Structure Documentation}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}block10 Union Reference}{5}{section.3.1}%
+\contentsline {section}{\numberline {3.2}block10\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}type Struct Reference}{6}{section.3.2}%
+\contentsline {section}{\numberline {3.3}bytes2 Union Reference}{6}{section.3.3}%
+\contentsline {section}{\numberline {3.4}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data Struct Reference}{6}{section.3.4}%
+\contentsline {section}{\numberline {3.5}c\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}JSON Struct Reference}{8}{section.3.5}%
+\contentsline {section}{\numberline {3.6}c\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}JSON\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hooks Struct Reference}{8}{section.3.6}%
+\contentsline {section}{\numberline {3.7}CRC\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}OBJ Struct Reference}{8}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Detailed Description}{9}{subsection.3.7.1}%
+\contentsline {section}{\numberline {3.8}D\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data Struct Reference}{9}{section.3.8}%
+\contentsline {section}{\numberline {3.9}dac\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}buf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}type Union Reference}{9}{section.3.9}%
+\contentsline {section}{\numberline {3.10}error Struct Reference}{10}{section.3.10}%
+\contentsline {section}{\numberline {3.11}gem\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}display\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}type Struct Reference}{10}{section.3.11}%
+\contentsline {section}{\numberline {3.12}gem\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}message\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}type Struct Reference}{11}{section.3.12}%
+\contentsline {section}{\numberline {3.13}H\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data Struct Reference}{12}{section.3.13}%
+\contentsline {section}{\numberline {3.14}header10 Struct Reference}{12}{section.3.14}%
+\contentsline {section}{\numberline {3.15}header12 Struct Reference}{13}{section.3.15}%
+\contentsline {section}{\numberline {3.16}header13 Struct Reference}{14}{section.3.16}%
+\contentsline {section}{\numberline {3.17}header14 Struct Reference}{15}{section.3.17}%
+\contentsline {section}{\numberline {3.18}header153 Struct Reference}{16}{section.3.18}%
+\contentsline {section}{\numberline {3.19}header17 Struct Reference}{17}{section.3.19}%
+\contentsline {section}{\numberline {3.20}header18 Struct Reference}{18}{section.3.20}%
+\contentsline {section}{\numberline {3.21}header24 Struct Reference}{19}{section.3.21}%
+\contentsline {section}{\numberline {3.22}header254 Struct Reference}{20}{section.3.22}%
+\contentsline {section}{\numberline {3.23}header26 Struct Reference}{21}{section.3.23}%
+\contentsline {section}{\numberline {3.24}header27 Struct Reference}{22}{section.3.24}%
+\contentsline {section}{\numberline {3.25}header33 Struct Reference}{23}{section.3.25}%
+\contentsline {section}{\numberline {3.26}hist\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}type Struct Reference}{23}{section.3.26}%
+\contentsline {section}{\numberline {3.27}internal\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hooks Struct Reference}{24}{section.3.27}%
+\contentsline {section}{\numberline {3.28}parse\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}buffer Struct Reference}{24}{section.3.28}%
+\contentsline {section}{\numberline {3.29}printbuffer Struct Reference}{25}{section.3.29}%
+\contentsline {section}{\numberline {3.30}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data Struct Reference}{26}{section.3.30}%
+\contentsline {section}{\numberline {3.31}rbutton\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}type Struct Reference}{27}{section.3.31}%
+\contentsline {section}{\numberline {3.32}response\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}type Struct Reference}{27}{section.3.32}%
+\contentsline {section}{\numberline {3.33}ring\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Buf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}S\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t Struct Reference}{27}{section.3.33}%
+\contentsline {section}{\numberline {3.34}S\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data Struct Reference}{28}{section.3.34}%
+\contentsline {section}{\numberline {3.35}spi1\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}configuration\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t Struct Reference}{28}{section.3.35}%
+\contentsline {subsection}{\numberline {3.35.1}Detailed Description}{28}{subsection.3.35.1}%
+\contentsline {section}{\numberline {3.36}spi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}link\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}type Struct Reference}{29}{section.3.36}%
+\contentsline {section}{\numberline {3.37}terminal\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}type Struct Reference}{29}{section.3.37}%
+\contentsline {section}{\numberline {3.38}uart1\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}status\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t Union Reference}{29}{section.3.38}%
+\contentsline {subsection}{\numberline {3.38.1}Detailed Description}{30}{subsection.3.38.1}%
+\contentsline {section}{\numberline {3.39}uart2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}status\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t Union Reference}{30}{section.3.39}%
+\contentsline {subsection}{\numberline {3.39.1}Detailed Description}{30}{subsection.3.39.1}%
+\contentsline {section}{\numberline {3.40}V\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data Struct Reference}{30}{section.3.40}%
+\contentsline {section}{\numberline {3.41}V\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}help Struct Reference}{32}{section.3.41}%
+\contentsline {chapter}{\numberline {4}File Documentation}{33}{chapter.4}%
+\contentsline {section}{\numberline {4.1}bsoc.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{33}{section.4.1}%
+\contentsline {section}{\numberline {4.2}c\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}JSON.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{34}{section.4.2}%
+\contentsline {section}{\numberline {4.3}c\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}JSON\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Utils.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{38}{section.4.3}%
+\contentsline {section}{\numberline {4.4}daq.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{39}{section.4.4}%
+\contentsline {section}{\numberline {4.5}dio.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{42}{section.4.5}%
+\contentsline {section}{\numberline {4.6}eadog.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{42}{section.4.6}%
+\contentsline {section}{\numberline {4.7}gemsecs.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{44}{section.4.7}%
+\contentsline {section}{\numberline {4.8}hid.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{46}{section.4.8}%
+\contentsline {section}{\numberline {4.9}mbmc.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{47}{section.4.9}%
+\contentsline {section}{\numberline {4.10}adcc.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{48}{section.4.10}%
+\contentsline {section}{\numberline {4.11}clkref.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{50}{section.4.11}%
+\contentsline {section}{\numberline {4.12}crc.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{50}{section.4.12}%
+\contentsline {section}{\numberline {4.13}device\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}config.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{51}{section.4.13}%
+\contentsline {section}{\numberline {4.14}dma1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{52}{section.4.14}%
+\contentsline {section}{\numberline {4.15}dma2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{53}{section.4.15}%
+\contentsline {section}{\numberline {4.16}ext\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}int.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{53}{section.4.16}%
+\contentsline {section}{\numberline {4.17}fvr.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{55}{section.4.17}%
+\contentsline {section}{\numberline {4.18}interrupt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{55}{section.4.18}%
+\contentsline {section}{\numberline {4.19}mcc.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{56}{section.4.19}%
+\contentsline {section}{\numberline {4.20}memory.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{57}{section.4.20}%
+\contentsline {section}{\numberline {4.21}pin\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{57}{section.4.21}%
+\contentsline {section}{\numberline {4.22}pwm8.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{67}{section.4.22}%
+\contentsline {section}{\numberline {4.23}spi1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{67}{section.4.23}%
+\contentsline {section}{\numberline {4.24}tmr2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{68}{section.4.24}%
+\contentsline {section}{\numberline {4.25}tmr3.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{72}{section.4.25}%
+\contentsline {section}{\numberline {4.26}tmr5.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{73}{section.4.26}%
+\contentsline {section}{\numberline {4.27}tmr6.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{74}{section.4.27}%
+\contentsline {section}{\numberline {4.28}uart1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{77}{section.4.28}%
+\contentsline {section}{\numberline {4.29}uart2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{79}{section.4.29}%
+\contentsline {section}{\numberline {4.30}mconfig.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{80}{section.4.30}%
+\contentsline {section}{\numberline {4.31}msg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}text.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{81}{section.4.31}%
+\contentsline {section}{\numberline {4.32}mydisplay.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{81}{section.4.32}%
+\contentsline {section}{\numberline {4.33}ringbufs.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{82}{section.4.33}%
+\contentsline {section}{\numberline {4.34}tests.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{83}{section.4.34}%
+\contentsline {section}{\numberline {4.35}timers.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{84}{section.4.35}%
+\contentsline {section}{\numberline {4.36}vconfig.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{84}{section.4.36}%
+\contentsline {chapter}{Index}{89}{section*.65}%

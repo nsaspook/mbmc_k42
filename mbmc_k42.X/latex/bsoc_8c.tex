@@ -1,0 +1,438 @@
+\doxysection{bsoc.\+c File Reference}
+\hypertarget{bsoc_8c}{}\label{bsoc_8c}\index{bsoc.c@{bsoc.c}}
+{\ttfamily \#include "{}bsoc.\+h"{}}\newline
+{\ttfamily \#include "{}mcc\+\_\+generated\+\_\+files/interrupt\+\_\+manager.\+h"{}}\newline
+Include dependency graph for bsoc.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsoc_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{bsoc_8c_ad6f4949cd49307ae25b5142164543d61}{MAX\+\_\+\+GTI}}~650
+\item 
+\#define \mbox{\hyperlink{bsoc_8c_a15eb9fe03338ccf4f89dbc5f6ab067bc}{GTI\+\_\+\+POWER}}~0
+\item 
+\#define \mbox{\hyperlink{bsoc_8c_aa7e2cbaa8d2a1d0432847f9576becc92}{SPINNER\+\_\+\+SPEED}}~200
+\item 
+\#define \mbox{\hyperlink{bsoc_8c_afec41e0b985a988fddfa23ee96fc4843}{GTI\+\_\+\+SPEED}}~1000
+\item 
+\#define \mbox{\hyperlink{bsoc_8c_ac9df3ac1684b80558780997a5ed4cc03}{Swrite}}~\mbox{\hyperlink{uart2_8c_a39d80e6786b7cbcadcbd0c020e60a6e7}{UART2\+\_\+\+Write}}
+\item 
+\#define \mbox{\hyperlink{bsoc_8c_a40f5930d15a5b05602d2e9c8b0a9b537}{Sread}}~\mbox{\hyperlink{uart1_8c_a4e34071aa3125eb037bd6ae844c7ffbb}{UART1\+\_\+\+Read}}
+\item 
+\#define \mbox{\hyperlink{bsoc_8c_ad20a11faafb39648ca1378bf5fe0959c}{Sready}}~\mbox{\hyperlink{uart1_8c_a9cc281a1b89d2c4a0fb3acfaedaf2ce9}{UART1\+\_\+is\+\_\+rx\+\_\+ready}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{bsoc_8c_a46a574eae08338681dd314e999e2aefb}{gti\+\_\+checksum}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}, uint16\+\_\+t)
+\item 
+bool \mbox{\hyperlink{bsoc_8c_aac82d8ac4fad9e6cc4ec26be724e52d8}{pv\+\_\+diversion}} (bool kill)
+\item 
+void \mbox{\hyperlink{bsoc_8c_aa2a5a6cfcb8aa698b027590c288c64bb}{gti\+\_\+cmds}} (void)
+\item 
+void \mbox{\hyperlink{bsoc_8c_ac1c05d61890db61b2cf904a8fa8fcba1}{calc\+\_\+bsoc}} (void)
+\item 
+void \mbox{\hyperlink{bsoc_8c_a9472dd04e63765316757125607a624f3}{init\+\_\+bsoc}} (void)
+\item 
+void \mbox{\hyperlink{bsoc_8c_a018c31ab87827b040b20435127d5719a}{start\+\_\+bsoc}} (void)
+\item 
+void \mbox{\hyperlink{bsoc_8c_a31f7f3239fc1f59f159d360d29f3af83}{stop\+\_\+bsoc}} (void)
+\item 
+void \mbox{\hyperlink{bsoc_8c_a111857e2026af4d78cfbe5b06a3ec0ab}{reset\+\_\+bsoc}} (const \mbox{\hyperlink{bsoc_8h_afaf843bd2aece7e6a077167b098b7630}{R\+\_\+\+CODES}} rmode)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{bsoc_8c_a8539f401ff15bd8cce3d2919c2153341}{peukert}} (uint16\+\_\+t brate, float bcurrent, float peukert, int16\+\_\+t bsoc)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{bsoc_8c_a389efc2712d298e7e1661c1740ec32d1}{Volts\+\_\+to\+\_\+\+SOC}} (const uint32\+\_\+t cvoltage)
+\item 
+float \mbox{\hyperlink{bsoc_8c_a18e0ba757337f8b240cb4fd1b5abe510}{esr\+\_\+check}} (const uint8\+\_\+t fsm)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{bsoc_8c_ac386dccd84a189a38f4561fbe04cebd8}{cc\+\_\+state}} (float cc\+\_\+signal)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{bsoc_8c_a413c173c2e1ff8703249a14b15737478}{MQTT\+\_\+\+ID}} = "{}DUMPLOAD"{}
+\item 
+const uint32\+\_\+t \mbox{\hyperlink{bsoc_8c_a60ed4fd7fcc4a3bf1399b593c56898f6}{BVSOC\+\_\+\+TABLE}} \mbox{[}\mbox{\hyperlink{bsoc_8h_aa30a92a619f5bd97c8469a385f693639}{BVSOC\+\_\+\+SLOTS}}\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const char \mbox{\hyperlink{bsoc_8c_a9d738c4b728cde2bd02a2418e92d152c}{infoline1}} \mbox{[}$\,$\mbox{]} = "{} LOW Count TOD Count TX Count RX Count ADC Count SPI Count DIO Count"{}
+\item 
+const char \mbox{\hyperlink{bsoc_8c_a6ed2e4004409a74ffdea3cc240fbb1af}{infoline2}} \mbox{[}$\,$\mbox{]} = "{} DAILY AH LO ESR HI ESR PV AH BAT W Out BAT W IN REAL AH F CYCLES B CYCLES UPDATES"{}
+\item 
+volatile int16\+\_\+t \mbox{\hyperlink{bsoc_8c_a52fc393dcbbfd526f7dbb2ef8b9d8160}{gti\+\_\+power}} = \mbox{\hyperlink{bsoc_8c_a15eb9fe03338ccf4f89dbc5f6ab067bc}{GTI\+\_\+\+POWER}}
+\item 
+volatile bool \mbox{\hyperlink{bsoc_8c_a1ba5b41efc15579ff4e294952a86d109}{flop}} = \mbox{\hyperlink{cJSON_8c_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}
+\item 
+volatile uint8\+\_\+t \mbox{\hyperlink{bsoc_8c_a8dbb13dfa667ca84f3767a575906253e}{mqtt\+\_\+r}}
+\item 
+volatile int16\+\_\+t \mbox{\hyperlink{bsoc_8c_a2ad05227ae6df8405e30545f14681f0f}{cmd\+\_\+value}} = 0
+\item 
+time\+\_\+t \mbox{\hyperlink{bsoc_8c_a59846e197b696b4e1cb2fcc92752af05}{utc\+\_\+cmd\+\_\+value}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{bsoc_8c_a24096ca0e4d08363b5ff47bde0aec6fe}{gti\+\_\+sbuf}} \mbox{[}8\mbox{]} = \{0x24, 0x56, 0x00, 0x21, 0x03, 0x99, 0x80, 0x6c\}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{bsoc_8c_a195f8ce8cc9acc62d7f9d27577e2b6e9}{gti\+\_\+zero}} \mbox{[}8\mbox{]} = \{0x24, 0x56, 0x00, 0x21, 0x00, 0x00, 0x80, 0x08\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{bsoc_8c_a15eb9fe03338ccf4f89dbc5f6ab067bc}\index{bsoc.c@{bsoc.c}!GTI\_POWER@{GTI\_POWER}}
+\index{GTI\_POWER@{GTI\_POWER}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{GTI\_POWER}{GTI\_POWER}}
+{\footnotesize\ttfamily \label{bsoc_8c_a15eb9fe03338ccf4f89dbc5f6ab067bc} 
+\#define GTI\+\_\+\+POWER~0}
+
+\Hypertarget{bsoc_8c_afec41e0b985a988fddfa23ee96fc4843}\index{bsoc.c@{bsoc.c}!GTI\_SPEED@{GTI\_SPEED}}
+\index{GTI\_SPEED@{GTI\_SPEED}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{GTI\_SPEED}{GTI\_SPEED}}
+{\footnotesize\ttfamily \label{bsoc_8c_afec41e0b985a988fddfa23ee96fc4843} 
+\#define GTI\+\_\+\+SPEED~1000}
+
+\Hypertarget{bsoc_8c_ad6f4949cd49307ae25b5142164543d61}\index{bsoc.c@{bsoc.c}!MAX\_GTI@{MAX\_GTI}}
+\index{MAX\_GTI@{MAX\_GTI}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_GTI}{MAX\_GTI}}
+{\footnotesize\ttfamily \label{bsoc_8c_ad6f4949cd49307ae25b5142164543d61} 
+\#define MAX\+\_\+\+GTI~650}
+
+\Hypertarget{bsoc_8c_aa7e2cbaa8d2a1d0432847f9576becc92}\index{bsoc.c@{bsoc.c}!SPINNER\_SPEED@{SPINNER\_SPEED}}
+\index{SPINNER\_SPEED@{SPINNER\_SPEED}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{SPINNER\_SPEED}{SPINNER\_SPEED}}
+{\footnotesize\ttfamily \label{bsoc_8c_aa7e2cbaa8d2a1d0432847f9576becc92} 
+\#define SPINNER\+\_\+\+SPEED~200}
+
+\Hypertarget{bsoc_8c_a40f5930d15a5b05602d2e9c8b0a9b537}\index{bsoc.c@{bsoc.c}!Sread@{Sread}}
+\index{Sread@{Sread}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{Sread}{Sread}}
+{\footnotesize\ttfamily \label{bsoc_8c_a40f5930d15a5b05602d2e9c8b0a9b537} 
+\#define Sread~\mbox{\hyperlink{uart1_8c_a4e34071aa3125eb037bd6ae844c7ffbb}{UART1\+\_\+\+Read}}}
+
+\Hypertarget{bsoc_8c_ad20a11faafb39648ca1378bf5fe0959c}\index{bsoc.c@{bsoc.c}!Sready@{Sready}}
+\index{Sready@{Sready}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{Sready}{Sready}}
+{\footnotesize\ttfamily \label{bsoc_8c_ad20a11faafb39648ca1378bf5fe0959c} 
+\#define Sready~\mbox{\hyperlink{uart1_8c_a9cc281a1b89d2c4a0fb3acfaedaf2ce9}{UART1\+\_\+is\+\_\+rx\+\_\+ready}}}
+
+\Hypertarget{bsoc_8c_ac9df3ac1684b80558780997a5ed4cc03}\index{bsoc.c@{bsoc.c}!Swrite@{Swrite}}
+\index{Swrite@{Swrite}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{Swrite}{Swrite}}
+{\footnotesize\ttfamily \label{bsoc_8c_ac9df3ac1684b80558780997a5ed4cc03} 
+\#define Swrite~\mbox{\hyperlink{uart2_8c_a39d80e6786b7cbcadcbd0c020e60a6e7}{UART2\+\_\+\+Write}}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{bsoc_8c_ac1c05d61890db61b2cf904a8fa8fcba1}\index{bsoc.c@{bsoc.c}!calc\_bsoc@{calc\_bsoc}}
+\index{calc\_bsoc@{calc\_bsoc}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{calc\_bsoc()}{calc\_bsoc()}}
+{\footnotesize\ttfamily \label{bsoc_8c_ac1c05d61890db61b2cf904a8fa8fcba1} 
+void calc\+\_\+bsoc (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsoc_8c_ac1c05d61890db61b2cf904a8fa8fcba1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{bsoc_8c_ac1c05d61890db61b2cf904a8fa8fcba1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsoc_8c_ac386dccd84a189a38f4561fbe04cebd8}\index{bsoc.c@{bsoc.c}!cc\_state@{cc\_state}}
+\index{cc\_state@{cc\_state}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{cc\_state()}{cc\_state()}}
+{\footnotesize\ttfamily \label{bsoc_8c_ac386dccd84a189a38f4561fbe04cebd8} 
+uint8\+\_\+t cc\+\_\+state (\begin{DoxyParamCaption}\item[{float}]{cc\+\_\+signal}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsoc_8c_ac386dccd84a189a38f4561fbe04cebd8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsoc_8c_a18e0ba757337f8b240cb4fd1b5abe510}\index{bsoc.c@{bsoc.c}!esr\_check@{esr\_check}}
+\index{esr\_check@{esr\_check}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{esr\_check()}{esr\_check()}}
+{\footnotesize\ttfamily \label{bsoc_8c_a18e0ba757337f8b240cb4fd1b5abe510} 
+float esr\+\_\+check (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{fsm}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsoc_8c_a18e0ba757337f8b240cb4fd1b5abe510_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{bsoc_8c_a18e0ba757337f8b240cb4fd1b5abe510_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsoc_8c_a46a574eae08338681dd314e999e2aefb}\index{bsoc.c@{bsoc.c}!gti\_checksum@{gti\_checksum}}
+\index{gti\_checksum@{gti\_checksum}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{gti\_checksum()}{gti\_checksum()}}
+{\footnotesize\ttfamily \label{bsoc_8c_a46a574eae08338681dd314e999e2aefb} 
+uint8\+\_\+t gti\+\_\+checksum (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{gti\+\_\+sbuf}{, }\item[{uint16\+\_\+t}]{power}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsoc_8c_a46a574eae08338681dd314e999e2aefb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsoc_8c_aa2a5a6cfcb8aa698b027590c288c64bb}\index{bsoc.c@{bsoc.c}!gti\_cmds@{gti\_cmds}}
+\index{gti\_cmds@{gti\_cmds}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{gti\_cmds()}{gti\_cmds()}}
+{\footnotesize\ttfamily \label{bsoc_8c_aa2a5a6cfcb8aa698b027590c288c64bb} 
+void gti\+\_\+cmds (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{bsoc_8c_aa2a5a6cfcb8aa698b027590c288c64bb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{bsoc_8c_aa2a5a6cfcb8aa698b027590c288c64bb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsoc_8c_a9472dd04e63765316757125607a624f3}\index{bsoc.c@{bsoc.c}!init\_bsoc@{init\_bsoc}}
+\index{init\_bsoc@{init\_bsoc}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{init\_bsoc()}{init\_bsoc()}}
+{\footnotesize\ttfamily \label{bsoc_8c_a9472dd04e63765316757125607a624f3} 
+void init\+\_\+bsoc (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsoc_8c_a9472dd04e63765316757125607a624f3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{bsoc_8c_a9472dd04e63765316757125607a624f3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsoc_8c_a8539f401ff15bd8cce3d2919c2153341}\index{bsoc.c@{bsoc.c}!peukert@{peukert}}
+\index{peukert@{peukert}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{peukert()}{peukert()}}
+{\footnotesize\ttfamily \label{bsoc_8c_a8539f401ff15bd8cce3d2919c2153341} 
+uint32\+\_\+t peukert (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{brate}{, }\item[{float}]{bcurrent}{, }\item[{float}]{peukert}{, }\item[{int16\+\_\+t}]{bsoc}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{bsoc_8c_a8539f401ff15bd8cce3d2919c2153341_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{bsoc_8c_a8539f401ff15bd8cce3d2919c2153341_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsoc_8c_aac82d8ac4fad9e6cc4ec26be724e52d8}\index{bsoc.c@{bsoc.c}!pv\_diversion@{pv\_diversion}}
+\index{pv\_diversion@{pv\_diversion}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{pv\_diversion()}{pv\_diversion()}}
+{\footnotesize\ttfamily \label{bsoc_8c_aac82d8ac4fad9e6cc4ec26be724e52d8} 
+bool pv\+\_\+diversion (\begin{DoxyParamCaption}\item[{bool}]{kill}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsoc_8c_aac82d8ac4fad9e6cc4ec26be724e52d8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsoc_8c_aac82d8ac4fad9e6cc4ec26be724e52d8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsoc_8c_a111857e2026af4d78cfbe5b06a3ec0ab}\index{bsoc.c@{bsoc.c}!reset\_bsoc@{reset\_bsoc}}
+\index{reset\_bsoc@{reset\_bsoc}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{reset\_bsoc()}{reset\_bsoc()}}
+{\footnotesize\ttfamily \label{bsoc_8c_a111857e2026af4d78cfbe5b06a3ec0ab} 
+void reset\+\_\+bsoc (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{bsoc_8h_afaf843bd2aece7e6a077167b098b7630}{R\+\_\+\+CODES}}}]{rmode}{}\end{DoxyParamCaption})}
+
+\Hypertarget{bsoc_8c_a018c31ab87827b040b20435127d5719a}\index{bsoc.c@{bsoc.c}!start\_bsoc@{start\_bsoc}}
+\index{start\_bsoc@{start\_bsoc}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{start\_bsoc()}{start\_bsoc()}}
+{\footnotesize\ttfamily \label{bsoc_8c_a018c31ab87827b040b20435127d5719a} 
+void start\+\_\+bsoc (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsoc_8c_a018c31ab87827b040b20435127d5719a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsoc_8c_a31f7f3239fc1f59f159d360d29f3af83}\index{bsoc.c@{bsoc.c}!stop\_bsoc@{stop\_bsoc}}
+\index{stop\_bsoc@{stop\_bsoc}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{stop\_bsoc()}{stop\_bsoc()}}
+{\footnotesize\ttfamily \label{bsoc_8c_a31f7f3239fc1f59f159d360d29f3af83} 
+void stop\+\_\+bsoc (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsoc_8c_a31f7f3239fc1f59f159d360d29f3af83_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsoc_8c_a389efc2712d298e7e1661c1740ec32d1}\index{bsoc.c@{bsoc.c}!Volts\_to\_SOC@{Volts\_to\_SOC}}
+\index{Volts\_to\_SOC@{Volts\_to\_SOC}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{Volts\_to\_SOC()}{Volts\_to\_SOC()}}
+{\footnotesize\ttfamily \label{bsoc_8c_a389efc2712d298e7e1661c1740ec32d1} 
+uint16\+\_\+t Volts\+\_\+to\+\_\+\+SOC (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{cvoltage}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{bsoc_8c_a389efc2712d298e7e1661c1740ec32d1_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{bsoc_8c_a60ed4fd7fcc4a3bf1399b593c56898f6}\index{bsoc.c@{bsoc.c}!BVSOC\_TABLE@{BVSOC\_TABLE}}
+\index{BVSOC\_TABLE@{BVSOC\_TABLE}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{BVSOC\_TABLE}{BVSOC\_TABLE}}
+{\footnotesize\ttfamily \label{bsoc_8c_a60ed4fd7fcc4a3bf1399b593c56898f6} 
+const uint32\+\_\+t BVSOC\+\_\+\+TABLE\mbox{[}\mbox{\hyperlink{bsoc_8h_aa30a92a619f5bd97c8469a385f693639}{BVSOC\+\_\+\+SLOTS}}\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ 23000,\ 5,}
+\DoxyCodeLine{\ \ \ \ 23400,\ 10,}
+\DoxyCodeLine{\ \ \ \ 23600,\ 20,}
+\DoxyCodeLine{\ \ \ \ 24120,\ 25,}
+\DoxyCodeLine{\ \ \ \ 24200,\ 30,}
+\DoxyCodeLine{\ \ \ \ 24440,\ 40,}
+\DoxyCodeLine{\ \ \ \ 24540,\ 45,}
+\DoxyCodeLine{\ \ \ \ 24600,\ 50,}
+\DoxyCodeLine{\ \ \ \ 24646,\ 53,}
+\DoxyCodeLine{\ \ \ \ 24700,\ 55,}
+\DoxyCodeLine{\ \ \ \ 24750,\ 57,}
+\DoxyCodeLine{\ \ \ \ 24800,\ 60,}
+\DoxyCodeLine{\ \ \ \ 24850,\ 63,}
+\DoxyCodeLine{\ \ \ \ 24925,\ 67,}
+\DoxyCodeLine{\ \ \ \ 25000,\ 70,}
+\DoxyCodeLine{\ \ \ \ 25020,\ 72,}
+\DoxyCodeLine{\ \ \ \ 25040,\ 75,}
+\DoxyCodeLine{\ \ \ \ 25050,\ 80,}
+\DoxyCodeLine{\ \ \ \ 25060,\ 85,}
+\DoxyCodeLine{\ \ \ \ 25080,\ 90,}
+\DoxyCodeLine{\ \ \ \ 25096,\ 92,}
+\DoxyCodeLine{\ \ \ \ 25122,\ 93,}
+\DoxyCodeLine{\ \ \ \ 25140,\ 95,}
+\DoxyCodeLine{\ \ \ \ 25160,\ 97,}
+\DoxyCodeLine{\ \ \ \ 25180,\ 100,}
+\DoxyCodeLine{\ \ \ \ 26500,\ 98\ }
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{bsoc_8c_a2ad05227ae6df8405e30545f14681f0f}\index{bsoc.c@{bsoc.c}!cmd\_value@{cmd\_value}}
+\index{cmd\_value@{cmd\_value}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{cmd\_value}{cmd\_value}}
+{\footnotesize\ttfamily \label{bsoc_8c_a2ad05227ae6df8405e30545f14681f0f} 
+volatile int16\+\_\+t cmd\+\_\+value = 0}
+
+\Hypertarget{bsoc_8c_a1ba5b41efc15579ff4e294952a86d109}\index{bsoc.c@{bsoc.c}!flop@{flop}}
+\index{flop@{flop}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{flop}{flop}}
+{\footnotesize\ttfamily \label{bsoc_8c_a1ba5b41efc15579ff4e294952a86d109} 
+volatile bool flop = \mbox{\hyperlink{cJSON_8c_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}}
+
+\Hypertarget{bsoc_8c_a52fc393dcbbfd526f7dbb2ef8b9d8160}\index{bsoc.c@{bsoc.c}!gti\_power@{gti\_power}}
+\index{gti\_power@{gti\_power}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{gti\_power}{gti\_power}}
+{\footnotesize\ttfamily \label{bsoc_8c_a52fc393dcbbfd526f7dbb2ef8b9d8160} 
+volatile int16\+\_\+t gti\+\_\+power = \mbox{\hyperlink{bsoc_8c_a15eb9fe03338ccf4f89dbc5f6ab067bc}{GTI\+\_\+\+POWER}}}
+
+\Hypertarget{bsoc_8c_a24096ca0e4d08363b5ff47bde0aec6fe}\index{bsoc.c@{bsoc.c}!gti\_sbuf@{gti\_sbuf}}
+\index{gti\_sbuf@{gti\_sbuf}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{gti\_sbuf}{gti\_sbuf}}
+{\footnotesize\ttfamily \label{bsoc_8c_a24096ca0e4d08363b5ff47bde0aec6fe} 
+uint8\+\_\+t gti\+\_\+sbuf\mbox{[}8\mbox{]} = \{0x24, 0x56, 0x00, 0x21, 0x03, 0x99, 0x80, 0x6c\}}
+
+\Hypertarget{bsoc_8c_a195f8ce8cc9acc62d7f9d27577e2b6e9}\index{bsoc.c@{bsoc.c}!gti\_zero@{gti\_zero}}
+\index{gti\_zero@{gti\_zero}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{gti\_zero}{gti\_zero}}
+{\footnotesize\ttfamily \label{bsoc_8c_a195f8ce8cc9acc62d7f9d27577e2b6e9} 
+uint8\+\_\+t gti\+\_\+zero\mbox{[}8\mbox{]} = \{0x24, 0x56, 0x00, 0x21, 0x00, 0x00, 0x80, 0x08\}}
+
+\Hypertarget{bsoc_8c_a9d738c4b728cde2bd02a2418e92d152c}\index{bsoc.c@{bsoc.c}!infoline1@{infoline1}}
+\index{infoline1@{infoline1}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{infoline1}{infoline1}}
+{\footnotesize\ttfamily \label{bsoc_8c_a9d738c4b728cde2bd02a2418e92d152c} 
+const char infoline1\mbox{[}$\,$\mbox{]} = "{} LOW Count TOD Count TX Count RX Count ADC Count SPI Count DIO Count"{}}
+
+\Hypertarget{bsoc_8c_a6ed2e4004409a74ffdea3cc240fbb1af}\index{bsoc.c@{bsoc.c}!infoline2@{infoline2}}
+\index{infoline2@{infoline2}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{infoline2}{infoline2}}
+{\footnotesize\ttfamily \label{bsoc_8c_a6ed2e4004409a74ffdea3cc240fbb1af} 
+const char infoline2\mbox{[}$\,$\mbox{]} = "{} DAILY AH LO ESR HI ESR PV AH BAT W Out BAT W IN REAL AH F CYCLES B CYCLES UPDATES"{}}
+
+\Hypertarget{bsoc_8c_a413c173c2e1ff8703249a14b15737478}\index{bsoc.c@{bsoc.c}!MQTT\_ID@{MQTT\_ID}}
+\index{MQTT\_ID@{MQTT\_ID}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{MQTT\_ID}{MQTT\_ID}}
+{\footnotesize\ttfamily \label{bsoc_8c_a413c173c2e1ff8703249a14b15737478} 
+const char\texorpdfstring{$\ast$}{*} MQTT\+\_\+\+ID = "{}DUMPLOAD"{}}
+
+\Hypertarget{bsoc_8c_a8dbb13dfa667ca84f3767a575906253e}\index{bsoc.c@{bsoc.c}!mqtt\_r@{mqtt\_r}}
+\index{mqtt\_r@{mqtt\_r}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{mqtt\_r}{mqtt\_r}}
+{\footnotesize\ttfamily \label{bsoc_8c_a8dbb13dfa667ca84f3767a575906253e} 
+volatile uint8\+\_\+t mqtt\+\_\+r}
+
+\Hypertarget{bsoc_8c_a59846e197b696b4e1cb2fcc92752af05}\index{bsoc.c@{bsoc.c}!utc\_cmd\_value@{utc\_cmd\_value}}
+\index{utc\_cmd\_value@{utc\_cmd\_value}!bsoc.c@{bsoc.c}}
+\doxysubsubsection{\texorpdfstring{utc\_cmd\_value}{utc\_cmd\_value}}
+{\footnotesize\ttfamily \label{bsoc_8c_a59846e197b696b4e1cb2fcc92752af05} 
+time\+\_\+t utc\+\_\+cmd\+\_\+value = 0}
+

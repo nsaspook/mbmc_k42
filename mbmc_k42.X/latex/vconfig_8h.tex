@@ -1,0 +1,661 @@
+\doxysection{vconfig.\+h File Reference}
+\hypertarget{vconfig_8h}{}\label{vconfig_8h}\index{vconfig.h@{vconfig.h}}
+{\ttfamily \#include "{}mcc\+\_\+generated\+\_\+files/adcc.\+h"{}}\newline
+{\ttfamily \#include "{}mcc\+\_\+generated\+\_\+files/ext\+\_\+int.\+h"{}}\newline
+{\ttfamily \#include $<$xc.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include "{}mcc\+\_\+generated\+\_\+files/spi1.\+h"{}}\newline
+{\ttfamily \#include "{}mcc\+\_\+generated\+\_\+files/pin\+\_\+manager.\+h"{}}\newline
+{\ttfamily \#include "{}ringbufs.\+h"{}}\newline
+Include dependency graph for vconfig.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vconfig_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vconfig_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structspi__link__type}{spi\+\_\+link\+\_\+type}}
+\item 
+struct \mbox{\hyperlink{structterminal__type}{terminal\+\_\+type}}
+\item 
+struct \mbox{\hyperlink{structV__data}{V\+\_\+data}}
+\item 
+struct \mbox{\hyperlink{structV__help}{V\+\_\+help}}
+\item 
+struct \mbox{\hyperlink{structhist__type}{hist\+\_\+type}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a98ed931f97fef7e06e3ea441d0326c67}{VER}}~"{}2.\+20"{}
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_aea39dd94dc1a08f74fc5cd8adeaddec8}{DEF\+\_\+\+TIME}}~1721693000
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a189c675f75334ce5fe0e13418e0cdf0c}{DEF\+\_\+\+TIME\+\_\+\+SIZE}}~11
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_ad5a44a7f7099f4518f885f48a93ceb14}{SLED}}~\mbox{\hyperlink{pin__manager_8h_addd6e61ef316afbefb56d043045d669e}{LED0\+\_\+\+LAT}}
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a7305eb3ce47b9f48bd5f881f425d89bd}{EADOGM\+\_\+\+CMD\+\_\+\+CLR}}~1
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a34ba4da8d39dd01512cadfcbdb52aac7}{EADOGM\+\_\+\+CMD\+\_\+\+CURSOR\+\_\+\+ON}}~0b00001111
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_ad336599984071e260bc0d5745c5475a7}{EADOGM\+\_\+\+CMD\+\_\+\+CURSOR\+\_\+\+OFF}}~0b00001100
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_ab988f2285d27e2bb5a6655ee05992d72}{EADOGM\+\_\+\+CMD\+\_\+\+DISPLAY\+\_\+\+ON}}~0b00001100
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_af2a4584f63838f7fdb64527d1ca958e0}{EADOGM\+\_\+\+CMD\+\_\+\+DISPLAY\+\_\+\+OFF}}~0b00001000
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_aa8a5cd90ced9677024707408c316c814}{EADOGM\+\_\+\+CMD\+\_\+\+DDRAM\+\_\+\+ADDR}}~0b10000000
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_aee7db570e3142cc0ee984fb0dfb09c90}{EADOGM\+\_\+\+CMD\+\_\+\+CGRAM\+\_\+\+ADDR}}~0b01000000
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a0ecc052740fc0dd563a715795823baf1}{EADOGM\+\_\+\+CMD\+\_\+\+SELECT\+\_\+\+R0}}~0b00011000
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_ab2409af5588af15b838b21e5194a36a5}{EADOGM\+\_\+\+CMD\+\_\+\+SELECT\+\_\+\+R1}}~0b00010000
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a44248834924bc4cb37c21dbd2fed005d}{EADOGM\+\_\+\+CMD\+\_\+\+SET\+\_\+\+TABLE2}}~0b00101010
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a22a6f60895705326cf0d5bf9e767224b}{EADOGM\+\_\+\+COLSPAN}}~16
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a712efb20035ebc74c479895e9124373a}{NHD}}
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_ac16509a75e3d3fc46b9df1726be486ec}{T1}}~500
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a259c2993ee45e06a4ea8150451a7a70e}{T2}}~3000
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a5d800c5f04f8638061876b9e32c6c508}{T3}}~5000
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a935a699e9bf1bffc5dad8738d3cd24c0}{T4}}~5000
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a635ba4fddbc7eea21188e4d0fdd32963}{HBTS}}~5000
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_ae6738a5a777a58450e6c54df895d4454}{HBTL}}~30000
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a5161035b0b7f8697266897c007c3474d}{RTY}}~3
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a66718fcb83f101fb84ab77e416619128}{ERROR\+\_\+\+CHECKSUM}}~31500
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a5973ce560218582e02f053ef8cd0e8de}{ERROR\+\_\+\+COMM}}~31500
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a5aa0e3cbc7fa4d0fbfb805bcdad119ad}{DEFAULT\+\_\+\+TID}}~1
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a77725d9b114976abca698c51fd846ea1}{TDELAY}}~3000
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_afb32c9be07d685141d0b0b78d7533b6c}{LDELAY}}~1000
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_ae07ede6db7d39f30c83c730e74e42bd1}{SDELAY}}~500
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_acb38722fc3fb0d520ce45ec707388a62}{BDELAY}}~300
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a53a262d0570686af1ae541f0b676e7ce}{DDELAY}}~125
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_aa2241f1a8cbb91757a58f272191058a3}{TXTDELAY}}~10000
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_afb7656c7630164119d17ef1d9b0ef78c}{SOCDELAY}}~250
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_af7687c69d4759663825cfe83b9e73645}{DFLIP}}~1500
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a10dc001e988b4a91dc13202e26516b3d}{LOG\+\_\+\+WAIT}}~1
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a81842443bd9517dafb2969ff17204615}{D\+\_\+\+CODE}}~\textquotesingle{}5\textquotesingle{}
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a5effd0dce134efb57fde9c42f58b66f3}{I\+\_\+\+CODE}}~\textquotesingle{}\texorpdfstring{$\ast$}{*}\textquotesingle{}
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a39a5b9171e34ad34f126c1b1191296c5}{CAL\+\_\+\+DELAY}}~64
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_aff04a116da7e79cb85dcbcf9afff0ea0}{TX\+\_\+\+RESERVE}}~59
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a842ed03f27719bc87666bfd1f75415b8}{MAX\+\_\+\+LINE}}~20
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a8bb0c7f312bb8665c3377a061dae552c}{MAX\+\_\+\+BUTTONS}}~8
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a3b23141562c0de6ecd17bb9eeb7398c1}{HPARAM\+\_\+\+SIZE}}~13
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a81cabd1535b0f278efdeb7e81a013a9b}{HVER}}~1
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a96e14874f137016a27998509b4f075d6}{BL\+\_\+\+TIME}}~600
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a8b1526b961300f7bde6b02987213a62e}{CC\+\_\+\+DEACT}}~74
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a1031d0c63ad4829d6ff11652451bf446}{CC\+\_\+\+ACT}}~100
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a63509d9a7c12fc4681397f64aa1b36cf}{CC\+\_\+\+MPPT}}~120
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_ad8deb9103d4aa479d8238390adcb73ad}{CC\+\_\+\+EQUAL}}~140
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a8fd0965e7a081bc809681a99f7d9e670}{CC\+\_\+\+BOOST}}~160
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_af40963bb2cb247121fc4b586866dd132}{CC\+\_\+\+FLOAT}}~180
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a72b94935cf733b7d2653c9832585413a}{CC\+\_\+\+LIMIT}}~200
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_ae2134df60c66572fd7cd2b412f6fe84e}{CC\+\_\+\+OFFLINE}}~240
+\item 
+\#define \mbox{\hyperlink{vconfig_8h_a08d8fbe9e8059d4e133f7c101cba13e6}{max\+\_\+port\+\_\+data}}~1024
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct terminal\+\_\+type \mbox{\hyperlink{vconfig_8h_a68df5a2f7d8a6914ffa1dcff61cf4161}{terminal\+\_\+type}}
+\item 
+typedef struct V\+\_\+data \mbox{\hyperlink{vconfig_8h_a4f286398816920cfaa61ff716a71e177}{V\+\_\+data}}
+\item 
+typedef struct V\+\_\+help \mbox{\hyperlink{vconfig_8h_aa2ed69d51619339711bbef9b3d607d62}{V\+\_\+help}}
+\item 
+typedef struct hist\+\_\+type \mbox{\hyperlink{vconfig_8h_acab04f5d4651ffefdde4d9ee8ffbd5fa}{hist\+\_\+type}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{vconfig_8h_aef985d2753ce26fc25d6b4e516d8b6bf}{D\+\_\+\+CODES}} \{ \mbox{\hyperlink{vconfig_8h_aef985d2753ce26fc25d6b4e516d8b6bfa75ae4338e2ab2f9044f48e4a2526ad15}{DIS\+\_\+\+STR}} = 0
+, \mbox{\hyperlink{vconfig_8h_aef985d2753ce26fc25d6b4e516d8b6bfaa650d19c57de0b7a695867fd56dead09}{DIS\+\_\+\+HELP}}
+, \mbox{\hyperlink{vconfig_8h_aef985d2753ce26fc25d6b4e516d8b6bfa8f7a5f1482f275ef06b74e722940c2d0}{DIS\+\_\+\+ERR}}
+, \mbox{\hyperlink{vconfig_8h_aef985d2753ce26fc25d6b4e516d8b6bfafbb893330d40f384802b3608ca63d84a}{DIS\+\_\+\+CLEAR}}
+ \}
+\item 
+enum \mbox{\hyperlink{vconfig_8h_a39e3f20e42f8ac997987b71f7a9744c9}{UI\+\_\+\+STATES}} \{ \newline
+\mbox{\hyperlink{vconfig_8h_a39e3f20e42f8ac997987b71f7a9744c9a2784c8cf6cc48747d7251ef5c841360b}{UI\+\_\+\+STATE\+\_\+\+INIT}} = 0
+, \mbox{\hyperlink{vconfig_8h_a39e3f20e42f8ac997987b71f7a9744c9ace8bd4112a6e8063d870121168bdcaaa}{UI\+\_\+\+STATE\+\_\+\+HOST}}
+, \mbox{\hyperlink{vconfig_8h_a39e3f20e42f8ac997987b71f7a9744c9a4f12aa206b8aa6b902254c7bb8a7a532}{UI\+\_\+\+STATE\+\_\+\+DEBUG}}
+, \mbox{\hyperlink{vconfig_8h_a39e3f20e42f8ac997987b71f7a9744c9ae55733aa2f7ed4293549a464b4950f93}{UI\+\_\+\+STATE\+\_\+\+LOG}}
+, \newline
+\mbox{\hyperlink{vconfig_8h_a39e3f20e42f8ac997987b71f7a9744c9a4cf0f904d89fcda06bb0e9daf0a0300f}{UI\+\_\+\+STATE\+\_\+\+MON}}
+, \mbox{\hyperlink{vconfig_8h_a39e3f20e42f8ac997987b71f7a9744c9aa2d8b04168fc0851eee6bdd0ee8c55f3}{UI\+\_\+\+STATE\+\_\+\+ERROR}}
+ \}
+\item 
+enum \mbox{\hyperlink{vconfig_8h_a9b0e39a3a022ca300b7d4a9f90fcc579}{SW\+\_\+\+STATES}} \{ \mbox{\hyperlink{vconfig_8h_a9b0e39a3a022ca300b7d4a9f90fcc579a1f2fed93982d8203a430bfd7f727128f}{SW\+\_\+\+OFF}} = 0
+, \mbox{\hyperlink{vconfig_8h_a9b0e39a3a022ca300b7d4a9f90fcc579a92cbbb0314b472cbbfeb1eb2bb4a3f01}{SW\+\_\+\+ON}}
+, \mbox{\hyperlink{vconfig_8h_a9b0e39a3a022ca300b7d4a9f90fcc579a4fa5353e0b046144a697afccc513f686}{SW\+\_\+\+INVALID}}
+ \}
+\item 
+enum \mbox{\hyperlink{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427}{SW\+\_\+\+NAMES}} \{ \newline
+\mbox{\hyperlink{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427aff8a5b56d95204fd115d9665f74acb72}{S0}} = 0
+, \mbox{\hyperlink{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427a4eda5f72b331209ee9bc2d8fb2c02e7e}{S1}} = 1
+, \mbox{\hyperlink{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427a37b61de8b8ac882cf15fe70b9771d0ec}{SSELECT}} = 2
+, \mbox{\hyperlink{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427a2361195207ade9bbe809f34945c04057}{SENTER}} = 3
+, \newline
+\mbox{\hyperlink{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427a3abca6c3f4efe44e083c3132c36a3e65}{SCALIB}} = 4
+, \mbox{\hyperlink{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427aaabf2b9af0adc0d4649a35fbbcf6d3e8}{S5}}
+, \mbox{\hyperlink{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427a89a17b71211e63287ae5d4d451f30048}{S6}}
+, \mbox{\hyperlink{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427a5eb84ebc7fc1d9b8bdd4c88a8a0b75a6}{SNULL}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{vconfig_8h_acb38722fc3fb0d520ce45ec707388a62}\index{vconfig.h@{vconfig.h}!BDELAY@{BDELAY}}
+\index{BDELAY@{BDELAY}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{BDELAY}{BDELAY}}
+{\footnotesize\ttfamily \label{vconfig_8h_acb38722fc3fb0d520ce45ec707388a62} 
+\#define BDELAY~300}
+
+\Hypertarget{vconfig_8h_a96e14874f137016a27998509b4f075d6}\index{vconfig.h@{vconfig.h}!BL\_TIME@{BL\_TIME}}
+\index{BL\_TIME@{BL\_TIME}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{BL\_TIME}{BL\_TIME}}
+{\footnotesize\ttfamily \label{vconfig_8h_a96e14874f137016a27998509b4f075d6} 
+\#define BL\+\_\+\+TIME~600}
+
+\Hypertarget{vconfig_8h_a39a5b9171e34ad34f126c1b1191296c5}\index{vconfig.h@{vconfig.h}!CAL\_DELAY@{CAL\_DELAY}}
+\index{CAL\_DELAY@{CAL\_DELAY}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{CAL\_DELAY}{CAL\_DELAY}}
+{\footnotesize\ttfamily \label{vconfig_8h_a39a5b9171e34ad34f126c1b1191296c5} 
+\#define CAL\+\_\+\+DELAY~64}
+
+\Hypertarget{vconfig_8h_a1031d0c63ad4829d6ff11652451bf446}\index{vconfig.h@{vconfig.h}!CC\_ACT@{CC\_ACT}}
+\index{CC\_ACT@{CC\_ACT}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{CC\_ACT}{CC\_ACT}}
+{\footnotesize\ttfamily \label{vconfig_8h_a1031d0c63ad4829d6ff11652451bf446} 
+\#define CC\+\_\+\+ACT~100}
+
+\Hypertarget{vconfig_8h_a8fd0965e7a081bc809681a99f7d9e670}\index{vconfig.h@{vconfig.h}!CC\_BOOST@{CC\_BOOST}}
+\index{CC\_BOOST@{CC\_BOOST}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{CC\_BOOST}{CC\_BOOST}}
+{\footnotesize\ttfamily \label{vconfig_8h_a8fd0965e7a081bc809681a99f7d9e670} 
+\#define CC\+\_\+\+BOOST~160}
+
+\Hypertarget{vconfig_8h_a8b1526b961300f7bde6b02987213a62e}\index{vconfig.h@{vconfig.h}!CC\_DEACT@{CC\_DEACT}}
+\index{CC\_DEACT@{CC\_DEACT}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{CC\_DEACT}{CC\_DEACT}}
+{\footnotesize\ttfamily \label{vconfig_8h_a8b1526b961300f7bde6b02987213a62e} 
+\#define CC\+\_\+\+DEACT~74}
+
+\Hypertarget{vconfig_8h_ad8deb9103d4aa479d8238390adcb73ad}\index{vconfig.h@{vconfig.h}!CC\_EQUAL@{CC\_EQUAL}}
+\index{CC\_EQUAL@{CC\_EQUAL}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{CC\_EQUAL}{CC\_EQUAL}}
+{\footnotesize\ttfamily \label{vconfig_8h_ad8deb9103d4aa479d8238390adcb73ad} 
+\#define CC\+\_\+\+EQUAL~140}
+
+\Hypertarget{vconfig_8h_af40963bb2cb247121fc4b586866dd132}\index{vconfig.h@{vconfig.h}!CC\_FLOAT@{CC\_FLOAT}}
+\index{CC\_FLOAT@{CC\_FLOAT}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{CC\_FLOAT}{CC\_FLOAT}}
+{\footnotesize\ttfamily \label{vconfig_8h_af40963bb2cb247121fc4b586866dd132} 
+\#define CC\+\_\+\+FLOAT~180}
+
+\Hypertarget{vconfig_8h_a72b94935cf733b7d2653c9832585413a}\index{vconfig.h@{vconfig.h}!CC\_LIMIT@{CC\_LIMIT}}
+\index{CC\_LIMIT@{CC\_LIMIT}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{CC\_LIMIT}{CC\_LIMIT}}
+{\footnotesize\ttfamily \label{vconfig_8h_a72b94935cf733b7d2653c9832585413a} 
+\#define CC\+\_\+\+LIMIT~200}
+
+\Hypertarget{vconfig_8h_a63509d9a7c12fc4681397f64aa1b36cf}\index{vconfig.h@{vconfig.h}!CC\_MPPT@{CC\_MPPT}}
+\index{CC\_MPPT@{CC\_MPPT}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{CC\_MPPT}{CC\_MPPT}}
+{\footnotesize\ttfamily \label{vconfig_8h_a63509d9a7c12fc4681397f64aa1b36cf} 
+\#define CC\+\_\+\+MPPT~120}
+
+\Hypertarget{vconfig_8h_ae2134df60c66572fd7cd2b412f6fe84e}\index{vconfig.h@{vconfig.h}!CC\_OFFLINE@{CC\_OFFLINE}}
+\index{CC\_OFFLINE@{CC\_OFFLINE}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{CC\_OFFLINE}{CC\_OFFLINE}}
+{\footnotesize\ttfamily \label{vconfig_8h_ae2134df60c66572fd7cd2b412f6fe84e} 
+\#define CC\+\_\+\+OFFLINE~240}
+
+\Hypertarget{vconfig_8h_a81842443bd9517dafb2969ff17204615}\index{vconfig.h@{vconfig.h}!D\_CODE@{D\_CODE}}
+\index{D\_CODE@{D\_CODE}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{D\_CODE}{D\_CODE}}
+{\footnotesize\ttfamily \label{vconfig_8h_a81842443bd9517dafb2969ff17204615} 
+\#define D\+\_\+\+CODE~\textquotesingle{}5\textquotesingle{}}
+
+\Hypertarget{vconfig_8h_a53a262d0570686af1ae541f0b676e7ce}\index{vconfig.h@{vconfig.h}!DDELAY@{DDELAY}}
+\index{DDELAY@{DDELAY}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{DDELAY}{DDELAY}}
+{\footnotesize\ttfamily \label{vconfig_8h_a53a262d0570686af1ae541f0b676e7ce} 
+\#define DDELAY~125}
+
+\Hypertarget{vconfig_8h_aea39dd94dc1a08f74fc5cd8adeaddec8}\index{vconfig.h@{vconfig.h}!DEF\_TIME@{DEF\_TIME}}
+\index{DEF\_TIME@{DEF\_TIME}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{DEF\_TIME}{DEF\_TIME}}
+{\footnotesize\ttfamily \label{vconfig_8h_aea39dd94dc1a08f74fc5cd8adeaddec8} 
+\#define DEF\+\_\+\+TIME~1721693000}
+
+\Hypertarget{vconfig_8h_a189c675f75334ce5fe0e13418e0cdf0c}\index{vconfig.h@{vconfig.h}!DEF\_TIME\_SIZE@{DEF\_TIME\_SIZE}}
+\index{DEF\_TIME\_SIZE@{DEF\_TIME\_SIZE}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{DEF\_TIME\_SIZE}{DEF\_TIME\_SIZE}}
+{\footnotesize\ttfamily \label{vconfig_8h_a189c675f75334ce5fe0e13418e0cdf0c} 
+\#define DEF\+\_\+\+TIME\+\_\+\+SIZE~11}
+
+\Hypertarget{vconfig_8h_a5aa0e3cbc7fa4d0fbfb805bcdad119ad}\index{vconfig.h@{vconfig.h}!DEFAULT\_TID@{DEFAULT\_TID}}
+\index{DEFAULT\_TID@{DEFAULT\_TID}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_TID}{DEFAULT\_TID}}
+{\footnotesize\ttfamily \label{vconfig_8h_a5aa0e3cbc7fa4d0fbfb805bcdad119ad} 
+\#define DEFAULT\+\_\+\+TID~1}
+
+\Hypertarget{vconfig_8h_af7687c69d4759663825cfe83b9e73645}\index{vconfig.h@{vconfig.h}!DFLIP@{DFLIP}}
+\index{DFLIP@{DFLIP}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{DFLIP}{DFLIP}}
+{\footnotesize\ttfamily \label{vconfig_8h_af7687c69d4759663825cfe83b9e73645} 
+\#define DFLIP~1500}
+
+\Hypertarget{vconfig_8h_aee7db570e3142cc0ee984fb0dfb09c90}\index{vconfig.h@{vconfig.h}!EADOGM\_CMD\_CGRAM\_ADDR@{EADOGM\_CMD\_CGRAM\_ADDR}}
+\index{EADOGM\_CMD\_CGRAM\_ADDR@{EADOGM\_CMD\_CGRAM\_ADDR}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{EADOGM\_CMD\_CGRAM\_ADDR}{EADOGM\_CMD\_CGRAM\_ADDR}}
+{\footnotesize\ttfamily \label{vconfig_8h_aee7db570e3142cc0ee984fb0dfb09c90} 
+\#define EADOGM\+\_\+\+CMD\+\_\+\+CGRAM\+\_\+\+ADDR~0b01000000}
+
+\Hypertarget{vconfig_8h_a7305eb3ce47b9f48bd5f881f425d89bd}\index{vconfig.h@{vconfig.h}!EADOGM\_CMD\_CLR@{EADOGM\_CMD\_CLR}}
+\index{EADOGM\_CMD\_CLR@{EADOGM\_CMD\_CLR}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{EADOGM\_CMD\_CLR}{EADOGM\_CMD\_CLR}}
+{\footnotesize\ttfamily \label{vconfig_8h_a7305eb3ce47b9f48bd5f881f425d89bd} 
+\#define EADOGM\+\_\+\+CMD\+\_\+\+CLR~1}
+
+\Hypertarget{vconfig_8h_ad336599984071e260bc0d5745c5475a7}\index{vconfig.h@{vconfig.h}!EADOGM\_CMD\_CURSOR\_OFF@{EADOGM\_CMD\_CURSOR\_OFF}}
+\index{EADOGM\_CMD\_CURSOR\_OFF@{EADOGM\_CMD\_CURSOR\_OFF}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{EADOGM\_CMD\_CURSOR\_OFF}{EADOGM\_CMD\_CURSOR\_OFF}}
+{\footnotesize\ttfamily \label{vconfig_8h_ad336599984071e260bc0d5745c5475a7} 
+\#define EADOGM\+\_\+\+CMD\+\_\+\+CURSOR\+\_\+\+OFF~0b00001100}
+
+\Hypertarget{vconfig_8h_a34ba4da8d39dd01512cadfcbdb52aac7}\index{vconfig.h@{vconfig.h}!EADOGM\_CMD\_CURSOR\_ON@{EADOGM\_CMD\_CURSOR\_ON}}
+\index{EADOGM\_CMD\_CURSOR\_ON@{EADOGM\_CMD\_CURSOR\_ON}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{EADOGM\_CMD\_CURSOR\_ON}{EADOGM\_CMD\_CURSOR\_ON}}
+{\footnotesize\ttfamily \label{vconfig_8h_a34ba4da8d39dd01512cadfcbdb52aac7} 
+\#define EADOGM\+\_\+\+CMD\+\_\+\+CURSOR\+\_\+\+ON~0b00001111}
+
+\Hypertarget{vconfig_8h_aa8a5cd90ced9677024707408c316c814}\index{vconfig.h@{vconfig.h}!EADOGM\_CMD\_DDRAM\_ADDR@{EADOGM\_CMD\_DDRAM\_ADDR}}
+\index{EADOGM\_CMD\_DDRAM\_ADDR@{EADOGM\_CMD\_DDRAM\_ADDR}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{EADOGM\_CMD\_DDRAM\_ADDR}{EADOGM\_CMD\_DDRAM\_ADDR}}
+{\footnotesize\ttfamily \label{vconfig_8h_aa8a5cd90ced9677024707408c316c814} 
+\#define EADOGM\+\_\+\+CMD\+\_\+\+DDRAM\+\_\+\+ADDR~0b10000000}
+
+\Hypertarget{vconfig_8h_af2a4584f63838f7fdb64527d1ca958e0}\index{vconfig.h@{vconfig.h}!EADOGM\_CMD\_DISPLAY\_OFF@{EADOGM\_CMD\_DISPLAY\_OFF}}
+\index{EADOGM\_CMD\_DISPLAY\_OFF@{EADOGM\_CMD\_DISPLAY\_OFF}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{EADOGM\_CMD\_DISPLAY\_OFF}{EADOGM\_CMD\_DISPLAY\_OFF}}
+{\footnotesize\ttfamily \label{vconfig_8h_af2a4584f63838f7fdb64527d1ca958e0} 
+\#define EADOGM\+\_\+\+CMD\+\_\+\+DISPLAY\+\_\+\+OFF~0b00001000}
+
+\Hypertarget{vconfig_8h_ab988f2285d27e2bb5a6655ee05992d72}\index{vconfig.h@{vconfig.h}!EADOGM\_CMD\_DISPLAY\_ON@{EADOGM\_CMD\_DISPLAY\_ON}}
+\index{EADOGM\_CMD\_DISPLAY\_ON@{EADOGM\_CMD\_DISPLAY\_ON}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{EADOGM\_CMD\_DISPLAY\_ON}{EADOGM\_CMD\_DISPLAY\_ON}}
+{\footnotesize\ttfamily \label{vconfig_8h_ab988f2285d27e2bb5a6655ee05992d72} 
+\#define EADOGM\+\_\+\+CMD\+\_\+\+DISPLAY\+\_\+\+ON~0b00001100}
+
+\Hypertarget{vconfig_8h_a0ecc052740fc0dd563a715795823baf1}\index{vconfig.h@{vconfig.h}!EADOGM\_CMD\_SELECT\_R0@{EADOGM\_CMD\_SELECT\_R0}}
+\index{EADOGM\_CMD\_SELECT\_R0@{EADOGM\_CMD\_SELECT\_R0}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{EADOGM\_CMD\_SELECT\_R0}{EADOGM\_CMD\_SELECT\_R0}}
+{\footnotesize\ttfamily \label{vconfig_8h_a0ecc052740fc0dd563a715795823baf1} 
+\#define EADOGM\+\_\+\+CMD\+\_\+\+SELECT\+\_\+\+R0~0b00011000}
+
+\Hypertarget{vconfig_8h_ab2409af5588af15b838b21e5194a36a5}\index{vconfig.h@{vconfig.h}!EADOGM\_CMD\_SELECT\_R1@{EADOGM\_CMD\_SELECT\_R1}}
+\index{EADOGM\_CMD\_SELECT\_R1@{EADOGM\_CMD\_SELECT\_R1}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{EADOGM\_CMD\_SELECT\_R1}{EADOGM\_CMD\_SELECT\_R1}}
+{\footnotesize\ttfamily \label{vconfig_8h_ab2409af5588af15b838b21e5194a36a5} 
+\#define EADOGM\+\_\+\+CMD\+\_\+\+SELECT\+\_\+\+R1~0b00010000}
+
+\Hypertarget{vconfig_8h_a44248834924bc4cb37c21dbd2fed005d}\index{vconfig.h@{vconfig.h}!EADOGM\_CMD\_SET\_TABLE2@{EADOGM\_CMD\_SET\_TABLE2}}
+\index{EADOGM\_CMD\_SET\_TABLE2@{EADOGM\_CMD\_SET\_TABLE2}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{EADOGM\_CMD\_SET\_TABLE2}{EADOGM\_CMD\_SET\_TABLE2}}
+{\footnotesize\ttfamily \label{vconfig_8h_a44248834924bc4cb37c21dbd2fed005d} 
+\#define EADOGM\+\_\+\+CMD\+\_\+\+SET\+\_\+\+TABLE2~0b00101010}
+
+\Hypertarget{vconfig_8h_a22a6f60895705326cf0d5bf9e767224b}\index{vconfig.h@{vconfig.h}!EADOGM\_COLSPAN@{EADOGM\_COLSPAN}}
+\index{EADOGM\_COLSPAN@{EADOGM\_COLSPAN}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{EADOGM\_COLSPAN}{EADOGM\_COLSPAN}}
+{\footnotesize\ttfamily \label{vconfig_8h_a22a6f60895705326cf0d5bf9e767224b} 
+\#define EADOGM\+\_\+\+COLSPAN~16}
+
+\Hypertarget{vconfig_8h_a66718fcb83f101fb84ab77e416619128}\index{vconfig.h@{vconfig.h}!ERROR\_CHECKSUM@{ERROR\_CHECKSUM}}
+\index{ERROR\_CHECKSUM@{ERROR\_CHECKSUM}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{ERROR\_CHECKSUM}{ERROR\_CHECKSUM}}
+{\footnotesize\ttfamily \label{vconfig_8h_a66718fcb83f101fb84ab77e416619128} 
+\#define ERROR\+\_\+\+CHECKSUM~31500}
+
+\Hypertarget{vconfig_8h_a5973ce560218582e02f053ef8cd0e8de}\index{vconfig.h@{vconfig.h}!ERROR\_COMM@{ERROR\_COMM}}
+\index{ERROR\_COMM@{ERROR\_COMM}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{ERROR\_COMM}{ERROR\_COMM}}
+{\footnotesize\ttfamily \label{vconfig_8h_a5973ce560218582e02f053ef8cd0e8de} 
+\#define ERROR\+\_\+\+COMM~31500}
+
+\Hypertarget{vconfig_8h_ae6738a5a777a58450e6c54df895d4454}\index{vconfig.h@{vconfig.h}!HBTL@{HBTL}}
+\index{HBTL@{HBTL}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{HBTL}{HBTL}}
+{\footnotesize\ttfamily \label{vconfig_8h_ae6738a5a777a58450e6c54df895d4454} 
+\#define HBTL~30000}
+
+\Hypertarget{vconfig_8h_a635ba4fddbc7eea21188e4d0fdd32963}\index{vconfig.h@{vconfig.h}!HBTS@{HBTS}}
+\index{HBTS@{HBTS}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{HBTS}{HBTS}}
+{\footnotesize\ttfamily \label{vconfig_8h_a635ba4fddbc7eea21188e4d0fdd32963} 
+\#define HBTS~5000}
+
+\Hypertarget{vconfig_8h_a3b23141562c0de6ecd17bb9eeb7398c1}\index{vconfig.h@{vconfig.h}!HPARAM\_SIZE@{HPARAM\_SIZE}}
+\index{HPARAM\_SIZE@{HPARAM\_SIZE}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{HPARAM\_SIZE}{HPARAM\_SIZE}}
+{\footnotesize\ttfamily \label{vconfig_8h_a3b23141562c0de6ecd17bb9eeb7398c1} 
+\#define HPARAM\+\_\+\+SIZE~13}
+
+\Hypertarget{vconfig_8h_a81cabd1535b0f278efdeb7e81a013a9b}\index{vconfig.h@{vconfig.h}!HVER@{HVER}}
+\index{HVER@{HVER}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{HVER}{HVER}}
+{\footnotesize\ttfamily \label{vconfig_8h_a81cabd1535b0f278efdeb7e81a013a9b} 
+\#define HVER~1}
+
+\Hypertarget{vconfig_8h_a5effd0dce134efb57fde9c42f58b66f3}\index{vconfig.h@{vconfig.h}!I\_CODE@{I\_CODE}}
+\index{I\_CODE@{I\_CODE}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{I\_CODE}{I\_CODE}}
+{\footnotesize\ttfamily \label{vconfig_8h_a5effd0dce134efb57fde9c42f58b66f3} 
+\#define I\+\_\+\+CODE~\textquotesingle{}\texorpdfstring{$\ast$}{*}\textquotesingle{}}
+
+\Hypertarget{vconfig_8h_afb32c9be07d685141d0b0b78d7533b6c}\index{vconfig.h@{vconfig.h}!LDELAY@{LDELAY}}
+\index{LDELAY@{LDELAY}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{LDELAY}{LDELAY}}
+{\footnotesize\ttfamily \label{vconfig_8h_afb32c9be07d685141d0b0b78d7533b6c} 
+\#define LDELAY~1000}
+
+\Hypertarget{vconfig_8h_a10dc001e988b4a91dc13202e26516b3d}\index{vconfig.h@{vconfig.h}!LOG\_WAIT@{LOG\_WAIT}}
+\index{LOG\_WAIT@{LOG\_WAIT}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_WAIT}{LOG\_WAIT}}
+{\footnotesize\ttfamily \label{vconfig_8h_a10dc001e988b4a91dc13202e26516b3d} 
+\#define LOG\+\_\+\+WAIT~1}
+
+\Hypertarget{vconfig_8h_a8bb0c7f312bb8665c3377a061dae552c}\index{vconfig.h@{vconfig.h}!MAX\_BUTTONS@{MAX\_BUTTONS}}
+\index{MAX\_BUTTONS@{MAX\_BUTTONS}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_BUTTONS}{MAX\_BUTTONS}}
+{\footnotesize\ttfamily \label{vconfig_8h_a8bb0c7f312bb8665c3377a061dae552c} 
+\#define MAX\+\_\+\+BUTTONS~8}
+
+\Hypertarget{vconfig_8h_a842ed03f27719bc87666bfd1f75415b8}\index{vconfig.h@{vconfig.h}!MAX\_LINE@{MAX\_LINE}}
+\index{MAX\_LINE@{MAX\_LINE}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_LINE}{MAX\_LINE}}
+{\footnotesize\ttfamily \label{vconfig_8h_a842ed03f27719bc87666bfd1f75415b8} 
+\#define MAX\+\_\+\+LINE~20}
+
+\Hypertarget{vconfig_8h_a08d8fbe9e8059d4e133f7c101cba13e6}\index{vconfig.h@{vconfig.h}!max\_port\_data@{max\_port\_data}}
+\index{max\_port\_data@{max\_port\_data}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{max\_port\_data}{max\_port\_data}}
+{\footnotesize\ttfamily \label{vconfig_8h_a08d8fbe9e8059d4e133f7c101cba13e6} 
+\#define max\+\_\+port\+\_\+data~1024}
+
+\Hypertarget{vconfig_8h_a712efb20035ebc74c479895e9124373a}\index{vconfig.h@{vconfig.h}!NHD@{NHD}}
+\index{NHD@{NHD}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{NHD}{NHD}}
+{\footnotesize\ttfamily \label{vconfig_8h_a712efb20035ebc74c479895e9124373a} 
+\#define NHD}
+
+\Hypertarget{vconfig_8h_a5161035b0b7f8697266897c007c3474d}\index{vconfig.h@{vconfig.h}!RTY@{RTY}}
+\index{RTY@{RTY}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{RTY}{RTY}}
+{\footnotesize\ttfamily \label{vconfig_8h_a5161035b0b7f8697266897c007c3474d} 
+\#define RTY~3}
+
+\Hypertarget{vconfig_8h_ae07ede6db7d39f30c83c730e74e42bd1}\index{vconfig.h@{vconfig.h}!SDELAY@{SDELAY}}
+\index{SDELAY@{SDELAY}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{SDELAY}{SDELAY}}
+{\footnotesize\ttfamily \label{vconfig_8h_ae07ede6db7d39f30c83c730e74e42bd1} 
+\#define SDELAY~500}
+
+\Hypertarget{vconfig_8h_ad5a44a7f7099f4518f885f48a93ceb14}\index{vconfig.h@{vconfig.h}!SLED@{SLED}}
+\index{SLED@{SLED}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{SLED}{SLED}}
+{\footnotesize\ttfamily \label{vconfig_8h_ad5a44a7f7099f4518f885f48a93ceb14} 
+\#define SLED~\mbox{\hyperlink{pin__manager_8h_addd6e61ef316afbefb56d043045d669e}{LED0\+\_\+\+LAT}}}
+
+\Hypertarget{vconfig_8h_afb7656c7630164119d17ef1d9b0ef78c}\index{vconfig.h@{vconfig.h}!SOCDELAY@{SOCDELAY}}
+\index{SOCDELAY@{SOCDELAY}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{SOCDELAY}{SOCDELAY}}
+{\footnotesize\ttfamily \label{vconfig_8h_afb7656c7630164119d17ef1d9b0ef78c} 
+\#define SOCDELAY~250}
+
+\Hypertarget{vconfig_8h_ac16509a75e3d3fc46b9df1726be486ec}\index{vconfig.h@{vconfig.h}!T1@{T1}}
+\index{T1@{T1}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{T1}{T1}}
+{\footnotesize\ttfamily \label{vconfig_8h_ac16509a75e3d3fc46b9df1726be486ec} 
+\#define T1~500}
+
+\Hypertarget{vconfig_8h_a259c2993ee45e06a4ea8150451a7a70e}\index{vconfig.h@{vconfig.h}!T2@{T2}}
+\index{T2@{T2}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{T2}{T2}}
+{\footnotesize\ttfamily \label{vconfig_8h_a259c2993ee45e06a4ea8150451a7a70e} 
+\#define T2~3000}
+
+\Hypertarget{vconfig_8h_a5d800c5f04f8638061876b9e32c6c508}\index{vconfig.h@{vconfig.h}!T3@{T3}}
+\index{T3@{T3}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{T3}{T3}}
+{\footnotesize\ttfamily \label{vconfig_8h_a5d800c5f04f8638061876b9e32c6c508} 
+\#define T3~5000}
+
+\Hypertarget{vconfig_8h_a935a699e9bf1bffc5dad8738d3cd24c0}\index{vconfig.h@{vconfig.h}!T4@{T4}}
+\index{T4@{T4}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{T4}{T4}}
+{\footnotesize\ttfamily \label{vconfig_8h_a935a699e9bf1bffc5dad8738d3cd24c0} 
+\#define T4~5000}
+
+\Hypertarget{vconfig_8h_a77725d9b114976abca698c51fd846ea1}\index{vconfig.h@{vconfig.h}!TDELAY@{TDELAY}}
+\index{TDELAY@{TDELAY}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{TDELAY}{TDELAY}}
+{\footnotesize\ttfamily \label{vconfig_8h_a77725d9b114976abca698c51fd846ea1} 
+\#define TDELAY~3000}
+
+\Hypertarget{vconfig_8h_aff04a116da7e79cb85dcbcf9afff0ea0}\index{vconfig.h@{vconfig.h}!TX\_RESERVE@{TX\_RESERVE}}
+\index{TX\_RESERVE@{TX\_RESERVE}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{TX\_RESERVE}{TX\_RESERVE}}
+{\footnotesize\ttfamily \label{vconfig_8h_aff04a116da7e79cb85dcbcf9afff0ea0} 
+\#define TX\+\_\+\+RESERVE~59}
+
+\Hypertarget{vconfig_8h_aa2241f1a8cbb91757a58f272191058a3}\index{vconfig.h@{vconfig.h}!TXTDELAY@{TXTDELAY}}
+\index{TXTDELAY@{TXTDELAY}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{TXTDELAY}{TXTDELAY}}
+{\footnotesize\ttfamily \label{vconfig_8h_aa2241f1a8cbb91757a58f272191058a3} 
+\#define TXTDELAY~10000}
+
+\Hypertarget{vconfig_8h_a98ed931f97fef7e06e3ea441d0326c67}\index{vconfig.h@{vconfig.h}!VER@{VER}}
+\index{VER@{VER}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{VER}{VER}}
+{\footnotesize\ttfamily \label{vconfig_8h_a98ed931f97fef7e06e3ea441d0326c67} 
+\#define VER~"{}2.\+20"{}}
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{vconfig_8h_acab04f5d4651ffefdde4d9ee8ffbd5fa}\index{vconfig.h@{vconfig.h}!hist\_type@{hist\_type}}
+\index{hist\_type@{hist\_type}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{hist\_type}{hist\_type}}
+{\footnotesize\ttfamily \label{vconfig_8h_acab04f5d4651ffefdde4d9ee8ffbd5fa} 
+typedef struct hist\+\_\+type hist\+\_\+type}
+
+\Hypertarget{vconfig_8h_a68df5a2f7d8a6914ffa1dcff61cf4161}\index{vconfig.h@{vconfig.h}!terminal\_type@{terminal\_type}}
+\index{terminal\_type@{terminal\_type}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{terminal\_type}{terminal\_type}}
+{\footnotesize\ttfamily \label{vconfig_8h_a68df5a2f7d8a6914ffa1dcff61cf4161} 
+typedef struct terminal\+\_\+type terminal\+\_\+type}
+
+\Hypertarget{vconfig_8h_a4f286398816920cfaa61ff716a71e177}\index{vconfig.h@{vconfig.h}!V\_data@{V\_data}}
+\index{V\_data@{V\_data}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{V\_data}{V\_data}}
+{\footnotesize\ttfamily \label{vconfig_8h_a4f286398816920cfaa61ff716a71e177} 
+typedef struct V\+\_\+data V\+\_\+data}
+
+\Hypertarget{vconfig_8h_aa2ed69d51619339711bbef9b3d607d62}\index{vconfig.h@{vconfig.h}!V\_help@{V\_help}}
+\index{V\_help@{V\_help}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{V\_help}{V\_help}}
+{\footnotesize\ttfamily \label{vconfig_8h_aa2ed69d51619339711bbef9b3d607d62} 
+typedef struct V\+\_\+help V\+\_\+help}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{vconfig_8h_aef985d2753ce26fc25d6b4e516d8b6bf}\index{vconfig.h@{vconfig.h}!D\_CODES@{D\_CODES}}
+\index{D\_CODES@{D\_CODES}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{D\_CODES}{D\_CODES}}
+{\footnotesize\ttfamily \label{vconfig_8h_aef985d2753ce26fc25d6b4e516d8b6bf} 
+enum \mbox{\hyperlink{vconfig_8h_aef985d2753ce26fc25d6b4e516d8b6bf}{D\+\_\+\+CODES}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIS\_STR@{DIS\_STR}!vconfig.h@{vconfig.h}}\index{vconfig.h@{vconfig.h}!DIS\_STR@{DIS\_STR}}}\Hypertarget{vconfig_8h_aef985d2753ce26fc25d6b4e516d8b6bfa75ae4338e2ab2f9044f48e4a2526ad15}\label{vconfig_8h_aef985d2753ce26fc25d6b4e516d8b6bfa75ae4338e2ab2f9044f48e4a2526ad15} 
+DIS\+\_\+\+STR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIS\_HELP@{DIS\_HELP}!vconfig.h@{vconfig.h}}\index{vconfig.h@{vconfig.h}!DIS\_HELP@{DIS\_HELP}}}\Hypertarget{vconfig_8h_aef985d2753ce26fc25d6b4e516d8b6bfaa650d19c57de0b7a695867fd56dead09}\label{vconfig_8h_aef985d2753ce26fc25d6b4e516d8b6bfaa650d19c57de0b7a695867fd56dead09} 
+DIS\+\_\+\+HELP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIS\_ERR@{DIS\_ERR}!vconfig.h@{vconfig.h}}\index{vconfig.h@{vconfig.h}!DIS\_ERR@{DIS\_ERR}}}\Hypertarget{vconfig_8h_aef985d2753ce26fc25d6b4e516d8b6bfa8f7a5f1482f275ef06b74e722940c2d0}\label{vconfig_8h_aef985d2753ce26fc25d6b4e516d8b6bfa8f7a5f1482f275ef06b74e722940c2d0} 
+DIS\+\_\+\+ERR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIS\_CLEAR@{DIS\_CLEAR}!vconfig.h@{vconfig.h}}\index{vconfig.h@{vconfig.h}!DIS\_CLEAR@{DIS\_CLEAR}}}\Hypertarget{vconfig_8h_aef985d2753ce26fc25d6b4e516d8b6bfafbb893330d40f384802b3608ca63d84a}\label{vconfig_8h_aef985d2753ce26fc25d6b4e516d8b6bfafbb893330d40f384802b3608ca63d84a} 
+DIS\+\_\+\+CLEAR&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427}\index{vconfig.h@{vconfig.h}!SW\_NAMES@{SW\_NAMES}}
+\index{SW\_NAMES@{SW\_NAMES}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{SW\_NAMES}{SW\_NAMES}}
+{\footnotesize\ttfamily \label{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427} 
+enum \mbox{\hyperlink{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427}{SW\+\_\+\+NAMES}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S0@{S0}!vconfig.h@{vconfig.h}}\index{vconfig.h@{vconfig.h}!S0@{S0}}}\Hypertarget{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427aff8a5b56d95204fd115d9665f74acb72}\label{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427aff8a5b56d95204fd115d9665f74acb72} 
+S0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S1@{S1}!vconfig.h@{vconfig.h}}\index{vconfig.h@{vconfig.h}!S1@{S1}}}\Hypertarget{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427a4eda5f72b331209ee9bc2d8fb2c02e7e}\label{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427a4eda5f72b331209ee9bc2d8fb2c02e7e} 
+S1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SSELECT@{SSELECT}!vconfig.h@{vconfig.h}}\index{vconfig.h@{vconfig.h}!SSELECT@{SSELECT}}}\Hypertarget{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427a37b61de8b8ac882cf15fe70b9771d0ec}\label{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427a37b61de8b8ac882cf15fe70b9771d0ec} 
+SSELECT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SENTER@{SENTER}!vconfig.h@{vconfig.h}}\index{vconfig.h@{vconfig.h}!SENTER@{SENTER}}}\Hypertarget{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427a2361195207ade9bbe809f34945c04057}\label{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427a2361195207ade9bbe809f34945c04057} 
+SENTER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SCALIB@{SCALIB}!vconfig.h@{vconfig.h}}\index{vconfig.h@{vconfig.h}!SCALIB@{SCALIB}}}\Hypertarget{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427a3abca6c3f4efe44e083c3132c36a3e65}\label{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427a3abca6c3f4efe44e083c3132c36a3e65} 
+SCALIB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S5@{S5}!vconfig.h@{vconfig.h}}\index{vconfig.h@{vconfig.h}!S5@{S5}}}\Hypertarget{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427aaabf2b9af0adc0d4649a35fbbcf6d3e8}\label{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427aaabf2b9af0adc0d4649a35fbbcf6d3e8} 
+S5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S6@{S6}!vconfig.h@{vconfig.h}}\index{vconfig.h@{vconfig.h}!S6@{S6}}}\Hypertarget{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427a89a17b71211e63287ae5d4d451f30048}\label{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427a89a17b71211e63287ae5d4d451f30048} 
+S6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SNULL@{SNULL}!vconfig.h@{vconfig.h}}\index{vconfig.h@{vconfig.h}!SNULL@{SNULL}}}\Hypertarget{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427a5eb84ebc7fc1d9b8bdd4c88a8a0b75a6}\label{vconfig_8h_a6742be248c6fe87c2ec7505fe500c427a5eb84ebc7fc1d9b8bdd4c88a8a0b75a6} 
+SNULL&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{vconfig_8h_a9b0e39a3a022ca300b7d4a9f90fcc579}\index{vconfig.h@{vconfig.h}!SW\_STATES@{SW\_STATES}}
+\index{SW\_STATES@{SW\_STATES}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{SW\_STATES}{SW\_STATES}}
+{\footnotesize\ttfamily \label{vconfig_8h_a9b0e39a3a022ca300b7d4a9f90fcc579} 
+enum \mbox{\hyperlink{vconfig_8h_a9b0e39a3a022ca300b7d4a9f90fcc579}{SW\+\_\+\+STATES}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SW\_OFF@{SW\_OFF}!vconfig.h@{vconfig.h}}\index{vconfig.h@{vconfig.h}!SW\_OFF@{SW\_OFF}}}\Hypertarget{vconfig_8h_a9b0e39a3a022ca300b7d4a9f90fcc579a1f2fed93982d8203a430bfd7f727128f}\label{vconfig_8h_a9b0e39a3a022ca300b7d4a9f90fcc579a1f2fed93982d8203a430bfd7f727128f} 
+SW\+\_\+\+OFF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SW\_ON@{SW\_ON}!vconfig.h@{vconfig.h}}\index{vconfig.h@{vconfig.h}!SW\_ON@{SW\_ON}}}\Hypertarget{vconfig_8h_a9b0e39a3a022ca300b7d4a9f90fcc579a92cbbb0314b472cbbfeb1eb2bb4a3f01}\label{vconfig_8h_a9b0e39a3a022ca300b7d4a9f90fcc579a92cbbb0314b472cbbfeb1eb2bb4a3f01} 
+SW\+\_\+\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SW\_INVALID@{SW\_INVALID}!vconfig.h@{vconfig.h}}\index{vconfig.h@{vconfig.h}!SW\_INVALID@{SW\_INVALID}}}\Hypertarget{vconfig_8h_a9b0e39a3a022ca300b7d4a9f90fcc579a4fa5353e0b046144a697afccc513f686}\label{vconfig_8h_a9b0e39a3a022ca300b7d4a9f90fcc579a4fa5353e0b046144a697afccc513f686} 
+SW\+\_\+\+INVALID&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{vconfig_8h_a39e3f20e42f8ac997987b71f7a9744c9}\index{vconfig.h@{vconfig.h}!UI\_STATES@{UI\_STATES}}
+\index{UI\_STATES@{UI\_STATES}!vconfig.h@{vconfig.h}}
+\doxysubsubsection{\texorpdfstring{UI\_STATES}{UI\_STATES}}
+{\footnotesize\ttfamily \label{vconfig_8h_a39e3f20e42f8ac997987b71f7a9744c9} 
+enum \mbox{\hyperlink{vconfig_8h_a39e3f20e42f8ac997987b71f7a9744c9}{UI\+\_\+\+STATES}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UI\_STATE\_INIT@{UI\_STATE\_INIT}!vconfig.h@{vconfig.h}}\index{vconfig.h@{vconfig.h}!UI\_STATE\_INIT@{UI\_STATE\_INIT}}}\Hypertarget{vconfig_8h_a39e3f20e42f8ac997987b71f7a9744c9a2784c8cf6cc48747d7251ef5c841360b}\label{vconfig_8h_a39e3f20e42f8ac997987b71f7a9744c9a2784c8cf6cc48747d7251ef5c841360b} 
+UI\+\_\+\+STATE\+\_\+\+INIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UI\_STATE\_HOST@{UI\_STATE\_HOST}!vconfig.h@{vconfig.h}}\index{vconfig.h@{vconfig.h}!UI\_STATE\_HOST@{UI\_STATE\_HOST}}}\Hypertarget{vconfig_8h_a39e3f20e42f8ac997987b71f7a9744c9ace8bd4112a6e8063d870121168bdcaaa}\label{vconfig_8h_a39e3f20e42f8ac997987b71f7a9744c9ace8bd4112a6e8063d870121168bdcaaa} 
+UI\+\_\+\+STATE\+\_\+\+HOST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UI\_STATE\_DEBUG@{UI\_STATE\_DEBUG}!vconfig.h@{vconfig.h}}\index{vconfig.h@{vconfig.h}!UI\_STATE\_DEBUG@{UI\_STATE\_DEBUG}}}\Hypertarget{vconfig_8h_a39e3f20e42f8ac997987b71f7a9744c9a4f12aa206b8aa6b902254c7bb8a7a532}\label{vconfig_8h_a39e3f20e42f8ac997987b71f7a9744c9a4f12aa206b8aa6b902254c7bb8a7a532} 
+UI\+\_\+\+STATE\+\_\+\+DEBUG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UI\_STATE\_LOG@{UI\_STATE\_LOG}!vconfig.h@{vconfig.h}}\index{vconfig.h@{vconfig.h}!UI\_STATE\_LOG@{UI\_STATE\_LOG}}}\Hypertarget{vconfig_8h_a39e3f20e42f8ac997987b71f7a9744c9ae55733aa2f7ed4293549a464b4950f93}\label{vconfig_8h_a39e3f20e42f8ac997987b71f7a9744c9ae55733aa2f7ed4293549a464b4950f93} 
+UI\+\_\+\+STATE\+\_\+\+LOG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UI\_STATE\_MON@{UI\_STATE\_MON}!vconfig.h@{vconfig.h}}\index{vconfig.h@{vconfig.h}!UI\_STATE\_MON@{UI\_STATE\_MON}}}\Hypertarget{vconfig_8h_a39e3f20e42f8ac997987b71f7a9744c9a4cf0f904d89fcda06bb0e9daf0a0300f}\label{vconfig_8h_a39e3f20e42f8ac997987b71f7a9744c9a4cf0f904d89fcda06bb0e9daf0a0300f} 
+UI\+\_\+\+STATE\+\_\+\+MON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UI\_STATE\_ERROR@{UI\_STATE\_ERROR}!vconfig.h@{vconfig.h}}\index{vconfig.h@{vconfig.h}!UI\_STATE\_ERROR@{UI\_STATE\_ERROR}}}\Hypertarget{vconfig_8h_a39e3f20e42f8ac997987b71f7a9744c9aa2d8b04168fc0851eee6bdd0ee8c55f3}\label{vconfig_8h_a39e3f20e42f8ac997987b71f7a9744c9aa2d8b04168fc0851eee6bdd0ee8c55f3} 
+UI\+\_\+\+STATE\+\_\+\+ERROR&\\
+\hline
+
+\end{DoxyEnumFields}

@@ -54,12 +54,12 @@ void SYSTEM_Initialize(void)
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
     FVR_Initialize();
-    DMA2_Initialize();
     CRC_Initialize();
+    DMA2_Initialize();
     ADCC_Initialize();
     DMA1_Initialize();
-    PWM8_Initialize();
     TMR2_Initialize();
+    PWM8_Initialize();
     EXT_INT_Initialize();
     TMR6_Initialize();
     TMR3_Initialize();

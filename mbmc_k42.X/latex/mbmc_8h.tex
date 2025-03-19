@@ -1,0 +1,607 @@
+\doxysection{mbmc.\+h File Reference}
+\hypertarget{mbmc_8h}{}\label{mbmc_8h}\index{mbmc.h@{mbmc.h}}
+{\ttfamily \#include $<$xc.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include "{}vconfig.\+h"{}}\newline
+{\ttfamily \#include "{}daq.\+h"{}}\newline
+Include dependency graph for mbmc.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mbmc_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mbmc_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structC__data}{C\+\_\+data}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_aef436b73c32759f97c1f843701c1baeb}{LOCALTIME\+\_\+\+OFFSET}}~60ul\texorpdfstring{$\ast$}{*}60ul\texorpdfstring{$\ast$}{*}(-\/8ul)
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_a81f3542703dabc9787e4570885fd6bab}{LP\+\_\+\+BUFFER\+\_\+\+SIZE}}~\mbox{\hyperlink{daq_8h_a602abb8ec84dcb3b6f854a738310ea46}{ADC\+\_\+\+BUFFER\+\_\+\+SIZE}}+8
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_a226f8ae22ba573a2ffcc8a15af1b27b2}{STATIC\+\_\+\+LOAD\+\_\+\+POWER}}~14.\+00f
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_a6ebf392dc4e5cd6166570b4226522230}{BANKAH}}~200.\+0f
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_a0937defabc3c0768e6caf81389f61e93}{DEGRADE}}~25.\+0f
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_a92ce862ce813f8c864b19671f10e7af6}{SSLICE}}~3600.\+0f
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_a8c067e448db9f21753b45b435750303a}{DUPDATE}}~14400
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_af87588d65d5e5e2e1865d06cc96f8019}{BLOAD1}}~10.\+0f
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_aa5d08c0ed1235d9d80789904b9a3465b}{BLOAD2}}~2.\+5f
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_af9ac014dd1d65ac383df3ad4b904ec93}{MAX\+\_\+\+LOAD\+\_\+\+TIME}}~75
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_a1720a399fef54a647806ab9b0f9018bb}{ROR\+\_\+\+LIMIT\+\_\+\+LOW}}~0.\+0140f
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_a0d681191aabc582961a7697e338b7afd}{ROR\+\_\+\+LIMIT\+\_\+\+SET}}~0.\+0001f
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_a53f14db9bf14148cbb7595182692360c}{ROR\+\_\+\+LIMIT\+\_\+\+NOISE}}~0.\+0051f
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_a7e341dde275a9433b5eba8fe8cda7f07}{ROR\+\_\+\+WAIT}}~20
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_a732c6481cb4111915b09681dc0fefa9b}{ROR\+\_\+\+TIMES}}~1
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_a54be1eb800401b600b02c362129febbc}{DAWN\+\_\+\+VOLTS}}~22.\+0f
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_a22d59370283301532df092e3a5b9cd93}{DUSK\+\_\+\+VOLTS}}~12.\+0f
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_aebb4eb06b5efda6fac89e715b2725ff8}{BRIGHT\+\_\+\+VOLTS}}~50.\+0f
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_a1ab27368577622d780e0f081bce9e839}{BAT\+\_\+\+LOW\+\_\+\+VOLTS}}~21.\+5f
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_a84ebb21c86ee5535bcd098e37a369b5a}{BAT\+\_\+\+DEAD\+\_\+\+VOLTS}}~18.\+0f
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_a81878531f685ada825a3b589a26b2a95}{MAX\+\_\+\+AC\+\_\+\+TIME}}~60\texorpdfstring{$\ast$}{*}60\texorpdfstring{$\ast$}{*}4
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_a7a6560ae419d30c71031cd2ffa7e07c9}{DAY\+\_\+\+DELAY}}~240
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_a3d38a352a12136c1cb13676ac6f3a6f5}{SOC\+\_\+\+TOO\+\_\+\+LOW}}~20
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_a4ae5350c1b3c89c5788d53b6c41f2c13}{SOC\+\_\+\+CRITICAL}}~3
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_a9849247c9e48a2b57fd7f993d601d0c5}{CEF}}~1.\+0f
+\item 
+\#define \mbox{\hyperlink{mbmc_8h_a65132e9eab1ab74d4460174002cedecd}{PEUKERT}}~1.\+0f
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct C\+\_\+data \mbox{\hyperlink{mbmc_8h_a59e046d6b58fc5500da55ed4aa83203c}{C\+\_\+data}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{mbmc_8h_a8573d582501e6007b8031d98d01abe4c}{FIX\+\_\+\+CODES}} \{ \mbox{\hyperlink{mbmc_8h_a8573d582501e6007b8031d98d01abe4ca675619fed063a12d00ec6682ec821e70}{WIDE\+\_\+\+ZERO}} = 1
+, \mbox{\hyperlink{mbmc_8h_a8573d582501e6007b8031d98d01abe4ca9aebffc498f2a4c6f7848747cb11e6a6}{NO\+\_\+\+NEG}} = 2
+, \mbox{\hyperlink{mbmc_8h_a8573d582501e6007b8031d98d01abe4ca5de6c62edc775c117d66b5e32c084658}{WIDE\+\_\+\+NEG}} = 4
+, \mbox{\hyperlink{mbmc_8h_a8573d582501e6007b8031d98d01abe4ca998eded080e73768c0b44bf4891df984}{SKIP}} = 8
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{mbmc_8h_a9bb18bfcdf15f760da510549a44b457d}{lp\+\_\+filter}} (const float, const uint8\+\_\+t, const int8\+\_\+t)
+\item 
+void \mbox{\hyperlink{mbmc_8h_adfaf4c5484db3b7b643acc001ca6c548}{convert\+\_\+adc\+\_\+data}} (void)
+\item 
+void \mbox{\hyperlink{mbmc_8h_a2b6935195f03b9df8b044fb6cf624b24}{calc\+\_\+model\+\_\+data}} (void)
+\item 
+void \mbox{\hyperlink{mbmc_8h_a77322fff3917b958c296a51a82f6f427}{calc\+\_\+ror\+\_\+data}} (void)
+\item 
+void \mbox{\hyperlink{mbmc_8h_a943db32bff6e345a987afbd51380fb83}{static\+\_\+soc}} (void)
+\item 
+void \mbox{\hyperlink{mbmc_8h_af221d426311671b36cf6145163a9b322}{set\+\_\+load\+\_\+relay\+\_\+zero}} (const bool)
+\item 
+void \mbox{\hyperlink{mbmc_8h_a0f058f4ea2564cd434708d6796d61a0e}{set\+\_\+load\+\_\+relay\+\_\+one}} (const bool)
+\item 
+void \mbox{\hyperlink{mbmc_8h_a46f84c43ee6e97542e42efaacd0cf3cb}{set\+\_\+load\+\_\+relay\+\_\+two}} (const bool)
+\item 
+void \mbox{\hyperlink{mbmc_8h_aabefa97b0f8817fcd2f40f4e4a8ee165}{set\+\_\+ac\+\_\+charger\+\_\+relay}} (const bool)
+\item 
+bool \mbox{\hyperlink{mbmc_8h_a902ab3d5e9220d3a3a900e95389e29cc}{get\+\_\+ac\+\_\+charger\+\_\+relay}} (void)
+\item 
+bool \mbox{\hyperlink{mbmc_8h_ad874a0766eead8099d1e008527607f39}{check\+\_\+day\+\_\+time}} (void)
+\item 
+void \mbox{\hyperlink{mbmc_8h_a32dc467b3b41ecb40e978db3aaa12b73}{load\+\_\+hist\+\_\+data}} (void)
+\item 
+float \mbox{\hyperlink{mbmc_8h_a69c30af33224b3fddb06e279ca0ce12a}{calc\+\_\+fixups}} (float data, \mbox{\hyperlink{mbmc_8h_a8573d582501e6007b8031d98d01abe4c}{FIX\+\_\+\+CODES}} fixup)
+\item 
+char \mbox{\hyperlink{mbmc_8h_a7185c67860a7db213af6c539a6209d75}{spinners}} (uint8\+\_\+t, uint8\+\_\+t)
+\item 
+time\+\_\+t \mbox{\hyperlink{mbmc_8h_aae026724f73c36340024c657f4f44dab}{time}} (time\+\_\+t \texorpdfstring{$\ast$}{*})
+\item 
+void \mbox{\hyperlink{mbmc_8h_a94bd66e40215d13c8ce141faf8ff5710}{set\+\_\+time}} (const time\+\_\+t t)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structV__data}{V\+\_\+data}} \mbox{\hyperlink{mbmc_8h_a3677a1b059657e0e0bcfa48d64f81cb4}{V}}
+\item 
+volatile \mbox{\hyperlink{structC__data}{C\+\_\+data}} \mbox{\hyperlink{mbmc_8h_aac2173f40f4f1cc4ae25246854f2df52}{C}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{mbmc_8h_a6ebf392dc4e5cd6166570b4226522230}\index{mbmc.h@{mbmc.h}!BANKAH@{BANKAH}}
+\index{BANKAH@{BANKAH}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{BANKAH}{BANKAH}}
+{\footnotesize\ttfamily \label{mbmc_8h_a6ebf392dc4e5cd6166570b4226522230} 
+\#define BANKAH~200.\+0f}
+
+\Hypertarget{mbmc_8h_a84ebb21c86ee5535bcd098e37a369b5a}\index{mbmc.h@{mbmc.h}!BAT\_DEAD\_VOLTS@{BAT\_DEAD\_VOLTS}}
+\index{BAT\_DEAD\_VOLTS@{BAT\_DEAD\_VOLTS}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{BAT\_DEAD\_VOLTS}{BAT\_DEAD\_VOLTS}}
+{\footnotesize\ttfamily \label{mbmc_8h_a84ebb21c86ee5535bcd098e37a369b5a} 
+\#define BAT\+\_\+\+DEAD\+\_\+\+VOLTS~18.\+0f}
+
+\Hypertarget{mbmc_8h_a1ab27368577622d780e0f081bce9e839}\index{mbmc.h@{mbmc.h}!BAT\_LOW\_VOLTS@{BAT\_LOW\_VOLTS}}
+\index{BAT\_LOW\_VOLTS@{BAT\_LOW\_VOLTS}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{BAT\_LOW\_VOLTS}{BAT\_LOW\_VOLTS}}
+{\footnotesize\ttfamily \label{mbmc_8h_a1ab27368577622d780e0f081bce9e839} 
+\#define BAT\+\_\+\+LOW\+\_\+\+VOLTS~21.\+5f}
+
+\Hypertarget{mbmc_8h_af87588d65d5e5e2e1865d06cc96f8019}\index{mbmc.h@{mbmc.h}!BLOAD1@{BLOAD1}}
+\index{BLOAD1@{BLOAD1}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{BLOAD1}{BLOAD1}}
+{\footnotesize\ttfamily \label{mbmc_8h_af87588d65d5e5e2e1865d06cc96f8019} 
+\#define BLOAD1~10.\+0f}
+
+\Hypertarget{mbmc_8h_aa5d08c0ed1235d9d80789904b9a3465b}\index{mbmc.h@{mbmc.h}!BLOAD2@{BLOAD2}}
+\index{BLOAD2@{BLOAD2}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{BLOAD2}{BLOAD2}}
+{\footnotesize\ttfamily \label{mbmc_8h_aa5d08c0ed1235d9d80789904b9a3465b} 
+\#define BLOAD2~2.\+5f}
+
+\Hypertarget{mbmc_8h_aebb4eb06b5efda6fac89e715b2725ff8}\index{mbmc.h@{mbmc.h}!BRIGHT\_VOLTS@{BRIGHT\_VOLTS}}
+\index{BRIGHT\_VOLTS@{BRIGHT\_VOLTS}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{BRIGHT\_VOLTS}{BRIGHT\_VOLTS}}
+{\footnotesize\ttfamily \label{mbmc_8h_aebb4eb06b5efda6fac89e715b2725ff8} 
+\#define BRIGHT\+\_\+\+VOLTS~50.\+0f}
+
+\Hypertarget{mbmc_8h_a9849247c9e48a2b57fd7f993d601d0c5}\index{mbmc.h@{mbmc.h}!CEF@{CEF}}
+\index{CEF@{CEF}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{CEF}{CEF}}
+{\footnotesize\ttfamily \label{mbmc_8h_a9849247c9e48a2b57fd7f993d601d0c5} 
+\#define CEF~1.\+0f}
+
+\Hypertarget{mbmc_8h_a54be1eb800401b600b02c362129febbc}\index{mbmc.h@{mbmc.h}!DAWN\_VOLTS@{DAWN\_VOLTS}}
+\index{DAWN\_VOLTS@{DAWN\_VOLTS}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{DAWN\_VOLTS}{DAWN\_VOLTS}}
+{\footnotesize\ttfamily \label{mbmc_8h_a54be1eb800401b600b02c362129febbc} 
+\#define DAWN\+\_\+\+VOLTS~22.\+0f}
+
+\Hypertarget{mbmc_8h_a7a6560ae419d30c71031cd2ffa7e07c9}\index{mbmc.h@{mbmc.h}!DAY\_DELAY@{DAY\_DELAY}}
+\index{DAY\_DELAY@{DAY\_DELAY}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{DAY\_DELAY}{DAY\_DELAY}}
+{\footnotesize\ttfamily \label{mbmc_8h_a7a6560ae419d30c71031cd2ffa7e07c9} 
+\#define DAY\+\_\+\+DELAY~240}
+
+\Hypertarget{mbmc_8h_a0937defabc3c0768e6caf81389f61e93}\index{mbmc.h@{mbmc.h}!DEGRADE@{DEGRADE}}
+\index{DEGRADE@{DEGRADE}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{DEGRADE}{DEGRADE}}
+{\footnotesize\ttfamily \label{mbmc_8h_a0937defabc3c0768e6caf81389f61e93} 
+\#define DEGRADE~25.\+0f}
+
+\Hypertarget{mbmc_8h_a8c067e448db9f21753b45b435750303a}\index{mbmc.h@{mbmc.h}!DUPDATE@{DUPDATE}}
+\index{DUPDATE@{DUPDATE}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{DUPDATE}{DUPDATE}}
+{\footnotesize\ttfamily \label{mbmc_8h_a8c067e448db9f21753b45b435750303a} 
+\#define DUPDATE~14400}
+
+\Hypertarget{mbmc_8h_a22d59370283301532df092e3a5b9cd93}\index{mbmc.h@{mbmc.h}!DUSK\_VOLTS@{DUSK\_VOLTS}}
+\index{DUSK\_VOLTS@{DUSK\_VOLTS}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{DUSK\_VOLTS}{DUSK\_VOLTS}}
+{\footnotesize\ttfamily \label{mbmc_8h_a22d59370283301532df092e3a5b9cd93} 
+\#define DUSK\+\_\+\+VOLTS~12.\+0f}
+
+\Hypertarget{mbmc_8h_aef436b73c32759f97c1f843701c1baeb}\index{mbmc.h@{mbmc.h}!LOCALTIME\_OFFSET@{LOCALTIME\_OFFSET}}
+\index{LOCALTIME\_OFFSET@{LOCALTIME\_OFFSET}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{LOCALTIME\_OFFSET}{LOCALTIME\_OFFSET}}
+{\footnotesize\ttfamily \label{mbmc_8h_aef436b73c32759f97c1f843701c1baeb} 
+\#define LOCALTIME\+\_\+\+OFFSET~60ul\texorpdfstring{$\ast$}{*}60ul\texorpdfstring{$\ast$}{*}(-\/8ul)}
+
+\Hypertarget{mbmc_8h_a81f3542703dabc9787e4570885fd6bab}\index{mbmc.h@{mbmc.h}!LP\_BUFFER\_SIZE@{LP\_BUFFER\_SIZE}}
+\index{LP\_BUFFER\_SIZE@{LP\_BUFFER\_SIZE}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{LP\_BUFFER\_SIZE}{LP\_BUFFER\_SIZE}}
+{\footnotesize\ttfamily \label{mbmc_8h_a81f3542703dabc9787e4570885fd6bab} 
+\#define LP\+\_\+\+BUFFER\+\_\+\+SIZE~\mbox{\hyperlink{daq_8h_a602abb8ec84dcb3b6f854a738310ea46}{ADC\+\_\+\+BUFFER\+\_\+\+SIZE}}+8}
+
+\Hypertarget{mbmc_8h_a81878531f685ada825a3b589a26b2a95}\index{mbmc.h@{mbmc.h}!MAX\_AC\_TIME@{MAX\_AC\_TIME}}
+\index{MAX\_AC\_TIME@{MAX\_AC\_TIME}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_AC\_TIME}{MAX\_AC\_TIME}}
+{\footnotesize\ttfamily \label{mbmc_8h_a81878531f685ada825a3b589a26b2a95} 
+\#define MAX\+\_\+\+AC\+\_\+\+TIME~60\texorpdfstring{$\ast$}{*}60\texorpdfstring{$\ast$}{*}4}
+
+\Hypertarget{mbmc_8h_af9ac014dd1d65ac383df3ad4b904ec93}\index{mbmc.h@{mbmc.h}!MAX\_LOAD\_TIME@{MAX\_LOAD\_TIME}}
+\index{MAX\_LOAD\_TIME@{MAX\_LOAD\_TIME}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_LOAD\_TIME}{MAX\_LOAD\_TIME}}
+{\footnotesize\ttfamily \label{mbmc_8h_af9ac014dd1d65ac383df3ad4b904ec93} 
+\#define MAX\+\_\+\+LOAD\+\_\+\+TIME~75}
+
+\Hypertarget{mbmc_8h_a65132e9eab1ab74d4460174002cedecd}\index{mbmc.h@{mbmc.h}!PEUKERT@{PEUKERT}}
+\index{PEUKERT@{PEUKERT}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{PEUKERT}{PEUKERT}}
+{\footnotesize\ttfamily \label{mbmc_8h_a65132e9eab1ab74d4460174002cedecd} 
+\#define PEUKERT~1.\+0f}
+
+\Hypertarget{mbmc_8h_a1720a399fef54a647806ab9b0f9018bb}\index{mbmc.h@{mbmc.h}!ROR\_LIMIT\_LOW@{ROR\_LIMIT\_LOW}}
+\index{ROR\_LIMIT\_LOW@{ROR\_LIMIT\_LOW}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{ROR\_LIMIT\_LOW}{ROR\_LIMIT\_LOW}}
+{\footnotesize\ttfamily \label{mbmc_8h_a1720a399fef54a647806ab9b0f9018bb} 
+\#define ROR\+\_\+\+LIMIT\+\_\+\+LOW~0.\+0140f}
+
+\Hypertarget{mbmc_8h_a53f14db9bf14148cbb7595182692360c}\index{mbmc.h@{mbmc.h}!ROR\_LIMIT\_NOISE@{ROR\_LIMIT\_NOISE}}
+\index{ROR\_LIMIT\_NOISE@{ROR\_LIMIT\_NOISE}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{ROR\_LIMIT\_NOISE}{ROR\_LIMIT\_NOISE}}
+{\footnotesize\ttfamily \label{mbmc_8h_a53f14db9bf14148cbb7595182692360c} 
+\#define ROR\+\_\+\+LIMIT\+\_\+\+NOISE~0.\+0051f}
+
+\Hypertarget{mbmc_8h_a0d681191aabc582961a7697e338b7afd}\index{mbmc.h@{mbmc.h}!ROR\_LIMIT\_SET@{ROR\_LIMIT\_SET}}
+\index{ROR\_LIMIT\_SET@{ROR\_LIMIT\_SET}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{ROR\_LIMIT\_SET}{ROR\_LIMIT\_SET}}
+{\footnotesize\ttfamily \label{mbmc_8h_a0d681191aabc582961a7697e338b7afd} 
+\#define ROR\+\_\+\+LIMIT\+\_\+\+SET~0.\+0001f}
+
+\Hypertarget{mbmc_8h_a732c6481cb4111915b09681dc0fefa9b}\index{mbmc.h@{mbmc.h}!ROR\_TIMES@{ROR\_TIMES}}
+\index{ROR\_TIMES@{ROR\_TIMES}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{ROR\_TIMES}{ROR\_TIMES}}
+{\footnotesize\ttfamily \label{mbmc_8h_a732c6481cb4111915b09681dc0fefa9b} 
+\#define ROR\+\_\+\+TIMES~1}
+
+\Hypertarget{mbmc_8h_a7e341dde275a9433b5eba8fe8cda7f07}\index{mbmc.h@{mbmc.h}!ROR\_WAIT@{ROR\_WAIT}}
+\index{ROR\_WAIT@{ROR\_WAIT}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{ROR\_WAIT}{ROR\_WAIT}}
+{\footnotesize\ttfamily \label{mbmc_8h_a7e341dde275a9433b5eba8fe8cda7f07} 
+\#define ROR\+\_\+\+WAIT~20}
+
+\Hypertarget{mbmc_8h_a4ae5350c1b3c89c5788d53b6c41f2c13}\index{mbmc.h@{mbmc.h}!SOC\_CRITICAL@{SOC\_CRITICAL}}
+\index{SOC\_CRITICAL@{SOC\_CRITICAL}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{SOC\_CRITICAL}{SOC\_CRITICAL}}
+{\footnotesize\ttfamily \label{mbmc_8h_a4ae5350c1b3c89c5788d53b6c41f2c13} 
+\#define SOC\+\_\+\+CRITICAL~3}
+
+\Hypertarget{mbmc_8h_a3d38a352a12136c1cb13676ac6f3a6f5}\index{mbmc.h@{mbmc.h}!SOC\_TOO\_LOW@{SOC\_TOO\_LOW}}
+\index{SOC\_TOO\_LOW@{SOC\_TOO\_LOW}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{SOC\_TOO\_LOW}{SOC\_TOO\_LOW}}
+{\footnotesize\ttfamily \label{mbmc_8h_a3d38a352a12136c1cb13676ac6f3a6f5} 
+\#define SOC\+\_\+\+TOO\+\_\+\+LOW~20}
+
+\Hypertarget{mbmc_8h_a92ce862ce813f8c864b19671f10e7af6}\index{mbmc.h@{mbmc.h}!SSLICE@{SSLICE}}
+\index{SSLICE@{SSLICE}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{SSLICE}{SSLICE}}
+{\footnotesize\ttfamily \label{mbmc_8h_a92ce862ce813f8c864b19671f10e7af6} 
+\#define SSLICE~3600.\+0f}
+
+\Hypertarget{mbmc_8h_a226f8ae22ba573a2ffcc8a15af1b27b2}\index{mbmc.h@{mbmc.h}!STATIC\_LOAD\_POWER@{STATIC\_LOAD\_POWER}}
+\index{STATIC\_LOAD\_POWER@{STATIC\_LOAD\_POWER}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{STATIC\_LOAD\_POWER}{STATIC\_LOAD\_POWER}}
+{\footnotesize\ttfamily \label{mbmc_8h_a226f8ae22ba573a2ffcc8a15af1b27b2} 
+\#define STATIC\+\_\+\+LOAD\+\_\+\+POWER~14.\+00f}
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{mbmc_8h_a59e046d6b58fc5500da55ed4aa83203c}\index{mbmc.h@{mbmc.h}!C\_data@{C\_data}}
+\index{C\_data@{C\_data}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{C\_data}{C\_data}}
+{\footnotesize\ttfamily \label{mbmc_8h_a59e046d6b58fc5500da55ed4aa83203c} 
+typedef struct C\+\_\+data C\+\_\+data}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{mbmc_8h_a8573d582501e6007b8031d98d01abe4c}\index{mbmc.h@{mbmc.h}!FIX\_CODES@{FIX\_CODES}}
+\index{FIX\_CODES@{FIX\_CODES}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{FIX\_CODES}{FIX\_CODES}}
+{\footnotesize\ttfamily \label{mbmc_8h_a8573d582501e6007b8031d98d01abe4c} 
+enum \mbox{\hyperlink{mbmc_8h_a8573d582501e6007b8031d98d01abe4c}{FIX\+\_\+\+CODES}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WIDE\_ZERO@{WIDE\_ZERO}!mbmc.h@{mbmc.h}}\index{mbmc.h@{mbmc.h}!WIDE\_ZERO@{WIDE\_ZERO}}}\Hypertarget{mbmc_8h_a8573d582501e6007b8031d98d01abe4ca675619fed063a12d00ec6682ec821e70}\label{mbmc_8h_a8573d582501e6007b8031d98d01abe4ca675619fed063a12d00ec6682ec821e70} 
+WIDE\+\_\+\+ZERO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NO\_NEG@{NO\_NEG}!mbmc.h@{mbmc.h}}\index{mbmc.h@{mbmc.h}!NO\_NEG@{NO\_NEG}}}\Hypertarget{mbmc_8h_a8573d582501e6007b8031d98d01abe4ca9aebffc498f2a4c6f7848747cb11e6a6}\label{mbmc_8h_a8573d582501e6007b8031d98d01abe4ca9aebffc498f2a4c6f7848747cb11e6a6} 
+NO\+\_\+\+NEG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WIDE\_NEG@{WIDE\_NEG}!mbmc.h@{mbmc.h}}\index{mbmc.h@{mbmc.h}!WIDE\_NEG@{WIDE\_NEG}}}\Hypertarget{mbmc_8h_a8573d582501e6007b8031d98d01abe4ca5de6c62edc775c117d66b5e32c084658}\label{mbmc_8h_a8573d582501e6007b8031d98d01abe4ca5de6c62edc775c117d66b5e32c084658} 
+WIDE\+\_\+\+NEG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SKIP@{SKIP}!mbmc.h@{mbmc.h}}\index{mbmc.h@{mbmc.h}!SKIP@{SKIP}}}\Hypertarget{mbmc_8h_a8573d582501e6007b8031d98d01abe4ca998eded080e73768c0b44bf4891df984}\label{mbmc_8h_a8573d582501e6007b8031d98d01abe4ca998eded080e73768c0b44bf4891df984} 
+SKIP&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mbmc_8h_a69c30af33224b3fddb06e279ca0ce12a}\index{mbmc.h@{mbmc.h}!calc\_fixups@{calc\_fixups}}
+\index{calc\_fixups@{calc\_fixups}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{calc\_fixups()}{calc\_fixups()}}
+{\footnotesize\ttfamily \label{mbmc_8h_a69c30af33224b3fddb06e279ca0ce12a} 
+float calc\+\_\+fixups (\begin{DoxyParamCaption}\item[{float}]{data}{, }\item[{\mbox{\hyperlink{mbmc_8h_a8573d582501e6007b8031d98d01abe4c}{FIX\+\_\+\+CODES}}}]{fixup}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{mbmc_8h_a69c30af33224b3fddb06e279ca0ce12a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mbmc_8h_a2b6935195f03b9df8b044fb6cf624b24}\index{mbmc.h@{mbmc.h}!calc\_model\_data@{calc\_model\_data}}
+\index{calc\_model\_data@{calc\_model\_data}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{calc\_model\_data()}{calc\_model\_data()}}
+{\footnotesize\ttfamily \label{mbmc_8h_a2b6935195f03b9df8b044fb6cf624b24} 
+void calc\+\_\+model\+\_\+data (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{mbmc_8h_a2b6935195f03b9df8b044fb6cf624b24_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{mbmc_8h_a2b6935195f03b9df8b044fb6cf624b24_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mbmc_8h_a77322fff3917b958c296a51a82f6f427}\index{mbmc.h@{mbmc.h}!calc\_ror\_data@{calc\_ror\_data}}
+\index{calc\_ror\_data@{calc\_ror\_data}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{calc\_ror\_data()}{calc\_ror\_data()}}
+{\footnotesize\ttfamily \label{mbmc_8h_a77322fff3917b958c296a51a82f6f427} 
+void calc\+\_\+ror\+\_\+data (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mbmc_8h_a77322fff3917b958c296a51a82f6f427_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{mbmc_8h_a77322fff3917b958c296a51a82f6f427_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mbmc_8h_ad874a0766eead8099d1e008527607f39}\index{mbmc.h@{mbmc.h}!check\_day\_time@{check\_day\_time}}
+\index{check\_day\_time@{check\_day\_time}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{check\_day\_time()}{check\_day\_time()}}
+{\footnotesize\ttfamily \label{mbmc_8h_ad874a0766eead8099d1e008527607f39} 
+bool check\+\_\+day\+\_\+time (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mbmc_8h_ad874a0766eead8099d1e008527607f39_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mbmc_8h_adfaf4c5484db3b7b643acc001ca6c548}\index{mbmc.h@{mbmc.h}!convert\_adc\_data@{convert\_adc\_data}}
+\index{convert\_adc\_data@{convert\_adc\_data}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{convert\_adc\_data()}{convert\_adc\_data()}}
+{\footnotesize\ttfamily \label{mbmc_8h_adfaf4c5484db3b7b643acc001ca6c548} 
+void convert\+\_\+adc\+\_\+data (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mbmc_8h_adfaf4c5484db3b7b643acc001ca6c548_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{mbmc_8h_adfaf4c5484db3b7b643acc001ca6c548_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mbmc_8h_a902ab3d5e9220d3a3a900e95389e29cc}\index{mbmc.h@{mbmc.h}!get\_ac\_charger\_relay@{get\_ac\_charger\_relay}}
+\index{get\_ac\_charger\_relay@{get\_ac\_charger\_relay}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{get\_ac\_charger\_relay()}{get\_ac\_charger\_relay()}}
+{\footnotesize\ttfamily \label{mbmc_8h_a902ab3d5e9220d3a3a900e95389e29cc} 
+bool get\+\_\+ac\+\_\+charger\+\_\+relay (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{mbmc_8h_a902ab3d5e9220d3a3a900e95389e29cc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mbmc_8h_a32dc467b3b41ecb40e978db3aaa12b73}\index{mbmc.h@{mbmc.h}!load\_hist\_data@{load\_hist\_data}}
+\index{load\_hist\_data@{load\_hist\_data}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{load\_hist\_data()}{load\_hist\_data()}}
+{\footnotesize\ttfamily \label{mbmc_8h_a32dc467b3b41ecb40e978db3aaa12b73} 
+void load\+\_\+hist\+\_\+data (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{mbmc_8h_a32dc467b3b41ecb40e978db3aaa12b73_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{mbmc_8h_a32dc467b3b41ecb40e978db3aaa12b73_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mbmc_8h_a9bb18bfcdf15f760da510549a44b457d}\index{mbmc.h@{mbmc.h}!lp\_filter@{lp\_filter}}
+\index{lp\_filter@{lp\_filter}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{lp\_filter()}{lp\_filter()}}
+{\footnotesize\ttfamily \label{mbmc_8h_a9bb18bfcdf15f760da510549a44b457d} 
+float lp\+\_\+filter (\begin{DoxyParamCaption}\item[{const float}]{new}{, }\item[{const uint8\+\_\+t}]{bn}{, }\item[{const int8\+\_\+t}]{slow}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mbmc_8h_a9bb18bfcdf15f760da510549a44b457d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mbmc_8h_aabefa97b0f8817fcd2f40f4e4a8ee165}\index{mbmc.h@{mbmc.h}!set\_ac\_charger\_relay@{set\_ac\_charger\_relay}}
+\index{set\_ac\_charger\_relay@{set\_ac\_charger\_relay}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{set\_ac\_charger\_relay()}{set\_ac\_charger\_relay()}}
+{\footnotesize\ttfamily \label{mbmc_8h_aabefa97b0f8817fcd2f40f4e4a8ee165} 
+void set\+\_\+ac\+\_\+charger\+\_\+relay (\begin{DoxyParamCaption}\item[{const bool}]{mode}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{mbmc_8h_aabefa97b0f8817fcd2f40f4e4a8ee165_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mbmc_8h_a0f058f4ea2564cd434708d6796d61a0e}\index{mbmc.h@{mbmc.h}!set\_load\_relay\_one@{set\_load\_relay\_one}}
+\index{set\_load\_relay\_one@{set\_load\_relay\_one}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{set\_load\_relay\_one()}{set\_load\_relay\_one()}}
+{\footnotesize\ttfamily \label{mbmc_8h_a0f058f4ea2564cd434708d6796d61a0e} 
+void set\+\_\+load\+\_\+relay\+\_\+one (\begin{DoxyParamCaption}\item[{const bool}]{mode}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mbmc_8h_a0f058f4ea2564cd434708d6796d61a0e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mbmc_8h_a46f84c43ee6e97542e42efaacd0cf3cb}\index{mbmc.h@{mbmc.h}!set\_load\_relay\_two@{set\_load\_relay\_two}}
+\index{set\_load\_relay\_two@{set\_load\_relay\_two}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{set\_load\_relay\_two()}{set\_load\_relay\_two()}}
+{\footnotesize\ttfamily \label{mbmc_8h_a46f84c43ee6e97542e42efaacd0cf3cb} 
+void set\+\_\+load\+\_\+relay\+\_\+two (\begin{DoxyParamCaption}\item[{const bool}]{mode}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mbmc_8h_a46f84c43ee6e97542e42efaacd0cf3cb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mbmc_8h_af221d426311671b36cf6145163a9b322}\index{mbmc.h@{mbmc.h}!set\_load\_relay\_zero@{set\_load\_relay\_zero}}
+\index{set\_load\_relay\_zero@{set\_load\_relay\_zero}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{set\_load\_relay\_zero()}{set\_load\_relay\_zero()}}
+{\footnotesize\ttfamily \label{mbmc_8h_af221d426311671b36cf6145163a9b322} 
+void set\+\_\+load\+\_\+relay\+\_\+zero (\begin{DoxyParamCaption}\item[{const bool}]{mode}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{mbmc_8h_af221d426311671b36cf6145163a9b322_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mbmc_8h_a94bd66e40215d13c8ce141faf8ff5710}\index{mbmc.h@{mbmc.h}!set\_time@{set\_time}}
+\index{set\_time@{set\_time}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{set\_time()}{set\_time()}}
+{\footnotesize\ttfamily \label{mbmc_8h_a94bd66e40215d13c8ce141faf8ff5710} 
+void set\+\_\+time (\begin{DoxyParamCaption}\item[{const time\+\_\+t}]{t}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mbmc_8h_a94bd66e40215d13c8ce141faf8ff5710_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mbmc_8h_a7185c67860a7db213af6c539a6209d75}\index{mbmc.h@{mbmc.h}!spinners@{spinners}}
+\index{spinners@{spinners}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{spinners()}{spinners()}}
+{\footnotesize\ttfamily \label{mbmc_8h_a7185c67860a7db213af6c539a6209d75} 
+char spinners (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{shape}{, }\item[{uint8\+\_\+t}]{reset}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{mbmc_8h_a7185c67860a7db213af6c539a6209d75_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mbmc_8h_a943db32bff6e345a987afbd51380fb83}\index{mbmc.h@{mbmc.h}!static\_soc@{static\_soc}}
+\index{static\_soc@{static\_soc}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{static\_soc()}{static\_soc()}}
+{\footnotesize\ttfamily \label{mbmc_8h_a943db32bff6e345a987afbd51380fb83} 
+void static\+\_\+soc (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{mbmc_8h_a943db32bff6e345a987afbd51380fb83_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mbmc_8h_aae026724f73c36340024c657f4f44dab}\index{mbmc.h@{mbmc.h}!time@{time}}
+\index{time@{time}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{time()}{time()}}
+{\footnotesize\ttfamily \label{mbmc_8h_aae026724f73c36340024c657f4f44dab} 
+time\+\_\+t time (\begin{DoxyParamCaption}\item[{time\+\_\+t \texorpdfstring{$\ast$}{*}}]{t}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{mbmc_8h_aae026724f73c36340024c657f4f44dab_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{mbmc_8h_aac2173f40f4f1cc4ae25246854f2df52}\index{mbmc.h@{mbmc.h}!C@{C}}
+\index{C@{C}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{C}{C}}
+{\footnotesize\ttfamily \label{mbmc_8h_aac2173f40f4f1cc4ae25246854f2df52} 
+volatile \mbox{\hyperlink{structC__data}{C\+\_\+data}} C\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{mbmc_8h_a3677a1b059657e0e0bcfa48d64f81cb4}\index{mbmc.h@{mbmc.h}!V@{V}}
+\index{V@{V}!mbmc.h@{mbmc.h}}
+\doxysubsubsection{\texorpdfstring{V}{V}}
+{\footnotesize\ttfamily \label{mbmc_8h_a3677a1b059657e0e0bcfa48d64f81cb4} 
+\mbox{\hyperlink{structV__data}{V\+\_\+data}} V\hspace{0.3cm}{\ttfamily [extern]}}
+

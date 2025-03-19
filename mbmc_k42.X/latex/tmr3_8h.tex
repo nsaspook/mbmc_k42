@@ -1,0 +1,367 @@
+\doxysection{mcc\+\_\+generated\+\_\+files/tmr3.h File Reference}
+\hypertarget{tmr3_8h}{}\label{tmr3_8h}\index{mcc\_generated\_files/tmr3.h@{mcc\_generated\_files/tmr3.h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for tmr3.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{tmr3_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tmr3_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{tmr3_8h_a08c0fcab39b416279dfe6f9aa0604b98}{TMR3\+\_\+\+INTERRUPT\+\_\+\+TICKER\+\_\+\+FACTOR}}~200
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{tmr3_8h_a02e03864926c3b54ddfe281ba823f2ed}{TMR3\+\_\+\+Initialize}} (void)
+\item 
+void \mbox{\hyperlink{tmr3_8h_a78940bbf9d2de9d4e977fd940dff4cc0}{TMR3\+\_\+\+Start\+Timer}} (void)
+\item 
+void \mbox{\hyperlink{tmr3_8h_a5a102fa2e52f5b23bfab749b22615ed3}{TMR3\+\_\+\+Stop\+Timer}} (void)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{tmr3_8h_a51c3963c49626baf70aa64045aecc1d9}{TMR3\+\_\+\+Read\+Timer}} (void)
+\item 
+void \mbox{\hyperlink{tmr3_8h_a3170c2d889fbb9ba206cc104682e9333}{TMR3\+\_\+\+Write\+Timer}} (uint16\+\_\+t timer\+Val)
+\item 
+void \mbox{\hyperlink{tmr3_8h_a13ac4ae9dc56133d0d4d357648006295}{TMR3\+\_\+\+Reload}} (void)
+\item 
+void \mbox{\hyperlink{tmr3_8h_abdd4ea6aec8610d1a91f569a1247d251}{TMR3\+\_\+\+Start\+Single\+Pulse\+Acquisition}} (void)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{tmr3_8h_ae05915a7433f167eafcbbc4e536dddc4}{TMR3\+\_\+\+Check\+Gate\+Value\+Status}} (void)
+\item 
+void \mbox{\hyperlink{tmr3_8h_a44a7674ca1e5caa3b57eda1006ada279}{TMR3\+\_\+\+Call\+Back}} (void)
+\item 
+void \mbox{\hyperlink{tmr3_8h_ac6b758f67be307fff4439fce147bbaa5}{TMR3\+\_\+\+Set\+Interrupt\+Handler}} (void(\texorpdfstring{$\ast$}{*}Interrupt\+Handler)(void))
+\item 
+void \mbox{\hyperlink{tmr3_8h_a21a3a396bffcddecc2bd55ea697f3c92}{TMR3\+\_\+\+Default\+Interrupt\+Handler}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{tmr3_8h_a906366e917431203155d0d6d91a4c32d}{TMR3\+\_\+\+Interrupt\+Handler}} )(void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{tmr3_8h_a08c0fcab39b416279dfe6f9aa0604b98}\index{tmr3.h@{tmr3.h}!TMR3\_INTERRUPT\_TICKER\_FACTOR@{TMR3\_INTERRUPT\_TICKER\_FACTOR}}
+\index{TMR3\_INTERRUPT\_TICKER\_FACTOR@{TMR3\_INTERRUPT\_TICKER\_FACTOR}!tmr3.h@{tmr3.h}}
+\doxysubsubsection{\texorpdfstring{TMR3\_INTERRUPT\_TICKER\_FACTOR}{TMR3\_INTERRUPT\_TICKER\_FACTOR}}
+{\footnotesize\ttfamily \label{tmr3_8h_a08c0fcab39b416279dfe6f9aa0604b98} 
+\#define TMR3\+\_\+\+INTERRUPT\+\_\+\+TICKER\+\_\+\+FACTOR~200}
+
+TMR3 Generated Driver API Header File
+
+@\+Company Microchip Technology Inc.
+
+@\+File Name \doxylink{tmr3_8h}{tmr3.\+h}
+
+@\+Summary This is the generated header file for the TMR3 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+
+@\+Description This header file provides APIs for driver for TMR3. Generation Information \+: Product Revision \+: PIC10 / PIC12 / PIC16 / PIC18 MCUs -\/ 1.\+81.\+8 Device \+: PIC18\+F57\+K42 Driver Version \+: 2.\+11 The generated drivers are tested against the following\+: Compiler \+: XC8 2.\+36 and above MPLAB \+: MPLAB X 6.\+00 Section\+: Included Files 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{tmr3_8h_a44a7674ca1e5caa3b57eda1006ada279}\index{tmr3.h@{tmr3.h}!TMR3\_CallBack@{TMR3\_CallBack}}
+\index{TMR3\_CallBack@{TMR3\_CallBack}!tmr3.h@{tmr3.h}}
+\doxysubsubsection{\texorpdfstring{TMR3\_CallBack()}{TMR3\_CallBack()}}
+{\footnotesize\ttfamily \label{tmr3_8h_a44a7674ca1e5caa3b57eda1006ada279} 
+void TMR3\+\_\+\+Call\+Back (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+@\+Summary Call\+Back function.
+
+@\+Description This routine is called by the Interrupt Manager.
+
+@\+Preconditions Initialize the TMR3 module with interrupt before calling this function.
+
+@\+Param None
+
+@\+Returns None Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{tmr3_8h_a44a7674ca1e5caa3b57eda1006ada279_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tmr3_8h_ae05915a7433f167eafcbbc4e536dddc4}\index{tmr3.h@{tmr3.h}!TMR3\_CheckGateValueStatus@{TMR3\_CheckGateValueStatus}}
+\index{TMR3\_CheckGateValueStatus@{TMR3\_CheckGateValueStatus}!tmr3.h@{tmr3.h}}
+\doxysubsubsection{\texorpdfstring{TMR3\_CheckGateValueStatus()}{TMR3\_CheckGateValueStatus()}}
+{\footnotesize\ttfamily \label{tmr3_8h_ae05915a7433f167eafcbbc4e536dddc4} 
+uint8\+\_\+t TMR3\+\_\+\+Check\+Gate\+Value\+Status (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+@\+Summary Check the current state of Timer1 gate.
+
+@\+Description This function reads the TMR3 gate value and return it. This function must be used when the TMR3 gate is enabled.
+
+@\+Preconditions Initialize the TMR3 with gate enable before calling this function.
+
+@\+Param None
+
+@\+Returns None
+
+@\+Example {\ttfamily  uint16\+\_\+t x\+Val; uint16\+\_\+t y\+Val;}
+
+{\ttfamily enable TMR3 singlepulse mode TMR3\+\_\+\+Start\+Single\+Pulse\+Acquistion();}
+
+{\ttfamily check TMR3 gate status if(\doxylink{tmr3_8h_ae05915a7433f167eafcbbc4e536dddc4}{TMR3\+\_\+\+Check\+Gate\+Value\+Status()}== 0) x\+Val = \doxylink{tmr3_8h_a51c3963c49626baf70aa64045aecc1d9}{TMR3\+\_\+\+Read\+Timer()};}
+
+{\ttfamily wait untill gate interrupt occured while(TMR3\+IF == 0) \{ \}}
+
+{\ttfamily  y\+Val = \doxylink{tmr3_8h_a51c3963c49626baf70aa64045aecc1d9}{TMR3\+\_\+\+Read\+Timer()}; } \Hypertarget{tmr3_8h_a21a3a396bffcddecc2bd55ea697f3c92}\index{tmr3.h@{tmr3.h}!TMR3\_DefaultInterruptHandler@{TMR3\_DefaultInterruptHandler}}
+\index{TMR3\_DefaultInterruptHandler@{TMR3\_DefaultInterruptHandler}!tmr3.h@{tmr3.h}}
+\doxysubsubsection{\texorpdfstring{TMR3\_DefaultInterruptHandler()}{TMR3\_DefaultInterruptHandler()}}
+{\footnotesize\ttfamily \label{tmr3_8h_a21a3a396bffcddecc2bd55ea697f3c92} 
+void TMR3\+\_\+\+Default\+Interrupt\+Handler (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+@\+Summary Default Timer Interrupt Handler
+
+@\+Description This is the default Interrupt Handler function
+
+@\+Preconditions Initialize the TMR3 module with interrupt before calling this isr.
+
+@\+Param None
+
+@\+Returns None Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tmr3_8h_a21a3a396bffcddecc2bd55ea697f3c92_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tmr3_8h_a02e03864926c3b54ddfe281ba823f2ed}\index{tmr3.h@{tmr3.h}!TMR3\_Initialize@{TMR3\_Initialize}}
+\index{TMR3\_Initialize@{TMR3\_Initialize}!tmr3.h@{tmr3.h}}
+\doxysubsubsection{\texorpdfstring{TMR3\_Initialize()}{TMR3\_Initialize()}}
+{\footnotesize\ttfamily \label{tmr3_8h_a02e03864926c3b54ddfe281ba823f2ed} 
+void TMR3\+\_\+\+Initialize (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Section\+: TMR3 APIs @\+Summary Initializes the TMR3
+
+@\+Description This routine initializes the TMR3. This routine must be called before any other TMR3 routine is called. This routine should only be called once during system initialization.
+
+@\+Preconditions None
+
+@\+Param None
+
+@\+Returns None
+
+@\+Comment
+
+@\+Example {\ttfamily  \doxylink{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{main()} \{ Initialize TMR3 module \doxylink{tmr3_8c_a02e03864926c3b54ddfe281ba823f2ed}{TMR3\+\_\+\+Initialize()};}
+
+{\ttfamily Do something else... \} }
+
+Section\+: TMR3 APIs Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tmr3_8h_a02e03864926c3b54ddfe281ba823f2ed_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tmr3_8h_a02e03864926c3b54ddfe281ba823f2ed_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tmr3_8h_a51c3963c49626baf70aa64045aecc1d9}\index{tmr3.h@{tmr3.h}!TMR3\_ReadTimer@{TMR3\_ReadTimer}}
+\index{TMR3\_ReadTimer@{TMR3\_ReadTimer}!tmr3.h@{tmr3.h}}
+\doxysubsubsection{\texorpdfstring{TMR3\_ReadTimer()}{TMR3\_ReadTimer()}}
+{\footnotesize\ttfamily \label{tmr3_8h_a51c3963c49626baf70aa64045aecc1d9} 
+uint16\+\_\+t TMR3\+\_\+\+Read\+Timer (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+@\+Summary Reads the TMR3 register.
+
+@\+Description This function reads the TMR3 register value and return it.
+
+@\+Preconditions Initialize the TMR3 before calling this function.
+
+@\+Param None
+
+@\+Returns This function returns the current value of TMR3 register.
+
+@\+Example {\ttfamily  Initialize TMR3 module}
+
+{\ttfamily Start TMR3 \doxylink{tmr3_8h_a78940bbf9d2de9d4e977fd940dff4cc0}{TMR3\+\_\+\+Start\+Timer()};}
+
+{\ttfamily Read the current value of TMR3 if(0 == \doxylink{tmr3_8h_a51c3963c49626baf70aa64045aecc1d9}{TMR3\+\_\+\+Read\+Timer()}) \{ Do something else...}
+
+{\ttfamily Reload the TMR value \doxylink{tmr3_8h_a13ac4ae9dc56133d0d4d357648006295}{TMR3\+\_\+\+Reload()}; \} } \Hypertarget{tmr3_8h_a13ac4ae9dc56133d0d4d357648006295}\index{tmr3.h@{tmr3.h}!TMR3\_Reload@{TMR3\_Reload}}
+\index{TMR3\_Reload@{TMR3\_Reload}!tmr3.h@{tmr3.h}}
+\doxysubsubsection{\texorpdfstring{TMR3\_Reload()}{TMR3\_Reload()}}
+{\footnotesize\ttfamily \label{tmr3_8h_a13ac4ae9dc56133d0d4d357648006295} 
+void TMR3\+\_\+\+Reload (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+@\+Summary Reload the TMR3 register.
+
+@\+Description This function reloads the TMR3 register. This function must be called to write initial value into TMR3 register.
+
+@\+Preconditions Initialize the TMR3 before calling this function.
+
+@\+Param None
+
+@\+Returns None
+
+@\+Example {\ttfamily  while(1) \{ if(\+TMR3\+IF) \{ Do something else...}
+
+{\ttfamily clear the TMR3 interrupt flag TMR3\+IF = 0;}
+
+{\ttfamily Reload the initial value of TMR3 \doxylink{tmr3_8h_a13ac4ae9dc56133d0d4d357648006295}{TMR3\+\_\+\+Reload()}; \} \} } Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{tmr3_8h_a13ac4ae9dc56133d0d4d357648006295_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tmr3_8h_ac6b758f67be307fff4439fce147bbaa5}\index{tmr3.h@{tmr3.h}!TMR3\_SetInterruptHandler@{TMR3\_SetInterruptHandler}}
+\index{TMR3\_SetInterruptHandler@{TMR3\_SetInterruptHandler}!tmr3.h@{tmr3.h}}
+\doxysubsubsection{\texorpdfstring{TMR3\_SetInterruptHandler()}{TMR3\_SetInterruptHandler()}}
+{\footnotesize\ttfamily \label{tmr3_8h_ac6b758f67be307fff4439fce147bbaa5} 
+void TMR3\+\_\+\+Set\+Interrupt\+Handler (\begin{DoxyParamCaption}\item[{void(\texorpdfstring{$\ast$}{*}}]{Interrupt\+Handler~}{)(void)}\end{DoxyParamCaption})}
+
+@\+Summary Set Timer Interrupt Handler
+
+@\+Description This sets the function to be called during the ISR
+
+@\+Preconditions Initialize the TMR3 module with interrupt before calling this.
+
+@\+Param Address of function to be set
+
+@\+Returns None Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tmr3_8h_ac6b758f67be307fff4439fce147bbaa5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tmr3_8h_abdd4ea6aec8610d1a91f569a1247d251}\index{tmr3.h@{tmr3.h}!TMR3\_StartSinglePulseAcquisition@{TMR3\_StartSinglePulseAcquisition}}
+\index{TMR3\_StartSinglePulseAcquisition@{TMR3\_StartSinglePulseAcquisition}!tmr3.h@{tmr3.h}}
+\doxysubsubsection{\texorpdfstring{TMR3\_StartSinglePulseAcquisition()}{TMR3\_StartSinglePulseAcquisition()}}
+{\footnotesize\ttfamily \label{tmr3_8h_abdd4ea6aec8610d1a91f569a1247d251} 
+void TMR3\+\_\+\+Start\+Single\+Pulse\+Acquisition (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+@\+Summary Starts the single pulse acquisition in TMR3 gate operation.
+
+@\+Description This function starts the single pulse acquisition in TMR3 gate operation. This function must be used when the TMR3 gate is enabled.
+
+@\+Preconditions Initialize the TMR3 with gate enable before calling this function.
+
+@\+Param None
+
+@\+Returns None
+
+@\+Example {\ttfamily  uint16\+\_\+t x\+Val; uint16\+\_\+t y\+Val;}
+
+{\ttfamily enable TMR3 singlepulse mode TMR3\+\_\+\+Start\+Single\+Pulse\+Acquistion();}
+
+{\ttfamily check TMR3 gate status if(\doxylink{tmr3_8h_ae05915a7433f167eafcbbc4e536dddc4}{TMR3\+\_\+\+Check\+Gate\+Value\+Status()}== 0) x\+Val = \doxylink{tmr3_8h_a51c3963c49626baf70aa64045aecc1d9}{TMR3\+\_\+\+Read\+Timer()};}
+
+{\ttfamily wait untill gate interrupt occured while(TMR3\+GIF == 0) \{ \}}
+
+{\ttfamily  y\+Val = \doxylink{tmr3_8h_a51c3963c49626baf70aa64045aecc1d9}{TMR3\+\_\+\+Read\+Timer()}; } \Hypertarget{tmr3_8h_a78940bbf9d2de9d4e977fd940dff4cc0}\index{tmr3.h@{tmr3.h}!TMR3\_StartTimer@{TMR3\_StartTimer}}
+\index{TMR3\_StartTimer@{TMR3\_StartTimer}!tmr3.h@{tmr3.h}}
+\doxysubsubsection{\texorpdfstring{TMR3\_StartTimer()}{TMR3\_StartTimer()}}
+{\footnotesize\ttfamily \label{tmr3_8h_a78940bbf9d2de9d4e977fd940dff4cc0} 
+void TMR3\+\_\+\+Start\+Timer (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+@\+Summary This function starts the TMR3.
+
+@\+Description This function starts the TMR3 operation. This function must be called after the initialization of TMR3.
+
+@\+Preconditions Initialize the TMR3 before calling this function.
+
+@\+Param None
+
+@\+Returns None
+
+@\+Example {\ttfamily  Initialize TMR3 module}
+
+{\ttfamily Start TMR3 \doxylink{tmr3_8h_a78940bbf9d2de9d4e977fd940dff4cc0}{TMR3\+\_\+\+Start\+Timer()};}
+
+{\ttfamily Do something else... } \Hypertarget{tmr3_8h_a5a102fa2e52f5b23bfab749b22615ed3}\index{tmr3.h@{tmr3.h}!TMR3\_StopTimer@{TMR3\_StopTimer}}
+\index{TMR3\_StopTimer@{TMR3\_StopTimer}!tmr3.h@{tmr3.h}}
+\doxysubsubsection{\texorpdfstring{TMR3\_StopTimer()}{TMR3\_StopTimer()}}
+{\footnotesize\ttfamily \label{tmr3_8h_a5a102fa2e52f5b23bfab749b22615ed3} 
+void TMR3\+\_\+\+Stop\+Timer (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+@\+Summary This function stops the TMR3.
+
+@\+Description This function stops the TMR3 operation. This function must be called after the start of TMR3.
+
+@\+Preconditions Initialize the TMR3 before calling this function.
+
+@\+Param None
+
+@\+Returns None
+
+@\+Example {\ttfamily  Initialize TMR3 module}
+
+{\ttfamily Start TMR3 \doxylink{tmr3_8h_a78940bbf9d2de9d4e977fd940dff4cc0}{TMR3\+\_\+\+Start\+Timer()};}
+
+{\ttfamily Do something else...}
+
+{\ttfamily Stop TMR3; \doxylink{tmr3_8h_a5a102fa2e52f5b23bfab749b22615ed3}{TMR3\+\_\+\+Stop\+Timer()}; } \Hypertarget{tmr3_8h_a3170c2d889fbb9ba206cc104682e9333}\index{tmr3.h@{tmr3.h}!TMR3\_WriteTimer@{TMR3\_WriteTimer}}
+\index{TMR3\_WriteTimer@{TMR3\_WriteTimer}!tmr3.h@{tmr3.h}}
+\doxysubsubsection{\texorpdfstring{TMR3\_WriteTimer()}{TMR3\_WriteTimer()}}
+{\footnotesize\ttfamily \label{tmr3_8h_a3170c2d889fbb9ba206cc104682e9333} 
+void TMR3\+\_\+\+Write\+Timer (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{timer\+Val}{}\end{DoxyParamCaption})}
+
+@\+Summary Writes the TMR3 register.
+
+@\+Description This function writes the TMR3 register. This function must be called after the initialization of TMR3.
+
+@\+Preconditions Initialize the TMR3 before calling this function.
+
+@\+Param timer\+Val -\/ Value to write into TMR3 register.
+
+@\+Returns None
+
+@\+Example {\ttfamily  \#define PERIOD 0x80 \#define ZERO 0x00}
+
+{\ttfamily  while(1) \{ Read the TMR3 register if(ZERO == \doxylink{tmr3_8h_a51c3963c49626baf70aa64045aecc1d9}{TMR3\+\_\+\+Read\+Timer()}) \{ Do something else...}
+
+{\ttfamily Write the TMR3 register TMR3\+\_\+\+Write\+Timer(\+PERIOD); \}}
+
+{\ttfamily Do something else... \} } Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{tmr3_8h_a3170c2d889fbb9ba206cc104682e9333_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{tmr3_8h_a906366e917431203155d0d6d91a4c32d}\index{tmr3.h@{tmr3.h}!TMR3\_InterruptHandler@{TMR3\_InterruptHandler}}
+\index{TMR3\_InterruptHandler@{TMR3\_InterruptHandler}!tmr3.h@{tmr3.h}}
+\doxysubsubsection{\texorpdfstring{TMR3\_InterruptHandler}{TMR3\_InterruptHandler}}
+{\footnotesize\ttfamily \label{tmr3_8h_a906366e917431203155d0d6d91a4c32d} 
+void(\texorpdfstring{$\ast$}{*} TMR3\+\_\+\+Interrupt\+Handler) (void) (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+@\+Summary Timer Interrupt Handler
+
+@\+Description This is a function pointer to the function that will be called during the ISR
+
+@\+Preconditions Initialize the TMR3 module with interrupt before calling this isr.
+
+@\+Param None
+
+@\+Returns None 

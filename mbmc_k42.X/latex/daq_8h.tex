@@ -1,0 +1,712 @@
+\doxysection{daq.\+h File Reference}
+\hypertarget{daq_8h}{}\label{daq_8h}\index{daq.h@{daq.h}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include "{}mcc\+\_\+generated\+\_\+files/spi1.\+h"{}}\newline
+{\ttfamily \#include "{}mcc\+\_\+generated\+\_\+files/crc.\+h"{}}\newline
+{\ttfamily \#include "{}vconfig.\+h"{}}\newline
+{\ttfamily \#include "{}timers.\+h"{}}\newline
+{\ttfamily \#include "{}tests.\+h"{}}\newline
+{\ttfamily \#include $<$xc.\+h$>$}\newline
+{\ttfamily \#include "{}mcc\+\_\+generated\+\_\+files/adcc.\+h"{}}\newline
+{\ttfamily \#include "{}mcc\+\_\+generated\+\_\+files/pin\+\_\+manager.\+h"{}}\newline
+{\ttfamily \#include "{}mcc\+\_\+generated\+\_\+files/memory.\+h"{}}\newline
+Include dependency graph for daq.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{daq_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{daq_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{daq_8h_a3e4b899a860b2883ace989b8981023e7}{LAST\+\_\+\+ADC\+\_\+\+CHAN}}~0\+XD
+\item 
+\#define \mbox{\hyperlink{daq_8h_a602abb8ec84dcb3b6f854a738310ea46}{ADC\+\_\+\+BUFFER\+\_\+\+SIZE}}~16
+\item 
+\#define \mbox{\hyperlink{daq_8h_a0db25086c1438b6924ca97d8db1db19a}{ADC\+\_\+\+SCAN\+\_\+\+SPEED}}~200
+\item 
+\#define \mbox{\hyperlink{daq_8h_af4a16c859ab34ef0e270f0ca1e6a3b66}{ADC\+\_\+\+SCAN\+\_\+\+CHAN}}~0b0011110001110111
+\item 
+\#define \mbox{\hyperlink{daq_8h_a9770057d6ce3938f2b04879f62bb9a97}{ADC\+\_\+\+V\+\_\+\+CHAN\+\_\+\+TYPE}}~0b0010000000100000
+\item 
+\#define \mbox{\hyperlink{daq_8h_a228e8f9e398667947efe506a4dab5466}{NUM\+\_\+\+C\+\_\+\+SENSORS}}~3
+\item 
+\#define \mbox{\hyperlink{daq_8h_a7a4b6341b9bd809cae74e93f91147283}{ADC\+\_\+\+C\+\_\+\+CHAN}}~0b0000100000000011
+\item 
+\#define \mbox{\hyperlink{daq_8h_a07afd34c55297f0ef83ce2d6061fba46}{ADC\+\_\+\+C\+\_\+\+CHAN\+\_\+\+TYPE}}~0b0000000000000001
+\item 
+\#define \mbox{\hyperlink{daq_8h_aa0df38acb2d44dd384d79a1b318f61c5}{ADC\+\_\+\+C\+\_\+\+CHAN\+\_\+\+MPPT}}~0b0000100000000000
+\item 
+\#define \mbox{\hyperlink{daq_8h_ae296d6e55cc2a2efaff80d8186c7095c}{NUM\+\_\+\+T\+\_\+\+SENSORS}}~0
+\item 
+\#define \mbox{\hyperlink{daq_8h_a73ae315e0d29f4fabf77b04304148c15}{ADC\+\_\+\+T\+\_\+\+CHAN}}~0b0000000000000000
+\item 
+\#define \mbox{\hyperlink{daq_8h_a30469172c3954096afebc1d6c0a007f8}{ADC\+\_\+\+T\+\_\+\+CHAN\+\_\+\+TYPE}}~0b0000000000000000
+\item 
+\#define \mbox{\hyperlink{daq_8h_a9b376b15d9858a4ed16e39818a4066b2}{LAST\+\_\+\+DAC\+\_\+\+CHAN}}~0\+X1
+\item 
+\#define \mbox{\hyperlink{daq_8h_adbc56624baf87c2ce71edcc12cc0e537}{DAC\+\_\+\+BUFFER\+\_\+\+SIZE}}~2
+\item 
+\#define \mbox{\hyperlink{daq_8h_a7444ab80927c7709c7618b124ddce678}{DAC\+\_\+\+LOAD\+\_\+A}}~0b0100
+\item 
+\#define \mbox{\hyperlink{daq_8h_aec5361d50aec883503151a0c92ff3f4a}{DAC\+\_\+\+LOAD\+\_\+B}}~0b0101
+\item 
+\#define \mbox{\hyperlink{daq_8h_aa11af090b4e4f45ebce9796fe7c1480f}{DCHAN\+\_\+A}}~0
+\item 
+\#define \mbox{\hyperlink{daq_8h_a38c40e0a521857c19e5d1cbbbc60e936}{DCHAN\+\_\+B}}~1
+\item 
+\#define \mbox{\hyperlink{daq_8h_a0e4e2eb202fefa0d4d810d9448a2534a}{DAC\+\_\+\+SCALE}}~0.\+002442f
+\item 
+\#define \mbox{\hyperlink{daq_8h_a7fb4ad2b8640f1ce2179f45a73115b7e}{ZERO\+\_\+\+RANGE}}~100
+\item 
+\#define \mbox{\hyperlink{daq_8h_ac32261eb1b448cf2a22abbc631367552}{TEN\+\_\+\+A\+\_\+\+RANGE}}~100
+\item 
+\#define \mbox{\hyperlink{daq_8h_af5e6d2f597a723472479ba1c997238b2}{EE\+\_\+\+CHECKMARK}}~0x1957
+\item 
+\#define \mbox{\hyperlink{daq_8h_a21dd3d7229ea82ee36d5f7f54b42842a}{TATE}}~0x42
+\item 
+\#define \mbox{\hyperlink{daq_8h_a304a3a40932882499c05c4bc3e44ef5f}{C\+\_\+\+SCALE}}~0.\+6250000f
+\item 
+\#define \mbox{\hyperlink{daq_8h_ab1c2ad328f608d82a2e997ad4d890105}{V\+\_\+\+SCALE}}~4.\+1254125f
+\item 
+\#define \mbox{\hyperlink{daq_8h_a2e5cdacd59d8273b1964492de804f4af}{V\+\_\+\+SCALE\+\_\+H}}~8.\+2000000f
+\item 
+\#define \mbox{\hyperlink{daq_8h_a282dd06f1502d674e5b2ef01214b7e8c}{A200}}~0
+\item 
+\#define \mbox{\hyperlink{daq_8h_a7994f5e5e21284de3ce0333acac5b013}{A100B}}~0
+\item 
+\#define \mbox{\hyperlink{daq_8h_a5e291ec8ba40c25d916e602fb54e4bfd}{A100}}~1
+\item 
+\#define \mbox{\hyperlink{daq_8h_a1281fdb9c65561f01d64cfa94d192818}{A100M}}~2
+\item 
+\#define \mbox{\hyperlink{daq_8h_afae9f9e7660e972922364d3306b49c84}{C\+\_\+\+A200}}~0.\+0361010f
+\item 
+\#define \mbox{\hyperlink{daq_8h_ae8477745f8a1fd317dbc1000533b17a8}{C\+\_\+\+A100B}}~0.\+0361010f
+\item 
+\#define \mbox{\hyperlink{daq_8h_a8da988b6de8eaf653669f0978af58abd}{C\+\_\+\+A100}}~0.\+0361010f
+\item 
+\#define \mbox{\hyperlink{daq_8h_a3eabdbb31ae8f6d799a66fa30940f7c8}{C\+\_\+\+A100M}}~0.\+0862000f
+\item 
+\#define \mbox{\hyperlink{daq_8h_ac1f2eefa963ec03d0b65a062697241ee}{C\+\_\+\+OFFSET200}}~3965
+\item 
+\#define \mbox{\hyperlink{daq_8h_a5c908708c25d3450f1953b8840def84c}{C\+\_\+\+OFFSET100B}}~3934
+\item 
+\#define \mbox{\hyperlink{daq_8h_aa45ed5554c8d0a22fc9f3c2361685e87}{C\+\_\+\+OFFSET100}}~3995
+\item 
+\#define \mbox{\hyperlink{daq_8h_a812a5fb07c245d44046bd8ff64264eb5}{C\+\_\+\+OFFSET100M}}~3939
+\item 
+\#define \mbox{\hyperlink{daq_8h_ab4d88729b3a67ad58e11553d5399b180}{C\+\_\+\+CAL\+\_\+\+ZERO}}~4000
+\item 
+\#define \mbox{\hyperlink{daq_8h_ac555c1f6aee578e49d5d14cd5f8913e3}{C\+\_\+\+CAL\+\_\+\+A200}}~4150
+\item 
+\#define \mbox{\hyperlink{daq_8h_aad81ea90602007676fff0ef362732c6d}{C\+\_\+\+CAL\+\_\+\+A100}}~4240
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{daq_8h_aa7911a912a1d84d38457a57e67003429}{adc\+\_\+conv\+\_\+t}} \{ \mbox{\hyperlink{daq_8h_aa7911a912a1d84d38457a57e67003429af1cef415c16b3895f65f1e908ed387a7}{CONV}}
+, \mbox{\hyperlink{daq_8h_aa7911a912a1d84d38457a57e67003429a6443a78f32924caf0a0996bb1ea11d74}{O\+\_\+\+CONV}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{daq_8h_aa517c9de5ac8b3fd0c6f1189a4c057ef}{start\+\_\+adc\+\_\+scan}} (void)
+\item 
+bool \mbox{\hyperlink{daq_8h_aead042bb0a119fe221fe762c9b3eac0a}{check\+\_\+adc\+\_\+scan}} (void)
+\item 
+void \mbox{\hyperlink{daq_8h_afdf1b6931195311bdb9a9f2fa5547ecd}{clear\+\_\+adc\+\_\+scan}} (void)
+\item 
+bool \mbox{\hyperlink{daq_8h_ad8ff640c120fc1c4983998a7d0dc94d5}{update\+\_\+adc\+\_\+result}} (void)
+\item 
+\mbox{\hyperlink{adcc_8h_ac5362ae65441a5027b4b9b1bf1b573aa}{adc\+\_\+result\+\_\+t}} \mbox{\hyperlink{daq_8h_a4b0e6439fd080b3063507321f30a6124}{get\+\_\+raw\+\_\+result}} (const \mbox{\hyperlink{adcc_8h_a7f93aa9fe7208ac750f64a5eb5c0b0d6}{adcc\+\_\+channel\+\_\+t}})
+\item 
+float \mbox{\hyperlink{daq_8h_aa2470be7062dd8c9fc88f1c48a0b1c68}{conv\+\_\+raw\+\_\+result}} (const \mbox{\hyperlink{adcc_8h_a7f93aa9fe7208ac750f64a5eb5c0b0d6}{adcc\+\_\+channel\+\_\+t}}, const \mbox{\hyperlink{daq_8h_aa7911a912a1d84d38457a57e67003429}{adc\+\_\+conv\+\_\+t}})
+\item 
+void \mbox{\hyperlink{daq_8h_aa434cdb0d8fe4c59b65baec01994ada9}{dac\+\_\+spi\+\_\+control}} (bool)
+\item 
+void \mbox{\hyperlink{daq_8h_a1c7e7c355227cb33a53b16a2e27c8c0a}{set\+\_\+dac}} (void)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{daq_8h_a19a9e6a1fe84375c4337f8652bd8c470}{set\+\_\+dac\+\_\+a}} (float)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{daq_8h_a3446cb64acbea6f4dcf609c1e2c973f0}{set\+\_\+dac\+\_\+b}} (float)
+\item 
+bool \mbox{\hyperlink{daq_8h_ac9a3345ce7c4f7d4de86049d35a8cd64}{cal\+\_\+current\+\_\+zero}} (bool, int16\+\_\+t, int16\+\_\+t, int16\+\_\+t)
+\item 
+bool \mbox{\hyperlink{daq_8h_acfb7338d198f5c875d96b7b738dc9f12}{cal\+\_\+current\+\_\+10A}} (bool, int16\+\_\+t, int16\+\_\+t, float, float)
+\item 
+bool \mbox{\hyperlink{daq_8h_a5d74cfa8a8f9daa1a5c132b07477ce22}{read\+\_\+cal\+\_\+data}} (void)
+\item 
+void \mbox{\hyperlink{daq_8h_a90939549868a1d6140642836447e4618}{write\+\_\+cal\+\_\+data}} (void)
+\item 
+void \mbox{\hyperlink{daq_8h_aee0656bcb26933b57d1866087081f181}{update\+\_\+cal\+\_\+data}} (void)
+\item 
+bool \mbox{\hyperlink{daq_8h_aa53cc6342eaad6543c98f0e451505f37}{update\+\_\+hist\+\_\+data}} (bool, volatile \mbox{\hyperlink{structhist__type}{hist\+\_\+type}} \texorpdfstring{$\ast$}{*})
+\item 
+void \mbox{\hyperlink{daq_8h_a20bf270762daefc6e4f03f489ff544c3}{set\+\_\+hist\+\_\+flag}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structV__data}{V\+\_\+data}} \mbox{\hyperlink{daq_8h_aa47b282cad3df72620b76a4ca8bd6694}{V}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{daq_8h_a5e291ec8ba40c25d916e602fb54e4bfd}\index{daq.h@{daq.h}!A100@{A100}}
+\index{A100@{A100}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{A100}{A100}}
+{\footnotesize\ttfamily \label{daq_8h_a5e291ec8ba40c25d916e602fb54e4bfd} 
+\#define A100~1}
+
+\Hypertarget{daq_8h_a7994f5e5e21284de3ce0333acac5b013}\index{daq.h@{daq.h}!A100B@{A100B}}
+\index{A100B@{A100B}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{A100B}{A100B}}
+{\footnotesize\ttfamily \label{daq_8h_a7994f5e5e21284de3ce0333acac5b013} 
+\#define A100B~0}
+
+\Hypertarget{daq_8h_a1281fdb9c65561f01d64cfa94d192818}\index{daq.h@{daq.h}!A100M@{A100M}}
+\index{A100M@{A100M}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{A100M}{A100M}}
+{\footnotesize\ttfamily \label{daq_8h_a1281fdb9c65561f01d64cfa94d192818} 
+\#define A100M~2}
+
+\Hypertarget{daq_8h_a282dd06f1502d674e5b2ef01214b7e8c}\index{daq.h@{daq.h}!A200@{A200}}
+\index{A200@{A200}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{A200}{A200}}
+{\footnotesize\ttfamily \label{daq_8h_a282dd06f1502d674e5b2ef01214b7e8c} 
+\#define A200~0}
+
+\Hypertarget{daq_8h_a602abb8ec84dcb3b6f854a738310ea46}\index{daq.h@{daq.h}!ADC\_BUFFER\_SIZE@{ADC\_BUFFER\_SIZE}}
+\index{ADC\_BUFFER\_SIZE@{ADC\_BUFFER\_SIZE}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_BUFFER\_SIZE}{ADC\_BUFFER\_SIZE}}
+{\footnotesize\ttfamily \label{daq_8h_a602abb8ec84dcb3b6f854a738310ea46} 
+\#define ADC\+\_\+\+BUFFER\+\_\+\+SIZE~16}
+
+\Hypertarget{daq_8h_a7a4b6341b9bd809cae74e93f91147283}\index{daq.h@{daq.h}!ADC\_C\_CHAN@{ADC\_C\_CHAN}}
+\index{ADC\_C\_CHAN@{ADC\_C\_CHAN}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_C\_CHAN}{ADC\_C\_CHAN}}
+{\footnotesize\ttfamily \label{daq_8h_a7a4b6341b9bd809cae74e93f91147283} 
+\#define ADC\+\_\+\+C\+\_\+\+CHAN~0b0000100000000011}
+
+\Hypertarget{daq_8h_aa0df38acb2d44dd384d79a1b318f61c5}\index{daq.h@{daq.h}!ADC\_C\_CHAN\_MPPT@{ADC\_C\_CHAN\_MPPT}}
+\index{ADC\_C\_CHAN\_MPPT@{ADC\_C\_CHAN\_MPPT}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_C\_CHAN\_MPPT}{ADC\_C\_CHAN\_MPPT}}
+{\footnotesize\ttfamily \label{daq_8h_aa0df38acb2d44dd384d79a1b318f61c5} 
+\#define ADC\+\_\+\+C\+\_\+\+CHAN\+\_\+\+MPPT~0b0000100000000000}
+
+\Hypertarget{daq_8h_a07afd34c55297f0ef83ce2d6061fba46}\index{daq.h@{daq.h}!ADC\_C\_CHAN\_TYPE@{ADC\_C\_CHAN\_TYPE}}
+\index{ADC\_C\_CHAN\_TYPE@{ADC\_C\_CHAN\_TYPE}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_C\_CHAN\_TYPE}{ADC\_C\_CHAN\_TYPE}}
+{\footnotesize\ttfamily \label{daq_8h_a07afd34c55297f0ef83ce2d6061fba46} 
+\#define ADC\+\_\+\+C\+\_\+\+CHAN\+\_\+\+TYPE~0b0000000000000001}
+
+\Hypertarget{daq_8h_af4a16c859ab34ef0e270f0ca1e6a3b66}\index{daq.h@{daq.h}!ADC\_SCAN\_CHAN@{ADC\_SCAN\_CHAN}}
+\index{ADC\_SCAN\_CHAN@{ADC\_SCAN\_CHAN}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_SCAN\_CHAN}{ADC\_SCAN\_CHAN}}
+{\footnotesize\ttfamily \label{daq_8h_af4a16c859ab34ef0e270f0ca1e6a3b66} 
+\#define ADC\+\_\+\+SCAN\+\_\+\+CHAN~0b0011110001110111}
+
+\Hypertarget{daq_8h_a0db25086c1438b6924ca97d8db1db19a}\index{daq.h@{daq.h}!ADC\_SCAN\_SPEED@{ADC\_SCAN\_SPEED}}
+\index{ADC\_SCAN\_SPEED@{ADC\_SCAN\_SPEED}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_SCAN\_SPEED}{ADC\_SCAN\_SPEED}}
+{\footnotesize\ttfamily \label{daq_8h_a0db25086c1438b6924ca97d8db1db19a} 
+\#define ADC\+\_\+\+SCAN\+\_\+\+SPEED~200}
+
+\Hypertarget{daq_8h_a73ae315e0d29f4fabf77b04304148c15}\index{daq.h@{daq.h}!ADC\_T\_CHAN@{ADC\_T\_CHAN}}
+\index{ADC\_T\_CHAN@{ADC\_T\_CHAN}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_T\_CHAN}{ADC\_T\_CHAN}}
+{\footnotesize\ttfamily \label{daq_8h_a73ae315e0d29f4fabf77b04304148c15} 
+\#define ADC\+\_\+\+T\+\_\+\+CHAN~0b0000000000000000}
+
+\Hypertarget{daq_8h_a30469172c3954096afebc1d6c0a007f8}\index{daq.h@{daq.h}!ADC\_T\_CHAN\_TYPE@{ADC\_T\_CHAN\_TYPE}}
+\index{ADC\_T\_CHAN\_TYPE@{ADC\_T\_CHAN\_TYPE}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_T\_CHAN\_TYPE}{ADC\_T\_CHAN\_TYPE}}
+{\footnotesize\ttfamily \label{daq_8h_a30469172c3954096afebc1d6c0a007f8} 
+\#define ADC\+\_\+\+T\+\_\+\+CHAN\+\_\+\+TYPE~0b0000000000000000}
+
+\Hypertarget{daq_8h_a9770057d6ce3938f2b04879f62bb9a97}\index{daq.h@{daq.h}!ADC\_V\_CHAN\_TYPE@{ADC\_V\_CHAN\_TYPE}}
+\index{ADC\_V\_CHAN\_TYPE@{ADC\_V\_CHAN\_TYPE}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_V\_CHAN\_TYPE}{ADC\_V\_CHAN\_TYPE}}
+{\footnotesize\ttfamily \label{daq_8h_a9770057d6ce3938f2b04879f62bb9a97} 
+\#define ADC\+\_\+\+V\+\_\+\+CHAN\+\_\+\+TYPE~0b0010000000100000}
+
+\Hypertarget{daq_8h_a8da988b6de8eaf653669f0978af58abd}\index{daq.h@{daq.h}!C\_A100@{C\_A100}}
+\index{C\_A100@{C\_A100}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{C\_A100}{C\_A100}}
+{\footnotesize\ttfamily \label{daq_8h_a8da988b6de8eaf653669f0978af58abd} 
+\#define C\+\_\+\+A100~0.\+0361010f}
+
+\Hypertarget{daq_8h_ae8477745f8a1fd317dbc1000533b17a8}\index{daq.h@{daq.h}!C\_A100B@{C\_A100B}}
+\index{C\_A100B@{C\_A100B}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{C\_A100B}{C\_A100B}}
+{\footnotesize\ttfamily \label{daq_8h_ae8477745f8a1fd317dbc1000533b17a8} 
+\#define C\+\_\+\+A100B~0.\+0361010f}
+
+\Hypertarget{daq_8h_a3eabdbb31ae8f6d799a66fa30940f7c8}\index{daq.h@{daq.h}!C\_A100M@{C\_A100M}}
+\index{C\_A100M@{C\_A100M}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{C\_A100M}{C\_A100M}}
+{\footnotesize\ttfamily \label{daq_8h_a3eabdbb31ae8f6d799a66fa30940f7c8} 
+\#define C\+\_\+\+A100M~0.\+0862000f}
+
+\Hypertarget{daq_8h_afae9f9e7660e972922364d3306b49c84}\index{daq.h@{daq.h}!C\_A200@{C\_A200}}
+\index{C\_A200@{C\_A200}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{C\_A200}{C\_A200}}
+{\footnotesize\ttfamily \label{daq_8h_afae9f9e7660e972922364d3306b49c84} 
+\#define C\+\_\+\+A200~0.\+0361010f}
+
+\Hypertarget{daq_8h_aad81ea90602007676fff0ef362732c6d}\index{daq.h@{daq.h}!C\_CAL\_A100@{C\_CAL\_A100}}
+\index{C\_CAL\_A100@{C\_CAL\_A100}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{C\_CAL\_A100}{C\_CAL\_A100}}
+{\footnotesize\ttfamily \label{daq_8h_aad81ea90602007676fff0ef362732c6d} 
+\#define C\+\_\+\+CAL\+\_\+\+A100~4240}
+
+\Hypertarget{daq_8h_ac555c1f6aee578e49d5d14cd5f8913e3}\index{daq.h@{daq.h}!C\_CAL\_A200@{C\_CAL\_A200}}
+\index{C\_CAL\_A200@{C\_CAL\_A200}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{C\_CAL\_A200}{C\_CAL\_A200}}
+{\footnotesize\ttfamily \label{daq_8h_ac555c1f6aee578e49d5d14cd5f8913e3} 
+\#define C\+\_\+\+CAL\+\_\+\+A200~4150}
+
+\Hypertarget{daq_8h_ab4d88729b3a67ad58e11553d5399b180}\index{daq.h@{daq.h}!C\_CAL\_ZERO@{C\_CAL\_ZERO}}
+\index{C\_CAL\_ZERO@{C\_CAL\_ZERO}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{C\_CAL\_ZERO}{C\_CAL\_ZERO}}
+{\footnotesize\ttfamily \label{daq_8h_ab4d88729b3a67ad58e11553d5399b180} 
+\#define C\+\_\+\+CAL\+\_\+\+ZERO~4000}
+
+\Hypertarget{daq_8h_aa45ed5554c8d0a22fc9f3c2361685e87}\index{daq.h@{daq.h}!C\_OFFSET100@{C\_OFFSET100}}
+\index{C\_OFFSET100@{C\_OFFSET100}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{C\_OFFSET100}{C\_OFFSET100}}
+{\footnotesize\ttfamily \label{daq_8h_aa45ed5554c8d0a22fc9f3c2361685e87} 
+\#define C\+\_\+\+OFFSET100~3995}
+
+\Hypertarget{daq_8h_a5c908708c25d3450f1953b8840def84c}\index{daq.h@{daq.h}!C\_OFFSET100B@{C\_OFFSET100B}}
+\index{C\_OFFSET100B@{C\_OFFSET100B}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{C\_OFFSET100B}{C\_OFFSET100B}}
+{\footnotesize\ttfamily \label{daq_8h_a5c908708c25d3450f1953b8840def84c} 
+\#define C\+\_\+\+OFFSET100B~3934}
+
+\Hypertarget{daq_8h_a812a5fb07c245d44046bd8ff64264eb5}\index{daq.h@{daq.h}!C\_OFFSET100M@{C\_OFFSET100M}}
+\index{C\_OFFSET100M@{C\_OFFSET100M}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{C\_OFFSET100M}{C\_OFFSET100M}}
+{\footnotesize\ttfamily \label{daq_8h_a812a5fb07c245d44046bd8ff64264eb5} 
+\#define C\+\_\+\+OFFSET100M~3939}
+
+\Hypertarget{daq_8h_ac1f2eefa963ec03d0b65a062697241ee}\index{daq.h@{daq.h}!C\_OFFSET200@{C\_OFFSET200}}
+\index{C\_OFFSET200@{C\_OFFSET200}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{C\_OFFSET200}{C\_OFFSET200}}
+{\footnotesize\ttfamily \label{daq_8h_ac1f2eefa963ec03d0b65a062697241ee} 
+\#define C\+\_\+\+OFFSET200~3965}
+
+\Hypertarget{daq_8h_a304a3a40932882499c05c4bc3e44ef5f}\index{daq.h@{daq.h}!C\_SCALE@{C\_SCALE}}
+\index{C\_SCALE@{C\_SCALE}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{C\_SCALE}{C\_SCALE}}
+{\footnotesize\ttfamily \label{daq_8h_a304a3a40932882499c05c4bc3e44ef5f} 
+\#define C\+\_\+\+SCALE~0.\+6250000f}
+
+\Hypertarget{daq_8h_adbc56624baf87c2ce71edcc12cc0e537}\index{daq.h@{daq.h}!DAC\_BUFFER\_SIZE@{DAC\_BUFFER\_SIZE}}
+\index{DAC\_BUFFER\_SIZE@{DAC\_BUFFER\_SIZE}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{DAC\_BUFFER\_SIZE}{DAC\_BUFFER\_SIZE}}
+{\footnotesize\ttfamily \label{daq_8h_adbc56624baf87c2ce71edcc12cc0e537} 
+\#define DAC\+\_\+\+BUFFER\+\_\+\+SIZE~2}
+
+\Hypertarget{daq_8h_a7444ab80927c7709c7618b124ddce678}\index{daq.h@{daq.h}!DAC\_LOAD\_A@{DAC\_LOAD\_A}}
+\index{DAC\_LOAD\_A@{DAC\_LOAD\_A}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{DAC\_LOAD\_A}{DAC\_LOAD\_A}}
+{\footnotesize\ttfamily \label{daq_8h_a7444ab80927c7709c7618b124ddce678} 
+\#define DAC\+\_\+\+LOAD\+\_\+A~0b0100}
+
+\Hypertarget{daq_8h_aec5361d50aec883503151a0c92ff3f4a}\index{daq.h@{daq.h}!DAC\_LOAD\_B@{DAC\_LOAD\_B}}
+\index{DAC\_LOAD\_B@{DAC\_LOAD\_B}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{DAC\_LOAD\_B}{DAC\_LOAD\_B}}
+{\footnotesize\ttfamily \label{daq_8h_aec5361d50aec883503151a0c92ff3f4a} 
+\#define DAC\+\_\+\+LOAD\+\_\+B~0b0101}
+
+\Hypertarget{daq_8h_a0e4e2eb202fefa0d4d810d9448a2534a}\index{daq.h@{daq.h}!DAC\_SCALE@{DAC\_SCALE}}
+\index{DAC\_SCALE@{DAC\_SCALE}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{DAC\_SCALE}{DAC\_SCALE}}
+{\footnotesize\ttfamily \label{daq_8h_a0e4e2eb202fefa0d4d810d9448a2534a} 
+\#define DAC\+\_\+\+SCALE~0.\+002442f}
+
+\Hypertarget{daq_8h_aa11af090b4e4f45ebce9796fe7c1480f}\index{daq.h@{daq.h}!DCHAN\_A@{DCHAN\_A}}
+\index{DCHAN\_A@{DCHAN\_A}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{DCHAN\_A}{DCHAN\_A}}
+{\footnotesize\ttfamily \label{daq_8h_aa11af090b4e4f45ebce9796fe7c1480f} 
+\#define DCHAN\+\_\+A~0}
+
+\Hypertarget{daq_8h_a38c40e0a521857c19e5d1cbbbc60e936}\index{daq.h@{daq.h}!DCHAN\_B@{DCHAN\_B}}
+\index{DCHAN\_B@{DCHAN\_B}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{DCHAN\_B}{DCHAN\_B}}
+{\footnotesize\ttfamily \label{daq_8h_a38c40e0a521857c19e5d1cbbbc60e936} 
+\#define DCHAN\+\_\+B~1}
+
+\Hypertarget{daq_8h_af5e6d2f597a723472479ba1c997238b2}\index{daq.h@{daq.h}!EE\_CHECKMARK@{EE\_CHECKMARK}}
+\index{EE\_CHECKMARK@{EE\_CHECKMARK}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{EE\_CHECKMARK}{EE\_CHECKMARK}}
+{\footnotesize\ttfamily \label{daq_8h_af5e6d2f597a723472479ba1c997238b2} 
+\#define EE\+\_\+\+CHECKMARK~0x1957}
+
+\Hypertarget{daq_8h_a3e4b899a860b2883ace989b8981023e7}\index{daq.h@{daq.h}!LAST\_ADC\_CHAN@{LAST\_ADC\_CHAN}}
+\index{LAST\_ADC\_CHAN@{LAST\_ADC\_CHAN}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{LAST\_ADC\_CHAN}{LAST\_ADC\_CHAN}}
+{\footnotesize\ttfamily \label{daq_8h_a3e4b899a860b2883ace989b8981023e7} 
+\#define LAST\+\_\+\+ADC\+\_\+\+CHAN~0\+XD}
+
+\Hypertarget{daq_8h_a9b376b15d9858a4ed16e39818a4066b2}\index{daq.h@{daq.h}!LAST\_DAC\_CHAN@{LAST\_DAC\_CHAN}}
+\index{LAST\_DAC\_CHAN@{LAST\_DAC\_CHAN}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{LAST\_DAC\_CHAN}{LAST\_DAC\_CHAN}}
+{\footnotesize\ttfamily \label{daq_8h_a9b376b15d9858a4ed16e39818a4066b2} 
+\#define LAST\+\_\+\+DAC\+\_\+\+CHAN~0\+X1}
+
+\Hypertarget{daq_8h_a228e8f9e398667947efe506a4dab5466}\index{daq.h@{daq.h}!NUM\_C\_SENSORS@{NUM\_C\_SENSORS}}
+\index{NUM\_C\_SENSORS@{NUM\_C\_SENSORS}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{NUM\_C\_SENSORS}{NUM\_C\_SENSORS}}
+{\footnotesize\ttfamily \label{daq_8h_a228e8f9e398667947efe506a4dab5466} 
+\#define NUM\+\_\+\+C\+\_\+\+SENSORS~3}
+
+\Hypertarget{daq_8h_ae296d6e55cc2a2efaff80d8186c7095c}\index{daq.h@{daq.h}!NUM\_T\_SENSORS@{NUM\_T\_SENSORS}}
+\index{NUM\_T\_SENSORS@{NUM\_T\_SENSORS}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{NUM\_T\_SENSORS}{NUM\_T\_SENSORS}}
+{\footnotesize\ttfamily \label{daq_8h_ae296d6e55cc2a2efaff80d8186c7095c} 
+\#define NUM\+\_\+\+T\+\_\+\+SENSORS~0}
+
+\Hypertarget{daq_8h_a21dd3d7229ea82ee36d5f7f54b42842a}\index{daq.h@{daq.h}!TATE@{TATE}}
+\index{TATE@{TATE}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{TATE}{TATE}}
+{\footnotesize\ttfamily \label{daq_8h_a21dd3d7229ea82ee36d5f7f54b42842a} 
+\#define TATE~0x42}
+
+\Hypertarget{daq_8h_ac32261eb1b448cf2a22abbc631367552}\index{daq.h@{daq.h}!TEN\_A\_RANGE@{TEN\_A\_RANGE}}
+\index{TEN\_A\_RANGE@{TEN\_A\_RANGE}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{TEN\_A\_RANGE}{TEN\_A\_RANGE}}
+{\footnotesize\ttfamily \label{daq_8h_ac32261eb1b448cf2a22abbc631367552} 
+\#define TEN\+\_\+\+A\+\_\+\+RANGE~100}
+
+\Hypertarget{daq_8h_ab1c2ad328f608d82a2e997ad4d890105}\index{daq.h@{daq.h}!V\_SCALE@{V\_SCALE}}
+\index{V\_SCALE@{V\_SCALE}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{V\_SCALE}{V\_SCALE}}
+{\footnotesize\ttfamily \label{daq_8h_ab1c2ad328f608d82a2e997ad4d890105} 
+\#define V\+\_\+\+SCALE~4.\+1254125f}
+
+\Hypertarget{daq_8h_a2e5cdacd59d8273b1964492de804f4af}\index{daq.h@{daq.h}!V\_SCALE\_H@{V\_SCALE\_H}}
+\index{V\_SCALE\_H@{V\_SCALE\_H}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{V\_SCALE\_H}{V\_SCALE\_H}}
+{\footnotesize\ttfamily \label{daq_8h_a2e5cdacd59d8273b1964492de804f4af} 
+\#define V\+\_\+\+SCALE\+\_\+H~8.\+2000000f}
+
+\Hypertarget{daq_8h_a7fb4ad2b8640f1ce2179f45a73115b7e}\index{daq.h@{daq.h}!ZERO\_RANGE@{ZERO\_RANGE}}
+\index{ZERO\_RANGE@{ZERO\_RANGE}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{ZERO\_RANGE}{ZERO\_RANGE}}
+{\footnotesize\ttfamily \label{daq_8h_a7fb4ad2b8640f1ce2179f45a73115b7e} 
+\#define ZERO\+\_\+\+RANGE~100}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{daq_8h_aa7911a912a1d84d38457a57e67003429}\index{daq.h@{daq.h}!adc\_conv\_t@{adc\_conv\_t}}
+\index{adc\_conv\_t@{adc\_conv\_t}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{adc\_conv\_t}{adc\_conv\_t}}
+{\footnotesize\ttfamily \label{daq_8h_aa7911a912a1d84d38457a57e67003429} 
+enum \mbox{\hyperlink{daq_8h_aa7911a912a1d84d38457a57e67003429}{adc\+\_\+conv\+\_\+t}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONV@{CONV}!daq.h@{daq.h}}\index{daq.h@{daq.h}!CONV@{CONV}}}\Hypertarget{daq_8h_aa7911a912a1d84d38457a57e67003429af1cef415c16b3895f65f1e908ed387a7}\label{daq_8h_aa7911a912a1d84d38457a57e67003429af1cef415c16b3895f65f1e908ed387a7} 
+CONV&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\_CONV@{O\_CONV}!daq.h@{daq.h}}\index{daq.h@{daq.h}!O\_CONV@{O\_CONV}}}\Hypertarget{daq_8h_aa7911a912a1d84d38457a57e67003429a6443a78f32924caf0a0996bb1ea11d74}\label{daq_8h_aa7911a912a1d84d38457a57e67003429a6443a78f32924caf0a0996bb1ea11d74} 
+O\+\_\+\+CONV&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{daq_8h_acfb7338d198f5c875d96b7b738dc9f12}\index{daq.h@{daq.h}!cal\_current\_10A@{cal\_current\_10A}}
+\index{cal\_current\_10A@{cal\_current\_10A}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{cal\_current\_10A()}{cal\_current\_10A()}}
+{\footnotesize\ttfamily \label{daq_8h_acfb7338d198f5c875d96b7b738dc9f12} 
+bool cal\+\_\+current\+\_\+10A (\begin{DoxyParamCaption}\item[{bool}]{mode}{, }\item[{int16\+\_\+t}]{cb}{, }\item[{int16\+\_\+t}]{cp}{, }\item[{float}]{scaleb}{, }\item[{float}]{scalep}{}\end{DoxyParamCaption})}
+
+\Hypertarget{daq_8h_ac9a3345ce7c4f7d4de86049d35a8cd64}\index{daq.h@{daq.h}!cal\_current\_zero@{cal\_current\_zero}}
+\index{cal\_current\_zero@{cal\_current\_zero}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{cal\_current\_zero()}{cal\_current\_zero()}}
+{\footnotesize\ttfamily \label{daq_8h_ac9a3345ce7c4f7d4de86049d35a8cd64} 
+bool cal\+\_\+current\+\_\+zero (\begin{DoxyParamCaption}\item[{bool}]{mode}{, }\item[{int16\+\_\+t}]{cb}{, }\item[{int16\+\_\+t}]{cp}{, }\item[{int16\+\_\+t}]{cm}{}\end{DoxyParamCaption})}
+
+\Hypertarget{daq_8h_aead042bb0a119fe221fe762c9b3eac0a}\index{daq.h@{daq.h}!check\_adc\_scan@{check\_adc\_scan}}
+\index{check\_adc\_scan@{check\_adc\_scan}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{check\_adc\_scan()}{check\_adc\_scan()}}
+{\footnotesize\ttfamily \label{daq_8h_aead042bb0a119fe221fe762c9b3eac0a} 
+bool check\+\_\+adc\+\_\+scan (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{daq_8h_aead042bb0a119fe221fe762c9b3eac0a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{daq_8h_afdf1b6931195311bdb9a9f2fa5547ecd}\index{daq.h@{daq.h}!clear\_adc\_scan@{clear\_adc\_scan}}
+\index{clear\_adc\_scan@{clear\_adc\_scan}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{clear\_adc\_scan()}{clear\_adc\_scan()}}
+{\footnotesize\ttfamily \label{daq_8h_afdf1b6931195311bdb9a9f2fa5547ecd} 
+void clear\+\_\+adc\+\_\+scan (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{daq_8h_afdf1b6931195311bdb9a9f2fa5547ecd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{daq_8h_aa2470be7062dd8c9fc88f1c48a0b1c68}\index{daq.h@{daq.h}!conv\_raw\_result@{conv\_raw\_result}}
+\index{conv\_raw\_result@{conv\_raw\_result}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{conv\_raw\_result()}{conv\_raw\_result()}}
+{\footnotesize\ttfamily \label{daq_8h_aa2470be7062dd8c9fc88f1c48a0b1c68} 
+float conv\+\_\+raw\+\_\+result (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{adcc_8h_a7f93aa9fe7208ac750f64a5eb5c0b0d6}{adcc\+\_\+channel\+\_\+t}}}]{chan}{, }\item[{const \mbox{\hyperlink{daq_8h_aa7911a912a1d84d38457a57e67003429}{adc\+\_\+conv\+\_\+t}}}]{to\+\_\+what}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{daq_8h_aa2470be7062dd8c9fc88f1c48a0b1c68_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{daq_8h_aa2470be7062dd8c9fc88f1c48a0b1c68_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{daq_8h_aa434cdb0d8fe4c59b65baec01994ada9}\index{daq.h@{daq.h}!dac\_spi\_control@{dac\_spi\_control}}
+\index{dac\_spi\_control@{dac\_spi\_control}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{dac\_spi\_control()}{dac\_spi\_control()}}
+{\footnotesize\ttfamily \label{daq_8h_aa434cdb0d8fe4c59b65baec01994ada9} 
+void dac\+\_\+spi\+\_\+control (\begin{DoxyParamCaption}\item[{bool}]{set}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{daq_8h_aa434cdb0d8fe4c59b65baec01994ada9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{daq_8h_a4b0e6439fd080b3063507321f30a6124}\index{daq.h@{daq.h}!get\_raw\_result@{get\_raw\_result}}
+\index{get\_raw\_result@{get\_raw\_result}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{get\_raw\_result()}{get\_raw\_result()}}
+{\footnotesize\ttfamily \label{daq_8h_a4b0e6439fd080b3063507321f30a6124} 
+\mbox{\hyperlink{adcc_8h_ac5362ae65441a5027b4b9b1bf1b573aa}{adc\+\_\+result\+\_\+t}} get\+\_\+raw\+\_\+result (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{adcc_8h_a7f93aa9fe7208ac750f64a5eb5c0b0d6}{adcc\+\_\+channel\+\_\+t}}}]{index}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{daq_8h_a4b0e6439fd080b3063507321f30a6124_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{daq_8h_a5d74cfa8a8f9daa1a5c132b07477ce22}\index{daq.h@{daq.h}!read\_cal\_data@{read\_cal\_data}}
+\index{read\_cal\_data@{read\_cal\_data}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{read\_cal\_data()}{read\_cal\_data()}}
+{\footnotesize\ttfamily \label{daq_8h_a5d74cfa8a8f9daa1a5c132b07477ce22} 
+bool read\+\_\+cal\+\_\+data (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{daq_8h_a5d74cfa8a8f9daa1a5c132b07477ce22_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{daq_8h_a5d74cfa8a8f9daa1a5c132b07477ce22_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{daq_8h_a1c7e7c355227cb33a53b16a2e27c8c0a}\index{daq.h@{daq.h}!set\_dac@{set\_dac}}
+\index{set\_dac@{set\_dac}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{set\_dac()}{set\_dac()}}
+{\footnotesize\ttfamily \label{daq_8h_a1c7e7c355227cb33a53b16a2e27c8c0a} 
+void set\+\_\+dac (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{daq_8h_a1c7e7c355227cb33a53b16a2e27c8c0a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{daq_8h_a1c7e7c355227cb33a53b16a2e27c8c0a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{daq_8h_a19a9e6a1fe84375c4337f8652bd8c470}\index{daq.h@{daq.h}!set\_dac\_a@{set\_dac\_a}}
+\index{set\_dac\_a@{set\_dac\_a}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{set\_dac\_a()}{set\_dac\_a()}}
+{\footnotesize\ttfamily \label{daq_8h_a19a9e6a1fe84375c4337f8652bd8c470} 
+uint16\+\_\+t set\+\_\+dac\+\_\+a (\begin{DoxyParamCaption}\item[{float}]{voltage}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{daq_8h_a19a9e6a1fe84375c4337f8652bd8c470_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{daq_8h_a3446cb64acbea6f4dcf609c1e2c973f0}\index{daq.h@{daq.h}!set\_dac\_b@{set\_dac\_b}}
+\index{set\_dac\_b@{set\_dac\_b}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{set\_dac\_b()}{set\_dac\_b()}}
+{\footnotesize\ttfamily \label{daq_8h_a3446cb64acbea6f4dcf609c1e2c973f0} 
+uint16\+\_\+t set\+\_\+dac\+\_\+b (\begin{DoxyParamCaption}\item[{float}]{voltage}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{daq_8h_a3446cb64acbea6f4dcf609c1e2c973f0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{daq_8h_a20bf270762daefc6e4f03f489ff544c3}\index{daq.h@{daq.h}!set\_hist\_flag@{set\_hist\_flag}}
+\index{set\_hist\_flag@{set\_hist\_flag}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{set\_hist\_flag()}{set\_hist\_flag()}}
+{\footnotesize\ttfamily \label{daq_8h_a20bf270762daefc6e4f03f489ff544c3} 
+void set\+\_\+hist\+\_\+flag (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{daq_8h_a20bf270762daefc6e4f03f489ff544c3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{daq_8h_aa517c9de5ac8b3fd0c6f1189a4c057ef}\index{daq.h@{daq.h}!start\_adc\_scan@{start\_adc\_scan}}
+\index{start\_adc\_scan@{start\_adc\_scan}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{start\_adc\_scan()}{start\_adc\_scan()}}
+{\footnotesize\ttfamily \label{daq_8h_aa517c9de5ac8b3fd0c6f1189a4c057ef} 
+bool start\+\_\+adc\+\_\+scan (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{daq_8h_aa517c9de5ac8b3fd0c6f1189a4c057ef_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{daq_8h_aa517c9de5ac8b3fd0c6f1189a4c057ef_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{daq_8h_ad8ff640c120fc1c4983998a7d0dc94d5}\index{daq.h@{daq.h}!update\_adc\_result@{update\_adc\_result}}
+\index{update\_adc\_result@{update\_adc\_result}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{update\_adc\_result()}{update\_adc\_result()}}
+{\footnotesize\ttfamily \label{daq_8h_ad8ff640c120fc1c4983998a7d0dc94d5} 
+bool update\+\_\+adc\+\_\+result (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{daq_8h_ad8ff640c120fc1c4983998a7d0dc94d5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{daq_8h_ad8ff640c120fc1c4983998a7d0dc94d5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{daq_8h_aee0656bcb26933b57d1866087081f181}\index{daq.h@{daq.h}!update\_cal\_data@{update\_cal\_data}}
+\index{update\_cal\_data@{update\_cal\_data}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{update\_cal\_data()}{update\_cal\_data()}}
+{\footnotesize\ttfamily \label{daq_8h_aee0656bcb26933b57d1866087081f181} 
+void update\+\_\+cal\+\_\+data (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{daq_8h_aee0656bcb26933b57d1866087081f181_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{daq_8h_aa53cc6342eaad6543c98f0e451505f37}\index{daq.h@{daq.h}!update\_hist\_data@{update\_hist\_data}}
+\index{update\_hist\_data@{update\_hist\_data}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{update\_hist\_data()}{update\_hist\_data()}}
+{\footnotesize\ttfamily \label{daq_8h_aa53cc6342eaad6543c98f0e451505f37} 
+bool update\+\_\+hist\+\_\+data (\begin{DoxyParamCaption}\item[{bool}]{mode}{, }\item[{volatile \mbox{\hyperlink{structhist__type}{hist\+\_\+type}} \texorpdfstring{$\ast$}{*}}]{hist}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{daq_8h_aa53cc6342eaad6543c98f0e451505f37_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{daq_8h_a90939549868a1d6140642836447e4618}\index{daq.h@{daq.h}!write\_cal\_data@{write\_cal\_data}}
+\index{write\_cal\_data@{write\_cal\_data}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{write\_cal\_data()}{write\_cal\_data()}}
+{\footnotesize\ttfamily \label{daq_8h_a90939549868a1d6140642836447e4618} 
+void write\+\_\+cal\+\_\+data (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{daq_8h_a90939549868a1d6140642836447e4618_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{daq_8h_a90939549868a1d6140642836447e4618_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{daq_8h_aa47b282cad3df72620b76a4ca8bd6694}\index{daq.h@{daq.h}!V@{V}}
+\index{V@{V}!daq.h@{daq.h}}
+\doxysubsubsection{\texorpdfstring{V}{V}}
+{\footnotesize\ttfamily \label{daq_8h_aa47b282cad3df72620b76a4ca8bd6694} 
+struct \mbox{\hyperlink{structV__data}{V\+\_\+data}} V\hspace{0.3cm}{\ttfamily [extern]}}
+

@@ -1,0 +1,125 @@
+\doxysection{bsoc.\+h}
+\hypertarget{bsoc_8h_source}{}\label{bsoc_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ Microchip\ Technology\ Inc.\ and\ its\ subsidiaries.\ \ You\ may\ use\ this\ software\ }}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ and\ any\ derivatives\ exclusively\ with\ Microchip\ products.\ }}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ THIS\ SOFTWARE\ IS\ SUPPLIED\ BY\ MICROCHIP\ "{}AS\ IS"{}.\ \ NO\ WARRANTIES,\ WHETHER\ }}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ EXPRESS,\ IMPLIED\ OR\ STATUTORY,\ APPLY\ TO\ THIS\ SOFTWARE,\ INCLUDING\ ANY\ IMPLIED\ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ WARRANTIES\ OF\ NON-\/INFRINGEMENT,\ MERCHANTABILITY,\ AND\ FITNESS\ FOR\ A\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ PARTICULAR\ PURPOSE,\ OR\ ITS\ INTERACTION\ WITH\ MICROCHIP\ PRODUCTS,\ COMBINATION\ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ WITH\ ANY\ OTHER\ PRODUCTS,\ OR\ USE\ IN\ ANY\ APPLICATION.\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ IN\ NO\ EVENT\ WILL\ MICROCHIP\ BE\ LIABLE\ FOR\ ANY\ INDIRECT,\ SPECIAL,\ PUNITIVE,\ }}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ INCIDENTAL\ OR\ CONSEQUENTIAL\ LOSS,\ DAMAGE,\ COST\ OR\ EXPENSE\ OF\ ANY\ KIND\ }}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ WHATSOEVER\ RELATED\ TO\ THE\ SOFTWARE,\ HOWEVER\ CAUSED,\ EVEN\ IF\ MICROCHIP\ HAS\ }}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ BEEN\ ADVISED\ OF\ THE\ POSSIBILITY\ OR\ THE\ DAMAGES\ ARE\ FORESEEABLE.\ \ TO\ THE\ }}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ FULLEST\ EXTENT\ ALLOWED\ BY\ LAW,\ MICROCHIP'S\ TOTAL\ LIABILITY\ ON\ ALL\ CLAIMS\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ IN\ ANY\ WAY\ RELATED\ TO\ THIS\ SOFTWARE\ WILL\ NOT\ EXCEED\ THE\ AMOUNT\ OF\ FEES,\ IF\ }}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ ANY,\ THAT\ YOU\ HAVE\ PAID\ DIRECTLY\ TO\ MICROCHIP\ FOR\ THIS\ SOFTWARE.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ MICROCHIP\ PROVIDES\ THIS\ SOFTWARE\ CONDITIONALLY\ UPON\ YOUR\ ACCEPTANCE\ OF\ THESE\ }}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ TERMS.\ }}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ File:\ \ \ }}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ Author:\ }}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ *\ Comments:}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ *\ Revision\ history:\ }}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ This\ is\ a\ guard\ condition\ so\ that\ contents\ of\ this\ file\ are\ not\ included}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ more\ than\ once.\ \ }}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#ifndef\ BSOC\_H}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ BSOC\_H}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <xc.h>}\ \textcolor{comment}{//\ include\ processor\ files\ -\/\ each\ processor\ file\ is\ guarded.\ \ }}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#include\ "{}mcc\_generated\_files/tmr3.h"{}}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ "{}vconfig.h"{}}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ "{}mbmc.h"{}}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ "{}eadog.h"{}}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#include\ "{}timers.h"{}}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#include\ "{}hid.h"{}}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#include\ "{}mconfig.h"{}}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ FM80\_FIXUPS\ }\textcolor{comment}{//\ correct\ current\ variables}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ MAXRUNTIME\ \ 95.0f}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ MINRUNTIME\ \ 0.05f}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ Perk\_ADJ\_FL\ 1.10f\ \ \ }\textcolor{comment}{//\ If\ the\ peukert\_adj\ is\ below\ this,\ adjust\ the\ Ah\ out\ by\ this\ Ah\ adjustment\ factor}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ Perk\_ADJ\_FH\ 5.00f\ \ \ }\textcolor{comment}{//\ If\ the\ peukert\_adj\ is\ above\ this,\ adjust\ the\ Ah\ out\ by\ this\ Ah\ adjustment\ factor}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ Temp\_ADJ\_FL\ 1.20f\ \ \ }\textcolor{comment}{//\ Adjust\ the\ battery\ cap\ up\ or\ down\ 1C\ by\ this\ percentage\ from\ Temp\_ZERO}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ Temp\_ZERO\ \ \ 267l\ \ \ \ }\textcolor{comment}{//\ Temperature\ for\ base\ battery\ rate\ capacity\ in\ tenths\ of\ C}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ CEF\_HSOC\ \ \ \ 0.45f\ \ \ \ }\textcolor{comment}{//\ Charge\ Efficiency\ Factor,\ high\ SOC}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ CEF\_MSOC\ \ \ \ 0.70f\ \ \ \ }\textcolor{comment}{//\ middle}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ CEF\_LSOC\ \ \ \ 0.90f\ \ \ \ }\textcolor{comment}{//\ Charge\ Efficiency\ Factor,\ low\ SOC}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ CEF\_OVER\ \ \ \ 0.99f\ \ \ \ }\textcolor{comment}{//\ CEF\ overflow\ in\ calc}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ CEF\_MAX\ \ \ \ \ 0.95f\ \ \ }\textcolor{comment}{//\ Invalid\ charge\ factor\ above\ this,\ should\ be\ about\ the\ same\ as\ CEF\_LOSC}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ CEF\_MIN\ \ \ \ \ 0.40f\ \ \ }\textcolor{comment}{//\ Invalid\ charge\ factor\ below\ this}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ CEF\_RESET\ \ \ 0.80f\ \ \ \ }\textcolor{comment}{//\ reset\ AH\ values\ below\ this\ point.}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ CEF\_DERATE\ \ 1.20f\ \ \ }\textcolor{comment}{//\ Ahi\ derate\ factor\ to\ start\ dynamic\ CEF\ corrections}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ SOC\_DERATE\ \ 70\ \ \ \ \ \ }\textcolor{comment}{//\ derate\ CEF\ above\ this}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ SOC\_CEF\ \ \ \ \ 100\ }\textcolor{comment}{//\ Max\ state\ of\ charge\ to\ update\ dynamic\ charge\ efficiency\ factors}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ HI\_ESR\ \ \ \ \ \ 1500\ \ \ \ }\textcolor{comment}{//\ highest\ possible\ esr}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ BVSOC\_SLOTS\ \ \ \ \ 26\ \ \ \ \ \ }\textcolor{comment}{//\ Battery\ to\ SOC\ data\ table\ slots}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ FLOAT\_TIME\ \ 60\ \ }\textcolor{comment}{//\ cc\ in\ float\ mode\ delay\ time\ before\ flag\ set}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00071\ \textcolor{comment}{\ *\ PV\ side\ diversion}}
+\DoxyCodeLine{00072\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ DPWM\_FULL\ \ \ 300}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ DPWM\_LOW\_VOLTS\ \ 40.0f}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ PV\_MAX\_POWER\ \ \ \ 300.0f}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ PWM\_MAX\_POWER\ \ \ 250.0f}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ PWM\_WIN\_POWER\ \ \ 10.0f}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ GTI\_MAX\ \ \ \ \ 600\ }\textcolor{comment}{//\ 600}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ GTI\_IDLE\ \ \ \ 50}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ GTI\_INCR\ \ \ \ 100}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ GTI\_NORM\ \ \ \ 450\ }\textcolor{comment}{//\ 450}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00085\ \ \ \ \ R\_CYCLE\ =\ 0,}
+\DoxyCodeLine{00086\ \ \ \ \ R\_TOTAL,}
+\DoxyCodeLine{00087\ \ \ \ \ R\_PV,}
+\DoxyCodeLine{00088\ \ \ \ \ R\_BAT,}
+\DoxyCodeLine{00089\ \}\ R\_CODES;}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ M\_DEACT\ =\ 0,}
+\DoxyCodeLine{00093\ \ \ \ \ M\_ACT\ =\ 1,}
+\DoxyCodeLine{00094\ \ \ \ \ M\_MPPT\ =\ 2,}
+\DoxyCodeLine{00095\ \ \ \ \ M\_EQUAL\ =\ 3,}
+\DoxyCodeLine{00096\ \ \ \ \ M\_BOOST\ =\ 4,}
+\DoxyCodeLine{00097\ \ \ \ \ M\_FLOAT\ =\ 5,}
+\DoxyCodeLine{00098\ \ \ \ \ M\_LIMIT\ =\ 6,}
+\DoxyCodeLine{00099\ \ \ \ \ M\_OFFLINE\ =\ 255,}
+\DoxyCodeLine{00100\ \}\ M\_CODES;}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{keyword}{extern}\ \textcolor{keyword}{volatile}\ \mbox{\hyperlink{structC__data}{C\_data}}\ C;}
+\DoxyCodeLine{00103\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{structV__data}{V\_data}}\ V;}
+\DoxyCodeLine{00104\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{structH__data}{H\_data}}\ H;}
+\DoxyCodeLine{00105\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *build\_date,\ *build\_time;}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{keywordtype}{void}\ calc\_bsoc(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00108\ \textcolor{keywordtype}{void}\ init\_bsoc(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00109\ \textcolor{keywordtype}{void}\ start\_bsoc(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00110\ \textcolor{keywordtype}{void}\ stop\_bsoc(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00111\ \textcolor{keywordtype}{void}\ reset\_bsoc(R\_CODES);}
+\DoxyCodeLine{00112\ uint16\_t\ Volts\_to\_SOC(uint32\_t);}
+\DoxyCodeLine{00113\ uint32\_t\ peukert(uint16\_t,\ \textcolor{keywordtype}{float},\ \textcolor{keywordtype}{float},\ int16\_t);}
+\DoxyCodeLine{00114\ \textcolor{keywordtype}{float}\ esr\_check(uint8\_t);}
+\DoxyCodeLine{00115\ uint8\_t\ cc\_state(\textcolor{keywordtype}{float});}
+\DoxyCodeLine{00116\ \textcolor{keywordtype}{bool}\ pv\_diversion(\textcolor{keywordtype}{bool});}
+\DoxyCodeLine{00117\ \textcolor{keywordtype}{void}\ gti\_cmds(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ BSOC\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00120\ }
+
+\end{DoxyCode}
