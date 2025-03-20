@@ -1,7 +1,7 @@
 #include "dio.h"
 #include "mcc_generated_files/ext_int.h"
 
-typedef struct S_data { // switch control data structure 
+typedef struct S_data { // switch control data structure
 	volatile rbutton_type button[MAX_BUTTONS];
 	volatile uint8_t sw_bitmap;
 } S_data;
@@ -10,6 +10,7 @@ static S_data S;
 extern V_data V;
 
 static void switch_handler(void);
+static void switch_handler0(void);
 
 /*
  * return the current actual state of x switch
@@ -55,6 +56,16 @@ uint8_t check_switches(void)
 	return S.sw_bitmap;
 }
 
+bool check_mode_switch(void)
+{
+	if (S.button[INT0_BUTTON].sw == SW_ON) {
+		S.button[INT0_BUTTON].sw = SW_OFF; // clear button pressed state
+		return true;
+	} else {
+		return false;
+	}
+}
+
 /*
  * clear X switch pressed and time pressed data
  */
@@ -65,6 +76,14 @@ void clear_switch(const uint8_t i)
 
 	S.button[i].count = 0;
 	S.sw_bitmap &= ~(1 << i); //clear switch pressed bit
+}
+
+void switch_handler0(void)
+{
+	V.blight = V.ticks + BL_TIME;
+	V.blight_off = false;
+	S.button[INT0_BUTTON].sw = SW_ON;
+	diversion_pwm_full();
 }
 
 void switch_handler(void)
@@ -139,8 +158,15 @@ void switch_handler(void)
 
 void start_switch_handler(void)
 {
+	EXT_INT1_InterruptFlagClear();
 	EXT_INT1_InterruptDisable();
 	INT1_SetInterruptHandler(switch_handler);
 	S.button[SNULL].sw = SW_INVALID; // set a error condition for invalid button number
 	EXT_INT1_InterruptEnable();
+
+	EXT_INT0_InterruptFlagClear();
+	EXT_INT0_fallingEdgeSet();
+	// Set Default Interrupt Handler
+	INT0_SetInterruptHandler(switch_handler0);
+	EXT_INT0_InterruptEnable();
 }

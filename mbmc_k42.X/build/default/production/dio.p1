@@ -1,16 +1,35 @@
 Version 4.0 HI-TECH Software Intermediate Code
+[v F17424 `(v ~T0 @X0 0 tf ]
+[v F17426 `(v ~T0 @X0 0 tf ]
+[v F17470 `(v ~T0 @X0 0 tf ]
+[v F17472 `(v ~T0 @X0 0 tf ]
 "9 dio.c
 [c E17003 0 1 2 .. ]
 [n E17003 . SW_OFF SW_ON SW_INVALID  ]
-"40 ./dio.h
-[s S2290 `E17003 1 `ul 1 ]
-[n S2290 rbutton_type sw count ]
+"41 ./dio.h
+[s S2294 `E17003 1 `ul 1 ]
+[n S2294 rbutton_type sw count ]
 "4 dio.c
-[s S2291 `VS2290 -> 8 `i `Vuc 1 ]
-[n S2291 S_data button sw_bitmap ]
-"45
+[s S2295 `VS2294 -> 10 `i `Vuc 1 ]
+[n S2295 S_data button sw_bitmap ]
+"46
 [c E17008 0 1 2 3 4 5 6 7 .. ]
 [n E17008 . S0 S1 SSELECT SENTER SCALIB S5 S6 SNULL  ]
+"83
+[c E16995 0 1 2 3 4 5 .. ]
+[n E16995 . UI_STATE_INIT UI_STATE_HOST UI_STATE_DEBUG UI_STATE_LOG UI_STATE_MON UI_STATE_ERROR  ]
+[c E16976 0 1 2 3 .. ]
+[n E16976 . DIS_STR DIS_HELP DIS_ERR DIS_CLEAR  ]
+"202 ./vconfig.h
+[s S2286 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 :1 `uc 1 `E16976 1 `E16976 1 `us 1 `us 1 ]
+[n S2286 terminal_type mesgid TID mcode mparm cmdlen log_seq host_display_ack info help_temp ceid log_num ]
+"237
+[s S2287 `E16995 1 `uc -> 64 `i `uc -> 64 `i `uc -> 16 `i `Vul 1 `Vul 1 `Vul 1 `Vc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `E16995 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :2 `uc 1 :1 `uc 1 `S2286 1 `Vuc 1 `Vuc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `Va 1 `Va 1 `Va 1 `Va 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 ]
+[n S2287 V_data ui_state buf info rbuf ticks blight ac_time testing sys_info ac_on ac_off time_info get_time_text error abort msg_error msg_ret alarm float_ticks boost_ticks wdt_ticks ui_sw r_checksum t_checksum checksum_error mode_pwm sequences all_errors set_sequ debug help stack help_id screen response ticker cc_state flipper calib enter sensor_set fixup cc_active system_stable blight_off in_float in_boost lowint_count timerint_count tx_count rx_count adc_count spi_count switch_count ]
+"10 dio.c
+[v _V `S2287 ~T0 @X0 0 e ]
+"41 ./mconfig.h
+[v _diversion_pwm_full `(v ~T0 @X0 0 ef ]
 "47192 /ldrv/microchip/mplabx/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8/pic/include/proc/pic18f57k42.h
 [s S2144 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S2144 . LATF0 LATF1 LATF2 LATF3 LATF4 LATF5 LATF6 LATF7 ]
@@ -22,19 +41,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S2143 . . . ]
 "47213
 [v _LATFbits `VS2143 ~T0 @X0 0 e@16319 ]
-"78 dio.c
-[c E16995 0 1 2 3 4 5 .. ]
-[n E16995 . UI_STATE_INIT UI_STATE_HOST UI_STATE_DEBUG UI_STATE_LOG UI_STATE_MON UI_STATE_ERROR  ]
-[c E16976 0 1 2 3 .. ]
-[n E16976 . DIS_STR DIS_HELP DIS_ERR DIS_CLEAR  ]
-"201 ./vconfig.h
-[s S2286 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 :1 `uc 1 `E16976 1 `E16976 1 `us 1 `us 1 ]
-[n S2286 terminal_type mesgid TID mcode mparm cmdlen log_seq host_display_ack info help_temp ceid log_num ]
-"236
-[s S2287 `E16995 1 `uc -> 64 `i `uc -> 64 `i `uc -> 16 `i `Vul 1 `Vul 1 `Vul 1 `Vc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `E16995 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :2 `uc 1 :1 `uc 1 `S2286 1 `Vuc 1 `Vuc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `Va 1 `Va 1 `Va 1 `Va 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 ]
-[n S2287 V_data ui_state buf info rbuf ticks blight ac_time testing sys_info ac_on ac_off time_info get_time_text error abort msg_error msg_ret alarm float_ticks boost_ticks wdt_ticks ui_sw r_checksum t_checksum checksum_error mode_pwm sequences all_errors set_sequ debug help stack help_id screen response ticker cc_state flipper calib enter sensor_set fixup cc_active system_stable blight_off in_float in_boost lowint_count timerint_count tx_count rx_count adc_count spi_count switch_count ]
-"10 dio.c
-[v _V `S2287 ~T0 @X0 0 e ]
 "8 /opt/microchip/xc8/v3.00/pic/include/builtins.h
 [v ___nop `(v ~T0 @X0 0 ef ]
 [p i ___nop ]
@@ -54,6 +60,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S2164 . . ]
 "47843
 [v _PORTDbits `VS2164 ~T0 @X0 0 e@16333 ]
+"4206
+[s S182 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S182 . INT1IF C2IF DMA2SCNTIF DMA2DCNTIF DMA2ORIF DMA2AIF I2C2RXIF I2C2TXIF ]
+"4205
+[u S181 `S182 1 ]
+[n S181 . . ]
+"4217
+[v _PIR5bits `VS181 ~T0 @X0 0 e@14757 ]
 "3641
 [s S160 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S160 . INT1IE C2IE DMA2SCNTIE DMA2DCNTIE DMA2ORIE DMA2AIE I2C2RXIE I2C2TXIE ]
@@ -65,6 +79,36 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F16438 `(v ~T0 @X0 0 tf ]
 "552 ./mcc_generated_files/ext_int.h
 [v _INT1_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F16438 ]
+"3963 /ldrv/microchip/mplabx/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8/pic/include/proc/pic18f57k42.h
+[s S174 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S174 . INT0IF ZCDIF ADIF ADTIF C1IF SMT1IF SMT1PRAIF SMT1PWAIF ]
+"3962
+[u S173 `S174 1 ]
+[n S173 . . ]
+"3974
+[v _PIR1bits `VS173 ~T0 @X0 0 e@14753 ]
+"47994
+[s S2171 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2171 . INT0EDG INT1EDG INT2EDG . IPEN GIEL GIE ]
+"48003
+[s S2172 :7 `uc 1 :1 `uc 1 ]
+[n S2172 . . GIEH ]
+"47993
+[u S2170 `S2171 1 `S2172 1 ]
+[n S2170 . . . ]
+"48008
+[v _INTCON0bits `VS2170 ~T0 @X0 0 e@16338 ]
+[v F16430 `(v ~T0 @X0 0 tf ]
+"457 ./mcc_generated_files/ext_int.h
+[v _INT0_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F16430 ]
+"3398 /ldrv/microchip/mplabx/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8/pic/include/proc/pic18f57k42.h
+[s S152 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S152 . INT0IE ZCDIE ADIE ADTIE C1IE SMT1IE SMT1PRAIE SMT1PWAIE ]
+"3397
+[u S151 `S152 1 ]
+[n S151 . . ]
+"3409
+[v _PIE1bits `VS151 ~T0 @X0 0 e@14737 ]
 "250 /ldrv/microchip/mplabx/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "339
@@ -1581,249 +1625,316 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSH equ 03FFEh ;# ">
 "49428
 [; <" TOSU equ 03FFFh ;# ">
+"55 ./mcc_generated_files/dma1.h
+[v _lcd_dma_buf `uc ~T0 @X0 -> 32 `i e ]
+"55 ./mcc_generated_files/dma2.h
+[v _uart1_dma_buf `uc ~T0 @X0 -> 32 `i e ]
+"517 ./mcc_generated_files/uart2.h
+[v _UART2_RxInterruptHandler `*F17424 ~T0 @X0 1 e ]
+"535
+[v _UART2_TxInterruptHandler `*F17426 ~T0 @X0 1 e ]
+"517 ./mcc_generated_files/uart1.h
+[v _UART1_RxInterruptHandler `*F17470 ~T0 @X0 1 e ]
+"535
+[v _UART1_TxInterruptHandler `*F17472 ~T0 @X0 1 e ]
 "9 dio.c
-[v _S `S2291 ~T0 @X0 1 s ]
-"18
-[v _get_switch `(E17003 ~T0 @X0 1 ef1`Cuc ]
+[v _S `S2295 ~T0 @X0 1 s ]
 "19
+[v _get_switch `(E17003 ~T0 @X0 1 ef1`Cuc ]
+"20
 {
 [e :U _get_switch ]
-"18
-[v _i `Cuc ~T0 @X0 1 r1 ]
 "19
-[f ]
+[v _i `Cuc ~T0 @X0 1 r1 ]
 "20
-[e $ ! >= -> _i `i -> 6 `i 2293  ]
+[f ]
 "21
-[e ) . `E17003 0 ]
-[e $UE 2292  ]
-[e :U 2293 ]
-"23
-[e ) . *U + &U . _S 0 * -> _i `ux -> -> # *U &U . _S 0 `ui `ux 0 ]
-[e $UE 2292  ]
-"24
-[e :UE 2292 ]
-}
-"30
-[v _get_switch_bm `(E17003 ~T0 @X0 1 ef1`Cuc ]
-"31
-{
-[e :U _get_switch_bm ]
-"30
-[v _i `Cuc ~T0 @X0 1 r1 ]
-"31
-[f ]
-"32
-[e $ ! >= -> _i `i -> 6 `i 2295  ]
-"33
-[e ) . `E17003 0 ]
-[e $UE 2294  ]
-[e :U 2295 ]
-"35
-[e ) -> & >> -> . _S 1 `i -> _i `i -> 1 `i `E17003 ]
-[e $UE 2294  ]
-"36
-[e :UE 2294 ]
-}
-"42
-[v _get_switch_data `(S2290 ~T0 @X0 1 ef1`uc ]
-"43
-{
-[e :U _get_switch_data ]
-"42
-[v _i `Cuc ~T0 @X0 1 r1 ]
-"43
-[f ]
-"44
 [e $ ! >= -> _i `i -> 6 `i 2297  ]
-"45
-[e ) *U + &U . _S 0 * -> . `E17008 7 `ux -> -> # *U &U . _S 0 `ui `ux ]
+"22
+[e ) . `E17003 0 ]
 [e $UE 2296  ]
 [e :U 2297 ]
-"47
-[e ) *U + &U . _S 0 * -> _i `ux -> -> # *U &U . _S 0 `ui `ux ]
+"24
+[e ) . *U + &U . _S 0 * -> _i `ux -> -> # *U &U . _S 0 `ui `ux 0 ]
 [e $UE 2296  ]
-"48
+"25
 [e :UE 2296 ]
 }
-"53
-[v _check_switches `(uc ~T0 @X0 1 ef ]
+"31
+[v _get_switch_bm `(E17003 ~T0 @X0 1 ef1`Cuc ]
+"32
+{
+[e :U _get_switch_bm ]
+"31
+[v _i `Cuc ~T0 @X0 1 r1 ]
+"32
+[f ]
+"33
+[e $ ! >= -> _i `i -> 6 `i 2299  ]
+"34
+[e ) . `E17003 0 ]
+[e $UE 2298  ]
+[e :U 2299 ]
+"36
+[e ) -> & >> -> . _S 1 `i -> _i `i -> 1 `i `E17003 ]
+[e $UE 2298  ]
+"37
+[e :UE 2298 ]
+}
+"43
+[v _get_switch_data `(S2294 ~T0 @X0 1 ef1`uc ]
+"44
+{
+[e :U _get_switch_data ]
+"43
+[v _i `Cuc ~T0 @X0 1 r1 ]
+"44
+[f ]
+"45
+[e $ ! >= -> _i `i -> 6 `i 2301  ]
+"46
+[e ) *U + &U . _S 0 * -> . `E17008 7 `ux -> -> # *U &U . _S 0 `ui `ux ]
+[e $UE 2300  ]
+[e :U 2301 ]
+"48
+[e ) *U + &U . _S 0 * -> _i `ux -> -> # *U &U . _S 0 `ui `ux ]
+[e $UE 2300  ]
+"49
+[e :UE 2300 ]
+}
 "54
+[v _check_switches `(uc ~T0 @X0 1 ef ]
+"55
 {
 [e :U _check_switches ]
 [f ]
-"55
-[e ) . _S 1 ]
-[e $UE 2298  ]
 "56
-[e :UE 2298 ]
+[e ) . _S 1 ]
+[e $UE 2302  ]
+"57
+[e :UE 2302 ]
 }
+"59
+[v _check_mode_switch `(a ~T0 @X0 1 ef ]
+"60
+{
+[e :U _check_mode_switch ]
+[f ]
 "61
-[v _clear_switch `(v ~T0 @X0 1 ef1`uc ]
+[e $ ! == -> . *U + &U . _S 0 * -> -> -> 9 `i `ui `ux -> -> # *U &U . _S 0 `ui `ux 0 `ui -> . `E17003 1 `ui 2304  ]
+{
 "62
+[e = . *U + &U . _S 0 * -> -> -> 9 `i `ui `ux -> -> # *U &U . _S 0 `ui `ux 0 . `E17003 0 ]
+"63
+[e ) -> -> 1 `i `a ]
+[e $UE 2303  ]
+"64
+}
+[e $U 2305  ]
+[e :U 2304 ]
+{
+"65
+[e ) -> -> 0 `i `a ]
+[e $UE 2303  ]
+"66
+}
+[e :U 2305 ]
+"67
+[e :UE 2303 ]
+}
+"72
+[v _clear_switch `(v ~T0 @X0 1 ef1`uc ]
+"73
 {
 [e :U _clear_switch ]
-"61
+"72
 [v _i `Cuc ~T0 @X0 1 r1 ]
-"62
+"73
 [f ]
-"63
-[e $ ! >= -> _i `i -> 6 `i 2300  ]
-"64
-[e $UE 2299  ]
-[e :U 2300 ]
-"66
+"74
+[e $ ! >= -> _i `i -> 6 `i 2307  ]
+"75
+[e $UE 2306  ]
+[e :U 2307 ]
+"77
 [e = . *U + &U . _S 0 * -> _i `ux -> -> # *U &U . _S 0 `ui `ux 1 -> -> -> 0 `i `l `ul ]
-"67
+"78
 [e =& . _S 1 -> ~ << -> 1 `i -> _i `i `Vuc ]
-"68
-[e :UE 2299 ]
+"79
+[e :UE 2306 ]
 }
-"70
+"81
+[v _switch_handler0 `(v ~T0 @X0 1 ef ]
+"82
+{
+[e :U _switch_handler0 ]
+[f ]
+"83
+[e = . _V 5 + . _V 4 -> -> -> 300 `i `l `ul ]
+"84
+[e = . _V 44 -> -> 0 `i `a ]
+"85
+[e = . *U + &U . _S 0 * -> -> -> 9 `i `ui `ux -> -> # *U &U . _S 0 `ui `ux 0 . `E17003 1 ]
+"86
+[e ( _diversion_pwm_full ..  ]
+"87
+[e :UE 2308 ]
+}
+"89
 [v _switch_handler `(v ~T0 @X0 1 ef ]
-"71
+"90
 {
 [e :U _switch_handler ]
 [f ]
-"72
+"91
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [v _sw_value `uc ~T0 @X0 1 a ]
-"77
-[e :U 2304 ]
+"96
+[e :U 2312 ]
 {
 [e = . . _LATFbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 2303 ]
-"78
-[e = . _V 5 + . _V 4 -> -> -> 600 `i `l `ul ]
-"79
-[e = . _V 44 -> -> 0 `i `a ]
-"86
-[e ++ . _V 53 -> -> 1 `i `Vul ]
-"87
-[e ( ___nop ..  ]
-"88
-[e ( ___nop ..  ]
-"89
-[e ( ___nop ..  ]
-"90
-[e ( ___nop ..  ]
-"91
-[e ( ___nop ..  ]
-"92
-[e ( ___nop ..  ]
-"94
-[e :U 2307 ]
-{
-"95
-[e $U 2309  ]
-{
-"96
-[e :U 2310 ]
-"97
-[e = _sw_value . . _PORTFbits 0 3 ]
-"98
-[e $U 2308  ]
-"99
 [e :U 2311 ]
-"100
-[e = _sw_value . . _PORTFbits 0 2 ]
-"101
-[e $U 2308  ]
-"102
-[e :U 2312 ]
-"103
-[e = _sw_value . . _PORTDbits 0 3 ]
-"104
-[e $U 2308  ]
+"97
+[e = . _V 5 + . _V 4 -> -> -> 300 `i `l `ul ]
+"98
+[e = . _V 44 -> -> 0 `i `a ]
 "105
-[e :U 2313 ]
+[e ++ . _V 53 -> -> 1 `i `Vul ]
 "106
-[e = _sw_value -> -> 1 `i `uc ]
+[e ( ___nop ..  ]
 "107
-[e $U 2308  ]
+[e ( ___nop ..  ]
 "108
-[e :U 2314 ]
+[e ( ___nop ..  ]
 "109
-[e = _sw_value -> -> 1 `i `uc ]
+[e ( ___nop ..  ]
 "110
-[e $U 2308  ]
+[e ( ___nop ..  ]
 "111
-[e :U 2315 ]
-"112
-[e = _sw_value -> -> 1 `i `uc ]
+[e ( ___nop ..  ]
 "113
-[e $U 2308  ]
+[e :U 2315 ]
+{
 "114
-}
-[e $U 2308  ]
-[e :U 2309 ]
-[e [\ _i , $ . `E17008 3 2310
- , $ . `E17008 2 2311
- , $ . `E17008 4 2312
- , $ . `E17008 1 2313
- , $ . `E17008 0 2314
- 2315 ]
-[e :U 2308 ]
-"117
-[e $ ! != -> _sw_value `i -> 0 `i 2316  ]
+[e $U 2317  ]
 {
-"118
-[e $ ! == -> . *U + &U . _S 0 * -> _i `ux -> -> # *U &U . _S 0 `ui `ux 0 `ui -> . `E17003 1 `ui 2317  ]
-{
-"119
-[e = . *U + &U . _S 0 * -> _i `ux -> -> # *U &U . _S 0 `ui `ux 0 . `E17003 0 ]
-"120
-}
-[e :U 2317 ]
-"121
-}
-[e $U 2318  ]
-[e :U 2316 ]
-{
-"122
-[e $ ! == -> . *U + &U . _S 0 * -> _i `ux -> -> # *U &U . _S 0 `ui `ux 0 `ui -> . `E17003 0 `ui 2319  ]
-{
-"123
-[e = . *U + &U . _S 0 * -> _i `ux -> -> # *U &U . _S 0 `ui `ux 0 . `E17003 1 ]
-"124
-[e = . *U + &U . _S 0 * -> _i `ux -> -> # *U &U . _S 0 `ui `ux 1 . _V 48 ]
-"125
-[e =| . _S 1 -> << -> 1 `i -> _i `i `Vuc ]
-"126
-}
-[e :U 2319 ]
-"127
-}
+"115
 [e :U 2318 ]
-"128
-}
-[e $ < -> =+ _i -> -> 1 `i `uc `i -> 6 `i 2307  ]
-[e :U 2306 ]
-"137
+"116
+[e = _sw_value . . _PORTFbits 0 3 ]
+"117
+[e $U 2316  ]
+"118
+[e :U 2319 ]
+"119
+[e = _sw_value . . _PORTFbits 0 2 ]
+"120
+[e $U 2316  ]
+"121
+[e :U 2320 ]
+"122
+[e = _sw_value . . _PORTDbits 0 3 ]
+"123
+[e $U 2316  ]
+"124
+[e :U 2321 ]
+"125
+[e = _sw_value -> -> 1 `i `uc ]
+"126
+[e $U 2316  ]
+"127
 [e :U 2322 ]
+"128
+[e = _sw_value -> -> 1 `i `uc ]
+"129
+[e $U 2316  ]
+"130
+[e :U 2323 ]
+"131
+[e = _sw_value -> -> 1 `i `uc ]
+"132
+[e $U 2316  ]
+"133
+}
+[e $U 2316  ]
+[e :U 2317 ]
+[e [\ _i , $ . `E17008 3 2318
+ , $ . `E17008 2 2319
+ , $ . `E17008 4 2320
+ , $ . `E17008 1 2321
+ , $ . `E17008 0 2322
+ 2323 ]
+[e :U 2316 ]
+"136
+[e $ ! != -> _sw_value `i -> 0 `i 2324  ]
+{
+"137
+[e $ ! == -> . *U + &U . _S 0 * -> _i `ux -> -> # *U &U . _S 0 `ui `ux 0 `ui -> . `E17003 1 `ui 2325  ]
+{
+"138
+[e = . *U + &U . _S 0 * -> _i `ux -> -> # *U &U . _S 0 `ui `ux 0 . `E17003 0 ]
+"139
+}
+[e :U 2325 ]
+"140
+}
+[e $U 2326  ]
+[e :U 2324 ]
+{
+"141
+[e $ ! == -> . *U + &U . _S 0 * -> _i `ux -> -> # *U &U . _S 0 `ui `ux 0 `ui -> . `E17003 0 `ui 2327  ]
+{
+"142
+[e = . *U + &U . _S 0 * -> _i `ux -> -> # *U &U . _S 0 `ui `ux 0 . `E17003 1 ]
+"143
+[e = . *U + &U . _S 0 * -> _i `ux -> -> # *U &U . _S 0 `ui `ux 1 . _V 48 ]
+"144
+[e =| . _S 1 -> << -> 1 `i -> _i `i `Vuc ]
+"145
+}
+[e :U 2327 ]
+"146
+}
+[e :U 2326 ]
+"147
+}
+[e $ < -> =+ _i -> -> 1 `i `uc `i -> 6 `i 2315  ]
+[e :U 2314 ]
+"156
+[e :U 2330 ]
 {
 [e = . . _LATFbits 0 5 -> -> 1 `i `uc ]
 }
-[e :U 2321 ]
-"138
-[e :UE 2301 ]
+[e :U 2329 ]
+"157
+[e :UE 2309 ]
 }
-"140
+"159
 [v _start_switch_handler `(v ~T0 @X0 1 ef ]
-"141
+"160
 {
 [e :U _start_switch_handler ]
 [f ]
-"142
+"161
+[e = . . _PIR5bits 0 0 -> -> 0 `i `uc ]
+"162
 [e = . . _PIE5bits 0 0 -> -> 0 `i `uc ]
-"143
+"163
 [e ( _INT1_SetInterruptHandler (1 &U _switch_handler ]
-"144
+"164
 [e = . *U + &U . _S 0 * -> . `E17008 7 `ux -> -> # *U &U . _S 0 `ui `ux 0 . `E17003 2 ]
-"145
+"165
 [e = . . _PIE5bits 0 0 -> -> 1 `i `uc ]
-"146
-[e :UE 2323 ]
+"167
+[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+"168
+[e = . . _INTCON0bits 0 0 -> -> 0 `i `uc ]
+"170
+[e ( _INT0_SetInterruptHandler (1 &U _switch_handler0 ]
+"171
+[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
+"172
+[e :UE 2331 ]
 }

@@ -34,6 +34,7 @@
 #include <xc.h> // include processor files - each processor file is guarded.  
 #include "vconfig.h"
 #include "tests.h"
+#include "mconfig.h"
 
 #define NUM_SWITCHES		6
 
@@ -47,6 +48,7 @@ SW_STATES get_switch(const uint8_t);
 SW_STATES get_switch_bm(const uint8_t);
 rbutton_type get_switch_data(uint8_t);
 uint8_t check_switches(void);
+bool check_mode_switch(void);
 void clear_switch(uint8_t);
 
 #endif	/* DIO_H */

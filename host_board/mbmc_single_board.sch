@@ -20657,7 +20657,7 @@ SMD chip inductor</description>
 <junction x="55.88" y="-5.08"/>
 </segment>
 </net>
-<net name="N$279" class="0">
+<net name="EXT_INT1" class="0">
 <segment>
 <pinref part="IC15" gate="G$1" pin="RB1"/>
 <wire x1="93.98" y1="-167.64" x2="86.36" y2="-167.64" width="0.1524" layer="91"/>
@@ -20898,7 +20898,7 @@ SMD chip inductor</description>
 <junction x="17.78" y="38.1"/>
 </segment>
 </net>
-<net name="N$290" class="0">
+<net name="EXT_INT0" class="0">
 <segment>
 <pinref part="C67" gate="G$1" pin="1"/>
 <wire x1="83.82" y1="-190.5" x2="76.2" y2="-190.5" width="0.1524" layer="91"/>

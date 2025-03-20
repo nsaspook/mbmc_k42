@@ -162,12 +162,13 @@ extern "C" {
 #else
 #define MAX_LINE	16
 #endif
-#define MAX_BUTTONS	8
+#define MAX_BUTTONS	10
+#define INT0_BUTTON	9
 
 #define HPARAM_SIZE     13
 #define HVER		1
 
-#define BL_TIME		600
+#define BL_TIME		300 // 5 min
 
 #define CC_DEACT	74	// 1.10
 #define CC_ACT		100	// 1.43

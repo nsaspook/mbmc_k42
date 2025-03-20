@@ -809,6 +809,9 @@ static void wdt_reset(void)
 static void clock_tick_isr(void)
 {
 	SLED = (uint8_t) ~SLED;
+	if (check_mode_switch()) {
+		diversion_pwm_set(255);
+	}
 	V.timerint_count++;
 	V.ticks++;
 	check_day_time();
