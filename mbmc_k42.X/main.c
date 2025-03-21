@@ -95,8 +95,8 @@
  * 4		rf3		PD 8		ENTER	3
  * 5		rd3		PD 3		CALIB	4
  * 6		rd2		PD 2/misc 2	SW0	5
- * 7				misc 3			6
- * 8				misc 4			7
+ * 7		SL3 pin3	misc 3			6
+ * 8		debug8_led	misc 4			7
  *
  * 4x20 LCD status panel NHD-0420D3Z-NSW-BBW-V3 and led status lights .
  *

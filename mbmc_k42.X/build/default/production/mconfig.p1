@@ -62,15 +62,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _build_time `*Cuc ~T0 @X0 0 e ]
 "49 ./mydisplay.h
 [v _update_lcd `(uc ~T0 @X0 0 ef1`uc ]
+"36 ./timers.h
+[v _WaitMs `(v ~T0 @X0 0 ef1`Cus ]
 [v F17748 `(E17357 ~T0 @X0 1 tf ]
-"55
+"55 ./mydisplay.h
 [v _display_help `TF17748 ~T0 @X0 0 e ]
 "85 ./eadog.h
 [v _wait_lcd_done `(v ~T0 @X0 0 ef ]
 "91
 [v _eaDogM_WriteStringAtPos `(v ~T0 @X0 0 ef3`uc`uc`*uc ]
-"36 ./timers.h
-[v _WaitMs `(v ~T0 @X0 0 ef1`Cus ]
 "117 ./mbmc.h
 [v _time `(ul ~T0 @X0 0 ef1`*ul ]
 "250 /ldrv/microchip/mplabx/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8/pic/include/proc/pic18f57k42.h
@@ -1846,192 +1846,194 @@ Version 4.0 HI-TECH Software Intermediate Code
 "65
 [e ( _update_lcd (1 -> -> 1 `i `uc ]
 "66
-[e = _estatus -> -> 1 `i `a ]
+[e ( _WaitMs (1 -> -> 1000 `i `us ]
 "67
+[e = _estatus -> -> 1 `i `a ]
+"68
 }
 [e $U 2309  ]
 [e :U 2305 ]
 {
-"68
+"69
 [e $ ! != -> ( _TimerDone (1 -> . `E17699 9 `uc `i -> 0 `i 2310  ]
 {
-"69
-[e ( _set_vterm (1 -> -> 0 `i `uc ]
 "70
-[e = . _V 30 -> -> 0 `i `uc ]
+[e ( _set_vterm (1 -> -> 0 `i `uc ]
 "71
-[e ( _set_display_info (1 ( _display_help ..  ]
+[e = . _V 30 -> -> 0 `i `uc ]
 "72
+[e ( _set_display_info (1 ( _display_help ..  ]
+"73
 [e $ ! != -> ( _TimerDone (1 -> . `E17699 11 `uc `i -> 0 `i 2311  ]
 {
-"73
-[e = . _V 37 -> -> ! != -> . _V 37 `i -> 0 `i `i `a ]
 "74
-[e ( _StartTimer (2 , -> . `E17699 11 `uc -> -> 1500 `i `us ]
+[e = . _V 37 -> -> ! != -> . _V 37 `i -> 0 `i `i `a ]
 "75
-}
-[e :U 2311 ]
+[e ( _StartTimer (2 , -> . `E17699 11 `uc -> -> 1500 `i `us ]
 "76
 }
-[e :U 2310 ]
+[e :U 2311 ]
 "77
 }
-[e :U 2309 ]
+[e :U 2310 ]
 "78
+}
+[e :U 2309 ]
+"79
 [e ) _estatus ]
 [e $UE 2304  ]
-"79
+"80
 [e :UE 2304 ]
 }
-"84
-[v _update_lcd `(uc ~T0 @X0 1 ef1`uc ]
 "85
+[v _update_lcd `(uc ~T0 @X0 1 ef1`uc ]
+"86
 {
 [e :U _update_lcd ]
-"84
-[v _vterm `uc ~T0 @X0 1 r1 ]
 "85
-[f ]
+[v _vterm `uc ~T0 @X0 1 r1 ]
 "86
+[f ]
+"87
 [e = _vterm -> & -> _vterm `i -> 3 `i `uc ]
-"88
-[e $ ! && >= -> . _D 1 `i -> 1 `i == -> _vterm `i -> 0 `i 2313  ]
 "89
+[e $ ! && >= -> . _D 1 `i -> 1 `i == -> _vterm `i -> 0 `i 2313  ]
+"90
 [e ) . _D 1 ]
 [e $UE 2312  ]
 [e :U 2313 ]
-"91
-[e = *U + &U *U + &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> -> 0 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux * -> -> -> 20 `i `ui `ux -> -> # *U &U *U + &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> -> 0 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux `ui `ux -> -> 0 `i `uc ]
 "92
-[e = *U + &U *U + &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> -> 1 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux * -> -> -> 20 `i `ui `ux -> -> # *U &U *U + &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> -> 1 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux `ui `ux -> -> 0 `i `uc ]
+[e = *U + &U *U + &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> -> 0 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux * -> -> -> 20 `i `ui `ux -> -> # *U &U *U + &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> -> 0 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux `ui `ux -> -> 0 `i `uc ]
 "93
-[e = *U + &U *U + &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> -> 2 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux * -> -> -> 20 `i `ui `ux -> -> # *U &U *U + &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> -> 2 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux `ui `ux -> -> 0 `i `uc ]
+[e = *U + &U *U + &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> -> 1 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux * -> -> -> 20 `i `ui `ux -> -> # *U &U *U + &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> -> 1 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux `ui `ux -> -> 0 `i `uc ]
 "94
-[e = *U + &U *U + &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> -> 3 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux * -> -> -> 20 `i `ui `ux -> -> # *U &U *U + &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> -> 3 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux `ui `ux -> -> 0 `i `uc ]
+[e = *U + &U *U + &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> -> 2 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux * -> -> -> 20 `i `ui `ux -> -> # *U &U *U + &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> -> 2 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux `ui `ux -> -> 0 `i `uc ]
 "95
-[e ( _wait_lcd_done ..  ]
+[e = *U + &U *U + &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> -> 3 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux * -> -> -> 20 `i `ui `ux -> -> # *U &U *U + &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> -> 3 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux `ui `ux -> -> 0 `i `uc ]
 "96
-[e ( _eaDogM_WriteStringAtPos (3 , , -> -> 0 `i `uc -> -> 0 `i `uc &U *U + &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> -> 0 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux ]
+[e ( _wait_lcd_done ..  ]
 "97
-[e ( _wait_lcd_done ..  ]
+[e ( _eaDogM_WriteStringAtPos (3 , , -> -> 0 `i `uc -> -> 0 `i `uc &U *U + &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> -> 0 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux ]
 "98
-[e ( _eaDogM_WriteStringAtPos (3 , , -> -> 1 `i `uc -> -> 0 `i `uc &U *U + &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> -> 1 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux ]
+[e ( _wait_lcd_done ..  ]
 "99
-[e ( _wait_lcd_done ..  ]
+[e ( _eaDogM_WriteStringAtPos (3 , , -> -> 1 `i `uc -> -> 0 `i `uc &U *U + &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> -> 1 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux ]
 "100
-[e ( _eaDogM_WriteStringAtPos (3 , , -> -> 2 `i `uc -> -> 0 `i `uc &U *U + &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> -> 2 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux ]
-"101
 [e ( _wait_lcd_done ..  ]
+"101
+[e ( _eaDogM_WriteStringAtPos (3 , , -> -> 2 `i `uc -> -> 0 `i `uc &U *U + &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> -> 2 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux ]
 "102
-[e ( _eaDogM_WriteStringAtPos (3 , , -> -> 3 `i `uc -> -> 0 `i `uc &U *U + &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> -> 3 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux ]
+[e ( _wait_lcd_done ..  ]
 "103
+[e ( _eaDogM_WriteStringAtPos (3 , , -> -> 3 `i `uc -> -> 0 `i `uc &U *U + &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> -> 3 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> _vterm `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux ]
+"104
 [e ) . _D 1 ]
 [e $UE 2312  ]
-"104
+"105
 [e :UE 2312 ]
 }
-"109
-[v _set_vterm `(uc ~T0 @X0 1 ef1`Cuc ]
 "110
+[v _set_vterm `(uc ~T0 @X0 1 ef1`Cuc ]
+"111
 {
 [e :U _set_vterm ]
-"109
-[v _vterm `Cuc ~T0 @X0 1 r1 ]
 "110
-[f ]
+[v _vterm `Cuc ~T0 @X0 1 r1 ]
 "111
-[e = . _D 1 -> & -> _vterm `i -> 3 `i `uc ]
+[f ]
 "112
+[e = . _D 1 -> & -> _vterm `i -> 3 `i `uc ]
+"113
 [e ) . _D 1 ]
 [e $UE 2314  ]
-"113
+"114
 [e :UE 2314 ]
 }
-"118
-[v _get_vterm_ptr `(*uc ~T0 @X0 1 ef2`Cuc`Cuc ]
 "119
+[v _get_vterm_ptr `(*uc ~T0 @X0 1 ef2`Cuc`Cuc ]
+"120
 {
 [e :U _get_vterm_ptr ]
-"118
+"119
 [v _line `Cuc ~T0 @X0 1 r1 ]
 [v _vterm `Cuc ~T0 @X0 1 r2 ]
-"119
-[f ]
 "120
+[f ]
+"121
 [e ) &U *U + &U *U + &U . _D 0 * -> -> & -> _vterm `i -> 3 `i `ui `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux * -> -> & -> _line `i -> 3 `i `ui `ux -> * -> # *U &U *U &U *U + &U . _D 0 * -> -> & -> _vterm `i -> 3 `i `ui `ux -> * * -> # *U &U *U &U . _D 0 `ui -> -> 4 `i `ui -> -> 40 `i `ui `ux `ui -> -> 40 `i `ui `ux ]
 [e $UE 2315  ]
-"121
+"122
 [e :UE 2315 ]
 }
-"123
-[v _vterm_dump `(v ~T0 @X0 1 ef ]
 "124
+[v _vterm_dump `(v ~T0 @X0 1 ef ]
+"125
 {
 [e :U _vterm_dump ]
 [f ]
-"125
-[e ( _sprintf (1 , , (. , &U . _V 1 :s 5C -> -> ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc `us `ui -> -> ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 1 `i `uc `us `ui ]
 "126
-[e ( _wait_lcd_done ..  ]
+[e ( _sprintf (1 , , (. , &U . _V 1 :s 5C -> -> ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc `us `ui -> -> ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 1 `i `uc `us `ui ]
 "127
-[e ( _eaDogM_WriteStringAtPos (3 , , -> -> 0 `i `uc -> -> 0 `i `uc &U . _V 1 ]
+[e ( _wait_lcd_done ..  ]
 "128
-[e ( _sprintf (1 , , (. , &U . _V 1 :s 6C -> -> ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc `us `ui -> -> ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 1 `i `uc `us `ui ]
+[e ( _eaDogM_WriteStringAtPos (3 , , -> -> 0 `i `uc -> -> 0 `i `uc &U . _V 1 ]
 "129
-[e ( _wait_lcd_done ..  ]
+[e ( _sprintf (1 , , (. , &U . _V 1 :s 6C -> -> ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc `us `ui -> -> ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 1 `i `uc `us `ui ]
 "130
-[e ( _eaDogM_WriteStringAtPos (3 , , -> -> 1 `i `uc -> -> 0 `i `uc &U . _V 1 ]
+[e ( _wait_lcd_done ..  ]
 "131
-[e ( _sprintf (1 , , (. , &U . _V 1 :s 7C -> -> ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc `us `ui -> -> ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 1 `i `uc `us `ui ]
+[e ( _eaDogM_WriteStringAtPos (3 , , -> -> 1 `i `uc -> -> 0 `i `uc &U . _V 1 ]
 "132
-[e ( _wait_lcd_done ..  ]
+[e ( _sprintf (1 , , (. , &U . _V 1 :s 7C -> -> ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc `us `ui -> -> ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 1 `i `uc `us `ui ]
 "133
-[e ( _eaDogM_WriteStringAtPos (3 , , -> -> 2 `i `uc -> -> 0 `i `uc &U . _V 1 ]
-"134
-[e ( _sprintf (1 , , (. , &U . _V 1 :s 8C -> -> ( _get_vterm_ptr (2 , -> -> 3 `i `uc -> -> 0 `i `uc `us `ui -> -> ( _get_vterm_ptr (2 , -> -> 3 `i `uc -> -> 1 `i `uc `us `ui ]
-"135
 [e ( _wait_lcd_done ..  ]
+"134
+[e ( _eaDogM_WriteStringAtPos (3 , , -> -> 2 `i `uc -> -> 0 `i `uc &U . _V 1 ]
+"135
+[e ( _sprintf (1 , , (. , &U . _V 1 :s 8C -> -> ( _get_vterm_ptr (2 , -> -> 3 `i `uc -> -> 0 `i `uc `us `ui -> -> ( _get_vterm_ptr (2 , -> -> 3 `i `uc -> -> 1 `i `uc `us `ui ]
 "136
-[e ( _eaDogM_WriteStringAtPos (3 , , -> -> 3 `i `uc -> -> 0 `i `uc &U . _V 1 ]
+[e ( _wait_lcd_done ..  ]
 "137
-[e ( _WaitMs (1 -> -> 3000 `i `us ]
+[e ( _eaDogM_WriteStringAtPos (3 , , -> -> 3 `i `uc -> -> 0 `i `uc &U . _V 1 ]
 "138
+[e ( _WaitMs (1 -> -> 3000 `i `us ]
+"139
 [e :UE 2316 ]
 }
-"140
-[v _vterm_sequence `(v ~T0 @X0 1 ef ]
 "141
+[v _vterm_sequence `(v ~T0 @X0 1 ef ]
+"142
 {
 [e :U _vterm_sequence ]
 [f ]
-"142
-[e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 2 `i `uc :s 9C -> . _V 15 `i -> . _V 31 `i ]
 "143
+[e ( _sprintf (1 , , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 2 `i `uc :s 9C -> . _V 15 `i -> . _V 31 `i ]
+"144
 [e $U 2319  ]
 {
-"144
-[e :U 2320 ]
 "145
-[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 1 `i `uc :s 10C _build_date ]
+[e :U 2320 ]
 "146
-[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 1 `i `uc :s 11C _build_time ]
+[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 1 `i `uc :s 10C _build_date ]
 "147
-[e $U 2318  ]
+[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 1 `i `uc :s 11C _build_time ]
 "148
-[e :U 2321 ]
-"149
-[e :U 2322 ]
-"150
-[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc :s 12C ]
-"151
-[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 13C ]
-"152
-[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 2 `i `uc :s 14C ]
-"153
-[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 2 `i `uc :s 15C ]
-"154
 [e $U 2318  ]
+"149
+[e :U 2321 ]
+"150
+[e :U 2322 ]
+"151
+[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 0 `i `uc :s 12C ]
+"152
+[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 0 `i `uc :s 13C ]
+"153
+[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 0 `i `uc -> -> 2 `i `uc :s 14C ]
+"154
+[e ( _sprintf (1 , ( _get_vterm_ptr (2 , -> -> 1 `i `uc -> -> 2 `i `uc :s 15C ]
 "155
+[e $U 2318  ]
+"156
 }
 [e $U 2318  ]
 [e :U 2319 ]
@@ -2039,228 +2041,228 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E17357 3 `ui 2321
  2322 ]
 [e :U 2318 ]
-"156
+"157
 [e :UE 2317 ]
 }
-"161
-[v _MyeaDogM_WriteStringAtPos `(v ~T0 @X0 1 ef3`Cuc`Cuc`*uc ]
 "162
+[v _MyeaDogM_WriteStringAtPos `(v ~T0 @X0 1 ef3`Cuc`Cuc`*uc ]
+"163
 {
 [e :U _MyeaDogM_WriteStringAtPos ]
-"161
+"162
 [v _r `Cuc ~T0 @X0 1 r1 ]
 [v _c `Cuc ~T0 @X0 1 r2 ]
 [v _strPtr `*uc ~T0 @X0 1 r3 ]
-"162
+"163
 [f ]
-"164
-[e ( _wait_lcd_done ..  ]
 "165
+[e ( _wait_lcd_done ..  ]
+"166
 [e $ ! == -> . . _V 34 7 `ui -> . `E17357 0 `ui 2324  ]
 {
-"166
-[e ( _eaDogM_WriteStringAtPos (3 , , _r _c _strPtr ]
 "167
+[e ( _eaDogM_WriteStringAtPos (3 , , _r _c _strPtr ]
+"168
 }
 [e $U 2325  ]
 [e :U 2324 ]
 {
-"168
+"169
 [e $ ! == -> . . _V 34 7 `ui -> . `E17357 1 `ui 2326  ]
 {
-"169
-[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 1 `i `uc :s 16C &U . _V 2 ]
 "170
-[e ( _update_lcd (1 -> -> 1 `i `uc ]
+[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 1 `i `uc :s 16C &U . _V 2 ]
 "171
+[e ( _update_lcd (1 -> -> 1 `i `uc ]
+"172
 }
 [e $U 2327  ]
 [e :U 2326 ]
 {
-"172
+"173
 [e $ ! != -> . . _V 34 7 `ui -> . `E17357 0 `ui 2328  ]
 {
-"173
-[e ( _update_lcd (1 -> -> 2 `i `uc ]
 "174
+[e ( _update_lcd (1 -> -> 2 `i `uc ]
+"175
 }
 [e $U 2329  ]
 [e :U 2328 ]
 {
-"175
-[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 17C &U . _V 2 ]
 "176
-[e ( _update_lcd (1 -> -> 0 `i `uc ]
+[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 17C &U . _V 2 ]
 "177
-}
-[e :U 2329 ]
+[e ( _update_lcd (1 -> -> 0 `i `uc ]
 "178
 }
+[e :U 2329 ]
+"179
+}
 [e :U 2327 ]
-"180
-[e $ ! && != -> . . _V 34 7 `ui -> . `E17357 0 `ui != -> ( _TimerDone (1 -> . `E17699 7 `uc `i -> 0 `i 2330  ]
 "181
+[e $ ! && != -> . . _V 34 7 `ui -> . `E17357 0 `ui != -> ( _TimerDone (1 -> . `E17699 7 `uc `i -> 0 `i 2330  ]
+"182
 [e = . . _V 34 7 . `E17357 0 ]
 [e :U 2330 ]
-"182
+"183
 }
 [e :U 2325 ]
-"187
+"188
 [e $ ! && == -> . _D 2 `ui -> . `E17357 1 `ui != -> . . _V 34 7 `ui -> . `E17357 1 `ui 2331  ]
 {
-"189
+"190
 }
 [e :U 2331 ]
-"191
+"192
 [e = . _D 2 . . _V 34 7 ]
-"193
+"194
 [e :UE 2323 ]
 }
 [v F18494 `(E17357 ~T0 @X0 1 tf ]
-"195
-[v _display_info `TF18494 ~T0 @X0 1 e ]
 "196
+[v _display_info `TF18494 ~T0 @X0 1 e ]
+"197
 {
 [e :U _display_info ]
 [f ]
-"197
+"198
 [e ) . . _V 34 7 ]
 [e $UE 2332  ]
-"198
+"199
 [e :UE 2332 ]
 }
 [v F18496 `(E17357 ~T0 @X0 1 tf ]
-"200
-[v _display_help `TF18496 ~T0 @X0 1 e ]
 "201
+[v _display_help `TF18496 ~T0 @X0 1 e ]
+"202
 {
 [e :U _display_help ]
 [f ]
-"202
+"203
 [e ) . . _V 34 8 ]
 [e $UE 2333  ]
-"203
+"204
 [e :UE 2333 ]
 }
-"205
-[v _set_display_info `(E17357 ~T0 @X0 1 ef1`CE17357 ]
 "206
+[v _set_display_info `(E17357 ~T0 @X0 1 ef1`CE17357 ]
+"207
 {
 [e :U _set_display_info ]
-"205
-[v _new_response_info `CE17357 ~T0 @X0 1 r1 ]
 "206
-[f ]
+[v _new_response_info `CE17357 ~T0 @X0 1 r1 ]
 "207
+[f ]
+"208
 [v F18499 `E17357 ~T0 @X0 1 s old_info ]
 [i F18499
 . `E17357 0
 ]
-"209
+"210
 [e $ ! != -> ( _TimerDone (1 -> . `E17699 7 `uc `i -> 0 `i 2335  ]
 {
-"210
-[e = F18499 . . _V 34 7 ]
 "211
-[e = . . _V 34 7 _new_response_info ]
+[e = F18499 . . _V 34 7 ]
 "212
+[e = . . _V 34 7 _new_response_info ]
+"213
 }
 [e :U 2335 ]
-"213
+"214
 [e ) F18499 ]
 [e $UE 2334  ]
-"214
+"215
 [e :UE 2334 ]
 }
-"216
-[v _set_temp_display_help `(E17357 ~T0 @X0 1 ef1`CE17357 ]
 "217
+[v _set_temp_display_help `(E17357 ~T0 @X0 1 ef1`CE17357 ]
+"218
 {
 [e :U _set_temp_display_help ]
-"216
-[v _new_response_info `CE17357 ~T0 @X0 1 r1 ]
 "217
-[f ]
+[v _new_response_info `CE17357 ~T0 @X0 1 r1 ]
 "218
+[f ]
+"219
 [v F18502 `E17357 ~T0 @X0 1 s old_info ]
-"220
-[e = F18502 . . _V 34 8 ]
 "221
-[e = . . _V 34 8 _new_response_info ]
+[e = F18502 . . _V 34 8 ]
 "222
+[e = . . _V 34 8 _new_response_info ]
+"223
 [e ) F18502 ]
 [e $UE 2336  ]
-"223
+"224
 [e :UE 2336 ]
 }
-"225
-[v _set_back_light_off `(a ~T0 @X0 1 ef1`a ]
 "226
+[v _set_back_light_off `(a ~T0 @X0 1 ef1`a ]
+"227
 {
 [e :U _set_back_light_off ]
-"225
-[v _mode `a ~T0 @X0 1 r1 ]
 "226
-[f ]
+[v _mode `a ~T0 @X0 1 r1 ]
 "227
+[f ]
+"228
 [v F18505 `a ~T0 @X0 1 s blight_on ]
 [i F18505
 -> -> 1 `i `a
 ]
-"228
+"229
 [v _send_cmd `a ~T0 @X0 1 a ]
 [e = _send_cmd -> -> 0 `i `a ]
-"230
+"231
 [e $ ! != -> _mode `i -> 0 `i 2338  ]
 {
-"231
+"232
 [e $ ! != -> . _V 44 `i -> 0 `i 2339  ]
 {
-"232
+"233
 [e $ ! != -> F18505 `i -> 0 `i 2340  ]
 {
-"233
-[e = F18505 -> -> 0 `i `a ]
 "234
-[e = _send_cmd -> -> 1 `i `a ]
+[e = F18505 -> -> 0 `i `a ]
 "235
-}
-[e :U 2340 ]
+[e = _send_cmd -> -> 1 `i `a ]
 "236
 }
-[e :U 2339 ]
+[e :U 2340 ]
 "237
+}
+[e :U 2339 ]
+"238
 }
 [e $U 2341  ]
 [e :U 2338 ]
 {
-"238
+"239
 [e $ ! ! != -> . _V 44 `i -> 0 `i 2342  ]
 {
-"239
+"240
 [e $ ! ! != -> F18505 `i -> 0 `i 2343  ]
 {
-"240
-[e = . _V 44 -> -> 0 `i `a ]
 "241
-[e = F18505 -> -> 1 `i `a ]
+[e = . _V 44 -> -> 0 `i `a ]
 "242
-[e = . _V 5 + ( _time (1 -> -> -> 0 `i `*v `*ul -> -> -> 300 `i `l `ul ]
+[e = F18505 -> -> 1 `i `a ]
 "243
-[e = _send_cmd -> -> 1 `i `a ]
+[e = . _V 5 + ( _time (1 -> -> -> 0 `i `*v `*ul -> -> -> 300 `i `l `ul ]
 "244
-}
-[e :U 2343 ]
+[e = _send_cmd -> -> 1 `i `a ]
 "245
 }
-[e :U 2342 ]
+[e :U 2343 ]
 "246
 }
-[e :U 2341 ]
+[e :U 2342 ]
 "247
+}
+[e :U 2341 ]
+"248
 [e ) _send_cmd ]
 [e $UE 2337  ]
-"248
+"249
 [e :UE 2337 ]
 }
 [p f _sprintf 12845184 ]
@@ -2270,13 +2272,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 6C 118 116 101 114 109 32 37 120 58 37 120 32 32 32 0 ]
 [a 7C 118 116 101 114 109 32 37 120 58 37 120 32 32 32 0 ]
 [a 8C 118 116 101 114 109 32 37 120 58 37 120 32 32 32 0 ]
-[a 3C 37 115 32 32 32 32 32 32 32 0 ]
-[a 4C 37 115 32 32 32 32 32 32 32 0 ]
 [a 9C 32 77 101 115 103 32 37 100 32 83 116 97 99 107 32 37 100 32 32 32 32 32 32 32 32 0 ]
 [a 11C 68 73 83 80 76 65 89 32 37 115 32 32 32 32 32 32 32 32 32 32 0 ]
-[a 1C 72 69 76 80 32 37 115 32 32 32 32 32 32 32 32 32 32 32 0 ]
-[a 2C 72 69 76 80 32 37 115 32 32 32 32 32 32 32 32 32 32 32 0 ]
+[a 3C 37 115 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
+[a 4C 37 115 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
 [a 10C 72 69 76 80 32 37 115 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
+[a 1C 72 69 76 80 32 37 115 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
+[a 2C 72 69 76 80 32 37 115 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
 [a 12C 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
 [a 13C 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
 [a 14C 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]

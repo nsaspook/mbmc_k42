@@ -53,16 +53,17 @@ bool check_help(const bool flipper)
 		set_temp_display_help(display_info());
 		set_display_info(DIS_HELP);
 		if (flipper) {
-			sprintf(get_vterm_ptr(0, 1), "HELP %s           ", build_date);
+			sprintf(get_vterm_ptr(0, 1), "HELP %s                ", build_date);
 		} else {
-			sprintf(get_vterm_ptr(0, 1), "HELP %s           ", build_time);
+			sprintf(get_vterm_ptr(0, 1), "HELP %s                ", build_time);
 		}
-		sprintf(get_vterm_ptr(1, 1), "%s       ", T[V.help_id].display);
-		sprintf(get_vterm_ptr(2, 1), "%s       ", T[V.help_id].message);
+		sprintf(get_vterm_ptr(1, 1), "%s            ", T[V.help_id].display);
+		sprintf(get_vterm_ptr(2, 1), "%s            ", T[V.help_id].message);
 		V.help_id++; // cycle help text messages to LCD
 		StartTimer(TMR_HELPDIS, TDELAY);
 		StartTimer(TMR_INFO, TDELAY);
 		update_lcd(1);
+		WaitMs(1000);
 		estatus = true;
 	} else {
 		if (TimerDone(TMR_HELPDIS)) {
