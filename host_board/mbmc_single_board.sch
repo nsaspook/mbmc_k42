@@ -17872,12 +17872,12 @@ SMD chip inductor</description>
 <attribute name="VALUE" x="56.642" y="67.31" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="R18" gate="G$1" x="78.74" y="76.2" smashed="yes">
-<attribute name="NAME" x="74.93" y="77.6986" size="1.778" layer="95"/>
-<attribute name="VALUE" x="74.93" y="72.898" size="1.778" layer="96"/>
+<attribute name="NAME" x="82.55" y="75.1586" size="1.778" layer="95"/>
+<attribute name="VALUE" x="80.01" y="70.358" size="1.778" layer="96"/>
 </instance>
 <instance part="R19" gate="G$1" x="99.06" y="76.2" smashed="yes">
 <attribute name="NAME" x="95.25" y="77.6986" size="1.778" layer="95"/>
-<attribute name="VALUE" x="95.25" y="72.898" size="1.778" layer="96"/>
+<attribute name="VALUE" x="102.87" y="77.978" size="1.778" layer="96"/>
 </instance>
 <instance part="R20" gate="G$1" x="68.58" y="60.96" smashed="yes">
 <attribute name="NAME" x="64.77" y="62.4586" size="1.778" layer="95"/>
@@ -17897,7 +17897,7 @@ SMD chip inductor</description>
 </instance>
 <instance part="R24" gate="G$1" x="93.98" y="81.28" smashed="yes">
 <attribute name="NAME" x="90.17" y="82.7786" size="1.778" layer="95"/>
-<attribute name="VALUE" x="90.17" y="77.978" size="1.778" layer="96"/>
+<attribute name="VALUE" x="87.63" y="77.978" size="1.778" layer="96"/>
 </instance>
 <instance part="R25" gate="G$1" x="45.72" y="63.5" smashed="yes">
 <attribute name="NAME" x="41.91" y="64.9986" size="1.778" layer="95"/>
@@ -17936,7 +17936,7 @@ SMD chip inductor</description>
 <attribute name="VALUE" x="53.34" y="71.12" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="VSS6" gate="G$1" x="68.58" y="68.58" smashed="yes" rot="R180">
-<attribute name="VALUE" x="71.12" y="73.66" size="1.778" layer="96" rot="R270"/>
+<attribute name="VALUE" x="68.58" y="68.58" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="VSS7" gate="G$1" x="83.82" y="68.58" smashed="yes" rot="R180">
 <attribute name="VALUE" x="86.36" y="73.66" size="1.778" layer="96" rot="R270"/>
@@ -18623,6 +18623,7 @@ SMD chip inductor</description>
 <segment>
 <pinref part="R1" gate="G$1" pin="E"/>
 <pinref part="R13" gate="G$1" pin="2"/>
+<junction x="43.18" y="93.98"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -18654,7 +18655,7 @@ SMD chip inductor</description>
 <junction x="53.34" y="76.2"/>
 </segment>
 </net>
-<net name="ANB2_IN" class="0">
+<net name="ANB2_IN_V_BBAT" class="0">
 <segment>
 <pinref part="R18" gate="G$1" pin="2"/>
 <wire x1="83.82" y1="76.2" x2="83.82" y2="78.74" width="0.1524" layer="91"/>
@@ -18667,6 +18668,7 @@ SMD chip inductor</description>
 <junction x="-48.26" y="73.66"/>
 <junction x="83.82" y="76.2"/>
 <label x="-45.72" y="73.66" size="1.778" layer="95"/>
+<label x="63.5" y="73.66" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -19102,7 +19104,7 @@ SMD chip inductor</description>
 <junction x="2.54" y="-86.36"/>
 </segment>
 </net>
-<net name="ANA1_IN" class="0">
+<net name="ANA1_IN_C-PV" class="0">
 <segment>
 <pinref part="J1" gate="G$1" pin="2"/>
 <wire x1="-48.26" y1="60.96" x2="-68.58" y2="60.96" width="0.1524" layer="91"/>
@@ -19115,6 +19117,7 @@ SMD chip inductor</description>
 <wire x1="48.26" y1="106.68" x2="48.26" y2="91.44" width="0.1524" layer="91"/>
 <junction x="48.26" y="91.44"/>
 <label x="-45.72" y="60.96" size="1.778" layer="95"/>
+<label x="43.18" y="96.52" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VDD" class="1">
@@ -19665,7 +19668,7 @@ SMD chip inductor</description>
 <label x="-38.1" y="96.52" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="ANA2_IN" class="0">
+<net name="ANA2_IN_V_CC" class="0">
 <segment>
 <pinref part="J1" gate="G$1" pin="3"/>
 <wire x1="-48.26" y1="63.5" x2="-71.12" y2="63.5" width="0.1524" layer="91"/>
@@ -19676,9 +19679,10 @@ SMD chip inductor</description>
 <junction x="-48.26" y="63.5"/>
 <junction x="63.5" y="91.44"/>
 <label x="-45.72" y="63.5" size="1.778" layer="95"/>
+<label x="63.5" y="96.52" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="ANA4_IN" class="0">
+<net name="ANA4_IN_V_BAT" class="0">
 <segment>
 <pinref part="R16" gate="G$1" pin="1"/>
 <wire x1="78.74" y1="91.44" x2="78.74" y2="111.76" width="0.1524" layer="91"/>
@@ -19689,9 +19693,10 @@ SMD chip inductor</description>
 <junction x="-48.26" y="66.04"/>
 <junction x="78.74" y="91.44"/>
 <label x="-45.72" y="66.04" size="1.778" layer="95"/>
+<label x="83.82" y="96.52" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="ANB4_IN" class="0">
+<net name="ANB4_IN_V_INVERTER" class="0">
 <segment>
 <pinref part="R11" gate="G$1" pin="1"/>
 <wire x1="33.02" y1="60.96" x2="-17.78" y2="60.96" width="0.1524" layer="91"/>
@@ -19701,9 +19706,10 @@ SMD chip inductor</description>
 <junction x="33.02" y="60.96"/>
 <junction x="-48.26" y="78.74"/>
 <label x="-45.72" y="78.74" size="1.778" layer="95"/>
+<label x="27.94" y="45.72" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="ANB5_IN" class="0">
+<net name="ANB5_IN_V_L_SENSOR" class="0">
 <segment>
 <pinref part="J1" gate="G$1" pin="10"/>
 <wire x1="-48.26" y1="81.28" x2="-12.7" y2="81.28" width="0.1524" layer="91"/>
@@ -19717,6 +19723,7 @@ SMD chip inductor</description>
 <junction x="-48.26" y="81.28"/>
 <junction x="73.66" y="60.96"/>
 <label x="-45.72" y="81.28" size="1.778" layer="95"/>
+<label x="58.42" y="45.72" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -19728,7 +19735,7 @@ SMD chip inductor</description>
 <junction x="93.98" y="76.2"/>
 </segment>
 </net>
-<net name="ANB3_IN" class="0">
+<net name="ANB3_IN_C_MPPT" class="0">
 <segment>
 <pinref part="J1" gate="G$1" pin="8"/>
 <wire x1="-48.26" y1="76.2" x2="-76.2" y2="76.2" width="0.1524" layer="91"/>
@@ -19741,9 +19748,10 @@ SMD chip inductor</description>
 <junction x="104.14" y="76.2"/>
 <wire x1="104.14" y1="76.2" x2="101.6" y2="76.2" width="0.1524" layer="91"/>
 <label x="-45.72" y="76.2" size="1.778" layer="95"/>
+<label x="91.44" y="73.66" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="ANA5_IN" class="0">
+<net name="ANA5_IN_V_PV" class="0">
 <segment>
 <pinref part="R12" gate="G$1" pin="1"/>
 <wire x1="33.02" y1="76.2" x2="33.02" y2="66.04" width="0.1524" layer="91"/>
@@ -19758,9 +19766,10 @@ SMD chip inductor</description>
 <junction x="-48.26" y="68.58"/>
 <junction x="33.02" y="76.2"/>
 <label x="-45.72" y="68.58" size="1.778" layer="95"/>
+<label x="33.02" y="78.74" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="ANA6_IN" class="0">
+<net name="ANA6_IN_V_CMODE" class="0">
 <segment>
 <pinref part="R17" gate="G$1" pin="1"/>
 <wire x1="53.34" y1="66.04" x2="53.34" y2="63.5" width="0.1524" layer="91"/>
@@ -19775,9 +19784,10 @@ SMD chip inductor</description>
 <junction x="-48.26" y="71.12"/>
 <junction x="53.34" y="66.04"/>
 <label x="-45.72" y="71.12" size="1.778" layer="95"/>
+<label x="48.26" y="76.2" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="ANA0_IN" class="0">
+<net name="ANA0_IN_C_BAT" class="0">
 <segment>
 <wire x1="20.32" y1="101.6" x2="20.32" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="101.6" x2="20.32" y2="101.6" width="0.1524" layer="91"/>
@@ -19790,6 +19800,7 @@ SMD chip inductor</description>
 <wire x1="33.02" y1="93.98" x2="20.32" y2="93.98" width="0.1524" layer="91"/>
 <junction x="33.02" y="93.98"/>
 <label x="-45.72" y="58.42" size="1.778" layer="95"/>
+<label x="20.32" y="96.52" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$76" class="0">
@@ -20292,7 +20303,7 @@ SMD chip inductor</description>
 <junction x="162.56" y="63.5"/>
 </segment>
 </net>
-<net name="ANA5" class="0">
+<net name="V_PV" class="0">
 <segment>
 <pinref part="IC15" gate="G$1" pin="RA5"/>
 <wire x1="137.16" y1="-172.72" x2="139.7" y2="-172.72" width="0.1524" layer="91"/>
@@ -20315,7 +20326,7 @@ SMD chip inductor</description>
 <junction x="17.78" y="73.66"/>
 </segment>
 </net>
-<net name="ANA4" class="0">
+<net name="V_BAT" class="0">
 <segment>
 <pinref part="IC15" gate="G$1" pin="RA4"/>
 <wire x1="137.16" y1="-175.26" x2="137.16" y2="-193.04" width="0.1524" layer="91"/>
@@ -20337,7 +20348,7 @@ SMD chip inductor</description>
 <junction x="17.78" y="71.12"/>
 </segment>
 </net>
-<net name="ANA2" class="0">
+<net name="V_CC" class="0">
 <segment>
 <pinref part="IC15" gate="G$1" pin="RA2"/>
 <wire x1="127" y1="-203.2" x2="127" y2="-205.74" width="0.1524" layer="91"/>
@@ -20362,7 +20373,7 @@ SMD chip inductor</description>
 <junction x="17.78" y="66.04"/>
 </segment>
 </net>
-<net name="ANA1" class="0">
+<net name="C_PV" class="0">
 <segment>
 <pinref part="IC15" gate="G$1" pin="RA1"/>
 <wire x1="124.46" y1="-203.2" x2="124.46" y2="-215.9" width="0.1524" layer="91"/>
@@ -20387,7 +20398,7 @@ SMD chip inductor</description>
 <junction x="17.78" y="63.5"/>
 </segment>
 </net>
-<net name="ANA0" class="0">
+<net name="C_BATT" class="0">
 <segment>
 <pinref part="IC15" gate="G$1" pin="RA0"/>
 <wire x1="121.92" y1="-203.2" x2="121.92" y2="-208.28" width="0.1524" layer="91"/>
@@ -20408,7 +20419,7 @@ SMD chip inductor</description>
 <junction x="17.78" y="86.36"/>
 </segment>
 </net>
-<net name="ANA6" class="0">
+<net name="V_CMODE" class="0">
 <segment>
 <pinref part="IC15" gate="G$1" pin="RA6"/>
 <wire x1="137.16" y1="-154.94" x2="160.02" y2="-154.94" width="0.1524" layer="91"/>
@@ -20702,7 +20713,7 @@ SMD chip inductor</description>
 <junction x="17.78" y="33.02"/>
 </segment>
 </net>
-<net name="ANB2" class="0">
+<net name="V_BBAT" class="0">
 <segment>
 <pinref part="IC15" gate="G$1" pin="RB2"/>
 <wire x1="93.98" y1="-170.18" x2="91.44" y2="-170.18" width="0.1524" layer="91"/>
@@ -20722,7 +20733,7 @@ SMD chip inductor</description>
 <junction x="17.78" y="35.56"/>
 </segment>
 </net>
-<net name="ANB4" class="0">
+<net name="V_INVER" class="0">
 <segment>
 <pinref part="IC15" gate="G$1" pin="RB4"/>
 <wire x1="109.22" y1="-203.2" x2="109.22" y2="-205.74" width="0.1524" layer="91"/>
@@ -20741,7 +20752,7 @@ SMD chip inductor</description>
 <junction x="17.78" y="40.64"/>
 </segment>
 </net>
-<net name="ANB5" class="0">
+<net name="V_LIGHT_SEN" class="0">
 <segment>
 <pinref part="IC15" gate="G$1" pin="RB5"/>
 <wire x1="111.76" y1="-203.2" x2="111.76" y2="-208.28" width="0.1524" layer="91"/>
@@ -20899,7 +20910,7 @@ SMD chip inductor</description>
 <junction x="-48.26" y="-157.48"/>
 </segment>
 </net>
-<net name="ANB3" class="0">
+<net name="C_MPPT" class="0">
 <segment>
 <pinref part="IC15" gate="G$1" pin="RB3"/>
 <junction x="93.98" y="-172.72"/>

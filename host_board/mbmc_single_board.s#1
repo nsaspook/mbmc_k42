@@ -19201,6 +19201,7 @@ SMD chip inductor</description>
 <pinref part="VDD35" gate="G$1" pin="VDD"/>
 <wire x1="109.22" y1="-231.14" x2="109.22" y2="-220.98" width="0.1524" layer="91"/>
 <junction x="109.22" y="-231.14"/>
+<junction x="109.22" y="-220.98"/>
 </segment>
 <segment>
 <pinref part="SV7" gate="1" pin="2"/>
@@ -20934,6 +20935,7 @@ SMD chip inductor</description>
 <wire x1="-30.48" y1="-167.64" x2="-30.48" y2="-182.88" width="0.1524" layer="91"/>
 <label x="68.58" y="-190.5" size="1.778" layer="95"/>
 <junction x="76.2" y="-190.5"/>
+<junction x="-30.48" y="-182.88"/>
 </segment>
 <segment>
 <pinref part="INT0" gate="G$1" pin="TP"/>
