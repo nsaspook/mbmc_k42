@@ -313,7 +313,7 @@ void calc_bsoc(void)
 		adj = C.hist[0].cef;
 	if (C.c_pv < 0.01)
 		adj = C.hist[0].peukert;
-	C.dynamic_ah += ((C.c_pv * adj) / SSLICE); // Ah
+	C.dynamic_ah += (((C.c_pv ) * adj) / SSLICE);
 
 	C.dynamic_ah_adj = C.dynamic_ah; // need to add peukert factor here
 	C.dynamic_ah_adj_daily = C.dynamic_ah_daily; // need to add peukert factor here

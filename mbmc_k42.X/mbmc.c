@@ -69,7 +69,7 @@ void calc_model_data(void)
 
 	if (!V.calib) {
 		C.updates++;
-		C.c_bat = C.calc[C_BATT];
+		C.c_bat = C.calc[C_BATT]+ IDLE_AMP; // adjust for system idle current
 		C.bc_ror = C.c_bat - bcror;
 		bcror = C.c_bat;
 		C.c_pv = C.calc[C_PV];

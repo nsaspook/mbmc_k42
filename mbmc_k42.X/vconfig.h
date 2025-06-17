@@ -20,7 +20,7 @@ extern "C" {
 #include "mcc_generated_files/pin_manager.h"
 #include "ringbufs.h"
 
-#define VER	"2.20"
+#define VER	"2.21"
 	/*
 	 * REMOVE THE CHIP PROGRAMMER, IT CHANGES THE ADC READINGS
 	 */
@@ -99,6 +99,7 @@ extern "C" {
 	 * 2.18 doc updates and minor fixes
 	 * 2.19 current and power fixups for FM80 coding to JSON
 	 * 2.20 update to use xc8 3.0
+	 * 2.21 idle current corrections
 	 */
 
 	/*

@@ -108,7 +108,7 @@
         <platform>2</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC18F-K_DFP" vendor="Microchip" version="1.14.301"/>
+        <pack name="PIC18F-K_DFP" vendor="Microchip" version="1.15.303"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -377,8 +377,6 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-1ffff"/>
         <property key="poweroptions.powerenable" value="true"/>
-        <property key="programmerToGoFilePath"
-                  value="/root/mbmc_k42/mbmc_k42.X/debug/default/mbmc_k42_ptg"/>
         <property key="programmerToGoImageName" value="mbmc_k42_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
@@ -452,6 +450,8 @@
         <property key="memories.programmemory.ranges" value="0-1ffff"/>
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="/root/mbmc_k42/mbmc_k42.X/debug/default/mbmc_k42_ptg"/>
         <property key="programmerToGoImageName" value="mbmc_k42_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>

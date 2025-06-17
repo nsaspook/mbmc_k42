@@ -47,15 +47,15 @@
 
 #define	MAXRUNTIME	95.0f
 #define MINRUNTIME	0.05f
-#define Perk_ADJ_FL	1.10f	// If the peukert_adj is below this, adjust the Ah out by this Ah adjustment factor
+#define Perk_ADJ_FL	1.30f	// If the peukert_adj is below this, adjust the Ah out by this Ah adjustment factor
 #define Perk_ADJ_FH	5.00f	// If the peukert_adj is above this, adjust the Ah out by this Ah adjustment factor
 #define Temp_ADJ_FL	1.20f	// Adjust the battery cap up or down 1C by this percentage from Temp_ZERO
 #define Temp_ZERO	267l	// Temperature for base battery rate capacity in tenths of C
 #define	CEF_HSOC	0.45f    // Charge Efficiency Factor, high SOC
 #define CEF_MSOC	0.70f    // middle
-#define	CEF_LSOC	0.90f    // Charge Efficiency Factor, low SOC
+#define	CEF_LSOC	0.80f    // Charge Efficiency Factor, low SOC
 #define CEF_OVER	0.99f    // CEF overflow in calc
-#define CEF_MAX		0.95f 	// Invalid charge factor above this, should be about the same as CEF_LOSC
+#define CEF_MAX		0.85f 	// Invalid charge factor above this, should be about the same as CEF_LOSC
 #define CEF_MIN		0.40f	// Invalid charge factor below this
 #define CEF_RESET	0.80f    // reset AH values below this point.
 #define CEF_DERATE	1.20f	// Ahi derate factor to start dynamic CEF corrections
