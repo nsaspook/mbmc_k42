@@ -19365,7 +19365,7 @@ SMD chip inductor</description>
 <junction x="142.24" y="-22.86"/>
 </segment>
 </net>
-<net name="N$49" class="0">
+<net name="CAL_SW" class="0">
 <segment>
 <pinref part="INP" gate="-4" pin="S"/>
 <wire x1="119.38" y1="2.54" x2="129.54" y2="2.54" width="0.1524" layer="91"/>
@@ -19374,6 +19374,8 @@ SMD chip inductor</description>
 <wire x1="129.54" y1="-27.94" x2="142.24" y2="-27.94" width="0.1524" layer="91"/>
 <junction x="119.38" y="2.54"/>
 <junction x="142.24" y="-27.94"/>
+<label x="134.62" y="-27.94" size="1.778" layer="95"/>
+<label x="96.52" y="2.54" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$50" class="0">
@@ -20540,6 +20542,8 @@ SMD chip inductor</description>
 <wire x1="25.4" y1="-22.86" x2="78.74" y2="-22.86" width="0.1524" layer="91"/>
 <label x="27.94" y="0" size="1.778" layer="95"/>
 <junction x="25.4" y="0"/>
+<label x="134.62" y="-63.5" size="1.778" layer="95"/>
+<label x="198.12" y="-27.94" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RELAYL1" class="0">

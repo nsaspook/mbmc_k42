@@ -81,7 +81,7 @@ extern struct V_data V;
 #define DAC_SCALE	0.002442f // 10 vdc @ 12-bits resolution per bit
 
 #define ZERO_RANGE	100
-#define TEN_A_RANGE	100
+#define TEN_A_RANGE	1000
 
 #define EE_CHECKMARK	0x1957
 #define TATE		0x42
@@ -113,7 +113,7 @@ extern struct V_data V;
 #define A100M		2 // PV,       adc line 1
 
 #ifndef BAT_100A
-#define C_A200		0.0361010f // BATTERY Amp scalar, second line [0], 0.0862000f, BO PLUG
+#define C_A200		0.0341010f // BATTERY Amp scalar, second line [0], 0.0862000f, BO PLUG
 #endif
 #define C_A100B		0.0361010f // PV Amp scalar, second line [0]
 #define C_A100		0.0361010f // PV Amp scalar, first line [1]
@@ -134,6 +134,8 @@ extern struct V_data V;
 #define C_CAL_A200	4150 // fixme with real values
 #endif
 #define C_CAL_A100	4240 // ..
+
+#define C_CAL_A100M	4240 // ..
 
 #include <xc.h> // include processor files - each processor file is guarded.
 #include "mcc_generated_files/adcc.h"
@@ -156,7 +158,7 @@ void set_dac(void);
 uint16_t set_dac_a(float);
 uint16_t set_dac_b(float);
 bool cal_current_zero(bool, int16_t, int16_t, int16_t);
-bool cal_current_10A(bool, int16_t, int16_t, float, float);
+bool cal_current_10A(bool, int16_t, int16_t, int16_t, float, float, float);
 bool read_cal_data(void);
 void write_cal_data(void);
 void update_cal_data(void);

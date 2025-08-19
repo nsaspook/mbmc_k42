@@ -4,7 +4,7 @@
 \DoxyCodeLine{\Hypertarget{dio_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}dio.h"{}}}
 \DoxyCodeLine{\Hypertarget{dio_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}mcc\_generated\_files/ext\_int.h"{}}}
 \DoxyCodeLine{\Hypertarget{dio_8c_source_l00003}00003\ }
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00004}\mbox{\hyperlink{structS__data}{00004}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structS__data}{S\_data}}\ \{\ \textcolor{comment}{//\ switch\ control\ data\ structure\ }}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00004}\mbox{\hyperlink{structS__data}{00004}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structS__data}{S\_data}}\ \{\ \textcolor{comment}{//\ switch\ control\ data\ structure}}
 \DoxyCodeLine{\Hypertarget{dio_8c_source_l00005}00005\ \ \ \ \ \textcolor{keyword}{volatile}\ \mbox{\hyperlink{structrbutton__type}{rbutton\_type}}\ button[MAX\_BUTTONS];}
 \DoxyCodeLine{\Hypertarget{dio_8c_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ sw\_bitmap;}
 \DoxyCodeLine{\Hypertarget{dio_8c_source_l00007}00007\ \}\ \mbox{\hyperlink{structS__data}{S\_data}};}
@@ -13,139 +13,165 @@
 \DoxyCodeLine{\Hypertarget{dio_8c_source_l00010}00010\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{structV__data}{V\_data}}\ V;}
 \DoxyCodeLine{\Hypertarget{dio_8c_source_l00011}00011\ }
 \DoxyCodeLine{\Hypertarget{dio_8c_source_l00012}00012\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ switch\_handler(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00014}00014\ \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00015}00015\ \textcolor{comment}{\ *\ return\ the\ current\ actual\ state\ of\ x\ switch}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00016}00016\ \textcolor{comment}{\ *\ the\ actual\ current\ state\ of\ a\ switch\ is\ ONLY\ changed\ in\ the\ interrupt\ handler}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00017}00017\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00018}00018\ SW\_STATES\ get\_switch(\textcolor{keyword}{const}\ uint8\_t\ i)}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00019}00019\ \{}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ >=\ NUM\_SWITCHES)}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SW\_OFF;}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00022}00022\ }
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00023}00023\ \ \ \ \ \textcolor{keywordflow}{return}\ S.button[i].sw;}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00024}00024\ \}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00025}00025\ }
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00026}00026\ \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00027}00027\ \textcolor{comment}{\ *\ return\ the\ bitmap\ state\ of\ x\ switch}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00028}00028\ \textcolor{comment}{\ *\ the\ actual\ current\ state\ of\ a\ switch\ is\ ONLY\ changed\ in\ the\ interrupt\ handler}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00029}00029\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00030}00030\ SW\_STATES\ get\_switch\_bm(\textcolor{keyword}{const}\ uint8\_t\ i)}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00031}00031\ \{}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ >=\ NUM\_SWITCHES)}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SW\_OFF;}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00034}00034\ }
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{return}(S.sw\_bitmap\ >>\ i)\&0x01;}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00036}00036\ \}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00037}00037\ }
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00038}00038\ \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00039}00039\ \textcolor{comment}{\ *\ return\ the\ x\ switch\ structure}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00040}00040\ \textcolor{comment}{\ *\ mainly\ for\ testing}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00041}00041\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00042}00042\ \mbox{\hyperlink{structrbutton__type}{rbutton\_type}}\ get\_switch\_data(\textcolor{keyword}{const}\ uint8\_t\ i)}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00043}00043\ \{}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ >=\ NUM\_SWITCHES)}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ S.button[SNULL];}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00046}00046\ }
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00047}00047\ \ \ \ \ \textcolor{keywordflow}{return}\ S.button[i];}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00048}00048\ \}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00049}00049\ }
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00050}00050\ \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00051}00051\ \textcolor{comment}{\ *\ check\ the\ switch\ pressed\ bitmap\ for\ button\ presses,\ the\ actual\ current\ switch\ state\ might\ differ}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00052}00052\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00053}00053\ uint8\_t\ check\_switches(\textcolor{keywordtype}{void})}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00054}00054\ \{}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00055}00055\ \ \ \ \ \textcolor{keywordflow}{return}\ S.sw\_bitmap;}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00056}00056\ \}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00057}00057\ }
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00058}00058\ \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00059}00059\ \textcolor{comment}{\ *\ clear\ X\ switch\ pressed\ and\ time\ pressed\ data}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00060}00060\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00061}00061\ \textcolor{keywordtype}{void}\ clear\_switch(\textcolor{keyword}{const}\ uint8\_t\ i)}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00062}00062\ \{}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00063}00063\ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ >=\ NUM\_SWITCHES)}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00065}00065\ }
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00066}00066\ \ \ \ \ S.button[i].count\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00067}00067\ \ \ \ \ S.sw\_bitmap\ \&=\ \string~(1\ <<\ i);\ \textcolor{comment}{//clear\ switch\ pressed\ bit}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00068}00068\ \}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00069}00069\ }
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00070}00070\ \textcolor{keywordtype}{void}\ switch\_handler(\textcolor{keywordtype}{void})}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00071}00071\ \{}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00072}00072\ \ \ \ \ uint8\_t\ i\ =\ 0,\ sw\_value;}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00073}00073\ }
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00074}00074\ \ \ \ \ \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00075}00075\ \textcolor{comment}{\ \ \ \ \ *\ enable\ the\ outputs\ for\ reading\ and\ reset\ MAX\ Change-\/of-\/State\ pin}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00076}00076\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00077}00077\ \ \ \ \ MAX\_EN1\_SetLow();\ \textcolor{comment}{//\ rev\ 1.1+\ board}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00078}00078\ \ \ \ \ V.blight\ =\ V.ticks\ +\ BL\_TIME;}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00079}00079\ \ \ \ \ V.blight\_off\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00013}00013\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ switch\_handler0(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00015}00015\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00016}00016\ \textcolor{comment}{\ *\ return\ the\ current\ actual\ state\ of\ x\ switch}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00017}00017\ \textcolor{comment}{\ *\ the\ actual\ current\ state\ of\ a\ switch\ is\ ONLY\ changed\ in\ the\ interrupt\ handler}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00018}00018\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00019}00019\ SW\_STATES\ get\_switch(\textcolor{keyword}{const}\ uint8\_t\ i)}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00020}00020\ \{}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ >=\ NUM\_SWITCHES)}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SW\_OFF;}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{return}\ S.button[i].sw;}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00025}00025\ \}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00027}00027\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00028}00028\ \textcolor{comment}{\ *\ return\ the\ bitmap\ state\ of\ x\ switch}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00029}00029\ \textcolor{comment}{\ *\ the\ actual\ current\ state\ of\ a\ switch\ is\ ONLY\ changed\ in\ the\ interrupt\ handler}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00030}00030\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00031}00031\ SW\_STATES\ get\_switch\_bm(\textcolor{keyword}{const}\ uint8\_t\ i)}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00032}00032\ \{}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00033}00033\ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ >=\ NUM\_SWITCHES)}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SW\_OFF;}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{return}(S.sw\_bitmap\ >>\ i)\&0x01;}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00037}00037\ \}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00039}00039\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00040}00040\ \textcolor{comment}{\ *\ return\ the\ x\ switch\ structure}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00041}00041\ \textcolor{comment}{\ *\ mainly\ for\ testing}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00042}00042\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00043}00043\ \mbox{\hyperlink{structrbutton__type}{rbutton\_type}}\ get\_switch\_data(\textcolor{keyword}{const}\ uint8\_t\ i)}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00044}00044\ \{}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00045}00045\ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ >=\ NUM\_SWITCHES)}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ S.button[SNULL];}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{return}\ S.button[i];}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00049}00049\ \}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00051}00051\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00052}00052\ \textcolor{comment}{\ *\ check\ the\ switch\ pressed\ bitmap\ for\ button\ presses,\ the\ actual\ current\ switch\ state\ might\ differ}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00053}00053\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00054}00054\ uint8\_t\ check\_switches(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00055}00055\ \{}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{return}\ S.sw\_bitmap;}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00057}00057\ \}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00059}00059\ \textcolor{keywordtype}{bool}\ check\_mode\_switch(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00060}00060\ \{}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00061}00061\ \ \ \ \ \textcolor{keywordflow}{if}\ (S.button[INT0\_BUTTON].sw\ ==\ SW\_ON)\ \{}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00062}00062\ \ \ \ \ \ \ \ \ S.button[INT0\_BUTTON].sw\ =\ SW\_OFF;\ \textcolor{comment}{//\ clear\ button\ pressed\ state}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00064}00064\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00066}00066\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00067}00067\ \}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00069}00069\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00070}00070\ \textcolor{comment}{\ *\ clear\ X\ switch\ pressed\ and\ time\ pressed\ data}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00071}00071\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00072}00072\ \textcolor{keywordtype}{void}\ clear\_switch(\textcolor{keyword}{const}\ uint8\_t\ i)}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00073}00073\ \{}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00074}00074\ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ >=\ NUM\_SWITCHES)}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00077}00077\ \ \ \ \ S.button[i].count\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00078}00078\ \ \ \ \ S.sw\_bitmap\ \&=\ \string~(1\ <<\ i);\ \textcolor{comment}{//clear\ switch\ pressed\ bit}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00079}00079\ \}}
 \DoxyCodeLine{\Hypertarget{dio_8c_source_l00080}00080\ }
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00081}00081\ \textcolor{preprocessor}{\#ifdef\ DEBUG\_SWH1}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00082}00082\ \ \ \ \ DEBUG1\_SetHigh();}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00083}00083\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00084}00084\ }
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00085}00085\ \ \ \ \ \textcolor{comment}{//\ Nop\ for\ MAX\ chip\ output\ Propagation\ Delay\ after\ enable}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00086}00086\ \ \ \ \ V.switch\_count++;}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00087}00087\ \ \ \ \ Nop();}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00088}00088\ \ \ \ \ Nop();}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00089}00089\ \ \ \ \ Nop();}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00090}00090\ \ \ \ \ Nop();}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00091}00091\ \ \ \ \ Nop();}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00092}00092\ \ \ \ \ Nop();}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00093}00093\ \ \ \ \ \textcolor{comment}{//\ start\ reading\ the\ various\ pic\ port\ input\ bits\ after\ the\ max\ chip\ is\ ready}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00094}00094\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (i)\ \{}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ SENTER:}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ sw\_value\ =\ ENTER\_B\_GetValue();}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ SSELECT:}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ sw\_value\ =\ SELECT\_B\_GetValue();}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ SCALIB:}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ sw\_value\ =\ CALIB\_GetValue();}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ S1:}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ sw\_value\ =\ 1;}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ S0:}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ sw\_value\ =\ 1;}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00111}00111\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ sw\_value\ =\ 1;}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00114}00114\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00115}00115\ }
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00116}00116\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ update\ actual\ current\ button\ state}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00117}00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sw\_value)\ \{}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (S.button[i].sw\ ==\ SW\_ON)\ \{}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ S.button[i].sw\ =\ SW\_OFF;}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00121}00121\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (S.button[i].sw\ ==\ SW\_OFF)\ \{}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ S.button[i].sw\ =\ SW\_ON;}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ S.button[i].count\ =\ V.timerint\_count;\ \textcolor{comment}{//\ so\ we\ can\ check\ button\ SW\_ON\ duration}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ S.sw\_bitmap\ |=\ 1\ <<\ i;\ \textcolor{comment}{//\ set\ switch\ pressed\ bit}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00127}00127\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00128}00128\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (++i\ <\ NUM\_SWITCHES);}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00129}00129\ }
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00130}00130\ \textcolor{preprocessor}{\#ifdef\ DEBUG\_SWH1}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00131}00131\ \ \ \ \ DEBUG1\_SetLow();}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00132}00132\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00133}00133\ \textcolor{preprocessor}{\#ifdef\ DEBUG\_SWH2}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00134}00134\ \ \ \ \ DEBUG2\_Toggle();}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00135}00135\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00136}00136\ }
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00137}00137\ \ \ \ \ MAX\_EN1\_SetHigh();\ \textcolor{comment}{//\ disable\ MAX\ output\ pins}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00138}00138\ \}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00139}00139\ }
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00140}00140\ \textcolor{keywordtype}{void}\ start\_switch\_handler(\textcolor{keywordtype}{void})}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00141}00141\ \{}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00142}00142\ \ \ \ \ EXT\_INT1\_InterruptDisable();}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00143}00143\ \ \ \ \ INT1\_SetInterruptHandler(switch\_handler);}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00144}00144\ \ \ \ \ S.button[SNULL].sw\ =\ SW\_INVALID;\ \textcolor{comment}{//\ set\ a\ error\ condition\ for\ invalid\ button\ number}}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00145}00145\ \ \ \ \ EXT\_INT1\_InterruptEnable();}
-\DoxyCodeLine{\Hypertarget{dio_8c_source_l00146}00146\ \}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00081}00081\ \textcolor{keywordtype}{void}\ switch\_handler0(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00082}00082\ \{}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00083}00083\ \ \ \ \ V.blight\ =\ V.ticks\ +\ BL\_TIME;}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00084}00084\ \ \ \ \ V.blight\_off\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00085}00085\ \ \ \ \ S.button[INT0\_BUTTON].sw\ =\ SW\_ON;}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00086}00086\ \ \ \ \ diversion\_pwm\_full();}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00087}00087\ \}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00089}00089\ \textcolor{keywordtype}{void}\ switch\_handler(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00090}00090\ \{}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00091}00091\ \ \ \ \ uint8\_t\ i\ =\ 0,\ sw\_value;}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00093}00093\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00094}00094\ \textcolor{comment}{\ \ \ \ \ *\ enable\ the\ outputs\ for\ reading\ and\ reset\ MAX\ Change-\/of-\/State\ pin}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00095}00095\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00096}00096\ \ \ \ \ MAX\_EN1\_SetLow();\ \textcolor{comment}{//\ rev\ 1.1+\ board}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00097}00097\ \ \ \ \ V.blight\ =\ V.ticks\ +\ BL\_TIME;}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00098}00098\ \ \ \ \ V.blight\_off\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00100}00100\ \textcolor{preprocessor}{\#ifdef\ DEBUG\_SWH1}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00101}00101\ \ \ \ \ DEBUG1\_SetHigh();}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00102}00102\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00104}00104\ \ \ \ \ \textcolor{comment}{//\ Nop\ for\ MAX\ chip\ output\ Propagation\ Delay\ after\ enable}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00105}00105\ \ \ \ \ V.switch\_count++;}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00106}00106\ \ \ \ \ Nop();}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00107}00107\ \ \ \ \ Nop();}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00108}00108\ \ \ \ \ Nop();}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00109}00109\ \ \ \ \ Nop();}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00110}00110\ \ \ \ \ Nop();}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00111}00111\ \ \ \ \ Nop();}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00112}00112\ \ \ \ \ \textcolor{comment}{//\ start\ reading\ the\ various\ pic\ port\ input\ bits\ after\ the\ max\ chip\ is\ ready}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00113}00113\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00114}00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (i)\ \{}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00115}00115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ SENTER:}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ sw\_value\ =\ ENTER\_B\_GetValue();}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00118}00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ SSELECT:}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ sw\_value\ =\ SELECT\_B\_GetValue();}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00121}00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ SCALIB:}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ sw\_value\ =\ CALIB\_GetValue();}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00124}00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ S1:}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ sw\_value\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00127}00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ S0:}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ sw\_value\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00130}00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ sw\_value\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00133}00133\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00135}00135\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ update\ actual\ current\ button\ state}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00136}00136\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sw\_value)\ \{}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (S.button[i].sw\ ==\ SW\_ON)\ \{}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ S.button[i].sw\ =\ SW\_OFF;}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00140}00140\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (S.button[i].sw\ ==\ SW\_OFF)\ \{}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ S.button[i].sw\ =\ SW\_ON;}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ S.button[i].count\ =\ V.timerint\_count;\ \textcolor{comment}{//\ so\ we\ can\ check\ button\ SW\_ON\ duration}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ S.sw\_bitmap\ |=\ 1\ <<\ i;\ \textcolor{comment}{//\ set\ switch\ pressed\ bit}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00146}00146\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00147}00147\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (++i\ <\ NUM\_SWITCHES);}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00149}00149\ \textcolor{preprocessor}{\#ifdef\ DEBUG\_SWH1}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00150}00150\ \ \ \ \ DEBUG1\_SetLow();}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00151}00151\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00152}00152\ \textcolor{preprocessor}{\#ifdef\ DEBUG\_SWH2}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00153}00153\ \ \ \ \ DEBUG2\_Toggle();}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00154}00154\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00156}00156\ \ \ \ \ MAX\_EN1\_SetHigh();\ \textcolor{comment}{//\ disable\ MAX\ output\ pins}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00157}00157\ \}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00158}00158\ }
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00159}00159\ \textcolor{keywordtype}{void}\ start\_switch\_handler(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00160}00160\ \{}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00161}00161\ \ \ \ \ EXT\_INT1\_InterruptFlagClear();}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00162}00162\ \ \ \ \ EXT\_INT1\_InterruptDisable();}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00163}00163\ \ \ \ \ INT1\_SetInterruptHandler(switch\_handler);}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00164}00164\ \ \ \ \ S.button[SNULL].sw\ =\ SW\_INVALID;\ \textcolor{comment}{//\ set\ a\ error\ condition\ for\ invalid\ button\ number}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00165}00165\ \ \ \ \ EXT\_INT1\_InterruptEnable();}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00167}00167\ \ \ \ \ EXT\_INT0\_InterruptFlagClear();}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00168}00168\ \ \ \ \ EXT\_INT0\_fallingEdgeSet();}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00169}00169\ \ \ \ \ \textcolor{comment}{//\ Set\ Default\ Interrupt\ Handler}}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00170}00170\ \ \ \ \ INT0\_SetInterruptHandler(switch\_handler0);}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00171}00171\ \ \ \ \ EXT\_INT0\_InterruptEnable();}
+\DoxyCodeLine{\Hypertarget{dio_8c_source_l00172}00172\ \}}
 
 \end{DoxyCode}

@@ -75,50 +75,52 @@
 \DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00072}00072\ \textcolor{preprocessor}{\#define\ SOC\_TOO\_LOW\ 20}}
 \DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00073}00073\ \textcolor{preprocessor}{\#define\ SOC\_CRITICAL\ \ \ \ 3}}
 \DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00074}00074\ }
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00075}00075\ \textcolor{preprocessor}{\#define\ CEF\ \ \ \ \ 1.0f}}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00076}00076\ \textcolor{preprocessor}{\#define\ PEUKERT\ \ \ \ \ 1.0f}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00075}00075\ \textcolor{preprocessor}{\#define\ CEF\ \ \ \ \ 0.9f}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00076}00076\ \textcolor{preprocessor}{\#define\ PEUKERT\ \ \ \ \ 1.3f}}
 \DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00077}00077\ }
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00078}\mbox{\hyperlink{structC__data}{00078}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structC__data}{C\_data}}\ \{\ \textcolor{comment}{//\ real\ calculated\ variables}}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00079}00079\ \ \ \ \ \textcolor{keywordtype}{float}\ calc[ADC\_BUFFER\_SIZE];}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00080}00080\ \ \ \ \ \textcolor{keywordtype}{float}\ c\_load,\ c\_bat,\ c\_pv,\ c\_mppt,\ v\_cc,\ v\_pv,\ v\_bat,\ v\_cbus,\ v\_bbat,\ v\_temp,\ v\_inverter,\ v\_sensor,\ v\_cmode,\ bv\_ror,\ bc\_ror;}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00081}00081\ \ \ \ \ \textcolor{keywordtype}{float}\ p\_load,\ p\_inverter,\ p\_pv,\ p\_bat,\ p\_mppt,\ start\_power;}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00082}00082\ \ \ \ \ \textcolor{keywordtype}{float}\ t\_comp,\ esr;}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00083}00083\ \ \ \ \ \textcolor{keywordtype}{float}\ bank\_ah,\ dynamic\_ah,\ pv\_ah,\ loadah,\ dynamic\_ah\_adj,\ dynamic\_ah\_daily,\ dynamic\_ah\_adj\_daily;}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00084}00084\ \ \ \ \ \textcolor{keywordtype}{float}\ bkwi,\ bkwo,\ pvkw,\ invkw,\ loadkw;}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00085}00085\ \ \ \ \ uint16\_t\ runtime,\ soc;}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00086}00086\ \ \ \ \ \textcolor{keywordtype}{bool}\ update;}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00087}00087\ \ \ \ \ \mbox{\hyperlink{structhist__type}{hist\_type}}\ hist[1];}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00088}00088\ \ \ \ \ \textcolor{keywordtype}{float}\ load\_i1,\ load\_i2,\ bv\_noload,\ bv\_one\_load,\ bv\_full\_load;}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00089}00089\ \ \ \ \ \textcolor{keywordtype}{bool}\ day,\ dupdate;}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00090}00090\ \ \ \ \ time\_t\ day\_start,\ day\_end,\ day\_update,\ updates;}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00091}00091\ \}\ \mbox{\hyperlink{structC__data}{C\_data}};}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00092}00092\ }
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00093}00093\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00094}00094\ \ \ \ \ WIDE\_ZERO\ =\ 1,}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00095}00095\ \ \ \ \ NO\_NEG\ =\ 2,}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00096}00096\ \ \ \ \ WIDE\_NEG\ =\ 4,}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00097}00097\ \ \ \ \ SKIP\ =\ 8,}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00098}00098\ \}\ FIX\_CODES;}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00099}00099\ }
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00100}00100\ \textcolor{keyword}{extern}\ \textcolor{keyword}{volatile}\ \mbox{\hyperlink{structC__data}{C\_data}}\ C;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00078}00078\ \textcolor{preprocessor}{\#define\ IDLE\_AMP\ \ \ \ -\/0.5\ \ }\textcolor{comment}{//\ idle\ current\ usage\ from\ the\ system}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00080}\mbox{\hyperlink{structC__data}{00080}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structC__data}{C\_data}}\ \{\ \textcolor{comment}{//\ real\ calculated\ variables}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00081}00081\ \ \ \ \ \textcolor{keywordtype}{float}\ calc[ADC\_BUFFER\_SIZE];}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00082}00082\ \ \ \ \ \textcolor{keywordtype}{float}\ c\_load,\ c\_bat,\ c\_pv,\ c\_mppt,\ v\_cc,\ v\_pv,\ v\_bat,\ v\_cbus,\ v\_bbat,\ v\_temp,\ v\_inverter,\ v\_sensor,\ v\_cmode,\ bv\_ror,\ bc\_ror;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00083}00083\ \ \ \ \ \textcolor{keywordtype}{float}\ p\_load,\ p\_inverter,\ p\_pv,\ p\_bat,\ p\_mppt,\ start\_power;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00084}00084\ \ \ \ \ \textcolor{keywordtype}{float}\ t\_comp,\ esr;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00085}00085\ \ \ \ \ \textcolor{keywordtype}{float}\ bank\_ah,\ dynamic\_ah,\ pv\_ah,\ loadah,\ dynamic\_ah\_adj,\ dynamic\_ah\_daily,\ dynamic\_ah\_adj\_daily,dynamic\_ah\_idle\ ;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00086}00086\ \ \ \ \ \textcolor{keywordtype}{float}\ bkwi,\ bkwo,\ pvkw,\ invkw,\ loadkw;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00087}00087\ \ \ \ \ uint16\_t\ runtime,\ soc;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00088}00088\ \ \ \ \ \textcolor{keywordtype}{bool}\ update;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00089}00089\ \ \ \ \ \mbox{\hyperlink{structhist__type}{hist\_type}}\ hist[1];}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00090}00090\ \ \ \ \ \textcolor{keywordtype}{float}\ load\_i1,\ load\_i2,\ bv\_noload,\ bv\_one\_load,\ bv\_full\_load;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00091}00091\ \ \ \ \ \textcolor{keywordtype}{bool}\ day,\ dupdate;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00092}00092\ \ \ \ \ time\_t\ day\_start,\ day\_end,\ day\_update,\ updates;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00093}00093\ \}\ \mbox{\hyperlink{structC__data}{C\_data}};}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00095}00095\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00096}00096\ \ \ \ \ WIDE\_ZERO\ =\ 1,}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00097}00097\ \ \ \ \ NO\_NEG\ =\ 2,}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00098}00098\ \ \ \ \ WIDE\_NEG\ =\ 4,}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00099}00099\ \ \ \ \ SKIP\ =\ 8,}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00100}00100\ \}\ FIX\_CODES;}
 \DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00101}00101\ }
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00102}00102\ \textcolor{keywordtype}{float}\ lp\_filter(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float},\ \textcolor{keyword}{const}\ uint8\_t,\ \textcolor{keyword}{const}\ int8\_t);}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00103}00103\ \textcolor{keywordtype}{void}\ convert\_adc\_data(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00104}00104\ \textcolor{keywordtype}{void}\ calc\_model\_data(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00105}00105\ \textcolor{keywordtype}{void}\ calc\_ror\_data(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00106}00106\ \textcolor{keywordtype}{void}\ static\_soc(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00107}00107\ \textcolor{keywordtype}{void}\ set\_load\_relay\_zero(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool});}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00108}00108\ \textcolor{keywordtype}{void}\ set\_load\_relay\_one(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool});}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00109}00109\ \textcolor{keywordtype}{void}\ set\_load\_relay\_two(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool});}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00110}00110\ \textcolor{keywordtype}{void}\ set\_ac\_charger\_relay(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool});}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00111}00111\ \textcolor{keywordtype}{bool}\ get\_ac\_charger\_relay(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00112}00112\ \textcolor{keywordtype}{bool}\ check\_day\_time(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00113}00113\ \textcolor{keywordtype}{void}\ load\_hist\_data(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00114}00114\ \textcolor{keywordtype}{float}\ calc\_fixups(\textcolor{keywordtype}{float}\ data,\ FIX\_CODES\ fixup);}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00115}00115\ }
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00116}00116\ \textcolor{keywordtype}{char}\ spinners(uint8\_t,\ uint8\_t);}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00117}00117\ time\_t\ time(time\_t\ *);}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00118}00118\ \textcolor{keywordtype}{void}\ set\_time(\textcolor{keyword}{const}\ time\_t\ t);}
-\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00119}00119\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00102}00102\ \textcolor{keyword}{extern}\ \textcolor{keyword}{volatile}\ \mbox{\hyperlink{structC__data}{C\_data}}\ C;}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00104}00104\ \textcolor{keywordtype}{float}\ lp\_filter(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float},\ \textcolor{keyword}{const}\ uint8\_t,\ \textcolor{keyword}{const}\ int8\_t);}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00105}00105\ \textcolor{keywordtype}{void}\ convert\_adc\_data(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00106}00106\ \textcolor{keywordtype}{void}\ calc\_model\_data(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00107}00107\ \textcolor{keywordtype}{void}\ calc\_ror\_data(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00108}00108\ \textcolor{keywordtype}{void}\ static\_soc(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00109}00109\ \textcolor{keywordtype}{void}\ set\_load\_relay\_zero(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool});}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00110}00110\ \textcolor{keywordtype}{void}\ set\_load\_relay\_one(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool});}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00111}00111\ \textcolor{keywordtype}{void}\ set\_load\_relay\_two(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool});}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00112}00112\ \textcolor{keywordtype}{void}\ set\_ac\_charger\_relay(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool});}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00113}00113\ \textcolor{keywordtype}{bool}\ get\_ac\_charger\_relay(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00114}00114\ \textcolor{keywordtype}{bool}\ check\_day\_time(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00115}00115\ \textcolor{keywordtype}{void}\ load\_hist\_data(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00116}00116\ \textcolor{keywordtype}{float}\ calc\_fixups(\textcolor{keywordtype}{float}\ data,\ FIX\_CODES\ fixup);}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00118}00118\ \textcolor{keywordtype}{char}\ spinners(uint8\_t,\ uint8\_t);}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00119}00119\ time\_t\ time(time\_t\ *);}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00120}00120\ \textcolor{keywordtype}{void}\ set\_time(\textcolor{keyword}{const}\ time\_t\ t);}
+\DoxyCodeLine{\Hypertarget{mbmc_8h_source_l00121}00121\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

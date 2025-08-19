@@ -72,7 +72,7 @@
 \DoxyCodeLine{\Hypertarget{mbmc_8c_source_l00069}00069\ }
 \DoxyCodeLine{\Hypertarget{mbmc_8c_source_l00070}00070\ \ \ \ \ \textcolor{keywordflow}{if}\ (!V.calib)\ \{}
 \DoxyCodeLine{\Hypertarget{mbmc_8c_source_l00071}00071\ \ \ \ \ \ \ \ \ C.updates++;}
-\DoxyCodeLine{\Hypertarget{mbmc_8c_source_l00072}00072\ \ \ \ \ \ \ \ \ C.c\_bat\ =\ C.calc[C\_BATT];}
+\DoxyCodeLine{\Hypertarget{mbmc_8c_source_l00072}00072\ \ \ \ \ \ \ \ \ C.c\_bat\ =\ C.calc[C\_BATT]+\ IDLE\_AMP;\ \textcolor{comment}{//\ adjust\ for\ system\ idle\ current}}
 \DoxyCodeLine{\Hypertarget{mbmc_8c_source_l00073}00073\ \ \ \ \ \ \ \ \ C.bc\_ror\ =\ C.c\_bat\ -\/\ bcror;}
 \DoxyCodeLine{\Hypertarget{mbmc_8c_source_l00074}00074\ \ \ \ \ \ \ \ \ bcror\ =\ C.c\_bat;}
 \DoxyCodeLine{\Hypertarget{mbmc_8c_source_l00075}00075\ \ \ \ \ \ \ \ \ C.c\_pv\ =\ C.calc[C\_PV];}

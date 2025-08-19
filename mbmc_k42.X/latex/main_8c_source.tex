@@ -80,8 +80,8 @@
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00095}00095\ \textcolor{comment}{\ *\ 4\ \ \ \ \ \ \ \ rf3\ \ \ \ \ PD\ 8\ \ \ \ \ \ \ \ ENTER\ \ \ 3}}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00096}00096\ \textcolor{comment}{\ *\ 5\ \ \ \ \ \ \ \ rd3\ \ \ \ \ PD\ 3\ \ \ \ \ \ \ \ CALIB\ \ \ 4}}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00097}00097\ \textcolor{comment}{\ *\ 6\ \ \ \ \ \ \ \ rd2\ \ \ \ \ PD\ 2/misc\ 2\ SW0\ 5}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00098}00098\ \textcolor{comment}{\ *\ 7\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ misc\ 3\ \ \ \ \ \ \ \ \ \ 6}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00099}00099\ \textcolor{comment}{\ *\ 8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ misc\ 4\ \ \ \ \ \ \ \ \ \ 7}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00098}00098\ \textcolor{comment}{\ *\ 7\ \ \ \ \ \ \ \ SL3\ pin3\ \ \ \ misc\ 3\ \ \ \ \ \ \ \ \ \ 6}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00099}00099\ \textcolor{comment}{\ *\ 8\ \ \ \ \ \ \ \ debug8\_led\ \ misc\ 4\ \ \ \ \ \ \ \ \ \ 7}}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00100}00100\ \textcolor{comment}{\ *}}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00101}00101\ \textcolor{comment}{\ *\ 4x20\ LCD\ status\ panel\ NHD-\/0420D3Z-\/NSW-\/BBW-\/V3\ and\ led\ status\ lights\ .}}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00102}00102\ \textcolor{comment}{\ *}}
@@ -794,24 +794,27 @@
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00809}00809\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ clock\_tick\_isr(\textcolor{keywordtype}{void})}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00810}00810\ \{}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00811}00811\ \ \ \ \ SLED\ =\ (uint8\_t)\ \string~SLED;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00812}00812\ \ \ \ \ V.timerint\_count++;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00813}00813\ \ \ \ \ V.ticks++;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00814}00814\ \ \ \ \ check\_day\_time();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00815}00815\ \ \ \ \ V.ticker\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00816}00816\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00817}00817\ \ \ \ \ \textcolor{keywordflow}{if}\ (RELAYL1\_PORT\ ||\ RELAYL2\_PORT)\ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00818}00818\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (++V.wdt\_ticks\ >\ MAX\_LOAD\_TIME)\ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00819}00819\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (1)\ \{\ \textcolor{comment}{//\ shutdown\ load\ relays\ and\ lockup\ for\ WDT\ to\ reboot}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00820}00820\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ RELAYL1\_SetLow();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00821}00821\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DEBUG2\_Toggle();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00822}00822\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ RELAYL2\_SetLow();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00823}00823\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DEBUG1\_Toggle();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00824}00824\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SLED\ =\ (uint8\_t)\ \string~SLED;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00825}00825\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00826}00826\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00827}00827\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00828}00828\ \ \ \ \ \ \ \ \ V.wdt\_ticks\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00829}00829\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00830}00830\ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00812}00812\ \ \ \ \ \textcolor{keywordflow}{if}\ (check\_mode\_switch())\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00813}00813\ \ \ \ \ \ \ \ \ diversion\_pwm\_set(255);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00814}00814\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00815}00815\ \ \ \ \ V.timerint\_count++;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00816}00816\ \ \ \ \ V.ticks++;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00817}00817\ \ \ \ \ check\_day\_time();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00818}00818\ \ \ \ \ V.ticker\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00819}00819\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00820}00820\ \ \ \ \ \textcolor{keywordflow}{if}\ (RELAYL1\_PORT\ ||\ RELAYL2\_PORT)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00821}00821\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (++V.wdt\_ticks\ >\ MAX\_LOAD\_TIME)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00822}00822\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (1)\ \{\ \textcolor{comment}{//\ shutdown\ load\ relays\ and\ lockup\ for\ WDT\ to\ reboot}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00823}00823\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ RELAYL1\_SetLow();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00824}00824\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DEBUG2\_Toggle();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00825}00825\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ RELAYL2\_SetLow();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00826}00826\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DEBUG1\_Toggle();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00827}00827\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SLED\ =\ (uint8\_t)\ \string~SLED;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00828}00828\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00829}00829\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00830}00830\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00831}00831\ \ \ \ \ \ \ \ \ V.wdt\_ticks\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00832}00832\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00833}00833\ \}}
 
 \end{DoxyCode}

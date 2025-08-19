@@ -4235,7 +4235,7 @@ design rules under a new name.</description>
 <wire x1="101.2698" y1="11.3538" x2="101.275" y2="11.361" width="0.1524" layer="1"/>
 <wire x1="87.63" y1="5.1054" x2="87.63" y2="5.08" width="0.1524" layer="1"/>
 </signal>
-<signal name="N$49">
+<signal name="CAL_SW">
 <contactref element="INP" pad="4"/>
 <contactref element="U$1" pad="IN5"/>
 <wire x1="101.8794" y1="10.4394" x2="101.8794" y2="11.3538" width="0.1524" layer="1"/>

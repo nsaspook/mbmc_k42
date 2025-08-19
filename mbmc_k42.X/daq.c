@@ -396,16 +396,19 @@ bool cal_current_zero(const bool mode, const int16_t cb, const int16_t cp, const
 /*
  * update internal current scaling using a calibrated 10A value in both sensors
  */
-bool cal_current_10A(const bool mode, const int16_t cb, const int16_t cp, const float scaleb, const float scalep)
+bool cal_current_10A(const bool mode, const int16_t cb, const int16_t cp, const int16_t cm, const float scaleb, const float scalep, const float scalem)
 {
 #ifdef BAT_100A
 	if (!check_range(cb, TEN_A_RANGE, C_CAL_A100))
 #else
-	if (!check_range(cb, TEN_A_RANGE, C_CAL_A200))
+	if (!check_range(cb, TEN_A_RANGE, C_CAL_A100M))
 #endif
 		return false;
 
 	if (!check_range(cp, TEN_A_RANGE, C_CAL_A100))
+		return false;
+	
+	if (!check_range(cm, TEN_A_RANGE, C_CAL_A200))
 		return false;
 
 	if (!mode)
@@ -417,7 +420,7 @@ bool cal_current_10A(const bool mode, const int16_t cb, const int16_t cp, const 
 	R.n_scalar[A200] = scaleb;
 #endif
 	R.n_scalar[A100] = scalep;
-	R.n_scalar[A100M] = scalep;
+	R.n_scalar[A100M] = scalem;
 	R.c_scale_cal = true;
 	return true;
 }

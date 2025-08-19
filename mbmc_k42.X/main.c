@@ -445,8 +445,11 @@ void main(void)
 			update_lcd(0);
 			WaitMs(400);
 #endif
+
 			V.sensor_set = get_switch(SCALIB);
-			WaitMs(1000);
+			sprintf(get_vterm_ptr(2, 0), "CAL SW CHECK %d          ", V.sensor_set);
+			update_lcd(0);
+			WaitMs(3400);
 			if (V.sensor_set && get_switch(SCALIB)) {
 				current_sensor_cal();
 				WaitMs(4000);
@@ -679,14 +682,14 @@ static bool current_sensor_cal(void)
 
 	x = 0;
 	do {
-		cb += get_raw_result(C_BATT); // get a average result
-		cp += get_raw_result(C_PV);
-		cm += get_raw_result(C_MPPT);
+		cb += get_raw_result(C_PV); // get a average result
+		cp += get_raw_result(C_MPPT);
+		cm += get_raw_result(C_BATT);
 #ifdef CAL_TWO
 		cm = cp;
 #endif
 		sprintf(get_vterm_ptr(0, 0), "Sensor Readings      ");
-		sprintf(get_vterm_ptr(1, 0), " %d %d %d              ", get_raw_result(C_BATT), get_raw_result(C_PV), get_raw_result(C_MPPT));
+		sprintf(get_vterm_ptr(1, 0), "%d %d %d              ", get_raw_result(C_PV), get_raw_result(C_MPPT), get_raw_result(C_BATT));
 		sprintf(get_vterm_ptr(2, 0), "Stability clock %d   ", x);
 		update_lcd(0);
 		clear_adc_scan();
@@ -699,23 +702,23 @@ static bool current_sensor_cal(void)
 
 	if (cal_current_zero(false, (int16_t) cb, (int16_t) cp, (int16_t) cm)) {
 		cal_current_zero(true, (int16_t) cb, (int16_t) cp, (int16_t) cm);
-		sprintf(get_vterm_ptr(0, 0), "Battery and PV       ");
-		sprintf(get_vterm_ptr(1, 0), " %ld %ld %ld            ", cb, cp, cm);
-		sprintf(get_vterm_ptr(2, 0), "Zero Cal Set         ");
+		sprintf(get_vterm_ptr(0, 0), "Battery and PV         ");
+		sprintf(get_vterm_ptr(1, 0), "%ld %ld %ld            ", cb, cp, cm);
+		sprintf(get_vterm_ptr(2, 0), "Zero Cal Set           ");
 		update_lcd(0);
 		WaitMs(2000);
 		write_cal_data();
 	} else {
-		sprintf(get_vterm_ptr(0, 0), "Battery and PV       ");
-		sprintf(get_vterm_ptr(1, 0), " %ld %ld %ld            ", cb, cp, cm);
-		sprintf(get_vterm_ptr(2, 0), "Zero Out Of Range    ");
+		sprintf(get_vterm_ptr(0, 0), "Battery and PV         ");
+		sprintf(get_vterm_ptr(1, 0), "%ld %ld %ld            ", cb, cp, cm);
+		sprintf(get_vterm_ptr(2, 0), "Zero Out Of Range      ");
 		update_lcd(0);
 		WaitMs(2000);
 		return false;
 	}
 
 #ifdef CAL_10A
-	uint32_t cbz, cpz;
+	uint32_t cbz, cpz, cmz;
 
 	clear_switch(SCALIB);
 	sprintf(get_vterm_ptr(0, 0), "Battery and PV      ");
@@ -735,14 +738,17 @@ static bool current_sensor_cal(void)
 	x = 0;
 	cbz = cb;
 	cpz = cp;
+	cmz = cm;
 	cb = 0;
 	cp = 0;
+	cm = 0;
 	do {
-		cb += get_raw_result(C_BATT);
-		cp += get_raw_result(C_PV);
-		sprintf(get_vterm_ptr(0, 0), "Sensor Readings      ");
-		sprintf(get_vterm_ptr(1, 0), " %d %d               ", get_raw_result(C_BATT), get_raw_result(C_PV));
-		sprintf(get_vterm_ptr(2, 0), "Stability clock %d   ", x);
+		cb += get_raw_result(C_PV);
+		cp += get_raw_result(C_MPPT);
+		cm += get_raw_result(C_BATT);
+		sprintf(get_vterm_ptr(0, 0), "Sensor Readings        ");
+		sprintf(get_vterm_ptr(1, 0), "%d %d %d               ", get_raw_result(C_PV), get_raw_result(C_MPPT), get_raw_result(C_BATT));
+		sprintf(get_vterm_ptr(2, 0), "Stability clock %d     ", x);
 		update_lcd(0);
 		clear_adc_scan();
 		start_adc_scan();
@@ -750,19 +756,20 @@ static bool current_sensor_cal(void)
 	} while (++x < CAL_DELAY);
 	cb = cb >> 6;
 	cp = cp >> 6;
+	cm = cm >> 6;
 
-	if (cal_current_10A(false, cb, cp, 0.0, 0.0)) {
-		cal_current_10A(true, cb, cp, 10.0 / (float) (cb - cbz), 10.0 / (float) (cp - cpz));
-		sprintf(get_vterm_ptr(0, 0), "Battery and PV       ");
-		sprintf(get_vterm_ptr(1, 0), " %f %f               ", 10.0 / (float) ((cb - cbz) + 1), 10.0 / (float) ((cp - cpz) + 1));
-		sprintf(get_vterm_ptr(2, 0), "10A Cal Set          ");
+	if (cal_current_10A(false, cb, cp, cm, 0.0, 0.0, 0.0)) {
+		cal_current_10A(true, cb, cp, cm, 10.0 / (float) (cb - cbz), 10.0 / (float) (cp - cpz), 10.0 / (float) (cm - cmz));
+		sprintf(get_vterm_ptr(0, 0), "Bat PV MPPT           ");
+		sprintf(get_vterm_ptr(1, 0), "%f %f %f              ", 10.0 / (float) ((cb - cbz) + 1), 10.0 / (float) ((cp - cpz) + 1), 10.0 / (float) ((cm - cmz) + 1));
+		sprintf(get_vterm_ptr(2, 0), "10A Cal Set           ");
 		update_lcd(0);
 		WaitMs(5000);
 		write_cal_data();
 	} else {
-		sprintf(get_vterm_ptr(0, 0), "Battery and PV       ");
-		sprintf(get_vterm_ptr(1, 0), " %ld %ld             ", get_raw_result(C_BATT), get_raw_result(C_PV));
-		sprintf(get_vterm_ptr(2, 0), "10A Out Of Range     ");
+		sprintf(get_vterm_ptr(0, 0), "Bat PV  MPPT        ");
+		sprintf(get_vterm_ptr(1, 0), "%d %d %d            ", get_raw_result(C_PV), get_raw_result(C_MPPT), get_raw_result(C_BATT));
+		sprintf(get_vterm_ptr(2, 0), "10A Out Of Range      ");
 		update_lcd(0);
 		WaitMs(2000);
 

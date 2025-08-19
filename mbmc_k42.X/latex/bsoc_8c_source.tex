@@ -316,7 +316,7 @@
 \DoxyCodeLine{\Hypertarget{bsoc_8c_source_l00313}00313\ \ \ \ \ \ \ \ \ adj\ =\ C.hist[0].cef;}
 \DoxyCodeLine{\Hypertarget{bsoc_8c_source_l00314}00314\ \ \ \ \ \textcolor{keywordflow}{if}\ (C.c\_pv\ <\ 0.01)}
 \DoxyCodeLine{\Hypertarget{bsoc_8c_source_l00315}00315\ \ \ \ \ \ \ \ \ adj\ =\ C.hist[0].peukert;}
-\DoxyCodeLine{\Hypertarget{bsoc_8c_source_l00316}00316\ \ \ \ \ C.dynamic\_ah\ +=\ ((C.c\_pv\ *\ adj)\ /\ SSLICE);\ \textcolor{comment}{//\ Ah}}
+\DoxyCodeLine{\Hypertarget{bsoc_8c_source_l00316}00316\ \ \ \ \ C.dynamic\_ah\ +=\ (((C.c\_pv\ )\ *\ adj)\ /\ SSLICE);}
 \DoxyCodeLine{\Hypertarget{bsoc_8c_source_l00317}00317\ }
 \DoxyCodeLine{\Hypertarget{bsoc_8c_source_l00318}00318\ \ \ \ \ C.dynamic\_ah\_adj\ =\ C.dynamic\_ah;\ \textcolor{comment}{//\ need\ to\ add\ peukert\ factor\ here}}
 \DoxyCodeLine{\Hypertarget{bsoc_8c_source_l00319}00319\ \ \ \ \ C.dynamic\_ah\_adj\_daily\ =\ C.dynamic\_ah\_daily;\ \textcolor{comment}{//\ need\ to\ add\ peukert\ factor\ here}}

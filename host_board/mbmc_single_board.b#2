@@ -70,7 +70,7 @@
 <hole x="111.76" y="77.47" drill="2.5"/>
 <hole x="3.81" y="77.47" drill="2.5"/>
 <text x="2.54" y="33.02" size="1.778" layer="1" font="vector" ratio="15" rot="R90">MBMC CPU/IO BOARD</text>
-<text x="2.54" y="12.7" size="1.778" layer="1" font="vector" ratio="15" rot="R90">FGB@MCHP 2.0</text>
+<text x="2.54" y="7.62" size="1.778" layer="1" font="vector" ratio="15" rot="R90">FGB@NSASPOOK 2.0</text>
 <text x="90.17" y="38.1" size="1.778" layer="1" font="vector" ratio="15" rot="R90">POWER</text>
 <text x="94.107" y="-6.35" size="0.0508" layer="200" font="vector" rot="R90">/fred/Downloads/mchp.bmp</text>
 </plain>
@@ -3768,7 +3768,7 @@ design rules under a new name.</description>
 <wire x1="107.2134" y1="3.2004" x2="104.9274" y2="3.2004" width="0.3" layer="1"/>
 <wire x1="111.5568" y1="7.5438" x2="107.2134" y2="3.2004" width="0.3" layer="1"/>
 <wire x1="111.5568" y1="10.8204" x2="111.5568" y2="7.5438" width="0.3" layer="1"/>
-<wire x1="110.5662" y1="11.811" x2="111.5568" y2="10.8204" width="0.3" layer="1"/>
+<wire x1="110.49" y1="11.8872" x2="111.5568" y2="10.8204" width="0.3" layer="1"/>
 <wire x1="103.0224" y1="5.1054" x2="102.87" y2="5.08" width="0.3" layer="1"/>
 <wire x1="80.01" y1="38.1" x2="80.01" y2="35.56" width="0.3" layer="16"/>
 <wire x1="77.47" y1="40.64" x2="80.01" y2="38.1" width="0.3" layer="16"/>
@@ -3881,13 +3881,17 @@ design rules under a new name.</description>
 <wire x1="110.5662" y1="27.051" x2="111.5568" y2="26.0604" width="0.3" layer="1"/>
 <wire x1="110.5662" y1="19.6596" x2="110.49" y2="19.53" width="0.3" layer="1"/>
 <wire x1="110.5662" y1="27.051" x2="110.49" y2="27.15" width="0.3" layer="1"/>
-<wire x1="110.49" y1="34.7472" x2="110.49" y2="34.77" width="0" layer="19" extent="1-1"/>
-<wire x1="110.49" y1="27.15" x2="110.49" y2="29.337" width="0" layer="19" extent="1-1"/>
-<wire x1="110.5662" y1="11.811" x2="110.49" y2="11.91" width="0" layer="19" extent="1-1"/>
-<wire x1="110.3376" y1="27.1272" x2="110.49" y2="27.15" width="0" layer="19" extent="1-1"/>
-<wire x1="93.98" y1="16.99" x2="93.9546" y2="16.9926" width="0" layer="19" extent="1-1"/>
-<wire x1="74.93" y1="6.35" x2="75.057" y2="6.4008" width="0" layer="19" extent="1-1"/>
-<wire x1="74.9046" y1="6.3246" x2="74.93" y2="6.35" width="0" layer="19" extent="1-1"/>
+<wire x1="110.49" y1="34.8234" x2="110.49" y2="34.77" width="0.3" layer="1"/>
+<wire x1="110.49" y1="34.77" x2="110.49" y2="34.7472" width="0.3" layer="1"/>
+<wire x1="110.49" y1="27.15" x2="110.49" y2="29.337" width="0.3" layer="1"/>
+<wire x1="110.49" y1="11.8872" x2="110.49" y2="11.91" width="0.3" layer="1"/>
+<wire x1="74.9808" y1="6.4008" x2="74.93" y2="6.35" width="0.3" layer="1"/>
+<wire x1="74.93" y1="6.35" x2="74.9046" y2="6.3246" width="0.3" layer="1"/>
+<wire x1="74.9808" y1="6.3246" x2="74.93" y2="6.35" width="0.3" layer="1"/>
+<wire x1="74.9808" y1="6.3246" x2="75.057" y2="6.4008" width="0.3" layer="1"/>
+<wire x1="93.9546" y1="16.9926" x2="93.98" y2="16.99" width="0.3" layer="1"/>
+<wire x1="110.4138" y1="27.1272" x2="110.49" y2="27.15" width="0.3" layer="1"/>
+<wire x1="110.4138" y1="27.1272" x2="110.3376" y2="27.1272" width="0.3" layer="1"/>
 </signal>
 <signal name="ANA1_IN_C-PV">
 <contactref element="J1" pad="2"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -70,7 +70,7 @@
 <hole x="74.93" y="64.77" drill="2.5"/>
 <hole x="27.94" y="30.48" drill="6.858"/>
 <text x="20.32" y="17.78" size="1.778" layer="1" font="vector" ratio="16" rot="R90">MBMC CURRENT and DAC BOARD 1.1</text>
-<text x="30.48" y="62.23" size="1.27" layer="1" font="vector" ratio="15">fgb@mchp</text>
+<text x="30.48" y="62.23" size="1.27" layer="1" font="vector" ratio="15">fgb@m</text>
 </plain>
 <libraries>
 <library name="maxim" urn="urn:adsk.eagle:library:269">
