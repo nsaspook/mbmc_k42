@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -11306,6 +11306,10 @@ W = angled&lt;p&gt;
 <sheets>
 <sheet>
 <plain>
+<text x="114.3" y="50.8" size="1.778" layer="91">gnd/black/drain           1
+sensor  white                2
+5vdc reg  green            3
++12vdc red                    4</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="63.5" y="55.88" smashed="yes">
@@ -11595,6 +11599,7 @@ W = angled&lt;p&gt;
 <pinref part="SUPPLY6" gate="GND" pin="GND"/>
 <junction x="93.98" y="50.8"/>
 <junction x="101.6" y="53.34"/>
+<label x="96.52" y="53.34" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="C2" gate="G$1" pin="2"/>
@@ -11721,7 +11726,7 @@ W = angled&lt;p&gt;
 <junction x="-20.32" y="55.88"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="SENSOR_OUT" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="OUTPUT"/>
 <wire x1="35.56" y1="55.88" x2="35.56" y2="76.2" width="0.1524" layer="91"/>
@@ -11741,9 +11746,10 @@ W = angled&lt;p&gt;
 <wire x1="119.38" y1="68.58" x2="96.52" y2="68.58" width="0.1524" layer="91"/>
 <junction x="96.52" y="68.58"/>
 <junction x="119.38" y="68.58"/>
+<label x="45.72" y="73.66" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$1" class="1">
+<net name="5VDC_REG" class="1">
 <segment>
 <pinref part="IC2" gate="G$1" pin="VS_(+)"/>
 <wire x1="0" y1="55.88" x2="0" y2="78.74" width="0.1524" layer="91"/>
@@ -11792,6 +11798,7 @@ W = angled&lt;p&gt;
 <pinref part="SV1" gate="1" pin="2"/>
 <junction x="119.38" y="73.66"/>
 <wire x1="119.38" y1="73.66" x2="121.92" y2="73.66" width="0.1524" layer="91"/>
+<label x="78.74" y="66.04" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -12037,6 +12044,10 @@ W = angled&lt;p&gt;
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)

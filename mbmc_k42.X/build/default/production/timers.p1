@@ -1,12 +1,12 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F17314 `(v ~T0 @X0 0 tf ]
-[v F17316 `(v ~T0 @X0 0 tf ]
+[v F17351 `(v ~T0 @X0 0 tf ]
+[v F17353 `(v ~T0 @X0 0 tf ]
 "8 timers.c
 [v _tickCount `Vus ~T0 @X0 -> 0 `x e ]
 "36
-[c E17253 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 .. ]
-[n E17253 APP_TIMERS TMR_INTERNAL TMR_ADC TMR_T2 TMR_T3 TMR_T4 TMR_MC_TX TMR_HBIO TMR_INFO TMR_HELP TMR_HELPDIS TMR_DISPLAY TMR_FLIPPER TMR_ESR TMR_TEXT TMR_SPIN TMR_GTI TMR_COUNT  ]
-"8 /opt/microchip/xc8/v3.00/pic/include/builtins.h
+[c E17290 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 .. ]
+[n E17290 APP_TIMERS TMR_INTERNAL TMR_ADC TMR_T2 TMR_T3 TMR_T4 TMR_MC_TX TMR_HBIO TMR_INFO TMR_HELP TMR_HELPDIS TMR_DISPLAY TMR_FLIPPER TMR_ESR TMR_TEXT TMR_SPIN TMR_GTI TMR_COUNT  ]
+"8 /ldrv/microchip/xc8/v3.10/pic/include/builtins.h
 [v ___nop `(v ~T0 @X0 0 ef ]
 [p i ___nop ]
 "192 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.15.303/xc8/pic/include/proc/pic18f57k42.h
@@ -1525,10 +1525,195 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSH equ 03FFEh ;# ">
 "49370
 [; <" TOSU equ 03FFFh ;# ">
+"116 ./vconfig.h
+[v _EADOGM_CMD_CLR `Cuc ~T0 @X0 1 s ]
+[i _EADOGM_CMD_CLR
+-> -> 1 `i `uc
+]
+"117
+[v _EADOGM_CMD_CURSOR_ON `Cuc ~T0 @X0 1 s ]
+[i _EADOGM_CMD_CURSOR_ON
+-> -> 15 `i `uc
+]
+"118
+[v _EADOGM_CMD_CURSOR_OFF `Cuc ~T0 @X0 1 s ]
+[i _EADOGM_CMD_CURSOR_OFF
+-> -> 12 `i `uc
+]
+"119
+[v _EADOGM_CMD_DISPLAY_ON `Cuc ~T0 @X0 1 s ]
+[i _EADOGM_CMD_DISPLAY_ON
+-> -> 12 `i `uc
+]
+"120
+[v _EADOGM_CMD_DISPLAY_OFF `Cuc ~T0 @X0 1 s ]
+[i _EADOGM_CMD_DISPLAY_OFF
+-> -> 8 `i `uc
+]
+"121
+[v _EADOGM_CMD_DDRAM_ADDR `Cuc ~T0 @X0 1 s ]
+[i _EADOGM_CMD_DDRAM_ADDR
+-> -> 128 `i `uc
+]
+"122
+[v _EADOGM_CMD_CGRAM_ADDR `Cuc ~T0 @X0 1 s ]
+[i _EADOGM_CMD_CGRAM_ADDR
+-> -> 64 `i `uc
+]
+"123
+[v _EADOGM_CMD_SELECT_R0 `Cuc ~T0 @X0 1 s ]
+[i _EADOGM_CMD_SELECT_R0
+-> -> 24 `i `uc
+]
+"124
+[v _EADOGM_CMD_SELECT_R1 `Cuc ~T0 @X0 1 s ]
+[i _EADOGM_CMD_SELECT_R1
+-> -> 16 `i `uc
+]
+"125
+[v _EADOGM_CMD_SET_TABLE2 `Cuc ~T0 @X0 1 s ]
+[i _EADOGM_CMD_SET_TABLE2
+-> -> 42 `i `uc
+]
+"130
+[v _T1 `Cus ~T0 @X0 1 s ]
+[i _T1
+-> -> 500 `i `us
+]
+"131
+[v _T2 `Cus ~T0 @X0 1 s ]
+[i _T2
+-> -> 3000 `i `us
+]
+"132
+[v _T3 `Cus ~T0 @X0 1 s ]
+[i _T3
+-> -> 5000 `i `us
+]
+"133
+[v _T4 `Cus ~T0 @X0 1 s ]
+[i _T4
+-> -> 5000 `i `us
+]
+"134
+[v _HBTS `Cus ~T0 @X0 1 s ]
+[i _HBTS
+-> -> 5000 `i `us
+]
+"135
+[v _HBTL `Cus ~T0 @X0 1 s ]
+[i _HBTL
+-> -> 30000 `i `us
+]
+"136
+[v _RTY `Cuc ~T0 @X0 1 s ]
+[i _RTY
+-> -> 3 `i `uc
+]
+"137
+[v _ERROR_CHECKSUM `Cus ~T0 @X0 1 s ]
+[i _ERROR_CHECKSUM
+-> -> 31500 `i `us
+]
+"138
+[v _ERROR_COMM `Cus ~T0 @X0 1 s ]
+[i _ERROR_COMM
+-> -> 31500 `i `us
+]
+"141
+[v _TDELAY `Cus ~T0 @X0 1 s ]
+[i _TDELAY
+-> -> 3000 `i `us
+]
+"142
+[v _LDELAY `Cus ~T0 @X0 1 s ]
+[i _LDELAY
+-> -> 1000 `i `us
+]
+"143
+[v _SDELAY `Cus ~T0 @X0 1 s ]
+[i _SDELAY
+-> -> 500 `i `us
+]
+"144
+[v _BDELAY `Cus ~T0 @X0 1 s ]
+[i _BDELAY
+-> -> 300 `i `us
+]
+"145
+[v _DDELAY `Cus ~T0 @X0 1 s ]
+[i _DDELAY
+-> -> 125 `i `us
+]
+"146
+[v _TXTDELAY `Cus ~T0 @X0 1 s ]
+[i _TXTDELAY
+-> -> 10000 `i `us
+]
+"147
+[v _SOCDELAY `Cus ~T0 @X0 1 s ]
+[i _SOCDELAY
+-> -> 250 `i `us
+]
+"148
+[v _DFLIP `Cus ~T0 @X0 1 s ]
+[i _DFLIP
+-> -> 1500 `i `us
+]
+"150
+[v _LOG_WAIT `Cuc ~T0 @X0 1 s ]
+[i _LOG_WAIT
+-> -> 1 `i `uc
+]
+"154
+[v _CAL_DELAY `Cuc ~T0 @X0 1 s ]
+[i _CAL_DELAY
+-> -> 64 `i `uc
+]
+"175
+[v _CC_DEACT `Cuc ~T0 @X0 1 s ]
+[i _CC_DEACT
+-> -> 74 `i `uc
+]
+"176
+[v _CC_ACT `Cuc ~T0 @X0 1 s ]
+[i _CC_ACT
+-> -> 100 `i `uc
+]
+"177
+[v _CC_MPPT `Cuc ~T0 @X0 1 s ]
+[i _CC_MPPT
+-> -> 120 `i `uc
+]
+"178
+[v _CC_EQUAL `Cuc ~T0 @X0 1 s ]
+[i _CC_EQUAL
+-> -> 140 `i `uc
+]
+"179
+[v _CC_BOOST `Cuc ~T0 @X0 1 s ]
+[i _CC_BOOST
+-> -> 160 `i `uc
+]
+"180
+[v _CC_FLOAT `Cuc ~T0 @X0 1 s ]
+[i _CC_FLOAT
+-> -> 180 `i `uc
+]
+"181
+[v _CC_LIMIT `Cuc ~T0 @X0 1 s ]
+[i _CC_LIMIT
+-> -> 200 `i `uc
+]
+"182
+[v _CC_OFFLINE `Cuc ~T0 @X0 1 s ]
+[i _CC_OFFLINE
+-> -> 240 `i `uc
+]
 "517 ./mcc_generated_files/uart1.h
-[v _UART1_RxInterruptHandler `*F17314 ~T0 @X0 1 e ]
+[v _UART1_RxInterruptHandler `*F17351 ~T0 @X0 1 e ]
 "535
-[v _UART1_TxInterruptHandler `*F17316 ~T0 @X0 1 e ]
+[v _UART1_TxInterruptHandler `*F17353 ~T0 @X0 1 e ]
 "13 timers.c
 [v _StartTimer `(v ~T0 @X0 1 ef2`Cuc`Cus ]
 "14
@@ -1582,7 +1767,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "35
 [f ]
 "36
-[e ( _StartTimer (2 , -> . `E17253 0 `uc _numMilliseconds ]
+[e ( _StartTimer (2 , -> . `E17290 0 `uc _numMilliseconds ]
 "37
 [e $U 2314  ]
 [e :U 2315 ]
@@ -1601,7 +1786,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 2314 ]
 "37
-[e $ ! != -> ( _TimerDone (1 -> . `E17253 0 `uc `i -> 0 `i 2315  ]
+[e $ ! != -> ( _TimerDone (1 -> . `E17290 0 `uc `i -> 0 `i 2315  ]
 [e :U 2316 ]
 "45
 [e :UE 2313 ]
@@ -1613,26 +1798,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _sw_timers_isr ]
 [f ]
 "49
-[v F17335 `uc ~T0 @X0 1 s i ]
+[v F17372 `uc ~T0 @X0 1 s i ]
 "52
 {
-[e = F17335 -> -> 0 `i `uc ]
-[e $ < -> F17335 `i -> . `E17253 16 `i 2318  ]
+[e = F17372 -> -> 0 `i `uc ]
+[e $ < -> F17372 `i -> . `E17290 16 `i 2318  ]
 [e $U 2319  ]
 [e :U 2318 ]
 {
 "53
-[e $ ! != -> *U + &U _tickCount * -> F17335 `ux -> -> # *U &U _tickCount `ui `ux `ui -> -> 0 `i `ui 2321  ]
+[e $ ! != -> *U + &U _tickCount * -> F17372 `ux -> -> # *U &U _tickCount `ui `ux `ui -> -> 0 `i `ui 2321  ]
 {
 "54
-[e -- *U + &U _tickCount * -> F17335 `ux -> -> # *U &U _tickCount `ui `ux -> -> 1 `i `us ]
+[e -- *U + &U _tickCount * -> F17372 `ux -> -> # *U &U _tickCount `ui `ux -> -> 1 `i `us ]
 "55
 }
 [e :U 2321 ]
 "56
 }
-[e ++ F17335 -> -> 1 `i `uc ]
-[e $ < -> F17335 `i -> . `E17253 16 `i 2318  ]
+[e ++ F17372 -> -> 1 `i `uc ]
+[e $ < -> F17372 `i -> . `E17290 16 `i 2318  ]
 [e :U 2319 ]
 }
 "57

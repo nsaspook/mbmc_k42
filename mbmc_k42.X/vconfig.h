@@ -113,45 +113,45 @@ extern "C" {
 
 #define SLED	LED0_LAT
 
-#define EADOGM_CMD_CLR		1
-#define EADOGM_CMD_CURSOR_ON     0b00001111
-#define EADOGM_CMD_CURSOR_OFF    0b00001100
-#define EADOGM_CMD_DISPLAY_ON    0b00001100
-#define EADOGM_CMD_DISPLAY_OFF   0b00001000
-#define EADOGM_CMD_DDRAM_ADDR    0b10000000
-#define EADOGM_CMD_CGRAM_ADDR    0b01000000
-#define EADOGM_CMD_SELECT_R0     0b00011000
-#define EADOGM_CMD_SELECT_R1     0b00010000
-#define EADOGM_CMD_SET_TABLE2    0b00101010
+	static const uint8_t EADOGM_CMD_CLR = 1;
+	static const uint8_t EADOGM_CMD_CURSOR_ON = 0b00001111;
+	static const uint8_t EADOGM_CMD_CURSOR_OFF = 0b00001100;
+	static const uint8_t EADOGM_CMD_DISPLAY_ON = 0b00001100;
+	static const uint8_t EADOGM_CMD_DISPLAY_OFF = 0b00001000;
+	static const uint8_t EADOGM_CMD_DDRAM_ADDR = 0b10000000;
+	static const uint8_t EADOGM_CMD_CGRAM_ADDR = 0b01000000;
+	static const uint8_t EADOGM_CMD_SELECT_R0 = 0b00011000;
+	static const uint8_t EADOGM_CMD_SELECT_R1 = 0b00010000;
+	static const uint8_t EADOGM_CMD_SET_TABLE2 = 0b00101010;
 #define EADOGM_COLSPAN		16
 
 #define NHD		// 4x20 SPI display
 
-#define T1	500
-#define T2	3000
-#define T3	5000
-#define T4	5000
-#define HBTS	5000 // short ping delay
-#define HBTL	30000 // ping delay
-#define	RTY	3
-#define ERROR_CHECKSUM	31500
-#define ERROR_COMM	31500
+	static const uint16_t T1 = 500;
+	static const uint16_t T2 = 3000;
+	static const uint16_t T3 = 5000;
+	static const uint16_t T4 = 5000;
+	static const uint16_t HBTS = 5000; // short ping delay
+	static const uint16_t HBTL = 30000; // ping delay
+	static const uint8_t RTY = 3;
+	static const uint16_t ERROR_CHECKSUM = 31500;
+	static const uint16_t ERROR_COMM = 31500;
 
 #define DEFAULT_TID	1
-#define TDELAY	3000
-#define LDELAY	1000
-#define SDELAY	500
-#define BDELAY	300
-#define DDELAY	125  // display update spacing 125
-#define TXTDELAY 10000 // unix time from server timeout
-#define SOCDELAY 250 // sync SPI and UART dma 250
-#define DFLIP	1500 // display info flipping spacing
+	static const uint16_t TDELAY = 3000;
+	static const uint16_t LDELAY = 1000;
+	static const uint16_t SDELAY = 500;
+	static const uint16_t BDELAY = 300;
+	static const uint16_t DDELAY = 125; // display update spacing 125
+	static const uint16_t TXTDELAY = 10000; // unix time from server timeout
+	static const uint16_t SOCDELAY = 250; // sync SPI and UART dma 250
+	static const uint16_t DFLIP = 1500; // display info flipping spacing
 
-#define LOG_WAIT	1 // data logging interval in seconds
+	static const uint8_t LOG_WAIT = 1; // data logging interval in seconds
 #define D_CODE		'5'  // data logging line code version
 #define I_CODE		'*'  // info logging line code
 
-#define CAL_DELAY	64
+	static const uint8_t CAL_DELAY = 64;
 	//#define SKIP_ESR
 
 	/*
@@ -172,14 +172,14 @@ extern "C" {
 
 #define BL_TIME		300 // 5 min
 
-#define CC_DEACT	74	// 1.10
-#define CC_ACT		100	// 1.43
-#define CC_MPPT		120	// 1.75
-#define CC_EQUAL	140	// 2.10
-#define CC_BOOST	160	// 2.45
-#define CC_FLOAT	180	// 2.82
-#define CC_LIMIT	200	// 3.20
-#define CC_OFFLINE	240	// 4.00
+	static const uint8_t CC_DEACT = 74; // 1.10
+	static const uint8_t CC_ACT = 100; // 1.43
+	static const uint8_t CC_MPPT = 120; // 1.75
+	static const uint8_t CC_EQUAL = 140; // 2.10
+	static const uint8_t CC_BOOST = 160; // 2.45
+	static const uint8_t CC_FLOAT = 180; // 2.82
+	static const uint8_t CC_LIMIT = 200; // 3.20
+	static const uint8_t CC_OFFLINE = 240; // 4.00
 
 #define max_port_data	1024
 

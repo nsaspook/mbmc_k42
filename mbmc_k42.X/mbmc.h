@@ -40,10 +40,10 @@ extern V_data V;
 
 #define LOCALTIME_OFFSET	60ul*60ul*(-8ul)
 #define LP_BUFFER_SIZE	ADC_BUFFER_SIZE+8
-#define STATIC_LOAD_POWER	14.00f
-#define BANKAH	200.0f	// baatery bank label Ah
-#define DEGRADE	25.0f	// adjust to what the battery bank Ah really is
-#define SSLICE	3600.0f	// samples per hour
+static const float STATIC_LOAD_POWER = 14.00f;
+#define BANKAH  200.0f // baatery bank label Ah
+static const float DEGRADE = 25.0f; // adjust to what the battery bank Ah really is
+static const float SSLICE = 3600.0f; // samples per hour
 
 #ifdef DEBUG_HIST1
 #define DUPDATE 600 // after dark update time offset
@@ -51,22 +51,22 @@ extern V_data V;
 #define DUPDATE 14400 // after dark update time offset
 #endif
 
-#define BLOAD1		10.0f       	// load resistor in ohms
-#define BLOAD2		2.5f       	// ditto
+static const float BLOAD1 = 10.0f; // load resistor in ohms
+static const float BLOAD2 = 2.5f; // ditto
 #define MAX_LOAD_TIME	75
 
-#define ROR_LIMIT_LOW	0.0140f
-#define ROR_LIMIT_SET	0.0001f
-#define ROR_LIMIT_NOISE	0.0051f
+static const float ROR_LIMIT_LOW = 0.0140f;
+static const float ROR_LIMIT_SET = 0.0001f;
+static const float ROR_LIMIT_NOISE = 0.0051f;
 
 #define ROR_WAIT	20
 #define ROR_TIMES	1
 
-#define DAWN_VOLTS	22.0f
-#define DUSK_VOLTS	12.0f
-#define BRIGHT_VOLTS	50.0f
-#define BAT_LOW_VOLTS	21.5f
-#define BAT_DEAD_VOLTS	18.0f
+static const float DAWN_VOLTS = 22.0f;
+static const float DUSK_VOLTS = 12.0f;
+static const float BRIGHT_VOLTS = 50.0f;
+static const float BAT_LOW_VOLTS = 21.5f;
+static const float BAT_DEAD_VOLTS = 18.0f;
 #define MAX_AC_TIME	60*60*4 // AC charger max runtime per trigger
 #define DAY_DELAY	240
 #define SOC_TOO_LOW	20
@@ -75,14 +75,14 @@ extern V_data V;
 #define CEF		0.9f
 #define PEUKERT		1.3f
 
-#define IDLE_AMP	-0.5  // idle current usage from the system
+static const float IDLE_AMP = -0.5f; // idle current usage from the system
 
 typedef struct C_data { // real calculated variables
 	float calc[ADC_BUFFER_SIZE];
 	float c_load, c_bat, c_pv, c_mppt, v_cc, v_pv, v_bat, v_cbus, v_bbat, v_temp, v_inverter, v_sensor, v_cmode, bv_ror, bc_ror;
 	float p_load, p_inverter, p_pv, p_bat, p_mppt, start_power;
 	float t_comp, esr;
-	float bank_ah, dynamic_ah, pv_ah, loadah, dynamic_ah_adj, dynamic_ah_daily, dynamic_ah_adj_daily,dynamic_ah_idle ;
+	float bank_ah, dynamic_ah, pv_ah, loadah, dynamic_ah_adj, dynamic_ah_daily, dynamic_ah_adj_daily, dynamic_ah_idle;
 	float bkwi, bkwo, pvkw, invkw, loadkw;
 	uint16_t runtime, soc;
 	bool update;

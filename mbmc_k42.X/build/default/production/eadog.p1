@@ -1,12 +1,12 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F17777 `(v ~T0 @X0 0 tf ]
-[v F17779 `(v ~T0 @X0 0 tf ]
-[v F17823 `(v ~T0 @X0 0 tf ]
-[v F17825 `(v ~T0 @X0 0 tf ]
+[v F17814 `(v ~T0 @X0 0 tf ]
+[v F17816 `(v ~T0 @X0 0 tf ]
+[v F17860 `(v ~T0 @X0 0 tf ]
+[v F17862 `(v ~T0 @X0 0 tf ]
 "186 ./vconfig.h
 [s S2303 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `us 1 `uc 1 `*uc 1 `Vl 1 ]
 [n S2303 spi_link_type SPI_LCD SPI_AUX LCD_TIMER LCD_DATA delay config txbuf int_count ]
-"8 /opt/microchip/xc8/v3.00/pic/include/builtins.h
+"8 /ldrv/microchip/xc8/v3.10/pic/include/builtins.h
 [v ___nop `(v ~T0 @X0 0 ef ]
 [p i ___nop ]
 "22877 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.15.303/xc8/pic/include/proc/pic18f57k42.h
@@ -24,12 +24,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _SPI1CON2 `Vuc ~T0 @X0 0 e@15638 ]
 "22871
 [v _SPI1CON0 `Vuc ~T0 @X0 0 e@15636 ]
-[v F17483 `(v ~T0 @X0 0 tf ]
+[v F17520 `(v ~T0 @X0 0 tf ]
 "161 ./mcc_generated_files/dma1.h
-[v _DMA1_SetSCNTIInterruptHandler `(v ~T0 @X0 0 ef1`*F17483 ]
-[v F17495 `(v ~T0 @X0 0 tf ]
+[v _DMA1_SetSCNTIInterruptHandler `(v ~T0 @X0 0 ef1`*F17520 ]
+[v F17532 `(v ~T0 @X0 0 tf ]
 "182
-[v _DMA1_SetORIInterruptHandler `(v ~T0 @X0 0 ef1`*F17495 ]
+[v _DMA1_SetORIInterruptHandler `(v ~T0 @X0 0 ef1`*F17532 ]
 "154
 [v _DMA1_SetDMAPriority `(v ~T0 @X0 0 ef1`uc ]
 "23315 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.15.303/xc8/pic/include/proc/pic18f57k42.h
@@ -106,13 +106,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _LATCbits `VS2135 ~T0 @X0 0 e@16316 ]
 "66 ./mcc_generated_files/spi1.h
 [v _SPI1_ExchangeByte `(uc ~T0 @X0 0 ef1`uc ]
-"54 /opt/microchip/xc8/v3.00/pic/include/c99/string.h
+"54 /ldrv/microchip/xc8/v3.10/pic/include/c99/string.h
 [v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
 "85 ./eadog.h
 [v _wait_lcd_done `(v ~T0 @X0 0 ef ]
 "83
 [v _wait_lcd_set `(v ~T0 @X0 0 ef ]
-"29 /opt/microchip/xc8/v3.00/pic/include/c99/string.h
+"29 /ldrv/microchip/xc8/v3.10/pic/include/c99/string.h
 [v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
 "27
 [v _memcpy `(*v ~T0 @X0 0 ef3`*v`*Cv`ui ]
@@ -127,15 +127,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "12796
 [v _DMA2DSZ `Vus ~T0 @X0 0 e@15310 ]
 "464 eadog.c
-[c E17308 0 1 2 3 4 5 .. ]
-[n E17308 . UI_STATE_INIT UI_STATE_HOST UI_STATE_DEBUG UI_STATE_LOG UI_STATE_MON UI_STATE_ERROR  ]
-[c E17289 0 1 2 3 .. ]
-[n E17289 . DIS_STR DIS_HELP DIS_ERR DIS_CLEAR  ]
+[c E17345 0 1 2 3 4 5 .. ]
+[n E17345 . UI_STATE_INIT UI_STATE_HOST UI_STATE_DEBUG UI_STATE_LOG UI_STATE_MON UI_STATE_ERROR  ]
+[c E17326 0 1 2 3 .. ]
+[n E17326 . DIS_STR DIS_HELP DIS_ERR DIS_CLEAR  ]
 "204 ./vconfig.h
-[s S2304 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 :1 `uc 1 `E17289 1 `E17289 1 `us 1 `us 1 ]
+[s S2304 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 :1 `uc 1 `E17326 1 `E17326 1 `us 1 `us 1 ]
 [n S2304 terminal_type mesgid TID mcode mparm cmdlen log_seq host_display_ack info help_temp ceid log_num ]
 "239
-[s S2305 `E17308 1 `uc -> 64 `i `uc -> 64 `i `uc -> 16 `i `Vul 1 `Vul 1 `Vul 1 `Vc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `E17308 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :2 `uc 1 :1 `uc 1 `S2304 1 `Vuc 1 `Vuc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `Va 1 `Va 1 `Va 1 `Va 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 ]
+[s S2305 `E17345 1 `uc -> 64 `i `uc -> 64 `i `uc -> 16 `i `Vul 1 `Vul 1 `Vul 1 `Vc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `E17345 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :2 `uc 1 :1 `uc 1 `S2304 1 `Vuc 1 `Vuc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `Va 1 `Va 1 `Va 1 `Va 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 ]
 [n S2305 V_data ui_state buf info rbuf ticks blight ac_time testing sys_info ac_on ac_off time_info get_time_text error abort msg_error msg_ret alarm float_ticks boost_ticks wdt_ticks ui_sw r_checksum t_checksum checksum_error mode_pwm sequences all_errors set_sequ debug help stack help_id screen response ticker cc_state flipper calib enter sensor_set fixup cc_active system_stable blight_off in_float in_boost lowint_count timerint_count tx_count rx_count adc_count spi_count switch_count ]
 "29 ./eadog.h
 [v _V `S2305 ~T0 @X0 0 e ]
@@ -1668,18 +1668,203 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSH equ 03FFEh ;# ">
 "49370
 [; <" TOSU equ 03FFFh ;# ">
+"116 ./vconfig.h
+[v _EADOGM_CMD_CLR `Cuc ~T0 @X0 1 s ]
+[i _EADOGM_CMD_CLR
+-> -> 1 `i `uc
+]
+"117
+[v _EADOGM_CMD_CURSOR_ON `Cuc ~T0 @X0 1 s ]
+[i _EADOGM_CMD_CURSOR_ON
+-> -> 15 `i `uc
+]
+"118
+[v _EADOGM_CMD_CURSOR_OFF `Cuc ~T0 @X0 1 s ]
+[i _EADOGM_CMD_CURSOR_OFF
+-> -> 12 `i `uc
+]
+"119
+[v _EADOGM_CMD_DISPLAY_ON `Cuc ~T0 @X0 1 s ]
+[i _EADOGM_CMD_DISPLAY_ON
+-> -> 12 `i `uc
+]
+"120
+[v _EADOGM_CMD_DISPLAY_OFF `Cuc ~T0 @X0 1 s ]
+[i _EADOGM_CMD_DISPLAY_OFF
+-> -> 8 `i `uc
+]
+"121
+[v _EADOGM_CMD_DDRAM_ADDR `Cuc ~T0 @X0 1 s ]
+[i _EADOGM_CMD_DDRAM_ADDR
+-> -> 128 `i `uc
+]
+"122
+[v _EADOGM_CMD_CGRAM_ADDR `Cuc ~T0 @X0 1 s ]
+[i _EADOGM_CMD_CGRAM_ADDR
+-> -> 64 `i `uc
+]
+"123
+[v _EADOGM_CMD_SELECT_R0 `Cuc ~T0 @X0 1 s ]
+[i _EADOGM_CMD_SELECT_R0
+-> -> 24 `i `uc
+]
+"124
+[v _EADOGM_CMD_SELECT_R1 `Cuc ~T0 @X0 1 s ]
+[i _EADOGM_CMD_SELECT_R1
+-> -> 16 `i `uc
+]
+"125
+[v _EADOGM_CMD_SET_TABLE2 `Cuc ~T0 @X0 1 s ]
+[i _EADOGM_CMD_SET_TABLE2
+-> -> 42 `i `uc
+]
+"130
+[v _T1 `Cus ~T0 @X0 1 s ]
+[i _T1
+-> -> 500 `i `us
+]
+"131
+[v _T2 `Cus ~T0 @X0 1 s ]
+[i _T2
+-> -> 3000 `i `us
+]
+"132
+[v _T3 `Cus ~T0 @X0 1 s ]
+[i _T3
+-> -> 5000 `i `us
+]
+"133
+[v _T4 `Cus ~T0 @X0 1 s ]
+[i _T4
+-> -> 5000 `i `us
+]
+"134
+[v _HBTS `Cus ~T0 @X0 1 s ]
+[i _HBTS
+-> -> 5000 `i `us
+]
+"135
+[v _HBTL `Cus ~T0 @X0 1 s ]
+[i _HBTL
+-> -> 30000 `i `us
+]
+"136
+[v _RTY `Cuc ~T0 @X0 1 s ]
+[i _RTY
+-> -> 3 `i `uc
+]
+"137
+[v _ERROR_CHECKSUM `Cus ~T0 @X0 1 s ]
+[i _ERROR_CHECKSUM
+-> -> 31500 `i `us
+]
+"138
+[v _ERROR_COMM `Cus ~T0 @X0 1 s ]
+[i _ERROR_COMM
+-> -> 31500 `i `us
+]
+"141
+[v _TDELAY `Cus ~T0 @X0 1 s ]
+[i _TDELAY
+-> -> 3000 `i `us
+]
+"142
+[v _LDELAY `Cus ~T0 @X0 1 s ]
+[i _LDELAY
+-> -> 1000 `i `us
+]
+"143
+[v _SDELAY `Cus ~T0 @X0 1 s ]
+[i _SDELAY
+-> -> 500 `i `us
+]
+"144
+[v _BDELAY `Cus ~T0 @X0 1 s ]
+[i _BDELAY
+-> -> 300 `i `us
+]
+"145
+[v _DDELAY `Cus ~T0 @X0 1 s ]
+[i _DDELAY
+-> -> 125 `i `us
+]
+"146
+[v _TXTDELAY `Cus ~T0 @X0 1 s ]
+[i _TXTDELAY
+-> -> 10000 `i `us
+]
+"147
+[v _SOCDELAY `Cus ~T0 @X0 1 s ]
+[i _SOCDELAY
+-> -> 250 `i `us
+]
+"148
+[v _DFLIP `Cus ~T0 @X0 1 s ]
+[i _DFLIP
+-> -> 1500 `i `us
+]
+"150
+[v _LOG_WAIT `Cuc ~T0 @X0 1 s ]
+[i _LOG_WAIT
+-> -> 1 `i `uc
+]
+"154
+[v _CAL_DELAY `Cuc ~T0 @X0 1 s ]
+[i _CAL_DELAY
+-> -> 64 `i `uc
+]
+"175
+[v _CC_DEACT `Cuc ~T0 @X0 1 s ]
+[i _CC_DEACT
+-> -> 74 `i `uc
+]
+"176
+[v _CC_ACT `Cuc ~T0 @X0 1 s ]
+[i _CC_ACT
+-> -> 100 `i `uc
+]
+"177
+[v _CC_MPPT `Cuc ~T0 @X0 1 s ]
+[i _CC_MPPT
+-> -> 120 `i `uc
+]
+"178
+[v _CC_EQUAL `Cuc ~T0 @X0 1 s ]
+[i _CC_EQUAL
+-> -> 140 `i `uc
+]
+"179
+[v _CC_BOOST `Cuc ~T0 @X0 1 s ]
+[i _CC_BOOST
+-> -> 160 `i `uc
+]
+"180
+[v _CC_FLOAT `Cuc ~T0 @X0 1 s ]
+[i _CC_FLOAT
+-> -> 180 `i `uc
+]
+"181
+[v _CC_LIMIT `Cuc ~T0 @X0 1 s ]
+[i _CC_LIMIT
+-> -> 200 `i `uc
+]
+"182
+[v _CC_OFFLINE `Cuc ~T0 @X0 1 s ]
+[i _CC_OFFLINE
+-> -> 240 `i `uc
+]
 "55 ./mcc_generated_files/dma1.h
 [v _lcd_dma_buf `uc ~T0 @X0 -> 32 `i e ]
 "55 ./mcc_generated_files/dma2.h
 [v _uart1_dma_buf `uc ~T0 @X0 -> 32 `i e ]
 "517 ./mcc_generated_files/uart2.h
-[v _UART2_RxInterruptHandler `*F17777 ~T0 @X0 1 e ]
+[v _UART2_RxInterruptHandler `*F17814 ~T0 @X0 1 e ]
 "535
-[v _UART2_TxInterruptHandler `*F17779 ~T0 @X0 1 e ]
+[v _UART2_TxInterruptHandler `*F17816 ~T0 @X0 1 e ]
 "517 ./mcc_generated_files/uart1.h
-[v _UART1_RxInterruptHandler `*F17823 ~T0 @X0 1 e ]
+[v _UART1_RxInterruptHandler `*F17860 ~T0 @X0 1 e ]
 "535
-[v _UART1_TxInterruptHandler `*F17825 ~T0 @X0 1 e ]
+[v _UART1_TxInterruptHandler `*F17862 ~T0 @X0 1 e ]
 "11 eadog.c
 [v _spi_link `S2303 ~T0 @X0 1 e ]
 "12
@@ -1743,11 +1928,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "41
 [f ]
 "42
-[v F17853 `ul ~T0 @X0 1 s dcount ]
+[v F17890 `ul ~T0 @X0 1 s dcount ]
 "44
 {
-[e = F17853 -> -> -> 0 `i `l `ul ]
-[e $ <= F17853 _delay 2316  ]
+[e = F17890 -> -> -> 0 `i `l `ul ]
+[e $ <= F17890 _delay 2316  ]
 [e $U 2317  ]
 [e :U 2316 ]
 {
@@ -1757,8 +1942,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <"  clrwdt ;# ">
 "47
 }
-[e ++ F17853 -> -> -> 1 `i `l `ul ]
-[e $ <= F17853 _delay 2316  ]
+[e ++ F17890 -> -> -> 1 `i `l `ul ]
+[e $ <= F17890 _delay 2316  ]
 [e :U 2317 ]
 }
 "48

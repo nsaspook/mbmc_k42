@@ -36,7 +36,7 @@
 #include "tests.h"
 #include "mconfig.h"
 
-#define NUM_SWITCHES		6
+static const uint8_t NUM_SWITCHES = 6;
 
 typedef struct rbutton_type {
 	SW_STATES sw;
