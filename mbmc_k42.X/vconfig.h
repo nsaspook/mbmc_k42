@@ -20,7 +20,7 @@ extern "C" {
 #include "mcc_generated_files/pin_manager.h"
 #include "ringbufs.h"
 
-#define VER	"2.22"
+#define VER	"2.23"
 	/*
 	 * REMOVE THE CHIP PROGRAMMER, IT CHANGES THE ADC READINGS
 	 */
@@ -101,6 +101,7 @@ extern "C" {
 	 * 2.20 update to use xc8 3.0
 	 * 2.21 idle current corrections
 	 * 2.22 add three current sensor calibration
+	 * 2.23 XC8 PRO optimize
 	 */
 
 	/*
