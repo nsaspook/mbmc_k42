@@ -1522,187 +1522,187 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSH equ 03FFEh ;# ">
 "49356
 [; <" TOSU equ 03FFFh ;# ">
-"117 ./vconfig.h
+"119 ./vconfig.h
 [v _EADOGM_CMD_CLR `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_CLR
 -> -> 1 `i `uc
 ]
-"118
+"120
 [v _EADOGM_CMD_CURSOR_ON `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_CURSOR_ON
 -> -> 15 `i `uc
 ]
-"119
+"121
 [v _EADOGM_CMD_CURSOR_OFF `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_CURSOR_OFF
 -> -> 12 `i `uc
 ]
-"120
+"122
 [v _EADOGM_CMD_DISPLAY_ON `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_DISPLAY_ON
 -> -> 12 `i `uc
 ]
-"121
+"123
 [v _EADOGM_CMD_DISPLAY_OFF `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_DISPLAY_OFF
 -> -> 8 `i `uc
 ]
-"122
+"124
 [v _EADOGM_CMD_DDRAM_ADDR `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_DDRAM_ADDR
 -> -> 128 `i `uc
 ]
-"123
+"125
 [v _EADOGM_CMD_CGRAM_ADDR `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_CGRAM_ADDR
 -> -> 64 `i `uc
 ]
-"124
+"126
 [v _EADOGM_CMD_SELECT_R0 `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_SELECT_R0
 -> -> 24 `i `uc
 ]
-"125
+"127
 [v _EADOGM_CMD_SELECT_R1 `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_SELECT_R1
 -> -> 16 `i `uc
 ]
-"126
+"128
 [v _EADOGM_CMD_SET_TABLE2 `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_SET_TABLE2
 -> -> 42 `i `uc
 ]
-"131
+"133
 [v _T1 `Cus ~T0 @X0 1 s ]
 [i _T1
 -> -> 500 `i `us
 ]
-"132
+"134
 [v _T2 `Cus ~T0 @X0 1 s ]
 [i _T2
 -> -> 3000 `i `us
 ]
-"133
+"135
 [v _T3 `Cus ~T0 @X0 1 s ]
 [i _T3
 -> -> 5000 `i `us
 ]
-"134
+"136
 [v _T4 `Cus ~T0 @X0 1 s ]
 [i _T4
 -> -> 5000 `i `us
 ]
-"135
+"137
 [v _HBTS `Cus ~T0 @X0 1 s ]
 [i _HBTS
 -> -> 5000 `i `us
 ]
-"136
+"138
 [v _HBTL `Cus ~T0 @X0 1 s ]
 [i _HBTL
 -> -> 30000 `i `us
 ]
-"137
+"139
 [v _RTY `Cuc ~T0 @X0 1 s ]
 [i _RTY
 -> -> 3 `i `uc
 ]
-"138
+"140
 [v _ERROR_CHECKSUM `Cus ~T0 @X0 1 s ]
 [i _ERROR_CHECKSUM
 -> -> 31500 `i `us
 ]
-"139
+"141
 [v _ERROR_COMM `Cus ~T0 @X0 1 s ]
 [i _ERROR_COMM
 -> -> 31500 `i `us
 ]
-"142
+"144
 [v _TDELAY `Cus ~T0 @X0 1 s ]
 [i _TDELAY
 -> -> 3000 `i `us
 ]
-"143
+"145
 [v _LDELAY `Cus ~T0 @X0 1 s ]
 [i _LDELAY
 -> -> 1000 `i `us
 ]
-"144
+"146
 [v _SDELAY `Cus ~T0 @X0 1 s ]
 [i _SDELAY
 -> -> 500 `i `us
 ]
-"145
+"147
 [v _BDELAY `Cus ~T0 @X0 1 s ]
 [i _BDELAY
 -> -> 300 `i `us
 ]
-"146
+"148
 [v _DDELAY `Cus ~T0 @X0 1 s ]
 [i _DDELAY
 -> -> 125 `i `us
 ]
-"147
+"149
 [v _TXTDELAY `Cus ~T0 @X0 1 s ]
 [i _TXTDELAY
 -> -> 10000 `i `us
 ]
-"148
+"150
 [v _SOCDELAY `Cus ~T0 @X0 1 s ]
 [i _SOCDELAY
 -> -> 250 `i `us
 ]
-"149
+"151
 [v _DFLIP `Cus ~T0 @X0 1 s ]
 [i _DFLIP
 -> -> 1500 `i `us
 ]
-"151
+"153
 [v _LOG_WAIT `Cuc ~T0 @X0 1 s ]
 [i _LOG_WAIT
 -> -> 1 `i `uc
 ]
-"155
+"157
 [v _CAL_DELAY `Cuc ~T0 @X0 1 s ]
 [i _CAL_DELAY
 -> -> 64 `i `uc
 ]
-"176
+"178
 [v _CC_DEACT `Cuc ~T0 @X0 1 s ]
 [i _CC_DEACT
 -> -> 74 `i `uc
 ]
-"177
+"179
 [v _CC_ACT `Cuc ~T0 @X0 1 s ]
 [i _CC_ACT
 -> -> 100 `i `uc
 ]
-"178
+"180
 [v _CC_MPPT `Cuc ~T0 @X0 1 s ]
 [i _CC_MPPT
 -> -> 120 `i `uc
 ]
-"179
+"181
 [v _CC_EQUAL `Cuc ~T0 @X0 1 s ]
 [i _CC_EQUAL
 -> -> 140 `i `uc
 ]
-"180
+"182
 [v _CC_BOOST `Cuc ~T0 @X0 1 s ]
 [i _CC_BOOST
 -> -> 160 `i `uc
 ]
-"181
+"183
 [v _CC_FLOAT `Cuc ~T0 @X0 1 s ]
 [i _CC_FLOAT
 -> -> 180 `i `uc
 ]
-"182
+"184
 [v _CC_LIMIT `Cuc ~T0 @X0 1 s ]
 [i _CC_LIMIT
 -> -> 200 `i `uc
 ]
-"183
+"185
 [v _CC_OFFLINE `Cuc ~T0 @X0 1 s ]
 [i _CC_OFFLINE
 -> -> 240 `i `uc

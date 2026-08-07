@@ -120,11 +120,11 @@ extern struct V_data V;
 #define C_A100M		0.0862000f // MPPT Amp scalar, first line [2]
 
 #ifndef BAT_100A
-#define C_OFFSET200	3965 // BATTERY sensor adc zero Amp counts, line 0,  BO sensor PLUG, orig value 3965
+#define C_OFFSET200	3984 // BATTERY sensor adc zero Amp counts, line 0,  BO sensor PLUG, orig value 3965
 #endif
-#define C_OFFSET100B	3934 // BATTERY sensor adc zero Amp counts, line 0
-#define C_OFFSET100	3995 // PV sensor adc zero Amp counts,      line 1
-#define C_OFFSET100M	3939 // MPPT sensor adc zero Amp counts,      line 2, Orig value 3934, adjust this for DL bat current zero
+#define C_OFFSET100B	3956 // BATTERY sensor adc zero Amp counts, line 0
+#define C_OFFSET100	4031 // PV sensor adc zero Amp counts,      line 1
+#define C_OFFSET100M	3956 // MPPT sensor adc zero Amp counts,      line 2, Orig value 3934, adjust this for DL bat current zero
 
 /*
  * sanity check values for current calibration routines

@@ -8,10 +8,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n E17726 . UI_STATE_INIT UI_STATE_HOST UI_STATE_DEBUG UI_STATE_LOG UI_STATE_MON UI_STATE_ERROR  ]
 [c E17707 0 1 2 3 .. ]
 [n E17707 . DIS_STR DIS_HELP DIS_ERR DIS_CLEAR  ]
-"205 ./vconfig.h
+"207 ./vconfig.h
 [s S2308 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 :1 `uc 1 `E17707 1 `E17707 1 `us 1 `us 1 ]
 [n S2308 terminal_type mesgid TID mcode mparm cmdlen log_seq host_display_ack info help_temp ceid log_num ]
-"240
+"242
 [s S2309 `E17726 1 `uc -> 64 `i `uc -> 64 `i `uc -> 16 `i `Vul 1 `Vul 1 `Vul 1 `Vc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `E17726 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :2 `uc 1 :1 `uc 1 `S2308 1 `Vuc 1 `Vuc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `Va 1 `Va 1 `Va 1 `Va 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 `Vul 1 ]
 [n S2309 V_data ui_state buf info rbuf ticks blight ac_time testing sys_info ac_on ac_off time_info get_time_text error abort msg_error msg_ret alarm float_ticks boost_ticks wdt_ticks ui_sw r_checksum t_checksum checksum_error mode_pwm sequences all_errors set_sequ debug help stack help_id screen response ticker cc_state flipper calib enter sensor_set fixup cc_active system_stable blight_off in_float in_boost lowint_count timerint_count tx_count rx_count adc_count spi_count switch_count ]
 "190 main.c
@@ -22,7 +22,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "54 ./hid.h
 [s S2315 `E18527 1 `E18534 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `uc 1 ]
 [n S2315 H_data hid_display h_state wait_select select_p wait_enter enter_p wait_calib calib_p sequence ]
-"277 ./vconfig.h
+"279 ./vconfig.h
 [s S2311 `l 1 `l 1 `ul 1 `ul 1 `ul 1 `f 1 `f 1 `f 1 `f 1 `f 1 `s -> 13 `i `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 `uc 1 ]
 [n S2311 hist_type pv_eff tot_eff ttg_t updates pclock peukert cef peukert_adj cef_calc cef_save h rate udod bsoc bound_rate bound_factor samplei sampleo ah drate esr rest_rate rest_factor esrp version ]
 "80 ./mbmc.h
@@ -133,8 +133,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _start_switch_handler `(v ~T0 @X0 0 ef ]
 "162 ./daq.h
 [v _read_cal_data `(a ~T0 @X0 0 ef ]
-"164
-[v _update_cal_data `(v ~T0 @X0 0 ef ]
 "165
 [v _update_hist_data `(a ~T0 @X0 0 ef2`a`*VS2311 ]
 "119 ./mbmc.h
@@ -165,15 +163,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _fabsf `(f ~T0 @X0 0 ef1`f ]
 "114 ./bsoc.h
 [v _esr_check `(f ~T0 @X0 0 ef1`uc ]
-"449 main.c
-[c E17734 0 1 2 .. ]
-[n E17734 . SW_OFF SW_ON SW_INVALID  ]
-"47 ./dio.h
-[v _get_switch `(E17734 ~T0 @X0 0 ef1`Cuc ]
-"449 main.c
-[c E17739 0 1 2 3 4 5 6 7 .. ]
-[n E17739 . S0 S1 SSELECT SENTER SCALIB S5 S6 SNULL  ]
-"233
+"47860 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+[s S2172 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2172 . RF0 RF1 RF2 RF3 RF4 RF5 RF6 RF7 ]
+"47859
+[u S2171 `S2172 1 ]
+[n S2171 . . ]
+"47871
+[v _PORTFbits `VS2171 ~T0 @X0 0 e@16335 ]
+"233 main.c
 [v _current_sensor_cal `(a ~T0 @X0 0 sf ]
 "151 ./daq.h
 [v _check_adc_scan `(a ~T0 @X0 0 ef ]
@@ -220,6 +218,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _display_history `(a ~T0 @X0 0 sf ]
 "57 ./mydisplay.h
 [v _check_help `(a ~T0 @X0 0 ef1`Ca ]
+"681 main.c
+[c E17734 0 1 2 .. ]
+[n E17734 . SW_OFF SW_ON SW_INVALID  ]
+"47 ./dio.h
+[v _get_switch `(E17734 ~T0 @X0 0 ef1`Cuc ]
+"681 main.c
+[c E17739 0 1 2 3 4 5 6 7 .. ]
+[n E17739 . S0 S1 SSELECT SENTER SCALIB S5 S6 SNULL  ]
 "160 ./daq.h
 [v _cal_current_zero `(a ~T0 @X0 0 ef4`a`s`s`s ]
 "47068 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
@@ -1790,187 +1796,187 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _UART1_RxInterruptHandler `*F17446 ~T0 @X0 1 e ]
 "535
 [v _UART1_TxInterruptHandler `*F17448 ~T0 @X0 1 e ]
-"117 ./vconfig.h
+"119 ./vconfig.h
 [v _EADOGM_CMD_CLR `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_CLR
 -> -> 1 `i `uc
 ]
-"118
+"120
 [v _EADOGM_CMD_CURSOR_ON `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_CURSOR_ON
 -> -> 15 `i `uc
 ]
-"119
+"121
 [v _EADOGM_CMD_CURSOR_OFF `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_CURSOR_OFF
 -> -> 12 `i `uc
 ]
-"120
+"122
 [v _EADOGM_CMD_DISPLAY_ON `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_DISPLAY_ON
 -> -> 12 `i `uc
 ]
-"121
+"123
 [v _EADOGM_CMD_DISPLAY_OFF `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_DISPLAY_OFF
 -> -> 8 `i `uc
 ]
-"122
+"124
 [v _EADOGM_CMD_DDRAM_ADDR `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_DDRAM_ADDR
 -> -> 128 `i `uc
 ]
-"123
+"125
 [v _EADOGM_CMD_CGRAM_ADDR `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_CGRAM_ADDR
 -> -> 64 `i `uc
 ]
-"124
+"126
 [v _EADOGM_CMD_SELECT_R0 `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_SELECT_R0
 -> -> 24 `i `uc
 ]
-"125
+"127
 [v _EADOGM_CMD_SELECT_R1 `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_SELECT_R1
 -> -> 16 `i `uc
 ]
-"126
+"128
 [v _EADOGM_CMD_SET_TABLE2 `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_SET_TABLE2
 -> -> 42 `i `uc
 ]
-"131
+"133
 [v _T1 `Cus ~T0 @X0 1 s ]
 [i _T1
 -> -> 500 `i `us
 ]
-"132
+"134
 [v _T2 `Cus ~T0 @X0 1 s ]
 [i _T2
 -> -> 3000 `i `us
 ]
-"133
+"135
 [v _T3 `Cus ~T0 @X0 1 s ]
 [i _T3
 -> -> 5000 `i `us
 ]
-"134
+"136
 [v _T4 `Cus ~T0 @X0 1 s ]
 [i _T4
 -> -> 5000 `i `us
 ]
-"135
+"137
 [v _HBTS `Cus ~T0 @X0 1 s ]
 [i _HBTS
 -> -> 5000 `i `us
 ]
-"136
+"138
 [v _HBTL `Cus ~T0 @X0 1 s ]
 [i _HBTL
 -> -> 30000 `i `us
 ]
-"137
+"139
 [v _RTY `Cuc ~T0 @X0 1 s ]
 [i _RTY
 -> -> 3 `i `uc
 ]
-"138
+"140
 [v _ERROR_CHECKSUM `Cus ~T0 @X0 1 s ]
 [i _ERROR_CHECKSUM
 -> -> 31500 `i `us
 ]
-"139
+"141
 [v _ERROR_COMM `Cus ~T0 @X0 1 s ]
 [i _ERROR_COMM
 -> -> 31500 `i `us
 ]
-"142
+"144
 [v _TDELAY `Cus ~T0 @X0 1 s ]
 [i _TDELAY
 -> -> 3000 `i `us
 ]
-"143
+"145
 [v _LDELAY `Cus ~T0 @X0 1 s ]
 [i _LDELAY
 -> -> 1000 `i `us
 ]
-"144
+"146
 [v _SDELAY `Cus ~T0 @X0 1 s ]
 [i _SDELAY
 -> -> 500 `i `us
 ]
-"145
+"147
 [v _BDELAY `Cus ~T0 @X0 1 s ]
 [i _BDELAY
 -> -> 300 `i `us
 ]
-"146
+"148
 [v _DDELAY `Cus ~T0 @X0 1 s ]
 [i _DDELAY
 -> -> 125 `i `us
 ]
-"147
+"149
 [v _TXTDELAY `Cus ~T0 @X0 1 s ]
 [i _TXTDELAY
 -> -> 10000 `i `us
 ]
-"148
+"150
 [v _SOCDELAY `Cus ~T0 @X0 1 s ]
 [i _SOCDELAY
 -> -> 250 `i `us
 ]
-"149
+"151
 [v _DFLIP `Cus ~T0 @X0 1 s ]
 [i _DFLIP
 -> -> 1500 `i `us
 ]
-"151
+"153
 [v _LOG_WAIT `Cuc ~T0 @X0 1 s ]
 [i _LOG_WAIT
 -> -> 1 `i `uc
 ]
-"155
+"157
 [v _CAL_DELAY `Cuc ~T0 @X0 1 s ]
 [i _CAL_DELAY
 -> -> 64 `i `uc
 ]
-"176
+"178
 [v _CC_DEACT `Cuc ~T0 @X0 1 s ]
 [i _CC_DEACT
 -> -> 74 `i `uc
 ]
-"177
+"179
 [v _CC_ACT `Cuc ~T0 @X0 1 s ]
 [i _CC_ACT
 -> -> 100 `i `uc
 ]
-"178
+"180
 [v _CC_MPPT `Cuc ~T0 @X0 1 s ]
 [i _CC_MPPT
 -> -> 120 `i `uc
 ]
-"179
+"181
 [v _CC_EQUAL `Cuc ~T0 @X0 1 s ]
 [i _CC_EQUAL
 -> -> 140 `i `uc
 ]
-"180
+"182
 [v _CC_BOOST `Cuc ~T0 @X0 1 s ]
 [i _CC_BOOST
 -> -> 160 `i `uc
 ]
-"181
+"183
 [v _CC_FLOAT `Cuc ~T0 @X0 1 s ]
 [i _CC_FLOAT
 -> -> 180 `i `uc
 ]
-"182
+"184
 [v _CC_LIMIT `Cuc ~T0 @X0 1 s ]
 [i _CC_LIMIT
 -> -> 200 `i `uc
 ]
-"183
+"185
 [v _CC_OFFLINE `Cuc ~T0 @X0 1 s ]
 [i _CC_OFFLINE
 -> -> 240 `i `uc
@@ -2607,8 +2613,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "356
 [e $ ! != -> ( _read_cal_data ..  `i -> 0 `i 2334  ]
 {
-"357
-[e ( _update_cal_data ..  ]
 "358
 [e $ ! && != -> ( _update_hist_data (2 , -> -> 1 `i `a &U *U + &U . _C 40 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 40 `ui `ux `i -> 0 `i > . *U + &U . _C 40 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _C 40 `ui `ux 4 ( _time (1 -> -> -> 0 `i `*v `*ul 2335  ]
 {
@@ -2749,15 +2753,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "446
 [e ( _WaitMs (1 -> -> 400 `i `us ]
 "449
-[e = . _V 40 -> ( _get_switch (1 -> . `E17739 4 `uc `a ]
+[e = . _V 40 -> . . _PORTFbits 0 2 `a ]
 "450
-[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 31C -> . _V 40 `i ]
+[e ( _sprintf (1 , (. , ( _get_vterm_ptr (2 , -> -> 2 `i `uc -> -> 0 `i `uc :s 31C -> . . _PORTFbits 0 2 `i ]
 "451
 [e ( _update_lcd (1 -> -> 0 `i `uc ]
 "452
 [e ( _WaitMs (1 -> -> 3400 `i `us ]
 "453
-[e $ ! && != -> . _V 40 `i -> 0 `i != -> ( _get_switch (1 -> . `E17739 4 `uc `ui -> -> 0 `i `ui 2346  ]
+[e $ ! != -> . . _PORTFbits 0 2 `i -> 0 `i 2346  ]
 {
 "454
 [e ( _current_sensor_cal ..  ]
@@ -3445,9 +3449,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 2400 ]
 }
 [p f _sprintf 9282704 ]
-[a 2C 49 49 58 49 55 58 53 55 0 ]
-[a 1C 65 117 103 32 32 54 32 50 48 50 54 0 ]
-[a 5C 50 46 50 51 0 ]
+[a 2C 49 54 58 52 49 58 51 57 0 ]
+[a 1C 65 117 103 32 32 55 32 50 48 50 54 0 ]
+[a 5C 50 46 50 52 0 ]
 [a 8C 32 87 68 84 32 84 73 77 69 79 85 84 32 82 69 66 79 79 84 32 0 ]
 [a 18C 73 110 118 97 108 105 100 32 69 69 80 82 79 77 32 68 65 84 65 32 0 ]
 [a 34C 72 105 115 116 111 114 121 32 68 97 116 97 32 32 83 97 118 101 100 32 32 0 ]
@@ -3458,7 +3462,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 57C 37 100 32 37 50 46 52 102 44 32 37 100 32 32 84 82 73 77 32 32 32 0 ]
 [a 17C 82 101 97 100 32 69 69 80 82 79 77 32 68 65 84 65 32 32 32 32 0 ]
 [a 26C 67 104 101 99 107 32 51 48 32 115 101 99 111 110 100 115 32 32 32 32 32 0 ]
-[a 64C 83 101 110 115 111 114 32 82 101 97 100 105 110 103 115 32 32 32 32 32 32 0 ]
+[a 64C 65 68 67 32 83 101 110 115 111 114 32 82 101 97 100 105 110 103 115 32 32 32 32 32 32 0 ]
 [a 3C 32 68 117 109 112 32 76 111 97 100 32 77 111 110 32 32 32 32 32 32 0 ]
 [a 22C 66 97 116 116 101 114 121 32 65 104 32 37 51 46 50 102 32 32 32 32 32 32 0 ]
 [a 43C 80 86 32 37 50 46 50 102 32 80 65 32 37 50 46 50 102 32 32 32 32 32 32 0 ]
@@ -3471,15 +3475,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 50C 66 65 72 32 84 37 51 46 50 102 32 68 37 51 46 50 102 32 32 32 32 32 32 32 0 ]
 [a 39C 77 80 80 84 32 87 32 37 51 46 50 102 32 37 100 32 32 32 32 32 32 32 0 ]
 [a 27C 67 104 101 99 107 105 110 103 32 37 99 32 37 99 32 32 32 32 32 32 32 0 ]
-[a 60C 66 97 116 116 101 114 121 32 97 110 100 32 80 86 32 32 32 32 32 32 32 0 ]
 [a 51C 83 37 99 67 32 37 100 32 82 85 78 32 37 100 32 86 37 50 46 50 102 32 32 32 32 32 32 32 32 0 ]
 [a 59C 37 52 100 44 32 37 52 100 44 32 37 52 100 32 32 32 32 32 32 32 32 0 ]
+[a 60C 80 86 44 32 77 80 80 84 44 32 66 97 116 116 101 114 121 32 32 32 32 32 32 32 32 32 0 ]
+[a 67C 80 86 44 32 77 80 80 84 44 32 66 97 116 116 101 114 121 32 32 32 32 32 32 32 32 32 0 ]
+[a 70C 80 86 44 32 77 80 80 84 44 32 66 97 116 116 101 114 121 32 32 32 32 32 32 32 32 32 0 ]
 [a 4C 32 86 101 114 115 105 111 110 32 37 115 32 32 32 32 32 32 32 32 32 0 ]
 [a 37C 80 86 32 37 99 32 87 32 37 51 46 50 102 32 32 32 32 32 32 32 32 32 0 ]
 [a 40C 80 86 32 37 99 32 87 72 32 37 51 46 50 102 32 32 32 32 32 32 32 32 32 0 ]
 [a 21C 83 116 97 116 105 99 32 83 79 67 32 37 100 32 32 32 32 32 32 32 32 32 0 ]
-[a 67C 66 97 116 116 101 114 121 32 97 110 100 32 80 86 32 32 32 32 32 32 32 32 32 0 ]
-[a 70C 66 97 116 116 101 114 121 32 97 110 100 32 80 86 32 32 32 32 32 32 32 32 32 0 ]
 [a 61C 83 101 110 115 111 114 32 90 101 114 111 32 32 32 32 32 32 32 32 32 32 0 ]
 [a 62C 67 97 108 105 98 114 97 116 105 111 110 32 32 32 32 32 32 32 32 32 32 0 ]
 [a 25C 67 97 108 99 117 108 97 116 105 111 110 32 32 32 32 32 32 32 32 32 32 0 ]
@@ -3502,12 +3506,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 30C 82 50 32 37 50 46 51 102 32 37 51 46 52 102 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
 [a 29C 82 49 32 37 50 46 51 102 32 37 51 46 52 102 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
 [a 49C 66 65 84 84 32 87 32 37 51 46 50 102 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
-[a 68C 37 108 100 32 37 108 100 32 37 108 100 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
-[a 71C 37 108 100 32 37 108 100 32 37 108 100 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
+[a 68C 80 37 108 100 32 77 37 108 100 32 66 37 108 100 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
+[a 71C 80 37 108 100 32 77 37 108 100 32 66 37 108 100 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
 [a 19C 66 86 32 37 50 46 52 102 32 67 67 37 100 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
 [a 35C 84 111 32 69 69 80 82 79 77 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
 [a 52C 69 83 82 32 32 37 50 46 54 102 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
-[a 65C 37 100 32 37 100 32 37 100 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
+[a 65C 80 37 100 32 77 37 100 32 66 37 100 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
 [a 73C 37 100 32 37 100 32 37 100 32 37 100 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
 [a 74C 37 100 32 37 100 32 37 100 32 37 100 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
 [a 75C 37 100 32 37 100 32 37 100 32 37 100 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]

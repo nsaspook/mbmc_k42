@@ -383,12 +383,16 @@ bool cal_current_zero(const bool mode, const int16_t cb, const int16_t cp, const
 		return true;
 
 #ifdef BAT_100A
-	R.n_offset[A100B] = cb;
+	R.n_offset[A100B] = C_OFFSET100B;
+//	R.n_offset[A100B] = cb;
 #else
-	R.n_offset[A200] = cb;
+	R.n_offset[A200] = C_OFFSET200;
+//	R.n_offset[A200] = cb;
 #endif
-	R.n_offset[A100] = cp;
-	R.n_offset[A100M] = cm;
+	R.n_offset[A100] = C_OFFSET100;
+	R.n_offset[A100M] = C_OFFSET100M;
+//	R.n_offset[A100] = cp;
+//	R.n_offset[A100M] = cm;
 	R.c_zero_cal = true;
 	return true;
 }
