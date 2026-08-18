@@ -17,8 +17,8 @@ mcc_generated_files/crc.h  \
 mcc_generated_files/fvr.h  \
 mcc_generated_files/tmr5.h  \
 mcc_generated_files/tmr6.h  \
-mcc_generated_files/tmr3.h  \
 mcc_generated_files/pwm8.h  \
+mcc_generated_files/tmr3.h  \
 mcc_generated_files/tmr2.h  \
 mcc_generated_files/memory.h  \
 mcc_generated_files/uart2.h  \
