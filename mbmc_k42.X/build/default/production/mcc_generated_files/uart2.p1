@@ -10,7 +10,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F16570 `(v ~T0 @X0 0 tf ]
 [v F16572 `(v ~T0 @X0 0 tf ]
 [v F16574 `(v ~T0 @X0 0 tf ]
-"3631 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"3631 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [s S162 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S162 . I2C2IE I2C2EIE U2RXIE U2TXIE U2EIE U2IE TMR3IE TMR3GIE ]
 "3630
@@ -28,7 +28,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _UART2_SetTxInterruptHandler `(v ~T0 @X0 0 ef1`*F16555 ]
 "401
 [v _UART2_Transmit_ISR `(v ~T0 @X0 0 ef ]
-"25684 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"25684 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [v _U2P1L `Vuc ~T0 @X0 0 e@15828 ]
 "25711
 [v _U2P2L `Vuc ~T0 @X0 0 e@15830 ]
@@ -67,7 +67,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _UART2_SetErrorHandler `(v ~T0 @X0 0 ef1`*F16543 ]
 "85 mcc_generated_files/uart2.c
 [v _UART2_DefaultErrorHandler `(v ~T0 @X0 0 ef ]
-"26325 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"26325 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [s S1170 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1170 . TXCIF RXFOIF RXBKIF FERIF CERIF ABDOVF PERIF TXMTIF ]
 "26335
@@ -87,7 +87,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F16595 `(v ~T0 @X0 0 tf ]
 "443 mcc_generated_files/uart2.h
 [v _UART2_RxDataHandler `(v ~T0 @X0 0 ef ]
-"25601 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"25601 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [v _U2RXB `Vuc ~T0 @X0 0 e@15824 ]
 [v F16603 `(v ~T0 @X0 0 tf ]
 [v F16605 `(v ~T0 @X0 0 tf ]
@@ -99,7 +99,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F16620 `(v ~T0 @X0 0 tf ]
 [v F16623 `(v ~T0 @X0 0 tf ]
 [v F16625 `(v ~T0 @X0 0 tf ]
-"178 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"178 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "267
 [; <" WREG_CSHAD equ 03881h ;# ">

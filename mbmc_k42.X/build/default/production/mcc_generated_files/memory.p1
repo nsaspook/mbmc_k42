@@ -1,5 +1,5 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"5731 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"5731 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [s S256 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 ]
 [n S256 . RD WR WREN WRERR FREE . REG ]
 "5740
@@ -26,7 +26,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _TABLAT `Vuc ~T0 @X0 0 e@16373 ]
 "193 mcc_generated_files/memory.h
 [v _FLASH_WriteBlock `(c ~T0 @X0 0 ef2`ul`*uc ]
-"47922 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"47922 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [s S2171 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S2171 . INT0EDG INT1EDG INT2EDG . IPEN GIEL GIE ]
 "47931
@@ -39,7 +39,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _INTCON0bits `VS2170 ~T0 @X0 0 e@16338 ]
 "218 mcc_generated_files/memory.h
 [v _FLASH_EraseBlock `(v ~T0 @X0 0 ef1`ul ]
-"5815 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"5815 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [v _NVMCON2 `Vuc ~T0 @X0 0 e@14822 ]
 "5541
 [v _NVMADRH `Vuc ~T0 @X0 0 e@14817 ]
@@ -50,7 +50,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8 /ldrv/microchip/xc8/v4.00/pic/include/builtins.h
 [v ___nop `(v ~T0 @X0 0 ef ]
 [p i ___nop ]
-"3829 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"3829 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [s S172 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S172 . SWIF HLVDIF OSFIF CSWIF NVMIF SCANIF CRCIF IOCIF ]
 "3828
@@ -58,7 +58,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S171 . . ]
 "3840
 [v _PIR0bits `VS171 ~T0 @X0 0 e@14752 ]
-"178 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"178 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "267
 [; <" WREG_CSHAD equ 03881h ;# ">

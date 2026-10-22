@@ -43,7 +43,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _CLKREF_Initialize `(v ~T0 @X0 0 ef ]
 "124 mcc_generated_files/mcc.h
 [v _SystemArbiter_Initialize `(v ~T0 @X0 0 ef ]
-"4886 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"4886 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [v _OSCCON1 `Vuc ~T0 @X0 0 e@14809 ]
 "5026
 [v _OSCCON3 `Vuc ~T0 @X0 0 e@14811 ]
@@ -81,7 +81,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S262 . . ]
 "5845
 [v _PRLOCKbits `VS262 ~T0 @X0 0 e@14831 ]
-"178 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"178 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "267
 [; <" WREG_CSHAD equ 03881h ;# ">

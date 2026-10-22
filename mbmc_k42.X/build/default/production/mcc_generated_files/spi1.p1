@@ -2,7 +2,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "50 mcc_generated_files/spi1.c
 [s S2297 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
 [n S2297 . con0 con1 con2 baud operation ]
-"22857 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"22857 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [v _SPI1CON0 `Vuc ~T0 @X0 0 e@15636 ]
 "22923
 [v _SPI1CON1 `Vuc ~T0 @X0 0 e@15637 ]
@@ -23,7 +23,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "79 mcc_generated_files/spi1.c
 [c E364 0 .. ]
 [n E364 . SPI1_DEFAULT  ]
-"22863 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"22863 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [s S998 :1 `uc 1 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 ]
 [n S998 . BMODE MST LSBF . EN ]
 "22870
@@ -48,7 +48,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _PIR2bits `VS177 ~T0 @X0 0 e@14754 ]
 "22670
 [v _SPI1RXB `Vuc ~T0 @X0 0 e@15632 ]
-"178 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"178 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "267
 [; <" WREG_CSHAD equ 03881h ;# ">

@@ -40,7 +40,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _start_bsoc `(v ~T0 @X0 0 ef ]
 "162 /ldrv/microchip/xc8/v4.00/pic/include/c99/math.h
 [v _fabsf `(f ~T0 @X0 0 ef1`f ]
-"46956 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"46956 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [s S2138 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S2138 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
 "46966
@@ -55,7 +55,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
 "119 ./mbmc.h
 [v _time `(ul ~T0 @X0 0 ef1`*ul ]
-"3738 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"3738 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [s S166 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S166 . . TMR5IE TMR5GIE ]
 "3737
@@ -66,7 +66,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "334 mbmc.c
 [c E17884 1 2 4 8 .. ]
 [n E17884 . WIDE_ZERO NO_NEG WIDE_NEG SKIP  ]
-"178 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"178 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "267
 [; <" WREG_CSHAD equ 03881h ;# ">

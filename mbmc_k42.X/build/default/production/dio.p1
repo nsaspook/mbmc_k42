@@ -30,7 +30,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _V `S2305 ~T0 @X0 0 e ]
 "41 ./mconfig.h
 [v _diversion_pwm_full `(v ~T0 @X0 0 ef ]
-"47120 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"47120 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [s S2144 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S2144 . LATF0 LATF1 LATF2 LATF3 LATF4 LATF5 LATF6 LATF7 ]
 "47130
@@ -44,7 +44,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8 /ldrv/microchip/xc8/v4.00/pic/include/builtins.h
 [v ___nop `(v ~T0 @X0 0 ef ]
 [p i ___nop ]
-"47860 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"47860 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [s S2169 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S2169 . RF0 RF1 RF2 RF3 RF4 RF5 RF6 RF7 ]
 "47859
@@ -79,7 +79,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F16586 `(v ~T0 @X0 0 tf ]
 "552 ./mcc_generated_files/ext_int.h
 [v _INT1_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F16586 ]
-"3891 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"3891 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [s S174 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S174 . INT0IF ZCDIF ADIF ADTIF C1IF SMT1IF SMT1PRAIF SMT1PWAIF ]
 "3890
@@ -101,7 +101,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F16578 `(v ~T0 @X0 0 tf ]
 "457 ./mcc_generated_files/ext_int.h
 [v _INT0_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F16578 ]
-"3326 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"3326 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [s S152 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S152 . INT0IE ZCDIE ADIE ADTIE C1IE SMT1IE SMT1PRAIE SMT1PWAIE ]
 "3325
@@ -109,7 +109,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S151 . . ]
 "3337
 [v _PIE1bits `VS151 ~T0 @X0 0 e@14737 ]
-"178 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"178 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "267
 [; <" WREG_CSHAD equ 03881h ;# ">

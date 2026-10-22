@@ -1,5 +1,5 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"47062 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"47062 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [v _LATE `Vuc ~T0 @X0 0 e@16318 ]
 "46950
 [v _LATD `Vuc ~T0 @X0 0 e@16317 ]
@@ -117,7 +117,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _U1RXPPS `Vuc ~T0 @X0 0 e@15077 ]
 "11976
 [v _SPI1SDIPPS `Vuc ~T0 @X0 0 e@15071 ]
-"178 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.16.308/xc8/pic/include/proc/pic18f57k42.h
+"178 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f57k42.h
 [; <" STATUS_CSHAD equ 03880h ;# ">
 "267
 [; <" WREG_CSHAD equ 03881h ;# ">
