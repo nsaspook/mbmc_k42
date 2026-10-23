@@ -40,9 +40,11 @@ H_data* hid_display(H_data* h)
 	default: // need to look at this logic
 	case H_STATE_DISPLAY:
 		if (!h->wait_select && (h->select_p == SW_OFF)) {
-			h->sequence = ++h->sequence & 0x3;
+			++h->sequence;
+			h->sequence = h->sequence & 0x3;
 			if ((h->sequence == HID_AUX) && !get_switch(SCALIB))
-				h->sequence = (++h->sequence) & 0x3; // skip TRIM screen unless CALIB button is also pressed
+				++h->sequence;
+				h->sequence = h->sequence & 0x3; // skip TRIM screen unless CALIB button is also pressed
 			h->hid_display = h->sequence;
 			h->wait_select = true;
 		}

@@ -1,0 +1,326 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="8" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;math.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;math.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/daq.h" line="36" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/spi1.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/spi1.h" line="55" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/spi1.h" line="56" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h" line="55" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h" line="56" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.h" line="55" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.h" line="56" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/ext_int.h" line="53" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/vconfig.h" line="17" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;time.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;time.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/vconfig.h" line="18" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/pin_manager.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/timers.h" line="4" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/timers.h" line="5" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/tests.h" line="34" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/daq.h" line="140" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.h" line="55" column="2"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;r_cal_ptr&apos; can be declared as pointer to const" verbose="Variable &apos;r_cal_ptr&apos; can be declared as pointer to const" cwe="398" hash="12823876190065604947" file0="/root/mbmc_k42/mbmc_k42.X/daq.c">
+            <location file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="476" column="11" info="Variable &apos;r_cal_ptr&apos; can be declared as pointer to const"/>
+            <symbol>r_cal_ptr</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="union member &apos;bytes2::ld&apos; is never used." verbose="union member &apos;bytes2::ld&apos; is never used." cwe="563" hash="12686348670761098278" file0="/root/mbmc_k42/mbmc_k42.X/daq.c">
+            <location file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="19" column="11"/>
+            <symbol>bytes2::ld</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="union member &apos;bytes2::bd&apos; is never used." verbose="union member &apos;bytes2::bd&apos; is never used." cwe="563" hash="14166534520501408176" file0="/root/mbmc_k42/mbmc_k42.X/daq.c">
+            <location file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="20" column="10"/>
+            <symbol>bytes2::bd</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="union member &apos;dac_buf_type::ld&apos; is never used." verbose="union member &apos;dac_buf_type::ld&apos; is never used." cwe="563" hash="6217122673279275758" file0="/root/mbmc_k42/mbmc_k42.X/daq.c">
+            <location file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="24" column="11"/>
+            <symbol>dac_buf_type::ld</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:156:6" call-funcname="dac_spi_control" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="319" col="17" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h:241:10" call-funcname="CRC_CalculatedResultGet" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="461" col="30" call-argexpr="0" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h:241:10" call-funcname="CRC_CalculatedResultGet" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="461" col="30" call-argexpr="0x00" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h:241:10" call-funcname="CRC_CalculatedResultGet" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="494" col="44" call-argexpr="0" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h:241:10" call-funcname="CRC_CalculatedResultGet" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="494" col="44" call-argexpr="0x00" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="start_adc_scan" lineNumber="82" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="check_adc_scan" lineNumber="110" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="clear_adc_scan" lineNumber="118" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="update_adc_result" lineNumber="126" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="get_raw_result" lineNumber="142" column="14"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="conv_raw_result" lineNumber="158" column="7"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="adc_int_handler" lineNumber="213" column="13"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="adc_int_t_handler" lineNumber="223" column="13"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="dac_spi_control" lineNumber="250" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="set_dac" lineNumber="298" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="convert_dac_raw" lineNumber="322" column="17"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="set_dac_a" lineNumber="340" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="set_dac_b" lineNumber="349" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="check_range" lineNumber="358" column="13"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="cal_current_zero" lineNumber="370" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="cal_current_10A" lineNumber="403" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="read_cal_data" lineNumber="435" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="write_cal_data" lineNumber="473" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="update_cal_data" lineNumber="502" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="update_hist_data" lineNumber="530" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="set_hist_flag" lineNumber="549" column="6"/>
+    <functioncall functionName="ADCC_DischargeSampleCapacitor"/>
+    <functioncall functionName="ADCC_SetADIInterruptHandler"/>
+    <functioncall functionName="ADCC_SetADTIInterruptHandler"/>
+    <functioncall functionName="ADCC_StartConversion"/>
+    <functioncall functionName="ADFLTRL"/>
+    <functioncall functionName="ANSELA"/>
+    <functioncall functionName="CRC_8BitDataWrite"/>
+    <functioncall functionName="CRC_CalculatedResultGet"/>
+    <functioncall functionName="CRC_Initialize"/>
+    <functioncall functionName="CRC_IsBusy"/>
+    <functioncall functionName="CRC_Start"/>
+    <functioncall functionName="DATAEE_ReadByte"/>
+    <functioncall functionName="DATAEE_WriteByte"/>
+    <functioncall functionName="NAN"/>
+    <functioncall functionName="SPI1BAUD"/>
+    <functioncall functionName="SPI1CLK"/>
+    <functioncall functionName="SPI1CON0"/>
+    <functioncall functionName="SPI1CON1"/>
+    <functioncall functionName="SPI1CON2"/>
+    <functioncall functionName="SPI1_ExchangeByte"/>
+    <functioncall functionName="StartTimer"/>
+    <functioncall functionName="TXBE"/>
+    <functioncall functionName="TimerDone"/>
+    <functioncall functionName="adc_int_handler"/>
+    <functioncall functionName="adc_int_t_handler"/>
+    <functioncall functionName="check_adc_scan"/>
+    <functioncall functionName="check_range"/>
+    <functioncall functionName="clear_adc_scan"/>
+    <functioncall functionName="convert_dac_raw"/>
+    <functioncall functionName="dac_spi_control"/>
+    <functioncall functionName="get_raw_result"/>
+    <functioncall functionName="start_adc_scan"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:156:6" call-funcname="dac_spi_control" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="319" col="17" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h:241:10" call-funcname="CRC_CalculatedResultGet" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="461" col="30" call-argexpr="0" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h:241:10" call-funcname="CRC_CalculatedResultGet" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="461" col="30" call-argexpr="0x00" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h:241:10" call-funcname="CRC_CalculatedResultGet" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="494" col="44" call-argexpr="0" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h:241:10" call-funcname="CRC_CalculatedResultGet" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="494" col="44" call-argexpr="0x00" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="start_adc_scan" lineNumber="82" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="check_adc_scan" lineNumber="110" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="clear_adc_scan" lineNumber="118" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="update_adc_result" lineNumber="126" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="get_raw_result" lineNumber="142" column="14"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="conv_raw_result" lineNumber="158" column="7"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="adc_int_handler" lineNumber="213" column="13"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="adc_int_t_handler" lineNumber="223" column="13"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="dac_spi_control" lineNumber="250" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="set_dac" lineNumber="298" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="convert_dac_raw" lineNumber="322" column="17"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="set_dac_a" lineNumber="340" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="set_dac_b" lineNumber="349" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="check_range" lineNumber="358" column="13"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="cal_current_zero" lineNumber="370" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="cal_current_10A" lineNumber="403" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="read_cal_data" lineNumber="435" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="write_cal_data" lineNumber="473" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="update_cal_data" lineNumber="502" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="update_hist_data" lineNumber="530" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="set_hist_flag" lineNumber="549" column="6"/>
+    <functioncall functionName="ADCC_DischargeSampleCapacitor"/>
+    <functioncall functionName="ADCC_SetADIInterruptHandler"/>
+    <functioncall functionName="ADCC_SetADTIInterruptHandler"/>
+    <functioncall functionName="ADCC_StartConversion"/>
+    <functioncall functionName="ADFLTRL"/>
+    <functioncall functionName="ANSELA"/>
+    <functioncall functionName="CRC_8BitDataWrite"/>
+    <functioncall functionName="CRC_CalculatedResultGet"/>
+    <functioncall functionName="CRC_Initialize"/>
+    <functioncall functionName="CRC_IsBusy"/>
+    <functioncall functionName="CRC_Start"/>
+    <functioncall functionName="C_CAL_A200"/>
+    <functioncall functionName="DATAEE_ReadByte"/>
+    <functioncall functionName="DATAEE_WriteByte"/>
+    <functioncall functionName="NAN"/>
+    <functioncall functionName="SPI1BAUD"/>
+    <functioncall functionName="SPI1CLK"/>
+    <functioncall functionName="SPI1CON0"/>
+    <functioncall functionName="SPI1CON1"/>
+    <functioncall functionName="SPI1CON2"/>
+    <functioncall functionName="SPI1_ExchangeByte"/>
+    <functioncall functionName="StartTimer"/>
+    <functioncall functionName="TXBE"/>
+    <functioncall functionName="TimerDone"/>
+    <functioncall functionName="adc_int_handler"/>
+    <functioncall functionName="adc_int_t_handler"/>
+    <functioncall functionName="check_adc_scan"/>
+    <functioncall functionName="check_range"/>
+    <functioncall functionName="clear_adc_scan"/>
+    <functioncall functionName="convert_dac_raw"/>
+    <functioncall functionName="dac_spi_control"/>
+    <functioncall functionName="get_raw_result"/>
+    <functioncall functionName="start_adc_scan"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:156:6" call-funcname="dac_spi_control" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="319" col="17" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h:241:10" call-funcname="CRC_CalculatedResultGet" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="461" col="30" call-argexpr="0" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h:241:10" call-funcname="CRC_CalculatedResultGet" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="461" col="30" call-argexpr="0x00" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h:241:10" call-funcname="CRC_CalculatedResultGet" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="494" col="44" call-argexpr="0" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h:241:10" call-funcname="CRC_CalculatedResultGet" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="494" col="44" call-argexpr="0x00" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="start_adc_scan" lineNumber="82" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="check_adc_scan" lineNumber="110" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="clear_adc_scan" lineNumber="118" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="update_adc_result" lineNumber="126" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="get_raw_result" lineNumber="142" column="14"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="conv_raw_result" lineNumber="158" column="7"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="adc_int_handler" lineNumber="213" column="13"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="adc_int_t_handler" lineNumber="223" column="13"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="dac_spi_control" lineNumber="250" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="set_dac" lineNumber="298" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="convert_dac_raw" lineNumber="322" column="17"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="set_dac_a" lineNumber="340" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="set_dac_b" lineNumber="349" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="check_range" lineNumber="358" column="13"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="cal_current_zero" lineNumber="370" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="cal_current_10A" lineNumber="403" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="read_cal_data" lineNumber="435" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="write_cal_data" lineNumber="473" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="update_cal_data" lineNumber="502" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="update_hist_data" lineNumber="530" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="set_hist_flag" lineNumber="549" column="6"/>
+    <functioncall functionName="ADCC_DischargeSampleCapacitor"/>
+    <functioncall functionName="ADCC_SetADIInterruptHandler"/>
+    <functioncall functionName="ADCC_SetADTIInterruptHandler"/>
+    <functioncall functionName="ADCC_StartConversion"/>
+    <functioncall functionName="ADFLTRL"/>
+    <functioncall functionName="ANSELA"/>
+    <functioncall functionName="CRC_8BitDataWrite"/>
+    <functioncall functionName="CRC_CalculatedResultGet"/>
+    <functioncall functionName="CRC_Initialize"/>
+    <functioncall functionName="CRC_IsBusy"/>
+    <functioncall functionName="CRC_Start"/>
+    <functioncall functionName="DATAEE_ReadByte"/>
+    <functioncall functionName="DATAEE_WriteByte"/>
+    <functioncall functionName="NAN"/>
+    <functioncall functionName="SPI1BAUD"/>
+    <functioncall functionName="SPI1CLK"/>
+    <functioncall functionName="SPI1CON0"/>
+    <functioncall functionName="SPI1CON1"/>
+    <functioncall functionName="SPI1CON2"/>
+    <functioncall functionName="SPI1_ExchangeByte"/>
+    <functioncall functionName="StartTimer"/>
+    <functioncall functionName="TXBE"/>
+    <functioncall functionName="TimerDone"/>
+    <functioncall functionName="adc_int_handler"/>
+    <functioncall functionName="adc_int_t_handler"/>
+    <functioncall functionName="check_adc_scan"/>
+    <functioncall functionName="check_range"/>
+    <functioncall functionName="clear_adc_scan"/>
+    <functioncall functionName="convert_dac_raw"/>
+    <functioncall functionName="dac_spi_control"/>
+    <functioncall functionName="get_raw_result"/>
+    <functioncall functionName="start_adc_scan"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:156:6" call-funcname="dac_spi_control" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="319" col="17" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h:241:10" call-funcname="CRC_CalculatedResultGet" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="461" col="30" call-argexpr="0" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h:241:10" call-funcname="CRC_CalculatedResultGet" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="461" col="30" call-argexpr="0x00" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h:241:10" call-funcname="CRC_CalculatedResultGet" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="494" col="44" call-argexpr="0" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h:241:10" call-funcname="CRC_CalculatedResultGet" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="494" col="44" call-argexpr="0x00" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="start_adc_scan" lineNumber="82" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="check_adc_scan" lineNumber="110" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="clear_adc_scan" lineNumber="118" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="update_adc_result" lineNumber="126" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="get_raw_result" lineNumber="142" column="14"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="conv_raw_result" lineNumber="158" column="7"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="adc_int_handler" lineNumber="213" column="13"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="adc_int_t_handler" lineNumber="223" column="13"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="dac_spi_control" lineNumber="250" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="set_dac" lineNumber="298" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="convert_dac_raw" lineNumber="322" column="17"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="set_dac_a" lineNumber="340" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="set_dac_b" lineNumber="349" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="check_range" lineNumber="358" column="13"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="cal_current_zero" lineNumber="370" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="cal_current_10A" lineNumber="403" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="read_cal_data" lineNumber="435" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="write_cal_data" lineNumber="473" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="update_cal_data" lineNumber="502" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="update_hist_data" lineNumber="530" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/daq.c" functionName="set_hist_flag" lineNumber="549" column="6"/>
+    <functioncall functionName="ADCC_DischargeSampleCapacitor"/>
+    <functioncall functionName="ADCC_SetADIInterruptHandler"/>
+    <functioncall functionName="ADCC_SetADTIInterruptHandler"/>
+    <functioncall functionName="ADCC_StartConversion"/>
+    <functioncall functionName="ADFLTRL"/>
+    <functioncall functionName="ANSELA"/>
+    <functioncall functionName="CRC_8BitDataWrite"/>
+    <functioncall functionName="CRC_CalculatedResultGet"/>
+    <functioncall functionName="CRC_Initialize"/>
+    <functioncall functionName="CRC_IsBusy"/>
+    <functioncall functionName="CRC_Start"/>
+    <functioncall functionName="DATAEE_ReadByte"/>
+    <functioncall functionName="DATAEE_WriteByte"/>
+    <functioncall functionName="LATE2"/>
+    <functioncall functionName="NAN"/>
+    <functioncall functionName="SPI1BAUD"/>
+    <functioncall functionName="SPI1CLK"/>
+    <functioncall functionName="SPI1CON0"/>
+    <functioncall functionName="SPI1CON1"/>
+    <functioncall functionName="SPI1CON2"/>
+    <functioncall functionName="SPI1_ExchangeByte"/>
+    <functioncall functionName="StartTimer"/>
+    <functioncall functionName="TXBE"/>
+    <functioncall functionName="TimerDone"/>
+    <functioncall functionName="adc_int_handler"/>
+    <functioncall functionName="adc_int_t_handler"/>
+    <functioncall functionName="check_adc_scan"/>
+    <functioncall functionName="check_range"/>
+    <functioncall functionName="clear_adc_scan"/>
+    <functioncall functionName="convert_dac_raw"/>
+    <functioncall functionName="dac_spi_control"/>
+    <functioncall functionName="get_raw_result"/>
+    <functioncall functionName="start_adc_scan"/>
+  </FileInfo>
+  <includes>
+    <filename>/root/mbmc_k42/mbmc_k42.X/daq.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/ext_int.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/pin_manager.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/spi1.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/ringbufs.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/tests.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/timers.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/vconfig.h</filename>
+  </includes>
+  <hash>8062997171662133882</hash>
+</analyzerinfo>

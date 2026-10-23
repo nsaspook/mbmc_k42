@@ -1,0 +1,12 @@
+pv_diversion global:[C,V] call:[cc_state,diversion_pwm_set]
+gti_checksum call:[return]
+gti_cmds global:[cmd_value,gti_power,mqtt_r,utc_cmd_value] call:[UART1_Read,UART1_Write,UART1_is_rx_ready,atol,set_time,sizeof] noreturn:[UART1_Read,set_time]
+calc_bsoc global:[C,H,LOG_WAIT,SOCDELAY,SSLICE,V,build_date,build_time,flop,gti_power,gti_sbuf,gti_zero,seq_log] call:[StartTimer,UART2_Write,atol,cc_state,fabs,gti_checksum,port_data_dma_ptr,pv_diversion,send_port_data_dma,set_time,snprintf,strlen,while] noreturn:[UART2_Write,fabs,set_time]
+init_bsoc global:[C,V] call:[TMR3_SetInterruptHandler,Volts_to_SOC,conv_raw_result] noreturn:[TMR3_SetInterruptHandler]
+start_bsoc
+stop_bsoc
+reset_bsoc global:[C]
+peukert global:[C] call:[pow,return]
+Volts_to_SOC global:[BVSOC_TABLE]
+esr_check global:[C] call:[StartTimer,TimerDone,conv_raw_result,fabs,set_load_relay_one,set_load_relay_two,update_adc_result] noreturn:[StartTimer]
+cc_state

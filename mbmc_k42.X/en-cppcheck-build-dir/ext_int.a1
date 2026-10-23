@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/ext_int.c" line="27" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/ext_int.h" line="53" column="2"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/ext_int.c" functionName="INT0_CallBack" lineNumber="43" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/ext_int.c" functionName="INT0_SetInterruptHandler" lineNumber="52" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/ext_int.c" functionName="INT0_DefaultInterruptHandler" lineNumber="56" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/ext_int.c" functionName="INT1_CallBack" lineNumber="69" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/ext_int.c" functionName="INT1_SetInterruptHandler" lineNumber="78" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/ext_int.c" functionName="INT1_DefaultInterruptHandler" lineNumber="82" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/ext_int.c" functionName="EXT_INT_Initialize" lineNumber="87" column="6"/>
+    <functioncall functionName="INT0"/>
+    <functioncall functionName="INT0_CallBack"/>
+    <functioncall functionName="INT0_DefaultInterruptHandler"/>
+    <functioncall functionName="INT0_ISR"/>
+    <functioncall functionName="INT0_SetInterruptHandler"/>
+    <functioncall functionName="INT1"/>
+    <functioncall functionName="INT1_CallBack"/>
+    <functioncall functionName="INT1_DefaultInterruptHandler"/>
+    <functioncall functionName="INT1_ISR"/>
+    <functioncall functionName="INT1_SetInterruptHandler"/>
+    <functioncall functionName="base"/>
+    <functioncall functionName="low_priority"/>
+  </FileInfo>
+  <includes>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/ext_int.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/interrupt_manager.h</filename>
+  </includes>
+  <hash>13514881438937941341</hash>
+</analyzerinfo>

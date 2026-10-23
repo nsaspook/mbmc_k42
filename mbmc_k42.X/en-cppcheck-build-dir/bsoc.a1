@@ -1,0 +1,425 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.h" line="34" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;math.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;math.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.h" line="35" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.h" line="36" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;string.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.h" line="37" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr3.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr3.h" line="55" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.h" line="55" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.h" line="56" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/ext_int.h" line="53" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/vconfig.h" line="17" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;time.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;time.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/vconfig.h" line="18" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/spi1.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/spi1.h" line="55" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/spi1.h" line="56" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/pin_manager.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mbmc.h" line="34" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;time.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;time.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mbmc.h" line="35" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;math.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;math.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/daq.h" line="36" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h" line="55" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h" line="56" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/timers.h" line="4" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/timers.h" line="5" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/tests.h" line="34" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/daq.h" line="140" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.h" line="55" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/hid.h" line="34" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/dio.h" line="34" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/mcc.h" line="49" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/mcc.h" line="52" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/mcc.h" line="53" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;conio.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;conio.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/mcc.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.h" line="53" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.h" line="53" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/fvr.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/fvr.h" line="55" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr5.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr5.h" line="55" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.h" line="55" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/pwm8.h" line="54" column="3"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/pwm8.h" line="55" column="3"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr2.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr2.h" line="55" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.h" line="55" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.h" line="56" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart1.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart1.h" line="55" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart1.h" line="56" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/clkref.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/clkref.h" line="55" column="2"/>
+        </error>
+        <error id="normalCheckLevelMaxBranches" severity="information" msg="Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches." verbose="Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches." file0="/root/mbmc_k42/mbmc_k42.X/bsoc.c">
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="0" column="0"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%lu in format string (no. 2) requires &apos;unsigned long&apos; but the argument type is &apos;unsigned int&apos;." verbose="%lu in format string (no. 2) requires &apos;unsigned long&apos; but the argument type is &apos;unsigned int&apos;." cwe="686" hash="4977504830581715784" file0="/root/mbmc_k42/mbmc_k42.X/bsoc.c">
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="429" column="4"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%u in format string (no. 4) requires &apos;unsigned int&apos; but the argument type is &apos;signed short&apos;." verbose="%u in format string (no. 4) requires &apos;unsigned int&apos; but the argument type is &apos;signed short&apos;." cwe="686" hash="3152712471907837633" file0="/root/mbmc_k42/mbmc_k42.X/bsoc.c">
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="429" column="4"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;V.mode_pwm&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;V.mode_pwm&apos; is reassigned a value before the old one has been used." cwe="563" hash="9230383373146119625" file0="/root/mbmc_k42/mbmc_k42.X/bsoc.c">
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="93" column="15" info="V.mode_pwm is overwritten"/>
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="90" column="16" info="V.mode_pwm is assigned"/>
+            <symbol>V.mode_pwm</symbol>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;ret&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;ret&apos; is reassigned a value before the old one has been used." cwe="563" hash="17545828706139807884" file0="/root/mbmc_k42/mbmc_k42.X/bsoc.c">
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="616" column="8" info="ret is overwritten"/>
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="606" column="9" info="ret is assigned"/>
+            <symbol>ret</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Argument &apos;gti_sbuf&apos; shadows outer variable" verbose="Argument &apos;gti_sbuf&apos; shadows outer variable" cwe="398" hash="1357860074490961012" file0="/root/mbmc_k42/mbmc_k42.X/bsoc.c">
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="112" column="32" info="Shadow argument"/>
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="54" column="9" info="Shadowed variable"/>
+            <symbol>gti_sbuf</symbol>
+        </error>
+        <error id="shadowFunction" severity="style" msg="Argument &apos;peukert&apos; shadows outer function" verbose="Argument &apos;peukert&apos; shadows outer function" cwe="398" hash="16623354080349689765" file0="/root/mbmc_k42/mbmc_k42.X/bsoc.c">
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="503" column="56" info="Shadow argument"/>
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.h" line="113" column="10" info="Shadowed function"/>
+            <symbol>peukert</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/root/mbmc_k42/mbmc_k42.X/bsoc.h:116:6" call-funcname="pv_diversion" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="274" col="14" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/bsoc.c:57:9" call-funcname="gti_checksum" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="441" col="16" call-argexpr="gti_sbuf" call-argvaluetype="7" call-argvalue="8" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="467" col="50" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="468" col="70" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mbmc.h:110:6" call-funcname="set_load_relay_one" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="576" col="22" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mbmc.h:111:6" call-funcname="set_load_relay_two" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="577" col="22" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="587" col="33" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="599" col="35" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="600" col="31" call-argexpr="C_BATT" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="600" col="31" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="609" col="36" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="610" col="31" call-argexpr="C_BATT" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="610" col="31" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mbmc.h:110:6" call-funcname="set_load_relay_one" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="613" col="22" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mbmc.h:111:6" call-funcname="set_load_relay_two" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="614" col="22" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/>  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/root/mbmc_k42/mbmc_k42.X/bsoc.c:57:9" my-argnr="1" my-argname="gti_sbuf" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="127" col="2" value="4"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/root/mbmc_k42/mbmc_k42.X/bsoc.c:57:9" my-argnr="1" my-argname="gti_sbuf" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="127" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="pv_diversion" lineNumber="62" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="gti_checksum" lineNumber="112" column="9"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="gti_cmds" lineNumber="139" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="calc_bsoc" lineNumber="260" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="init_bsoc" lineNumber="462" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="start_bsoc" lineNumber="477" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="stop_bsoc" lineNumber="486" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="reset_bsoc" lineNumber="492" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="peukert" lineNumber="503" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="Volts_to_SOC" lineNumber="535" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="esr_check" lineNumber="557" column="7"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="cc_state" lineNumber="628" column="9"/>
+    <functioncall functionName="LATE2"/>
+    <functioncall functionName="StartTimer"/>
+    <functioncall functionName="TMR3_SetInterruptHandler"/>
+    <functioncall functionName="TimerDone"/>
+    <functioncall functionName="UART1_Read"/>
+    <functioncall functionName="UART1_is_rx_ready"/>
+    <functioncall functionName="UART2_Write"/>
+    <functioncall functionName="Volts_to_SOC"/>
+    <functioncall functionName="atol"/>
+    <functioncall functionName="calc_bsoc"/>
+    <functioncall functionName="cc_state"/>
+    <functioncall functionName="conv_raw_result"/>
+    <functioncall functionName="diversion_pwm_set"/>
+    <functioncall functionName="fabs"/>
+    <functioncall functionName="gti_checksum"/>
+    <functioncall functionName="port_data_dma_ptr"/>
+    <functioncall functionName="pow"/>
+    <functioncall functionName="pv_diversion"/>
+    <functioncall functionName="send_port_data_dma"/>
+    <functioncall functionName="set_load_relay_one"/>
+    <functioncall functionName="set_load_relay_two"/>
+    <functioncall functionName="set_time"/>
+    <functioncall functionName="snprintf"/>
+    <functioncall functionName="strlen"/>
+    <functioncall functionName="update_adc_result"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/root/mbmc_k42/mbmc_k42.X/bsoc.h:116:6" call-funcname="pv_diversion" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="274" col="14" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/bsoc.c:57:9" call-funcname="gti_checksum" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="441" col="16" call-argexpr="gti_sbuf" call-argvaluetype="7" call-argvalue="8" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="467" col="50" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="468" col="70" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mbmc.h:110:6" call-funcname="set_load_relay_one" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="576" col="22" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mbmc.h:111:6" call-funcname="set_load_relay_two" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="577" col="22" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="587" col="33" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="599" col="35" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="600" col="31" call-argexpr="C_BATT" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="600" col="31" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="609" col="36" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="610" col="31" call-argexpr="C_BATT" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="610" col="31" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mbmc.h:110:6" call-funcname="set_load_relay_one" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="613" col="22" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mbmc.h:111:6" call-funcname="set_load_relay_two" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="614" col="22" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/>  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/root/mbmc_k42/mbmc_k42.X/bsoc.c:57:9" my-argnr="1" my-argname="gti_sbuf" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="127" col="2" value="4"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/root/mbmc_k42/mbmc_k42.X/bsoc.c:57:9" my-argnr="1" my-argname="gti_sbuf" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="127" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="pv_diversion" lineNumber="62" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="gti_checksum" lineNumber="112" column="9"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="gti_cmds" lineNumber="139" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="calc_bsoc" lineNumber="260" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="init_bsoc" lineNumber="462" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="start_bsoc" lineNumber="477" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="stop_bsoc" lineNumber="486" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="reset_bsoc" lineNumber="492" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="peukert" lineNumber="503" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="Volts_to_SOC" lineNumber="535" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="esr_check" lineNumber="557" column="7"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="cc_state" lineNumber="628" column="9"/>
+    <functioncall functionName="LATE2"/>
+    <functioncall functionName="StartTimer"/>
+    <functioncall functionName="TMR3_SetInterruptHandler"/>
+    <functioncall functionName="TimerDone"/>
+    <functioncall functionName="UART1_Read"/>
+    <functioncall functionName="UART1_is_rx_ready"/>
+    <functioncall functionName="UART2_Write"/>
+    <functioncall functionName="Volts_to_SOC"/>
+    <functioncall functionName="atol"/>
+    <functioncall functionName="calc_bsoc"/>
+    <functioncall functionName="cc_state"/>
+    <functioncall functionName="conv_raw_result"/>
+    <functioncall functionName="diversion_pwm_set"/>
+    <functioncall functionName="fabs"/>
+    <functioncall functionName="gti_checksum"/>
+    <functioncall functionName="port_data_dma_ptr"/>
+    <functioncall functionName="pow"/>
+    <functioncall functionName="pv_diversion"/>
+    <functioncall functionName="send_port_data_dma"/>
+    <functioncall functionName="set_load_relay_one"/>
+    <functioncall functionName="set_load_relay_two"/>
+    <functioncall functionName="set_time"/>
+    <functioncall functionName="snprintf"/>
+    <functioncall functionName="strlen"/>
+    <functioncall functionName="update_adc_result"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/root/mbmc_k42/mbmc_k42.X/bsoc.h:116:6" call-funcname="pv_diversion" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="274" col="14" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/bsoc.c:57:9" call-funcname="gti_checksum" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="441" col="16" call-argexpr="gti_sbuf" call-argvaluetype="7" call-argvalue="8" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="467" col="50" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="468" col="70" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mbmc.h:110:6" call-funcname="set_load_relay_one" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="576" col="22" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mbmc.h:111:6" call-funcname="set_load_relay_two" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="577" col="22" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="587" col="33" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="599" col="35" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="600" col="31" call-argexpr="C_BATT" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="600" col="31" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="609" col="36" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="610" col="31" call-argexpr="C_BATT" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="610" col="31" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mbmc.h:110:6" call-funcname="set_load_relay_one" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="613" col="22" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mbmc.h:111:6" call-funcname="set_load_relay_two" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="614" col="22" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/>  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/root/mbmc_k42/mbmc_k42.X/bsoc.c:57:9" my-argnr="1" my-argname="gti_sbuf" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="127" col="2" value="4"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/root/mbmc_k42/mbmc_k42.X/bsoc.c:57:9" my-argnr="1" my-argname="gti_sbuf" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="127" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="pv_diversion" lineNumber="62" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="gti_checksum" lineNumber="112" column="9"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="gti_cmds" lineNumber="139" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="calc_bsoc" lineNumber="260" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="init_bsoc" lineNumber="462" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="start_bsoc" lineNumber="477" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="stop_bsoc" lineNumber="486" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="reset_bsoc" lineNumber="492" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="peukert" lineNumber="503" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="Volts_to_SOC" lineNumber="535" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="esr_check" lineNumber="557" column="7"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="cc_state" lineNumber="628" column="9"/>
+    <functioncall functionName="LATE2"/>
+    <functioncall functionName="StartTimer"/>
+    <functioncall functionName="TMR3_SetInterruptHandler"/>
+    <functioncall functionName="TimerDone"/>
+    <functioncall functionName="UART1_Read"/>
+    <functioncall functionName="UART1_is_rx_ready"/>
+    <functioncall functionName="UART2_Write"/>
+    <functioncall functionName="Volts_to_SOC"/>
+    <functioncall functionName="atol"/>
+    <functioncall functionName="calc_bsoc"/>
+    <functioncall functionName="cc_state"/>
+    <functioncall functionName="conv_raw_result"/>
+    <functioncall functionName="diversion_pwm_set"/>
+    <functioncall functionName="fabs"/>
+    <functioncall functionName="gti_checksum"/>
+    <functioncall functionName="port_data_dma_ptr"/>
+    <functioncall functionName="pow"/>
+    <functioncall functionName="pv_diversion"/>
+    <functioncall functionName="send_port_data_dma"/>
+    <functioncall functionName="set_load_relay_one"/>
+    <functioncall functionName="set_load_relay_two"/>
+    <functioncall functionName="set_time"/>
+    <functioncall functionName="snprintf"/>
+    <functioncall functionName="strlen"/>
+    <functioncall functionName="update_adc_result"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/root/mbmc_k42/mbmc_k42.X/bsoc.h:116:6" call-funcname="pv_diversion" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="274" col="14" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/bsoc.c:57:9" call-funcname="gti_checksum" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="441" col="16" call-argexpr="gti_sbuf" call-argvaluetype="7" call-argvalue="8" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="467" col="50" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="468" col="70" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mbmc.h:110:6" call-funcname="set_load_relay_one" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="576" col="22" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mbmc.h:111:6" call-funcname="set_load_relay_two" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="577" col="22" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="587" col="33" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="599" col="35" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="600" col="31" call-argexpr="C_BATT" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="600" col="31" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="609" col="36" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="610" col="31" call-argexpr="C_BATT" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/daq.h:155:7" call-funcname="conv_raw_result" call-argnr="2" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="610" col="31" call-argexpr="CONV" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mbmc.h:110:6" call-funcname="set_load_relay_one" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="613" col="22" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="/root/mbmc_k42/mbmc_k42.X/mbmc.h:111:6" call-funcname="set_load_relay_two" call-argnr="1" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="614" col="22" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/>  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/root/mbmc_k42/mbmc_k42.X/bsoc.c:57:9" my-argnr="1" my-argname="gti_sbuf" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="127" col="2" value="4"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/root/mbmc_k42/mbmc_k42.X/bsoc.c:57:9" my-argnr="1" my-argname="gti_sbuf" file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="127" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="pv_diversion" lineNumber="62" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="gti_checksum" lineNumber="112" column="9"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="gti_cmds" lineNumber="139" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="calc_bsoc" lineNumber="260" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="init_bsoc" lineNumber="462" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="start_bsoc" lineNumber="477" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="stop_bsoc" lineNumber="486" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="reset_bsoc" lineNumber="492" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="peukert" lineNumber="503" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="Volts_to_SOC" lineNumber="535" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="esr_check" lineNumber="557" column="7"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" functionName="cc_state" lineNumber="628" column="9"/>
+    <functioncall functionName="LATE2"/>
+    <functioncall functionName="StartTimer"/>
+    <functioncall functionName="TMR3_SetInterruptHandler"/>
+    <functioncall functionName="TimerDone"/>
+    <functioncall functionName="UART1_Read"/>
+    <functioncall functionName="UART1_Write"/>
+    <functioncall functionName="UART1_is_rx_ready"/>
+    <functioncall functionName="UART2_Write"/>
+    <functioncall functionName="Volts_to_SOC"/>
+    <functioncall functionName="atol"/>
+    <functioncall functionName="calc_bsoc"/>
+    <functioncall functionName="cc_state"/>
+    <functioncall functionName="conv_raw_result"/>
+    <functioncall functionName="diversion_pwm_set"/>
+    <functioncall functionName="fabs"/>
+    <functioncall functionName="gti_checksum"/>
+    <functioncall functionName="port_data_dma_ptr"/>
+    <functioncall functionName="pow"/>
+    <functioncall functionName="pv_diversion"/>
+    <functioncall functionName="send_port_data_dma"/>
+    <functioncall functionName="set_load_relay_one"/>
+    <functioncall functionName="set_load_relay_two"/>
+    <functioncall functionName="set_time"/>
+    <functioncall functionName="snprintf"/>
+    <functioncall functionName="strlen"/>
+    <functioncall functionName="update_adc_result"/>
+  </FileInfo>
+  <includes>
+    <filename>/root/mbmc_k42/mbmc_k42.X/bsoc.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/daq.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/dio.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/eadog.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/hid.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mbmc.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/clkref.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/device_config.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/ext_int.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/fvr.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/interrupt_manager.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/mcc.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/pin_manager.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/pwm8.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/spi1.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr2.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr3.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr5.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart1.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mconfig.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/ringbufs.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/tests.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/timers.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/vconfig.h</filename>
+  </includes>
+  <hash>17116572473843775234</hash>
+</analyzerinfo>

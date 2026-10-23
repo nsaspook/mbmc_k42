@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="51" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.h" line="55" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.h" line="56" column="2"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_Initialize" lineNumber="65" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_StartConversion" lineNumber="128" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_IsConversionDone" lineNumber="140" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_GetConversionResult" lineNumber="146" column="14"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_GetSingleConversion" lineNumber="152" column="14"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_StopConversion" lineNumber="177" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_SetStopOnInterrupt" lineNumber="183" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_DischargeSampleCapacitor" lineNumber="189" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_LoadAcquisitionRegister" lineNumber="195" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_SetPrechargeTime" lineNumber="202" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_SetRepeatCount" lineNumber="209" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_GetCurrentCountofConversions" lineNumber="215" column="9"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_ClearAccumulator" lineNumber="221" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_GetAccumulatorValue" lineNumber="227" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_HasAccumulatorOverflowed" lineNumber="233" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_GetFilterValue" lineNumber="239" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_GetPreviousResult" lineNumber="245" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_DefineSetPoint" lineNumber="251" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_SetUpperThreshold" lineNumber="258" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_SetLowerThreshold" lineNumber="265" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_GetErrorCalculation" lineNumber="272" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_EnableDoubleSampling" lineNumber="278" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_EnableContinuousConversion" lineNumber="284" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_DisableContinuousConversion" lineNumber="290" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_HasErrorCrossedUpperThreshold" lineNumber="296" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_HasErrorCrossedLowerThreshold" lineNumber="302" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_GetConversionStageStatus" lineNumber="308" column="9"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_SetADIInterruptHandler" lineNumber="323" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_SetADTIInterruptHandler" lineNumber="336" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" functionName="ADCC_DefaultInterruptHandler" lineNumber="339" column="6"/>
+    <functioncall functionName="AD"/>
+    <functioncall functionName="ADACCL"/>
+    <functioncall functionName="ADAOV"/>
+    <functioncall functionName="ADCC_DefaultInterruptHandler"/>
+    <functioncall functionName="ADCC_ISR"/>
+    <functioncall functionName="ADCC_SetADIInterruptHandler"/>
+    <functioncall functionName="ADCC_SetADTIInterruptHandler"/>
+    <functioncall functionName="ADCC_ThresholdISR"/>
+    <functioncall functionName="ADCNT"/>
+    <functioncall functionName="ADERRL"/>
+    <functioncall functionName="ADFLTRL"/>
+    <functioncall functionName="ADGO"/>
+    <functioncall functionName="ADLTHR"/>
+    <functioncall functionName="ADPREVL"/>
+    <functioncall functionName="ADRESL"/>
+    <functioncall functionName="ADSTAT"/>
+    <functioncall functionName="ADT"/>
+    <functioncall functionName="ADUTHR"/>
+    <functioncall functionName="__uint24"/>
+    <functioncall functionName="base"/>
+  </FileInfo>
+  <includes>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/interrupt_manager.h</filename>
+  </includes>
+  <hash>7050321177808527732</hash>
+</analyzerinfo>

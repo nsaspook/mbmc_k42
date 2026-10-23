@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.22.0"/>
+    <errors>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%lu in format string (no. 2) requires &amp;#039;unsigned long&amp;#039; but the argument type is &amp;#039;unsigned int&amp;#039;." verbose="%lu in format string (no. 2) requires &amp;#039;unsigned long&amp;#039; but the argument type is &amp;#039;unsigned int&amp;#039;." cwe="686" hash="4977504830581715784" file0="/root/mbmc_k42/mbmc_k42.X/bsoc.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="429" column="4"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%u in format string (no. 4) requires &amp;#039;unsigned int&amp;#039; but the argument type is &amp;#039;signed short&amp;#039;." verbose="%u in format string (no. 4) requires &amp;#039;unsigned int&amp;#039; but the argument type is &amp;#039;signed short&amp;#039;." cwe="686" hash="3152712471907837633" file0="/root/mbmc_k42/mbmc_k42.X/bsoc.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="429" column="4"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &amp;#039;V.mode_pwm&amp;#039; is reassigned a value before the old one has been used." verbose="Variable &amp;#039;V.mode_pwm&amp;#039; is reassigned a value before the old one has been used." cwe="563" hash="9230383373146119625" file0="/root/mbmc_k42/mbmc_k42.X/bsoc.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="93" column="15" info="V.mode_pwm is overwritten"/>
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="90" column="16" info="V.mode_pwm is assigned"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &amp;#039;ret&amp;#039; is reassigned a value before the old one has been used." verbose="Variable &amp;#039;ret&amp;#039; is reassigned a value before the old one has been used." cwe="563" hash="17545828706139807884" file0="/root/mbmc_k42/mbmc_k42.X/bsoc.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="616" column="8" info="ret is overwritten"/>
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="606" column="9" info="ret is assigned"/>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Argument &amp;#039;gti_sbuf&amp;#039; shadows outer variable" verbose="Argument &amp;#039;gti_sbuf&amp;#039; shadows outer variable" cwe="398" hash="1357860074490961012" file0="/root/mbmc_k42/mbmc_k42.X/bsoc.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="112" column="32" info="Shadow argument"/>
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="54" column="9" info="Shadowed variable"/>
+        </error>
+        <error id="shadowFunction" severity="style" msg="Argument &amp;#039;peukert&amp;#039; shadows outer function" verbose="Argument &amp;#039;peukert&amp;#039; shadows outer function" cwe="398" hash="16623354080349689765" file0="/root/mbmc_k42/mbmc_k42.X/bsoc.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="503" column="56" info="Shadow argument"/>
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.h" line="113" column="10" info="Shadowed function"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;peukert&amp;#039; is never used." verbose="The function &amp;#039;peukert&amp;#039; is never used." cwe="561" hash="15570708643471608056" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="503" column="10"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;reset_bsoc&amp;#039; is never used." verbose="The function &amp;#039;reset_bsoc&amp;#039; is never used." cwe="561" hash="9734552422460293861" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/bsoc.c" line="492" column="6"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &amp;#039;r_cal_ptr&amp;#039; can be declared as pointer to const" verbose="Variable &amp;#039;r_cal_ptr&amp;#039; can be declared as pointer to const" cwe="398" hash="12823876190065604947" file0="/root/mbmc_k42/mbmc_k42.X/daq.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="476" column="11"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="union member &amp;#039;bytes2::ld&amp;#039; is never used." verbose="union member &amp;#039;bytes2::ld&amp;#039; is never used." cwe="563" hash="12686348670761098278" file0="/root/mbmc_k42/mbmc_k42.X/daq.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="19" column="11"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="union member &amp;#039;bytes2::bd&amp;#039; is never used." verbose="union member &amp;#039;bytes2::bd&amp;#039; is never used." cwe="563" hash="14166534520501408176" file0="/root/mbmc_k42/mbmc_k42.X/daq.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="20" column="10"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="union member &amp;#039;dac_buf_type::ld&amp;#039; is never used." verbose="union member &amp;#039;dac_buf_type::ld&amp;#039; is never used." cwe="563" hash="6217122673279275758" file0="/root/mbmc_k42/mbmc_k42.X/daq.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="24" column="11"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;update_cal_data&amp;#039; is never used." verbose="The function &amp;#039;update_cal_data&amp;#039; is never used." cwe="561" hash="6221130355650476324" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/daq.c" line="502" column="6"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;strPtr&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;strPtr&amp;#039; can be declared as pointer to const" cwe="398" hash="1285860542337225240" file0="/root/mbmc_k42/mbmc_k42.X/eadog.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/eadog.c" line="181" column="31"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;eaDogM_ClearRow&amp;#039; is never used." verbose="The function &amp;#039;eaDogM_ClearRow&amp;#039; is never used." cwe="561" hash="10239715791847068458" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/eadog.c" line="289" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;eaDogM_SetPos&amp;#039; is never used." verbose="The function &amp;#039;eaDogM_SetPos&amp;#039; is never used." cwe="561" hash="17313657298272596421" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/eadog.c" line="284" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;eaDogM_WriteByteToCGRAM&amp;#039; is never used." verbose="The function &amp;#039;eaDogM_WriteByteToCGRAM&amp;#039; is never used." cwe="561" hash="9595867210162548831" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/eadog.c" line="294" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;eaDogM_WriteChr&amp;#039; is never used." verbose="The function &amp;#039;eaDogM_WriteChr&amp;#039; is never used." cwe="561" hash="18202010744288661865" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/eadog.c" line="446" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;eaDogM_WriteIntAtPos&amp;#039; is never used." verbose="The function &amp;#039;eaDogM_WriteIntAtPos&amp;#039; is never used." cwe="561" hash="15336812676865664246" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/eadog.c" line="279" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;send_lcd_cmd&amp;#039; is never used." verbose="The function &amp;#039;send_lcd_cmd&amp;#039; is never used." cwe="561" hash="10290305821483947332" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/eadog.c" line="160" column="13"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;send_lcd_cmd_long&amp;#039; is never used." verbose="The function &amp;#039;send_lcd_cmd_long&amp;#039; is never used." cwe="561" hash="1731286952125997407" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/eadog.c" line="169" column="13"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;send_lcd_data&amp;#039; is never used." verbose="The function &amp;#039;send_lcd_data&amp;#039; is never used." cwe="561" hash="5350573760799270902" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/eadog.c" line="153" column="13"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;spi_rec_done&amp;#039; is never used." verbose="The function &amp;#039;spi_rec_done&amp;#039; is never used." cwe="561" hash="14208350322415784465" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/eadog.c" line="27" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;wait_lcd_check&amp;#039; is never used." verbose="The function &amp;#039;wait_lcd_check&amp;#039; is never used." cwe="561" hash="14534958647852282793" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/eadog.c" line="491" column="6"/>
+        </error>
+        <error id="asctimeCalled" severity="style" msg="Obsolete function &amp;#039;asctime&amp;#039; called. It is recommended to use &amp;#039;strftime&amp;#039; instead." verbose="Obsolete function &amp;#039;asctime&amp;#039; called. It is recommended to use &amp;#039;strftime&amp;#039; instead." cwe="477" hash="9649660202802885480" file0="/root/mbmc_k42/mbmc_k42.X/main.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/main.c" line="497" column="50"/>
+        </error>
+        <error id="asctimeCalled" severity="style" msg="Obsolete function &amp;#039;asctime&amp;#039; called. It is recommended to use &amp;#039;strftime&amp;#039; instead." verbose="Obsolete function &amp;#039;asctime&amp;#039; called. It is recommended to use &amp;#039;strftime&amp;#039; instead." cwe="477" hash="1140193727056702796" file0="/root/mbmc_k42/mbmc_k42.X/main.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/main.c" line="498" column="50"/>
+        </error>
+        <error id="asctimeCalled" severity="style" msg="Obsolete function &amp;#039;asctime&amp;#039; called. It is recommended to use &amp;#039;strftime&amp;#039; instead." verbose="Obsolete function &amp;#039;asctime&amp;#039; called. It is recommended to use &amp;#039;strftime&amp;#039; instead." cwe="477" hash="11187368681820145743" file0="/root/mbmc_k42/mbmc_k42.X/main.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/main.c" line="793" column="49"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%lu in format string (no. 2) requires &amp;#039;unsigned long&amp;#039; but the argument type is &amp;#039;unsigned int&amp;#039;." verbose="%lu in format string (no. 2) requires &amp;#039;unsigned long&amp;#039; but the argument type is &amp;#039;unsigned int&amp;#039;." cwe="686" hash="13141013540330113377" file0="/root/mbmc_k42/mbmc_k42.X/main.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/main.c" line="518" column="5"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%lu in format string (no. 3) requires &amp;#039;unsigned long&amp;#039; but the argument type is &amp;#039;unsigned int&amp;#039;." verbose="%lu in format string (no. 3) requires &amp;#039;unsigned long&amp;#039; but the argument type is &amp;#039;unsigned int&amp;#039;." cwe="686" hash="8518944269083930410" file0="/root/mbmc_k42/mbmc_k42.X/main.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/main.c" line="582" column="6"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%ld in format string (no. 1) requires &amp;#039;long&amp;#039; but the argument type is &amp;#039;unsigned int&amp;#039;." verbose="%ld in format string (no. 1) requires &amp;#039;long&amp;#039; but the argument type is &amp;#039;unsigned int&amp;#039;." cwe="686" hash="4443916898310518538" file0="/root/mbmc_k42/mbmc_k42.X/main.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/main.c" line="706" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%ld in format string (no. 2) requires &amp;#039;long&amp;#039; but the argument type is &amp;#039;unsigned int&amp;#039;." verbose="%ld in format string (no. 2) requires &amp;#039;long&amp;#039; but the argument type is &amp;#039;unsigned int&amp;#039;." cwe="686" hash="8857414763619078027" file0="/root/mbmc_k42/mbmc_k42.X/main.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/main.c" line="706" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%ld in format string (no. 3) requires &amp;#039;long&amp;#039; but the argument type is &amp;#039;unsigned int&amp;#039;." verbose="%ld in format string (no. 3) requires &amp;#039;long&amp;#039; but the argument type is &amp;#039;unsigned int&amp;#039;." cwe="686" hash="13270912628927637516" file0="/root/mbmc_k42/mbmc_k42.X/main.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/main.c" line="706" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%ld in format string (no. 1) requires &amp;#039;long&amp;#039; but the argument type is &amp;#039;unsigned int&amp;#039;." verbose="%ld in format string (no. 1) requires &amp;#039;long&amp;#039; but the argument type is &amp;#039;unsigned int&amp;#039;." cwe="686" hash="2697416780853521814" file0="/root/mbmc_k42/mbmc_k42.X/main.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/main.c" line="713" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%ld in format string (no. 2) requires &amp;#039;long&amp;#039; but the argument type is &amp;#039;unsigned int&amp;#039;." verbose="%ld in format string (no. 2) requires &amp;#039;long&amp;#039; but the argument type is &amp;#039;unsigned int&amp;#039;." cwe="686" hash="7110914646162081303" file0="/root/mbmc_k42/mbmc_k42.X/main.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/main.c" line="713" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%ld in format string (no. 3) requires &amp;#039;long&amp;#039; but the argument type is &amp;#039;unsigned int&amp;#039;." verbose="%ld in format string (no. 3) requires &amp;#039;long&amp;#039; but the argument type is &amp;#039;unsigned int&amp;#039;." cwe="686" hash="11524412511470640792" file0="/root/mbmc_k42/mbmc_k42.X/main.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/main.c" line="713" column="3"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;shape&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;shape&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" hash="45479255129624590" file0="/root/mbmc_k42/mbmc_k42.X/main.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/main.c" line="431" column="12"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &amp;#039;shape&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;shape&amp;#039; is assigned a value that is never used." cwe="563" hash="1814551834766413257" file0="/root/mbmc_k42/mbmc_k42.X/main.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/main.c" line="431" column="18"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &amp;#039;cm&amp;#039; is reassigned a value before the old one has been used." verbose="Variable &amp;#039;cm&amp;#039; is reassigned a value before the old one has been used." cwe="563" hash="5973976073474745787" file0="/root/mbmc_k42/mbmc_k42.X/main.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/main.c" line="689" column="6" info="cm is overwritten"/>
+            <location file="/root/mbmc_k42/mbmc_k42.X/main.c" line="687" column="6" info="cm is assigned"/>
+        </error>
+        <error id="uselessAssignmentPtrArg" severity="warning" msg="Assignment of function parameter has no effect outside the function. Did you forget dereferencing it?" verbose="Assignment of function parameter has no effect outside the function. Did you forget dereferencing it?" cwe="398" hash="4759605344813110141" file0="/root/mbmc_k42/mbmc_k42.X/mbmc.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mbmc.c" line="319" column="3"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;bvror&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;bvror&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" hash="5706027674355457263" file0="/root/mbmc_k42/mbmc_k42.X/mbmc.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mbmc.c" line="67" column="15"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;bcror&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;bcror&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" hash="1381542163563751742" file0="/root/mbmc_k42/mbmc_k42.X/mbmc.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mbmc.c" line="67" column="28"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;low_bat_delay&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;low_bat_delay&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" hash="1264939679335790521" file0="/root/mbmc_k42/mbmc_k42.X/mbmc.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mbmc.c" line="175" column="32"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;t&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;t&amp;#039; can be declared as pointer to const" cwe="398" hash="6150394290598882017" file0="/root/mbmc_k42/mbmc_k42.X/mbmc.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mbmc.c" line="312" column="22"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &amp;#039;t&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;t&amp;#039; is assigned a value that is never used." cwe="563" hash="5152233502660238036" file0="/root/mbmc_k42/mbmc_k42.X/mbmc.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mbmc.c" line="319" column="5"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &amp;#039;V.response.info!=DIS_STR&amp;#039; is always true" verbose="Condition &amp;#039;V.response.info!=DIS_STR&amp;#039; is always true" cwe="571" hash="13700183200615645010" file0="/root/mbmc_k42/mbmc_k42.X/mconfig.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mconfig.c" line="173" column="25"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;MyeaDogM_WriteStringAtPos&amp;#039; is never used." verbose="The function &amp;#039;MyeaDogM_WriteStringAtPos&amp;#039; is never used." cwe="561" hash="11413242910944548291" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mconfig.c" line="162" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;vterm_sequence&amp;#039; is never used." verbose="The function &amp;#039;vterm_sequence&amp;#039; is never used." cwe="561" hash="5434269604701397352" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mconfig.c" line="141" column="6"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;_this&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;_this&amp;#039; can be declared as pointer to const" cwe="398" hash="15695798247261926448" file0="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="35" column="35"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;_this&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;_this&amp;#039; can be declared as pointer to const" cwe="398" hash="4788316402720448152" file0="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="40" column="34"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;modulo_dec&amp;#039; is never used." verbose="The function &amp;#039;modulo_dec&amp;#039; is never used." cwe="561" hash="4648653958769993822" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="16" column="9"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ringBufS_empty&amp;#039; is never used." verbose="The function &amp;#039;ringBufS_empty&amp;#039; is never used." cwe="561" hash="5204504992158514083" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="35" column="8"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ringBufS_flush&amp;#039; is never used." verbose="The function &amp;#039;ringBufS_flush&amp;#039; is never used." cwe="561" hash="13763732752123622938" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="85" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ringBufS_full&amp;#039; is never used." verbose="The function &amp;#039;ringBufS_full&amp;#039; is never used." cwe="561" hash="9064622525976013391" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="40" column="8"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ringBufS_get&amp;#039; is never used." verbose="The function &amp;#039;ringBufS_get&amp;#039; is never used." cwe="561" hash="9507968924471418412" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="45" column="9"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ringBufS_init&amp;#039; is never used." verbose="The function &amp;#039;ringBufS_init&amp;#039; is never used." cwe="561" hash="14124957470786160720" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="22" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ringBufS_put&amp;#039; is never used." verbose="The function &amp;#039;ringBufS_put&amp;#039; is never used." cwe="561" hash="15904270868218592933" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="58" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ringBufS_put_dma&amp;#039; is never used." verbose="The function &amp;#039;ringBufS_put_dma&amp;#039; is never used." cwe="561" hash="15349536657582261790" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="67" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ringBufS_put_dma_cpy&amp;#039; is never used." verbose="The function &amp;#039;ringBufS_put_dma_cpy&amp;#039; is never used." cwe="561" hash="15183474360657172971" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="76" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ADCC_ClearAccumulator&amp;#039; is never used." verbose="The function &amp;#039;ADCC_ClearAccumulator&amp;#039; is never used." cwe="561" hash="5028062083720808083" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="221" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ADCC_DefineSetPoint&amp;#039; is never used." verbose="The function &amp;#039;ADCC_DefineSetPoint&amp;#039; is never used." cwe="561" hash="11002004766596415971" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="251" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ADCC_DisableContinuousConversion&amp;#039; is never used." verbose="The function &amp;#039;ADCC_DisableContinuousConversion&amp;#039; is never used." cwe="561" hash="5344491637976101987" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="290" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ADCC_EnableContinuousConversion&amp;#039; is never used." verbose="The function &amp;#039;ADCC_EnableContinuousConversion&amp;#039; is never used." cwe="561" hash="4316260875582916194" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="284" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ADCC_EnableDoubleSampling&amp;#039; is never used." verbose="The function &amp;#039;ADCC_EnableDoubleSampling&amp;#039; is never used." cwe="561" hash="5925945322444725973" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="278" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ADCC_GetAccumulatorValue&amp;#039; is never used." verbose="The function &amp;#039;ADCC_GetAccumulatorValue&amp;#039; is never used." cwe="561" hash="9942607149790001047" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="227" column="10"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ADCC_GetConversionResult&amp;#039; is never used." verbose="The function &amp;#039;ADCC_GetConversionResult&amp;#039; is never used." cwe="561" hash="3899770237786349535" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="146" column="14"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ADCC_GetConversionStageStatus&amp;#039; is never used." verbose="The function &amp;#039;ADCC_GetConversionStageStatus&amp;#039; is never used." cwe="561" hash="4509251886966726782" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="308" column="9"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ADCC_GetCurrentCountofConversions&amp;#039; is never used." verbose="The function &amp;#039;ADCC_GetCurrentCountofConversions&amp;#039; is never used." cwe="561" hash="3878849583486967348" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="215" column="9"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ADCC_GetErrorCalculation&amp;#039; is never used." verbose="The function &amp;#039;ADCC_GetErrorCalculation&amp;#039; is never used." cwe="561" hash="11791019460276056525" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="272" column="10"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ADCC_GetFilterValue&amp;#039; is never used." verbose="The function &amp;#039;ADCC_GetFilterValue&amp;#039; is never used." cwe="561" hash="17632595515926858525" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="239" column="10"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ADCC_GetPreviousResult&amp;#039; is never used." verbose="The function &amp;#039;ADCC_GetPreviousResult&amp;#039; is never used." cwe="561" hash="5044491830594827808" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="245" column="10"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ADCC_GetSingleConversion&amp;#039; is never used." verbose="The function &amp;#039;ADCC_GetSingleConversion&amp;#039; is never used." cwe="561" hash="11789860065908017994" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="152" column="14"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ADCC_HasAccumulatorOverflowed&amp;#039; is never used." verbose="The function &amp;#039;ADCC_HasAccumulatorOverflowed&amp;#039; is never used." cwe="561" hash="6608002135630307335" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="233" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ADCC_HasErrorCrossedLowerThreshold&amp;#039; is never used." verbose="The function &amp;#039;ADCC_HasErrorCrossedLowerThreshold&amp;#039; is never used." cwe="561" hash="16708249165383603473" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="302" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ADCC_HasErrorCrossedUpperThreshold&amp;#039; is never used." verbose="The function &amp;#039;ADCC_HasErrorCrossedUpperThreshold&amp;#039; is never used." cwe="561" hash="18268793134065201680" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="296" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ADCC_IsConversionDone&amp;#039; is never used." verbose="The function &amp;#039;ADCC_IsConversionDone&amp;#039; is never used." cwe="561" hash="11542751041672033052" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="140" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ADCC_LoadAcquisitionRegister&amp;#039; is never used." verbose="The function &amp;#039;ADCC_LoadAcquisitionRegister&amp;#039; is never used." cwe="561" hash="4586358292420573408" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="195" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ADCC_SetLowerThreshold&amp;#039; is never used." verbose="The function &amp;#039;ADCC_SetLowerThreshold&amp;#039; is never used." cwe="561" hash="17199854695887891298" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="265" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ADCC_SetPrechargeTime&amp;#039; is never used." verbose="The function &amp;#039;ADCC_SetPrechargeTime&amp;#039; is never used." cwe="561" hash="14049612114209860380" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="202" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ADCC_SetRepeatCount&amp;#039; is never used." verbose="The function &amp;#039;ADCC_SetRepeatCount&amp;#039; is never used." cwe="561" hash="4740402512395726508" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="209" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ADCC_SetStopOnInterrupt&amp;#039; is never used." verbose="The function &amp;#039;ADCC_SetStopOnInterrupt&amp;#039; is never used." cwe="561" hash="13146457502343198234" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="183" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ADCC_SetUpperThreshold&amp;#039; is never used." verbose="The function &amp;#039;ADCC_SetUpperThreshold&amp;#039; is never used." cwe="561" hash="313654590859937889" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="258" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;ADCC_StopConversion&amp;#039; is never used." verbose="The function &amp;#039;ADCC_StopConversion&amp;#039; is never used." cwe="561" hash="526575144808432306" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.c" line="177" column="6"/>
+        </error>
+        <error id="badBitmaskCheck" severity="style" msg="Operator &amp;#039;|&amp;#039; with one operand equal to zero is redundant." verbose="Operator &amp;#039;|&amp;#039; with one operand equal to zero is redundant." cwe="571" hash="16863778565591263327" file0="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" line="84" column="24"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;mask&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;mask&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" hash="10572244420621040267" file0="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" line="161" column="21"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &amp;#039;CRC_OBJ::seedDirection&amp;#039; is never used." verbose="struct member &amp;#039;CRC_OBJ::seedDirection&amp;#039; is never used." cwe="563" hash="8756673187388070493" file0="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" line="62" column="13"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;CRC_SCAN_HasScanCompleted&amp;#039; is never used." verbose="The function &amp;#039;CRC_SCAN_HasScanCompleted&amp;#039; is never used." cwe="561" hash="793992533362327242" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" line="245" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;CRC_SCAN_IsScannerBusy&amp;#039; is never used." verbose="The function &amp;#039;CRC_SCAN_IsScannerBusy&amp;#039; is never used." cwe="561" hash="15747372635483552075" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" line="239" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;CRC_SCAN_SetAddressLimit&amp;#039; is never used." verbose="The function &amp;#039;CRC_SCAN_SetAddressLimit&amp;#039; is never used." cwe="561" hash="6123256862093095855" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" line="225" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;CRC_SCAN_StartScanner&amp;#039; is never used." verbose="The function &amp;#039;CRC_SCAN_StartScanner&amp;#039; is never used." cwe="561" hash="8518986899569957186" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" line="207" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;CRC_SCAN_StopScanner&amp;#039; is never used." verbose="The function &amp;#039;CRC_SCAN_StopScanner&amp;#039; is never used." cwe="561" hash="6964154092980814268" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" line="216" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;DMA1_GetDestinationPointer&amp;#039; is never used." verbose="The function &amp;#039;DMA1_GetDestinationPointer&amp;#039; is never used." cwe="561" hash="3854255526015755419" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" line="133" column="10"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;DMA1_GetSourcePointer&amp;#039; is never used." verbose="The function &amp;#039;DMA1_GetSourcePointer&amp;#039; is never used." cwe="561" hash="15460154009397346362" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" line="128" column="10"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;DMA1_SelectSourceRegion&amp;#039; is never used." verbose="The function &amp;#039;DMA1_SelectSourceRegion&amp;#039; is never used." cwe="561" hash="6725076654187724825" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" line="103" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;DMA1_SetAbortTrigger&amp;#039; is never used." verbose="The function &amp;#039;DMA1_SetAbortTrigger&amp;#039; is never used." cwe="561" hash="5747932203030861824" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" line="143" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;DMA1_SetDestinationAddress&amp;#039; is never used." verbose="The function &amp;#039;DMA1_SetDestinationAddress&amp;#039; is never used." cwe="561" hash="9145548126330942014" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" line="113" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;DMA1_SetSourceAddress&amp;#039; is never used." verbose="The function &amp;#039;DMA1_SetSourceAddress&amp;#039; is never used." cwe="561" hash="2608322444652054213" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" line="108" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;DMA1_SetStartTrigger&amp;#039; is never used." verbose="The function &amp;#039;DMA1_SetStartTrigger&amp;#039; is never used." cwe="561" hash="12510058394522102030" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" line="138" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;DMA1_StartTransfer&amp;#039; is never used." verbose="The function &amp;#039;DMA1_StartTransfer&amp;#039; is never used." cwe="561" hash="8354404473996718339" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" line="148" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;DMA2_GetDestinationPointer&amp;#039; is never used." verbose="The function &amp;#039;DMA2_GetDestinationPointer&amp;#039; is never used." cwe="561" hash="14329671999090776539" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" line="125" column="10"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;DMA2_GetSourcePointer&amp;#039; is never used." verbose="The function &amp;#039;DMA2_GetSourcePointer&amp;#039; is never used." cwe="561" hash="9154656038572677944" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" line="120" column="10"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;DMA2_SelectSourceRegion&amp;#039; is never used." verbose="The function &amp;#039;DMA2_SelectSourceRegion&amp;#039; is never used." cwe="561" hash="13322032786910948247" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" line="95" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;DMA2_SetAbortTrigger&amp;#039; is never used." verbose="The function &amp;#039;DMA2_SetAbortTrigger&amp;#039; is never used." cwe="561" hash="13888711882411237056" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" line="135" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;DMA2_SetDMAPriority&amp;#039; is never used." verbose="The function &amp;#039;DMA2_SetDMAPriority&amp;#039; is never used." cwe="561" hash="15177654007941561030" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" line="156" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;DMA2_SetDestinationAddress&amp;#039; is never used." verbose="The function &amp;#039;DMA2_SetDestinationAddress&amp;#039; is never used." cwe="561" hash="1174220525696411518" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" line="105" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;DMA2_SetDestinationSize&amp;#039; is never used." verbose="The function &amp;#039;DMA2_SetDestinationSize&amp;#039; is never used." cwe="561" hash="565290399528545497" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" line="115" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;DMA2_SetSourceAddress&amp;#039; is never used." verbose="The function &amp;#039;DMA2_SetSourceAddress&amp;#039; is never used." cwe="561" hash="14749568547536937411" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" line="100" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;DMA2_SetSourceSize&amp;#039; is never used." verbose="The function &amp;#039;DMA2_SetSourceSize&amp;#039; is never used." cwe="561" hash="12695817525907070676" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" line="110" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;DMA2_SetStartTrigger&amp;#039; is never used." verbose="The function &amp;#039;DMA2_SetStartTrigger&amp;#039; is never used." cwe="561" hash="2204094000192925646" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" line="130" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;DMA2_StartTransfer&amp;#039; is never used." verbose="The function &amp;#039;DMA2_StartTransfer&amp;#039; is never used." cwe="561" hash="4599936487515940931" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" line="140" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;DMA2_StartTransferWithTrigger&amp;#039; is never used." verbose="The function &amp;#039;DMA2_StartTransferWithTrigger&amp;#039; is never used." cwe="561" hash="9133048499697581617" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" line="145" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;DMA2_StopTransfer&amp;#039; is never used." verbose="The function &amp;#039;DMA2_StopTransfer&amp;#039; is never used." cwe="561" hash="8365085152039350297" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" line="150" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;FVR_IsOutputReady&amp;#039; is never used." verbose="The function &amp;#039;FVR_IsOutputReady&amp;#039; is never used." cwe="561" hash="9113129506447843596" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/fvr.c" line="64" column="6"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;flashWrBufPtr&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;flashWrBufPtr&amp;#039; can be declared as pointer to const" cwe="398" hash="12116312304877353702" file0="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.c" line="95" column="54"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;FLASH_ReadWord&amp;#039; is never used." verbose="The function &amp;#039;FLASH_ReadWord&amp;#039; is never used." cwe="561" hash="14557639367344367843" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.c" line="71" column="10"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;FLASH_WriteByte&amp;#039; is never used." verbose="The function &amp;#039;FLASH_WriteByte&amp;#039; is never used." cwe="561" hash="5957565914027091192" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.c" line="76" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;MEMORY_Tasks&amp;#039; is never used." verbose="The function &amp;#039;MEMORY_Tasks&amp;#039; is never used." cwe="561" hash="13101146225585613348" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.c" line="199" column="6"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &amp;#039;data&amp;#039; can be declared as pointer to const" verbose="Variable &amp;#039;data&amp;#039; can be declared as pointer to const" cwe="398" hash="4400524086812791280" file0="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/spi1.c" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/spi1.c" line="122" column="14"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;SPI1_Close&amp;#039; is never used." verbose="The function &amp;#039;SPI1_Close&amp;#039; is never used." cwe="561" hash="8317368879885145422" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/spi1.c" line="94" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;SPI1_ExchangeBlock&amp;#039; is never used." verbose="The function &amp;#039;SPI1_ExchangeBlock&amp;#039; is never used." cwe="561" hash="2365956219654215136" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/spi1.c" line="107" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;SPI1_Open&amp;#039; is never used." verbose="The function &amp;#039;SPI1_Open&amp;#039; is never used." cwe="561" hash="11710047446675917152" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/spi1.c" line="79" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;SPI1_ReadBlock&amp;#039; is never used." verbose="The function &amp;#039;SPI1_ReadBlock&amp;#039; is never used." cwe="561" hash="14823886763322507405" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/spi1.c" line="129" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;SPI1_ReadByte&amp;#039; is never used." verbose="The function &amp;#039;SPI1_ReadByte&amp;#039; is never used." cwe="561" hash="7470446315175220276" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/spi1.c" line="143" column="9"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;SPI1_WriteBlock&amp;#039; is never used." verbose="The function &amp;#039;SPI1_WriteBlock&amp;#039; is never used." cwe="561" hash="3779668680443630788" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/spi1.c" line="120" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;SPI1_WriteByte&amp;#039; is never used." verbose="The function &amp;#039;SPI1_WriteByte&amp;#039; is never used." cwe="561" hash="12668345978042614333" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/spi1.c" line="138" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR2_ExtResetSourceSet&amp;#039; is never used." verbose="The function &amp;#039;TMR2_ExtResetSourceSet&amp;#039; is never used." cwe="561" hash="9635177746942475503" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr2.c" line="94" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR2_HasOverflowOccured&amp;#039; is never used." verbose="The function &amp;#039;TMR2_HasOverflowOccured&amp;#039; is never used." cwe="561" hash="11121450445654910653" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr2.c" line="157" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR2_LoadPeriodRegister&amp;#039; is never used." verbose="The function &amp;#039;TMR2_LoadPeriodRegister&amp;#039; is never used." cwe="561" hash="13542688784123442648" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr2.c" line="152" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR2_ModeSet&amp;#039; is never used." verbose="The function &amp;#039;TMR2_ModeSet&amp;#039; is never used." cwe="561" hash="2477784703104931285" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr2.c" line="88" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR2_ReadTimer&amp;#039; is never used." verbose="The function &amp;#039;TMR2_ReadTimer&amp;#039; is never used." cwe="561" hash="17510955790596901605" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr2.c" line="131" column="9"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR2_StartTimer&amp;#039; is never used." verbose="The function &amp;#039;TMR2_StartTimer&amp;#039; is never used." cwe="561" hash="17708980535826265073" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr2.c" line="106" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR2_StopTimer&amp;#039; is never used." verbose="The function &amp;#039;TMR2_StopTimer&amp;#039; is never used." cwe="561" hash="18134172993041831193" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr2.c" line="117" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR2_WriteTimer&amp;#039; is never used." verbose="The function &amp;#039;TMR2_WriteTimer&amp;#039; is never used." cwe="561" hash="14278989810087012148" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr2.c" line="142" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR3_CheckGateValueStatus&amp;#039; is never used." verbose="The function &amp;#039;TMR3_CheckGateValueStatus&amp;#039; is never used." cwe="561" hash="8535214162129208700" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr3.c" line="160" column="9"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR3_ReadTimer&amp;#039; is never used." verbose="The function &amp;#039;TMR3_ReadTimer&amp;#039; is never used." cwe="561" hash="9563758888619139877" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr3.c" line="112" column="10"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR3_Reload&amp;#039; is never used." verbose="The function &amp;#039;TMR3_Reload&amp;#039; is never used." cwe="561" hash="11558307045313480613" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr3.c" line="150" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR3_StartSinglePulseAcquisition&amp;#039; is never used." verbose="The function &amp;#039;TMR3_StartSinglePulseAcquisition&amp;#039; is never used." cwe="561" hash="3242710916688258900" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr3.c" line="155" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR3_StartTimer&amp;#039; is never used." verbose="The function &amp;#039;TMR3_StartTimer&amp;#039; is never used." cwe="561" hash="12902923049732660591" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr3.c" line="100" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR3_StopTimer&amp;#039; is never used." verbose="The function &amp;#039;TMR3_StopTimer&amp;#039; is never used." cwe="561" hash="10186976091064069465" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr3.c" line="106" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR5_CheckGateValueStatus&amp;#039; is never used." verbose="The function &amp;#039;TMR5_CheckGateValueStatus&amp;#039; is never used." cwe="561" hash="7256898136477810040" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr5.c" line="157" column="9"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR5_ReadTimer&amp;#039; is never used." verbose="The function &amp;#039;TMR5_ReadTimer&amp;#039; is never used." cwe="561" hash="12116109158373168037" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr5.c" line="112" column="10"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR5_Reload&amp;#039; is never used." verbose="The function &amp;#039;TMR5_Reload&amp;#039; is never used." cwe="561" hash="5387359136345725089" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr5.c" line="147" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR5_StartSinglePulseAcquisition&amp;#039; is never used." verbose="The function &amp;#039;TMR5_StartSinglePulseAcquisition&amp;#039; is never used." cwe="561" hash="17457163449429094100" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr5.c" line="152" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR5_StartTimer&amp;#039; is never used." verbose="The function &amp;#039;TMR5_StartTimer&amp;#039; is never used." cwe="561" hash="3290808077545451627" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr5.c" line="100" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR5_StopTimer&amp;#039; is never used." verbose="The function &amp;#039;TMR5_StopTimer&amp;#039; is never used." cwe="561" hash="12739326360818097625" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr5.c" line="106" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR6_ExtResetSourceSet&amp;#039; is never used." verbose="The function &amp;#039;TMR6_ExtResetSourceSet&amp;#039; is never used." cwe="561" hash="15722821457900443119" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.c" line="103" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR6_LoadPeriodRegister&amp;#039; is never used." verbose="The function &amp;#039;TMR6_LoadPeriodRegister&amp;#039; is never used." cwe="561" hash="3037025167597233104" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.c" line="161" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR6_ModeSet&amp;#039; is never used." verbose="The function &amp;#039;TMR6_ModeSet&amp;#039; is never used." cwe="561" hash="13768412053575203029" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.c" line="97" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR6_ReadTimer&amp;#039; is never used." verbose="The function &amp;#039;TMR6_ReadTimer&amp;#039; is never used." cwe="561" hash="4168912256395406309" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.c" line="140" column="9"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR6_StartTimer&amp;#039; is never used." verbose="The function &amp;#039;TMR6_StartTimer&amp;#039; is never used." cwe="561" hash="16931494665161398761" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.c" line="115" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR6_StopTimer&amp;#039; is never used." verbose="The function &amp;#039;TMR6_StopTimer&amp;#039; is never used." cwe="561" hash="4792129458840335897" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.c" line="126" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;TMR6_WriteTimer&amp;#039; is never used." verbose="The function &amp;#039;TMR6_WriteTimer&amp;#039; is never used." cwe="561" hash="13501503939422145836" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.c" line="151" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;UART1_get_last_status&amp;#039; is never used." verbose="The function &amp;#039;UART1_get_last_status&amp;#039; is never used." cwe="561" hash="12622782599940466160" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart1.c" line="176" column="16"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;UART1_is_tx_done&amp;#039; is never used." verbose="The function &amp;#039;UART1_is_tx_done&amp;#039; is never used." cwe="561" hash="9310912886925218478" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart1.c" line="171" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;UART1_is_tx_ready&amp;#039; is never used." verbose="The function &amp;#039;UART1_is_tx_ready&amp;#039; is never used." cwe="561" hash="10113700692557884933" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart1.c" line="166" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;UART2_Read&amp;#039; is never used." verbose="The function &amp;#039;UART2_Read&amp;#039; is never used." cwe="561" hash="12998452533344619424" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.c" line="171" column="9"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;UART2_get_last_status&amp;#039; is never used." verbose="The function &amp;#039;UART2_get_last_status&amp;#039; is never used." cwe="561" hash="6317284629115797742" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.c" line="167" column="16"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;UART2_is_rx_ready&amp;#039; is never used." verbose="The function &amp;#039;UART2_is_rx_ready&amp;#039; is never used." cwe="561" hash="15177731056942266369" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.c" line="152" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;UART2_is_tx_done&amp;#039; is never used." verbose="The function &amp;#039;UART2_is_tx_done&amp;#039; is never used." cwe="561" hash="9978094649971243630" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.c" line="162" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;UART2_is_tx_ready&amp;#039; is never used." verbose="The function &amp;#039;UART2_is_tx_ready&amp;#039; is never used." cwe="561" hash="2375736083455617027" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.c" line="157" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;PIN_MANAGER_IOC&amp;#039; is never used." verbose="The function &amp;#039;PIN_MANAGER_IOC&amp;#039; is never used." cwe="561" hash="12331207593546945349" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/pin_manager.c" line="157" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;check_calib_button&amp;#039; is never used." verbose="The function &amp;#039;check_calib_button&amp;#039; is never used." cwe="561" hash="5690327206980603825" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/hid.c" line="65" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;clear_hid_wflags&amp;#039; is never used." verbose="The function &amp;#039;clear_hid_wflags&amp;#039; is never used." cwe="561" hash="9840805819502265172" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/hid.c" line="81" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;check_switches&amp;#039; is never used." verbose="The function &amp;#039;check_switches&amp;#039; is never used." cwe="561" hash="14090553737109975122" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/dio.c" line="54" column="9"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &amp;#039;get_switch_data&amp;#039; is never used." verbose="The function &amp;#039;get_switch_data&amp;#039; is never used." cwe="561" hash="13620756739937812083" sinceDate="10/23/26">
+            <location file="/root/mbmc_k42/mbmc_k42.X/dio.c" line="43" column="14"/>
+        </error>
+    </errors>
+</results>

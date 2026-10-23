@@ -20,7 +20,7 @@ extern "C" {
 #include "mcc_generated_files/pin_manager.h"
 #include "ringbufs.h"
 
-#define VER	"2.24"
+#define VER	"2.25"
 	/*
 	 * REMOVE THE CHIP PROGRAMMER, IT CHANGES THE ADC READINGS
 	 */
@@ -104,6 +104,7 @@ extern "C" {
 	 * 2.23 XC8 PRO optimize
 	 * 2.24 use only define values for ADC zero and scale of current sensors
 	 *	calibrations routines only display zero and scale data
+	 * 2.25 cppcheck cleanups
 	 */
 
 	/*

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.c" line="51" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.h" line="55" column="2"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;flashWrBufPtr&apos; can be declared as pointer to const" verbose="Parameter &apos;flashWrBufPtr&apos; can be declared as pointer to const" cwe="398" hash="12116312304877353702" file0="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.c">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.c" line="95" column="54" info="Parameter &apos;flashWrBufPtr&apos; can be declared as pointer to const"/>
+            <symbol>flashWrBufPtr</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.c" functionName="FLASH_ReadByte" lineNumber="59" column="9"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.c" functionName="FLASH_ReadWord" lineNumber="71" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.c" functionName="FLASH_WriteByte" lineNumber="76" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.c" functionName="FLASH_WriteBlock" lineNumber="95" column="8"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.c" functionName="FLASH_EraseBlock" lineNumber="142" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.c" functionName="DATAEE_WriteByte" lineNumber="165" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.c" functionName="DATAEE_ReadByte" lineNumber="187" column="9"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.c" functionName="MEMORY_Tasks" lineNumber="199" column="6"/>
+    <functioncall functionName="FLASH_EraseBlock"/>
+    <functioncall functionName="FLASH_ReadByte"/>
+    <functioncall functionName="FLASH_WriteBlock"/>
+    <functioncall functionName="GIE"/>
+    <functioncall functionName="NOP"/>
+    <functioncall functionName="WR"/>
+  </FileInfo>
+  <includes>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/memory.h</filename>
+  </includes>
+  <hash>7676805058497913239</hash>
+</analyzerinfo>

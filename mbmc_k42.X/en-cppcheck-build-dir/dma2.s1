@@ -1,0 +1,14 @@
+DMA2_Initialize global:[uart1_dma_buf]
+DMA2_SelectSourceRegion
+DMA2_SetSourceAddress
+DMA2_SetDestinationAddress
+DMA2_SetSourceSize
+DMA2_SetDestinationSize
+DMA2_GetSourcePointer
+DMA2_GetDestinationPointer
+DMA2_SetStartTrigger
+DMA2_SetAbortTrigger
+DMA2_StartTransfer
+DMA2_StartTransferWithTrigger
+DMA2_StopTransfer
+DMA2_SetDMAPriority

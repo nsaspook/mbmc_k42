@@ -276,25 +276,25 @@ void calc_bsoc(void)
 	 * Charge Controller condition events
 	 */
 	if (cc_state(C.v_cmode) == M_FLOAT) {
-		if (!V.in_float && (++V.float_ticks > FLOAT_TIME))
-			if (!V.in_float) {
-				V.in_float = true;
-				if (C.soc < 95) // SOC and AH corrections
-					C.dynamic_ah = C.bank_ah * 0.95f;
+		if (!V.in_float && (++V.float_ticks > FLOAT_TIME)) {
+			V.in_float = true;
+			if (C.soc < 95) { // SOC and AH corrections
+				C.dynamic_ah = C.bank_ah * 0.95f;
 			}
-	} else {
-		V.float_ticks = 0;
+		} else {
+			V.float_ticks = 0;
+		}
 	}
 
 	if (cc_state(C.v_cmode) == M_BOOST) {
-		if (!V.in_boost && (++V.boost_ticks > FLOAT_TIME))
-			if (!V.in_boost) { // SOC and AH corrections
-				V.in_boost = true;
-				if (C.soc < 80)
-					C.dynamic_ah = C.bank_ah * 0.80f;
+		if (!V.in_boost && (++V.boost_ticks > FLOAT_TIME)) {
+			V.in_boost = true;
+			if (C.soc < 80) {
+				C.dynamic_ah = C.bank_ah * 0.80f;
 			}
-	} else {
-		V.boost_ticks = 0;
+		} else {
+			V.boost_ticks = 0;
+		}
 	}
 
 	/*
@@ -313,7 +313,7 @@ void calc_bsoc(void)
 		adj = C.hist[0].cef;
 	if (C.c_pv < 0.01)
 		adj = C.hist[0].peukert;
-	C.dynamic_ah += (((C.c_pv ) * adj) / SSLICE);
+	C.dynamic_ah += (((C.c_pv) * adj) / SSLICE);
 
 	C.dynamic_ah_adj = C.dynamic_ah; // need to add peukert factor here
 	C.dynamic_ah_adj_daily = C.dynamic_ah_daily; // need to add peukert factor here

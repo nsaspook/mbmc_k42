@@ -1,0 +1,16 @@
+lp_filter
+convert_adc_data global:[C,V] call:[conv_raw_result,lp_filter,while] noreturn:[lp_filter,while]
+calc_model_data global:[C,IDLE_AMP,STATIC_LOAD_POWER,V] call:[lp_filter,start_bsoc,stop_bsoc]
+calc_ror_data global:[C,ROR_LIMIT_LOW,ROR_LIMIT_NOISE,ROR_LIMIT_SET] call:[conv_raw_result,fabs] noreturn:[conv_raw_result]
+static_soc global:[C]
+set_load_relay_zero
+set_load_relay_one
+set_load_relay_two
+set_ac_charger_relay
+get_ac_charger_relay
+spinners global:[spin] call:[strlen]
+check_day_time global:[BAT_DEAD_VOLTS,BAT_LOW_VOLTS,BRIGHT_VOLTS,C,DAWN_VOLTS,DUSK_VOLTS,V] call:[conv_raw_result,get_ac_charger_relay,set_ac_charger_relay,time] noreturn:[set_ac_charger_relay]
+load_hist_data global:[C] call:[start_bsoc,stop_bsoc,time] noreturn:[start_bsoc]
+time global:[V]
+set_time global:[V]
+calc_fixups global:[V]

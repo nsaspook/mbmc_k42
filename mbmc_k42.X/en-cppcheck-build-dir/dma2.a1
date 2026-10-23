@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" line="51" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.h" line="53" column="2"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" functionName="DMA2_Initialize" lineNumber="59" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" functionName="DMA2_SelectSourceRegion" lineNumber="95" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" functionName="DMA2_SetSourceAddress" lineNumber="100" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" functionName="DMA2_SetDestinationAddress" lineNumber="105" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" functionName="DMA2_SetSourceSize" lineNumber="110" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" functionName="DMA2_SetDestinationSize" lineNumber="115" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" functionName="DMA2_GetSourcePointer" lineNumber="120" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" functionName="DMA2_GetDestinationPointer" lineNumber="125" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" functionName="DMA2_SetStartTrigger" lineNumber="130" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" functionName="DMA2_SetAbortTrigger" lineNumber="135" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" functionName="DMA2_StartTransfer" lineNumber="140" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" functionName="DMA2_StartTransferWithTrigger" lineNumber="145" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" functionName="DMA2_StopTransfer" lineNumber="150" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.c" functionName="DMA2_SetDMAPriority" lineNumber="156" column="6"/>
+    <functioncall functionName="DMA2DPTR"/>
+    <functioncall functionName="DMA2SPTR"/>
+    <functioncall functionName="U1TXB"/>
+  </FileInfo>
+  <includes>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma2.h</filename>
+  </includes>
+  <hash>9664812269464519437</hash>
+</analyzerinfo>

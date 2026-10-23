@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" line="51" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.h" line="53" column="2"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" functionName="DMA1_Initialize" lineNumber="63" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" functionName="DMA1_SelectSourceRegion" lineNumber="103" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" functionName="DMA1_SetSourceAddress" lineNumber="108" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" functionName="DMA1_SetDestinationAddress" lineNumber="113" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" functionName="DMA1_SetSourceSize" lineNumber="118" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" functionName="DMA1_SetDestinationSize" lineNumber="123" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" functionName="DMA1_GetSourcePointer" lineNumber="128" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" functionName="DMA1_GetDestinationPointer" lineNumber="133" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" functionName="DMA1_SetStartTrigger" lineNumber="138" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" functionName="DMA1_SetAbortTrigger" lineNumber="143" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" functionName="DMA1_StartTransfer" lineNumber="148" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" functionName="DMA1_StartTransferWithTrigger" lineNumber="153" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" functionName="DMA1_StopTransfer" lineNumber="158" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" functionName="DMA1_SetDMAPriority" lineNumber="164" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" functionName="DMA1_SetSCNTIInterruptHandler" lineNumber="185" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" functionName="DMA1_SetDCNTIInterruptHandler" lineNumber="199" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" functionName="DMA1_SetAIInterruptHandler" lineNumber="213" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" functionName="DMA1_SetORIInterruptHandler" lineNumber="227" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.c" functionName="DMA1_DefaultInterruptHandler" lineNumber="232" column="6"/>
+    <functioncall functionName="DMA1DPTR"/>
+    <functioncall functionName="DMA1SPTR"/>
+    <functioncall functionName="DMA1_DMAAI_ISR"/>
+    <functioncall functionName="DMA1_DMADCNTI_ISR"/>
+    <functioncall functionName="DMA1_DMAORI_ISR"/>
+    <functioncall functionName="DMA1_DMASCNTI_ISR"/>
+    <functioncall functionName="DMA1_DefaultInterruptHandler"/>
+    <functioncall functionName="DMA1_SetAIInterruptHandler"/>
+    <functioncall functionName="DMA1_SetDCNTIInterruptHandler"/>
+    <functioncall functionName="DMA1_SetORIInterruptHandler"/>
+    <functioncall functionName="DMA1_SetSCNTIInterruptHandler"/>
+    <functioncall functionName="IRQ_DMA1A"/>
+    <functioncall functionName="IRQ_DMA1DCNT"/>
+    <functioncall functionName="IRQ_DMA1OR"/>
+    <functioncall functionName="IRQ_DMA1SCNT"/>
+    <functioncall functionName="SPI1TXB"/>
+    <functioncall functionName="base"/>
+  </FileInfo>
+  <includes>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/dma1.h</filename>
+  </includes>
+  <hash>16861685924468289298</hash>
+</analyzerinfo>

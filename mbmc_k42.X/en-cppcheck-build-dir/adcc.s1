@@ -1,0 +1,30 @@
+ADCC_Initialize call:[ADCC_SetADIInterruptHandler,ADCC_SetADTIInterruptHandler] noreturn:[ADCC_SetADTIInterruptHandler]
+ADCC_StartConversion
+ADCC_IsConversionDone call:[return] noreturn:[return]
+ADCC_GetConversionResult call:[return] noreturn:[return]
+ADCC_GetSingleConversion call:[return] noreturn:[return]
+ADCC_StopConversion
+ADCC_SetStopOnInterrupt
+ADCC_DischargeSampleCapacitor
+ADCC_LoadAcquisitionRegister
+ADCC_SetPrechargeTime
+ADCC_SetRepeatCount
+ADCC_GetCurrentCountofConversions
+ADCC_ClearAccumulator
+ADCC_GetAccumulatorValue call:[return] noreturn:[return]
+ADCC_HasAccumulatorOverflowed
+ADCC_GetFilterValue call:[return] noreturn:[return]
+ADCC_GetPreviousResult call:[return] noreturn:[return]
+ADCC_DefineSetPoint
+ADCC_SetUpperThreshold
+ADCC_SetLowerThreshold
+ADCC_GetErrorCalculation call:[return] noreturn:[return]
+ADCC_EnableDoubleSampling
+ADCC_EnableContinuousConversion
+ADCC_DisableContinuousConversion
+ADCC_HasErrorCrossedUpperThreshold
+ADCC_HasErrorCrossedLowerThreshold
+ADCC_GetConversionStageStatus
+ADCC_SetADIInterruptHandler global:[ADCC_ADI_InterruptHandler]
+ADCC_SetADTIInterruptHandler global:[ADCC_ADTI_InterruptHandler]
+ADCC_DefaultInterruptHandler

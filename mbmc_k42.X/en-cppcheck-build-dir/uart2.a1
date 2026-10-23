@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.c" line="50" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.h" line="55" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.h" line="56" column="2"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.c" functionName="UART2_Initialize" lineNumber="87" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.c" functionName="UART2_is_rx_ready" lineNumber="152" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.c" functionName="UART2_is_tx_ready" lineNumber="157" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.c" functionName="UART2_is_tx_done" lineNumber="162" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.c" functionName="UART2_get_last_status" lineNumber="167" column="16"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.c" functionName="UART2_Read" lineNumber="171" column="9"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.c" functionName="UART2_Write" lineNumber="193" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.c" functionName="UART2_Transmit_ISR" lineNumber="234" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.c" functionName="UART2_Receive_ISR" lineNumber="254" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.c" functionName="UART2_RxDataHandler" lineNumber="278" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.c" functionName="UART2_DefaultFramingErrorHandler" lineNumber="288" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.c" functionName="UART2_DefaultOverrunErrorHandler" lineNumber="290" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.c" functionName="UART2_DefaultErrorHandler" lineNumber="292" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.c" functionName="UART2_SetFramingErrorHandler" lineNumber="296" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.c" functionName="UART2_SetOverrunErrorHandler" lineNumber="300" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.c" functionName="UART2_SetErrorHandler" lineNumber="304" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.c" functionName="UART2_SetRxInterruptHandler" lineNumber="310" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.c" functionName="UART2_SetTxInterruptHandler" lineNumber="314" column="6"/>
+    <functioncall functionName="FERIF"/>
+    <functioncall functionName="RXFOIF"/>
+    <functioncall functionName="TXMTIF"/>
+    <functioncall functionName="U2RX"/>
+    <functioncall functionName="U2RXB"/>
+    <functioncall functionName="U2TX"/>
+    <functioncall functionName="U2TXIE"/>
+    <functioncall functionName="UART2_DefaultErrorHandler"/>
+    <functioncall functionName="UART2_DefaultFramingErrorHandler"/>
+    <functioncall functionName="UART2_DefaultOverrunErrorHandler"/>
+    <functioncall functionName="UART2_Receive_ISR"/>
+    <functioncall functionName="UART2_RxDataHandler"/>
+    <functioncall functionName="UART2_SetErrorHandler"/>
+    <functioncall functionName="UART2_SetFramingErrorHandler"/>
+    <functioncall functionName="UART2_SetOverrunErrorHandler"/>
+    <functioncall functionName="UART2_SetRxInterruptHandler"/>
+    <functioncall functionName="UART2_SetTxInterruptHandler"/>
+    <functioncall functionName="UART2_Transmit_ISR"/>
+    <functioncall functionName="UART2_rx_vect_isr"/>
+    <functioncall functionName="UART2_tx_vect_isr"/>
+    <functioncall functionName="base"/>
+  </FileInfo>
+  <includes>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/interrupt_manager.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/uart2.h</filename>
+  </includes>
+  <hash>2667749976325456880</hash>
+</analyzerinfo>

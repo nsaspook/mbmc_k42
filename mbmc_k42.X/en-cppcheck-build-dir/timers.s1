@@ -1,0 +1,4 @@
+StartTimer global:[tickCount]
+TimerDone global:[tickCount] call:[ClrWdt]
+WaitMs call:[ClrWdt,Nop,StartTimer,TimerDone] noreturn:[ClrWdt]
+sw_timers_isr global:[tickCount]

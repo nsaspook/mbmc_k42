@@ -1,0 +1,21 @@
+start_adc_scan global:[R] call:[ADCC_DischargeSampleCapacitor,ADCC_SetADIInterruptHandler,ADCC_SetADTIInterruptHandler,ADCC_StartConversion]
+check_adc_scan global:[R]
+clear_adc_scan global:[R]
+update_adc_result global:[R] call:[StartTimer,TimerDone,check_adc_scan,clear_adc_scan,start_adc_scan]
+get_raw_result global:[R]
+conv_raw_result global:[R] call:[get_raw_result,return]
+adc_int_handler
+adc_int_t_handler global:[R,V] call:[ADCC_DischargeSampleCapacitor,ADCC_StartConversion,while]
+dac_spi_control
+set_dac global:[R] call:[SPI1_ExchangeByte,dac_spi_control,while] noreturn:[dac_spi_control]
+convert_dac_raw call:[return]
+set_dac_a global:[R] call:[convert_dac_raw]
+set_dac_b global:[R] call:[convert_dac_raw]
+check_range
+cal_current_zero global:[R] call:[check_range]
+cal_current_10A global:[R] call:[check_range]
+read_cal_data global:[r_cal] call:[CRC_8BitDataWrite,CRC_CalculatedResultGet,CRC_Initialize,CRC_IsBusy,CRC_Start,DATAEE_ReadByte,sizeof,while] noreturn:[DATAEE_ReadByte]
+write_cal_data global:[R] call:[CRC_8BitDataWrite,CRC_CalculatedResultGet,CRC_Initialize,CRC_IsBusy,CRC_Start,DATAEE_WriteByte,sizeof,while] noreturn:[DATAEE_WriteByte]
+update_cal_data global:[R,r_cal]
+update_hist_data global:[R]
+set_hist_flag global:[R]

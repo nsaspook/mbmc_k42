@@ -1,0 +1,6 @@
+hid_input call:[clear_switch,get_switch_bm] noreturn:[clear_switch]
+hid_display call:[get_switch,hid_input]
+check_enter_button
+check_calib_button
+clear_hid_pflags
+clear_hid_wflags

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.c" line="51" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.h" line="55" column="2"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.c" functionName="TMR6_Initialize" lineNumber="65" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.c" functionName="TMR6_ModeSet" lineNumber="97" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.c" functionName="TMR6_ExtResetSourceSet" lineNumber="103" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.c" functionName="TMR6_Start" lineNumber="109" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.c" functionName="TMR6_StartTimer" lineNumber="115" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.c" functionName="TMR6_Stop" lineNumber="120" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.c" functionName="TMR6_StopTimer" lineNumber="126" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.c" functionName="TMR6_Counter8BitGet" lineNumber="131" column="9"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.c" functionName="TMR6_ReadTimer" lineNumber="140" column="9"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.c" functionName="TMR6_Counter8BitSet" lineNumber="145" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.c" functionName="TMR6_WriteTimer" lineNumber="151" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.c" functionName="TMR6_Period8BitSet" lineNumber="156" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.c" functionName="TMR6_LoadPeriodRegister" lineNumber="161" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.c" functionName="TMR6_CallBack" lineNumber="177" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.c" functionName="TMR6_SetInterruptHandler" lineNumber="187" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.c" functionName="TMR6_DefaultInterruptHandler" lineNumber="191" column="6"/>
+    <functioncall functionName="TMR6"/>
+    <functioncall functionName="TMR6_CallBack"/>
+    <functioncall functionName="TMR6_Counter8BitGet"/>
+    <functioncall functionName="TMR6_Counter8BitSet"/>
+    <functioncall functionName="TMR6_DefaultInterruptHandler"/>
+    <functioncall functionName="TMR6_ISR"/>
+    <functioncall functionName="TMR6_Period8BitSet"/>
+    <functioncall functionName="TMR6_SetInterruptHandler"/>
+    <functioncall functionName="TMR6_Start"/>
+    <functioncall functionName="TMR6_Stop"/>
+    <functioncall functionName="base"/>
+  </FileInfo>
+  <includes>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/interrupt_manager.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/tmr6.h</filename>
+  </includes>
+  <hash>4112641493354680025</hash>
+</analyzerinfo>

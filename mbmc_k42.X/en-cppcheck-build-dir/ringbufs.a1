@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;string.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="1" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.h" line="55" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.h" line="56" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/ext_int.h" line="53" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/vconfig.h" line="17" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;time.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;time.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/vconfig.h" line="18" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/spi1.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/spi1.h" line="55" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/spi1.h" line="56" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/pin_manager.h" line="54" column="2"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;_this&apos; can be declared as pointer to const" verbose="Parameter &apos;_this&apos; can be declared as pointer to const" cwe="398" hash="15695798247261926448" file0="/root/mbmc_k42/mbmc_k42.X/ringbufs.c">
+            <location file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="35" column="35" info="Parameter &apos;_this&apos; can be declared as pointer to const"/>
+            <symbol>_this</symbol>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;_this&apos; can be declared as pointer to const" verbose="Parameter &apos;_this&apos; can be declared as pointer to const" cwe="398" hash="4788316402720448152" file0="/root/mbmc_k42/mbmc_k42.X/ringbufs.c">
+            <location file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="40" column="34" info="Parameter &apos;_this&apos; can be declared as pointer to const"/>
+            <symbol>_this</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/root/mbmc_k42/mbmc_k42.X/ringbufs.h:27:9" my-argnr="1" my-argname="_this" file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="37" col="14" value="0"/>
+    <unsafe-usage my-id="/root/mbmc_k42/mbmc_k42.X/ringbufs.h:28:9" my-argnr="1" my-argname="_this" file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="42" col="9" value="0"/>
+    <unsafe-usage my-id="/root/mbmc_k42/mbmc_k42.X/ringbufs.h:29:10" my-argnr="1" my-argname="_this" file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="48" col="6" value="0"/>
+    <unsafe-usage my-id="/root/mbmc_k42/mbmc_k42.X/ringbufs.h:30:7" my-argnr="1" my-argname="_this" file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="60" col="6" value="0"/>
+    <unsafe-usage my-id="/root/mbmc_k42/mbmc_k42.X/ringbufs.h:31:7" my-argnr="1" my-argname="_this" file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="69" col="6" value="0"/>
+    <unsafe-usage my-id="/root/mbmc_k42/mbmc_k42.X/ringbufs.h:32:7" my-argnr="1" my-argname="_this" file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="78" col="6" value="0"/>
+    <unsafe-usage my-id="/root/mbmc_k42/mbmc_k42.X/ringbufs.h:33:7" my-argnr="1" my-argname="_this" file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="87" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/root/mbmc_k42/mbmc_k42.X/ringbufs.h:27:9" my-argnr="1" my-argname="_this" file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="37" col="14" value="0"/>
+    <unsafe-usage my-id="/root/mbmc_k42/mbmc_k42.X/ringbufs.h:28:9" my-argnr="1" my-argname="_this" file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="42" col="9" value="0"/>
+    <unsafe-usage my-id="/root/mbmc_k42/mbmc_k42.X/ringbufs.h:29:10" my-argnr="1" my-argname="_this" file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="48" col="6" value="0"/>
+    <unsafe-usage my-id="/root/mbmc_k42/mbmc_k42.X/ringbufs.h:30:7" my-argnr="1" my-argname="_this" file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="60" col="6" value="0"/>
+    <unsafe-usage my-id="/root/mbmc_k42/mbmc_k42.X/ringbufs.h:31:7" my-argnr="1" my-argname="_this" file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="69" col="6" value="0"/>
+    <unsafe-usage my-id="/root/mbmc_k42/mbmc_k42.X/ringbufs.h:32:7" my-argnr="1" my-argname="_this" file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" line="78" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" functionName="modulo_inc" lineNumber="7" column="9"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" functionName="modulo_dec" lineNumber="16" column="9"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" functionName="ringBufS_init" lineNumber="22" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" functionName="ringBufS_empty" lineNumber="35" column="8"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" functionName="ringBufS_full" lineNumber="40" column="8"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" functionName="ringBufS_get" lineNumber="45" column="9"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" functionName="ringBufS_put" lineNumber="58" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" functionName="ringBufS_put_dma" lineNumber="67" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" functionName="ringBufS_put_dma_cpy" lineNumber="76" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/ringbufs.c" functionName="ringBufS_flush" lineNumber="85" column="6"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="modulo_inc"/>
+  </FileInfo>
+  <includes>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/adcc.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/ext_int.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/pin_manager.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/spi1.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/ringbufs.h</filename>
+    <filename>/root/mbmc_k42/mbmc_k42.X/vconfig.h</filename>
+  </includes>
+  <hash>10849240480167361505</hash>
+</analyzerinfo>

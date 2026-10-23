@@ -1539,187 +1539,187 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSH equ 03FFEh ;# ">
 "49356
 [; <" TOSU equ 03FFFh ;# ">
-"119 ./vconfig.h
+"120 ./vconfig.h
 [v _EADOGM_CMD_CLR `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_CLR
 -> -> 1 `i `uc
 ]
-"120
+"121
 [v _EADOGM_CMD_CURSOR_ON `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_CURSOR_ON
 -> -> 15 `i `uc
 ]
-"121
+"122
 [v _EADOGM_CMD_CURSOR_OFF `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_CURSOR_OFF
 -> -> 12 `i `uc
 ]
-"122
+"123
 [v _EADOGM_CMD_DISPLAY_ON `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_DISPLAY_ON
 -> -> 12 `i `uc
 ]
-"123
+"124
 [v _EADOGM_CMD_DISPLAY_OFF `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_DISPLAY_OFF
 -> -> 8 `i `uc
 ]
-"124
+"125
 [v _EADOGM_CMD_DDRAM_ADDR `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_DDRAM_ADDR
 -> -> 128 `i `uc
 ]
-"125
+"126
 [v _EADOGM_CMD_CGRAM_ADDR `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_CGRAM_ADDR
 -> -> 64 `i `uc
 ]
-"126
+"127
 [v _EADOGM_CMD_SELECT_R0 `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_SELECT_R0
 -> -> 24 `i `uc
 ]
-"127
+"128
 [v _EADOGM_CMD_SELECT_R1 `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_SELECT_R1
 -> -> 16 `i `uc
 ]
-"128
+"129
 [v _EADOGM_CMD_SET_TABLE2 `Cuc ~T0 @X0 1 s ]
 [i _EADOGM_CMD_SET_TABLE2
 -> -> 42 `i `uc
 ]
-"133
+"134
 [v _T1 `Cus ~T0 @X0 1 s ]
 [i _T1
 -> -> 500 `i `us
 ]
-"134
+"135
 [v _T2 `Cus ~T0 @X0 1 s ]
 [i _T2
 -> -> 3000 `i `us
 ]
-"135
+"136
 [v _T3 `Cus ~T0 @X0 1 s ]
 [i _T3
 -> -> 5000 `i `us
 ]
-"136
+"137
 [v _T4 `Cus ~T0 @X0 1 s ]
 [i _T4
 -> -> 5000 `i `us
 ]
-"137
+"138
 [v _HBTS `Cus ~T0 @X0 1 s ]
 [i _HBTS
 -> -> 5000 `i `us
 ]
-"138
+"139
 [v _HBTL `Cus ~T0 @X0 1 s ]
 [i _HBTL
 -> -> 30000 `i `us
 ]
-"139
+"140
 [v _RTY `Cuc ~T0 @X0 1 s ]
 [i _RTY
 -> -> 3 `i `uc
 ]
-"140
+"141
 [v _ERROR_CHECKSUM `Cus ~T0 @X0 1 s ]
 [i _ERROR_CHECKSUM
 -> -> 31500 `i `us
 ]
-"141
+"142
 [v _ERROR_COMM `Cus ~T0 @X0 1 s ]
 [i _ERROR_COMM
 -> -> 31500 `i `us
 ]
-"144
+"145
 [v _TDELAY `Cus ~T0 @X0 1 s ]
 [i _TDELAY
 -> -> 3000 `i `us
 ]
-"145
+"146
 [v _LDELAY `Cus ~T0 @X0 1 s ]
 [i _LDELAY
 -> -> 1000 `i `us
 ]
-"146
+"147
 [v _SDELAY `Cus ~T0 @X0 1 s ]
 [i _SDELAY
 -> -> 500 `i `us
 ]
-"147
+"148
 [v _BDELAY `Cus ~T0 @X0 1 s ]
 [i _BDELAY
 -> -> 300 `i `us
 ]
-"148
+"149
 [v _DDELAY `Cus ~T0 @X0 1 s ]
 [i _DDELAY
 -> -> 125 `i `us
 ]
-"149
+"150
 [v _TXTDELAY `Cus ~T0 @X0 1 s ]
 [i _TXTDELAY
 -> -> 10000 `i `us
 ]
-"150
+"151
 [v _SOCDELAY `Cus ~T0 @X0 1 s ]
 [i _SOCDELAY
 -> -> 250 `i `us
 ]
-"151
+"152
 [v _DFLIP `Cus ~T0 @X0 1 s ]
 [i _DFLIP
 -> -> 1500 `i `us
 ]
-"153
+"154
 [v _LOG_WAIT `Cuc ~T0 @X0 1 s ]
 [i _LOG_WAIT
 -> -> 1 `i `uc
 ]
-"157
+"158
 [v _CAL_DELAY `Cuc ~T0 @X0 1 s ]
 [i _CAL_DELAY
 -> -> 64 `i `uc
 ]
-"178
+"179
 [v _CC_DEACT `Cuc ~T0 @X0 1 s ]
 [i _CC_DEACT
 -> -> 74 `i `uc
 ]
-"179
+"180
 [v _CC_ACT `Cuc ~T0 @X0 1 s ]
 [i _CC_ACT
 -> -> 100 `i `uc
 ]
-"180
+"181
 [v _CC_MPPT `Cuc ~T0 @X0 1 s ]
 [i _CC_MPPT
 -> -> 120 `i `uc
 ]
-"181
+"182
 [v _CC_EQUAL `Cuc ~T0 @X0 1 s ]
 [i _CC_EQUAL
 -> -> 140 `i `uc
 ]
-"182
+"183
 [v _CC_BOOST `Cuc ~T0 @X0 1 s ]
 [i _CC_BOOST
 -> -> 160 `i `uc
 ]
-"183
+"184
 [v _CC_FLOAT `Cuc ~T0 @X0 1 s ]
 [i _CC_FLOAT
 -> -> 180 `i `uc
 ]
-"184
+"185
 [v _CC_LIMIT `Cuc ~T0 @X0 1 s ]
 [i _CC_LIMIT
 -> -> 200 `i `uc
 ]
-"185
+"186
 [v _CC_OFFLINE `Cuc ~T0 @X0 1 s ]
 [i _CC_OFFLINE
 -> -> 240 `i `uc
@@ -1834,22 +1834,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! && ! != -> . *U _h 2 `i -> 0 `i == -> . *U _h 3 `i -> . `E17188 0 `i 2324  ]
 {
 "43
-[e = . *U _h 8 -> & -> =+ . *U _h 8 -> -> 1 `i `uc `i -> 3 `i `uc ]
+[e =+ . *U _h 8 -> -> 1 `i `uc ]
 "44
-[e $ ! && == -> . *U _h 8 `i -> . `E17695 3 `i ! != -> ( _get_switch (1 -> . `E17193 4 `uc `ui -> -> 0 `i `ui 2325  ]
+[e = . *U _h 8 -> & -> . *U _h 8 `i -> 3 `i `uc ]
 "45
-[e = . *U _h 8 -> & -> =+ . *U _h 8 -> -> 1 `i `uc `i -> 3 `i `uc ]
-[e :U 2325 ]
+[e $ ! && == -> . *U _h 8 `i -> . `E17695 3 `i ! != -> ( _get_switch (1 -> . `E17193 4 `uc `ui -> -> 0 `i `ui 2325  ]
 "46
-[e = . *U _h 0 -> . *U _h 8 `E17695 ]
+[e =+ . *U _h 8 -> -> 1 `i `uc ]
+[e :U 2325 ]
 "47
-[e = . *U _h 2 -> -> 1 `i `a ]
+[e = . *U _h 8 -> & -> . *U _h 8 `i -> 3 `i `uc ]
 "48
+[e = . *U _h 0 -> . *U _h 8 `E17695 ]
+"49
+[e = . *U _h 2 -> -> 1 `i `a ]
+"50
 }
 [e :U 2324 ]
-"49
+"51
 [e $U 2319  ]
-"50
+"52
 }
 [e $U 2319  ]
 [e :U 2320 ]
@@ -1858,97 +1862,97 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E17702 1 `ui 2323
  2322 ]
 [e :U 2319 ]
-"51
+"53
 [e ) _h ]
 [e $UE 2318  ]
-"52
+"54
 [e :UE 2318 ]
 }
-"54
+"56
 [v _check_enter_button `(a ~T0 @X0 1 ef1`*S2313 ]
-"55
+"57
 {
 [e :U _check_enter_button ]
-"54
-[v _h `*S2313 ~T0 @X0 1 r1 ]
-"55
-[f ]
 "56
+[v _h `*S2313 ~T0 @X0 1 r1 ]
+"57
+[f ]
+"58
 [e $ ! && ! != -> . *U _h 4 `i -> 0 `i == -> . *U _h 5 `i -> . `E17188 0 `i 2327  ]
 {
-"57
-[e = . *U _h 4 -> -> 1 `i `a ]
-"58
-[e ) -> -> 1 `i `a ]
-[e $UE 2326  ]
 "59
-}
-[e :U 2327 ]
+[e = . *U _h 4 -> -> 1 `i `a ]
 "60
-[e ) -> -> 0 `i `a ]
+[e ) -> -> 1 `i `a ]
 [e $UE 2326  ]
 "61
+}
+[e :U 2327 ]
+"62
+[e ) -> -> 0 `i `a ]
+[e $UE 2326  ]
+"63
 [e :UE 2326 ]
 }
-"63
+"65
 [v _check_calib_button `(a ~T0 @X0 1 ef1`*S2313 ]
-"64
+"66
 {
 [e :U _check_calib_button ]
-"63
-[v _h `*S2313 ~T0 @X0 1 r1 ]
-"64
-[f ]
 "65
+[v _h `*S2313 ~T0 @X0 1 r1 ]
+"66
+[f ]
+"67
 [e $ ! && ! != -> . *U _h 6 `i -> 0 `i == -> . *U _h 7 `i -> . `E17188 0 `i 2329  ]
 {
-"66
+"68
 [e = . *U _h 6 -> -> 1 `i `a ]
-"67
+"69
 [e ) -> -> 1 `i `a ]
 [e $UE 2328  ]
-"68
+"70
 }
 [e :U 2329 ]
-"69
+"71
 [e ) -> -> 0 `i `a ]
 [e $UE 2328  ]
-"70
+"72
 [e :UE 2328 ]
 }
-"72
+"74
 [v _clear_hid_pflags `(v ~T0 @X0 1 ef1`*S2313 ]
-"73
+"75
 {
 [e :U _clear_hid_pflags ]
-"72
-[v _h `*S2313 ~T0 @X0 1 r1 ]
-"73
-[f ]
 "74
-[e = . *U _h 3 -> . `E17188 0 `a ]
+[v _h `*S2313 ~T0 @X0 1 r1 ]
 "75
-[e = . *U _h 5 -> . `E17188 0 `a ]
+[f ]
 "76
-[e = . *U _h 7 -> . `E17188 0 `a ]
+[e = . *U _h 3 -> . `E17188 0 `a ]
 "77
+[e = . *U _h 5 -> . `E17188 0 `a ]
+"78
+[e = . *U _h 7 -> . `E17188 0 `a ]
+"79
 [e :UE 2330 ]
 }
-"79
+"81
 [v _clear_hid_wflags `(v ~T0 @X0 1 ef1`*S2313 ]
-"80
+"82
 {
 [e :U _clear_hid_wflags ]
-"79
-[v _h `*S2313 ~T0 @X0 1 r1 ]
-"80
-[f ]
 "81
-[e = . *U _h 4 -> -> 1 `i `a ]
+[v _h `*S2313 ~T0 @X0 1 r1 ]
 "82
-[e = . *U _h 2 -> -> 1 `i `a ]
+[f ]
 "83
-[e = . *U _h 6 -> -> 1 `i `a ]
+[e = . *U _h 4 -> -> 1 `i `a ]
 "84
+[e = . *U _h 2 -> -> 1 `i `a ]
+"85
+[e = . *U _h 6 -> -> 1 `i `a ]
+"86
 [e :UE 2331 ]
 }

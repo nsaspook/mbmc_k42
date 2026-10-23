@@ -1,0 +1,11 @@
+CRC_Initialize global:[crcObj]
+CRC_Start
+CRC_8BitDataWrite call:[return] noreturn:[return]
+CRC_ReverseValue global:[crcObj]
+CRC_CalculatedResultGet global:[crcObj] call:[CRC_ReverseValue] noreturn:[CRC_ReverseValue]
+CRC_IsBusy call:[return] noreturn:[return]
+CRC_SCAN_StartScanner
+CRC_SCAN_StopScanner
+CRC_SCAN_SetAddressLimit
+CRC_SCAN_IsScannerBusy call:[return] noreturn:[return]
+CRC_SCAN_HasScanCompleted call:[return] noreturn:[return]

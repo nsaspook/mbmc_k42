@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" line="51" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;xc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h" line="54" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h" line="55" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h" line="56" column="2"/>
+        </error>
+        <error id="badBitmaskCheck" severity="style" msg="Operator &apos;|&apos; with one operand equal to zero is redundant." verbose="Operator &apos;|&apos; with one operand equal to zero is redundant." cwe="571" hash="16863778565591263327" file0="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" line="84" column="24"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;mask&apos; can be reduced." verbose="The scope of the variable &apos;mask&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" hash="10572244420621040267" file0="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" line="161" column="21"/>
+            <symbol>mask</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;CRC_OBJ::seedDirection&apos; is never used." verbose="struct member &apos;CRC_OBJ::seedDirection&apos; is never used." cwe="563" hash="8756673187388070493" file0="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c">
+            <location file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" line="62" column="13"/>
+            <symbol>CRC_OBJ::seedDirection</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" functionName="CRC_Initialize" lineNumber="76" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" functionName="CRC_Start" lineNumber="119" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" functionName="CRC_8BitDataWrite" lineNumber="125" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" functionName="CRC_ReverseValue" lineNumber="138" column="17"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" functionName="CRC_CalculatedResultGet" lineNumber="159" column="10"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" functionName="CRC_IsBusy" lineNumber="201" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" functionName="CRC_SCAN_StartScanner" lineNumber="207" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" functionName="CRC_SCAN_StopScanner" lineNumber="216" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" functionName="CRC_SCAN_SetAddressLimit" lineNumber="225" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" functionName="CRC_SCAN_IsScannerBusy" lineNumber="239" column="6"/>
+    <functiondecl file="/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.c" functionName="CRC_SCAN_HasScanCompleted" lineNumber="245" column="6"/>
+    <functioncall functionName="BUSY"/>
+    <functioncall functionName="CRCACCL"/>
+    <functioncall functionName="CRCIF"/>
+    <functioncall functionName="CRC_ReverseValue"/>
+    <functioncall functionName="FULL"/>
+    <functioncall functionName="PLEN"/>
+  </FileInfo>
+  <includes>
+    <filename>/root/mbmc_k42/mbmc_k42.X/mcc_generated_files/crc.h</filename>
+  </includes>
+  <hash>2852346340133484676</hash>
+</analyzerinfo>
